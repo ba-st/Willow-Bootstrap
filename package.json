@@ -1,5 +1,5 @@
 {
-  "name": "willow-boostrap",
+  "name": "willow-bootstrap",
   "version": "4.0.0",
   "author": "Buenos Aires Smalltalk contributors",
   "license": "MIT",
@@ -11,10 +11,10 @@
   "description": "Bootstrap 3 and Willow integration",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ba-st/willow-boostrap.git"
+    "url": "https://github.com/ba-st/willow-bootstrap.git"
   },
   "bugs": {
-    "url": "https://github.com/ba-st/willow-boostrap/issues"
+    "url": "https://github.com/ba-st/willow-bootstrap/issues"
   },
-  "homepage": "https://github.com/ba-st/willow-boostrap"
+  "homepage": "https://github.com/ba-st/willow-bootstrap"
 }
