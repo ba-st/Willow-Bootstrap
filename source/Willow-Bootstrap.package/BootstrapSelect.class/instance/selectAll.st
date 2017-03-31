@@ -1,0 +1,4 @@
+Methods
+selectAll
+
+	functionAsArgument := 'selectAll'

@@ -1,0 +1,4 @@
+Methods
+refresh
+
+	functionAsArgument := 'refresh'

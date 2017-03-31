@@ -1,0 +1,4 @@
+Accessing
+static
+
+	^ 'static'

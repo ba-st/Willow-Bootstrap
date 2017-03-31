@@ -1,0 +1,1 @@
+This class provides access to several constants

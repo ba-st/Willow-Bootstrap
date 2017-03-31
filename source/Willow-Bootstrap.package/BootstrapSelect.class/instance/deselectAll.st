@@ -1,0 +1,4 @@
+Methods
+deselectAll
+
+	functionAsArgument := 'deselectAll'

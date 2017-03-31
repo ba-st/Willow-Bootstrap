@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 3/31/2017 19:05",
+	"super" : "JQPlugin",
+	"category" : "Willow-Bootstrap-Select",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"functionAsArgument"
+	],
+	"name" : "BootstrapSelect",
+	"type" : "normal"
+}
