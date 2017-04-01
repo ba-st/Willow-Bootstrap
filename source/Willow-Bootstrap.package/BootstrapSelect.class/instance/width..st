@@ -5,4 +5,9 @@ width: autoOrFitOrCssLengthOrFalse
 	 When set to a css-length, the width of the selectpicker is forced inline to the given value.
 	 When set to false, all width information is removed."
 
-	self optionAt: 'width' put: autoOrFitOrCssLengthOrFalse 
+	| optionValue |
+
+	optionValue := autoOrFitOrCssLengthOrFalse == false
+		ifTrue: [ false ]
+		ifFalse: [ autoOrFitOrCssLengthOrFalse asString ].
+	self optionAt: 'width' put: optionValue
