@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 4/1/2017 10:08",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfWillowBootstrap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfWillowBootstrap",
+	"type" : "normal"
+}

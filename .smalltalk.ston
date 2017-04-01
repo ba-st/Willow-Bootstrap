@@ -1,0 +1,18 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'WillowBootstrap',
+      #directory : 'source',
+      #load : [ 'Development' ],
+      #platforms : [  #pharo ]
+    }
+  ],
+  #testing : {
+    #coverage : {
+       #packages : [  'Willow-Bootstrap*' ]
+    },
+    #include : {
+       #packages : [ 'Willow-Bootstrap*-Tests' ]
+    }
+  }
+}
