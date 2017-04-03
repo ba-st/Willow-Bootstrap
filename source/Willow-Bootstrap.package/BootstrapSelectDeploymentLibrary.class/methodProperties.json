@@ -57,6 +57,7 @@
 		"jsi18ndefaultsroROminJs" : "GabrielOmarCotelli 3/31/2017 16:55",
 		"jsi18ndefaultsruRUminJsContent" : "GabrielOmarCotelli 3/31/2017 16:55",
 		"jsbootstrapselectminJsContent" : "GabrielOmarCotelli 3/31/2017 16:52",
+		"selectorsToInclude" : "GabrielOmarCotelli 4/3/2017 12:46",
 		"jsi18ndefaultsnbNOminJsContent" : "GabrielOmarCotelli 3/31/2017 16:54",
 		"jsi18ndefaultshuHUminJs" : "GabrielOmarCotelli 3/31/2017 16:54",
 		"jsi18ndefaultsbgBGminJsContent" : "GabrielOmarCotelli 3/31/2017 16:52",
@@ -73,5 +74,7 @@
 		"jsi18ndefaultscroCROminJs" : "GabrielOmarCotelli 3/31/2017 16:52",
 		"jsi18ndefaultskoKRminJsContent" : "GabrielOmarCotelli 3/31/2017 16:54"
 	},
-	"class" : { }
+	"class" : {
+		"libraryKey" : "GabrielOmarCotelli 4/3/2017 12:44"
+	}
 }

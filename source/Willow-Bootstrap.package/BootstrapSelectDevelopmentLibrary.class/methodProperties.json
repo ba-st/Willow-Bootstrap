@@ -56,6 +56,7 @@
 		"jsi18ndefaultssvSEJs" : "GabrielOmarCotelli 3/31/2017 16:48",
 		"jsi18ndefaultszhCNJs" : "GabrielOmarCotelli 3/31/2017 16:48",
 		"jsi18ndefaultszhCNJsContent" : "GabrielOmarCotelli 3/31/2017 16:48",
+		"selectorsToInclude" : "GabrielOmarCotelli 4/3/2017 12:46",
 		"jsi18ndefaultscsCZJs" : "GabrielOmarCotelli 3/31/2017 16:48",
 		"jsi18ndefaultsidIDJs" : "GabrielOmarCotelli 3/31/2017 16:48",
 		"jsi18ndefaultsesESJs" : "GabrielOmarCotelli 3/31/2017 16:48",
@@ -69,5 +70,7 @@
 		"jsi18ndefaultsuaUAJsContent" : "GabrielOmarCotelli 3/31/2017 16:48",
 		"jsi18ndefaultscsCZJsContent" : "GabrielOmarCotelli 3/31/2017 16:48"
 	},
-	"class" : { }
+	"class" : {
+		"libraryKey" : "GabrielOmarCotelli 4/3/2017 12:44"
+	}
 }
