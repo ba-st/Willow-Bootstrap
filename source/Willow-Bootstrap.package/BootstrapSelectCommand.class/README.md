@@ -1,0 +1,1 @@
+I'm a component command enabling bootstrap-select

@@ -9,4 +9,4 @@ testDropdownListApplying
 
 	html := self render: dropDownList.
 
-	self assert: html equals: '<select id="id1" data-size="10" name="2"></select><script type="text/javascript">$("#id1").selectpicker();</script>'
+	self assert: html equals: '<select class="selectpicker" data-size="10" name="1"></select>'

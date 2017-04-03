@@ -1,0 +1,1 @@
+I'm a component command enabling the live search options on Bootstrap Select using the Data-API
