@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/3/2017 09:45",
-	"super" : "WAFileLibrary",
+	"commentStamp" : "",
+	"super" : "WAFileMetadataLibrary",
 	"category" : "Willow-Bootstrap-Libraries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "Bootstrap3OnlineLibrary",
+	"name" : "Bootstrap3MetadataLibrary",
 	"type" : "normal"
 }
