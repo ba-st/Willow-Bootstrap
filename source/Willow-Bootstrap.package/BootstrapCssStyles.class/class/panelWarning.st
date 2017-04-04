@@ -1,0 +1,4 @@
+Panels
+panelWarning
+
+	^ 'panel-warning'

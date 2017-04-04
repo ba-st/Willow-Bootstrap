@@ -1,0 +1,4 @@
+Alerts
+alertInfo
+
+	^ 'alert-info'

@@ -1,0 +1,4 @@
+Typography
+textUppercase
+
+	^ 'text-uppercase'

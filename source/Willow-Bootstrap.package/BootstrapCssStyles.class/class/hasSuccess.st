@@ -1,0 +1,4 @@
+Forms
+hasSuccess
+
+	^ 'has-success'

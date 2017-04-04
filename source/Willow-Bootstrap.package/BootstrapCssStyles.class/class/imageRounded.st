@@ -1,0 +1,4 @@
+Images
+imageRounded
+
+	^'img-rounded'

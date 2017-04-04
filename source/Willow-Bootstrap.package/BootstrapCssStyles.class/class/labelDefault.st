@@ -1,0 +1,4 @@
+Labels
+labelDefault
+
+	^ 'label-default'

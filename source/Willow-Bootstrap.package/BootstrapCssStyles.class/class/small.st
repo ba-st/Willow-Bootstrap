@@ -1,0 +1,4 @@
+Typography
+small
+
+	^ 'small'

@@ -1,0 +1,4 @@
+Forms
+formInline
+
+	^ 'form-inline'

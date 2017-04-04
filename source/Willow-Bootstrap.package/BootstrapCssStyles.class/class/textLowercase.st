@@ -1,0 +1,4 @@
+Typography
+textLowercase
+
+	^ 'text-lowercase'

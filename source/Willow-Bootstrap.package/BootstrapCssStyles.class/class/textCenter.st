@@ -1,0 +1,4 @@
+Typography
+textCenter
+
+	^ 'text-center'

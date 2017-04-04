@@ -1,0 +1,4 @@
+Images
+imageResponsive
+
+	^'img-responsive'

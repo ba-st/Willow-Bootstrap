@@ -1,0 +1,4 @@
+Images
+imageCircle
+
+	^'img-circle'

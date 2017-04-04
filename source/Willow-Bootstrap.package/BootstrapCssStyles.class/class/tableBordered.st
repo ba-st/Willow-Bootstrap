@@ -1,0 +1,4 @@
+Tables
+tableBordered
+
+	^ 'table-bordered'

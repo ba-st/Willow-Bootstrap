@@ -1,0 +1,4 @@
+Buttons
+buttonPrimary
+
+	^ 'btn-primary'

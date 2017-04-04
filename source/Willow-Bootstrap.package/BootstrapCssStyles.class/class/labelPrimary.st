@@ -1,0 +1,4 @@
+Labels
+labelPrimary
+
+	^ 'label-primary'

@@ -1,0 +1,4 @@
+Forms
+checkboxInline
+
+	^ 'checkbox-inline'

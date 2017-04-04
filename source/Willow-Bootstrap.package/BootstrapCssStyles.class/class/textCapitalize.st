@@ -1,0 +1,4 @@
+Typography
+textCapitalize
+
+	^ 'text-capitalize'

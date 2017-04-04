@@ -1,0 +1,4 @@
+Panels
+panelDefault
+
+	^ 'panel-default'

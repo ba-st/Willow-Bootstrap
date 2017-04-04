@@ -1,0 +1,4 @@
+Panels
+panelHeading
+
+	^ 'panel-heading'

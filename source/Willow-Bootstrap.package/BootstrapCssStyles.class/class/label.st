@@ -1,0 +1,4 @@
+Labels
+label
+
+	^ 'label'

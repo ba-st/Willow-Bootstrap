@@ -1,0 +1,4 @@
+Panels
+panelDanger
+
+	^ 'panel-danger'

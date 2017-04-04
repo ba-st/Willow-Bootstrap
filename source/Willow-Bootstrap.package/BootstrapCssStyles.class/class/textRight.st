@@ -1,0 +1,4 @@
+Typography
+textRight
+
+	^ 'text-right'

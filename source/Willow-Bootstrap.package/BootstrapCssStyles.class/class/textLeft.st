@@ -1,0 +1,4 @@
+Typography
+textLeft
+
+	^ 'text-left'

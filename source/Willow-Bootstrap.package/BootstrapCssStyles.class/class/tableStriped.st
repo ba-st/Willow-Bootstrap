@@ -1,0 +1,4 @@
+Tables
+tableStriped
+
+	^ 'table-striped'
