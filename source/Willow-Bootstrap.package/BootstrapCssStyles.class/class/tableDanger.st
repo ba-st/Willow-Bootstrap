@@ -1,4 +1,4 @@
 Tables
-danger
+tableDanger
 
 	^ 'danger'

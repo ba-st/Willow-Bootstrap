@@ -1,4 +1,4 @@
 Tables
-success
+tableSuccess
 
 	^ 'success'

@@ -1,4 +1,4 @@
 Tables
-warning
+tableWarning
 
 	^ 'warning'

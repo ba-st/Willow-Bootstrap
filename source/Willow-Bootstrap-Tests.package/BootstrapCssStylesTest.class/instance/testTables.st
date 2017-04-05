@@ -11,7 +11,7 @@ testTables
 
 
 	self
-		assert: BootstrapCssStyles danger equals: 'danger';
-		assert: BootstrapCssStyles info equals: 'info';
-		assert: BootstrapCssStyles success equals: 'success';
-		assert: BootstrapCssStyles warning equals: 'warning'
+		assert: BootstrapCssStyles tableDanger equals: 'danger';
+		assert: BootstrapCssStyles tableInfo equals: 'info';
+		assert: BootstrapCssStyles tableSuccess equals: 'success';
+		assert: BootstrapCssStyles tableWarning equals: 'warning'

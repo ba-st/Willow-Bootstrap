@@ -1,4 +1,4 @@
 Tables
-info
+tableInfo
 
 	^ 'info'
