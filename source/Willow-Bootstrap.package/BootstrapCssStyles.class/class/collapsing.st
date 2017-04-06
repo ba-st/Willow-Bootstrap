@@ -1,0 +1,4 @@
+Collapse
+collapsing
+
+	^'collapsing'

@@ -3,6 +3,7 @@ testNavigation
 
 	self
 		assert: BootstrapCssStyles breadcrumb equals: 'breadcrumb';
+		assert: BootstrapCssStyles iconBar equals: 'icon-bar';
 		assert: BootstrapCssStyles nav equals: 'nav';
 		assert: BootstrapCssStyles navJustified equals: 'nav-justified';
 		assert: BootstrapCssStyles navPills equals: 'nav-pills';
@@ -22,4 +23,5 @@ testNavigation
 		assert: BootstrapCssStyles navbarRight equals: 'navbar-right';
 		assert: BootstrapCssStyles navbarLink equals: 'navbar-link';
 		assert: BootstrapCssStyles navbarStaticTop equals: 'navbar-static-top';
-		assert: BootstrapCssStyles navbarText equals: 'navbar-text'
+		assert: BootstrapCssStyles navbarText equals: 'navbar-text';
+		assert: BootstrapCssStyles navbarToggle equals: 'navbar-toggle'
