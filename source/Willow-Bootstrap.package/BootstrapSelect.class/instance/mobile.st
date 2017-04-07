@@ -1,4 +1,4 @@
 Methods
 mobile
 
-	functionAsArgument := 'mobile'
+	functionName := 'mobile'

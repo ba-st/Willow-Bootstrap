@@ -1,0 +1,1 @@
+A BootstrapModalTest is a test class for testing the behavior of BootstrapModal

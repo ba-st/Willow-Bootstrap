@@ -1,0 +1,1 @@
+I'm an abstract class for Bootstrap plugins. I provide support to pass a method call as a function argument.

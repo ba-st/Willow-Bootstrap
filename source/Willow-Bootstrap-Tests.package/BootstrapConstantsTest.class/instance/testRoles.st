@@ -4,6 +4,8 @@ testRoles
 	self
 		assert: BootstrapConstants alert equals: 'alert';
 		assert: BootstrapConstants button equals: 'button';
+		assert: BootstrapConstants dialog equals: 'dialog';
+		assert: BootstrapConstants document equals: 'document';
 		assert: BootstrapConstants group equals: 'group';
 		assert: BootstrapConstants navigation equals: 'navigation';
 		assert: BootstrapConstants presentation equals: 'presentation';

@@ -1,4 +1,4 @@
 Methods
 toggle
 
-	functionAsArgument := 'toggle'
+	functionName := 'toggle'

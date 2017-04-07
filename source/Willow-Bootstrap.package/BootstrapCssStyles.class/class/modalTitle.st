@@ -1,0 +1,4 @@
+Modal
+modalTitle
+
+	^ 'modal-title'

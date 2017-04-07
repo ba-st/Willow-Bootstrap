@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 4/7/2017 16:37",
+	"super" : "BootstrapPlugin",
+	"category" : "Willow-Bootstrap-Plugins",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapModal",
+	"type" : "normal"
+}

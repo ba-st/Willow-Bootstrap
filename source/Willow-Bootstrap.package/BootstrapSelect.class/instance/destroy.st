@@ -1,4 +1,4 @@
 Methods
 destroy
 
-	functionAsArgument := 'destroy'
+	functionName := 'destroy'
