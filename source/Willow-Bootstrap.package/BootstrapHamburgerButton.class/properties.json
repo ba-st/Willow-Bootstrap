@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 4/6/2017 17:26",
+	"super" : "WAPresenter",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"targetIdentifier"
+	],
+	"name" : "BootstrapHamburgerButton",
+	"type" : "normal"
+}

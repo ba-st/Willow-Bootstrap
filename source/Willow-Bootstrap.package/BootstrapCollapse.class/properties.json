@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 4/7/2017 10:45",
+	"super" : "JQPlugin",
+	"category" : "Willow-Bootstrap-Plugins",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"functionAsArgument"
+	],
+	"name" : "BootstrapCollapse",
+	"type" : "normal"
+}

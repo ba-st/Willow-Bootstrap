@@ -1,0 +1,1 @@
+Flexible plugin that utilizes a handful of classes for easy toggle behavior.
