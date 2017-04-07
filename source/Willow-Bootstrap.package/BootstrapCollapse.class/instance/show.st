@@ -1,0 +1,4 @@
+Methods
+show
+
+	functionAsArgument := 'show'

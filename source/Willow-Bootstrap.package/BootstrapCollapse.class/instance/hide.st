@@ -1,0 +1,4 @@
+Methods
+hide
+
+	functionAsArgument := 'hide'
