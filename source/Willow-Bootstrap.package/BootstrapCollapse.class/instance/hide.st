@@ -1,4 +1,4 @@
 Methods
 hide
 
-	functionAsArgument := 'hide'
+	functionName := 'hide'

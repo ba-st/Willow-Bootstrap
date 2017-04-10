@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "WillowTestCase",
+	"category" : "Willow-Bootstrap-Tests-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapModalWebViewTest",
+	"type" : "normal"
+}

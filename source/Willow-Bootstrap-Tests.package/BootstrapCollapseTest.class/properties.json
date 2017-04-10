@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "WillowTestCase",
-	"category" : "Willow-Bootstrap-Tests-Plugin",
+	"category" : "Willow-Bootstrap-Tests-Plugins",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

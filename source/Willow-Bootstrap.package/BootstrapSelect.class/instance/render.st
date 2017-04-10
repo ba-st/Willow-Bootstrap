@@ -1,4 +1,4 @@
 Methods
 render
 
-	functionAsArgument := 'render'
+	functionName := 'render'

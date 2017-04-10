@@ -1,4 +1,4 @@
 Methods
 selectAll
 
-	functionAsArgument := 'selectAll'
+	functionName := 'selectAll'

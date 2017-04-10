@@ -1,4 +1,4 @@
 Methods
 setStyle
 
-	functionAsArgument := 'setStyle'
+	functionName := 'setStyle'

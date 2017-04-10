@@ -1,4 +1,4 @@
 Methods
 toggle
 
-	functionAsArgument := BootstrapConstants toggle
+	functionName := BootstrapConstants toggle

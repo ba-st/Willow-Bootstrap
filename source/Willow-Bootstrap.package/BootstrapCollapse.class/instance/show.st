@@ -1,4 +1,4 @@
 Methods
 show
 
-	functionAsArgument := 'show'
+	functionName := 'show'
