@@ -1,9 +1,9 @@
 private
-contentWithHeader: aBootstrapModalHeader containing: aBodyView
+contentWrapping: aBodyView
 
 	^ GenericContainerWebView
 		wrapping: [ :canvas | 
-			canvas render: aBootstrapModalHeader.
+			canvas render: header.
 			canvas div
 				class: BootstrapCssStyles modalBody;
 				with: [ canvas render: aBodyView ].

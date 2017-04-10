@@ -1,4 +1,4 @@
 Instance Creation
 titled: aRenderable
 
-	^ self titled: aRenderable dismissButtonOptional: Optional unused
+	^ self titled: aRenderable dismissedUsing: Optional unused

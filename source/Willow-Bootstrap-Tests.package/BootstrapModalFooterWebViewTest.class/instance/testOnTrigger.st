@@ -6,7 +6,7 @@ testOnTrigger
 	footer := BootstrapModalFooterWebView
 		with: self acceptButton
 		andCloseButtonLabeled: 'Close'
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink).
+		applyingToIt: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink).
 
 	footer onTrigger disable.
 

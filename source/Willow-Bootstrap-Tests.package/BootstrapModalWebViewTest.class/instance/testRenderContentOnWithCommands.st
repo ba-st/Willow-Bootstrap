@@ -8,10 +8,10 @@ testRenderContentOnWithCommands
 
 	dialog := BootstrapModalWebView
 		withHeader: header
-		containing: 'Some very large legal stuff. ;)'
+		content: 'Some very large legal stuff. ;)'
 		footer: footer
 		applyingToDialog: (ComponentClassificationCommand toStyleWith: 'fade')
-		andToDocument: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles modalLarge).
+		andModalDocument: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles modalLarge).
 
 	html := self render: dialog.
 

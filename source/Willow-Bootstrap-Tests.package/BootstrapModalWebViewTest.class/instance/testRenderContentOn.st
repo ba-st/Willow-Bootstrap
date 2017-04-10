@@ -6,7 +6,7 @@ testRenderContentOn
 	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Ok' applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink).
 	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.
 
-	dialog := BootstrapModalWebView withHeader: header containing: 'Some very large legal stuff. ;)' footer: footer.
+	dialog := BootstrapModalWebView withHeader: header content: 'Some very large legal stuff. ;)' footer: footer.
 
 	html := self render: dialog.
 

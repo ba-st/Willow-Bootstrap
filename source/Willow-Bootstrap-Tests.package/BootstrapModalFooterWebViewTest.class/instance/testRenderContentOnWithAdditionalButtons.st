@@ -6,7 +6,7 @@ testRenderContentOnWithAdditionalButtons
 	footer := BootstrapModalFooterWebView
 		with: self acceptButton
 		andCloseButtonLabeled: 'Close'
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink).
+		applyingToIt: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink).
 
 	html := self render: footer.
 

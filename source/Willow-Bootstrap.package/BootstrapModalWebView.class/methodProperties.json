@@ -1,13 +1,14 @@
 {
 	"instance" : {
+		"initializeWithHeader:content:footer:applyingToDialog:andToDocument:" : "GabrielOmarCotelli 4/10/2017 14:03",
 		"documentWrapping:applying:" : "GabrielOmarCotelli 4/10/2017 10:44",
-		"contentWithHeader:containing:" : "GabrielOmarCotelli 4/10/2017 10:44",
+		"contentWrapping:" : "GabrielOmarCotelli 4/10/2017 14:00",
 		"renderContentOn:" : "GabrielOmarCotelli 4/10/2017 10:42",
-		"initializeWithHeader:containing:footer:applyingToDialog:andToDocument:" : "GabrielOmarCotelli 4/10/2017 10:45",
+		"onCloseTrigger" : "GabrielOmarCotelli 4/10/2017 14:01",
 		"onTrigger" : "GabrielOmarCotelli 4/10/2017 11:02"
 	},
 	"class" : {
-		"withHeader:containing:footer:applyingToDialog:andToDocument:" : "GabrielOmarCotelli 4/10/2017 10:31",
-		"withHeader:containing:footer:" : "GabrielOmarCotelli 4/10/2017 10:30"
+		"withHeader:content:footer:" : "GabrielOmarCotelli 4/10/2017 14:03",
+		"withHeader:content:footer:applyingToDialog:andModalDocument:" : "GabrielOmarCotelli 4/10/2017 14:03"
 	}
 }

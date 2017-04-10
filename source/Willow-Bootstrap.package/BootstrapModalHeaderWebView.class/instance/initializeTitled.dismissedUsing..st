@@ -1,5 +1,5 @@
 initialize
-initializeTitled: aRenderable dismissButtonOptional: aButtonOptional
+initializeTitled: aRenderable dismissedUsing: aButtonOptional
 
 	title := aRenderable.
 	dismissButtonOptional := aButtonOptional
