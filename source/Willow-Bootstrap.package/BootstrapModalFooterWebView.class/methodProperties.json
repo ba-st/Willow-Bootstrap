@@ -1,0 +1,13 @@
+{
+	"instance" : {
+		"renderContentOn:" : "GabrielOmarCotelli 4/10/2017 09:44",
+		"onTrigger" : "GabrielOmarCotelli 4/10/2017 09:56",
+		"initializeContaining:andCloseButton:" : "GabrielOmarCotelli 4/10/2017 09:44"
+	},
+	"class" : {
+		"containing:andCloseButton:" : "GabrielOmarCotelli 4/10/2017 09:45",
+		"withCloseButtonLabeled:applying:" : "GabrielOmarCotelli 4/10/2017 09:45",
+		"with:andCloseButtonLabeled:applying:" : "GabrielOmarCotelli 4/10/2017 09:52",
+		"closeButtonLabeled:applying:" : "GabrielOmarCotelli 4/10/2017 09:20"
+	}
+}

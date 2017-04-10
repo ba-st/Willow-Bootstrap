@@ -1,0 +1,13 @@
+{
+	"instance" : {
+		"documentWrapping:applying:" : "GabrielOmarCotelli 4/10/2017 10:44",
+		"contentWithHeader:containing:" : "GabrielOmarCotelli 4/10/2017 10:44",
+		"renderContentOn:" : "GabrielOmarCotelli 4/10/2017 10:42",
+		"initializeWithHeader:containing:footer:applyingToDialog:andToDocument:" : "GabrielOmarCotelli 4/10/2017 10:45",
+		"onTrigger" : "GabrielOmarCotelli 4/10/2017 11:02"
+	},
+	"class" : {
+		"withHeader:containing:footer:applyingToDialog:andToDocument:" : "GabrielOmarCotelli 4/10/2017 10:31",
+		"withHeader:containing:footer:" : "GabrielOmarCotelli 4/10/2017 10:30"
+	}
+}
