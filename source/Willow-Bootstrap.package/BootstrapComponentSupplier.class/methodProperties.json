@@ -1,8 +1,9 @@
 {
 	"instance" : {
 		"initializeWithBootstrapLibrary:selectLibrary:" : "GabrielOmarCotelli 4/3/2017 09:55",
-		"updateRoot:" : "GabrielOmarCotelli 4/3/2017 14:23",
-		"dropdownListApplying:" : "GabrielOmarCotelli 4/3/2017 10:56"
+		"asynchronicButtonLabeled:applying:" : "GabrielOmarCotelli 4/11/2017 17:06",
+		"dropdownListApplying:" : "GabrielOmarCotelli 4/11/2017 17:05",
+		"updateRoot:" : "GabrielOmarCotelli 4/3/2017 14:23"
 	},
 	"class" : {
 		"online" : "GabrielOmarCotelli 4/3/2017 10:05",
