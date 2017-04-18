@@ -1,0 +1,4 @@
+private
+fileSelectors
+
+	^ #(#fontsglyphiconshalflingsregularSvg #fontsglyphiconshalflingsregularTtf #fontsglyphiconshalflingsregularWoff2 #fontsglyphiconshalflingsregularEot #fontsglyphiconshalflingsregularWoff)

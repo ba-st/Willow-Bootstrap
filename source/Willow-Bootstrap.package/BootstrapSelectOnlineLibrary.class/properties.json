@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "GabrielOmarCotelli 3/31/2017 17:24",
-	"super" : "WAFileLibrary",
+	"super" : "WillowOnlineLibrary",
 	"category" : "Willow-Bootstrap-Select",
 	"classinstvars" : [ ],
 	"pools" : [ ],

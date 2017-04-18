@@ -1,4 +1,0 @@
-Accessing
-libraryKey
-
-	^#'bootstrap-select'

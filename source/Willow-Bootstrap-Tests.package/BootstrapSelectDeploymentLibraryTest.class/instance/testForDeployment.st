@@ -1,0 +1,4 @@
+tests
+testForDeployment
+
+	self assert: BootstrapSelectLibrary forDeployment equals: BootstrapSelectDeploymentLibrary

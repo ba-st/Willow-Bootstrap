@@ -1,7 +1,8 @@
 {
 	"instance" : {
-		"cssbootstrapmincssMap" : "GabrielOmarCotelli 4/3/2017 11:39",
+		"jsbootstrapminJsContent" : "GabrielOmarCotelli 4/3/2017 11:39",
 		"cssbootstrapthememincssMap" : "GabrielOmarCotelli 4/3/2017 11:39",
+		"fileSelectors" : "GabrielOmarCotelli 4/17/2017 14:37",
 		"cssbootstrapmincssMapContent" : "GabrielOmarCotelli 4/3/2017 11:39",
 		"cssbootstrapminCss" : "GabrielOmarCotelli 4/3/2017 11:39",
 		"cssbootstrapthememinCssContent" : "GabrielOmarCotelli 4/3/2017 11:39",
@@ -9,8 +10,10 @@
 		"cssbootstrapthememinCss" : "GabrielOmarCotelli 4/3/2017 11:39",
 		"selectorsToInclude" : "GabrielOmarCotelli 4/3/2017 12:10",
 		"jsbootstrapminJs" : "GabrielOmarCotelli 4/3/2017 11:39",
-		"jsbootstrapminJsContent" : "GabrielOmarCotelli 4/3/2017 11:39",
-		"cssbootstrapthememincssMapContent" : "GabrielOmarCotelli 4/3/2017 11:39"
+		"cssbootstrapthememincssMapContent" : "GabrielOmarCotelli 4/3/2017 11:39",
+		"cssbootstrapmincssMap" : "GabrielOmarCotelli 4/3/2017 11:39"
 	},
-	"class" : { }
+	"class" : {
+		"isForDeployment" : "GabrielOmarCotelli 4/17/2017 16:41"
+	}
 }
