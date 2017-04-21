@@ -1,4 +1,8 @@
 Instance Creation
 online
 
-	^ self withBootstrapLibrary: Bootstrap3OnlineLibrary default selectLibrary: BootstrapSelectOnlineLibrary default 
+	^ self
+		usingLibraries:
+			{Bootstrap3OnlineLibrary default.
+			BootstrapSelectOnlineLibrary default.
+			BootstrapDatepickerOnlineLibrary default}

@@ -1,0 +1,4 @@
+Methods
+hide
+
+	functionName := 'hide'

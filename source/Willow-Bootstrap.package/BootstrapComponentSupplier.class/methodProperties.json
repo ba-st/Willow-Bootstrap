@@ -1,12 +1,16 @@
 {
 	"instance" : {
-		"initializeWithBootstrapLibrary:selectLibrary:" : "GabrielOmarCotelli 4/3/2017 09:55",
+		"dropdownListApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
+		"singleLineTextFieldApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
+		"updateRoot:" : "GabrielOmarCotelli 4/21/2017 16:35",
+		"initializeUsing:" : "GabrielOmarCotelli 4/21/2017 16:35",
 		"asynchronicButtonLabeled:applying:" : "GabrielOmarCotelli 4/11/2017 17:06",
-		"dropdownListApplying:" : "GabrielOmarCotelli 4/11/2017 17:05",
-		"updateRoot:" : "GabrielOmarCotelli 4/3/2017 14:23"
+		"formControlCommand" : "GabrielOmarCotelli 4/20/2017 17:56",
+		"dateFieldApplying:" : "GabrielOmarCotelli 4/21/2017 15:23"
 	},
 	"class" : {
-		"online" : "GabrielOmarCotelli 4/3/2017 10:05",
-		"withBootstrapLibrary:selectLibrary:" : "GabrielOmarCotelli 4/3/2017 09:55"
+		"online" : "GabrielOmarCotelli 4/21/2017 16:34",
+		"withBootstrapLibrary:selectLibrary:datepickerLibrary:" : "GabrielOmarCotelli 4/21/2017 16:36",
+		"usingLibraries:" : "GabrielOmarCotelli 4/21/2017 16:32"
 	}
 }

@@ -1,0 +1,8 @@
+tests-Options
+testWeekStart
+
+	| html |
+
+	html := self renderTextFieldApplying: [ :datepicker | datepicker weekStart: BootstrapDatepickerConstants wednesday ].
+
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"weekStart":3});</script>'

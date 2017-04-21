@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"bootstrapSelectLibrary",
-		"bootstrapLibrary"
+		"bootstrapLibraries"
 	],
 	"name" : "BootstrapComponentSupplier",
 	"type" : "normal"

@@ -1,0 +1,4 @@
+tests
+testForDevelopment
+
+	self assert: BootstrapDatepickerLibrary forDevelopment equals: BootstrapDatepickerDevelopmentLibrary

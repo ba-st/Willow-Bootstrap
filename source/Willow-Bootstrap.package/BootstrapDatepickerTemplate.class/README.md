@@ -1,0 +1,1 @@
+I'm a JSObject used to configure the arrow templates of bootstrap-datepicker

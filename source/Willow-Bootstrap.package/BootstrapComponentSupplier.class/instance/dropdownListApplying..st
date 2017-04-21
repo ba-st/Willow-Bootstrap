@@ -1,4 +1,4 @@
 Accessing
 dropdownListApplying: aComponentCommand
 
-	^ DropDownListWebView applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles formControl) + aComponentCommand + BootstrapSelectCommand new
+	^ DropDownListWebView applying: self formControlCommand + aComponentCommand + BootstrapSelectCommand new

@@ -5,5 +5,4 @@ updateRoot: aRoot
 	aRoot meta
 		name: 'viewport';
 		content: 'width=device-width, initial-scale=1.0'.
-	bootstrapLibrary updateRoot: aRoot.
-	bootstrapSelectLibrary updateRoot: aRoot
+	bootstrapLibraries do: [ :library | library updateRoot: aRoot ]
