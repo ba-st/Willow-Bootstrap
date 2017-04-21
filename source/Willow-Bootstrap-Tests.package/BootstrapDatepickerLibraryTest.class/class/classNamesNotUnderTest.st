@@ -1,0 +1,4 @@
+coverage
+classNamesNotUnderTest
+ 
+	^ #(BootstrapDatepickerLibrary  BootstrapDatepickerDeploymentLibrary  BootstrapDatepickerDevelopmentLibrary)
