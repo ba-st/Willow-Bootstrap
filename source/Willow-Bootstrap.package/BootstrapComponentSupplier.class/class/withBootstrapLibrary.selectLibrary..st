@@ -1,4 +1,0 @@
-Instance Creation
-withBootstrapLibrary: aBootstrapLibrary selectLibrary: aBootstrapSelectLibrary
-
-	^ self new initializeWithBootstrapLibrary: aBootstrapLibrary selectLibrary: aBootstrapSelectLibrary

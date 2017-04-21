@@ -11,4 +11,4 @@ testUpdateRoot
 	self
 		assert: html
 		equals:
-			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select/js/bootstrap-select.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.12.2/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.12.2/js/bootstrap-select.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'

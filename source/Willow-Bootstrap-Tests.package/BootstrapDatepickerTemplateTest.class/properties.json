@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "JSObjectTest",
+	"category" : "Willow-Bootstrap-Tests-Datepicker",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapDatepickerTemplateTest",
+	"type" : "normal"
+}

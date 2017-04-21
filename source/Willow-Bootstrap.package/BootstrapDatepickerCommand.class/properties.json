@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 4/21/2017 15:13",
+	"super" : "WebComponentCommand",
+	"category" : "Willow-Bootstrap-Frontend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"additionalCommand"
+	],
+	"name" : "BootstrapDatepickerCommand",
+	"type" : "normal"
+}

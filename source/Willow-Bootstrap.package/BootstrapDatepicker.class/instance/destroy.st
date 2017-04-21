@@ -1,0 +1,4 @@
+Methods
+destroy
+
+	functionName := 'destroy'

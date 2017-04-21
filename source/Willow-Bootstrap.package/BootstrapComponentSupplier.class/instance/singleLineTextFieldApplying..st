@@ -1,0 +1,4 @@
+Accessing
+singleLineTextFieldApplying: aComponentCommand
+
+	^ TextFieldWebView singleLineTriggeringOnChangeApplying: self formControlCommand + aComponentCommand
