@@ -2,8 +2,7 @@ private - Instance Creation
 dismissButton
 
 	^ AsynchronicButtonWebView
-		labeled: (PhrasingContainerWebView wrapping: '×' applying: (ComponentAttributeCommand named: 'aria-hidden' with: 'true'))
+		labeled: (PhrasingContainerWebView wrapping: '×' applying: (ComponentAccessibilityEnrichmentCommand toDeclare: 'hidden' with: 'true'))
 		applying:
-			(ComponentClassificationCommand toStyleWith: BootstrapCssStyles close)
-				+ (ComponentMetadataCommand toDeclare: BootstrapConstants dismiss with: BootstrapConstants modal)
-				+ (ComponentAttributeCommand named: 'aria-label' with: 'Close')
+			(ComponentClassificationCommand toStyleWith: BootstrapCssStyles close) + (ComponentMetadataCommand toDeclare: BootstrapConstants dismiss with: BootstrapConstants modal)
+				+ (ComponentAccessibilityEnrichmentCommand toDeclare: 'label' with: 'Close')
