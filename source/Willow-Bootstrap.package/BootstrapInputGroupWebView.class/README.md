@@ -1,0 +1,1 @@
+Extend form controls by adding text or buttons before, after, or on both sides of any text-based <input>

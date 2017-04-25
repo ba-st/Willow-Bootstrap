@@ -1,0 +1,11 @@
+{
+	"instance" : {
+		"initializeWrapping:between:and:applying:" : "GabrielOmarCotelli 4/25/2017 10:53",
+		"renderContentOn:" : "GabrielOmarCotelli 4/25/2017 10:53"
+	},
+	"class" : {
+		"wrapping:between:and:applying:" : "GabrielOmarCotelli 4/25/2017 10:22",
+		"appending:to:applying:" : "GabrielOmarCotelli 4/25/2017 10:40",
+		"prepending:to:applying:" : "GabrielOmarCotelli 4/25/2017 10:43"
+	}
+}
