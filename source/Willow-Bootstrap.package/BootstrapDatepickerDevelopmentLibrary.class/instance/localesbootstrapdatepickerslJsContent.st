@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerslJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Slovene translation for bootstrap-datepicker
  * Gregor Rudolf <gregor.rudolf@gmail.com>

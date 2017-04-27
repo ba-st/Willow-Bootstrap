@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerglJsContent
+
+	<ignoreForCoverage>
 	^ ';(function($){
 	$.fn.datepicker.dates[''gl''] = {
 		days: ["Domingo", "Luns", "Martes", "Mércores", "Xoves", "Venres", "Sábado"],

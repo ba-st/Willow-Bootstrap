@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickernlJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Dutch translation for bootstrap-datepicker
  * Reinier Goltstein <mrgoltstein@gmail.com>

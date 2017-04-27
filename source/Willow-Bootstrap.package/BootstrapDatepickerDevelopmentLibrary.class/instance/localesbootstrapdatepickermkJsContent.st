@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickermkJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Macedonian translation for bootstrap-datepicker
  * Marko Aleksic <psybaron@gmail.com>

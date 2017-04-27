@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerarJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Arabic translation for bootstrap-datepicker
  * Mohammed Alshehri <alshehri866@gmail.com>

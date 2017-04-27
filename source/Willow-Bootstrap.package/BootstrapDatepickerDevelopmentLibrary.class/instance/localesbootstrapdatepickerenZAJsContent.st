@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerenZAJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * South African English translation for bootstrap-datepicker
  */

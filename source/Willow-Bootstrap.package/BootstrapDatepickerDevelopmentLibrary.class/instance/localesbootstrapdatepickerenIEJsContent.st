@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerenIEJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Irish English translation for bootstrap-datepicker
  */

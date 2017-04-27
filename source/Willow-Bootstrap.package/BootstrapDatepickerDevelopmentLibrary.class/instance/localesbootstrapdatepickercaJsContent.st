@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickercaJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Catalan translation for bootstrap-datepicker
  * J. Garcia <jogaco.en@gmail.com>

@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerbgJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Bulgarian translation for bootstrap-datepicker
  * Apostol Apostolov <apostol.s.apostolov@gmail.com>

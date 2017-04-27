@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerfiJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Finnish translation for bootstrap-datepicker
  * Jaakko Salonen <https://github.com/jsalonen>

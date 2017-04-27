@@ -1,5 +1,7 @@
 uploaded metadata
 localesbootstrapdatepickercaminJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ca.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

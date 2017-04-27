@@ -1,4 +1,5 @@
 accessing
 selectorsToInclude
 
-	^#(cssbootstrapdatepicker3minCss jsbootstrapdatepickerminJs)
+	<ignoreForCoverage>
+	^ #(cssbootstrapdatepicker3minCss jsbootstrapdatepickerminJs)

@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickercsJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Czech translation for bootstrap-datepicker
  * Matěj Koubík <matej@koubik.name>

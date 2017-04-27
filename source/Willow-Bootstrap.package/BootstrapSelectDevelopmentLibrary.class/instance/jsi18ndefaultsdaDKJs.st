@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultsdaDKJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-da_DK.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

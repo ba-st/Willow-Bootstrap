@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerocJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Occitan translation for bootstrap-datepicker
  */

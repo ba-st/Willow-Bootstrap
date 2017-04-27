@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickereoJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Esperanto translation for bootstrap-datepicker
  * Emmanuel Debanne <https://github.com/debanne>

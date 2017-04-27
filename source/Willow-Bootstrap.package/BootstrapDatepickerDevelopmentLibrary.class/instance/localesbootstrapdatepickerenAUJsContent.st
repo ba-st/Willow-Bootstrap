@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerenAUJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Australian English translation for bootstrap-datepicker
  * Steve Chapman <steven.p.chapman@gmail.com>

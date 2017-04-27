@@ -1,0 +1,1 @@
+I'm a library providing some CSS required for the integration to work correctly.

@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerzhTWJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Traditional Chinese translation for bootstrap-datepicker
  * Rung-Sheng Jang <daniel@i-trend.co.cc>

@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerkkJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Kazakh translation for bootstrap-datepicker
  * Yerzhan Tolekov <era.tolekov@gmail.com>

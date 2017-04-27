@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerheJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Hebrew translation for bootstrap-datepicker
  * Sagie Maoz <sagie@maoz.info>

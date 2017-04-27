@@ -1,5 +1,7 @@
 uploaded metadata
 localesbootstrapdatepickerenIEminJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-IE.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

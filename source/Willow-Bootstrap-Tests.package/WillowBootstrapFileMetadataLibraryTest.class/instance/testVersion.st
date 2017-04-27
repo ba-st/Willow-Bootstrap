@@ -1,0 +1,4 @@
+tests-Accessing
+testVersion
+
+	self assert: WillowBootstrapFileMetadataLibrary version equals: WillowBootstrapFileMetadataLibrary default version

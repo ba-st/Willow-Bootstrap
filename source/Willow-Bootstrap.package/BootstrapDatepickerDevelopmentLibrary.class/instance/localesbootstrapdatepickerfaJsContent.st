@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerfaJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Persian translation for bootstrap-datepicker
  * Mostafa Rokooie <mostafa.rokooie@gmail.com>

@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickermnJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Mongolian translation for bootstrap-datepicker
  * Andrey Torsunov <andrey.torsunov@gmail.com>

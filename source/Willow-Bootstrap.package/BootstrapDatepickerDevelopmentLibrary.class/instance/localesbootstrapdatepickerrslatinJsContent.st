@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerrslatinJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Serbian latin translation for bootstrap-datepicker
  * Bojan Milosavlević <milboj@gmail.com>

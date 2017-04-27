@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerhyJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Armenian translation for bootstrap-datepicker
  * Hayk Chamyan <hamshen@gmail.com>

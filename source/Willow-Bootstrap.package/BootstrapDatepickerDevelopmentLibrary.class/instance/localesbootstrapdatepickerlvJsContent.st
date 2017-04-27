@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerlvJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Latvian translation for bootstrap-datepicker
  * Artis Avotins <artis@apit.lv>

@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerenNZJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * New Zealand English translation for bootstrap-datepicker
  */

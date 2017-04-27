@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerthJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Thai translation for bootstrap-datepicker
  * Suchau Jiraprapot <seroz24@gmail.com>

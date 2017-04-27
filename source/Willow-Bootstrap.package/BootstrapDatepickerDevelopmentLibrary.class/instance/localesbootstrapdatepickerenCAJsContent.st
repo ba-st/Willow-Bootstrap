@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerenCAJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Canadian English translation for bootstrap-datepicker
  * Mike Nacey <mnacey@gmail.com>

@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultsbgBGJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-bg_BG.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

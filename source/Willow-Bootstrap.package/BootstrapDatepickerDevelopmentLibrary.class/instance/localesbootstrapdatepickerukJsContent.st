@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerukJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Ukrainian translation for bootstrap-datepicker
  * Igor Polynets

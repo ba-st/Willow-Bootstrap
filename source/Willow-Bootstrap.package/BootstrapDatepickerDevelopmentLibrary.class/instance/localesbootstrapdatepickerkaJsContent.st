@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerkaJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Georgian translation for bootstrap-datepicker
  * Levan Melikishvili <levani0101@yahoo.com>

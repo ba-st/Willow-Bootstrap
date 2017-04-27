@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickersvJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Swedish translation for bootstrap-datepicker
  * Patrik Ragnarsson <patrik@starkast.net>

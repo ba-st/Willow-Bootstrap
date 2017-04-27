@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultsfaIRJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fa_IR.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

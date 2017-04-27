@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerbsJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Bosnian translation for bootstrap-datepicker
  */

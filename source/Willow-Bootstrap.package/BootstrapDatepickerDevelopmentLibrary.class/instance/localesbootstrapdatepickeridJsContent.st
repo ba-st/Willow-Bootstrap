@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickeridJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Bahasa translation for bootstrap-datepicker
  * Azwar Akbar <azwar.akbar@gmail.com>

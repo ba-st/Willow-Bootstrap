@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerhuJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Hungarian translation for bootstrap-datepicker
  * Sotus László <lacisan@gmail.com>

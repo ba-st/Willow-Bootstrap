@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerbrJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Breton translation for bootstrap-datepicker
  * Gwenn Meynier <tornoz@laposte.net>

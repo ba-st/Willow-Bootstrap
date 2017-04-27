@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultsruRUJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ru_RU.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

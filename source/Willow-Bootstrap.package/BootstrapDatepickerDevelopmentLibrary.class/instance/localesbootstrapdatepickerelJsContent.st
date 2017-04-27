@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerelJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Greek translation for bootstrap-datepicker
  */

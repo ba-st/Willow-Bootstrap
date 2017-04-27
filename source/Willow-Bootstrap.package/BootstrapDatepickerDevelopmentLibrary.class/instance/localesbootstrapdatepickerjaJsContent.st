@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerjaJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Japanese translation for bootstrap-datepicker
  * Norio Suzuki <https://github.com/suzuki/>

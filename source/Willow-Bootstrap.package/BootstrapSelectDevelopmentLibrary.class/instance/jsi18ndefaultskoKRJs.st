@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultskoKRJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ko_KR.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
