@@ -3,9 +3,9 @@ initializeApplying: aCommandToContainer displaying: thePhrasingContent applying:
 
 	| fieldToRender |
 
-	fieldToRender := aCommandToField affectsComponent
-		ifTrue: [ GenericContainerWebView wrapping: aFieldWebView applying: aCommandToField ]
-		ifFalse: [ aFieldWebView ].
+	fieldToRender := aCommandToField isNullCommand
+		ifTrue: [ aFieldWebView ]
+		ifFalse: [ GenericContainerWebView wrapping: aFieldWebView applying: aCommandToField  ].
 		
 	formGroupContainer := GenericContainerWebView
 		wrapping: [ :canvas | 
