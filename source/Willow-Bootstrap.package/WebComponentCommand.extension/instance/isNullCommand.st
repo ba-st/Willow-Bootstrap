@@ -1,0 +1,4 @@
+*Willow-Bootstrap
+isNullCommand
+
+	^false
