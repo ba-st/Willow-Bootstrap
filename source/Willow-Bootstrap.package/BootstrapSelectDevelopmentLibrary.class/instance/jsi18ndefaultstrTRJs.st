@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultstrTRJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-tr_TR.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

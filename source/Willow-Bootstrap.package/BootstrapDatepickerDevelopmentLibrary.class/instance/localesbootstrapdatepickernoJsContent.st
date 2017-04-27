@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickernoJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  *  Norwegian translation for bootstrap-datepicker
  **/

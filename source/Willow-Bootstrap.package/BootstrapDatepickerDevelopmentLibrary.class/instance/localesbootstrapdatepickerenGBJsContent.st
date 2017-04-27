@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerenGBJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * British English translation for bootstrap-datepicker
  * Xavier Dutreilh <xavier@dutreilh.com>

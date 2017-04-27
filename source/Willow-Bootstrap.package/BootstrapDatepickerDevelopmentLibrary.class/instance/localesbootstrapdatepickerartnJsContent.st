@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerartnJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Arabic-Tunisia translation for bootstrap-datepicker
  * Souhaieb Besbes <besbes.souhaieb@gmail.com>

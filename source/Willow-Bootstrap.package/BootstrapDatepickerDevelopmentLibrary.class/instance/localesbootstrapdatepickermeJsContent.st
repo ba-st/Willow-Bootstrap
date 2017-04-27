@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickermeJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Montenegrin translation for bootstrap-datepicker
  * Miodrag Nikač <miodrag@restartit.me>

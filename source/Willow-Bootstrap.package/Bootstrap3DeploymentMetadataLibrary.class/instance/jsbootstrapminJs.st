@@ -1,7 +1,9 @@
 uploaded metadata
 jsbootstrapminJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		cacheDuration: self defaultCacheDuration
 		contents: (GRDelayedSend receiver: self selector: #jsbootstrapminJsContent)

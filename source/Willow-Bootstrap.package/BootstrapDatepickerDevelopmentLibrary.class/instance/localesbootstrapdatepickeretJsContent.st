@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickeretJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Estonian translation for bootstrap-datepicker
  * Ando Roots <https://github.com/anroots>

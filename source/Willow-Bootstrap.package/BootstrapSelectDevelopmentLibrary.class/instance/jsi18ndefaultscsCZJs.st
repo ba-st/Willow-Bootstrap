@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultscsCZJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-cs_CZ.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

@@ -1,7 +1,9 @@
 uploaded metadata
 fontsglyphiconshalflingsregularSvg
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'fonts/glyphicons-halflings-regular.svg'
 		mimeType: (WAMimeType main: 'image' sub: 'svg+xml')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		cacheDuration: self defaultCacheDuration
 		contents: (GRDelayedSend receiver: self selector: #fontsglyphiconshalflingsregularSvgContent)

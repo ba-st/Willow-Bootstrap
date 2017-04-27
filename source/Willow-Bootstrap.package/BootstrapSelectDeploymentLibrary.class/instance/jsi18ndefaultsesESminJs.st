@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultsesESminJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-es_ES.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

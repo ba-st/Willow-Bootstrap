@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerhrJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Croatian localisation
  */

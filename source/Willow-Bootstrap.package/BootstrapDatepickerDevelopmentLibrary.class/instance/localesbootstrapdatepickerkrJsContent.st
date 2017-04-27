@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerkrJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Korean translation for bootstrap-datepicker
  * Gu Youn <http://github.com/guyoun>

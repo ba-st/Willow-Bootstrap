@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickertjJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Tajik translation for bootstrap-datepicker
  * Bakhtiyor Bahritidinov <i@bakhtiyor.tj>

@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerfrCHJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * French (Switzerland) translation for bootstrap-datepicker
  * Christoph Jossi <c.jossi@ascami.ch>

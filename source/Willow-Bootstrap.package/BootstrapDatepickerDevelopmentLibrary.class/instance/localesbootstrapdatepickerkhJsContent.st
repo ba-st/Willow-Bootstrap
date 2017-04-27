@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerkhJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Cambodia (Khmer) translation for bootstrap-datepicker
  * Lytay TOUCH <lytaytouch@gmail.com>

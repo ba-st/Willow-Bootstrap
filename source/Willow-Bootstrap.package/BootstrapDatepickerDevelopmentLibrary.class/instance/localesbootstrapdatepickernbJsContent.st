@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickernbJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Norwegian (bokmål) translation for bootstrap-datepicker
  * Fredrik Sundmyhr <http://github.com/fsundmyhr>

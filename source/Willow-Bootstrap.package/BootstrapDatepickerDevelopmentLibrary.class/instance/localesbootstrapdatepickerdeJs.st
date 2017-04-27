@@ -1,5 +1,7 @@
 uploaded metadata
 localesbootstrapdatepickerdeJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.de.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

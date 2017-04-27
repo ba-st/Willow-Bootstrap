@@ -1,5 +1,7 @@
 uploaded metadata
 jsi18ndefaultszhCNJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-zh_CN.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

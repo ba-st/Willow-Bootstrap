@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerroJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Romanian translation for bootstrap-datepicker
  * Cristian Vasile <cristi.mie@gmail.com>

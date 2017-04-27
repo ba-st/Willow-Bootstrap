@@ -1,5 +1,7 @@
 uploaded metadata
 cssbootstrapdatepicker3Css
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'css/bootstrap-datepicker3.css'
 		mimeType: (WAMimeType main: 'text' sub: 'css')

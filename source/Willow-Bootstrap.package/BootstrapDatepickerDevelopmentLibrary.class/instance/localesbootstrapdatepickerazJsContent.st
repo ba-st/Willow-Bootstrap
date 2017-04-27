@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerazJsContent
+
+	<ignoreForCoverage>
 	^ '// Azerbaijani
 ;(function($){
     $.fn.datepicker.dates[''az''] = {

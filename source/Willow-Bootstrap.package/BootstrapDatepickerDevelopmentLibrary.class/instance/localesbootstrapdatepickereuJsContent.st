@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickereuJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Basque translation for bootstrap-datepicker
  * Arkaitz Etxeberria <kondi80@gmail.com>

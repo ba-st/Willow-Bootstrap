@@ -1,5 +1,7 @@
 uploaded metadata
 jsbootstrapselectjsMap
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-select.js.map'
 		mimeType: (WAMimeType main: 'application' sub: 'octet-stream')

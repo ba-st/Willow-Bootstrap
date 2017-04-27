@@ -1,7 +1,9 @@
 uploaded metadata
 fontsglyphiconshalflingsregularTtf
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'fonts/glyphicons-halflings-regular.ttf'
 		mimeType: (WAMimeType main: 'application' sub: 'octet-stream')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		cacheDuration: self defaultCacheDuration
 		contents: (GRDelayedSend receiver: self selector: #fontsglyphiconshalflingsregularTtfContent)

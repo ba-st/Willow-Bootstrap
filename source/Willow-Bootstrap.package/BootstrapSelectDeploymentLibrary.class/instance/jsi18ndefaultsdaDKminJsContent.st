@@ -1,5 +1,7 @@
 uploaded
 jsi18ndefaultsdaDKminJsContent
+
+	<ignoreForCoverage>
 	^ '/*!
  * Bootstrap-select v1.12.2 (http://silviomoreto.github.io/bootstrap-select)
  *

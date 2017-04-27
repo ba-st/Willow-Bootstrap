@@ -1,5 +1,7 @@
 uploaded metadata
 jsbootstrapselectminJs
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-select.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

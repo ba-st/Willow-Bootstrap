@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerptBRJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Brazilian translation for bootstrap-datepicker
  * Cauan Cabral <cauan@radig.com.br>

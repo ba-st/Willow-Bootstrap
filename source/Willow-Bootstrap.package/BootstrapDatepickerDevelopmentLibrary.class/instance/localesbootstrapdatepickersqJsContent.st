@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickersqJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Albanian translation for bootstrap-datepicker
  * Tomor Pupovci <http://www.github.com/ttomor>

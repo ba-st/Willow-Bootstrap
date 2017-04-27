@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerfrJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * French translation for bootstrap-datepicker
  * Nico Mollet <nico.mollet@gmail.com>

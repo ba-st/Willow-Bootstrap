@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerplJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Polish translation for bootstrap-datepicker
  * Robert <rtpm@gazeta.pl>

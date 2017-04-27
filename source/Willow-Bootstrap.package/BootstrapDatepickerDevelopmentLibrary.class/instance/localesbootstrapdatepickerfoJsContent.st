@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerfoJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Faroese translation for bootstrap-datepicker
  * Theodor Johannesen <http://github.com/theodorjohannesen>

@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerdeJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * German translation for bootstrap-datepicker
  * Sam Zurcher <sam@orelias.ch>

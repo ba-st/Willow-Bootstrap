@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerswJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Swahili translation for bootstrap-datepicker
  * Edwin Mugendi <https://github.com/edwinmugendi>

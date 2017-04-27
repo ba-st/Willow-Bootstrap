@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerltJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Lithuanian translation for bootstrap-datepicker
  * Šarūnas Gliebus <ssharunas@yahoo.co.uk>

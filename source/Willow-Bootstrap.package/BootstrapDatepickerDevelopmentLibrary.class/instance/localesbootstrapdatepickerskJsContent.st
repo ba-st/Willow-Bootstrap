@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerskJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Slovak translation for bootstrap-datepicker
  * Marek Lichtner <marek@licht.sk>

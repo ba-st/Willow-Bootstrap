@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickersiJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Sinhala translation for bootstrap-datepicker
  * Chanaka Fernando <chanaka.fernando@hotmail.com>

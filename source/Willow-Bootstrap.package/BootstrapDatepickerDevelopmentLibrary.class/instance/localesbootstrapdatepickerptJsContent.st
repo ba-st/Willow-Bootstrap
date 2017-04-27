@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickerptJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Portuguese translation for bootstrap-datepicker
  * Original code: Cauan Cabral <cauan@radig.com.br>

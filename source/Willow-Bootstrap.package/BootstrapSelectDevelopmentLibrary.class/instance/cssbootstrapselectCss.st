@@ -1,5 +1,7 @@
 uploaded metadata
 cssbootstrapselectCss
+
+	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'css/bootstrap-select.css'
 		mimeType: (WAMimeType main: 'text' sub: 'css')

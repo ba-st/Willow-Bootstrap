@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickeritJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Italian translation for bootstrap-datepicker
  * Enrico Rubboli <rubboli@gmail.com>

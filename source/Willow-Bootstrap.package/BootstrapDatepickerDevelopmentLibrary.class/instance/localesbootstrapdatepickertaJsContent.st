@@ -1,5 +1,7 @@
 uploaded
 localesbootstrapdatepickertaJsContent
+
+	<ignoreForCoverage>
 	^ '/**
  * Tamil translation for bootstrap-datepicker
  * Abubacker Siddik A <abuabdul86@hotmail.com>

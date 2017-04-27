@@ -1,5 +1,7 @@
 uploaded
 jsbootstrapdatepickerminJsContent
+
+	<ignoreForCoverage>
 	^ '/*!
  * Datepicker for Bootstrap v1.7.0-RC2 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
