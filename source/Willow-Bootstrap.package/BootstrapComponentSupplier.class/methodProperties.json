@@ -2,6 +2,7 @@
 	"instance" : {
 		"synchronicButtonLabeled:applying:evaluating:" : "GabrielOmarCotelli 4/25/2017 10:32",
 		"updateRoot:" : "GabrielOmarCotelli 4/27/2017 15:40",
+		"panelBuilder" : "GabrielOmarCotelli 5/2/2017 16:48",
 		"inputGroupAddOnWrapping:" : "GabrielOmarCotelli 4/25/2017 10:17",
 		"naturalNumberFieldApplying:" : "GabrielOmarCotelli 4/27/2017 15:34",
 		"initializeUsing:" : "GabrielOmarCotelli 4/21/2017 16:35",
@@ -10,7 +11,8 @@
 		"inputGroupButtonWrapping:" : "GabrielOmarCotelli 4/25/2017 10:17",
 		"singleLineTextFieldApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
 		"asynchronicButtonLabeled:applying:" : "GabrielOmarCotelli 4/11/2017 17:06",
-		"formControlCommand" : "GabrielOmarCotelli 4/20/2017 17:56"
+		"formControlCommand" : "GabrielOmarCotelli 4/20/2017 17:56",
+		"unorderedListApplying:listing:applyingToEach:" : "GabrielOmarCotelli 5/2/2017 17:18"
 	},
 	"class" : {
 		"online" : "GabrielOmarCotelli 4/21/2017 16:34",

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 5/2/2017 16:33",
+	"super" : "GRObject",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"headingOptional",
+		"bodyOptional",
+		"footerOptional",
+		"tableOrListGroupOptional"
+	],
+	"name" : "BootstrapPanelBuilder",
+	"type" : "normal"
+}
