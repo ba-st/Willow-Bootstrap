@@ -1,5 +1,5 @@
 initialization
-WillowTestCase subclass: #BootstrapToggableTabsBuilderTest
-	instanceVariableNames: 'supplier'
-	classVariableNames: ''
-	package: 'Willow-Bootstrap-Tests-WebViews'
+setUp
+
+	super setUp.
+	supplier := BootstrapComponentSupplier online
