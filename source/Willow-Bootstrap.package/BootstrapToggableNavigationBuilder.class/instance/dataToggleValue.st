@@ -1,0 +1,4 @@
+private
+dataToggleValue
+
+	^ self subclassResponsibility

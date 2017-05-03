@@ -1,0 +1,1 @@
+Add quick, dynamic pills functionality to transition through panes of local content, even via dropdown menus. 
