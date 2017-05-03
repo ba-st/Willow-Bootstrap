@@ -1,0 +1,4 @@
+Navigation
+tabPane
+
+	^ 'tab-pane'

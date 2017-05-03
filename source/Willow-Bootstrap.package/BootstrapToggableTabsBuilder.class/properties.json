@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 5/3/2017 18:00",
+	"super" : "BootstrapToggableNavigationBuilder",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapToggableTabsBuilder",
+	"type" : "normal"
+}

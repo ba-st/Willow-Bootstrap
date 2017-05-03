@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 5/3/2017 17:28",
+	"super" : "GRObject",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"headers",
+		"contents"
+	],
+	"name" : "BootstrapToggableNavigationBuilder",
+	"type" : "normal"
+}

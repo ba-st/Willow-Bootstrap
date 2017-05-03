@@ -1,4 +1,4 @@
-as yet unclassified
+initialization
 initializeFormattingWith: aJSFormattingFunction parsingWith: aJSParsingFunction
 
 	options := GRSmallDictionary new.

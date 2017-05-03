@@ -1,0 +1,4 @@
+private
+navigationTypeClass
+
+	^ self subclassResponsibility
