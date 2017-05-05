@@ -1,0 +1,4 @@
+private
+method
+
+	^ BootstrapCssStyles tooltip
