@@ -1,14 +1,20 @@
 {
 	"instance" : {
-		"bootstrapModal" : "GabrielOmarCotelli 4/7/2017 16:54",
+		"onHideCollapse:" : "GabrielOmarCotelli 4/7/2017 11:22",
 		"onShowCollapse:" : "GabrielOmarCotelli 4/7/2017 11:22",
+		"onShownCollapse:" : "GabrielOmarCotelli 4/7/2017 11:23",
+		"onInsertedTooltip:" : "GabrielOmarCotelli 5/5/2017 11:49",
+		"onShowTooltip:" : "GabrielOmarCotelli 5/5/2017 11:48",
+		"bootstrapModal" : "GabrielOmarCotelli 4/7/2017 16:54",
 		"bootstrapDatepicker" : "GabrielOmarCotelli 4/20/2017 17:39",
 		"onHiddenCollapse:" : "GabrielOmarCotelli 4/7/2017 11:22",
-		"onShownCollapse:" : "GabrielOmarCotelli 4/7/2017 11:23",
 		"bootstrapDatepickerTemplate" : "GabrielOmarCotelli 4/21/2017 11:27",
+		"bootstrapTooltip" : "GabrielOmarCotelli 5/5/2017 11:47",
+		"onShownTooltip:" : "GabrielOmarCotelli 5/5/2017 11:48",
 		"bootstrapSelect" : "GabrielOmarCotelli 3/31/2017 19:20",
-		"onHideCollapse:" : "GabrielOmarCotelli 4/7/2017 11:22",
-		"bootstrapCollapse" : "GabrielOmarCotelli 4/7/2017 11:03"
+		"onHideTooltip:" : "GabrielOmarCotelli 5/5/2017 11:48",
+		"bootstrapCollapse" : "GabrielOmarCotelli 4/7/2017 11:03",
+		"onHiddenTooltip:" : "GabrielOmarCotelli 5/5/2017 11:48"
 	},
 	"class" : { }
 }

@@ -1,0 +1,20 @@
+{
+	"instance" : {
+		"destroy" : "GabrielOmarCotelli 5/5/2017 11:46",
+		"delay:" : "GabrielOmarCotelli 5/5/2017 11:27",
+		"placement:" : "GabrielOmarCotelli 5/5/2017 11:31",
+		"toggle" : "GabrielOmarCotelli 5/5/2017 11:46",
+		"template:" : "GabrielOmarCotelli 5/5/2017 12:26",
+		"animation:" : "GabrielOmarCotelli 5/5/2017 11:24",
+		"trigger:" : "GabrielOmarCotelli 5/5/2017 11:35",
+		"title:" : "GabrielOmarCotelli 5/5/2017 11:34",
+		"hide" : "GabrielOmarCotelli 5/5/2017 11:45",
+		"container:" : "GabrielOmarCotelli 5/5/2017 11:25",
+		"selector:" : "GabrielOmarCotelli 5/5/2017 11:32",
+		"method" : "GabrielOmarCotelli 5/5/2017 11:52",
+		"show" : "GabrielOmarCotelli 5/5/2017 11:45",
+		"html:" : "GabrielOmarCotelli 5/5/2017 11:29",
+		"viewport:" : "GabrielOmarCotelli 5/5/2017 11:38"
+	},
+	"class" : { }
+}
