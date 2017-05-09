@@ -1,0 +1,1 @@
+I'm a bootstrap command configuring a modal with an static backdrop and attaching a script to self clean the dialogs section on close. Useful for dynamically created modals.

@@ -1,0 +1,4 @@
+Willow Functions
+cleanModalFunctionName
+
+	^ 'cleanModal'

@@ -1,4 +1,4 @@
 Accessing
 selectorsToInclude
 
-	^ #(csswillowbootstrapCss)
+	^ #(csswillowbootstrapCss jswillowbootstrapJs)
