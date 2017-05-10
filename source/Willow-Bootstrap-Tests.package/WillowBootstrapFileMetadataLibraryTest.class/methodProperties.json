@@ -1,8 +1,10 @@
 {
 	"instance" : {
 		"testIsForDevelopment" : "GabrielOmarCotelli 4/27/2017 15:52",
+		"testJavascriptContent" : "GabrielOmarCotelli 5/10/2017 09:55",
+		"testForDevelopment" : "GabrielOmarCotelli 4/27/2017 15:52",
 		"testVersion" : "GabrielOmarCotelli 4/27/2017 15:52",
-		"testForDevelopment" : "GabrielOmarCotelli 4/27/2017 15:52"
+		"testCssContent" : "GabrielOmarCotelli 5/10/2017 09:53"
 	},
 	"class" : { }
 }
