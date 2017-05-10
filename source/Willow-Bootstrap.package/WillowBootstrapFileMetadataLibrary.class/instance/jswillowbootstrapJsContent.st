@@ -1,11 +1,7 @@
 Accessing
 jswillowbootstrapJsContent
 
-	^ '/* 
-*	willow-bootstrap.js v<1s>
-* Copyright 2017 - Buenos Aires Smalltalk
-* Licensed under the MIT license
-*/<n><2s>'
+	^ '/*<n>* willow-bootstrap.js v<1s><n>* Copyright 2017 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n><2s>'
 		expandMacrosWith: self version
 		with:
 			(self
