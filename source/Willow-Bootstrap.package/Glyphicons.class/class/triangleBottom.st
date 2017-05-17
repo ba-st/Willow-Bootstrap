@@ -1,4 +1,4 @@
 Accessing
 triangleBottom
 
-	^ 'glyphicon-triangle-bottom'
+	^'glyphicon-triangle-bottom'

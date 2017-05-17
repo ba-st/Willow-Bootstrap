@@ -1,0 +1,4 @@
+Accessing
+equalizer
+
+	^'glyphicon-equalizer'

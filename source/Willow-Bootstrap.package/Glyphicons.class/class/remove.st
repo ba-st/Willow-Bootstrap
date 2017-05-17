@@ -1,0 +1,4 @@
+Accessing
+remove
+
+	^'glyphicon-remove'

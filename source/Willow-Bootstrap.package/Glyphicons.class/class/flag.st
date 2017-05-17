@@ -1,0 +1,4 @@
+Accessing
+flag
+
+	^'glyphicon-flag'

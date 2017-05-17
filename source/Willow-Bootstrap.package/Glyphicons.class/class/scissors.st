@@ -1,0 +1,4 @@
+Accessing
+scissors
+
+	^'glyphicon-scissors'

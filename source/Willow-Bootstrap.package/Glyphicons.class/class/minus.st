@@ -1,0 +1,4 @@
+Accessing
+minus
+
+	^'glyphicon-minus'

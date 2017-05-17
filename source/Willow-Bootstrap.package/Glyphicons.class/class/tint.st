@@ -1,0 +1,4 @@
+Accessing
+tint
+
+	^'glyphicon-tint'

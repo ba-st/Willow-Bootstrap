@@ -1,0 +1,4 @@
+Accessing
+tent
+
+	^'glyphicon-tent'

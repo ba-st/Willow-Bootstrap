@@ -3,4 +3,4 @@ mobile: boolean
 
 	"When set to true, enables the device's native menu for select menus."
 
-	self optionAt: 'mobile' put: boolean 
+	self optionAt: BootstrapSelectConstants mobile put: boolean 

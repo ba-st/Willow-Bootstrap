@@ -1,0 +1,4 @@
+Accessing
+pause
+
+	^'glyphicon-pause'

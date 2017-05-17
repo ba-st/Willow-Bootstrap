@@ -1,0 +1,4 @@
+Accessing
+upload
+
+	^'glyphicon-upload'

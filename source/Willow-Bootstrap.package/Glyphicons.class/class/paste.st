@@ -1,0 +1,4 @@
+Accessing
+paste
+
+	^'glyphicon-paste'

@@ -1,4 +1,4 @@
 Accessing
 menuUp
 
-	^ 'glyphicon-menu-up'
+	^'glyphicon-menu-up'
