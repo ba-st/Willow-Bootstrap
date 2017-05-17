@@ -1,0 +1,4 @@
+Accessing
+copy
+
+	^'glyphicon-copy'

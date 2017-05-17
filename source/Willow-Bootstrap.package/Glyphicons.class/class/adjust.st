@@ -1,0 +1,4 @@
+Accessing
+adjust
+
+	^'glyphicon-adjust'

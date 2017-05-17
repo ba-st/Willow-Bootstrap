@@ -1,0 +1,4 @@
+Accessing
+open
+
+	^'glyphicon-open'

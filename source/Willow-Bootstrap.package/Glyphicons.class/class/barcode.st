@@ -1,0 +1,4 @@
+Accessing
+barcode
+
+	^'glyphicon-barcode'

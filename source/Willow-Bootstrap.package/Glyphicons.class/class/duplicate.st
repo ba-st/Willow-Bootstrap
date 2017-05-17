@@ -1,0 +1,4 @@
+Accessing
+duplicate
+
+	^'glyphicon-duplicate'

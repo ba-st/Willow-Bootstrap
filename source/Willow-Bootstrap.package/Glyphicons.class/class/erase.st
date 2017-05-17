@@ -1,0 +1,4 @@
+Accessing
+erase
+
+	^'glyphicon-erase'

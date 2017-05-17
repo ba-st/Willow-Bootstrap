@@ -1,4 +1,4 @@
 Accessing
 calendar
 
-	^ 'glyphicon-calendar'
+	^'glyphicon-calendar'

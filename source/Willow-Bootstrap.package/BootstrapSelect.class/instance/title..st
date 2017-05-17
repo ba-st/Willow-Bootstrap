@@ -3,4 +3,4 @@ title: string
 
 	"The default title for the selectpicker."
 
-	self optionAt: 'title' put: string 
+	self optionAt: BootstrapSelectConstants title put: string 

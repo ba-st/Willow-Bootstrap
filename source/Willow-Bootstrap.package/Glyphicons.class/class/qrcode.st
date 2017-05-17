@@ -1,0 +1,4 @@
+Accessing
+qrcode
+
+	^'glyphicon-qrcode'

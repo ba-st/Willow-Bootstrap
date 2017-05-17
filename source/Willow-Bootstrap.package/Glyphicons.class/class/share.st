@@ -1,0 +1,4 @@
+Accessing
+share
+
+	^'glyphicon-share'

@@ -1,0 +1,4 @@
+Accessing
+camera
+
+	^'glyphicon-camera'

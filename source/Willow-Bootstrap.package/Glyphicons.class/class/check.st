@@ -1,0 +1,4 @@
+Accessing
+check
+
+	^'glyphicon-check'

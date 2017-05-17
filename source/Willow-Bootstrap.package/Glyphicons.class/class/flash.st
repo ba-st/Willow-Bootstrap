@@ -1,0 +1,4 @@
+Accessing
+flash
+
+	^'glyphicon-flash'
