@@ -1,0 +1,4 @@
+configuring
+onTrigger
+
+	^ button onTrigger

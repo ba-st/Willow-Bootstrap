@@ -1,0 +1,12 @@
+{
+	"instance" : {
+		"testBuildApplying" : "GabrielOmarCotelli 5/18/2017 15:15",
+		"testDismissible" : "GabrielOmarCotelli 5/18/2017 15:33",
+		"testDanger" : "GabrielOmarCotelli 5/18/2017 15:18",
+		"testInformational" : "GabrielOmarCotelli 5/18/2017 15:18",
+		"testWrapping" : "GabrielOmarCotelli 5/18/2017 15:20",
+		"testWarning" : "GabrielOmarCotelli 5/18/2017 15:16",
+		"testSuccess" : "GabrielOmarCotelli 5/18/2017 15:16"
+	},
+	"class" : { }
+}
