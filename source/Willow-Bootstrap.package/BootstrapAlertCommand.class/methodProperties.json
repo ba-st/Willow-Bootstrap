@@ -1,0 +1,13 @@
+{
+	"instance" : {
+		"applyTo:on:" : "GabrielOmarCotelli 5/18/2017 14:48",
+		"initializeApplying:" : "GabrielOmarCotelli 5/18/2017 14:56"
+	},
+	"class" : {
+		"success" : "GabrielOmarCotelli 5/18/2017 14:51",
+		"warning" : "GabrielOmarCotelli 5/18/2017 14:58",
+		"applyingClassificationCommandWith:" : "GabrielOmarCotelli 5/18/2017 14:55",
+		"danger" : "GabrielOmarCotelli 5/18/2017 14:58",
+		"informational" : "GabrielOmarCotelli 5/18/2017 14:58"
+	}
+}

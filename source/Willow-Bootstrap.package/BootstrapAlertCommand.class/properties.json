@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 5/18/2017 14:46",
+	"super" : "WebComponentCommand",
+	"category" : "Willow-Bootstrap-Frontend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classificationCommand"
+	],
+	"name" : "BootstrapAlertCommand",
+	"type" : "normal"
+}

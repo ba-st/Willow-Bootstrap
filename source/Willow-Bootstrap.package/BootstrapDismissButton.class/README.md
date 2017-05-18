@@ -1,0 +1,1 @@
+I'm a dismiss button able to dismiss modals or alerts.
