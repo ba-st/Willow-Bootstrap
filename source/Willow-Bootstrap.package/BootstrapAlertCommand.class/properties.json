@@ -1,14 +1,13 @@
 {
-	"category" : "Willow-Bootstrap-Frontend",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 5/18/2017 14:46",
-	"instvars" : [
-		"classificationCommand" ],
-	"name" : "BootstrapAlertCommand",
-	"pools" : [
-		 ],
 	"super" : "WebComponentCommand",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Frontend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classificationCommand"
+	],
+	"name" : "BootstrapAlertCommand",
+	"type" : "normal"
+}

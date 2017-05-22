@@ -1,15 +1,14 @@
 {
-	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 4/25/2017 10:10",
+	"super" : "WAPresenter",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"inputGroupContainer",
-		"textFieldWebView" ],
+		"textFieldWebView"
+	],
 	"name" : "BootstrapInputGroupWebView",
-	"pools" : [
-		 ],
-	"super" : "WAPresenter",
-	"type" : "normal" }
+	"type" : "normal"
+}

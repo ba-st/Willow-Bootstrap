@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Tests-Frontend",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "BootstrapComponentSupplierTest",
-	"pools" : [
-		 ],
 	"super" : "WillowTestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-Frontend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapComponentSupplierTest",
+	"type" : "normal"
+}

@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"applyTo:on:" : "GabrielOmarCotelli 5/9/2017 16:00",
-		"initialize" : "GabrielOmarCotelli 5/9/2017 16:08" } }
+		"initialize" : "GabrielOmarCotelli 5/9/2017 16:08",
+		"applyTo:on:" : "GabrielOmarCotelli 5/9/2017 16:00"
+	},
+	"class" : { }
+}

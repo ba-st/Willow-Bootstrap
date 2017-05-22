@@ -1,14 +1,13 @@
 {
-	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 5/18/2017 15:23",
-	"instvars" : [
-		"button" ],
-	"name" : "BootstrapDismissButton",
-	"pools" : [
-		 ],
 	"super" : "WAPresenter",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"button"
+	],
+	"name" : "BootstrapDismissButton",
+	"type" : "normal"
+}

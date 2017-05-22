@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Tests-Select",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "BootstrapSelectLibraryTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-Select",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapSelectLibraryTest",
+	"type" : "normal"
+}

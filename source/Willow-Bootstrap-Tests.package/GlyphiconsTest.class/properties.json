@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Tests-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "GlyphiconsTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GlyphiconsTest",
+	"type" : "normal"
+}

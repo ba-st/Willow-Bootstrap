@@ -1,14 +1,15 @@
 {
-	"class" : {
-		 },
 	"instance" : {
+		"testOnShown" : "GabrielOmarCotelli 4/7/2017 11:25",
 		"renderCollapsibleContentApplying:" : "GabrielOmarCotelli 4/7/2017 11:03",
+		"testToggleMethod" : "GabrielOmarCotelli 4/7/2017 11:10",
 		"testHide" : "GabrielOmarCotelli 4/7/2017 11:11",
+		"testToggle" : "GabrielOmarCotelli 4/7/2017 11:04",
 		"testOnHidden" : "GabrielOmarCotelli 4/7/2017 11:26",
+		"testShow" : "GabrielOmarCotelli 4/7/2017 11:11",
 		"testOnHide" : "GabrielOmarCotelli 4/7/2017 11:26",
 		"testOnShow" : "GabrielOmarCotelli 4/7/2017 11:25",
-		"testOnShown" : "GabrielOmarCotelli 4/7/2017 11:25",
-		"testParent" : "GabrielOmarCotelli 4/7/2017 11:30",
-		"testShow" : "GabrielOmarCotelli 4/7/2017 11:11",
-		"testToggle" : "GabrielOmarCotelli 4/7/2017 11:04",
-		"testToggleMethod" : "GabrielOmarCotelli 4/7/2017 11:10" } }
+		"testParent" : "GabrielOmarCotelli 4/7/2017 11:30"
+	},
+	"class" : { }
+}

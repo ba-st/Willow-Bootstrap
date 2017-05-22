@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Tests-Datepicker",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "BootstrapDatepickerLibraryTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-Datepicker",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapDatepickerLibraryTest",
+	"type" : "normal"
+}

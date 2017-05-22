@@ -1,17 +1,16 @@
 {
-	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 5/2/2017 16:33",
+	"super" : "GRObject",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"headingOptional",
 		"bodyOptional",
 		"footerOptional",
-		"tableOrListGroupOptional" ],
+		"tableOrListGroupOptional"
+	],
 	"name" : "BootstrapPanelBuilder",
-	"pools" : [
-		 ],
-	"super" : "GRObject",
-	"type" : "normal" }
+	"type" : "normal"
+}

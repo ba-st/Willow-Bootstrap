@@ -1,14 +1,13 @@
 {
-	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 4/6/2017 17:26",
-	"instvars" : [
-		"targetIdentifier" ],
-	"name" : "BootstrapHamburgerButton",
-	"pools" : [
-		 ],
 	"super" : "WAPresenter",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"targetIdentifier"
+	],
+	"name" : "BootstrapHamburgerButton",
+	"type" : "normal"
+}

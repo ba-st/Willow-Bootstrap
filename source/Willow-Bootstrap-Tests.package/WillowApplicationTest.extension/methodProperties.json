@@ -1,5 +1,6 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"testRenderContentOnWithBootstrap" : "GabrielOmarCotelli 5/9/2017 16:15" } }
+		"testRenderContentOnWithBootstrap" : "GabrielOmarCotelli 5/9/2017 16:15"
+	},
+	"class" : { }
+}

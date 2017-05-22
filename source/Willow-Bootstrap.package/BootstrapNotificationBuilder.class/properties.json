@@ -1,16 +1,15 @@
 {
-	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 5/18/2017 15:07",
+	"super" : "GRObject",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"alertCommand",
 		"content",
-		"dismissCommand" ],
+		"dismissCommand"
+	],
 	"name" : "BootstrapNotificationBuilder",
-	"pools" : [
-		 ],
-	"super" : "GRObject",
-	"type" : "normal" }
+	"type" : "normal"
+}

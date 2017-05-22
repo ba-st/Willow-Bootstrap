@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Tests-Plugins",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "BootstrapTooltipTest",
-	"pools" : [
-		 ],
 	"super" : "WillowTestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-Plugins",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapTooltipTest",
+	"type" : "normal"
+}

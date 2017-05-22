@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"testDataAPI" : "nperez 5/22/2017 09:19",
 		"testStartWeekDays" : "GabrielOmarCotelli 4/21/2017 15:38",
-		"testViewModes" : "GabrielOmarCotelli 4/21/2017 15:34" } }
+		"testViewModes" : "GabrielOmarCotelli 4/21/2017 15:34"
+	},
+	"class" : { }
+}

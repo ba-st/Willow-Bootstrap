@@ -1,16 +1,15 @@
 {
-	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 4/10/2017 10:23",
+	"super" : "WAPresenter",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"footer",
 		"dialog",
-		"header" ],
+		"header"
+	],
 	"name" : "BootstrapModalWebView",
-	"pools" : [
-		 ],
-	"super" : "WAPresenter",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Tests-Plugins",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "BootstrapDelayConfigurationTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-Plugins",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapDelayConfigurationTest",
+	"type" : "normal"
+}

@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"hide" : "GabrielOmarCotelli 4/7/2017 16:45",
-		"method" : "GabrielOmarCotelli 4/7/2017 16:46",
 		"parent:" : "GabrielOmarCotelli 4/7/2017 10:49",
-		"show" : "GabrielOmarCotelli 4/7/2017 16:45",
+		"toggle:" : "GabrielOmarCotelli 4/7/2017 10:49",
+		"method" : "GabrielOmarCotelli 4/7/2017 16:46",
+		"hide" : "GabrielOmarCotelli 4/7/2017 16:45",
 		"toggle" : "GabrielOmarCotelli 4/7/2017 16:45",
-		"toggle:" : "GabrielOmarCotelli 4/7/2017 10:49" } }
+		"show" : "GabrielOmarCotelli 4/7/2017 16:45"
+	},
+	"class" : { }
+}

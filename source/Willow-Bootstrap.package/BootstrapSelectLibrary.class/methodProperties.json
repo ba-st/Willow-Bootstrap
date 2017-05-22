@@ -1,8 +1,9 @@
 {
+	"instance" : { },
 	"class" : {
-		"forDeployment" : "GabrielOmarCotelli 4/17/2017 16:45",
-		"forDevelopment" : "GabrielOmarCotelli 4/17/2017 16:45",
+		"version" : "GabrielOmarCotelli 4/21/2017 15:48",
 		"libraryName" : "GabrielOmarCotelli 4/21/2017 15:48",
-		"version" : "GabrielOmarCotelli 4/21/2017 15:48" },
-	"instance" : {
-		 } }
+		"forDeployment" : "GabrielOmarCotelli 4/17/2017 16:45",
+		"forDevelopment" : "GabrielOmarCotelli 4/17/2017 16:45"
+	}
+}

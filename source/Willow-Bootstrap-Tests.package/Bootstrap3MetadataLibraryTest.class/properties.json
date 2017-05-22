@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Tests-Libraries",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "Bootstrap3MetadataLibraryTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-Libraries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Bootstrap3MetadataLibraryTest",
+	"type" : "normal"
+}

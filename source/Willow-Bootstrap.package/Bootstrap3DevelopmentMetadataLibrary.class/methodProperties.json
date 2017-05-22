@@ -1,16 +1,19 @@
 {
-	"class" : {
-		"isForDeployment" : "GabrielOmarCotelli 4/18/2017 10:36" },
 	"instance" : {
+		"fileSelectors" : "GabrielOmarCotelli 4/27/2017 16:00",
+		"cssbootstrapthemeCssContent" : "GabrielOmarCotelli 4/27/2017 16:01",
+		"jsbootstrapJs" : "GabrielOmarCotelli 4/27/2017 16:02",
+		"cssbootstrapcssMap" : "GabrielOmarCotelli 4/27/2017 16:01",
+		"jsbootstrapJsContent" : "GabrielOmarCotelli 4/27/2017 16:01",
+		"cssbootstrapthemecssMapContent" : "GabrielOmarCotelli 4/27/2017 16:01",
+		"cssbootstrapthemecssMap" : "GabrielOmarCotelli 4/27/2017 16:02",
+		"cssbootstrapcssMapContent" : "GabrielOmarCotelli 4/27/2017 16:01",
+		"selectorsToInclude" : "GabrielOmarCotelli 4/27/2017 16:00",
 		"cssbootstrapCss" : "GabrielOmarCotelli 4/27/2017 16:01",
 		"cssbootstrapCssContent" : "GabrielOmarCotelli 4/27/2017 16:00",
-		"cssbootstrapcssMap" : "GabrielOmarCotelli 4/27/2017 16:01",
-		"cssbootstrapcssMapContent" : "GabrielOmarCotelli 4/27/2017 16:01",
-		"cssbootstrapthemeCss" : "GabrielOmarCotelli 4/27/2017 16:01",
-		"cssbootstrapthemeCssContent" : "GabrielOmarCotelli 4/27/2017 16:01",
-		"cssbootstrapthemecssMap" : "GabrielOmarCotelli 4/27/2017 16:02",
-		"cssbootstrapthemecssMapContent" : "GabrielOmarCotelli 4/27/2017 16:01",
-		"fileSelectors" : "GabrielOmarCotelli 4/27/2017 16:00",
-		"jsbootstrapJs" : "GabrielOmarCotelli 4/27/2017 16:02",
-		"jsbootstrapJsContent" : "GabrielOmarCotelli 4/27/2017 16:01",
-		"selectorsToInclude" : "GabrielOmarCotelli 4/27/2017 16:00" } }
+		"cssbootstrapthemeCss" : "GabrielOmarCotelli 4/27/2017 16:01"
+	},
+	"class" : {
+		"isForDeployment" : "GabrielOmarCotelli 4/18/2017 10:36"
+	}
+}

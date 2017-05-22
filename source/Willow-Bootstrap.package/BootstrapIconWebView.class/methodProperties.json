@@ -1,9 +1,12 @@
 {
+	"instance" : {
+		"renderContentOn:" : "GabrielOmarCotelli 4/4/2017 11:48",
+		"initializeApplying:" : "GabrielOmarCotelli 4/4/2017 11:47"
+	},
 	"class" : {
 		"applying:" : "GabrielOmarCotelli 4/4/2017 11:46",
 		"classificationCommandFor:" : "GabrielOmarCotelli 4/4/2017 11:50",
-		"representing:" : "GabrielOmarCotelli 4/4/2017 11:49",
-		"representing:applying:" : "GabrielOmarCotelli 4/4/2017 11:49" },
-	"instance" : {
-		"initializeApplying:" : "GabrielOmarCotelli 4/4/2017 11:47",
-		"renderContentOn:" : "GabrielOmarCotelli 4/4/2017 11:48" } }
+		"representing:applying:" : "GabrielOmarCotelli 4/4/2017 11:49",
+		"representing:" : "GabrielOmarCotelli 4/4/2017 11:49"
+	}
+}

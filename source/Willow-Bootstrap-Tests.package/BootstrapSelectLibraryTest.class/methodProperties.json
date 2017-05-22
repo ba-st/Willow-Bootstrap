@@ -1,5 +1,6 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"testVersionCompatibility" : "GabrielOmarCotelli 4/21/2017 16:28" } }
+		"testVersionCompatibility" : "GabrielOmarCotelli 4/21/2017 16:28"
+	},
+	"class" : { }
+}

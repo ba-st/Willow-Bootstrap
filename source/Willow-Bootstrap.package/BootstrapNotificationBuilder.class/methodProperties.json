@@ -1,12 +1,13 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"buildApplying:" : "GabrielOmarCotelli 5/18/2017 15:31",
-		"danger" : "GabrielOmarCotelli 5/18/2017 15:11",
-		"dismissibleWrapping:" : "GabrielOmarCotelli 5/18/2017 15:31",
 		"informational" : "GabrielOmarCotelli 5/18/2017 15:10",
+		"buildApplying:" : "GabrielOmarCotelli 5/18/2017 15:31",
+		"wrapping:" : "GabrielOmarCotelli 5/18/2017 15:11",
 		"initialize" : "GabrielOmarCotelli 5/18/2017 15:30",
 		"success" : "GabrielOmarCotelli 5/18/2017 15:13",
 		"warning" : "GabrielOmarCotelli 5/18/2017 15:13",
-		"wrapping:" : "GabrielOmarCotelli 5/18/2017 15:11" } }
+		"danger" : "GabrielOmarCotelli 5/18/2017 15:11",
+		"dismissibleWrapping:" : "GabrielOmarCotelli 5/18/2017 15:31"
+	},
+	"class" : { }
+}

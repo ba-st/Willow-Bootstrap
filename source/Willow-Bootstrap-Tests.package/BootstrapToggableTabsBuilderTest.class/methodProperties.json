@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"setUp" : "GabrielOmarCotelli 5/3/2017 19:40",
-		"testCantBuildWithLessThanTwoPanes" : "GabrielOmarCotelli 5/3/2017 19:15",
+		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 5/3/2017 19:01",
 		"testRenderContentOn" : "GabrielOmarCotelli 5/3/2017 18:48",
-		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 5/3/2017 19:01" } }
+		"setUp" : "GabrielOmarCotelli 5/3/2017 19:40",
+		"testCantBuildWithLessThanTwoPanes" : "GabrielOmarCotelli 5/3/2017 19:15"
+	},
+	"class" : { }
+}

@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Datepicker",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 4/21/2017 16:19",
-	"instvars" : [
-		 ],
-	"name" : "BootstrapDatepickerDeploymentLibrary",
-	"pools" : [
-		 ],
 	"super" : "BootstrapDatepickerLibrary",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Datepicker",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapDatepickerDeploymentLibrary",
+	"type" : "normal"
+}

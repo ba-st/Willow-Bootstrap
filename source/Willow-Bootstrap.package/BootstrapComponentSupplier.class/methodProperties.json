@@ -1,22 +1,25 @@
 {
-	"class" : {
-		"online" : "GabrielOmarCotelli 4/21/2017 16:34",
-		"usingLibraries:" : "GabrielOmarCotelli 4/21/2017 16:32",
-		"withBootstrapLibrary:selectLibrary:datepickerLibrary:" : "GabrielOmarCotelli 4/21/2017 16:36" },
 	"instance" : {
-		"asynchronicButtonLabeled:applying:" : "GabrielOmarCotelli 4/11/2017 17:06",
+		"synchronicButtonLabeled:applying:evaluating:" : "GabrielOmarCotelli 4/25/2017 10:32",
+		"updateRoot:" : "GabrielOmarCotelli 5/5/2017 10:22",
+		"panelBuilder" : "GabrielOmarCotelli 5/2/2017 16:48",
+		"inputGroupAddOnWrapping:" : "GabrielOmarCotelli 4/25/2017 10:17",
+		"naturalNumberFieldApplying:" : "GabrielOmarCotelli 4/27/2017 15:34",
+		"initializeUsing:" : "GabrielOmarCotelli 4/21/2017 16:35",
+		"pillsBuilder" : "GabrielOmarCotelli 5/3/2017 18:59",
 		"dateFieldApplying:" : "GabrielOmarCotelli 4/21/2017 15:23",
 		"dropdownListApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
-		"formControlCommand" : "GabrielOmarCotelli 4/20/2017 17:56",
-		"initializeUsing:" : "GabrielOmarCotelli 4/21/2017 16:35",
-		"inputGroupAddOnWrapping:" : "GabrielOmarCotelli 4/25/2017 10:17",
 		"inputGroupButtonWrapping:" : "GabrielOmarCotelli 4/25/2017 10:17",
-		"naturalNumberFieldApplying:" : "GabrielOmarCotelli 4/27/2017 15:34",
 		"notificationBuilder" : "GabrielOmarCotelli 5/18/2017 15:08",
-		"panelBuilder" : "GabrielOmarCotelli 5/2/2017 16:48",
-		"pillsBuilder" : "GabrielOmarCotelli 5/3/2017 18:59",
-		"singleLineTextFieldApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
-		"synchronicButtonLabeled:applying:evaluating:" : "GabrielOmarCotelli 4/25/2017 10:32",
 		"tabsBuilder" : "GabrielOmarCotelli 5/3/2017 18:04",
-		"unorderedListApplying:listing:applyingToEach:" : "GabrielOmarCotelli 5/2/2017 17:18",
-		"updateRoot:" : "GabrielOmarCotelli 5/5/2017 10:22" } }
+		"formControlCommand" : "GabrielOmarCotelli 4/20/2017 17:56",
+		"asynchronicButtonLabeled:applying:" : "GabrielOmarCotelli 4/11/2017 17:06",
+		"singleLineTextFieldApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
+		"unorderedListApplying:listing:applyingToEach:" : "GabrielOmarCotelli 5/2/2017 17:18"
+	},
+	"class" : {
+		"online" : "GabrielOmarCotelli 4/21/2017 16:34",
+		"withBootstrapLibrary:selectLibrary:datepickerLibrary:" : "GabrielOmarCotelli 4/21/2017 16:36",
+		"usingLibraries:" : "GabrielOmarCotelli 4/21/2017 16:32"
+	}
+}

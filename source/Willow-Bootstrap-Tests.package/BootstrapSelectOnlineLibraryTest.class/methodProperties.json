@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"testUpdateRoot" : "GabrielOmarCotelli 4/1/2017 11:49",
-		"testUpdateRootInSpanish" : "GabrielOmarCotelli 4/1/2017 11:51" } }
+		"testUpdateRootInSpanish" : "GabrielOmarCotelli 4/1/2017 11:51"
+	},
+	"class" : { }
+}

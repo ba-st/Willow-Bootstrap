@@ -1,11 +1,12 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"renderDropdownContentApplying:" : "GabrielOmarCotelli 5/8/2017 11:20",
 		"testCallViaJavascript" : "GabrielOmarCotelli 5/8/2017 11:21",
 		"testOnHidden" : "GabrielOmarCotelli 5/8/2017 11:25",
-		"testOnHide" : "GabrielOmarCotelli 5/8/2017 11:25",
-		"testOnShow" : "GabrielOmarCotelli 5/8/2017 11:25",
 		"testOnShown" : "GabrielOmarCotelli 5/8/2017 11:26",
-		"testToggle" : "GabrielOmarCotelli 5/8/2017 11:20" } }
+		"testOnShow" : "GabrielOmarCotelli 5/8/2017 11:25",
+		"testToggle" : "GabrielOmarCotelli 5/8/2017 11:20",
+		"testOnHide" : "GabrielOmarCotelli 5/8/2017 11:25"
+	},
+	"class" : { }
+}

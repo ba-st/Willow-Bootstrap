@@ -1,7 +1,10 @@
 {
-	"class" : {
-		"context:owner:" : "GabrielOmarCotelli 4/21/2017 11:01" },
 	"instance" : {
 		"initialize" : "GabrielOmarCotelli 4/21/2017 11:30",
-		"javascriptContentOn:" : "GabrielOmarCotelli 4/21/2017 11:29",
-		"leftArrow:rightArrow:" : "GabrielOmarCotelli 4/21/2017 11:29" } }
+		"leftArrow:rightArrow:" : "GabrielOmarCotelli 4/21/2017 11:29",
+		"javascriptContentOn:" : "GabrielOmarCotelli 4/21/2017 11:29"
+	},
+	"class" : {
+		"context:owner:" : "GabrielOmarCotelli 4/21/2017 11:01"
+	}
+}

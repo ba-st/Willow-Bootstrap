@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Tests-Frontend",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 4/27/2017 12:03",
-	"instvars" : [
-		 ],
-	"name" : "WillowExtensionsTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-Frontend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WillowExtensionsTest",
+	"type" : "normal"
+}

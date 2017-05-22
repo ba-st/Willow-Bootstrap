@@ -1,15 +1,14 @@
 {
-	"category" : "Willow-Bootstrap-Plugins",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 5/5/2017 11:28",
+	"super" : "JSObject",
+	"category" : "Willow-Bootstrap-Plugins",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"millisecondCountToShow",
-		"millisecondCountToHide" ],
+		"millisecondCountToHide"
+	],
 	"name" : "BootstrapDelayConfiguration",
-	"pools" : [
-		 ],
-	"super" : "JSObject",
-	"type" : "normal" }
+	"type" : "normal"
+}

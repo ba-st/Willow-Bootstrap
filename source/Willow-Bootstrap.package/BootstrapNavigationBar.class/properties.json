@@ -1,17 +1,16 @@
 {
-	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 4/6/2017 18:13",
+	"super" : "WAPresenter",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"containerClass",
 		"componentCommand",
 		"brandView",
-		"navbarContent" ],
+		"navbarContent"
+	],
 	"name" : "BootstrapNavigationBar",
-	"pools" : [
-		 ],
-	"super" : "WAPresenter",
-	"type" : "normal" }
+	"type" : "normal"
+}

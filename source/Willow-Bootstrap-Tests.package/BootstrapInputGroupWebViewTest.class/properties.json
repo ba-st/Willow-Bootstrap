@@ -1,14 +1,13 @@
 {
-	"category" : "Willow-Bootstrap-Tests-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		"supplier" ],
-	"name" : "BootstrapInputGroupWebViewTest",
-	"pools" : [
-		 ],
 	"super" : "WillowTestCase",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Tests-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"supplier"
+	],
+	"name" : "BootstrapInputGroupWebViewTest",
+	"type" : "normal"
+}

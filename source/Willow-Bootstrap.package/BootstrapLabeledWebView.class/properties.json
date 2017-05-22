@@ -1,14 +1,13 @@
 {
-	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 4/25/2017 17:05",
-	"instvars" : [
-		"formGroupContainer" ],
-	"name" : "BootstrapLabeledWebView",
-	"pools" : [
-		 ],
 	"super" : "WAPresenter",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"formGroupContainer"
+	],
+	"name" : "BootstrapLabeledWebView",
+	"type" : "normal"
+}

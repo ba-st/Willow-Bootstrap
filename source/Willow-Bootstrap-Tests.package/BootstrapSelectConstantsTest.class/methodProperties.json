@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"testClasses" : "GabrielOmarCotelli 4/7/2017 16:12",
-		"testDataAPI" : "GabrielOmarCotelli 5/17/2017 10:21" } }
+		"testDataAPI" : "GabrielOmarCotelli 5/17/2017 10:21",
+		"testClasses" : "GabrielOmarCotelli 4/7/2017 16:12"
+	},
+	"class" : { }
+}

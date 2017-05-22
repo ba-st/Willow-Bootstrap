@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptButton" : "GabrielOmarCotelli 4/10/2017 09:55",
-		"testOnCloseTrigger" : "GabrielOmarCotelli 4/10/2017 13:56",
 		"testOnTrigger" : "GabrielOmarCotelli 4/10/2017 13:47",
+		"acceptButton" : "GabrielOmarCotelli 4/10/2017 09:55",
+		"testRenderContentOnWithAdditionalButtons" : "GabrielOmarCotelli 4/10/2017 13:47",
 		"testRenderContentOn" : "GabrielOmarCotelli 4/10/2017 10:22",
-		"testRenderContentOnWithAdditionalButtons" : "GabrielOmarCotelli 4/10/2017 13:47" } }
+		"testOnCloseTrigger" : "GabrielOmarCotelli 4/10/2017 13:56"
+	},
+	"class" : { }
+}

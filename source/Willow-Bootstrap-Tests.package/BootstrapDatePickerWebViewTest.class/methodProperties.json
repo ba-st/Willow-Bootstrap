@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"testRenderContentOn" : "GabrielOmarCotelli 4/21/2017 15:04",
-		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 4/21/2017 15:12" } }
+		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 4/21/2017 15:12"
+	},
+	"class" : { }
+}

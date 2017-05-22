@@ -1,14 +1,11 @@
 {
-	"category" : "Willow-Bootstrap-Libraries",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GabrielOmarCotelli 4/27/2017 15:38",
-	"instvars" : [
-		 ],
-	"name" : "WillowBootstrapCascadingStyleSheetBuilder",
-	"pools" : [
-		 ],
 	"super" : "ReflectiveCascadingStyleSheetBuilder",
-	"type" : "normal" }
+	"category" : "Willow-Bootstrap-Libraries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WillowBootstrapCascadingStyleSheetBuilder",
+	"type" : "normal"
+}
