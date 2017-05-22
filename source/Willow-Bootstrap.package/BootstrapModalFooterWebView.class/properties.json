@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/10/2017 09:13",
-	"super" : "WAPresenter",
 	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 4/10/2017 09:13",
 	"instvars" : [
 		"closeButton",
-		"buttons"
-	],
+		"buttons" ],
 	"name" : "BootstrapModalFooterWebView",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WAPresenter",
+	"type" : "normal" }

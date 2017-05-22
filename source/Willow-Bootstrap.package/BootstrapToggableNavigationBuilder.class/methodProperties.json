@@ -1,18 +1,17 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"identifiedViewContaining:" : "GabrielOmarCotelli 5/3/2017 19:46",
-		"setRoleWith:to:on:" : "GabrielOmarCotelli 5/3/2017 17:51",
 		"addNavigationHeadedBy:containing:" : "GabrielOmarCotelli 5/3/2017 19:48",
-		"dataToggleValue" : "GabrielOmarCotelli 5/3/2017 17:29",
-		"navigationTypeClass" : "GabrielOmarCotelli 5/3/2017 17:30",
-		"tabListOn:" : "GabrielOmarCotelli 5/3/2017 19:11",
-		"tabTitleWith:linkedTo:" : "GabrielOmarCotelli 5/3/2017 19:48",
-		"initialize" : "GabrielOmarCotelli 5/3/2017 17:33",
-		"renderTabContentOn:" : "GabrielOmarCotelli 5/3/2017 19:06",
 		"buildApplying:" : "GabrielOmarCotelli 5/3/2017 19:13",
+		"dataToggleValue" : "GabrielOmarCotelli 5/3/2017 17:29",
+		"identifiedViewContaining:" : "GabrielOmarCotelli 5/3/2017 19:46",
+		"initialize" : "GabrielOmarCotelli 5/3/2017 17:33",
+		"navigationTypeClass" : "GabrielOmarCotelli 5/3/2017 17:30",
 		"renderFirstTabHeaderOn:" : "GabrielOmarCotelli 5/3/2017 19:09",
 		"renderRemainingTabHeadersOn:" : "GabrielOmarCotelli 5/3/2017 19:10",
-		"renderTabListOn:applying:" : "GabrielOmarCotelli 5/3/2017 19:08"
-	},
-	"class" : { }
-}
+		"renderTabContentOn:" : "GabrielOmarCotelli 5/3/2017 19:06",
+		"renderTabListOn:applying:" : "GabrielOmarCotelli 5/3/2017 19:08",
+		"setRoleWith:to:on:" : "GabrielOmarCotelli 5/3/2017 17:51",
+		"tabListOn:" : "GabrielOmarCotelli 5/3/2017 19:11",
+		"tabTitleWith:linkedTo:" : "GabrielOmarCotelli 5/3/2017 19:48" } }

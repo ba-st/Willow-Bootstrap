@@ -1,22 +1,19 @@
 {
+	"class" : {
+		"forDeployment" : "GabrielOmarCotelli 4/17/2017 16:44",
+		"forDevelopment" : "GabrielOmarCotelli 4/17/2017 16:44",
+		"libraryName" : "GabrielOmarCotelli 4/21/2017 15:48",
+		"version" : "GabrielOmarCotelli 4/21/2017 15:47" },
 	"instance" : {
-		"fontsglyphiconshalflingsregularWoff2Content" : "GabrielOmarCotelli 4/27/2017 15:57",
+		"defaultCacheDuration" : "GabrielOmarCotelli 4/27/2017 15:56",
 		"fileSelectors" : "GabrielOmarCotelli 4/27/2017 15:55",
-		"fontsglyphiconshalflingsregularTtfContent" : "GabrielOmarCotelli 4/27/2017 15:56",
+		"fontsglyphiconshalflingsregularEot" : "GabrielOmarCotelli 4/27/2017 15:56",
+		"fontsglyphiconshalflingsregularEotContent" : "GabrielOmarCotelli 4/27/2017 15:56",
 		"fontsglyphiconshalflingsregularSvg" : "GabrielOmarCotelli 4/27/2017 15:57",
+		"fontsglyphiconshalflingsregularSvgContent" : "GabrielOmarCotelli 4/27/2017 15:56",
+		"fontsglyphiconshalflingsregularTtf" : "GabrielOmarCotelli 4/27/2017 15:57",
+		"fontsglyphiconshalflingsregularTtfContent" : "GabrielOmarCotelli 4/27/2017 15:56",
 		"fontsglyphiconshalflingsregularWoff" : "GabrielOmarCotelli 4/27/2017 15:57",
 		"fontsglyphiconshalflingsregularWoff2" : "GabrielOmarCotelli 4/27/2017 15:57",
-		"fontsglyphiconshalflingsregularEot" : "GabrielOmarCotelli 4/27/2017 15:56",
-		"defaultCacheDuration" : "GabrielOmarCotelli 4/27/2017 15:56",
-		"fontsglyphiconshalflingsregularTtf" : "GabrielOmarCotelli 4/27/2017 15:57",
-		"fontsglyphiconshalflingsregularWoffContent" : "GabrielOmarCotelli 4/27/2017 15:57",
-		"fontsglyphiconshalflingsregularEotContent" : "GabrielOmarCotelli 4/27/2017 15:56",
-		"fontsglyphiconshalflingsregularSvgContent" : "GabrielOmarCotelli 4/27/2017 15:56"
-	},
-	"class" : {
-		"version" : "GabrielOmarCotelli 4/21/2017 15:47",
-		"libraryName" : "GabrielOmarCotelli 4/21/2017 15:48",
-		"forDeployment" : "GabrielOmarCotelli 4/17/2017 16:44",
-		"forDevelopment" : "GabrielOmarCotelli 4/17/2017 16:44"
-	}
-}
+		"fontsglyphiconshalflingsregularWoff2Content" : "GabrielOmarCotelli 4/27/2017 15:57",
+		"fontsglyphiconshalflingsregularWoffContent" : "GabrielOmarCotelli 4/27/2017 15:57" } }

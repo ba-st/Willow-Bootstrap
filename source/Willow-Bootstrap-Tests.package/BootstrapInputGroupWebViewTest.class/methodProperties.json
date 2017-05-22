@@ -1,10 +1,9 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"testIdentifyIn" : "GabrielOmarCotelli 4/27/2017 15:50",
 		"setUp" : "GabrielOmarCotelli 4/25/2017 10:18",
+		"testIdentifyIn" : "GabrielOmarCotelli 4/27/2017 15:50",
 		"testRenderContentOn" : "GabrielOmarCotelli 4/25/2017 10:37",
 		"testRenderContentOnWhenOnlyPreprended" : "GabrielOmarCotelli 4/25/2017 10:43",
-		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 4/25/2017 10:40"
-	},
-	"class" : { }
-}
+		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 4/25/2017 10:40" } }

@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 5/9/2017 15:56",
-	"super" : "WebComponentCommand",
 	"category" : "Willow-Bootstrap-Frontend",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 5/9/2017 15:56",
 	"instvars" : [
-		"scriptCommand"
-	],
+		"scriptCommand" ],
 	"name" : "BootstrapSelfCleaningModalCommand",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WebComponentCommand",
+	"type" : "normal" }

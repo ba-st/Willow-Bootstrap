@@ -1,12 +1,11 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 4/10/2017 14:03",
+		"agreeButton" : "GabrielOmarCotelli 4/10/2017 11:07",
 		"takeMySoulButton" : "GabrielOmarCotelli 4/10/2017 11:07",
-		"testOnTriggerDoesNothingWithoutAdditionalActionButtons" : "GabrielOmarCotelli 4/10/2017 14:04",
-		"testRenderContentOn" : "GabrielOmarCotelli 4/10/2017 13:44",
 		"testOnCloseTrigger" : "GabrielOmarCotelli 4/10/2017 14:02",
+		"testOnTriggerDoesNothingWithoutAdditionalActionButtons" : "GabrielOmarCotelli 4/10/2017 14:04",
 		"testOnTriggerWithButtons" : "GabrielOmarCotelli 4/10/2017 13:44",
-		"agreeButton" : "GabrielOmarCotelli 4/10/2017 11:07"
-	},
-	"class" : { }
-}
+		"testRenderContentOn" : "GabrielOmarCotelli 4/10/2017 13:44",
+		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 4/10/2017 14:03" } }

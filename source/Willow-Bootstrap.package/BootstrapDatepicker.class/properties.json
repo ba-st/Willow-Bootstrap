@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/21/2017 12:33",
-	"super" : "BootstrapPlugin",
 	"category" : "Willow-Bootstrap-Datepicker",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 4/21/2017 12:33",
 	"instvars" : [
-		"arguments"
-	],
+		"arguments" ],
 	"name" : "BootstrapDatepicker",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "BootstrapPlugin",
+	"type" : "normal" }

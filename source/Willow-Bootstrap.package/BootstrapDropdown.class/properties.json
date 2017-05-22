@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 5/8/2017 11:05",
-	"super" : "BootstrapPlugin",
 	"category" : "Willow-Bootstrap-Plugins",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 5/8/2017 11:05",
+	"instvars" : [
+		 ],
 	"name" : "BootstrapDropdown",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "BootstrapPlugin",
+	"type" : "normal" }

@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "WillowTestCase",
 	"category" : "Willow-Bootstrap-Tests-WebViews",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
-		"supplier"
-	],
+		"supplier" ],
 	"name" : "BootstrapToggableTabsBuilderTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WillowTestCase",
+	"type" : "normal" }

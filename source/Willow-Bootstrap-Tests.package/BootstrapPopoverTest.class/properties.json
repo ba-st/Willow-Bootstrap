@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 5/5/2017 14:35",
-	"super" : "WillowTestCase",
 	"category" : "Willow-Bootstrap-Tests-Plugins",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 5/5/2017 14:35",
+	"instvars" : [
+		 ],
 	"name" : "BootstrapPopoverTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WillowTestCase",
+	"type" : "normal" }

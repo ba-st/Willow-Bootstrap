@@ -1,8 +1,7 @@
 {
+	"class" : {
+		 },
 	"instance" : {
 		"addPillHeadedBy:containing:" : "GabrielOmarCotelli 5/3/2017 18:57",
-		"navigationTypeClass" : "GabrielOmarCotelli 5/3/2017 18:52",
-		"dataToggleValue" : "GabrielOmarCotelli 5/3/2017 18:53"
-	},
-	"class" : { }
-}
+		"dataToggleValue" : "GabrielOmarCotelli 5/3/2017 18:53",
+		"navigationTypeClass" : "GabrielOmarCotelli 5/3/2017 18:52" } }

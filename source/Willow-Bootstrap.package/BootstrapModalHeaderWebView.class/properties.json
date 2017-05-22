@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "WAPresenter",
 	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"title",
-		"dismissButtonOptional"
-	],
+		"dismissButtonOptional" ],
 	"name" : "BootstrapModalHeaderWebView",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WAPresenter",
+	"type" : "normal" }

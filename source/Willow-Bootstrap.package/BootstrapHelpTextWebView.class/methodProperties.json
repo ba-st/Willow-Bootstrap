@@ -1,10 +1,7 @@
 {
+	"class" : {
+		"boundTo:describedBy:" : "GabrielOmarCotelli 4/25/2017 17:59" },
 	"instance" : {
 		"identifyIn:" : "GabrielOmarCotelli 4/25/2017 18:00",
 		"initializeBoundTo:describedBy:" : "GabrielOmarCotelli 4/25/2017 18:00",
-		"renderContentOn:" : "GabrielOmarCotelli 4/25/2017 18:01"
-	},
-	"class" : {
-		"boundTo:describedBy:" : "GabrielOmarCotelli 4/25/2017 17:59"
-	}
-}
+		"renderContentOn:" : "GabrielOmarCotelli 4/25/2017 18:01" } }

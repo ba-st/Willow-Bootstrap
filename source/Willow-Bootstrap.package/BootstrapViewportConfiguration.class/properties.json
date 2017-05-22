@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 5/5/2017 11:38",
-	"super" : "JSObject",
 	"category" : "Willow-Bootstrap-Plugins",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 5/5/2017 11:38",
 	"instvars" : [
 		"selector",
-		"padding"
-	],
+		"padding" ],
 	"name" : "BootstrapViewportConfiguration",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "JSObject",
+	"type" : "normal" }

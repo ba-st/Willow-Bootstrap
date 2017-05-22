@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 5/2/2017 18:05",
-	"super" : "WillowTestCase",
 	"category" : "Willow-Bootstrap-Tests-WebViews",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 5/2/2017 18:05",
 	"instvars" : [
-		"supplier"
-	],
+		"supplier" ],
 	"name" : "BootstrapPanelBuilderTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WillowTestCase",
+	"type" : "normal" }

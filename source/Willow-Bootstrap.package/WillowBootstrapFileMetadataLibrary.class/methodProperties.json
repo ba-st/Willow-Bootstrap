@@ -1,19 +1,16 @@
 {
-	"instance" : {
-		"jswillowbootstrapJs" : "GabrielOmarCotelli 5/9/2017 15:31",
-		"cleanModalFunctionUsing:" : "GabrielOmarCotelli 5/9/2017 15:38",
-		"selectorsToInclude" : "GabrielOmarCotelli 5/9/2017 15:39",
-		"csswillowbootstrapCssContent" : "GabrielOmarCotelli 5/10/2017 09:51",
-		"jswillowbootstrapJsContent" : "GabrielOmarCotelli 5/10/2017 09:54",
-		"csswillowbootstrapCss" : "GabrielOmarCotelli 4/27/2017 15:36",
-		"version" : "GabrielOmarCotelli 4/27/2017 15:36"
-	},
 	"class" : {
 		"forDeployment" : "GabrielOmarCotelli 4/27/2017 15:36",
-		"isForDeployment" : "GabrielOmarCotelli 4/27/2017 15:36",
-		"version" : "GabrielOmarCotelli 4/27/2017 15:36",
-		"isForDevelopment" : "GabrielOmarCotelli 4/27/2017 15:36",
 		"forDevelopment" : "GabrielOmarCotelli 4/27/2017 15:36",
-		"libraryName" : "GabrielOmarCotelli 4/27/2017 15:36"
-	}
-}
+		"isForDeployment" : "GabrielOmarCotelli 4/27/2017 15:36",
+		"isForDevelopment" : "GabrielOmarCotelli 4/27/2017 15:36",
+		"libraryName" : "GabrielOmarCotelli 4/27/2017 15:36",
+		"version" : "GabrielOmarCotelli 4/27/2017 15:36" },
+	"instance" : {
+		"cleanModalFunctionUsing:" : "GabrielOmarCotelli 5/9/2017 15:38",
+		"csswillowbootstrapCss" : "GabrielOmarCotelli 4/27/2017 15:36",
+		"csswillowbootstrapCssContent" : "GabrielOmarCotelli 5/10/2017 09:51",
+		"jswillowbootstrapJs" : "GabrielOmarCotelli 5/9/2017 15:31",
+		"jswillowbootstrapJsContent" : "GabrielOmarCotelli 5/10/2017 09:54",
+		"selectorsToInclude" : "GabrielOmarCotelli 5/9/2017 15:39",
+		"version" : "GabrielOmarCotelli 4/27/2017 15:36" } }

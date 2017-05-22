@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 3/31/2017 19:04",
-	"super" : "Object",
 	"category" : "Willow-Bootstrap-Select",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 3/31/2017 19:04",
+	"instvars" : [
+		 ],
 	"name" : "BootstrapSelectConstants",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,11 +1,8 @@
 {
-	"instance" : {
-		"applyTo:on:" : "GabrielOmarCotelli 4/21/2017 15:11",
-		"initializeApplying:" : "GabrielOmarCotelli 4/21/2017 15:10"
-	},
 	"class" : {
 		"applying:" : "GabrielOmarCotelli 4/21/2017 15:10",
-		"new" : "GabrielOmarCotelli 4/21/2017 15:11",
-		"configuredBy:" : "GabrielOmarCotelli 4/21/2017 15:09"
-	}
-}
+		"configuredBy:" : "GabrielOmarCotelli 4/21/2017 15:09",
+		"new" : "GabrielOmarCotelli 4/21/2017 15:11" },
+	"instance" : {
+		"applyTo:on:" : "GabrielOmarCotelli 4/21/2017 15:11",
+		"initializeApplying:" : "GabrielOmarCotelli 4/21/2017 15:10" } }

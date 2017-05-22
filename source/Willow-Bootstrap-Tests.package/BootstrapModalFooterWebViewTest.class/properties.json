@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/10/2017 10:23",
-	"super" : "WillowTestCase",
 	"category" : "Willow-Bootstrap-Tests-WebViews",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 4/10/2017 10:23",
+	"instvars" : [
+		 ],
 	"name" : "BootstrapModalFooterWebViewTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WillowTestCase",
+	"type" : "normal" }

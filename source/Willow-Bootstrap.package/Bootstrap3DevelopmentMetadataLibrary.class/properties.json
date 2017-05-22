@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/3/2017 12:16",
-	"super" : "Bootstrap3MetadataLibrary",
 	"category" : "Willow-Bootstrap-Libraries",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 4/3/2017 12:16",
+	"instvars" : [
+		 ],
 	"name" : "Bootstrap3DevelopmentMetadataLibrary",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Bootstrap3MetadataLibrary",
+	"type" : "normal" }

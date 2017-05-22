@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/3/2017 09:32",
-	"super" : "FrontendComponentSupplier",
 	"category" : "Willow-Bootstrap-Frontend",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 4/3/2017 09:32",
 	"instvars" : [
-		"bootstrapLibraries"
-	],
+		"bootstrapLibraries" ],
 	"name" : "BootstrapComponentSupplier",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "FrontendComponentSupplier",
+	"type" : "normal" }

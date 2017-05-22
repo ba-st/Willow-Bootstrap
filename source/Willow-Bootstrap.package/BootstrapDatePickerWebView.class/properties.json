@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/21/2017 14:58",
-	"super" : "WAPresenter",
 	"category" : "Willow-Bootstrap-WebViews",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 4/21/2017 14:58",
 	"instvars" : [
 		"textField",
-		"container"
-	],
+		"container" ],
 	"name" : "BootstrapDatePickerWebView",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WAPresenter",
+	"type" : "normal" }

@@ -1,17 +1,16 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"headingDisplaying:withLevel:" : "GabrielOmarCotelli 5/2/2017 16:51",
-		"headingDisplaying:" : "GabrielOmarCotelli 5/2/2017 16:53",
-		"renderBodyOn:" : "GabrielOmarCotelli 5/2/2017 18:03",
-		"withTable:" : "GabrielOmarCotelli 5/2/2017 17:11",
-		"initialize" : "GabrielOmarCotelli 5/2/2017 16:44",
-		"renderHeadingOn:" : "GabrielOmarCotelli 5/2/2017 18:03",
-		"wrapping:" : "GabrielOmarCotelli 5/2/2017 16:47",
-		"renderTableOrListGroupOn:" : "GabrielOmarCotelli 5/2/2017 18:04",
-		"renderFooterOn:" : "GabrielOmarCotelli 5/2/2017 18:04",
 		"buildApplying:" : "GabrielOmarCotelli 5/2/2017 18:04",
+		"footer:" : "GabrielOmarCotelli 5/2/2017 16:54",
+		"headingDisplaying:" : "GabrielOmarCotelli 5/2/2017 16:53",
+		"headingDisplaying:withLevel:" : "GabrielOmarCotelli 5/2/2017 16:51",
+		"initialize" : "GabrielOmarCotelli 5/2/2017 16:44",
+		"renderBodyOn:" : "GabrielOmarCotelli 5/2/2017 18:03",
+		"renderFooterOn:" : "GabrielOmarCotelli 5/2/2017 18:04",
+		"renderHeadingOn:" : "GabrielOmarCotelli 5/2/2017 18:03",
+		"renderTableOrListGroupOn:" : "GabrielOmarCotelli 5/2/2017 18:04",
 		"withListGroup:" : "GabrielOmarCotelli 5/2/2017 17:19",
-		"footer:" : "GabrielOmarCotelli 5/2/2017 16:54"
-	},
-	"class" : { }
-}
+		"withTable:" : "GabrielOmarCotelli 5/2/2017 17:11",
+		"wrapping:" : "GabrielOmarCotelli 5/2/2017 16:47" } }

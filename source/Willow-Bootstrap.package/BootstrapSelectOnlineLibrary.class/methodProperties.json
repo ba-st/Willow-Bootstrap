@@ -1,13 +1,10 @@
 {
-	"instance" : {
-		"version" : "GabrielOmarCotelli 4/17/2017 14:28",
-		"initializeInLanguage:" : "GabrielOmarCotelli 3/31/2017 17:17",
-		"updateRoot:" : "GabrielOmarCotelli 4/17/2017 14:32"
-	},
 	"class" : {
+		"default" : "GabrielOmarCotelli 4/3/2017 10:05",
 		"inLanguage:" : "GabrielOmarCotelli 4/3/2017 10:05",
 		"inSpanish" : "GabrielOmarCotelli 3/31/2017 17:16",
-		"inUSEnglish" : "GabrielOmarCotelli 3/31/2017 17:12",
-		"default" : "GabrielOmarCotelli 4/3/2017 10:05"
-	}
-}
+		"inUSEnglish" : "GabrielOmarCotelli 3/31/2017 17:12" },
+	"instance" : {
+		"initializeInLanguage:" : "GabrielOmarCotelli 3/31/2017 17:17",
+		"updateRoot:" : "GabrielOmarCotelli 4/17/2017 14:32",
+		"version" : "GabrielOmarCotelli 4/17/2017 14:28" } }

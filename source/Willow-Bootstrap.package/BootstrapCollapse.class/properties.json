@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/7/2017 10:45",
-	"super" : "BootstrapPlugin",
 	"category" : "Willow-Bootstrap-Plugins",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 4/7/2017 10:45",
+	"instvars" : [
+		 ],
 	"name" : "BootstrapCollapse",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "BootstrapPlugin",
+	"type" : "normal" }

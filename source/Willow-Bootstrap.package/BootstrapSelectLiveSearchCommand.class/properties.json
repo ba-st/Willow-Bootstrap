@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 4/3/2017 10:40",
-	"super" : "WebComponentCommand",
 	"category" : "Willow-Bootstrap-Frontend",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 4/3/2017 10:40",
 	"instvars" : [
 		"normalize",
 		"placeholderOptional",
-		"searchStyle"
-	],
+		"searchStyle" ],
 	"name" : "BootstrapSelectLiveSearchCommand",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WebComponentCommand",
+	"type" : "normal" }

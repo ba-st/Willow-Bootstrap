@@ -1,8 +1,7 @@
 {
+	"class" : {
+		 },
 	"instance" : {
+		"testForDevelopment" : "GabrielOmarCotelli 4/21/2017 16:26",
 		"testIsForDevelopment" : "GabrielOmarCotelli 4/21/2017 16:27",
-		"testUpdateRoot" : "GabrielOmarCotelli 4/21/2017 16:25",
-		"testForDevelopment" : "GabrielOmarCotelli 4/21/2017 16:26"
-	},
-	"class" : { }
-}
+		"testUpdateRoot" : "GabrielOmarCotelli 4/21/2017 16:25" } }

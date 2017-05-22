@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 3/31/2017 17:24",
-	"super" : "WillowOnlineLibrary",
 	"category" : "Willow-Bootstrap-Select",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GabrielOmarCotelli 3/31/2017 17:24",
 	"instvars" : [
-		"languageCode"
-	],
+		"languageCode" ],
 	"name" : "BootstrapSelectOnlineLibrary",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WillowOnlineLibrary",
+	"type" : "normal" }

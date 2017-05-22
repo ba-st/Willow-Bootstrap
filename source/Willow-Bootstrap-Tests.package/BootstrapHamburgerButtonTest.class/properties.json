@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "WillowTestCase",
 	"category" : "Willow-Bootstrap-Tests-WebViews",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
 	"name" : "BootstrapHamburgerButtonTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WillowTestCase",
+	"type" : "normal" }
