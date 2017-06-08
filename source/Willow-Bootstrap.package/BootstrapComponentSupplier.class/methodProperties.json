@@ -1,5 +1,6 @@
 {
 	"instance" : {
+		"unorderedListApplying:listing:applyingToEach:" : "GabrielOmarCotelli 5/2/2017 17:18",
 		"synchronicButtonLabeled:applying:evaluating:" : "GabrielOmarCotelli 4/25/2017 10:32",
 		"updateRoot:" : "GabrielOmarCotelli 5/5/2017 10:22",
 		"panelBuilder" : "GabrielOmarCotelli 5/2/2017 16:48",
@@ -11,11 +12,12 @@
 		"dropdownListApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
 		"inputGroupButtonWrapping:" : "GabrielOmarCotelli 4/25/2017 10:17",
 		"notificationBuilder" : "GabrielOmarCotelli 5/18/2017 15:08",
-		"tabsBuilder" : "GabrielOmarCotelli 5/3/2017 18:04",
+		"decimalNumberFieldApplying:" : "GabrielOmarCotelli 6/8/2017 18:27",
+		"tableBuilder" : "GabrielOmarCotelli 6/8/2017 17:54",
 		"formControlCommand" : "GabrielOmarCotelli 4/20/2017 17:56",
 		"asynchronicButtonLabeled:applying:" : "GabrielOmarCotelli 4/11/2017 17:06",
 		"singleLineTextFieldApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
-		"unorderedListApplying:listing:applyingToEach:" : "GabrielOmarCotelli 5/2/2017 17:18"
+		"tabsBuilder" : "GabrielOmarCotelli 5/3/2017 18:04"
 	},
 	"class" : {
 		"online" : "GabrielOmarCotelli 4/21/2017 16:34",
