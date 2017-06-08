@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "GabrielOmarCotelli 5/3/2017 17:28",
-	"super" : "GRObject",
+	"super" : "WillowComponentBuilder",
 	"category" : "Willow-Bootstrap-WebViews",
 	"classinstvars" : [ ],
 	"pools" : [ ],
