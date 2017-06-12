@@ -5,7 +5,7 @@ testNaturalNumberFieldApplying
 
 	supplier := BootstrapComponentSupplier online.
 
-	field := supplier naturalNumberFieldApplying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles textRight).
+	field := supplier naturalNumberFieldApplying: CompositeComponentCommand empty.
 
 	html := self render: field.
 

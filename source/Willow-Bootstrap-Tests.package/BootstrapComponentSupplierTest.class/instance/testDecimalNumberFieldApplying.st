@@ -5,7 +5,7 @@ testDecimalNumberFieldApplying
 
 	supplier := BootstrapComponentSupplier online.
 
-	field := supplier decimalNumberFieldApplying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles textRight).
+	field := supplier decimalNumberFieldApplying: CompositeComponentCommand empty.
 
 	html := self render: field.
 
