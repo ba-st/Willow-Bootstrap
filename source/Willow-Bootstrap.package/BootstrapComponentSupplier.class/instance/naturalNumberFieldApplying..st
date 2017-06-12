@@ -1,6 +1,4 @@
 Supplying
 naturalNumberFieldApplying: aComponentCommand
 
-	^NumberFieldWebView
-		applying: self formControlCommand + aComponentCommand + ComponentBoundaryCommand nonNegative
-		transformingWith: NaturalNumberCodec new
+	^ NumberFieldWebView applying: self formControlCommand + self textRightCommand + aComponentCommand + ComponentBoundaryCommand nonNegative transformingWith: NaturalNumberCodec new

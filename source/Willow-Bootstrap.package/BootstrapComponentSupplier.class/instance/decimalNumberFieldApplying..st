@@ -1,4 +1,4 @@
 Supplying
 decimalNumberFieldApplying: aComponentCommand
 
-	^ NumberFieldWebView applying: self formControlCommand + aComponentCommand transformingWith: FloatCodec new
+	^ NumberFieldWebView applying: self formControlCommand + self textRightCommand + aComponentCommand transformingWith: FloatCodec new
