@@ -1,0 +1,1 @@
+A BootstrapDialogClosingCommandTest is a test class for testing the behavior of DialogClosingCommand using the Bootstrap Component Supplier
