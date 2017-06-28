@@ -1,4 +1,4 @@
 Updating
 version
 
-	^ '1.7.0-RC2'
+	^ '1.7.0'

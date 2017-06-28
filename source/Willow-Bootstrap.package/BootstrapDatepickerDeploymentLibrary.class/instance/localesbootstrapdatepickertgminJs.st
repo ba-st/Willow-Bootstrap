@@ -1,9 +1,9 @@
 uploaded metadata
-localesbootstrapdatepickertjJs
+localesbootstrapdatepickertgminJs
 
 	<ignoreForCoverage>
 	^ WAFileLibraryResource
-		filepath: 'locales/bootstrap-datepicker.tj.js'
+		filepath: 'locales/bootstrap-datepicker.tg.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertjJsContent)
+		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertgminJsContent)
