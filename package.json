@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "bootstrap-select": "1.12.2",
-    "bootstrap-datepicker": "1.7.0-RC2"
+    "bootstrap-datepicker": "1.7.0"
   }
   ,
   "description": "Bootstrap 3 and Willow integration",

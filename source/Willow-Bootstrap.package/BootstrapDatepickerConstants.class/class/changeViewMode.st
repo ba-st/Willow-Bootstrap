@@ -1,0 +1,4 @@
+Accessing - Events
+changeViewMode
+
+	^ 'changeViewMode'
