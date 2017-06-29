@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 6/28/2017 15:46",
+	"super" : "BootstrapDropdownBuilder",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"containerBuildingCommand"
+	],
+	"name" : "BootstrapDropdownMenuBuilder",
+	"type" : "normal"
+}

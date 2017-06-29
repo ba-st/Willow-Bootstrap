@@ -1,9 +1,11 @@
 {
 	"instance" : {
+		"dropdownMenuBuilder" : "GabrielOmarCotelli 6/28/2017 16:16",
 		"inputGroupAddOnWrapping:" : "GabrielOmarCotelli 4/25/2017 10:17",
+		"splitButtonDropdownBuilder" : "GabrielOmarCotelli 6/29/2017 09:02",
 		"tableBuilder" : "GabrielOmarCotelli 6/8/2017 17:54",
-		"unorderedListApplying:listing:applyingToEach:" : "GabrielOmarCotelli 5/2/2017 17:18",
 		"textRightCommand" : "GabrielOmarCotelli 6/12/2017 17:19",
+		"unorderedListApplying:listing:applyingToEach:" : "GabrielOmarCotelli 5/2/2017 17:18",
 		"synchronicButtonLabeled:applying:evaluating:" : "GabrielOmarCotelli 4/25/2017 10:32",
 		"closeDialogsIn:suppliedBy:on:" : "GabrielOmarCotelli 6/27/2017 16:38",
 		"asynchronicButtonLabeled:applying:" : "GabrielOmarCotelli 4/11/2017 17:06",
@@ -13,11 +15,12 @@
 		"singleLineTextFieldApplying:" : "GabrielOmarCotelli 4/20/2017 17:56",
 		"initializeUsing:" : "GabrielOmarCotelli 4/21/2017 16:35",
 		"inputGroupButtonWrapping:" : "GabrielOmarCotelli 4/25/2017 10:17",
+		"singleButtonDropdownBuilder" : "GabrielOmarCotelli 6/29/2017 08:53",
 		"pillsBuilder" : "GabrielOmarCotelli 5/3/2017 18:59",
 		"panelBuilder" : "GabrielOmarCotelli 5/2/2017 16:48",
 		"formControlCommand" : "GabrielOmarCotelli 4/20/2017 17:56",
-		"tabsBuilder" : "GabrielOmarCotelli 5/3/2017 18:04",
 		"dateFieldApplying:" : "GabrielOmarCotelli 4/21/2017 15:23",
+		"tabsBuilder" : "GabrielOmarCotelli 5/3/2017 18:04",
 		"updateRoot:" : "GabrielOmarCotelli 5/5/2017 10:22",
 		"notificationBuilder" : "GabrielOmarCotelli 5/18/2017 15:08"
 	},
