@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "GabrielOmarCotelli 6/28/2017 15:46",
+	"commentStamp" : "GabrielOmarCotelli 6/29/2017 08:59",
 	"super" : "BootstrapDropdownBuilder",
 	"category" : "Willow-Bootstrap-WebViews",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "BootstrapDropdownMenuBuilder",
+	"name" : "BootstrapSplitButtonDropdownBuilder",
 	"type" : "normal"
 }

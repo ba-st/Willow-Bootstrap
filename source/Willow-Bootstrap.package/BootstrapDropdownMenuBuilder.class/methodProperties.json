@@ -1,15 +1,8 @@
 {
 	"instance" : {
-		"dropdownButtonCommand" : "GabrielOmarCotelli 6/28/2017 16:41",
-		"buildApplying:" : "GabrielOmarCotelli 6/28/2017 16:41",
-		"renderCaret:" : "GabrielOmarCotelli 6/28/2017 16:40",
-		"labeled:applying:" : "GabrielOmarCotelli 6/28/2017 16:40",
-		"addDivider" : "GabrielOmarCotelli 6/28/2017 16:08",
-		"initializeUsing:" : "GabrielOmarCotelli 6/28/2017 16:37",
-		"addActionLabeled:executing:" : "GabrielOmarCotelli 6/28/2017 16:17",
-		"labeled:" : "GabrielOmarCotelli 6/28/2017 16:41"
+		"labeled:applying:" : "GabrielOmarCotelli 6/29/2017 09:06",
+		"containerStyle" : "GabrielOmarCotelli 6/29/2017 08:46",
+		"labeled:" : "GabrielOmarCotelli 6/29/2017 09:06"
 	},
-	"class" : {
-		"using:" : "GabrielOmarCotelli 6/28/2017 16:16"
-	}
+	"class" : { }
 }

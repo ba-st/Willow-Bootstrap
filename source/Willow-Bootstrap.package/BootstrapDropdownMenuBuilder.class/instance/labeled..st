@@ -5,5 +5,5 @@ labeled: aRenderable
 		(AsynchronicAnchorWebView
 			labeled: [ :canvas | 
 				canvas render: aRenderable.
-				self renderCaret: canvas ]
+				self renderCaretOn: canvas ]
 			applying: self dropdownButtonCommand)

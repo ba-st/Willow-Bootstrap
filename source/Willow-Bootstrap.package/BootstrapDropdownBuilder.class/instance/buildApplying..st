@@ -7,4 +7,4 @@ buildApplying: aComponentCommand
 			canvas unorderedList
 				class: BootstrapCssStyles dropdownMenu;
 				with: [ menuItems do: [ :menuItem | canvas render: menuItem ] ] ]
-		applying: aComponentCommand + (ComponentClassificationCommand toStyleWith: BootstrapCssStyles dropdown)
+		applying: aComponentCommand + (ComponentClassificationCommand toStyleWith: self containerStyle)

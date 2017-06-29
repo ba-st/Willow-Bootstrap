@@ -1,4 +1,4 @@
-as yet unclassified
+Supplying
 dropdownMenuBuilder
 
 	^ BootstrapDropdownMenuBuilder using: self
