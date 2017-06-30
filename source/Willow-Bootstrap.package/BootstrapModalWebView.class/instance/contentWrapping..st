@@ -6,6 +6,6 @@ contentWrapping: aBodyView
 			canvas render: header.
 			canvas div
 				class: BootstrapCssStyles modalBody;
-				with: [ canvas render: aBodyView ].
+				with: aBodyView.
 			canvas render: footer ]
 		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles modalContent)

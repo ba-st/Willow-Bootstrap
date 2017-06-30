@@ -3,7 +3,7 @@ applyTo: aComponent on: aCanvas
 
 	self
 		declare: 'live-search'
-			with: true asString
+			with: true greaseString
 			applyingTo: aComponent
 			on: aCanvas;
 		declare: 'live-search-normalize'
