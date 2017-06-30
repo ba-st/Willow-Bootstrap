@@ -9,5 +9,5 @@ width: autoOrFitOrCssLengthOrFalse
 
 	optionValue := autoOrFitOrCssLengthOrFalse == false
 		ifTrue: [ false ]
-		ifFalse: [ autoOrFitOrCssLengthOrFalse asString ].
+		ifFalse: [ autoOrFitOrCssLengthOrFalse greaseString ].
 	self optionAt: BootstrapSelectConstants width put: optionValue

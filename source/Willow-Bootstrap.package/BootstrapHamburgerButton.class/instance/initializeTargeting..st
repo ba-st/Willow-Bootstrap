@@ -1,4 +1,4 @@
 initialize
 initializeTargeting: aStringOrSymbol
 
-	targetIdentifier := '#', aStringOrSymbol asString
+	targetIdentifier := '#', aStringOrSymbol greaseString

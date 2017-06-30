@@ -1,6 +1,6 @@
 initialization
 initializeNormalize: aBoolean placeholderOptional: anOptional style: theSearchStyle
 
-	normalize := aBoolean asString.
+	normalize := aBoolean greaseString.
 	placeholderOptional := anOptional.
 	searchStyle := theSearchStyle

@@ -7,4 +7,4 @@ renderContentOn: aCanvas
 			aCanvas heading
 				level4;
 				class: BootstrapCssStyles modalTitle;
-				with: [ aCanvas render: title ] ]
+				with: title ]

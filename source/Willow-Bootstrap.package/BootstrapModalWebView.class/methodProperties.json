@@ -2,7 +2,7 @@
 	"instance" : {
 		"initializeWithHeader:content:footer:applyingToDialog:andToDocument:" : "GabrielOmarCotelli 4/10/2017 14:03",
 		"documentWrapping:applying:" : "GabrielOmarCotelli 4/10/2017 10:44",
-		"contentWrapping:" : "GabrielOmarCotelli 4/10/2017 14:00",
+		"contentWrapping:" : "GabrielOmarCotelli 6/30/2017 12:05",
 		"renderContentOn:" : "GabrielOmarCotelli 4/10/2017 10:42",
 		"onCloseTrigger" : "GabrielOmarCotelli 4/10/2017 14:01",
 		"onTrigger" : "GabrielOmarCotelli 4/10/2017 11:02"
