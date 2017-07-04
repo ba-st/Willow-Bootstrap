@@ -1,9 +1,13 @@
 {
-	"instance" : { },
+	"instance" : {
+		"initializeUsing:" : "GabrielOmarCotelli 7/4/2017 15:16"
+	},
 	"class" : {
-		"version" : "GabrielOmarCotelli 4/21/2017 15:48",
-		"libraryName" : "GabrielOmarCotelli 4/21/2017 15:48",
 		"forDeployment" : "GabrielOmarCotelli 4/17/2017 16:45",
-		"forDevelopment" : "GabrielOmarCotelli 4/17/2017 16:45"
+		"default" : "GabrielOmarCotelli 7/4/2017 15:15",
+		"version" : "GabrielOmarCotelli 4/21/2017 15:48",
+		"forDevelopment" : "GabrielOmarCotelli 4/17/2017 16:45",
+		"libraryName" : "GabrielOmarCotelli 4/21/2017 15:48",
+		"using:" : "GabrielOmarCotelli 7/4/2017 15:15"
 	}
 }

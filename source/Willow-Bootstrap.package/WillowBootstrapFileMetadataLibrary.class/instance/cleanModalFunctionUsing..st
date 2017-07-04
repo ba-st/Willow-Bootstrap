@@ -1,4 +1,4 @@
-Accessing
+private
 cleanModalFunctionUsing: script
 
 	| function |

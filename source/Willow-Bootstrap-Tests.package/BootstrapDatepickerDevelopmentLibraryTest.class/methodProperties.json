@@ -1,8 +1,11 @@
 {
 	"instance" : {
 		"testIsForDevelopment" : "GabrielOmarCotelli 4/21/2017 16:27",
+		"testUpdateRootWithLocale" : "GabrielOmarCotelli 7/4/2017 13:50",
 		"testUpdateRoot" : "GabrielOmarCotelli 6/28/2017 10:40",
-		"testForDevelopment" : "GabrielOmarCotelli 4/21/2017 16:26"
+		"testForDevelopment" : "GabrielOmarCotelli 4/21/2017 16:26",
+		"testDeployFiles" : "GabrielOmarCotelli 7/4/2017 11:16",
+		"testUpdateRootWithUnsupportedLocale" : "GabrielOmarCotelli 7/4/2017 13:50"
 	},
 	"class" : { }
 }

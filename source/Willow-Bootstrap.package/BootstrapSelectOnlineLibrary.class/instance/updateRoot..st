@@ -3,4 +3,4 @@ updateRoot: aRoot
 
 	aRoot stylesheet url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/css/bootstrap-select.min.css' expandMacrosWith: self version).
 	aRoot javascript url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/js/bootstrap-select.min.js' expandMacrosWith: self version).
-	aRoot javascript url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/js/i18n/defaults-<2s>.min.js' expandMacrosWith: self version with: languageCode)
+	self updateLocaleIn: aRoot

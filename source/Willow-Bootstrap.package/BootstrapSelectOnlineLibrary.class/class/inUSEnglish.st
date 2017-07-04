@@ -1,4 +1,4 @@
 Instance Creation
 inUSEnglish
 
-	^self inLanguage: 'en_US'
+	^ self using: (WALocale fromString: 'en-US')
