@@ -1,7 +1,12 @@
 {
 	"instance" : {
+		"updateLocaleIn:" : "GabrielOmarCotelli 7/4/2017 15:34",
+		"updateRoot:" : "GabrielOmarCotelli 7/4/2017 15:34",
 		"version" : "GabrielOmarCotelli 6/28/2017 10:37",
-		"updateRoot:" : "GabrielOmarCotelli 6/28/2017 10:37"
+		"initializeUsing:" : "GabrielOmarCotelli 7/4/2017 12:09"
 	},
-	"class" : { }
+	"class" : {
+		"using:" : "GabrielOmarCotelli 7/4/2017 12:08",
+		"default" : "GabrielOmarCotelli 7/4/2017 12:08"
+	}
 }

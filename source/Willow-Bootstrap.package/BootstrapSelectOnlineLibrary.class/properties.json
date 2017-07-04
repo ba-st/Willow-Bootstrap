@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"languageCode"
+		"locale"
 	],
 	"name" : "BootstrapSelectOnlineLibrary",
 	"type" : "normal"
