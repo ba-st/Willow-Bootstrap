@@ -1,5 +1,0 @@
-private
-fileSelectors
-
-	<ignoreForCoverage>
-	^ #(#fontsglyphiconshalflingsregularSvg #fontsglyphiconshalflingsregularTtf #fontsglyphiconshalflingsregularWoff2 #fontsglyphiconshalflingsregularEot #fontsglyphiconshalflingsregularWoff)

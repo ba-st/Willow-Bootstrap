@@ -1,5 +1,6 @@
 accessing
 selectorsToInclude
 
-	<ignoreForCoverage>
-	^ #(cssbootstrapminCss cssbootstrapthememinCss jsbootstrapminJs)
+	^ includeOptionalTheme
+		ifTrue: [ #(cssbootstrapminCss cssbootstrapthememinCss jsbootstrapminJs) ]
+		ifFalse: [ #(cssbootstrapminCss jsbootstrapminJs) ]
