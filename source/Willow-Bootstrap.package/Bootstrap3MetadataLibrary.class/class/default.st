@@ -1,4 +1,4 @@
 instance creation
-default 
+default
 
-	^ self withOptionalTheme: true
+	^ super default initializeWithOptionalTheme: true

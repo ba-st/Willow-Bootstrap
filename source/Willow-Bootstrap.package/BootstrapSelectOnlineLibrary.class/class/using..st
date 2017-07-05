@@ -1,4 +1,4 @@
 Instance Creation
 using: aWALocale
 
-	^ super default initializeUsing: aWALocale
+	^ self new initializeUsing: aWALocale

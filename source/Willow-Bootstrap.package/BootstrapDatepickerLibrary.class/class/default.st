@@ -1,4 +1,4 @@
 instance creation
 default
 
-	^ self using: (WALocale fromString: 'en')
+	^ super default initializeUsing: (WALocale fromString: 'en')

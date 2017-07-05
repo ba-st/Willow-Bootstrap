@@ -1,4 +1,4 @@
 instance creation
 withoutOptionalTheme
 
-	^ self withOptionalTheme: false
+	^ self new initializeWithOptionalTheme: false
