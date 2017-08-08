@@ -9,4 +9,4 @@ testAsynchronicAnchorLabeledApplying
 
 	html := self render: anchor.
 
-	self assert: html equals: '<a role="button" class="btn-primary">Buy</a>'
+	self assert: html equals: '<a role="button" class="btn btn-primary">Buy</a>'
