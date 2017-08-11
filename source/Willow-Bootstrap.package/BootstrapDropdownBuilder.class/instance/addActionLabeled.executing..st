@@ -3,8 +3,6 @@ addActionLabeled: aRenderable executing: anActionBlock
 
 	| anchor |
 
-	anchor := supplier
-		asynchronicAnchorLabeled: aRenderable
-		applying: CompositeComponentCommand empty.
+	anchor := AsynchronicAnchorWebView labeled: aRenderable.
 	anActionBlock value: anchor.
 	menuItems add: [ :canvas | canvas listItem: anchor ]

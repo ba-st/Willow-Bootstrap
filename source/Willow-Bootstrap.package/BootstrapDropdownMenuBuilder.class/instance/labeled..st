@@ -2,8 +2,8 @@ Configuring
 labeled: aRenderable
 
 	buttonBinding := Binding to:
-		(supplier
-			asynchronicAnchorLabeled: [ :canvas | 
+		(AsynchronicAnchorWebView
+			labeled: [ :canvas | 
 				canvas render: aRenderable.
 				self renderCaretOn: canvas ]
 			applying: self dropdownButtonCommand)
