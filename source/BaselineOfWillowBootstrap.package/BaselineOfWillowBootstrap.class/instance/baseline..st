@@ -1,12 +1,14 @@
 baselines
 baseline: spec
+
 	<baseline>
 	spec
 		for: #common
 		do: [ self setUpDependencies: spec.
 			spec
 				package: 'Willow-Bootstrap' with: [ spec requires: #('Willow') ];
-				package: 'Willow-Bootstrap-Tests' with: [ spec requires: #('Willow-Bootstrap' 'Willow-Tests') ].
+				package: 'Willow-Bootstrap-Tests'
+					with: [ spec requires: #('Willow-Bootstrap' 'Willow-Tests' 'Seaside3-Tests') ].
 			spec
 				group: 'Deployment' with: #('Willow-Bootstrap');
 				group: 'Development' with: #('Deployment' 'Willow-Bootstrap-Tests');
