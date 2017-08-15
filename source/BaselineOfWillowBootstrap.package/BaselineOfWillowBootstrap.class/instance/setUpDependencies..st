@@ -1,9 +1,16 @@
 baselines
 setUpDependencies: spec
 
+	| repoLocation |
+
+	repoLocation := 'github://ba-st/Willow:master/source'.
 	spec
 		baseline: 'Willow'
-			with: [ spec
-				repository: 'github://ba-st/Willow:master/source';
-				loads: #('Willow') ];
-		project: 'Willow-Tests' copyFrom: 'Willow' with: [ spec loads: #('Willow-Tests') ]
+		with: [ spec
+				repository: repoLocation;
+				loads: #('Willow') ].
+	spec
+		baseline: 'Willow-Tests'
+		with: [ spec
+				repository: repoLocation;
+				loads: #('Willow-Tests') ]
