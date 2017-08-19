@@ -15,4 +15,4 @@ testCheckboxUnlabeledOnModelOffModelApplying
 	self
 		assert: html
 		equals:
-			'<input class="willow" checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/>'
+			'<div class="checkbox willow"><label><input class="willow" checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>'

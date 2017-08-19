@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "BinaryChoiceWebViewTest",
+	"category" : "Willow-Bootstrap-Tests-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapCheckboxWebViewTest",
+	"type" : "normal"
+}

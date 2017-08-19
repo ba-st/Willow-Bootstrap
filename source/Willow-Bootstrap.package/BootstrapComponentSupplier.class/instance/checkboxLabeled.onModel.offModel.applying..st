@@ -1,7 +1,7 @@
 Supplying
 checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent
 
-	^ CheckboxWebView
+	^ BootstrapCheckboxWebView
 		labeled: aRenderable
 		onModel: anObjectToUseWhenOn
 		offModel: anObjectToUseWhenOff
