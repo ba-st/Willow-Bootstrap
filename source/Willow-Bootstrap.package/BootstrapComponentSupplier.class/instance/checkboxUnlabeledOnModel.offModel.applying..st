@@ -1,7 +1,7 @@
 Supplying
 checkboxUnlabeledOnModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent
 
-	^ CheckboxWebView
+	^ BootstrapCheckboxWebView
 		onModel: anObjectToUseWhenOn
 		offModel: anObjectToUseWhenOff
 		applying: aCommandToComponent

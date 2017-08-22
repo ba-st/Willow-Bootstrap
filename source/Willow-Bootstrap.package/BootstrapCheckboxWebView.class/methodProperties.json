@@ -1,0 +1,21 @@
+{
+	"instance" : {
+		"toggleCurrentSelection" : "MaximilianoTabacman 8/19/2017 10:32",
+		"renderLabelOn:" : "MaximilianoTabacman 8/19/2017 10:37",
+		"identifyIn:" : "MaximilianoTabacman 8/19/2017 10:32",
+		"renderContentOn:" : "MaximilianoTabacman 8/19/2017 10:35",
+		"initializeLabeledAccordingTo:applying:" : "MaximilianoTabacman 8/19/2017 10:31",
+		"selectOnModel" : "MaximilianoTabacman 8/19/2017 10:32",
+		"onTrigger" : "MaximilianoTabacman 8/19/2017 10:32",
+		"identifier" : "MaximilianoTabacman 8/19/2017 10:32",
+		"commandToContainer" : "MaximilianoTabacman 8/19/2017 10:35",
+		"selectOffModel" : "MaximilianoTabacman 8/19/2017 10:32",
+		"renderCheckboxOn:" : "MaximilianoTabacman 8/19/2017 10:44"
+	},
+	"class" : {
+		"onModel:offModel:applying:" : "MaximilianoTabacman 8/19/2017 10:31",
+		"labeled:onModel:offModel:applying:" : "MaximilianoTabacman 8/19/2017 10:31",
+		"onModel:offModel:" : "MaximilianoTabacman 8/19/2017 10:47",
+		"labeledAccordingTo:onModel:offModel:applying:" : "MaximilianoTabacman 8/19/2017 10:31"
+	}
+}

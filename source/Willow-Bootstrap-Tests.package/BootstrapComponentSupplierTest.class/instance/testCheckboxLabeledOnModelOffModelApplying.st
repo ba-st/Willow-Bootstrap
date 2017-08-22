@@ -16,4 +16,4 @@ testCheckboxLabeledOnModelOffModelApplying
 	self
 		assert: html
 		equals:
-			'<input class="willow" checked="checked" name="1" id="checkbox-id2" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id2">Labelization</label>'
+			'<div class="checkbox willow"><label><input class="willow" checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/>Labelization</label></div>'

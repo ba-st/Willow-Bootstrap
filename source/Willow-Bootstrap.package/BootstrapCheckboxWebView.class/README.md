@@ -1,0 +1,1 @@
+I'm a checkbox specifically designed to use the html structure required by Bootstrap.
