@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "MaximilianoTabacman 8/28/2017 09:28",
+	"super" : "SingleSelectionWebViewBehavior",
+	"category" : "Willow-Bootstrap-WebViews",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"commandToComponent",
+		"interactionInterpreter",
+		"renderingBlock",
+		"identifierAssigner"
+	],
+	"name" : "BootstrapRadioWebView",
+	"type" : "normal"
+}

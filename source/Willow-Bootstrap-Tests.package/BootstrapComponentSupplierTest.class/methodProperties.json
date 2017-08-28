@@ -3,6 +3,7 @@
 		"testDecimalNumberFieldApplying" : "GabrielOmarCotelli 6/12/2017 17:21",
 		"testNaturalNumberFieldApplying" : "GabrielOmarCotelli 6/12/2017 17:21",
 		"testSingleSelectionListBoxDisplayingAtOnceApplying" : "GabrielOmarCotelli 8/16/2017 10:42",
+		"testUpdateRootWithSelfHostedLibrariesAndLanguageSupport" : "GabrielOmarCotelli 7/4/2017 15:59",
 		"testNotificationBuilder" : "GabrielOmarCotelli 5/18/2017 15:12",
 		"testAsynchronicButtonLabeledApplying" : "MaximilianoTabacman 8/8/2017 09:54",
 		"testUpdateRootWithSelfHostedLibraries" : "GabrielOmarCotelli 7/4/2017 15:54",
@@ -14,7 +15,7 @@
 		"testTableBuilder" : "GabrielOmarCotelli 6/8/2017 18:05",
 		"testUpdateRoot" : "GabrielOmarCotelli 7/4/2017 17:36",
 		"testCheckboxLabeledOnModelOffModelApplying" : "MaximilianoTabacman 8/19/2017 10:39",
-		"testUpdateRootWithSelfHostedLibrariesAndLanguageSupport" : "GabrielOmarCotelli 7/4/2017 15:59",
+		"testRadioRenderingWithApplying" : "MaximilianoTabacman 8/28/2017 09:59",
 		"testDropdownListApplying" : "GabrielOmarCotelli 4/11/2017 17:07",
 		"testDateFieldApplying" : "GabrielOmarCotelli 4/21/2017 15:24"
 	},
