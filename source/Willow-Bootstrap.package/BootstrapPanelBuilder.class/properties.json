@@ -9,7 +9,7 @@
 		"headingOptional",
 		"bodyOptional",
 		"footerOptional",
-		"tableOrListGroupOptional"
+		"tablesAndListGroups"
 	],
 	"name" : "BootstrapPanelBuilder",
 	"type" : "normal"
