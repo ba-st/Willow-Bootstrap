@@ -8,4 +8,5 @@ testListGroups
 		assert: BootstrapCssStyles listGroupItemHeading equals: 'list-group-item-heading';
 		assert: BootstrapCssStyles listGroupItemInfo equals: 'list-group-item-info';
 		assert: BootstrapCssStyles listGroupItemSuccess equals: 'list-group-item-success';
+		assert: BootstrapCssStyles listGroupItemText equals: 'list-group-item-text';
 		assert: BootstrapCssStyles listGroupItemWarning equals: 'list-group-item-warning'

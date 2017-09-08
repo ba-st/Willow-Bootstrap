@@ -11,4 +11,5 @@ testDataAPI
 		assert: BootstrapConstants click equals: 'click';
 		assert: BootstrapConstants focus equals: 'focus';
 		assert: BootstrapConstants hover equals: 'hover';
-		assert: BootstrapConstants manual equals: 'manual'
+		assert: BootstrapConstants manual equals: 'manual';
+		assert: BootstrapConstants buttons equals: 'buttons'

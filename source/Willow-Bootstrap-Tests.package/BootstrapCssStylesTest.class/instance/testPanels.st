@@ -4,9 +4,11 @@ testPanels
 	self
 		assert: BootstrapCssStyles panel equals: 'panel';
 		assert: BootstrapCssStyles panelBody equals: 'panel-body';
+		assert: BootstrapCssStyles panelCollapse equals: 'panel-collapse';
 		assert: BootstrapCssStyles panelDanger equals: 'panel-danger';
 		assert: BootstrapCssStyles panelDefault equals: 'panel-default';
 		assert: BootstrapCssStyles panelFooter equals: 'panel-footer';
+		assert: BootstrapCssStyles panelGroup equals: 'panel-group';
 		assert: BootstrapCssStyles panelHeading equals: 'panel-heading';
 		assert: BootstrapCssStyles panelInfo equals: 'panel-info';
 		assert: BootstrapCssStyles panelPrimary equals: 'panel-primary';

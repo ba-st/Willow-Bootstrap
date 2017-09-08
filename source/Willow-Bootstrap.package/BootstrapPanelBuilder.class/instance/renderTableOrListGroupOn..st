@@ -1,5 +1,4 @@
 private - Rendering
 renderTableOrListGroupOn: canvas
 
-	tableOrListGroupOptional
-		withContentDo: [ :tableOrListGroup | canvas render: tableOrListGroup ]
+	tablesAndListGroups do: [ :tableOrListGroup | canvas render: tableOrListGroup ]
