@@ -5,4 +5,5 @@ online
 		usingLibraries:
 			{Bootstrap3OnlineLibrary default.
 			BootstrapSelectOnlineLibrary default.
-			BootstrapDatepickerOnlineLibrary default}
+			BootstrapDatepickerOnlineLibrary default.
+			BootstrapTypeaheadOnlineLibrary default}

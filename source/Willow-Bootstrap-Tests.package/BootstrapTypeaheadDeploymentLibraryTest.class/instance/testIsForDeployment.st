@@ -1,0 +1,4 @@
+tests
+testIsForDeployment
+
+	self assert: BootstrapTypeaheadLibrary forDeployment isForDeployment

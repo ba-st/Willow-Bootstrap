@@ -1,0 +1,25 @@
+{
+	"instance" : {
+		"appendTo:" : "GabrielOmarCotelli 9/12/2017 15:37",
+		"highlighter:" : "GabrielOmarCotelli 9/12/2017 15:35",
+		"showHintOnFocus:" : "GabrielOmarCotelli 9/12/2017 15:33",
+		"updater:" : "GabrielOmarCotelli 9/12/2017 15:35",
+		"addItem:" : "GabrielOmarCotelli 9/12/2017 15:38",
+		"autoSelect:" : "GabrielOmarCotelli 9/12/2017 15:36",
+		"displayText:" : "GabrielOmarCotelli 9/12/2017 15:35",
+		"method" : "GabrielOmarCotelli 9/12/2017 15:29",
+		"afterSelect:" : "GabrielOmarCotelli 9/12/2017 15:36",
+		"minLength:" : "GabrielOmarCotelli 9/13/2017 15:28",
+		"scrollHeight:" : "GabrielOmarCotelli 9/12/2017 15:34",
+		"sorter:" : "GabrielOmarCotelli 9/12/2017 15:34",
+		"items:" : "GabrielOmarCotelli 9/12/2017 15:32",
+		"delay:" : "GabrielOmarCotelli 9/12/2017 15:36",
+		"matcher:" : "GabrielOmarCotelli 9/12/2017 15:34",
+		"lookup" : "GabrielOmarCotelli 9/12/2017 15:41",
+		"fitToElement:" : "GabrielOmarCotelli 9/12/2017 15:37",
+		"source:" : "GabrielOmarCotelli 9/12/2017 15:31",
+		"destroy" : "GabrielOmarCotelli 9/12/2017 15:39",
+		"getActive" : "GabrielOmarCotelli 9/12/2017 15:41"
+	},
+	"class" : { }
+}

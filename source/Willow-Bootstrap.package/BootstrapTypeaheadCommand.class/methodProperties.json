@@ -1,0 +1,24 @@
+{
+	"instance" : {
+		"applyTo:on:" : "GabrielOmarCotelli 9/12/2017 16:45",
+		"initializeSearchingWith:labeledBy:withSelectionDo:thenRefresh:configuredBy:" : "GabrielOmarCotelli 9/13/2017 15:34",
+		"afterSelectFunctionEvaluate:thenRefresh:on:" : "GabrielOmarCotelli 9/13/2017 15:15",
+		"evaluate:with:using:" : "GabrielOmarCotelli 9/13/2017 15:07",
+		"searchTermVariable" : "GabrielOmarCotelli 9/13/2017 15:03",
+		"indexProperty" : "GabrielOmarCotelli 9/13/2017 15:01",
+		"searchWith:labels:on:" : "GabrielOmarCotelli 9/13/2017 15:07",
+		"updaterFunction" : "GabrielOmarCotelli 9/13/2017 15:08",
+		"responseFunctionName" : "GabrielOmarCotelli 9/13/2017 15:03"
+	},
+	"class" : {
+		"searchingWith:labeledBy:withSelectionDo:configuredBy:" : "GabrielOmarCotelli 9/13/2017 15:17",
+		"defaultLabelBlock" : "GabrielOmarCotelli 9/13/2017 15:20",
+		"searchingWith:withSelectionDo:" : "GabrielOmarCotelli 9/13/2017 15:20",
+		"searchingWith:labeledBy:withSelectionDo:thenRendering:configuredBy:" : "GabrielOmarCotelli 9/13/2017 15:19",
+		"searchingWith:labeledBy:withSelectionDo:" : "GabrielOmarCotelli 9/13/2017 15:21",
+		"searchingWith:labeledBy:withSelectionDo:thenRefresh:configuredBy:" : "GabrielOmarCotelli 9/13/2017 15:16",
+		"defaultConfigurationBlock" : "GabrielOmarCotelli 9/13/2017 15:21",
+		"searchingWith:labeledBy:withSelectionDo:thenRendering:" : "GabrielOmarCotelli 9/13/2017 15:19",
+		"searchingWith:withSelectionDo:configuredBy:" : "GabrielOmarCotelli 9/13/2017 15:21"
+	}
+}
