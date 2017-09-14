@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "GabrielOmarCotelli 9/12/2017 16:32",
+	"super" : "WebComponentCommand",
+	"category" : "Willow-Bootstrap-Frontend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scriptCommand",
+		"searchResults"
+	],
+	"name" : "BootstrapTypeaheadCommand",
+	"type" : "normal"
+}

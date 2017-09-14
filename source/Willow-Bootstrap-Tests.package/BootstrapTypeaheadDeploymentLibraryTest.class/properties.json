@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "WillowLibraryTestCase",
+	"category" : "Willow-Bootstrap-Tests-Typeahead",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BootstrapTypeaheadDeploymentLibraryTest",
+	"type" : "normal"
+}

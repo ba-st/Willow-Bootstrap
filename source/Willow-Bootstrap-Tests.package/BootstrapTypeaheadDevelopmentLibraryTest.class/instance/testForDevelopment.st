@@ -1,0 +1,4 @@
+tests
+testForDevelopment
+
+	self assert: BootstrapTypeaheadLibrary forDevelopment equals: BootstrapTypeaheadDevelopmentLibrary

@@ -1,0 +1,21 @@
+{
+	"instance" : {
+		"initializeSearchingWith:labeledBy:withSelectionDo:configuredBy:" : "GabrielOmarCotelli 9/14/2017 10:01",
+		"applyTo:on:" : "GabrielOmarCotelli 9/12/2017 16:45",
+		"responseFunctionName" : "GabrielOmarCotelli 9/13/2017 15:03",
+		"evaluate:with:using:" : "GabrielOmarCotelli 9/13/2017 15:07",
+		"searchTermVariable" : "GabrielOmarCotelli 9/13/2017 15:03",
+		"indexProperty" : "GabrielOmarCotelli 9/13/2017 15:01",
+		"searchWith:labels:on:" : "GabrielOmarCotelli 9/13/2017 15:07",
+		"updaterFunction" : "GabrielOmarCotelli 9/14/2017 10:05",
+		"afterSelectFunctionEvaluate:on:" : "GabrielOmarCotelli 9/14/2017 10:07"
+	},
+	"class" : {
+		"searchingWith:labeledBy:withSelectionDo:configuredBy:" : "GabrielOmarCotelli 9/14/2017 10:02",
+		"searchingWith:withSelectionDo:" : "GabrielOmarCotelli 9/13/2017 15:20",
+		"defaultLabelBlock" : "GabrielOmarCotelli 9/13/2017 15:20",
+		"searchingWith:withSelectionDo:configuredBy:" : "GabrielOmarCotelli 9/13/2017 15:21",
+		"searchingWith:labeledBy:withSelectionDo:" : "GabrielOmarCotelli 9/13/2017 15:21",
+		"defaultConfigurationBlock" : "GabrielOmarCotelli 9/13/2017 15:21"
+	}
+}

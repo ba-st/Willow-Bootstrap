@@ -1,0 +1,1 @@
+I'm a JQueryPlugin implementing  the bootstrap-typeahead programmatic API

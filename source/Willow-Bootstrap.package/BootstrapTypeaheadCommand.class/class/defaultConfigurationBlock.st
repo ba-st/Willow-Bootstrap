@@ -1,0 +1,4 @@
+private
+defaultConfigurationBlock
+
+	^ [ :typeahead |  ]
