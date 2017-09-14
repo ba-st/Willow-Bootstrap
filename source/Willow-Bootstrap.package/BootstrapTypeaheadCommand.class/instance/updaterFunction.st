@@ -1,8 +1,8 @@
 private
-updaterFunction 
+updaterFunction
 
 	^ JSFunction new
 		arguments: #('item');
-		add: ((JSStream this alias: 'item') access: self indexProperty);
+		add: (JSStream this alias: 'item');
 		return: true;
 		yourself
