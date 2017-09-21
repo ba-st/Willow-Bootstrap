@@ -1,7 +1,7 @@
 Accessing
 fileNameFrom: aWALocale
 
-	^ #('en-US' 'de-DE' 'es-ES' 'es-CL' 'fr-FR' 'it-IT' 'pt-BR' 'pt-PT')
+	^ #('en-US' 'de-DE' 'es-ES' 'es-CL' 'fr-FR' 'it-IT' 'pt-BR' 'pt-PT' 'ja-JP' 'et-EE' 'kh-KM' 'vi-VN')
 		detect: [ :locale | locale = aWALocale greaseString ]
 		ifFound: [ :locale | 'defaults-<1s>_<2s>' expandMacrosWith: aWALocale language with: aWALocale country asUppercase ]
 		ifNone: [ aWALocale withoutCountry greaseString = 'en'

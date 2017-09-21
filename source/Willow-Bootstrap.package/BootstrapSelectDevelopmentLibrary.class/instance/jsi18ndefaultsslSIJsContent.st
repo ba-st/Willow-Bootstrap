@@ -1,9 +1,7 @@
 uploaded
 jsi18ndefaultsslSIJsContent
-
-	<ignoreForCoverage>
 	^ '/*!
- * Bootstrap-select v1.12.2 (http://silviomoreto.github.io/bootstrap-select)
+ * Bootstrap-select v1.12.4 (http://silviomoreto.github.io/bootstrap-select)
  *
  * Copyright 2013-2017 bootstrap-select
  * Licensed under MIT (https://github.com/silviomoreto/bootstrap-select/blob/master/LICENSE)
@@ -29,9 +27,7 @@ jsi18ndefaultsslSIJsContent
   $.fn.selectpicker.defaults = {
     noneSelectedText: ''Nič izbranega'',
     noneResultsText: ''Ni zadetkov za {0}'',
-    countSelectedText: function (numSelected, numTotal) {
-      "Število izbranih: {0}";
-    },
+    countSelectedText: ''{0} od {1} izbranih'',
     maxOptionsText: function (numAll, numGroup) {
       return [
         ''Omejitev dosežena (max. izbranih: {n})'',

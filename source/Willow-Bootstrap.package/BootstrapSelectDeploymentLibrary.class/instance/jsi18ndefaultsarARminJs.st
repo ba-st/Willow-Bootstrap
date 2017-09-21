@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsarARminJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ar_AR.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

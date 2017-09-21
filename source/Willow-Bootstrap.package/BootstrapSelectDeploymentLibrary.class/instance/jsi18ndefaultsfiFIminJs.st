@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsfiFIminJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fi_FI.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsplPLJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pl_PL.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

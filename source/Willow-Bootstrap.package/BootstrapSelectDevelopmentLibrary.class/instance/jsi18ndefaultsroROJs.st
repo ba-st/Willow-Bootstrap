@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsroROJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ro_RO.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

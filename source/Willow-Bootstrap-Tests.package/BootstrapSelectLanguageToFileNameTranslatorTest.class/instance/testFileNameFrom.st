@@ -18,10 +18,14 @@ testFileNameFrom
 		assert: (self fileNameFrom: 'it') equals: 'defaults-it_IT';
 		assert: (self fileNameFrom: 'it-IT') equals: 'defaults-it_IT';
 		assert: (self fileNameFrom: 'it-CH') equals: 'defaults-it_IT';
+		assert: (self fileNameFrom: 'ja-JP') equals: 'defaults-ja_JP';
+		assert: (self fileNameFrom: 'kh-KM') equals: 'defaults-kh_KM';		
 		assert: (self fileNameFrom: 'es') equals: 'defaults-es_ES';
 		assert: (self fileNameFrom: 'es-ES') equals: 'defaults-es_ES';
 		assert: (self fileNameFrom: 'es-AR') equals: 'defaults-es_ES';
 		assert: (self fileNameFrom: 'es-CL') equals: 'defaults-es_CL';
+		assert: (self fileNameFrom: 'et-EE') equals: 'defaults-et_EE';
 		assert: (self fileNameFrom: 'pt') equals: 'defaults-pt_PT';
 		assert: (self fileNameFrom: 'pt-PT') equals: 'defaults-pt_PT';
-		assert: (self fileNameFrom: 'pt-BR') equals: 'defaults-pt_BR'
+		assert: (self fileNameFrom: 'pt-BR') equals: 'defaults-pt_BR';
+		assert: (self fileNameFrom: 'vi-VN') equals: 'defaults-vi_VN'		
