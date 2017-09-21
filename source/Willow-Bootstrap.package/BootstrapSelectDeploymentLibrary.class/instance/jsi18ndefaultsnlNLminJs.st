@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsnlNLminJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-nl_NL.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

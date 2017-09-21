@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultscroCROJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-cro_CRO.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

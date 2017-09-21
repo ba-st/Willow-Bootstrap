@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "3.3.7",
-    "bootstrap-select": "1.12.2",
+    "bootstrap-select": "1.12.4",
     "bootstrap-datepicker": "1.7.0",
     "bootstrap-3-typeahead": "4.0.2"
   }

@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsuaUAJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ua_UA.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

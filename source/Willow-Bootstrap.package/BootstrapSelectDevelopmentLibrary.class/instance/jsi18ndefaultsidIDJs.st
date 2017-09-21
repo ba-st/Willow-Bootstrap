@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsidIDJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-id_ID.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

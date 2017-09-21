@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultshuHUJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-hu_HU.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

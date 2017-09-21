@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultssvSEJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sv_SE.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

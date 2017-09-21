@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsslSIJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sl_SI.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')

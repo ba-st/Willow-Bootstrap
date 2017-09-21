@@ -1,9 +1,7 @@
 uploaded
 jsi18ndefaultscsCZJsContent
-
-	<ignoreForCoverage>
 	^ '/*!
- * Bootstrap-select v1.12.2 (http://silviomoreto.github.io/bootstrap-select)
+ * Bootstrap-select v1.12.4 (http://silviomoreto.github.io/bootstrap-select)
  *
  * Copyright 2013-2017 bootstrap-select
  * Licensed under MIT (https://github.com/silviomoreto/bootstrap-select/blob/master/LICENSE)
@@ -31,7 +29,9 @@ jsi18ndefaultscsCZJsContent
     noneResultsText: ''Žádné výsledky {0}'',
     countSelectedText: ''Označeno {0} z {1}'',
     maxOptionsText: [''Limit překročen ({n} {var} max)'', ''Limit skupiny překročen ({n} {var} max)'', [''položek'', ''položka'']],
-    multipleSeparator: '', ''
+    multipleSeparator: '', '',
+    selectAllText: ''Vybrat Vše'',
+    deselectAllText: ''Odznačit Vše''
   };
 })(jQuery);
 

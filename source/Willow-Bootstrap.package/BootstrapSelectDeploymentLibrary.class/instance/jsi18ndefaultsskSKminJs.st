@@ -1,7 +1,5 @@
 uploaded metadata
 jsi18ndefaultsskSKminJs
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sk_SK.min.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
