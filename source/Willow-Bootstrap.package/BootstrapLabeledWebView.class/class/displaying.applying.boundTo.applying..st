@@ -2,7 +2,7 @@ Instance Creation
 displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField
 
 	^ self
-		applying: CompositeComponentCommand empty
+		applying: [ :container |  ]
 		displaying: thePhrasingContent
 		applying: aCommandToLabel
 		boundTo: aFieldWebView

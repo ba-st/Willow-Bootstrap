@@ -5,4 +5,4 @@ styledAs: aContainerClass brandedWith: aBrandWebView containing: aWebView applyi
 		initializeStyledAs: aContainerClass
 		brandedWith: aBrandWebView
 		containing: aWebView
-		applying: aCommandToComponent
+		applying: aCommandToComponent asWebComponentCommand 

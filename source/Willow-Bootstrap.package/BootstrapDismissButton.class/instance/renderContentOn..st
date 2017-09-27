@@ -1,4 +1,4 @@
 rendering
 renderContentOn: aCanvas
 
-	aCanvas render: button
+	aCanvas render: dismissButton

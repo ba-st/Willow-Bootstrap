@@ -5,10 +5,9 @@ testRenderContentWithHelpText
 
 	labeledView := BootstrapLabeledWebView
 		displaying: 'E-Mail'
-		applying: CompositeComponentCommand empty
-		boundTo:
-			(BootstrapHelpTextWebView boundTo: (supplier singleLineTextFieldApplying: CompositeComponentCommand empty) describedBy: 'A block of help text that breaks onto a new line and may extend beyond one line.')
-		applying: CompositeComponentCommand empty.
+		applying: [ :label |  ]
+		boundTo: (BootstrapHelpTextWebView boundTo: (supplier singleLineTextFieldApplying: [ :field |  ]) describedBy: 'A block of help text that breaks onto a new line and may extend beyond one line.')
+		applying: [ :fieldContainer |  ].
 
 	html := self render: labeledView.
 

@@ -1,4 +1,4 @@
 building
 buildApplying: aComponentCommand
 
-	^ GenericContainerWebView wrapping: self content applying: aComponentCommand + (ComponentClassificationCommand toStyleWith: self containerStyle)
+	^ GenericContainerWebView wrapping: self content applying: aComponentCommand asWebComponentCommand + (ComponentClassificationCommand toStyleWith: self containerStyle)

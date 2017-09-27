@@ -3,7 +3,7 @@ testOnTriggerDoesNothingWithoutAdditionalActionButtons
 
 	| html footer header dialog |
 
-	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Ok' applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink).
+	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ].
 	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.
 	dialog := BootstrapModalWebView withHeader: header content: 'Some very large legal stuff. ;)' footer: footer.
 

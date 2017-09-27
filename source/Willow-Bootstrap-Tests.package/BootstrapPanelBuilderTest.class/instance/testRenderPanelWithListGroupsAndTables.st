@@ -7,14 +7,14 @@ testRenderPanelWithListGroupsAndTables
 		addColumnTitled: 'First Name' rendering: [ :item | item first ];
 		build.
 
-	listGroup := supplier unorderedListApplying: CompositeComponentCommand empty listing: #(1 2) applyingToEach: CompositeComponentCommand empty.
+	listGroup := supplier unorderedListApplying: [ :list |  ] listing: #(1 2) applyingToEach: [ :listItem |  ].
 
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel heading';
 		wrapping: 'Panel content.';
 		withListGroup: listGroup;
 		withTable: table;
-		buildApplying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles panelDefault).
+		buildApplying: [ :container | container addClass bootstrap panelDefault ].
 
 	html := self render: panel.
 

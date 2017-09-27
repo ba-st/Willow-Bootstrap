@@ -1,4 +1,4 @@
 Supplying
 dateFieldApplying: aComponentCommand
 
-	^ self singleLineTextFieldApplying: aComponentCommand + (InputFieldMaxLengthCommand allowingUpTo: 10) + BootstrapDatepickerCommand new
+	^ self singleLineTextFieldApplying: [ :field | (field setMaximumLengthTo: 10) + aComponentCommand + BootstrapDatepickerCommand new ]

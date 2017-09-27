@@ -3,4 +3,4 @@ asynchronicAnchorLabeled: aRenderable applying: aComponentCommand
 
 	^ AsynchronicAnchorWebView
 		labeled: aRenderable
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles button) + aComponentCommand
+		applying: [ :anchor | anchor addClass bootstrap button + aComponentCommand ]

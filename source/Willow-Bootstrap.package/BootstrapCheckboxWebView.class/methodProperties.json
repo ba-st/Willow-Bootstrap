@@ -8,14 +8,14 @@
 		"selectOnModel" : "MaximilianoTabacman 8/19/2017 10:32",
 		"onTrigger" : "MaximilianoTabacman 8/19/2017 10:32",
 		"identifier" : "MaximilianoTabacman 8/19/2017 10:32",
-		"commandToContainer" : "MaximilianoTabacman 8/19/2017 10:35",
+		"commandToContainer" : "GabrielOmarCotelli 9/27/2017 11:00",
 		"selectOffModel" : "MaximilianoTabacman 8/19/2017 10:32",
 		"renderCheckboxOn:" : "MaximilianoTabacman 8/19/2017 10:44"
 	},
 	"class" : {
 		"onModel:offModel:applying:" : "MaximilianoTabacman 8/19/2017 10:31",
 		"labeled:onModel:offModel:applying:" : "MaximilianoTabacman 8/19/2017 10:31",
-		"onModel:offModel:" : "MaximilianoTabacman 8/19/2017 10:47",
-		"labeledAccordingTo:onModel:offModel:applying:" : "MaximilianoTabacman 8/19/2017 10:31"
+		"onModel:offModel:" : "GabrielOmarCotelli 9/27/2017 11:11",
+		"labeledAccordingTo:onModel:offModel:applying:" : "GabrielOmarCotelli 9/26/2017 18:14"
 	}
 }

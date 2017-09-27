@@ -4,13 +4,9 @@ testRenderContentOnWithCommands
 	| navigationBar html |
 
 	navigationBar := BootstrapNavigationBar
-		brandedWith: (AsynchronicAnchorWebView labeled: 'Willow' applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles navbarBrand))
+		brandedWith: (AsynchronicAnchorWebView labeled: 'Willow' applying: [ :anchor | anchor addClass bootstrap navbarBrand ])
 		containing: ''
-		applying:
-			(ComponentClassificationCommand
-				toStyleWithAll:
-					{BootstrapCssStyles navbarDefault.
-					BootstrapCssStyles navbarStaticTop}).
+		applying: [ :navigation | navigation addClass bootstrap navbarDefault + navigation addClass bootstrap navbarStaticTop ].
 
 	html := self render: navigationBar.
 

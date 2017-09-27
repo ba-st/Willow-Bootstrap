@@ -9,7 +9,7 @@ testWrapping
 				strong: 'Ouch!';
 				space;
 				render: 'Something happened' ];
-		buildApplying: CompositeComponentCommand empty.
+		buildApplying: [ :container |  ].
 
 	html := self render: notification.
 

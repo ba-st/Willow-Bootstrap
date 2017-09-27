@@ -4,7 +4,7 @@ testRenderContentOnWithButton
 	| menu html |
 
 	menu := supplier dropdownMenuBuilder
-		labeled: 'Dropdown' applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonDefault);
+		labeled: 'Dropdown' applying: [ :button | button addClass bootstrap buttonDefault ];
 		addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
 		addDivider;
 		addActionLabeled: 'Another action' executing: [ :button | button onTrigger disable ];

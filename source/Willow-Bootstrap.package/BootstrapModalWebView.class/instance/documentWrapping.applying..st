@@ -3,4 +3,4 @@ documentWrapping: content applying: aDocumentCommand
 
 	^ GenericContainerWebView
 		wrapping: content
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles modalDialog) + (ComponentAttributeCommand named: 'role' with: BootstrapConstants document) + aDocumentCommand
+		applying: [ :container :constants | container addClass bootstrap modalDialog + (container setAttribute: 'role' to: constants bootstrap document) + aDocumentCommand ]

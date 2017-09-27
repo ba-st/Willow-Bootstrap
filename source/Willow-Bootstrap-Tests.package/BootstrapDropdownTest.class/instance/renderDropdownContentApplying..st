@@ -11,8 +11,8 @@ renderDropdownContentApplying: aBlock
 				with: [ | anchor dropdown |
 
 					anchor := canvas anchor.
-					(ComponentMetadataCommand toDeclare: BootstrapConstants target with: BootstrapConstants dropdown) applyTo: anchor on: canvas.
-					(ComponentAttributeCommand named: BootstrapConstants role with: BootstrapConstants button) applyTo: anchor on: canvas.
+					[ :dropdownAnchor :constants | (dropdownAnchor setData: constants bootstrap target to: constants bootstrap dropdown) + (dropdownAnchor setAttribute: constants bootstrap role to: constants bootstrap button) ]
+						asWebComponentCommand applyTo: anchor on: canvas.
 					dropdown := canvas jQuery new bootstrapDropdown.
 					aBlock value: dropdown.
 					anchor script: dropdown.

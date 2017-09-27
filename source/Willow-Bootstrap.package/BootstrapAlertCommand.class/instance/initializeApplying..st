@@ -1,5 +1,5 @@
 initialization
 initializeApplying: aContextualClassificationCommand
 
-	classificationCommand := (ComponentClassificationCommand toStyleWith: BootstrapCssStyles alert) + aContextualClassificationCommand
-		+ (ComponentAttributeCommand named: BootstrapConstants role with: BootstrapCssStyles alert)
+	classificationCommand := [ :container :constants | container addClass bootstrap alert + aContextualClassificationCommand + (container setAttribute: constants bootstrap role to: constants bootstrap alert) ]
+		asWebComponentCommand

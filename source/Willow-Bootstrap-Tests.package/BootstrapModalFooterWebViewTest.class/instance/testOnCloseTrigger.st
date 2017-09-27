@@ -3,10 +3,7 @@ testOnCloseTrigger
 
 	| footer html |
 
-	footer := BootstrapModalFooterWebView
-		with: self acceptButton
-		andCloseButtonLabeled: 'Close'
-		applyingToIt: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink).
+	footer := BootstrapModalFooterWebView with: self acceptButton andCloseButtonLabeled: 'Close' applyingToIt: [ :closeButton | closeButton addClass bootstrap buttonLink ].
 
 	footer onCloseTrigger disable.
 

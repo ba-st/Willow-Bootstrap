@@ -4,12 +4,8 @@ testHtmlContent
 	| html |
 
 	html := self
-		renderPopoverContentApplying: [ :popover | 
-			popover
-				htmlContent:
-					(GenericContainerWebView
-						wrapping: 'A more complex rendering'
-						applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles container)) ].
+		renderPopoverContentApplying:
+			[ :popover | popover htmlContent: (GenericContainerWebView wrapping: 'A more complex rendering' applying: [ :container | container addClass bootstrap container ]) ].
 
 	self
 		assert: html

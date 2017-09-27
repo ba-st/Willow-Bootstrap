@@ -3,7 +3,7 @@ testBuildApplying
 
 	| notification html |
 
-	notification := BootstrapNotificationBuilder new buildApplying: CompositeComponentCommand empty.
+	notification := BootstrapNotificationBuilder new buildApplying: [ :container |  ].
 
 	html := self render: notification.
 

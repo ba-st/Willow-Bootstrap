@@ -6,4 +6,4 @@ labeled: aRenderable
 			labeled: [ :canvas | 
 				canvas render: aRenderable.
 				self renderCaretOn: canvas ]
-			applying: self dropdownButtonCommand)
+			applying: [ :button :constants | self dropdownCommandFor: button using: constants ])

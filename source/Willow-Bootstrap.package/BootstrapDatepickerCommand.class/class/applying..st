@@ -1,4 +1,4 @@
 private - Instance Creation
 applying: anAdditionalCommand
 
-	^ super new initializeApplying: anAdditionalCommand
+	^ super new initializeApplying: anAdditionalCommand asWebComponentCommand 

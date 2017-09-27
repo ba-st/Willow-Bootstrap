@@ -1,4 +1,0 @@
-private
-textRightCommand
-
-	^ ComponentClassificationCommand toStyleWith: BootstrapCssStyles textRight

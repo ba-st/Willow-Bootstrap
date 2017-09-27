@@ -1,5 +1,7 @@
 {
 	"instance" : {
+		"assertRenderingOfDivApplying:equals:" : "GabrielOmarCotelli 9/27/2017 11:46",
+		"testBootstrapClassificationCommandBuilder" : "GabrielOmarCotelli 9/27/2017 11:50",
 		"testIsNullCommand" : "GabrielOmarCotelli 4/27/2017 12:04"
 	},
 	"class" : { }

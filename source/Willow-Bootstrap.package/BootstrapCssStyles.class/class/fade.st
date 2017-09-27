@@ -1,0 +1,4 @@
+Accessing
+fade
+
+	^ 'fade'

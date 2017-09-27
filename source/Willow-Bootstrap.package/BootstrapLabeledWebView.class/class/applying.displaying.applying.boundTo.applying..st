@@ -2,8 +2,8 @@ Instance Creation
 applying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField
 
 	^ self new
-		initializeApplying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles formGroup) + aCommandToContainer
+		initializeApplying: [ :container | container addClass bootstrap formGroup + aCommandToContainer ] asWebComponentCommand
 		displaying: thePhrasingContent
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles controlLabel) + aCommandToLabel
+		applying: [ :label | label addClass bootstrap controlLabel + aCommandToLabel ] asWebComponentCommand
 		boundTo: aFieldWebView
-		applying: aCommandToField
+		applying: aCommandToField asWebComponentCommand

@@ -6,7 +6,7 @@ testRenderContentOnWithCommands
 	html := self
 		render:
 			(BootstrapDatePickerWebView
-				wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: CompositeComponentCommand empty)
+				wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])
 				applying:
 					(BootstrapDatepickerCommand
 						configuredBy: [ :datepicker | 

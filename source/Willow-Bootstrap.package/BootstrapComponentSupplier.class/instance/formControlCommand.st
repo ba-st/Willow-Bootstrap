@@ -1,4 +1,0 @@
-private
-formControlCommand
-
-	^ ComponentClassificationCommand toStyleWith: BootstrapCssStyles formControl

@@ -5,7 +5,7 @@ testDismissible
 
 	notification := BootstrapNotificationBuilder new
 		dismissibleWrapping: '';
-		buildApplying: CompositeComponentCommand empty.
+		buildApplying:  [ :container |  ].
 
 	html := self render: notification.
 

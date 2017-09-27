@@ -4,7 +4,7 @@ testRenderContentOn
 	| button html |
 
 	button := BootstrapComponentSupplier online splitButtonDropdownBuilder
-		labeled: 'Dropdown' applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonDanger);
+		labeled: 'Dropdown' applying: [ :dropdownButton | dropdownButton addClass bootstrap buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
 		build.
 

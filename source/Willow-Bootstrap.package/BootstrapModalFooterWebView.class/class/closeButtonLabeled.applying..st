@@ -4,5 +4,4 @@ closeButtonLabeled: aRenderable applying: aComponentCommand
 	^ AsynchronicButtonWebView
 		labeled: aRenderable
 		applying:
-			(ComponentClassificationCommand toStyleWith: BootstrapCssStyles button)
-				+ (ComponentMetadataCommand toDeclare: BootstrapConstants dismiss with: BootstrapConstants modal) + aComponentCommand
+			[ :button :constants | button addClass bootstrap button + (button setData: constants bootstrap dismiss to: constants bootstrap modal) + aComponentCommand ]
