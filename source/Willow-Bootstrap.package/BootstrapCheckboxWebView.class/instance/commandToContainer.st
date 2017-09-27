@@ -1,5 +1,4 @@
 accessing - private
 commandToContainer
 
-	^ (ComponentClassificationCommand toStyleWith: BootstrapCssStyles checkbox)
-		+ commandToComponent
+	^ [ :container | container addClass bootstrap checkbox + commandToComponent ] asWebComponentCommand

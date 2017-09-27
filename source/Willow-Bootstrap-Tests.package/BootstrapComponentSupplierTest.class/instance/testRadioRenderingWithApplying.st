@@ -4,9 +4,7 @@ testRadioRenderingWithApplying
 	| supplier radio html |
 
 	supplier := BootstrapComponentSupplier online.
-	radio := supplier
-		radioRenderingWith: #asUppercase
-		applying: (ComponentClassificationCommand toStyleWith: WillowCssStyles willow).
+	radio := supplier radioRenderingWith: #asUppercase applying: [ :theRadio | theRadio addClass willow ].
 
 	html := self render: radio.
 	self assert: html isEmpty.

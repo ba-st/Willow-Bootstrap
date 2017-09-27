@@ -5,7 +5,7 @@ testInformational
 
 	notification := BootstrapNotificationBuilder new
 		informational;
-		buildApplying: CompositeComponentCommand empty.
+		buildApplying: [ :container |  ].
 
 	html := self render: notification.
 

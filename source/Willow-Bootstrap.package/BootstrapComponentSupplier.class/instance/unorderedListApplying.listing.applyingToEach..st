@@ -2,6 +2,6 @@ Supplying
 unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem
 
 	^ UnorderedListWebView
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles listGroup) + aCommandToList
+		applying: [ :list | list addClass bootstrap listGroup + aCommandToList ]
 		listing: aCollection
-		applyingToEach: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles listGroupItem) + aCommandToItem
+		applyingToEach: [ :listItem | listItem addClass bootstrap listGroupItem + aCommandToItem ]

@@ -3,8 +3,7 @@ testRenderContentOn
 
 	| html |
 
-	html := self
-		render: (BootstrapDatePickerWebView wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: CompositeComponentCommand empty)).
+	html := self render: (BootstrapDatePickerWebView wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])).
 
 	self
 		assert: html

@@ -5,4 +5,4 @@ wrapping: aTextFieldWebView between: aWebViewToPrepend and: aWebViewToAppend app
 		initializeWrapping: aTextFieldWebView
 		between: aWebViewToPrepend
 		and: aWebViewToAppend
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles inputGroup) + aComponentCommand
+		applying: [ :group | group addClass bootstrap inputGroup + aComponentCommand ] asWebComponentCommand

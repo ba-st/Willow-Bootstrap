@@ -5,7 +5,7 @@ testRenderingBasicExample
 
 	panel := supplier panelBuilder
 		wrapping: 'Basic panel example';
-		buildApplying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles panelDefault).
+		buildApplying: [ :container | container addClass bootstrap panelDefault ].
 
 	html := self render: panel.
 

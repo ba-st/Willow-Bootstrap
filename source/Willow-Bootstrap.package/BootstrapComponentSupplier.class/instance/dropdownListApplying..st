@@ -1,4 +1,4 @@
 Supplying
 dropdownListApplying: aComponentCommand
 
-	^ DropDownListWebView applying: self formControlCommand + aComponentCommand + BootstrapSelectCommand new
+	^ DropDownListWebView applying: [ :field | field addClass bootstrap formControl + aComponentCommand + BootstrapSelectCommand new ]

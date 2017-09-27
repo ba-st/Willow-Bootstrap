@@ -1,4 +1,4 @@
 support
 newSingleSelectionView
 
-	^ BootstrapRadioWebView renderingWith: #yourself applying: CompositeComponentCommand empty
+	^ BootstrapRadioWebView renderingWith: #yourself applying: [ :radio |  ]

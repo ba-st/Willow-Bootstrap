@@ -3,5 +3,5 @@ initialize
 
 	super initialize.
 	self informational.
-	dismissCommand := CompositeComponentCommand empty.
+	dismissCommand := [ :container |  ] asWebComponentCommand.
 	content := ''

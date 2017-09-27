@@ -5,4 +5,4 @@ initializeWithHeader: aBootstrapModalHeader content: aBodyView footer: aBootstra
 	footer := aBootstrapModalFooter.
 	dialog := GenericContainerWebView
 		wrapping: (self documentWrapping: (self contentWrapping: aBodyView) applying: aModalDocumentCommand)
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles modal) + DisableComponentTabCycleCommand new + (ComponentAttributeCommand named: 'role' with: BootstrapConstants dialog) + aDialogCommand
+		applying: [ :container :constants | container addClass bootstrap modal + container disableTabCycle + (container setAttribute: 'role' to: constants bootstrap dialog) + aDialogCommand ]

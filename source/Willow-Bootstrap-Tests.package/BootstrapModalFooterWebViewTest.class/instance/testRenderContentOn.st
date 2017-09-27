@@ -3,9 +3,7 @@ testRenderContentOn
 
 	| footer html |
 
-	footer := BootstrapModalFooterWebView
-		withCloseButtonLabeled: 'Close'
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink).
+	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Close' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ].
 
 	html := self render: footer.
 

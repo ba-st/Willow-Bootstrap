@@ -5,7 +5,7 @@ testDanger
 
 	notification := BootstrapNotificationBuilder new
 		danger;
-		buildApplying: CompositeComponentCommand empty.
+		buildApplying: [ :container |  ].
 
 	html := self render: notification.
 

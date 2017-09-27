@@ -5,5 +5,5 @@ withHeader: aBootstrapModalHeader content: aBodyView footer: aBootstrapModalFoot
 		withHeader: aBootstrapModalHeader
 		content: aBodyView
 		footer: aBootstrapModalFooter
-		applyingToDialog: CompositeComponentCommand empty
-		andModalDocument: CompositeComponentCommand empty
+		applyingToDialog: [ :dialog |  ]
+		andModalDocument: [ :document |  ]

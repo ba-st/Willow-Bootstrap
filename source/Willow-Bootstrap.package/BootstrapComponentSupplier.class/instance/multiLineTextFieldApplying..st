@@ -1,4 +1,4 @@
 Supplying
 multiLineTextFieldApplying: aComponentCommand
 
-	^ TextFieldWebView multiLineTriggeringOnChangeApplying: self formControlCommand + aComponentCommand
+	^ TextFieldWebView multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap formControl + aComponentCommand ]

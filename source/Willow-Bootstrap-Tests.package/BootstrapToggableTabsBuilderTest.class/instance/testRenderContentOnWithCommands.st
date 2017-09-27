@@ -6,7 +6,7 @@ testRenderContentOnWithCommands
 	tabs := supplier tabsBuilder
 		addTabHeadedBy: 'Home' containing: 'The home page';
 		addTabHeadedBy: 'Profile' containing: [ :canvas | canvas strong: 'This is my profile.' ];
-		buildApplying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles navStacked).
+		buildApplying: [ :container | container addClass bootstrap navStacked ].
 
 	html := self render: tabs.
 

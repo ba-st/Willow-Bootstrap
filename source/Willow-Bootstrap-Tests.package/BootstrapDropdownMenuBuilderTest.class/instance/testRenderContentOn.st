@@ -7,7 +7,7 @@ testRenderContentOn
 		labeled: 'Dropdown';
 		addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
 		addDivider;
-		addActionLabeled: 'Another action' executing: [ :button | button onTrigger disable ] applying: (ComponentClassificationCommand toStyleWith: WillowCssStyles willow);
+		addActionLabeled: 'Another action' executing: [ :button | button onTrigger disable ] applying: [ :button | button addClass willow ];
 		build.
 
 	html := self render: menu.

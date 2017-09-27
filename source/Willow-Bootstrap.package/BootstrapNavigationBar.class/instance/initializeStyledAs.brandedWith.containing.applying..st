@@ -3,12 +3,5 @@ initializeStyledAs: aContainerClass brandedWith: aBrandWebView containing: aWebV
 
 	containerClass := aContainerClass.
 	componentCommand := aCommandToComponent.
-	navbarContent := IdentifiedWebView
-		forDivNamed: 'navbar-content'
-		containing: aWebView
-		applying:
-			(ComponentClassificationCommand
-				toStyleWithAll:
-					{BootstrapCssStyles collapse.
-					BootstrapCssStyles navbarCollapse}).
+	navbarContent := IdentifiedWebView forDivNamed: 'navbar-content' containing: aWebView applying: [ :div | div addClass bootstrap collapse + div addClass bootstrap navbarCollapse ].
 	brandView := aBrandWebView

@@ -8,8 +8,4 @@ initializeWrapping: aTextField applying: aComponentCommand
 			canvas div
 				class: BootstrapCssStyles inputGroupAddon;
 				with: [ canvas small: (BootstrapIconWebView representing: Glyphicons triangleBottom) ] ]
-		applying:
-			(ComponentClassificationCommand
-				toStyleWithAll:
-					{BootstrapCssStyles inputGroup.
-					BootstrapDatepickerConstants date}) + BootstrapDatepickerCommand new + aComponentCommand
+		applying: [ :div | div addClass bootstrap inputGroup + div addClass bootstrap date + BootstrapDatepickerCommand new + aComponentCommand ]

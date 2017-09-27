@@ -5,7 +5,7 @@ testWarning
 
 	notification := BootstrapNotificationBuilder new
 		warning;
-		buildApplying: CompositeComponentCommand empty.
+		buildApplying: [ :container |  ].
 
 	html := self render: notification.
 

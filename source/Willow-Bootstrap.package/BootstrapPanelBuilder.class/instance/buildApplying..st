@@ -7,4 +7,4 @@ buildApplying: aCommandToPanel
 			self renderBodyOn: canvas.
 			self renderTableOrListGroupOn: canvas.
 			self renderFooterOn: canvas ]
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles panel) + aCommandToPanel
+		applying: [ :panel | panel addClass bootstrap panel + aCommandToPanel ]

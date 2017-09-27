@@ -6,4 +6,4 @@ labeled: aRenderable applying: aComponentCommand
 			asynchronicButtonLabeled: [ :canvas | 
 				canvas render: aRenderable.
 				self renderCaretOn: canvas ]
-			applying: self dropdownButtonCommand + aComponentCommand)
+			applying: [ :button :constants | (self dropdownCommandFor: button using: constants) + aComponentCommand ])

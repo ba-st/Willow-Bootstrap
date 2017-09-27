@@ -6,7 +6,7 @@ testRenderContentOn
 	tabs := supplier pillsBuilder
 		addPillHeadedBy: 'Home' containing: 'The home page';
 		addPillHeadedBy: 'Profile' containing: [ :canvas | canvas strong: 'This is my profile.' ];
-		buildApplying: CompositeComponentCommand empty.
+		buildApplying: [ :pills |  ].
 
 	html := self render: tabs.
 

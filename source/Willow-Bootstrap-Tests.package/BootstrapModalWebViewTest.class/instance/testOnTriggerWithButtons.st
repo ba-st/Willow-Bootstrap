@@ -7,10 +7,7 @@ testOnTriggerWithButtons
 		containing:
 			{self agreeButton.
 			self takeMySoulButton}
-		andCloseButton:
-			(BootstrapModalFooterWebView
-				closeButtonLabeled: 'Disagree'
-				applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonLink)).
+		andCloseButton: (BootstrapModalFooterWebView closeButtonLabeled: 'Disagree' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ]).
 	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.
 	dialog := BootstrapModalWebView withHeader: header content: 'Some very large legal stuff. ;)' footer: footer.
 

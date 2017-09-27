@@ -3,9 +3,7 @@ testRenderingWithApplying
 
 	| radioGroup html |
 
-	radioGroup := BootstrapRadioWebView
-		renderingWith: [ :element | element asUppercase ]
-		applying: (ComponentClassificationCommand toStyleWith: WillowCssStyles disabledComponent).
+	radioGroup := BootstrapRadioWebView renderingWith: [ :element | element asUppercase ] applying: [ :radio | radio addClass disabledComponent ].
 
 	radioGroup allowAnyOf: #($a $b).
 	html := self render: radioGroup.

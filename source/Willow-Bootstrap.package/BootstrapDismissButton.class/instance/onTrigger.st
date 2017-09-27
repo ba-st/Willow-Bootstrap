@@ -1,4 +1,4 @@
 configuring
 onTrigger
 
-	^ button onTrigger
+	^ dismissButton onTrigger

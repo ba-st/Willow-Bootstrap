@@ -4,11 +4,10 @@ testRenderContentOn
 	| inputGroup html |
 
 	inputGroup := BootstrapInputGroupWebView
-		wrapping: (supplier singleLineTextFieldApplying: CompositeComponentCommand empty)
+		wrapping: (supplier singleLineTextFieldApplying: [ :field |  ])
 		between: (supplier inputGroupAddOnWrapping: 'http://')
-		and:
-			(supplier inputGroupButtonWrapping: (supplier synchronicButtonLabeled: 'Go!' applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles buttonDefault) evaluating: [  ]))
-		applying: CompositeComponentCommand empty.
+		and: (supplier inputGroupButtonWrapping: (supplier synchronicButtonLabeled: 'Go!' applying: [ :button | button addClass bootstrap buttonDefault ] evaluating: [  ]))
+		applying: [ :group |  ].
 
 	html := self render: inputGroup.
 

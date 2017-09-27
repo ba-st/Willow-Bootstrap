@@ -3,9 +3,7 @@ testRepresentingApplying
 
 	| icon html |
 
-	icon := BootstrapIconWebView
-		representing: Glyphicons menuUp
-		applying: (ComponentMetadataCommand toDeclare: BootstrapConstants dismiss with: true).
+	icon := BootstrapIconWebView representing: Glyphicons menuUp applying: [ :span :constants | span setData: constants bootstrap dismiss to: true ].
 
 	html := self render: icon.
 

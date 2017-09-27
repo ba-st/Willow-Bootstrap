@@ -4,11 +4,11 @@ testRenderContentOnWithContainerCommand
 	| labeledView html |
 
 	labeledView := BootstrapLabeledWebView
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles formGroupLarge)
+		applying: [ :container | container addClass bootstrap formGroupLarge ]
 		displaying: 'E-Mail'
-		applying: CompositeComponentCommand empty
-		boundTo: (supplier singleLineTextFieldApplying: CompositeComponentCommand empty)
-		applying: CompositeComponentCommand empty.
+		applying: [ :label |  ]
+		boundTo: (supplier singleLineTextFieldApplying: [ :field |  ])
+		applying: [ :fieldContainer |  ].
 
 	html := self render: labeledView.
 

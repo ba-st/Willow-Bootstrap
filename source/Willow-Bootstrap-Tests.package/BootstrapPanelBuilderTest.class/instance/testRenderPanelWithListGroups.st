@@ -3,16 +3,13 @@ testRenderPanelWithListGroups
 
 	| panel html listGroup |
 
-	listGroup := supplier
-		unorderedListApplying: CompositeComponentCommand empty
-		listing: #(1 2)
-		applyingToEach: CompositeComponentCommand empty.
+	listGroup := supplier unorderedListApplying: [ :list |  ] listing: #(1 2) applyingToEach: [ :listItem |  ].
 
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel heading';
 		wrapping: 'Panel content.';
 		withListGroup: listGroup;
-		buildApplying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles panelDefault).
+		buildApplying: [ :container | container addClass bootstrap panelDefault ].
 
 	html := self render: panel.
 

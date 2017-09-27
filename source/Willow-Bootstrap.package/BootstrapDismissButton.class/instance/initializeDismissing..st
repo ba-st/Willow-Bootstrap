@@ -1,8 +1,6 @@
 initialization
 initializeDismissing: aContainerType
 
-	button := AsynchronicButtonWebView
-		labeled: (PhrasingContainerWebView wrapping: '×' applying: (ComponentAccessibilityEnrichmentCommand toDeclare: 'hidden' with: 'true'))
-		applying:
-			(ComponentClassificationCommand toStyleWith: BootstrapCssStyles close) + (ComponentMetadataCommand toDeclare: BootstrapConstants dismiss with: aContainerType)
-				+ (ComponentAccessibilityEnrichmentCommand toDeclare: 'label' with: 'Close')
+	dismissButton := AsynchronicButtonWebView
+		labeled: (PhrasingContainerWebView wrapping: '×' applying: [ :span | span setARIAAttribute: 'hidden' to: 'true' ])
+		applying: [ :button :constants | button addClass bootstrap close + (button setData: constants bootstrap dismiss to: aContainerType) + (button setARIAAttribute: 'label' to: 'Close') ]

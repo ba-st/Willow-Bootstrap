@@ -8,4 +8,4 @@ contentWrapping: aBodyView
 				class: BootstrapCssStyles modalBody;
 				with: aBodyView.
 			canvas render: footer ]
-		applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles modalContent)
+		applying: [ :container | container addClass bootstrap modalContent ]

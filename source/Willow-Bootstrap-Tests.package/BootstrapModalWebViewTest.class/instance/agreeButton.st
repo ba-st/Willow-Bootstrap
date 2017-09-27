@@ -1,10 +1,4 @@
 private
 agreeButton
 
-	^ AsynchronicButtonWebView
-		labeled: 'Agree'
-		applying:
-			(ComponentClassificationCommand
-				toStyleWithAll:
-					{BootstrapCssStyles button.
-					BootstrapCssStyles buttonDefault})
+	^ AsynchronicButtonWebView labeled: 'Agree' applying: [ :button | button addClass bootstrap button + button addClass bootstrap buttonDefault ]

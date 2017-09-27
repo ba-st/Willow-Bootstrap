@@ -8,4 +8,4 @@ dismissibleWrapping: aRenderable
 	canvas
 		render: button;
 		render: aRenderable ].
-	dismissCommand := ComponentClassificationCommand toStyleWith: BootstrapCssStyles alertDismissible
+	dismissCommand := [ :container | container addClass bootstrap alertDismissible ]

@@ -3,10 +3,7 @@ testRenderContentOn
 
 	| navigationBar html |
 
-	navigationBar := BootstrapNavigationBar
-		fluidBrandedWith: (AsynchronicAnchorWebView labeled: 'Willow' applying: (ComponentClassificationCommand toStyleWith: BootstrapCssStyles navbarBrand))
-		containing: ''
-		applying: CompositeComponentCommand empty.
+	navigationBar := BootstrapNavigationBar fluidBrandedWith: (AsynchronicAnchorWebView labeled: 'Willow' applying: [ :anchor | anchor addClass bootstrap navbarBrand ]) containing: '' applying: [ :nav |  ].
 
 	html := self render: navigationBar.
 
