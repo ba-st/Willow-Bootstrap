@@ -1,0 +1,4 @@
+Configuring
+beSelfCleaning
+
+	self applyingToDialog: BootstrapSelfCleaningModalCommand new
