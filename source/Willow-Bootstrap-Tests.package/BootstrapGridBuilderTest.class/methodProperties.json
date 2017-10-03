@@ -1,0 +1,12 @@
+{
+	"instance" : {
+		"testForSmallDevices" : "GabrielOmarCotelli 10/3/2017 12:43",
+		"testForExtraSmallDevices" : "GabrielOmarCotelli 10/3/2017 12:38",
+		"testEvenlyDistributed" : "GabrielOmarCotelli 10/3/2017 12:23",
+		"testApplyingRowCommand" : "GabrielOmarCotelli 10/3/2017 12:22",
+		"testWithCustomColumnWidths" : "GabrielOmarCotelli 10/3/2017 12:33",
+		"testForLargeDevices" : "GabrielOmarCotelli 10/3/2017 12:39",
+		"testApplyingCellCommand" : "GabrielOmarCotelli 10/3/2017 12:27"
+	},
+	"class" : { }
+}
