@@ -1,15 +1,15 @@
 tests
 testOnTriggerWithButtons
 
-	| html footer header dialog |
+	| html dialog |
 
-	footer := BootstrapModalFooterWebView
-		containing:
-			{self agreeButton.
-			self takeMySoulButton}
-		andCloseButton: (BootstrapModalFooterWebView closeButtonLabeled: 'Disagree' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ]).
-	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.
-	dialog := BootstrapModalWebView withHeader: header content: 'Some very large legal stuff. ;)' footer: footer.
+	dialog := BootstrapComponentSupplier online dialogBuilder
+		headerTitled: 'Terms and Conditions';
+		wrapping: 'Some very large legal stuff. ;)';
+		closeButtonLabeled: 'Disagree' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
+		addFooterButton: self agreeButton;
+		addFooterButton: self takeMySoulButton;
+		build.
 
 	dialog onTrigger disable.
 

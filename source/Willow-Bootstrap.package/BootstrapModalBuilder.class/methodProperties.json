@@ -1,0 +1,14 @@
+{
+	"instance" : {
+		"addFooterButton:" : "GabrielOmarCotelli 10/3/2017 17:32",
+		"buildApplying:" : "GabrielOmarCotelli 10/3/2017 17:19",
+		"headerTitled:" : "GabrielOmarCotelli 10/3/2017 17:14",
+		"initialize" : "GabrielOmarCotelli 10/3/2017 17:18",
+		"dismissableHeaderTitled:" : "GabrielOmarCotelli 10/3/2017 17:26",
+		"closeButtonLabeled:applying:" : "GabrielOmarCotelli 10/3/2017 17:15",
+		"applyingToDialog:" : "GabrielOmarCotelli 10/3/2017 17:21",
+		"wrapping:" : "GabrielOmarCotelli 10/3/2017 17:14",
+		"beSelfCleaning" : "GabrielOmarCotelli 10/3/2017 17:33"
+	},
+	"class" : { }
+}
