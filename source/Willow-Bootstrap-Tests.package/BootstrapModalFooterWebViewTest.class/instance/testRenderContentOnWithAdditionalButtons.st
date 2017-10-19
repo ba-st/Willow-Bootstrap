@@ -7,4 +7,6 @@ testRenderContentOnWithAdditionalButtons
 
 	html := self render: footer.
 
-	self assert: html equals: '<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary" type="button">Accept</button></div>'
+	self
+		assert: html
+		equals: '<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button><button id="button-id1" class="btn btn-primary" type="button">Accept</button></div>'

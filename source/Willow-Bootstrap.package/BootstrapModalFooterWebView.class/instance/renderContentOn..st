@@ -4,4 +4,7 @@ renderContentOn: aCanvas
 	aCanvas div
 		class: BootstrapCssStyles modalFooter;
 		with: [ aCanvas render: closeButton.
-			buttons do: [ :button | aCanvas render: button ] ]
+			buttons
+				do: [ :button | 
+					button identifyIn: aCanvas.
+					aCanvas render: button ] ]
