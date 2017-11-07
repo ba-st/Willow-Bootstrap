@@ -7,7 +7,7 @@ jswillowbootstrapJsContent
 			(self
 				javascriptContentFrom: [ :script | 
 					| bootstrap |
-
+					self replaceTooltipDestroyFunctionIn: script.
 					bootstrap := script willow bootstrap.
 					bootstrap
 						assign:

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 modalLarge
 
-	^ self commmandStyledWith: styleProviderBinding content modalLarge
+	^ self commandStyledWith: styleProviderBinding content modalLarge

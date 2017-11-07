@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 labelSuccess
 
-	^ self commmandStyledWith: styleProviderBinding content labelSuccess
+	^ self commandStyledWith: styleProviderBinding content labelSuccess

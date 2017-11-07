@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 tableResponsive
 
-	^ self commmandStyledWith: styleProviderBinding content tableResponsive
+	^ self commandStyledWith: styleProviderBinding content tableResponsive

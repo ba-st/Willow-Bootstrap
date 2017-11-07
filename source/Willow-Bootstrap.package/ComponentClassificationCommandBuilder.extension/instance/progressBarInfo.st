@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 progressBarInfo
 
-	^ self commmandStyledWith: styleProviderBinding content progressBarInfo
+	^ self commandStyledWith: styleProviderBinding content progressBarInfo

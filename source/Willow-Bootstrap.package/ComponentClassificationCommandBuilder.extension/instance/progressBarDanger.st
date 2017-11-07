@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 progressBarDanger
 
-	^ self commmandStyledWith: styleProviderBinding content progressBarDanger
+	^ self commandStyledWith: styleProviderBinding content progressBarDanger

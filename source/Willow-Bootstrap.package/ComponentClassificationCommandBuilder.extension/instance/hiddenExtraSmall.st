@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 hiddenExtraSmall
 
-	^ self commmandStyledWith: styleProviderBinding content hiddenExtraSmall
+	^ self commandStyledWith: styleProviderBinding content hiddenExtraSmall

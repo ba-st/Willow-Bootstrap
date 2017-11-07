@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 modalBackdrop
 
-	^ self commmandStyledWith: styleProviderBinding content modalBackdrop
+	^ self commandStyledWith: styleProviderBinding content modalBackdrop

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 caret
 
-	^ self commmandStyledWith: styleProviderBinding content caret
+	^ self commandStyledWith: styleProviderBinding content caret

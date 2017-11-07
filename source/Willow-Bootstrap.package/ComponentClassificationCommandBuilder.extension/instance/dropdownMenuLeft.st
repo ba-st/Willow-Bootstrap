@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 dropdownMenuLeft
 
-	^ self commmandStyledWith: styleProviderBinding content dropdownMenuLeft
+	^ self commandStyledWith: styleProviderBinding content dropdownMenuLeft

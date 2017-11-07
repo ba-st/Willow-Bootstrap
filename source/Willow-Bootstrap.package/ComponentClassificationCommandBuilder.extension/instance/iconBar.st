@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 iconBar
 
-	^ self commmandStyledWith: styleProviderBinding content iconBar
+	^ self commandStyledWith: styleProviderBinding content iconBar

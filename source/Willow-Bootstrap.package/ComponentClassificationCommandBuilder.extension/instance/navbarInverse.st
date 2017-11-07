@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navbarInverse
 
-	^ self commmandStyledWith: styleProviderBinding content navbarInverse
+	^ self commandStyledWith: styleProviderBinding content navbarInverse

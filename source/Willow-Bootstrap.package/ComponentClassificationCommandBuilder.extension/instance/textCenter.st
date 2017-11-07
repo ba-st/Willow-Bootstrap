@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textCenter
 
-	^ self commmandStyledWith: styleProviderBinding content textCenter
+	^ self commandStyledWith: styleProviderBinding content textCenter

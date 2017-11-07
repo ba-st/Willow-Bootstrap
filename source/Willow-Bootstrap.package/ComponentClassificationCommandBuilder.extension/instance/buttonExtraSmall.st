@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 buttonExtraSmall
 
-	^ self commmandStyledWith: styleProviderBinding content buttonExtraSmall
+	^ self commandStyledWith: styleProviderBinding content buttonExtraSmall

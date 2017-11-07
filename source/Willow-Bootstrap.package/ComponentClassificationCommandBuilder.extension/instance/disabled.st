@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 disabled
 
-	^ self commmandStyledWith: styleProviderBinding content disabled
+	^ self commandStyledWith: styleProviderBinding content disabled

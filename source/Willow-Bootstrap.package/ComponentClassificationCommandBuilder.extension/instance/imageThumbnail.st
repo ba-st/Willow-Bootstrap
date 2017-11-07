@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 imageThumbnail
 
-	^ self commmandStyledWith: styleProviderBinding content imageThumbnail
+	^ self commandStyledWith: styleProviderBinding content imageThumbnail

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 hasError
 
-	^ self commmandStyledWith: styleProviderBinding content hasError
+	^ self commandStyledWith: styleProviderBinding content hasError

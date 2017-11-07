@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 progressBarWarning
 
-	^ self commmandStyledWith: styleProviderBinding content progressBarWarning
+	^ self commandStyledWith: styleProviderBinding content progressBarWarning

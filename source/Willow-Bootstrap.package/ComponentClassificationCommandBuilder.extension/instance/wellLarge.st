@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 wellLarge
 
-	^ self commmandStyledWith: styleProviderBinding content wellLarge
+	^ self commandStyledWith: styleProviderBinding content wellLarge

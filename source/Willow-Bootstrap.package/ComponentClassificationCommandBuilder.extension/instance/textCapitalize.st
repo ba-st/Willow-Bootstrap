@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textCapitalize
 
-	^ self commmandStyledWith: styleProviderBinding content textCapitalize
+	^ self commandStyledWith: styleProviderBinding content textCapitalize

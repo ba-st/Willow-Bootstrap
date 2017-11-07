@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textLowercase
 
-	^ self commmandStyledWith: styleProviderBinding content textLowercase
+	^ self commandStyledWith: styleProviderBinding content textLowercase

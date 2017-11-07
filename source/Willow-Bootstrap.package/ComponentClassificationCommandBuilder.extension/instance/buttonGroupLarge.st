@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 buttonGroupLarge
 
-	^ self commmandStyledWith: styleProviderBinding content buttonGroupLarge
+	^ self commandStyledWith: styleProviderBinding content buttonGroupLarge

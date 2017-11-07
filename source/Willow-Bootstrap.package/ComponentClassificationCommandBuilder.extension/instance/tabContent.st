@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 tabContent
 
-	^ self commmandStyledWith: styleProviderBinding content tabContent
+	^ self commandStyledWith: styleProviderBinding content tabContent

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 dropdownBackdrop
 
-	^ self commmandStyledWith: styleProviderBinding content dropdownBackdrop
+	^ self commandStyledWith: styleProviderBinding content dropdownBackdrop

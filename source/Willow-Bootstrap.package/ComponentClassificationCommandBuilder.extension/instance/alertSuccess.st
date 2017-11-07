@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 alertSuccess
 
-	^ self commmandStyledWith: styleProviderBinding content alertSuccess
+	^ self commandStyledWith: styleProviderBinding content alertSuccess

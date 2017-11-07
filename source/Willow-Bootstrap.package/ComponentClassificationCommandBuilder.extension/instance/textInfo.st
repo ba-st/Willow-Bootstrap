@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textInfo
 
-	^ self commmandStyledWith: styleProviderBinding content textInfo
+	^ self commandStyledWith: styleProviderBinding content textInfo

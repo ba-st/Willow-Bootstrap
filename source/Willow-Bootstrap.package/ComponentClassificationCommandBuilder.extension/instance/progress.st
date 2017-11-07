@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 progress
 
-	^ self commmandStyledWith: styleProviderBinding content progress
+	^ self commandStyledWith: styleProviderBinding content progress

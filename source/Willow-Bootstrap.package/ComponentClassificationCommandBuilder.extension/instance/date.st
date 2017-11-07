@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 date
 
-	^ self commmandStyledWith: styleProviderBinding content date
+	^ self commandStyledWith: styleProviderBinding content date

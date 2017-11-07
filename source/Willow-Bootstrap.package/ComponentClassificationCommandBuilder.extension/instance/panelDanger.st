@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 panelDanger
 
-	^ self commmandStyledWith: styleProviderBinding content panelDanger
+	^ self commandStyledWith: styleProviderBinding content panelDanger

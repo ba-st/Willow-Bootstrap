@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 inputGroupLarge
 
-	^ self commmandStyledWith: styleProviderBinding content inputGroupLarge
+	^ self commandStyledWith: styleProviderBinding content inputGroupLarge

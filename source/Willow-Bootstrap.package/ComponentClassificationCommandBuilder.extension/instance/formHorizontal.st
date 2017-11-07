@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 formHorizontal
 
-	^ self commmandStyledWith: styleProviderBinding content formHorizontal
+	^ self commandStyledWith: styleProviderBinding content formHorizontal

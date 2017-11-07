@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 panel
 
-	^ self commmandStyledWith: styleProviderBinding content panel
+	^ self commandStyledWith: styleProviderBinding content panel

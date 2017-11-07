@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 tooltipArrow
 
-	^ self commmandStyledWith: styleProviderBinding content tooltipArrow
+	^ self commandStyledWith: styleProviderBinding content tooltipArrow

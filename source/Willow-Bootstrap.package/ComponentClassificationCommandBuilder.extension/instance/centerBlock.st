@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 centerBlock
 
-	^ self commmandStyledWith: styleProviderBinding content centerBlock
+	^ self commandStyledWith: styleProviderBinding content centerBlock

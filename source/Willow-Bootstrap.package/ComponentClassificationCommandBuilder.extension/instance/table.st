@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 table
 
-	^ self commmandStyledWith: styleProviderBinding content table
+	^ self commandStyledWith: styleProviderBinding content table

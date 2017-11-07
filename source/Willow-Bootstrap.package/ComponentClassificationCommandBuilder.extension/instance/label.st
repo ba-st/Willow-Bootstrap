@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 label
 
-	^ self commmandStyledWith: styleProviderBinding content label
+	^ self commandStyledWith: styleProviderBinding content label

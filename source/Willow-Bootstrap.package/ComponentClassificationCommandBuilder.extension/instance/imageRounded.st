@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 imageRounded
 
-	^ self commmandStyledWith: styleProviderBinding content imageRounded
+	^ self commandStyledWith: styleProviderBinding content imageRounded

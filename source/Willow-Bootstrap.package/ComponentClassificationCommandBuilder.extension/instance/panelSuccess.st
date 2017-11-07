@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 panelSuccess
 
-	^ self commmandStyledWith: styleProviderBinding content panelSuccess
+	^ self commandStyledWith: styleProviderBinding content panelSuccess

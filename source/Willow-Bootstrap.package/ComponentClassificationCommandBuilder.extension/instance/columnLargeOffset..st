@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 columnLargeOffset: count
 
-	^ self commmandStyledWith: ( styleProviderBinding content columnLargeOffset: count )
+	^ self commandStyledWith: ( styleProviderBinding content columnLargeOffset: count )

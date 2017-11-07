@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 divider
 
-	^ self commmandStyledWith: styleProviderBinding content divider
+	^ self commandStyledWith: styleProviderBinding content divider

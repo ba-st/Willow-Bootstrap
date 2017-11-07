@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textPrimary
 
-	^ self commmandStyledWith: styleProviderBinding content textPrimary
+	^ self commandStyledWith: styleProviderBinding content textPrimary

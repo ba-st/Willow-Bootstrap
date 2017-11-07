@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 buttonToolbar
 
-	^ self commmandStyledWith: styleProviderBinding content buttonToolbar
+	^ self commandStyledWith: styleProviderBinding content buttonToolbar

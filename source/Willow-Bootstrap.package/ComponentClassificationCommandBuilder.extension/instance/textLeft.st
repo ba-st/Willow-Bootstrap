@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textLeft
 
-	^ self commmandStyledWith: styleProviderBinding content textLeft
+	^ self commandStyledWith: styleProviderBinding content textLeft

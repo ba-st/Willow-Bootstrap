@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navbarLeft
 
-	^ self commmandStyledWith: styleProviderBinding content navbarLeft
+	^ self commandStyledWith: styleProviderBinding content navbarLeft

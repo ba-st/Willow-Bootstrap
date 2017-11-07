@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 radio
 
-	^ self commmandStyledWith: styleProviderBinding content radio
+	^ self commandStyledWith: styleProviderBinding content radio

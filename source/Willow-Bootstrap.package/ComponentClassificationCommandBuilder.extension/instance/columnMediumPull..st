@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 columnMediumPull: count
 
-	^ self commmandStyledWith: ( styleProviderBinding content columnMediumPull: count )
+	^ self commandStyledWith: ( styleProviderBinding content columnMediumPull: count )

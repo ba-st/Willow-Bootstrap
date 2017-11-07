@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 alertInfo
 
-	^ self commmandStyledWith: styleProviderBinding content alertInfo
+	^ self commandStyledWith: styleProviderBinding content alertInfo

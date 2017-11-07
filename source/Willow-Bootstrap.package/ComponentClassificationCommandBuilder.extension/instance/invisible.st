@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 invisible
 
-	^ self commmandStyledWith: styleProviderBinding content invisible
+	^ self commandStyledWith: styleProviderBinding content invisible

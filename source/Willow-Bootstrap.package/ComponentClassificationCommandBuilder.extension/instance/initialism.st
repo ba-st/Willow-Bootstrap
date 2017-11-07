@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 initialism
 
-	^ self commmandStyledWith: styleProviderBinding content initialism
+	^ self commandStyledWith: styleProviderBinding content initialism

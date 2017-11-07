@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 buttonLink
 
-	^ self commmandStyledWith: styleProviderBinding content buttonLink
+	^ self commandStyledWith: styleProviderBinding content buttonLink

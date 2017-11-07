@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 breadcrumb
 
-	^ self commmandStyledWith: styleProviderBinding content breadcrumb
+	^ self commandStyledWith: styleProviderBinding content breadcrumb

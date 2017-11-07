@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 visiblePrintBlock
 
-	^ self commmandStyledWith: styleProviderBinding content visiblePrintBlock
+	^ self commandStyledWith: styleProviderBinding content visiblePrintBlock

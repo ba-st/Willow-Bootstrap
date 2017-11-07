@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 formGroup
 
-	^ self commmandStyledWith: styleProviderBinding content formGroup
+	^ self commandStyledWith: styleProviderBinding content formGroup

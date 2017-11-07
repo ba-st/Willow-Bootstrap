@@ -1,8 +1,8 @@
 Accessing
 jswillowbootstrapJs
 
-	^WAFileLibraryResource
+	^ WAFileLibraryResource
 		filepath: 'js/willow-bootstrap.js'
-		mimeType: WAMimeType textJavascript 
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		mimeType: WAMimeType textJavascript
+		cacheDuration: self class defaultCacheDuration
 		contents: self jswillowbootstrapJsContent

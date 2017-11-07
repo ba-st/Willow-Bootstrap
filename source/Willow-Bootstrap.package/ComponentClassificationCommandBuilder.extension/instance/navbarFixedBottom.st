@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navbarFixedBottom
 
-	^ self commmandStyledWith: styleProviderBinding content navbarFixedBottom
+	^ self commandStyledWith: styleProviderBinding content navbarFixedBottom
