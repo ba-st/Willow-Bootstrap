@@ -33,4 +33,4 @@ Remember the docs are licensed under a CC Attribution-ShareAlike license.
 
 ### Useful References:
 
-- [W3c Css Home](http://www.w3.org/Style/CSS/)
+- [Bootstrap Documentation](https://getbootstrap.com/docs/3.3/)
