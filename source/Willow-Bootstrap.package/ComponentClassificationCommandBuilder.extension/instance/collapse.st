@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 collapse
 
-	^ self commmandStyledWith: styleProviderBinding content collapse
+	^ self commandStyledWith: styleProviderBinding content collapse

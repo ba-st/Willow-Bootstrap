@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navJustified
 
-	^ self commmandStyledWith: styleProviderBinding content navJustified
+	^ self commandStyledWith: styleProviderBinding content navJustified

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 columnSmallPush: count
 
-	^ self commmandStyledWith: ( styleProviderBinding content columnSmallPush: count )
+	^ self commandStyledWith: ( styleProviderBinding content columnSmallPush: count )

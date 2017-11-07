@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textNowrap
 
-	^ self commmandStyledWith: styleProviderBinding content textNowrap
+	^ self commandStyledWith: styleProviderBinding content textNowrap

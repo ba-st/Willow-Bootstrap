@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 labelDefault
 
-	^ self commmandStyledWith: styleProviderBinding content labelDefault
+	^ self commandStyledWith: styleProviderBinding content labelDefault

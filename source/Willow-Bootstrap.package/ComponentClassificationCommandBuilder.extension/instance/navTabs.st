@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navTabs
 
-	^ self commmandStyledWith: styleProviderBinding content navTabs
+	^ self commandStyledWith: styleProviderBinding content navTabs

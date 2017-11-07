@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 jumbotron
 
-	^ self commmandStyledWith: styleProviderBinding content jumbotron
+	^ self commandStyledWith: styleProviderBinding content jumbotron

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 next
 
-	^ self commmandStyledWith: styleProviderBinding content next
+	^ self commandStyledWith: styleProviderBinding content next

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 preScrollable
 
-	^ self commmandStyledWith: styleProviderBinding content preScrollable
+	^ self commandStyledWith: styleProviderBinding content preScrollable

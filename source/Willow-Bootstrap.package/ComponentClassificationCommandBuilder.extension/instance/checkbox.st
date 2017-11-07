@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 checkbox
 
-	^ self commmandStyledWith: styleProviderBinding content checkbox
+	^ self commandStyledWith: styleProviderBinding content checkbox

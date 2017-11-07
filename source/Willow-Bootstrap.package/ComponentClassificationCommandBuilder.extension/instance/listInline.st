@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 listInline
 
-	^ self commmandStyledWith: styleProviderBinding content listInline
+	^ self commandStyledWith: styleProviderBinding content listInline

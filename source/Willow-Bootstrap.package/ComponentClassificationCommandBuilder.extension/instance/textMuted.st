@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textMuted
 
-	^ self commmandStyledWith: styleProviderBinding content textMuted
+	^ self commandStyledWith: styleProviderBinding content textMuted

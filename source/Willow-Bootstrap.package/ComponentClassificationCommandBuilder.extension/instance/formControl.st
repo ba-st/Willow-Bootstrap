@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 formControl
 
-	^ self commmandStyledWith: styleProviderBinding content formControl
+	^ self commandStyledWith: styleProviderBinding content formControl

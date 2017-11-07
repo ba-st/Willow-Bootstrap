@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 backgroundDanger
 
-	^ self commmandStyledWith: styleProviderBinding content backgroundDanger
+	^ self commandStyledWith: styleProviderBinding content backgroundDanger

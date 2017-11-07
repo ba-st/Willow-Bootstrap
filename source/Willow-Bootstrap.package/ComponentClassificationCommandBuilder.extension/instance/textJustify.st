@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textJustify
 
-	^ self commmandStyledWith: styleProviderBinding content textJustify
+	^ self commandStyledWith: styleProviderBinding content textJustify

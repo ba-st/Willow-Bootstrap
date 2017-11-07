@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 formInline
 
-	^ self commmandStyledWith: styleProviderBinding content formInline
+	^ self commandStyledWith: styleProviderBinding content formInline

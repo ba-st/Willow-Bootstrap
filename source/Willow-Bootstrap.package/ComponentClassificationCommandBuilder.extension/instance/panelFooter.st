@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 panelFooter
 
-	^ self commmandStyledWith: styleProviderBinding content panelFooter
+	^ self commandStyledWith: styleProviderBinding content panelFooter

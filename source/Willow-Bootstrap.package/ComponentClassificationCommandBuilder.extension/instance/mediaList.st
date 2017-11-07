@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 mediaList
 
-	^ self commmandStyledWith: styleProviderBinding content mediaList
+	^ self commandStyledWith: styleProviderBinding content mediaList

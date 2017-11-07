@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 visibleLargeInline
 
-	^ self commmandStyledWith: styleProviderBinding content visibleLargeInline
+	^ self commandStyledWith: styleProviderBinding content visibleLargeInline

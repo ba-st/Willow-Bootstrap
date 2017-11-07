@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 panelWarning
 
-	^ self commmandStyledWith: styleProviderBinding content panelWarning
+	^ self commandStyledWith: styleProviderBinding content panelWarning

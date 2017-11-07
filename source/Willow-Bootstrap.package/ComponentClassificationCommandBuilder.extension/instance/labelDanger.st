@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 labelDanger
 
-	^ self commmandStyledWith: styleProviderBinding content labelDanger
+	^ self commandStyledWith: styleProviderBinding content labelDanger

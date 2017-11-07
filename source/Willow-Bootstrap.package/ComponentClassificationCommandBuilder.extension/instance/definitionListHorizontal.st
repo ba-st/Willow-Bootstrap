@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 definitionListHorizontal
 
-	^ self commmandStyledWith: styleProviderBinding content definitionListHorizontal
+	^ self commandStyledWith: styleProviderBinding content definitionListHorizontal

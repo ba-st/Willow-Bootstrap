@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 mediaRight
 
-	^ self commmandStyledWith: styleProviderBinding content mediaRight
+	^ self commandStyledWith: styleProviderBinding content mediaRight

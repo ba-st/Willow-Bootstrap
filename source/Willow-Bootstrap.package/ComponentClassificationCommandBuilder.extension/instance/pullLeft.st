@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 pullLeft
 
-	^ self commmandStyledWith: styleProviderBinding content pullLeft
+	^ self commandStyledWith: styleProviderBinding content pullLeft

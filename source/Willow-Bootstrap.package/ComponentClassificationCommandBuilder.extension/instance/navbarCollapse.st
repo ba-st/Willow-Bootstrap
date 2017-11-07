@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navbarCollapse
 
-	^ self commmandStyledWith: styleProviderBinding content navbarCollapse
+	^ self commandStyledWith: styleProviderBinding content navbarCollapse

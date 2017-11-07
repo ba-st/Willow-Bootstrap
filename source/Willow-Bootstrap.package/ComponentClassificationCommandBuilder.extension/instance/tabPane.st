@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 tabPane
 
-	^ self commmandStyledWith: styleProviderBinding content tabPane
+	^ self commandStyledWith: styleProviderBinding content tabPane

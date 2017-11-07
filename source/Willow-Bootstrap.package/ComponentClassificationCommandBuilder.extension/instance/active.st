@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 active
 
-	^ self commmandStyledWith: styleProviderBinding content active
+	^ self commandStyledWith: styleProviderBinding content active

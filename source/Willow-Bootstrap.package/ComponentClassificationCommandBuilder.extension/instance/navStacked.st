@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navStacked
 
-	^ self commmandStyledWith: styleProviderBinding content navStacked
+	^ self commandStyledWith: styleProviderBinding content navStacked

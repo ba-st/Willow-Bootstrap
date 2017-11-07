@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navbarStaticTop
 
-	^ self commmandStyledWith: styleProviderBinding content navbarStaticTop
+	^ self commandStyledWith: styleProviderBinding content navbarStaticTop

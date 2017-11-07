@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 glyphicon
 
-	^ self commmandStyledWith: styleProviderBinding content glyphicon
+	^ self commandStyledWith: styleProviderBinding content glyphicon

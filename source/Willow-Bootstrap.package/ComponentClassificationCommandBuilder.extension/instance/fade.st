@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 fade
 
-	^ self commmandStyledWith: styleProviderBinding content fade
+	^ self commandStyledWith: styleProviderBinding content fade

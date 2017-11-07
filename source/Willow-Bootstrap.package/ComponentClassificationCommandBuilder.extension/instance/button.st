@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 button
 
-	^ self commmandStyledWith: styleProviderBinding content button
+	^ self commandStyledWith: styleProviderBinding content button

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 imageResponsive
 
-	^ self commmandStyledWith: styleProviderBinding content imageResponsive
+	^ self commandStyledWith: styleProviderBinding content imageResponsive

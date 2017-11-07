@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 hiddenMedium
 
-	^ self commmandStyledWith: styleProviderBinding content hiddenMedium
+	^ self commandStyledWith: styleProviderBinding content hiddenMedium

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 tableHover
 
-	^ self commmandStyledWith: styleProviderBinding content tableHover
+	^ self commandStyledWith: styleProviderBinding content tableHover

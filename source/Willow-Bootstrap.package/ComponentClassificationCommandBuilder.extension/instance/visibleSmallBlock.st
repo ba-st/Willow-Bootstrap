@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 visibleSmallBlock
 
-	^ self commmandStyledWith: styleProviderBinding content visibleSmallBlock
+	^ self commandStyledWith: styleProviderBinding content visibleSmallBlock

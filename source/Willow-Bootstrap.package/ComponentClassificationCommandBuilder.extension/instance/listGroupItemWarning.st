@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 listGroupItemWarning
 
-	^ self commmandStyledWith: styleProviderBinding content listGroupItemWarning
+	^ self commandStyledWith: styleProviderBinding content listGroupItemWarning

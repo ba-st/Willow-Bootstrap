@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 dropup
 
-	^ self commmandStyledWith: styleProviderBinding content dropup
+	^ self commandStyledWith: styleProviderBinding content dropup

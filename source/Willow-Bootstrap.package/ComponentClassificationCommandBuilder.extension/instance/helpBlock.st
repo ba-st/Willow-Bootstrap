@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 helpBlock
 
-	^ self commmandStyledWith: styleProviderBinding content helpBlock
+	^ self commandStyledWith: styleProviderBinding content helpBlock

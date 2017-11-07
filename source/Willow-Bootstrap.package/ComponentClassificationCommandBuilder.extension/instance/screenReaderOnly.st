@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 screenReaderOnly
 
-	^ self commmandStyledWith: styleProviderBinding content screenReaderOnly
+	^ self commandStyledWith: styleProviderBinding content screenReaderOnly

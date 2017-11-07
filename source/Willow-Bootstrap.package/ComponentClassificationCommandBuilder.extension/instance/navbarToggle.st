@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 navbarToggle
 
-	^ self commmandStyledWith: styleProviderBinding content navbarToggle
+	^ self commandStyledWith: styleProviderBinding content navbarToggle

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 arrow
 
-	^ self commmandStyledWith: styleProviderBinding content arrow
+	^ self commandStyledWith: styleProviderBinding content arrow

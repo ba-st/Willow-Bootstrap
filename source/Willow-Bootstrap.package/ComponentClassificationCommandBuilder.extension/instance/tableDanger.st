@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 tableDanger
 
-	^ self commmandStyledWith: styleProviderBinding content tableDanger
+	^ self commandStyledWith: styleProviderBinding content tableDanger

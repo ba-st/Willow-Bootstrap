@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 visibleMediumBlock
 
-	^ self commmandStyledWith: styleProviderBinding content visibleMediumBlock
+	^ self commandStyledWith: styleProviderBinding content visibleMediumBlock

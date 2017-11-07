@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 hasFeedback
 
-	^ self commmandStyledWith: styleProviderBinding content hasFeedback
+	^ self commandStyledWith: styleProviderBinding content hasFeedback

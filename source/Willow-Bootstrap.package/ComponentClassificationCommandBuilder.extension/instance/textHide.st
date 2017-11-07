@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textHide
 
-	^ self commmandStyledWith: styleProviderBinding content textHide
+	^ self commandStyledWith: styleProviderBinding content textHide

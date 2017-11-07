@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 listGroupItemText
 
-	^ self commmandStyledWith: styleProviderBinding content listGroupItemText
+	^ self commandStyledWith: styleProviderBinding content listGroupItemText

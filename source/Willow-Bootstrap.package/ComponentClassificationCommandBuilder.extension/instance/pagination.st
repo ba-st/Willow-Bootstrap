@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 pagination
 
-	^ self commmandStyledWith: styleProviderBinding content pagination
+	^ self commandStyledWith: styleProviderBinding content pagination

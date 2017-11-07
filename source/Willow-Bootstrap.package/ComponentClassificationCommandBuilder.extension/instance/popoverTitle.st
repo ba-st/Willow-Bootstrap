@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 popoverTitle
 
-	^ self commmandStyledWith: styleProviderBinding content popoverTitle
+	^ self commandStyledWith: styleProviderBinding content popoverTitle

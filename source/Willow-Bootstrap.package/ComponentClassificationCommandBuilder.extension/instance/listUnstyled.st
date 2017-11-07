@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 listUnstyled
 
-	^ self commmandStyledWith: styleProviderBinding content listUnstyled
+	^ self commandStyledWith: styleProviderBinding content listUnstyled

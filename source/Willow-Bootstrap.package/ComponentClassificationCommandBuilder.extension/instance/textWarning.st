@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 textWarning
 
-	^ self commmandStyledWith: styleProviderBinding content textWarning
+	^ self commandStyledWith: styleProviderBinding content textWarning

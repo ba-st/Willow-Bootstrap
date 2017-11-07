@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 alertLink
 
-	^ self commmandStyledWith: styleProviderBinding content alertLink
+	^ self commandStyledWith: styleProviderBinding content alertLink

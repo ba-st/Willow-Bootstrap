@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 tooltip
 
-	^ self commmandStyledWith: styleProviderBinding content tooltip
+	^ self commandStyledWith: styleProviderBinding content tooltip

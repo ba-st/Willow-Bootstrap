@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 lead
 
-	^ self commmandStyledWith: styleProviderBinding content lead
+	^ self commandStyledWith: styleProviderBinding content lead

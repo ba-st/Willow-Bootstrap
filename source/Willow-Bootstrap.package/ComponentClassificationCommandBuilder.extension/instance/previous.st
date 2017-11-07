@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 previous
 
-	^ self commmandStyledWith: styleProviderBinding content previous
+	^ self commandStyledWith: styleProviderBinding content previous

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 dropdownToggle
 
-	^ self commmandStyledWith: styleProviderBinding content dropdownToggle
+	^ self commandStyledWith: styleProviderBinding content dropdownToggle

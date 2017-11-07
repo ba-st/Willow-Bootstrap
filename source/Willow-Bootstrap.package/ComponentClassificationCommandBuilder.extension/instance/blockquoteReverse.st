@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 blockquoteReverse
 
-	^ self commmandStyledWith: styleProviderBinding content blockquoteReverse
+	^ self commandStyledWith: styleProviderBinding content blockquoteReverse

@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 alertDismissible
 
-	^ self commmandStyledWith: styleProviderBinding content alertDismissible
+	^ self commandStyledWith: styleProviderBinding content alertDismissible

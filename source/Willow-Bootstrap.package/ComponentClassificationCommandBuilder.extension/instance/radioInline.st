@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 radioInline
 
-	^ self commmandStyledWith: styleProviderBinding content radioInline
+	^ self commandStyledWith: styleProviderBinding content radioInline

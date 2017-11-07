@@ -1,4 +1,4 @@
 *Willow-Bootstrap
 progressBarStriped
 
-	^ self commmandStyledWith: styleProviderBinding content progressBarStriped
+	^ self commandStyledWith: styleProviderBinding content progressBarStriped
