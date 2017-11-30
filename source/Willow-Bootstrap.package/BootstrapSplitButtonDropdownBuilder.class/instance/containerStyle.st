@@ -1,4 +1,0 @@
-private
-containerStyle
-
-	^ BootstrapCssStyles buttonGroup
