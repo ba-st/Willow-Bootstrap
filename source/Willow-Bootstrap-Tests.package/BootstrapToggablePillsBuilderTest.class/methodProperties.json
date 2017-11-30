@@ -1,9 +1,0 @@
-{
-	"instance" : {
-		"testRenderContentOnWithCommands" : "GabrielOmarCotelli 9/27/2017 10:18",
-		"testRenderContentOn" : "GabrielOmarCotelli 9/27/2017 10:16",
-		"setUp" : "GabrielOmarCotelli 5/3/2017 18:58",
-		"testCantBuildWithLessThanTwoPanes" : "GabrielOmarCotelli 9/27/2017 10:16"
-	},
-	"class" : { }
-}

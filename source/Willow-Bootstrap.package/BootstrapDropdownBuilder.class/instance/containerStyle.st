@@ -1,4 +1,0 @@
-private
-containerStyle
-
-	^ self subclassResponsibility
