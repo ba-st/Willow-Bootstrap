@@ -3,7 +3,7 @@ testRenderContentOnWithBootstrap
 
 	| html application |
 
-	application := WillowTestingApplication using: BootstrapComponentSupplier online.
+	application := WillowTestingApplication using: self componentSupplier.
 	html := self fullDocumentRendering: application.
 
 	self
