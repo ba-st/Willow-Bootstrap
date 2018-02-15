@@ -2,8 +2,8 @@ Configuring
 labeled: aRenderable
 
 	buttonBinding := Binding to:
-		(AsynchronicLinkWebView
-			labeled: [ :canvas | 
+		(supplier
+			asynchronicLinkLabeled: [ :canvas | 
 				canvas render: aRenderable.
 				self renderCaretOn: canvas ]
-			applying: [ :button :constants | self dropdownCommandFor: button using: constants ])
+			applying: [ :button :constants | (button setAttribute: constants bootstrap role to: constants bootstrap button) + (self dropdownCommandFor: button using: constants) ])
