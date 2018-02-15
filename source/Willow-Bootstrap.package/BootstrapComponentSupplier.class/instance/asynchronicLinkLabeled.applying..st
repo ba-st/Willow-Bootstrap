@@ -1,6 +1,6 @@
 Supplying
-asynchronicAnchorLabeled: aRenderable applying: aComponentCommand
+asynchronicLinkLabeled: aRenderable applying: aComponentCommand
 
-	^ AsynchronicAnchorWebView
+	^ AsynchronicLinkWebView
 		labeled: aRenderable
 		applying: [ :anchor | anchor addClass bootstrap button + aComponentCommand ]

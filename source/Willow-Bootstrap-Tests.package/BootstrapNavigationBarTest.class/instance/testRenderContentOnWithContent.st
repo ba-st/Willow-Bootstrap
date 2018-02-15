@@ -4,7 +4,7 @@ testRenderContentOnWithContent
 	| navigationBar html |
 
 	navigationBar := BootstrapNavigationBar
-		brandedWith: (AsynchronicAnchorWebView labeled: 'Willow' applying: [ :anchor | anchor addClass bootstrap navbarBrand ])
+		brandedWith: (AsynchronicLinkWebView labeled: 'Willow' applying: [ :anchor | anchor addClass bootstrap navbarBrand ])
 		containing: [ :canvas | 
 			canvas paragraph
 				class: BootstrapCssStyles navbarText;

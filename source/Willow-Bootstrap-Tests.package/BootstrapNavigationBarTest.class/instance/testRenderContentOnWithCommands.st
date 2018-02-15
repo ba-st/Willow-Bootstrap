@@ -4,7 +4,7 @@ testRenderContentOnWithCommands
 	| navigationBar html |
 
 	navigationBar := BootstrapNavigationBar
-		brandedWith: (AsynchronicAnchorWebView labeled: 'Willow' applying: [ :anchor | anchor addClass bootstrap navbarBrand ])
+		brandedWith: (AsynchronicLinkWebView labeled: 'Willow' applying: [ :anchor | anchor addClass bootstrap navbarBrand ])
 		containing: ''
 		applying: [ :navigation | navigation addClass bootstrap navbarDefault + navigation addClass bootstrap navbarStaticTop ].
 
