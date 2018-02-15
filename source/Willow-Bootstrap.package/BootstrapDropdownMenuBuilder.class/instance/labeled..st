@@ -2,7 +2,7 @@ Configuring
 labeled: aRenderable
 
 	buttonBinding := Binding to:
-		(AsynchronicAnchorWebView
+		(AsynchronicLinkWebView
 			labeled: [ :canvas | 
 				canvas render: aRenderable.
 				self renderCaretOn: canvas ]
