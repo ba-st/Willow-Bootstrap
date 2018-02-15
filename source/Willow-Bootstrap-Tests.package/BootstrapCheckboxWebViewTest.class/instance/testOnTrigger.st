@@ -10,4 +10,4 @@ testOnTrigger
 	self
 		assert: html
 		equals:
-			'<div class="checkbox"><label><input checked="checked" name="1" id="input-id2" type="checkbox"/><input name="3" type="hidden"/></label></div><script type="text/javascript">$("#input-id2").click(function(){$(this).prop("disabled",true)});</script>'
+			'<div class="checkbox"><label><input checked="checked" name="1" id="input-id2" type="checkbox"/><input name="3" type="hidden"/></label></div><script type="text/javascript">$("#input-id2").click(function(event){$(this).prop("disabled",true)});</script>'
