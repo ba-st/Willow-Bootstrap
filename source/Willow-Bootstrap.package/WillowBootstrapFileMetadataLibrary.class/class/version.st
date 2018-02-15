@@ -1,4 +1,4 @@
 Accessing
 version
 
-	^ '4.0.1'
+	^ '5.0.0'
