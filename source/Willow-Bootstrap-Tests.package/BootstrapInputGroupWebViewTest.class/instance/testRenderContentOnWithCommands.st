@@ -9,7 +9,8 @@ testRenderContentOnWithCommands
 				inputGroupButtonWrapping:
 					(supplier
 						synchronicButtonLabeled: 'Go!'
-						applying: [ :button | button addClass bootstrap buttonDefault ]))
+						applying: [ :button | button addClass bootstrap buttonDefault ]
+						evaluating: [  ]))
 		to: (supplier singleLineTextFieldApplying: [ :field |  ])
 		applying: [ :group | group addClass bootstrap inputGroupSmall ].
 
@@ -18,4 +19,4 @@ testRenderContentOnWithCommands
 	self
 		assert: html
 		equals:
-			'<div class="input-group input-group-sm"><input value="" name="1" class="form-control" type="text"/><span class="input-group-btn"><button class="btn btn-default" type="submit">Go!</button></span></div>'
+			'<div class="input-group input-group-sm"><input value="" name="1" class="form-control" type="text"/><span class="input-group-btn"><button name="2" class="btn btn-default" type="submit">Go!</button></span></div>'
