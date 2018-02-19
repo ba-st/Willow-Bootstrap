@@ -6,7 +6,13 @@ testRenderContentOn
 	inputGroup := BootstrapInputGroupWebView
 		wrapping: (supplier singleLineTextFieldApplying: [ :field |  ])
 		between: (supplier inputGroupAddOnWrapping: 'http://')
-		and: (supplier inputGroupButtonWrapping: (supplier synchronicButtonLabeled: 'Go!' applying: [ :button | button addClass bootstrap buttonDefault ] evaluating: [  ]))
+		and:
+			(supplier
+				inputGroupButtonWrapping:
+					(supplier
+						synchronicButtonLabeled: 'Go!'
+						applying: [ :button | button addClass bootstrap buttonDefault ]
+						evaluating: [  ]))
 		applying: [ :group |  ].
 
 	html := self render: inputGroup.

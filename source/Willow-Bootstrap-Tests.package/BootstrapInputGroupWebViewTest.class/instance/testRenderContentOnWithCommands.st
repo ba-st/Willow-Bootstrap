@@ -4,7 +4,13 @@ testRenderContentOnWithCommands
 	| inputGroup html |
 
 	inputGroup := BootstrapInputGroupWebView
-		appending: (supplier inputGroupButtonWrapping: (supplier synchronicButtonLabeled: 'Go!' applying: [ :button | button addClass bootstrap buttonDefault ] evaluating: [  ]))
+		appending:
+			(supplier
+				inputGroupButtonWrapping:
+					(supplier
+						synchronicButtonLabeled: 'Go!'
+						applying: [ :button | button addClass bootstrap buttonDefault ]
+						evaluating: [  ]))
 		to: (supplier singleLineTextFieldApplying: [ :field |  ])
 		applying: [ :group | group addClass bootstrap inputGroupSmall ].
 
