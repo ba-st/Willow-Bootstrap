@@ -6,7 +6,12 @@ testRenderContentOn
 	inputGroup := BootstrapInputGroupWebView
 		wrapping: (supplier singleLineTextFieldApplying: [ :field |  ])
 		between: (supplier inputGroupAddOnWrapping: 'http://')
-		and: (supplier inputGroupButtonWrapping: (supplier synchronicButtonLabeled: 'Go!' applying: [ :button | button addClass bootstrap buttonDefault ] evaluating: [  ]))
+		and:
+			(supplier
+				inputGroupButtonWrapping:
+					(supplier
+						synchronicButtonLabeled: 'Go!'
+						applying: [ :button | button addClass bootstrap buttonDefault ]))
 		applying: [ :group |  ].
 
 	html := self render: inputGroup.
@@ -14,4 +19,4 @@ testRenderContentOn
 	self
 		assert: html
 		equals:
-			'<div class="input-group"><span class="input-group-addon">http://</span><input value="" name="1" class="form-control" type="text"/><span class="input-group-btn"><button name="2" class="btn btn-default" type="submit">Go!</button></span></div>'
+			'<div class="input-group"><span class="input-group-addon">http://</span><input value="" name="1" class="form-control" type="text"/><span class="input-group-btn"><button class="btn btn-default" type="submit">Go!</button></span></div>'
