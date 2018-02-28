@@ -1,0 +1,4 @@
+Configuring
+beRightAligned
+
+	listCssStyles add: BootstrapCssStyles dropdownMenuRight
