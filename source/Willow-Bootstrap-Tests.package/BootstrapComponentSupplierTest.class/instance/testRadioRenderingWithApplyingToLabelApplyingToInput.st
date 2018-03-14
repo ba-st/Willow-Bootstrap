@@ -1,5 +1,5 @@
 tests-Supplying
-testRadioRenderingWithApplying
+testRadioRenderingWithApplyingToLabelApplyingToInput
 
 	| supplier radio html |
 
