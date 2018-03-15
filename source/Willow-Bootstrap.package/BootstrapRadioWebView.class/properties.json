@@ -6,10 +6,11 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"commandToComponent",
 		"interactionInterpreter",
 		"renderingBlock",
-		"identifierAssigner"
+		"identifierAssigner",
+		"labelCommand",
+		"inputCommand"
 	],
 	"name" : "BootstrapRadioWebView",
 	"type" : "normal"

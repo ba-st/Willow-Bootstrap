@@ -1,4 +1,7 @@
 support
 newSingleSelectionView
 
-	^ BootstrapRadioWebView renderingWith: #yourself applying: [ :radio |  ]
+	^BootstrapRadioWebView 
+		renderingWith: #'yourself'
+		applyingToLabel: [:radio | ]
+		applyingToInput: []
