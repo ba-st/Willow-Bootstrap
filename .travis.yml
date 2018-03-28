@@ -14,9 +14,9 @@ matrix:
   - smalltalk: Pharo-7.0
   fast_finish: true
 before_deploy:
-  - cp "${SMALLTALK_CI_IMAGE}" "Willow-Bootstrap-3.image"
-  - cp "${SMALLTALK_CI_CHANGES}" "Willow-Bootstrap-3.changes"
-  - zip -q "${TRAVIS_BRANCH}-${TRAVIS_SMALLTALK_VERSION}.zip" "Willow-Bootstrap-3.image" "Willow-Bootstrap-3.changes"
+  - cp "${SMALLTALK_CI_IMAGE}" "Willow-Bootstrap.image"
+  - cp "${SMALLTALK_CI_CHANGES}" "Willow-Bootstrap.changes"
+  - zip -q "${TRAVIS_BRANCH}-${TRAVIS_SMALLTALK_VERSION}.zip" "Willow-Bootstrap.image" "Willow-Bootstrap.changes"
 deploy:
   provider: releases
   api_key:
