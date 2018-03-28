@@ -4,7 +4,7 @@ testJavascriptContent
 	self
 		assert: WillowBootstrapFileMetadataLibrary default jswillowbootstrapJsContent
 		equals:
-			'/*<n>* willow-bootstrap.js v6.0.0<n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n>$.prototype.tooltip.Constructor.prototype.destroy=function(){var that = this
+			'/*<n>* willow-bootstrap.js v7.0.0<n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n>$.prototype.tooltip.Constructor.prototype.destroy=function(){var that = this
 	clearTimeout(this.timeout)
 	this.hide(function () {
 	  null!=that.$element && that.$element.off("." + that.type).removeData("bs." + that.type)

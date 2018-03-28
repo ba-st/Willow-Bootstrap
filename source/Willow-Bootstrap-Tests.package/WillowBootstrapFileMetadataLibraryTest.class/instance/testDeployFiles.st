@@ -4,5 +4,5 @@ testDeployFiles
 	self
 		useFileTestingPlatformDuring: [ WillowBootstrapFileMetadataLibrary default deployFiles.
 			self
-				assert: GRPlatform current createdFolders equals: #('willow-bootstrap-6.0.0' 'willow-bootstrap-6.0.0/css' 'willow-bootstrap-6.0.0/js');
-				assert: GRPlatform current createdFiles equals: #('willow-bootstrap-6.0.0/css/willow-bootstrap.css' 'willow-bootstrap-6.0.0/js/willow-bootstrap.js') ]
+				assert: GRPlatform current createdFolders equals: #('willow-bootstrap-7.0.0' 'willow-bootstrap-7.0.0/css' 'willow-bootstrap-7.0.0/js');
+				assert: GRPlatform current createdFiles equals: #('willow-bootstrap-7.0.0/css/willow-bootstrap.css' 'willow-bootstrap-7.0.0/js/willow-bootstrap.js') ]
