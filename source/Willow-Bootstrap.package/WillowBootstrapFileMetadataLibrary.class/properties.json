@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "GabrielOmarCotelli 4/27/2017 15:35",
-	"super" : "WillowFileMetadataLibrary",
+	"super" : "WADeploymentAwareFileMetadataLibrary",
 	"category" : "Willow-Bootstrap-Libraries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
