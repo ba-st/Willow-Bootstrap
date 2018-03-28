@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "WillowLibraryTestCase",
+	"super" : "WARenderingTest",
 	"category" : "Willow-Bootstrap-Tests-Datepicker",
 	"classinstvars" : [ ],
 	"pools" : [ ],
