@@ -28,7 +28,7 @@ WillowBootstrapFileMetadataLibrary class >> libraryName [
 { #category : #Accessing }
 WillowBootstrapFileMetadataLibrary class >> version [
 
-	^ '7.0.0'
+	^ '8.0.0'
 
 ]
 

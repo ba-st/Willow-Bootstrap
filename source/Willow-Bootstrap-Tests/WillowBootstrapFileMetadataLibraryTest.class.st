@@ -13,7 +13,7 @@ WillowBootstrapFileMetadataLibraryTest >> testCssContent [
 	self
 		assert: WillowBootstrapFileMetadataLibrary default csswillowbootstrapCssContent
 		equals:
-			'/*<n>* willow-bootstrap.css v7.0.0<n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n>input[type="number"]::-webkit-outer-spin-button ,<n>input[type="number"]::-webkit-inner-spin-button<n>{<n><t>-webkit-appearance: none;<n>}<n><n>input[type="number"]<n>{<n><t>-moz-appearance: textfield;<n>}'
+			'/*<n>* willow-bootstrap.css v8.0.0<n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n>input[type="number"]::-webkit-outer-spin-button ,<n>input[type="number"]::-webkit-inner-spin-button<n>{<n><t>-webkit-appearance: none;<n>}<n><n>input[type="number"]<n>{<n><t>-moz-appearance: textfield;<n>}'
 				expandMacros
 
 ]
@@ -24,8 +24,8 @@ WillowBootstrapFileMetadataLibraryTest >> testDeployFiles [
 	self
 		useFileTestingPlatformDuring: [ WillowBootstrapFileMetadataLibrary default deployFiles.
 			self
-				assert: GRPlatform current createdFolders equals: #('willow-bootstrap-7.0.0' 'willow-bootstrap-7.0.0/css' 'willow-bootstrap-7.0.0/js');
-				assert: GRPlatform current createdFiles equals: #('willow-bootstrap-7.0.0/css/willow-bootstrap.css' 'willow-bootstrap-7.0.0/js/willow-bootstrap.js') ]
+				assert: GRPlatform current createdFolders equals: #('willow-bootstrap-8.0.0' 'willow-bootstrap-8.0.0/css' 'willow-bootstrap-8.0.0/js');
+				assert: GRPlatform current createdFiles equals: #('willow-bootstrap-8.0.0/css/willow-bootstrap.css' 'willow-bootstrap-8.0.0/js/willow-bootstrap.js') ]
 
 ]
 
@@ -51,7 +51,7 @@ WillowBootstrapFileMetadataLibraryTest >> testJavascriptContent [
 	self
 		assert: WillowBootstrapFileMetadataLibrary default jswillowbootstrapJsContent
 		equals:
-			'/*<n>* willow-bootstrap.js v7.0.0<n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n>$.prototype.tooltip.Constructor.prototype.destroy=function(){var that = this
+			'/*<n>* willow-bootstrap.js v8.0.0<n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n>$.prototype.tooltip.Constructor.prototype.destroy=function(){var that = this
 	clearTimeout(this.timeout)
 	this.hide(function () {
 	  null!=that.$element && that.$element.off("." + that.type).removeData("bs." + that.type)
