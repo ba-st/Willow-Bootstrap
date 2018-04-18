@@ -1,4 +1,0 @@
-Accessing
-scale
-
-	^'glyphicon-scale'

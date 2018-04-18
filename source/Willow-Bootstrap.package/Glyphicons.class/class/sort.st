@@ -1,4 +1,0 @@
-Accessing
-sort
-
-	^'glyphicon-sort'

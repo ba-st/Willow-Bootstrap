@@ -1,4 +1,0 @@
-Accessing
-tent
-
-	^'glyphicon-tent'

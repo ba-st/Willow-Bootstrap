@@ -1,4 +1,0 @@
-Helper Classes
-close
-
-	^ 'close'

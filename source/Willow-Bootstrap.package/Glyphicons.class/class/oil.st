@@ -1,4 +1,0 @@
-Accessing
-oil
-
-	^'glyphicon-oil'

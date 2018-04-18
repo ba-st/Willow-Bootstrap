@@ -1,4 +1,0 @@
-Forms
-formHorizontal
-
-	^ 'form-horizontal'

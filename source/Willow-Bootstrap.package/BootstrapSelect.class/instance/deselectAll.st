@@ -1,4 +1,0 @@
-Methods
-deselectAll
-
-	functionName := 'deselectAll'

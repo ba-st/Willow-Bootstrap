@@ -1,4 +1,0 @@
-Panels
-panelInfo
-
-	^ 'panel-info'

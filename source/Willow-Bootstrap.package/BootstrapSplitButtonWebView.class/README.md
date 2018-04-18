@@ -1,1 +1,0 @@
-I'm a view representing an split button

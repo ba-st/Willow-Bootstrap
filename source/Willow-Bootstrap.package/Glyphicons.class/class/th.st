@@ -1,4 +1,0 @@
-Accessing
-th
-
-	^'glyphicon-th'

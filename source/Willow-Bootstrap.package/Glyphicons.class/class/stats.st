@@ -1,4 +1,0 @@
-Accessing
-stats
-
-	^'glyphicon-stats'

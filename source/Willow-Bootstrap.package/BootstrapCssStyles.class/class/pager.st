@@ -1,4 +1,0 @@
-Pagination
-pager
-
-	^ 'pager'

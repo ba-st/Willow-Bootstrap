@@ -1,4 +1,0 @@
-Tooltips
-tooltipInner
-
-	^ 'tooltip-inner'

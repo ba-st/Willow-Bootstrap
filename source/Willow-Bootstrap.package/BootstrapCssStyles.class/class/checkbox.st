@@ -1,4 +1,0 @@
-Forms
-checkbox
-
-	^ 'checkbox'

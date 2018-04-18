@@ -1,4 +1,0 @@
-tests
-testForDevelopment
-
-	self assert: Bootstrap3MetadataLibrary forDevelopment equals: Bootstrap3DevelopmentMetadataLibrary

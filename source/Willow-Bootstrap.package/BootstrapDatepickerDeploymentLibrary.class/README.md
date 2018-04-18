@@ -1,1 +1,0 @@
-I'm a deployment library for Bootstrap Datepicker

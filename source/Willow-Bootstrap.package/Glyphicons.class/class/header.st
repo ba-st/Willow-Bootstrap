@@ -1,4 +1,0 @@
-Accessing
-header
-
-	^'glyphicon-header'

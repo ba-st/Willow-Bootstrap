@@ -1,4 +1,0 @@
-Accessing
-unchecked
-
-	^'glyphicon-unchecked'

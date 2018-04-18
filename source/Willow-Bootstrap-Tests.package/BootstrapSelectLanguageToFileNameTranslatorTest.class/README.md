@@ -1,1 +1,0 @@
-A BootstrapSelectLanguageToFileNameTranslatorTest is a test class for testing the behavior of BootstrapSelectLanguageToFileNameTranslator

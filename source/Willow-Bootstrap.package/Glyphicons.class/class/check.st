@@ -1,4 +1,0 @@
-Accessing
-check
-
-	^'glyphicon-check'

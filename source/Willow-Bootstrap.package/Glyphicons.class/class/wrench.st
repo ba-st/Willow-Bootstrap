@@ -1,4 +1,0 @@
-Accessing
-wrench
-
-	^'glyphicon-wrench'

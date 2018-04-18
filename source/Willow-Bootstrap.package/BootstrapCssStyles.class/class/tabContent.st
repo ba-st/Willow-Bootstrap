@@ -1,4 +1,0 @@
-Navigation
-tabContent
-
-	^ 'tab-content'

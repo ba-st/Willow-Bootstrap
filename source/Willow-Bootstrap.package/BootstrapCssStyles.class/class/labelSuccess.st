@@ -1,4 +1,0 @@
-Labels
-labelSuccess
-
-	^ 'label-success'

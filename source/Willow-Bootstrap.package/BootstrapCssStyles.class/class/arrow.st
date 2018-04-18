@@ -1,4 +1,0 @@
-Popover
-arrow
-
-	^ 'arrow'

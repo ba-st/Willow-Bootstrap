@@ -1,4 +1,0 @@
-Accessing
-time
-
-	^'glyphicon-time'

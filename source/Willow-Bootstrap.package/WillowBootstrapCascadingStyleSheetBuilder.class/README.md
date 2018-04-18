@@ -1,1 +1,0 @@
-I provides some CSS required for the integration to work correctly.

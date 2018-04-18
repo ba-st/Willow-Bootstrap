@@ -1,4 +1,0 @@
-Accessing
-lamp
-
-	^'glyphicon-lamp'

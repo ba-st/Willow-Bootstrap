@@ -1,4 +1,0 @@
-Buttons
-buttonLarge
-
-	^ 'btn-lg'

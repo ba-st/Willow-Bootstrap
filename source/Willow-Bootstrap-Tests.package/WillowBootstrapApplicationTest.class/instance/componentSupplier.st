@@ -1,4 +1,0 @@
-accessing
-componentSupplier
-
-	^ BootstrapComponentSupplier online

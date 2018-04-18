@@ -1,4 +1,0 @@
-Accessing
-leaf
-
-	^'glyphicon-leaf'

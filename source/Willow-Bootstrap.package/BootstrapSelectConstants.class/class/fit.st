@@ -1,5 +1,0 @@
-Accessing
-fit
-
-	^ 'fit'
-

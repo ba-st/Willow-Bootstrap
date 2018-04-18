@@ -1,4 +1,0 @@
-Modal
-modalBackdrop
-
-	^ 'modal-backdrop'

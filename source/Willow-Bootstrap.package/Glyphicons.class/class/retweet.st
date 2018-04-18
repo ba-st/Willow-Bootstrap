@@ -1,4 +1,0 @@
-Accessing
-retweet
-
-	^'glyphicon-retweet'

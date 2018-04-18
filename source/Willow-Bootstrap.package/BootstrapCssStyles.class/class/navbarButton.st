@@ -1,4 +1,0 @@
-Navigation
-navbarButton
-
-	^ 'navbar-btn'

@@ -1,4 +1,0 @@
-Helper Classes
-show
-
-	^'show'

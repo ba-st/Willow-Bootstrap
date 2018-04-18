@@ -1,4 +1,0 @@
-Dropdowns
-dropdownToggle
-
-	^ 'dropdown-toggle'

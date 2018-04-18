@@ -1,4 +1,0 @@
-Modal
-modalLarge
-
-	^ 'modal-lg'

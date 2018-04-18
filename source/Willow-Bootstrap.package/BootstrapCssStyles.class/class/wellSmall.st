@@ -1,4 +1,0 @@
-Wells
-wellSmall
-
-	^ 'well-sm'

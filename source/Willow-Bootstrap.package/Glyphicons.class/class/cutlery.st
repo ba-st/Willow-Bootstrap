@@ -1,4 +1,0 @@
-Accessing
-cutlery
-
-	^'glyphicon-cutlery'

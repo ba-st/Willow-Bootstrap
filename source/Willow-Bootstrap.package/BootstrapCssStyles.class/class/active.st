@@ -1,4 +1,0 @@
-Buttons
-active
-
-	^ 'active'

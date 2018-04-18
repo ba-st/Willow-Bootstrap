@@ -1,4 +1,0 @@
-Accessing
-camera
-
-	^'glyphicon-camera'

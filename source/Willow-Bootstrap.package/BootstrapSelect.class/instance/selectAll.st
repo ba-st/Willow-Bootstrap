@@ -1,4 +1,0 @@
-Methods
-selectAll
-
-	functionName := 'selectAll'

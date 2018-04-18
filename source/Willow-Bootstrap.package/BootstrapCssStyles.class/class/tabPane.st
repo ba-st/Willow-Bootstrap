@@ -1,4 +1,0 @@
-Navigation
-tabPane
-
-	^ 'tab-pane'

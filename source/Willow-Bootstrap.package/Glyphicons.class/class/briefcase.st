@@ -1,4 +1,0 @@
-Accessing
-briefcase
-
-	^'glyphicon-briefcase'

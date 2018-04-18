@@ -1,1 +1,0 @@
-I'm a JSObject representing a viewport configuration for Bootstrap.

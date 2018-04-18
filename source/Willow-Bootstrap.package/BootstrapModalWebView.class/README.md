@@ -1,1 +1,0 @@
-I represent a Bootstrap Modal.

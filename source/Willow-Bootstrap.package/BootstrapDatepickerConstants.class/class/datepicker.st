@@ -1,4 +1,0 @@
-Accessing - Classes
-datepicker
-
-	^ 'datepicker'

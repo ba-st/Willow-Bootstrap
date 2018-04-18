@@ -1,4 +1,0 @@
-Panels
-panelPrimary
-
-	^ 'panel-primary'

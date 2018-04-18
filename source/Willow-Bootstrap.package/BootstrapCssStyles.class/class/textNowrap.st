@@ -1,4 +1,0 @@
-Typography
-textNowrap
-
-	^ 'text-nowrap'

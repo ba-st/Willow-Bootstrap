@@ -1,4 +1,0 @@
-Accessing
-star
-
-	^'glyphicon-star'

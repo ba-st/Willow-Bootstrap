@@ -1,4 +1,0 @@
-Configuring
-onTrigger
-
-	^ CombinedWebInteractionInterpreter combiningInterpretersOf: buttons

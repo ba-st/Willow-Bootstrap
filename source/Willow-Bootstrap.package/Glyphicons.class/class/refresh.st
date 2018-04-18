@@ -1,4 +1,0 @@
-Accessing
-refresh
-
-	^'glyphicon-refresh'

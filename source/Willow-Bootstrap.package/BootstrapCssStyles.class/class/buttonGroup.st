@@ -1,4 +1,0 @@
-Buttons
-buttonGroup
-
-	^ 'btn-group'

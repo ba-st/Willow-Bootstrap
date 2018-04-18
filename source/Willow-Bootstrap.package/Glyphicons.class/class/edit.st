@@ -1,4 +1,0 @@
-Accessing
-edit
-
-	^'glyphicon-edit'

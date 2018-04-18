@@ -1,4 +1,0 @@
-Modal
-modalSmall
-
-	^ 'modal-sm'

@@ -1,4 +1,0 @@
-Tables
-tableHover
-
-	^ 'table-hover'

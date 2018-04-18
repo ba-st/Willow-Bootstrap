@@ -1,4 +1,0 @@
-Methods
-toggle
-
-	functionName := 'toggle'

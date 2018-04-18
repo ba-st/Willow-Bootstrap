@@ -1,4 +1,0 @@
-Data-API
-show
-
-	^ 'show'

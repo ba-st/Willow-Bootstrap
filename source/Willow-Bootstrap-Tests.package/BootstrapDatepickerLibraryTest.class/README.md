@@ -1,1 +1,0 @@
-A BootstrapDatepickerLibraryTest is a test class for testing the behavior of BootstrapDatepickerLibrary

@@ -1,4 +1,0 @@
-Accessing
-transfer
-
-	^'glyphicon-transfer'

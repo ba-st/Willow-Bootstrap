@@ -1,4 +1,0 @@
-Panels
-panelHeading
-
-	^ 'panel-heading'

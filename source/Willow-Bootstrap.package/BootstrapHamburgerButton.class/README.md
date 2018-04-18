@@ -1,2 +1,0 @@
-The hamburger button  is a button typically placed in the top left or top right of a graphical user interface. It carries an icon consisting of three parallel horizontal lines.
-Selecting (tapping or clicking) this button results in a menu being revealed (sliding out or popping up).

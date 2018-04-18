@@ -1,4 +1,0 @@
-Buttons
-buttonDefault
-
-	^ 'btn-default'

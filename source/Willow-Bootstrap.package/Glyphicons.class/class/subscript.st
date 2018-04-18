@@ -1,4 +1,0 @@
-Accessing
-subscript
-
-	^'glyphicon-subscript'

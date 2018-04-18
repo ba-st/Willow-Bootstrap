@@ -1,4 +1,0 @@
-Images
-imageRounded
-
-	^'img-rounded'

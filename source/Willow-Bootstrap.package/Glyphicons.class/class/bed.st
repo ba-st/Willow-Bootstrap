@@ -1,4 +1,0 @@
-Accessing
-bed
-
-	^'glyphicon-bed'

@@ -1,4 +1,0 @@
-Accessing
-bullhorn
-
-	^'glyphicon-bullhorn'

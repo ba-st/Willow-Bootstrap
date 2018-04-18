@@ -1,4 +1,0 @@
-Panels
-panelSuccess
-
-	^ 'panel-success'

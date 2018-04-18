@@ -1,4 +1,0 @@
-Collapse
-collapse
-
-	^'collapse'

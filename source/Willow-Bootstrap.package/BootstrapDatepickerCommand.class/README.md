@@ -1,1 +1,0 @@
-I'm a component command enabling bootstrap-datepicker

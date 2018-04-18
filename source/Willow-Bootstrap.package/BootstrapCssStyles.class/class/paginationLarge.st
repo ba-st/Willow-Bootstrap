@@ -1,4 +1,0 @@
-Pagination
-paginationLarge
-
-	^ 'pagination-lg'

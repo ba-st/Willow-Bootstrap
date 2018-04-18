@@ -1,4 +1,0 @@
-Accessing
-repeat
-
-	^'glyphicon-repeat'

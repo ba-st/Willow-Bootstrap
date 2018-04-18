@@ -1,4 +1,0 @@
-Accessing
-signal
-
-	^'glyphicon-signal'

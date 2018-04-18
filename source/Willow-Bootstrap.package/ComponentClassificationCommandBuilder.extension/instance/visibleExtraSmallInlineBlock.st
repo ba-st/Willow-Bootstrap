@@ -1,4 +1,0 @@
-*Willow-Bootstrap
-visibleExtraSmallInlineBlock
-
-	^ self commandStyledWith: styleProviderBinding content visibleExtraSmallInlineBlock

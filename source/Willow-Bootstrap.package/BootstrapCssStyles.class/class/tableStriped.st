@@ -1,4 +1,0 @@
-Tables
-tableStriped
-
-	^ 'table-striped'

@@ -1,4 +1,0 @@
-Accessing
-trash
-
-	^'glyphicon-trash'

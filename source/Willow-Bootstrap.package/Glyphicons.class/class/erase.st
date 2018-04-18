@@ -1,4 +1,0 @@
-Accessing
-erase
-
-	^'glyphicon-erase'

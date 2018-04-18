@@ -1,4 +1,0 @@
-Accessing
-hdd
-
-	^'glyphicon-hdd'

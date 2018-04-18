@@ -1,4 +1,0 @@
-Methods
-show
-
-	functionName := 'show'

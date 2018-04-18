@@ -1,4 +1,0 @@
-Accessing
-paperclip
-
-	^'glyphicon-paperclip'

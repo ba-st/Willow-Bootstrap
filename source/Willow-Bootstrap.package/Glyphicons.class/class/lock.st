@@ -1,4 +1,0 @@
-Accessing
-lock
-
-	^'glyphicon-lock'

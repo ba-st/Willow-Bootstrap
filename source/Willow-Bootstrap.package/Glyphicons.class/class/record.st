@@ -1,4 +1,0 @@
-Accessing
-record
-
-	^'glyphicon-record'

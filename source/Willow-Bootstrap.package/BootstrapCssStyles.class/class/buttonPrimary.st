@@ -1,4 +1,0 @@
-Buttons
-buttonPrimary
-
-	^ 'btn-primary'

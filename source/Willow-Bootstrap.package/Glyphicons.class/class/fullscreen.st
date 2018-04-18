@@ -1,4 +1,0 @@
-Accessing
-fullscreen
-
-	^'glyphicon-fullscreen'

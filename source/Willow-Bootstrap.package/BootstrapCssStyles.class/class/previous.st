@@ -1,4 +1,0 @@
-Pagination
-previous
-
-	^ 'previous'

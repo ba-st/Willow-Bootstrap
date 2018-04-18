@@ -1,4 +1,0 @@
-Popover
-popoverTitle
-
-	^ 'popover-title'

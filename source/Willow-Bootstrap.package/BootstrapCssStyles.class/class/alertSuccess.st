@@ -1,4 +1,0 @@
-Alerts
-alertSuccess
-
-	^ 'alert-success'

@@ -1,4 +1,0 @@
-Accessing
-startsWith
-
-	^ 'startsWith'

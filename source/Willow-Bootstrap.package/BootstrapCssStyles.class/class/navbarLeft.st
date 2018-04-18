@@ -1,4 +1,0 @@
-Navigation
-navbarLeft
-
-	^ 'navbar-left'

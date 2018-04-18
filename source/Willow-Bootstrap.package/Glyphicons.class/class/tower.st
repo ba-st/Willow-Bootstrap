@@ -1,4 +1,0 @@
-Accessing
-tower
-
-	^'glyphicon-tower'

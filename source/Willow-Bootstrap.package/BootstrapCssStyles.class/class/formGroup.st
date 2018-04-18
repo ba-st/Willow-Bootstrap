@@ -1,4 +1,0 @@
-Forms
-formGroup
-
-	^ 'form-group'

@@ -1,4 +1,0 @@
-Images
-imageThumbnail
-
-	^'img-thumbnail'

@@ -1,4 +1,0 @@
-Accessing
-italic
-
-	^'glyphicon-italic'

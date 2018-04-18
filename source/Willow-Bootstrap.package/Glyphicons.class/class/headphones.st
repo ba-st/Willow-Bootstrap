@@ -1,4 +1,0 @@
-Accessing
-headphones
-
-	^'glyphicon-headphones'

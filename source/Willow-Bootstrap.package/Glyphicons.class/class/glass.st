@@ -1,4 +1,0 @@
-Accessing
-glass
-
-	^'glyphicon-glass'

@@ -1,4 +1,0 @@
-Panels
-panelGroup
-
-	^ 'panel-group'

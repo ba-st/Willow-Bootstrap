@@ -1,4 +1,0 @@
-Supplying
-notificationBuilder 
-
-	^BootstrapNotificationBuilder new

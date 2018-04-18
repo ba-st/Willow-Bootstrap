@@ -1,4 +1,0 @@
-Pagination
-next
-
-	^ 'next'

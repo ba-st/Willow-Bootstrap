@@ -1,4 +1,0 @@
-Accessing
-bell
-
-	^'glyphicon-bell'

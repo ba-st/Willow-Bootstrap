@@ -1,4 +1,0 @@
-Accessing
-download
-
-	^'glyphicon-download'

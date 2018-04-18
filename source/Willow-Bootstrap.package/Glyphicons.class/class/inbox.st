@@ -1,4 +1,0 @@
-Accessing
-inbox
-
-	^'glyphicon-inbox'

@@ -1,4 +1,0 @@
-Accessing
-bookmark
-
-	^'glyphicon-bookmark'

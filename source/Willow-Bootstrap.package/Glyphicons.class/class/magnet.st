@@ -1,4 +1,0 @@
-Accessing
-magnet
-
-	^'glyphicon-magnet'

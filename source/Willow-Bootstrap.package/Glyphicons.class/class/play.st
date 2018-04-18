@@ -1,4 +1,0 @@
-Accessing
-play
-
-	^'glyphicon-play'

@@ -1,4 +1,0 @@
-Typography
-textCenter
-
-	^ 'text-center'

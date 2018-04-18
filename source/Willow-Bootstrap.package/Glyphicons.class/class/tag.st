@@ -1,4 +1,0 @@
-Accessing
-tag
-
-	^'glyphicon-tag'

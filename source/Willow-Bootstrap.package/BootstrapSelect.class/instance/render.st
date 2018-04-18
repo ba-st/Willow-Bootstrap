@@ -1,4 +1,0 @@
-Methods
-render
-
-	functionName := 'render'

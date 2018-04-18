@@ -1,4 +1,0 @@
-Accessing
-compressed
-
-	^'glyphicon-compressed'

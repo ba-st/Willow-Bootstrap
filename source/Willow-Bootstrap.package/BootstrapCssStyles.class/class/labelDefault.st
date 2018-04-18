@@ -1,4 +1,0 @@
-Labels
-labelDefault
-
-	^ 'label-default'

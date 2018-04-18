@@ -1,4 +1,0 @@
-private
-dataToggleValue
-
-	^ self subclassResponsibility

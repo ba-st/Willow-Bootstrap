@@ -1,4 +1,0 @@
-Accessing
-road
-
-	^'glyphicon-road'

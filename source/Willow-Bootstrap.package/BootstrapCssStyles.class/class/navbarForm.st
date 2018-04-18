@@ -1,4 +1,0 @@
-Navigation
-navbarForm
-
-	^ 'navbar-form'

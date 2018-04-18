@@ -1,4 +1,0 @@
-Accessing
-cd
-
-	^'glyphicon-cd'

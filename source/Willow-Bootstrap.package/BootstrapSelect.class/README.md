@@ -1,1 +1,0 @@
-I'm a JQueryPlugin implementing  the bootstrap-select programmatic API

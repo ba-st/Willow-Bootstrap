@@ -1,4 +1,0 @@
-Navigation
-navStacked
-
-	^ 'nav-stacked'

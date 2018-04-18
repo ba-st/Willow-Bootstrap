@@ -1,4 +1,0 @@
-Images
-imageCircle
-
-	^'img-circle'

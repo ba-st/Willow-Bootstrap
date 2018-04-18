@@ -1,4 +1,0 @@
-Accessing
-user
-
-	^'glyphicon-user'

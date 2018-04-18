@@ -1,4 +1,0 @@
-Accessing
-forward
-
-	^'glyphicon-forward'

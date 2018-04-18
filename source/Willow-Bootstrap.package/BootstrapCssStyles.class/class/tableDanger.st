@@ -1,4 +1,0 @@
-Tables
-tableDanger
-
-	^ 'danger'

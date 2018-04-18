@@ -1,4 +1,0 @@
-Panels
-panelTitle
-
-	^ 'panel-title'

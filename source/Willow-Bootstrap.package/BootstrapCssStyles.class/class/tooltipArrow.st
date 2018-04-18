@@ -1,4 +1,0 @@
-Tooltips
-tooltipArrow
-
-	^ 'tooltip-arrow'

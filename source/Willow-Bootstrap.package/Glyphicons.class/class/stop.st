@@ -1,4 +1,0 @@
-Accessing
-stop
-
-	^'glyphicon-stop'

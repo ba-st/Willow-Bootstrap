@@ -1,4 +1,0 @@
-Typography
-definitionListHorizontal
-
-	^ 'dl-horizontal'

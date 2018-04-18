@@ -1,1 +1,0 @@
-A BootstrapSelectLibraryTest is a test class for testing the behavior of BootstrapSelectLibrary

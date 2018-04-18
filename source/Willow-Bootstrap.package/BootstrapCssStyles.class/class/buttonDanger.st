@@ -1,4 +1,0 @@
-Buttons
-buttonDanger
-
-	^ 'btn-danger'

@@ -1,4 +1,0 @@
-Buttons
-buttonInfo
-
-	^ 'btn-info'

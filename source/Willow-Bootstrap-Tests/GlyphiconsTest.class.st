@@ -1,0 +1,295 @@
+"
+A GlyphiconsTest is a test class for testing the behavior of Glyphicons
+"
+Class {
+	#name : #GlyphiconsTest,
+	#superclass : #TestCase,
+	#category : 'Willow-Bootstrap-Tests-WebViews'
+}
+
+{ #category : #tests }
+GlyphiconsTest >> testIcons [
+
+	self
+		assert: Glyphicons asterisk equals: 'glyphicon-asterisk';
+		assert: Glyphicons plus equals: 'glyphicon-plus';
+		assert: Glyphicons euro equals: 'glyphicon-euro';
+		assert: Glyphicons eur equals: 'glyphicon-eur';
+		assert: Glyphicons minus equals: 'glyphicon-minus';
+		assert: Glyphicons cloud equals: 'glyphicon-cloud';
+		assert: Glyphicons envelope equals: 'glyphicon-envelope';
+		assert: Glyphicons pencil equals: 'glyphicon-pencil';
+		assert: Glyphicons glass equals: 'glyphicon-glass';
+		assert: Glyphicons music equals: 'glyphicon-music';
+		assert: Glyphicons search equals: 'glyphicon-search';
+		assert: Glyphicons heart equals: 'glyphicon-heart';
+		assert: Glyphicons star equals: 'glyphicon-star';
+		assert: Glyphicons starEmpty equals: 'glyphicon-star-empty';
+		assert: Glyphicons user equals: 'glyphicon-user';
+		assert: Glyphicons film equals: 'glyphicon-film';
+		assert: Glyphicons thLarge equals: 'glyphicon-th-large';
+		assert: Glyphicons th equals: 'glyphicon-th';
+		assert: Glyphicons thList equals: 'glyphicon-th-list';
+		assert: Glyphicons ok equals: 'glyphicon-ok';
+		assert: Glyphicons remove equals: 'glyphicon-remove';
+		assert: Glyphicons zoomIn equals: 'glyphicon-zoom-in';
+		assert: Glyphicons zoomOut equals: 'glyphicon-zoom-out';
+		assert: Glyphicons off equals: 'glyphicon-off';
+		assert: Glyphicons signal equals: 'glyphicon-signal';
+		assert: Glyphicons cog equals: 'glyphicon-cog';
+		assert: Glyphicons trash equals: 'glyphicon-trash';
+		assert: Glyphicons home equals: 'glyphicon-home';
+		assert: Glyphicons file equals: 'glyphicon-file';
+		assert: Glyphicons time equals: 'glyphicon-time';
+		assert: Glyphicons road equals: 'glyphicon-road';
+		assert: Glyphicons downloadAlt equals: 'glyphicon-download-alt';
+		assert: Glyphicons download equals: 'glyphicon-download';
+		assert: Glyphicons upload equals: 'glyphicon-upload';
+		assert: Glyphicons inbox equals: 'glyphicon-inbox';
+		assert: Glyphicons playCircle equals: 'glyphicon-play-circle';
+		assert: Glyphicons repeat equals: 'glyphicon-repeat';
+		assert: Glyphicons refresh equals: 'glyphicon-refresh';
+		assert: Glyphicons listAlt equals: 'glyphicon-list-alt';
+		assert: Glyphicons lock equals: 'glyphicon-lock';
+		assert: Glyphicons flag equals: 'glyphicon-flag';
+		assert: Glyphicons headphones equals: 'glyphicon-headphones';
+		assert: Glyphicons volumeOff equals: 'glyphicon-volume-off';
+		assert: Glyphicons volumeDown equals: 'glyphicon-volume-down';
+		assert: Glyphicons volumeUp equals: 'glyphicon-volume-up';
+		assert: Glyphicons qrcode equals: 'glyphicon-qrcode';
+		assert: Glyphicons barcode equals: 'glyphicon-barcode';
+		assert: Glyphicons tag equals: 'glyphicon-tag';
+		assert: Glyphicons tags equals: 'glyphicon-tags';
+		assert: Glyphicons book equals: 'glyphicon-book';
+		assert: Glyphicons bookmark equals: 'glyphicon-bookmark';
+		assert: Glyphicons print equals: 'glyphicon-print';
+		assert: Glyphicons camera equals: 'glyphicon-camera';
+		assert: Glyphicons font equals: 'glyphicon-font';
+		assert: Glyphicons bold equals: 'glyphicon-bold';
+		assert: Glyphicons italic equals: 'glyphicon-italic';
+		assert: Glyphicons textHeight equals: 'glyphicon-text-height';
+		assert: Glyphicons textWidth equals: 'glyphicon-text-width';
+		assert: Glyphicons alignLeft equals: 'glyphicon-align-left';
+		assert: Glyphicons alignCenter equals: 'glyphicon-align-center';
+		assert: Glyphicons alignRight equals: 'glyphicon-align-right';
+		assert: Glyphicons alignJustify equals: 'glyphicon-align-justify';
+		assert: Glyphicons list equals: 'glyphicon-list';
+		assert: Glyphicons indentLeft equals: 'glyphicon-indent-left';
+		assert: Glyphicons indentRight equals: 'glyphicon-indent-right';
+		assert: Glyphicons facetimeVideo equals: 'glyphicon-facetime-video';
+		assert: Glyphicons picture equals: 'glyphicon-picture';
+		assert: Glyphicons mapMarker equals: 'glyphicon-map-marker';
+		assert: Glyphicons adjust equals: 'glyphicon-adjust';
+		assert: Glyphicons tint equals: 'glyphicon-tint';
+		assert: Glyphicons edit equals: 'glyphicon-edit';
+		assert: Glyphicons share equals: 'glyphicon-share';
+		assert: Glyphicons check equals: 'glyphicon-check'
+]
+
+{ #category : #tests }
+GlyphiconsTest >> testIcons2 [
+
+	self
+		assert: Glyphicons move equals: 'glyphicon-move';
+		assert: Glyphicons stepBackward equals: 'glyphicon-step-backward';
+		assert: Glyphicons fastBackward equals: 'glyphicon-fast-backward';
+		assert: Glyphicons backward equals: 'glyphicon-backward';
+		assert: Glyphicons play equals: 'glyphicon-play';
+		assert: Glyphicons pause equals: 'glyphicon-pause';
+		assert: Glyphicons stop equals: 'glyphicon-stop';
+		assert: Glyphicons forward equals: 'glyphicon-forward';
+		assert: Glyphicons fastForward equals: 'glyphicon-fast-forward';
+		assert: Glyphicons stepForward equals: 'glyphicon-step-forward';
+		assert: Glyphicons eject equals: 'glyphicon-eject';
+		assert: Glyphicons chevronLeft equals: 'glyphicon-chevron-left';
+		assert: Glyphicons chevronRight equals: 'glyphicon-chevron-right';
+		assert: Glyphicons plusSign equals: 'glyphicon-plus-sign';
+		assert: Glyphicons minusSign equals: 'glyphicon-minus-sign';
+		assert: Glyphicons removeSign equals: 'glyphicon-remove-sign';
+		assert: Glyphicons okSign equals: 'glyphicon-ok-sign';
+		assert: Glyphicons questionSign equals: 'glyphicon-question-sign';
+		assert: Glyphicons infoSign equals: 'glyphicon-info-sign';
+		assert: Glyphicons screenshot equals: 'glyphicon-screenshot';
+		assert: Glyphicons removeCircle equals: 'glyphicon-remove-circle';
+		assert: Glyphicons okCircle equals: 'glyphicon-ok-circle';
+		assert: Glyphicons banCircle equals: 'glyphicon-ban-circle';
+		assert: Glyphicons arrowLeft equals: 'glyphicon-arrow-left';
+		assert: Glyphicons arrowRight equals: 'glyphicon-arrow-right';
+		assert: Glyphicons arrowUp equals: 'glyphicon-arrow-up';
+		assert: Glyphicons arrowDown equals: 'glyphicon-arrow-down';
+		assert: Glyphicons shareAlt equals: 'glyphicon-share-alt';
+		assert: Glyphicons resizeFull equals: 'glyphicon-resize-full';
+		assert: Glyphicons resizeSmall equals: 'glyphicon-resize-small';
+		assert: Glyphicons exclamationSign equals: 'glyphicon-exclamation-sign';
+		assert: Glyphicons gift equals: 'glyphicon-gift';
+		assert: Glyphicons leaf equals: 'glyphicon-leaf';
+		assert: Glyphicons fire equals: 'glyphicon-fire';
+		assert: Glyphicons eyeOpen equals: 'glyphicon-eye-open';
+		assert: Glyphicons eyeClose equals: 'glyphicon-eye-close';
+		assert: Glyphicons warningSign equals: 'glyphicon-warning-sign';
+		assert: Glyphicons plane equals: 'glyphicon-plane';
+		assert: Glyphicons calendar equals: 'glyphicon-calendar';
+		assert: Glyphicons random equals: 'glyphicon-random';
+		assert: Glyphicons comment equals: 'glyphicon-comment';
+		assert: Glyphicons magnet equals: 'glyphicon-magnet';
+		assert: Glyphicons chevronUp equals: 'glyphicon-chevron-up';
+		assert: Glyphicons chevronDown equals: 'glyphicon-chevron-down';
+		assert: Glyphicons retweet equals: 'glyphicon-retweet';
+		assert: Glyphicons shoppingCart equals: 'glyphicon-shopping-cart';
+		assert: Glyphicons folderClose equals: 'glyphicon-folder-close';
+		assert: Glyphicons folderOpen equals: 'glyphicon-folder-open';
+		assert: Glyphicons resizeVertical equals: 'glyphicon-resize-vertical';
+		assert: Glyphicons resizeHorizontal equals: 'glyphicon-resize-horizontal';
+		assert: Glyphicons hdd equals: 'glyphicon-hdd';
+		assert: Glyphicons bullhorn equals: 'glyphicon-bullhorn';
+		assert: Glyphicons bell equals: 'glyphicon-bell';
+		assert: Glyphicons certificate equals: 'glyphicon-certificate';
+		assert: Glyphicons thumbsUp equals: 'glyphicon-thumbs-up';
+		assert: Glyphicons thumbsDown equals: 'glyphicon-thumbs-down';
+		assert: Glyphicons handRight equals: 'glyphicon-hand-right';
+		assert: Glyphicons handLeft equals: 'glyphicon-hand-left';
+		assert: Glyphicons handUp equals: 'glyphicon-hand-up';
+		assert: Glyphicons handDown equals: 'glyphicon-hand-down';
+		assert: Glyphicons circleArrowRight equals: 'glyphicon-circle-arrow-right';
+		assert: Glyphicons circleArrowLeft equals: 'glyphicon-circle-arrow-left';
+		assert: Glyphicons circleArrowUp equals: 'glyphicon-circle-arrow-up';
+		assert: Glyphicons circleArrowDown equals: 'glyphicon-circle-arrow-down';
+		assert: Glyphicons globe equals: 'glyphicon-globe';
+		assert: Glyphicons wrench equals: 'glyphicon-wrench';
+		assert: Glyphicons tasks equals: 'glyphicon-tasks';
+		assert: Glyphicons filter equals: 'glyphicon-filter';
+		assert: Glyphicons briefcase equals: 'glyphicon-briefcase';
+		assert: Glyphicons fullscreen equals: 'glyphicon-fullscreen';
+		assert: Glyphicons dashboard equals: 'glyphicon-dashboard';
+		assert: Glyphicons paperclip equals: 'glyphicon-paperclip';
+		assert: Glyphicons heartEmpty equals: 'glyphicon-heart-empty';
+		assert: Glyphicons link equals: 'glyphicon-link';
+		assert: Glyphicons phone equals: 'glyphicon-phone'
+]
+
+{ #category : #tests }
+GlyphiconsTest >> testIcons3 [
+
+	self
+		assert: Glyphicons pushpin equals: 'glyphicon-pushpin';
+		assert: Glyphicons usd equals: 'glyphicon-usd';
+		assert: Glyphicons gbp equals: 'glyphicon-gbp';
+		assert: Glyphicons sort equals: 'glyphicon-sort';
+		assert: Glyphicons sortByAlphabet equals: 'glyphicon-sort-by-alphabet';
+		assert: Glyphicons sortByAlphabetAlt equals: 'glyphicon-sort-by-alphabet-alt';
+		assert: Glyphicons sortByOrder equals: 'glyphicon-sort-by-order';
+		assert: Glyphicons sortByOrderAlt equals: 'glyphicon-sort-by-order-alt';
+		assert: Glyphicons sortByAttributes equals: 'glyphicon-sort-by-attributes';
+		assert: Glyphicons sortByAttributesAlt equals: 'glyphicon-sort-by-attributes-alt';
+		assert: Glyphicons unchecked equals: 'glyphicon-unchecked';
+		assert: Glyphicons expand equals: 'glyphicon-expand';
+		assert: Glyphicons collapseDown equals: 'glyphicon-collapse-down';
+		assert: Glyphicons collapseUp equals: 'glyphicon-collapse-up';
+		assert: Glyphicons logIn equals: 'glyphicon-log-in';
+		assert: Glyphicons flash equals: 'glyphicon-flash';
+		assert: Glyphicons logOut equals: 'glyphicon-log-out';
+		assert: Glyphicons newWindow equals: 'glyphicon-new-window';
+		assert: Glyphicons record equals: 'glyphicon-record';
+		assert: Glyphicons save equals: 'glyphicon-save';
+		assert: Glyphicons open equals: 'glyphicon-open';
+		assert: Glyphicons saved equals: 'glyphicon-saved';
+		assert: Glyphicons import equals: 'glyphicon-import';
+		assert: Glyphicons export equals: 'glyphicon-export';
+		assert: Glyphicons send equals: 'glyphicon-send';
+		assert: Glyphicons floppyDisk equals: 'glyphicon-floppy-disk';
+		assert: Glyphicons floppySaved equals: 'glyphicon-floppy-saved';
+		assert: Glyphicons floppyRemove equals: 'glyphicon-floppy-remove';
+		assert: Glyphicons floppySave equals: 'glyphicon-floppy-save';
+		assert: Glyphicons floppyOpen equals: 'glyphicon-floppy-open';
+		assert: Glyphicons creditCard equals: 'glyphicon-credit-card';
+		assert: Glyphicons transfer equals: 'glyphicon-transfer';
+		assert: Glyphicons cutlery equals: 'glyphicon-cutlery';
+		assert: Glyphicons header equals: 'glyphicon-header';
+		assert: Glyphicons compressed equals: 'glyphicon-compressed';
+		assert: Glyphicons earphone equals: 'glyphicon-earphone';
+		assert: Glyphicons phoneAlt equals: 'glyphicon-phone-alt';
+		assert: Glyphicons tower equals: 'glyphicon-tower';
+		assert: Glyphicons stats equals: 'glyphicon-stats';
+		assert: Glyphicons sdVideo equals: 'glyphicon-sd-video';
+		assert: Glyphicons hdVideo equals: 'glyphicon-hd-video';
+		assert: Glyphicons subtitles equals: 'glyphicon-subtitles';
+		assert: Glyphicons soundStereo equals: 'glyphicon-sound-stereo';
+		assert: Glyphicons soundDolby equals: 'glyphicon-sound-dolby';
+		assert: Glyphicons sound51 equals: 'glyphicon-sound-5-1';
+		assert: Glyphicons sound61 equals: 'glyphicon-sound-6-1';
+		assert: Glyphicons sound71 equals: 'glyphicon-sound-7-1';
+		assert: Glyphicons copyrightMark equals: 'glyphicon-copyright-mark';
+		assert: Glyphicons registrationMark equals: 'glyphicon-registration-mark';
+		assert: Glyphicons cloudDownload equals: 'glyphicon-cloud-download';
+		assert: Glyphicons cloudUpload equals: 'glyphicon-cloud-upload';
+		assert: Glyphicons treeConifer equals: 'glyphicon-tree-conifer';
+		assert: Glyphicons treeDeciduous equals: 'glyphicon-tree-deciduous';
+		assert: Glyphicons cd equals: 'glyphicon-cd';
+		assert: Glyphicons saveFile equals: 'glyphicon-save-file';
+		assert: Glyphicons openFile equals: 'glyphicon-open-file';
+		assert: Glyphicons levelUp equals: 'glyphicon-level-up';
+		assert: Glyphicons copy equals: 'glyphicon-copy';
+		assert: Glyphicons paste equals: 'glyphicon-paste';
+		assert: Glyphicons alert equals: 'glyphicon-alert';
+		assert: Glyphicons equalizer equals: 'glyphicon-equalizer';
+		assert: Glyphicons king equals: 'glyphicon-king';
+		assert: Glyphicons queen equals: 'glyphicon-queen';
+		assert: Glyphicons pawn equals: 'glyphicon-pawn';
+		assert: Glyphicons bishop equals: 'glyphicon-bishop';
+		assert: Glyphicons knight equals: 'glyphicon-knight';
+		assert: Glyphicons babyFormula equals: 'glyphicon-baby-formula';
+		assert: Glyphicons tent equals: 'glyphicon-tent';
+		assert: Glyphicons blackboard equals: 'glyphicon-blackboard';
+		assert: Glyphicons bed equals: 'glyphicon-bed';
+		assert: Glyphicons apple equals: 'glyphicon-apple';
+		assert: Glyphicons erase equals: 'glyphicon-erase';
+		assert: Glyphicons hourglass equals: 'glyphicon-hourglass';
+		assert: Glyphicons lamp equals: 'glyphicon-lamp';
+		assert: Glyphicons duplicate equals: 'glyphicon-duplicate'
+]
+
+{ #category : #tests }
+GlyphiconsTest >> testIcons4 [
+
+	self
+		assert: Glyphicons piggyBank equals: 'glyphicon-piggy-bank';
+		assert: Glyphicons scissors equals: 'glyphicon-scissors';
+		assert: Glyphicons bitcoin equals: 'glyphicon-bitcoin';
+		assert: Glyphicons btc equals: 'glyphicon-btc';
+		assert: Glyphicons xbt equals: 'glyphicon-xbt';
+		assert: Glyphicons yen equals: 'glyphicon-yen';
+		assert: Glyphicons jpy equals: 'glyphicon-jpy';
+		assert: Glyphicons ruble equals: 'glyphicon-ruble';
+		assert: Glyphicons rub equals: 'glyphicon-rub';
+		assert: Glyphicons scale equals: 'glyphicon-scale';
+		assert: Glyphicons iceLolly equals: 'glyphicon-ice-lolly';
+		assert: Glyphicons iceLollyTasted equals: 'glyphicon-ice-lolly-tasted';
+		assert: Glyphicons education equals: 'glyphicon-education';
+		assert: Glyphicons optionHorizontal equals: 'glyphicon-option-horizontal';
+		assert: Glyphicons optionVertical equals: 'glyphicon-option-vertical';
+		assert: Glyphicons menuHamburger equals: 'glyphicon-menu-hamburger';
+		assert: Glyphicons modalWindow equals: 'glyphicon-modal-window';
+		assert: Glyphicons oil equals: 'glyphicon-oil';
+		assert: Glyphicons grain equals: 'glyphicon-grain';
+		assert: Glyphicons sunglasses equals: 'glyphicon-sunglasses';
+		assert: Glyphicons textSize equals: 'glyphicon-text-size';
+		assert: Glyphicons textColor equals: 'glyphicon-text-color';
+		assert: Glyphicons textBackground equals: 'glyphicon-text-background';
+		assert: Glyphicons objectAlignTop equals: 'glyphicon-object-align-top';
+		assert: Glyphicons objectAlignBottom equals: 'glyphicon-object-align-bottom';
+		assert: Glyphicons objectAlignHorizontal equals: 'glyphicon-object-align-horizontal';
+		assert: Glyphicons objectAlignLeft equals: 'glyphicon-object-align-left';
+		assert: Glyphicons objectAlignVertical equals: 'glyphicon-object-align-vertical';
+		assert: Glyphicons objectAlignRight equals: 'glyphicon-object-align-right';
+		assert: Glyphicons triangleRight equals: 'glyphicon-triangle-right';
+		assert: Glyphicons triangleLeft equals: 'glyphicon-triangle-left';
+		assert: Glyphicons triangleBottom equals: 'glyphicon-triangle-bottom';
+		assert: Glyphicons triangleTop equals: 'glyphicon-triangle-top';
+		assert: Glyphicons console equals: 'glyphicon-console';
+		assert: Glyphicons superscript equals: 'glyphicon-superscript';
+		assert: Glyphicons subscript equals: 'glyphicon-subscript';
+		assert: Glyphicons menuLeft equals: 'glyphicon-menu-left';
+		assert: Glyphicons menuRight equals: 'glyphicon-menu-right';
+		assert: Glyphicons menuDown equals: 'glyphicon-menu-down';
+		assert: Glyphicons menuUp equals: 'glyphicon-menu-up'
+]

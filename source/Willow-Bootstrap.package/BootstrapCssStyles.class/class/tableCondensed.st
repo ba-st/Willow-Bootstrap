@@ -1,4 +1,0 @@
-Tables
-tableCondensed
-
-	^ 'table-condensed'

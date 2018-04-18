@@ -1,4 +1,0 @@
-Accessing
-globe
-
-	^'glyphicon-globe'

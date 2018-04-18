@@ -1,4 +1,0 @@
-Accessing
-save
-
-	^'glyphicon-save'

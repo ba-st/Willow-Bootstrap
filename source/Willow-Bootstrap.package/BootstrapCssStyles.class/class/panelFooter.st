@@ -1,4 +1,0 @@
-Panels
-panelFooter
-
-	^ 'panel-footer'

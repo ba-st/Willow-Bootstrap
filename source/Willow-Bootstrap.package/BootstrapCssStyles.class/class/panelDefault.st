@@ -1,4 +1,0 @@
-Panels
-panelDefault
-
-	^ 'panel-default'

@@ -1,4 +1,0 @@
-Forms
-hasFeedback
-
-	^ 'has-feedback'

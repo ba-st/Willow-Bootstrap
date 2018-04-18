@@ -1,1 +1,0 @@
-The tooltip plugin let's  you show or  hide tooltips, via data attributes or JavaScript
