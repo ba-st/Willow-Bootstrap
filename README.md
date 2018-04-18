@@ -1,5 +1,6 @@
 ![Logo](resources/logos/128x128.png) Willow-Bootstrap
 ======
+![GitHub release](https://img.shields.io/github/release/ba-st/Willow-Bootstrap.svg)
 [![Build Status](https://travis-ci.org/ba-st/Willow-Bootstrap.svg?branch=master)](https://travis-ci.org/ba-st/Willow-Bootstrap)
 [![Coverage Status](https://coveralls.io/repos/github/ba-st/Willow-Bootstrap/badge.svg?branch=master)](https://coveralls.io/github/ba-st/Willow-Bootstrap?branch=master)
 [![Javascript Dependency Status](https://david-dm.org/ba-st/Willow-Bootstrap.svg)](https://david-dm.org/ba-st/Willow-Bootstrap)
@@ -20,7 +21,7 @@ The documentation is licensed under a [Creative Commons Attribution-ShareAlike 4
 
 ### Get started!
 
-#### Pharo 5/6
+#### Pharo 6.1/7
 
 Open a Playground and evaluate:
 

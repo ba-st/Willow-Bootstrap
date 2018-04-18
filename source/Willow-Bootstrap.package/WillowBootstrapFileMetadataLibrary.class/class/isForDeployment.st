@@ -1,4 +1,0 @@
-Accessing
-isForDeployment
-
-	^true
