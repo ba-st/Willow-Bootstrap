@@ -1,4 +1,0 @@
-Buttons
-buttonExtraSmall
-
-	^ 'btn-xs'

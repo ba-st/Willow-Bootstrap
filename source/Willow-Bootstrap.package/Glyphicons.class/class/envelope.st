@@ -1,4 +1,0 @@
-Accessing
-envelope
-
-	^'glyphicon-envelope'

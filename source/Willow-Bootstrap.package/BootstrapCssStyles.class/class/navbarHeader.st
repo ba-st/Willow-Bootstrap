@@ -1,4 +1,0 @@
-Navigation
-navbarHeader
-
-	^ 'navbar-header'

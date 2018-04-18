@@ -1,4 +1,0 @@
-Accessing
-fire
-
-	^'glyphicon-fire'

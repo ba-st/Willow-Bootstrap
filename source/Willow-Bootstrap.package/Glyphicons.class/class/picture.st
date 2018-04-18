@@ -1,4 +1,0 @@
-Accessing
-picture
-
-	^'glyphicon-picture'

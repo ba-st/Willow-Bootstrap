@@ -1,1 +1,0 @@
-I'm a radio button group specifically designed to use the html structure required by Bootstrap.

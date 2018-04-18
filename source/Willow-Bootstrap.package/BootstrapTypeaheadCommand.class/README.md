@@ -1,1 +1,0 @@
-I'm a component command enabling Bootstrap Typeahead using the programmatic-API

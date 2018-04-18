@@ -1,4 +1,0 @@
-Tables
-tableSuccess
-
-	^ 'success'

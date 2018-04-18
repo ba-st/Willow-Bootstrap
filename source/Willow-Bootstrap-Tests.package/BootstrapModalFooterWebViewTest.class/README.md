@@ -1,1 +1,0 @@
-A BootstrapModalFooterTest is a test class for testing the behavior of BootstrapModalFooterWebView

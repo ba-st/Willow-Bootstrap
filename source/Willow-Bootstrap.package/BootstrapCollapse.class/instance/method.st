@@ -1,4 +1,0 @@
-private
-method
-
-	^ 'collapse'

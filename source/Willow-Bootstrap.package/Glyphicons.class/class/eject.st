@@ -1,4 +1,0 @@
-Accessing
-eject
-
-	^'glyphicon-eject'

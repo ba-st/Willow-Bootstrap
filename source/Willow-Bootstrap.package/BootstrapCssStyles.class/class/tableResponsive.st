@@ -1,4 +1,0 @@
-Tables
-tableResponsive
-
-	^ 'table-responsive'

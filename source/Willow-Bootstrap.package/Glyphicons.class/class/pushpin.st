@@ -1,4 +1,0 @@
-Accessing
-pushpin
-
-	^'glyphicon-pushpin'

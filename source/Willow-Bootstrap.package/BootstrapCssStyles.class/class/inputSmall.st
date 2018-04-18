@@ -1,4 +1,0 @@
-Forms
-inputSmall
-
-	^ 'input-sm'

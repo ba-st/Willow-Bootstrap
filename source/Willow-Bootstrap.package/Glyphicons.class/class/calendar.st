@@ -1,4 +1,0 @@
-Accessing
-calendar
-
-	^'glyphicon-calendar'

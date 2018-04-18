@@ -1,4 +1,0 @@
-Accessing
-earphone
-
-	^'glyphicon-earphone'

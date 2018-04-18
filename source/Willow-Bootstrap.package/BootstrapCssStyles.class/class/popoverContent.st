@@ -1,4 +1,0 @@
-Popover
-popoverContent
-
-	^ 'popover-content'

@@ -1,4 +1,0 @@
-Accessing
-euro
-
-	^'glyphicon-euro'

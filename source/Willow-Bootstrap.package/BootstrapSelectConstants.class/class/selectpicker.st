@@ -1,4 +1,0 @@
-Accessing - Classes
-selectpicker
-
-	^'selectpicker'

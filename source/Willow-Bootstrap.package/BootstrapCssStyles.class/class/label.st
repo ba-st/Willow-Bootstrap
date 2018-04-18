@@ -1,4 +1,0 @@
-Labels
-label
-
-	^ 'label'

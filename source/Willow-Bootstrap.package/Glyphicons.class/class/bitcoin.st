@@ -1,4 +1,0 @@
-Accessing
-bitcoin
-
-	^'glyphicon-bitcoin'

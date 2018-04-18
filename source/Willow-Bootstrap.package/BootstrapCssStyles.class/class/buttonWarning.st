@@ -1,4 +1,0 @@
-Buttons
-buttonWarning
-
-	^ 'btn-warning'

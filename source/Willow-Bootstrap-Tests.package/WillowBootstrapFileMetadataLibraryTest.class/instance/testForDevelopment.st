@@ -1,6 +1,0 @@
-tests-Accessing
-testForDevelopment
-
-	self
-		assert: WillowBootstrapFileMetadataLibrary forDeployment equals: WillowBootstrapFileMetadataLibrary;
-		assert: WillowBootstrapFileMetadataLibrary forDevelopment equals: WillowBootstrapFileMetadataLibrary

@@ -1,4 +1,0 @@
-Alerts
-alertInfo
-
-	^ 'alert-info'

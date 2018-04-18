@@ -1,4 +1,0 @@
-Accessing
-king
-
-	^'glyphicon-king'

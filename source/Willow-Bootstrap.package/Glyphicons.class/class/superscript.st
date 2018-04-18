@@ -1,4 +1,0 @@
-Accessing
-superscript
-
-	^'glyphicon-superscript'

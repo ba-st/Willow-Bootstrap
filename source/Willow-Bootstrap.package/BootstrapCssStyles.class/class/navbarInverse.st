@@ -1,4 +1,0 @@
-Navigation
-navbarInverse
-
-	^ 'navbar-inverse'

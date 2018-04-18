@@ -1,4 +1,0 @@
-Accessing
-alert
-
-	^'glyphicon-alert'

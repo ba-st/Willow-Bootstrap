@@ -1,4 +1,0 @@
-Accessing
-home
-
-	^'glyphicon-home'

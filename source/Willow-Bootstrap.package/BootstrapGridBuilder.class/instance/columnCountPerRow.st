@@ -1,4 +1,0 @@
-private
-columnCountPerRow
-
-	^ columnSpec size

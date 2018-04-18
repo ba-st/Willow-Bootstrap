@@ -1,4 +1,0 @@
-private
-navigationTypeClass
-
-	^ BootstrapCssStyles navPills

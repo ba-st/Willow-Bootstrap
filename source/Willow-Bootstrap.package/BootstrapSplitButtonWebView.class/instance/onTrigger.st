@@ -1,4 +1,0 @@
-configuring
-onTrigger
-
-	^ mainButton onTrigger

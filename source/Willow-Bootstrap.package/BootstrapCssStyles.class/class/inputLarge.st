@@ -1,4 +1,0 @@
-Forms
-inputLarge
-
-	^ 'input-lg'

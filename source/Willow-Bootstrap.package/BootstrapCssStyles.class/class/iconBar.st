@@ -1,4 +1,0 @@
-Navigation
-iconBar
-
-	^ 'icon-bar'

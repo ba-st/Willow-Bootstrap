@@ -1,4 +1,0 @@
-Accessing
-cog
-
-	^'glyphicon-cog'

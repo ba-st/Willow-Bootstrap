@@ -1,4 +1,0 @@
-Modal
-modalHeader
-
-	^ 'modal-header'

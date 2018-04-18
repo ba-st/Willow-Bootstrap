@@ -1,4 +1,0 @@
-Forms
-hasWarning
-
-	^ 'has-warning'

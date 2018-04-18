@@ -1,4 +1,0 @@
-Navigation
-navbarToggle
-
-	^ 'navbar-toggle'

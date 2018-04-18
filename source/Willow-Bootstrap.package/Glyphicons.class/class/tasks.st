@@ -1,4 +1,0 @@
-Accessing
-tasks
-
-	^'glyphicon-tasks'

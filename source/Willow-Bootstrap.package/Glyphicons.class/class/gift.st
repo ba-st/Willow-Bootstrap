@@ -1,4 +1,0 @@
-Accessing
-gift
-
-	^'glyphicon-gift'

@@ -1,1 +1,0 @@
-The modal plugin toggles your hidden content on demand, via data attributes or JavaScript

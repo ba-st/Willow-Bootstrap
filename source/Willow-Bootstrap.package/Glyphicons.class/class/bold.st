@@ -1,4 +1,0 @@
-Accessing
-bold
-
-	^'glyphicon-bold'

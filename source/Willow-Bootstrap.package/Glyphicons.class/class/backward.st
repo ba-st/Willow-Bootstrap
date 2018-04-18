@@ -1,4 +1,0 @@
-Accessing
-backward
-
-	^'glyphicon-backward'

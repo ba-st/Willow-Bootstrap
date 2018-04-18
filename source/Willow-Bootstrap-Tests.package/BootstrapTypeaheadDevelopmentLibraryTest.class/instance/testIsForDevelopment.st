@@ -1,4 +1,0 @@
-tests
-testIsForDevelopment
-
-	self assert: BootstrapTypeaheadLibrary forDevelopment isForDevelopment

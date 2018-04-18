@@ -1,4 +1,0 @@
-Accessing
-list
-
-	^'glyphicon-list'

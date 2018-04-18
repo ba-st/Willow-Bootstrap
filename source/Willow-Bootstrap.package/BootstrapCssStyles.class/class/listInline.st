@@ -1,4 +1,0 @@
-Typography
-listInline
-
-	^ 'list-inline'

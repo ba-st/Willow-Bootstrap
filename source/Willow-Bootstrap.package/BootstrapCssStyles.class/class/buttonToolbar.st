@@ -1,4 +1,0 @@
-Buttons
-buttonToolbar
-
-	^ 'btn-toolbar'

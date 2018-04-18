@@ -1,4 +1,0 @@
-Panels
-panelCollapse
-
-	^ 'panel-collapse'

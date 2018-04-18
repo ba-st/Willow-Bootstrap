@@ -1,4 +1,0 @@
-Accessing
-file
-
-	^'glyphicon-file'

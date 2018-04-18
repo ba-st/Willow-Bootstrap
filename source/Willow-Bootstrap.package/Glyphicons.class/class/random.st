@@ -1,4 +1,0 @@
-Accessing
-random
-
-	^'glyphicon-random'

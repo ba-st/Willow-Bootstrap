@@ -1,4 +1,0 @@
-Forms
-radioInline
-
-	^ 'radio-inline'

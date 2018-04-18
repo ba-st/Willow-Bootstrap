@@ -1,4 +1,0 @@
-Typography
-textUppercase
-
-	^ 'text-uppercase'

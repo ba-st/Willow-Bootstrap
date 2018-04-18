@@ -1,1 +1,0 @@
-I provide access to bootstrap-datepicker constants

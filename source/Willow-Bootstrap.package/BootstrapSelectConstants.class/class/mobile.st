@@ -1,4 +1,0 @@
-Data-API
-mobile
-
-	^ 'mobile'

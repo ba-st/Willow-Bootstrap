@@ -1,4 +1,0 @@
-tests
-testForDevelopment
-
-	self assert: BootstrapSelectLibrary forDevelopment equals: BootstrapSelectDevelopmentLibrary

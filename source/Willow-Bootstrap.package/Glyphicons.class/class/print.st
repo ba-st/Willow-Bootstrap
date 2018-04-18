@@ -1,4 +1,0 @@
-Accessing
-print
-
-	^'glyphicon-print'

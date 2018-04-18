@@ -1,4 +1,0 @@
-*Willow-Bootstrap
-bootstrap
-
-	^ BootstrapConstants

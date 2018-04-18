@@ -1,4 +1,0 @@
-Tables
-table
-
-	^ 'table'

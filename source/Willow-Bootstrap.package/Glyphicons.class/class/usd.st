@@ -1,4 +1,0 @@
-Accessing
-usd
-
-	^'glyphicon-usd'

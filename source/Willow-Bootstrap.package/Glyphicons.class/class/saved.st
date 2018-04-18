@@ -1,4 +1,0 @@
-Accessing
-saved
-
-	^'glyphicon-saved'

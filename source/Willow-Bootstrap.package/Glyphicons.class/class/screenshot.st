@@ -1,4 +1,0 @@
-Accessing
-screenshot
-
-	^'glyphicon-screenshot'

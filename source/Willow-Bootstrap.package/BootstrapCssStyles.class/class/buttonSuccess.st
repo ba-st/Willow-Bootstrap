@@ -1,4 +1,0 @@
-Buttons
-buttonSuccess
-
-	^ 'btn-success'

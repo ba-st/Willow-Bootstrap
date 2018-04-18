@@ -1,4 +1,0 @@
-Navigation
-navbarNavigation
-
-	^ 'navbar-nav'

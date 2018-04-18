@@ -1,4 +1,0 @@
-Accessing
-bishop
-
-	^'glyphicon-bishop'

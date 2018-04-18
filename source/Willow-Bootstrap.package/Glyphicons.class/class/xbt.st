@@ -1,4 +1,0 @@
-Accessing
-xbt
-
-	^'glyphicon-xbt'

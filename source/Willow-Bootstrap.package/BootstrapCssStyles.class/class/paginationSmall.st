@@ -1,4 +1,0 @@
-Pagination
-paginationSmall
-
-	^ 'pagination-sm'

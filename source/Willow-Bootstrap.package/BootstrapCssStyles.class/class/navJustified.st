@@ -1,4 +1,0 @@
-Navigation
-navJustified
-
-	^ 'nav-justified'

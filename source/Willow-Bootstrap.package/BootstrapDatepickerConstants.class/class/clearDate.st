@@ -1,4 +1,0 @@
-Accessing - Events
-clearDate
-
-	^ 'clearDate'

@@ -1,4 +1,0 @@
-Methods
-mobile
-
-	functionName := 'mobile'

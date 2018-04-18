@@ -1,4 +1,0 @@
-Accessing
-move
-
-	^'glyphicon-move'

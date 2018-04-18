@@ -1,4 +1,0 @@
-Accessing
-off
-
-	^'glyphicon-off'

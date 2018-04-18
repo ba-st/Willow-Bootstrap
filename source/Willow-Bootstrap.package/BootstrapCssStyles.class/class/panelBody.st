@@ -1,4 +1,0 @@
-Panels
-panelBody
-
-	^ 'panel-body'

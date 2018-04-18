@@ -1,1 +1,0 @@
-I provide easy access to the glyhicons names

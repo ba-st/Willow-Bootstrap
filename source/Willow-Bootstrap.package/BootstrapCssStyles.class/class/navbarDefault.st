@@ -1,4 +1,0 @@
-Navigation
-navbarDefault
-
-	^ 'navbar-default'

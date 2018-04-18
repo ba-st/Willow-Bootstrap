@@ -1,4 +1,0 @@
-Buttons
-buttonBlock
-
-	^ 'btn-block'

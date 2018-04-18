@@ -1,4 +1,0 @@
-Accessing
-font
-
-	^'glyphicon-font'

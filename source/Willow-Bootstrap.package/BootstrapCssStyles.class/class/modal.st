@@ -1,4 +1,0 @@
-Modal
-modal
-
-	^ 'modal'

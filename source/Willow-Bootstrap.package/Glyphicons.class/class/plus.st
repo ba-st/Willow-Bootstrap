@@ -1,4 +1,0 @@
-Accessing
-plus
-
-	^'glyphicon-plus'

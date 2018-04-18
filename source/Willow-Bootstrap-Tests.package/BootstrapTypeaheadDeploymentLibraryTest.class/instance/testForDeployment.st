@@ -1,4 +1,0 @@
-tests
-testForDeployment
-
-	self assert: BootstrapTypeaheadLibrary forDeployment equals: BootstrapTypeaheadDeploymentLibrary

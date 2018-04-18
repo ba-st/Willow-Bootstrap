@@ -1,4 +1,0 @@
-Forms
-checkboxInline
-
-	^ 'checkbox-inline'

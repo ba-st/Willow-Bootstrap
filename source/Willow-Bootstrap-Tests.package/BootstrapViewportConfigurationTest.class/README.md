@@ -1,1 +1,0 @@
-A BootstrapViewportConfigurationTest is a test class for testing the behavior of BootstrapViewportConfiguration

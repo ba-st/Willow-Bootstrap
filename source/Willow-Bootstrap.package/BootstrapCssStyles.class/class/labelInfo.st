@@ -1,4 +1,0 @@
-Labels
-labelInfo
-
-	^ 'label-info'

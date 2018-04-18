@@ -1,4 +1,0 @@
-Navigation
-navbarText
-
-	^ 'navbar-text'

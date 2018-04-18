@@ -1,4 +1,0 @@
-Accessing
-pencil
-
-	^'glyphicon-pencil'

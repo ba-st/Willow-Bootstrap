@@ -1,4 +1,0 @@
-Accessing
-paste
-
-	^'glyphicon-paste'

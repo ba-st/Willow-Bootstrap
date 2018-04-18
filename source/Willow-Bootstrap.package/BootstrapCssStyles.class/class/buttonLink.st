@@ -1,4 +1,0 @@
-Buttons
-buttonLink
-
-	^ 'btn-link'

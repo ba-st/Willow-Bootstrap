@@ -1,4 +1,0 @@
-Methods
-clearDates
-
-	functionName := 'clearDates'

@@ -1,4 +1,0 @@
-Accessing
-share
-
-	^'glyphicon-share'

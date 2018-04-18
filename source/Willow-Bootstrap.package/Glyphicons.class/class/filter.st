@@ -1,4 +1,0 @@
-Accessing
-filter
-
-	^'glyphicon-filter'

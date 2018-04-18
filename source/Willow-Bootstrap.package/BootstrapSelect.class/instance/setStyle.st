@@ -1,4 +1,0 @@
-Methods
-setStyle
-
-	functionName := 'setStyle'

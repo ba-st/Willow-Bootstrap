@@ -1,6 +1,0 @@
-tests
-testVersionCompatibility
-
-	self
-		assert: BootstrapDatepickerDeploymentLibrary version equals: BootstrapDatepickerDevelopmentLibrary version;
-		assert: BootstrapDatepickerDeploymentLibrary version equals: BootstrapDatepickerOnlineLibrary default version

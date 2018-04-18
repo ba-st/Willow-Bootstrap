@@ -1,4 +1,0 @@
-Accessing
-pawn
-
-	^'glyphicon-pawn'

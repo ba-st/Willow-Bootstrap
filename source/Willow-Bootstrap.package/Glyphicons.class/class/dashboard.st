@@ -1,4 +1,0 @@
-Accessing
-dashboard
-
-	^'glyphicon-dashboard'

@@ -1,4 +1,0 @@
-Methods
-hide
-
-	functionName := 'hide'

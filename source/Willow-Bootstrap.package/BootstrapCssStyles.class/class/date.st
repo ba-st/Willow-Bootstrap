@@ -1,4 +1,0 @@
-Accessing
-date
-
-	^ BootstrapDatepickerConstants date

@@ -1,4 +1,0 @@
-Alerts
-alertDismissible
-
-	^ 'alert-dismissible'

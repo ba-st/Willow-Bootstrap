@@ -1,4 +1,0 @@
-private
-navigationTypeClass
-
-	^ BootstrapCssStyles navTabs

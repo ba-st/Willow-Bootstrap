@@ -1,4 +1,0 @@
-Accessing
-barcode
-
-	^'glyphicon-barcode'

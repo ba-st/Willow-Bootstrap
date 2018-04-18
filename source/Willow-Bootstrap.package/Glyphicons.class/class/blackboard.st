@@ -1,4 +1,0 @@
-Accessing
-blackboard
-
-	^'glyphicon-blackboard'

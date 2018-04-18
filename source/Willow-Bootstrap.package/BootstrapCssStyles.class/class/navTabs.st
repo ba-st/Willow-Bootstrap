@@ -1,4 +1,0 @@
-Navigation
-navTabs
-
-	^ 'nav-tabs'

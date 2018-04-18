@@ -1,4 +1,0 @@
-Buttons
-buttonSmall
-
-	^ 'btn-sm'

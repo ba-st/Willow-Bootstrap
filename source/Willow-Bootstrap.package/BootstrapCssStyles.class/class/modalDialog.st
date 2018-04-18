@@ -1,4 +1,0 @@
-Modal
-modalDialog
-
-	^ 'modal-dialog'

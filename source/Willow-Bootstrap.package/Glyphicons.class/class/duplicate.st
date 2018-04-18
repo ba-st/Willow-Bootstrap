@@ -1,4 +1,0 @@
-Accessing
-duplicate
-
-	^'glyphicon-duplicate'

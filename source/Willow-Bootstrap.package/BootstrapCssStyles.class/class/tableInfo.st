@@ -1,4 +1,0 @@
-Tables
-tableInfo
-
-	^ 'info'

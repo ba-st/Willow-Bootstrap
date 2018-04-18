@@ -1,4 +1,0 @@
-Accessing
-yen
-
-	^'glyphicon-yen'

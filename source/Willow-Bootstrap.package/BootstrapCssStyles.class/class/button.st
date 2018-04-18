@@ -1,4 +1,0 @@
-Buttons
-button
-
-	^ 'btn'

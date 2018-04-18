@@ -1,4 +1,0 @@
-Alerts
-alertLink
-
-	^ 'alert-link'

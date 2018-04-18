@@ -1,4 +1,0 @@
-Methods
-update
-
-	functionName := 'update'

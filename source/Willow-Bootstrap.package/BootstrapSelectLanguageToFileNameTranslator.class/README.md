@@ -1,1 +1,0 @@
-I'm a translator capable of taking an instance of WALocale and return the file name to be used in the libraries

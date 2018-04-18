@@ -1,4 +1,0 @@
-Accessing
-jpy
-
-	^'glyphicon-jpy'

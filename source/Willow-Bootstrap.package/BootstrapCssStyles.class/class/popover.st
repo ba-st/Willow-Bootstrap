@@ -1,4 +1,0 @@
-Popover
-popover
-
-	^ 'popover'

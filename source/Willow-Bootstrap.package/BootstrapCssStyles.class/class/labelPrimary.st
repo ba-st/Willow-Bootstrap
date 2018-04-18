@@ -1,4 +1,0 @@
-Labels
-labelPrimary
-
-	^ 'label-primary'

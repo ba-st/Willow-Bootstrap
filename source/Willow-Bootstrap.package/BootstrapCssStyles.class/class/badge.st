@@ -1,4 +1,0 @@
-Labels
-badge
-
-	^ 'badge'

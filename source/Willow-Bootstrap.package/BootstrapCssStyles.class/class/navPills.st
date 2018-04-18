@@ -1,4 +1,0 @@
-Navigation
-navPills
-
-	^ 'nav-pills'

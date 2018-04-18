@@ -1,0 +1,83 @@
+"
+A BootstrapDatepickerDevelopmentLibraryTest is a test class for testing the behavior of BootstrapDatepickerDevelopmentLibrary
+"
+Class {
+	#name : #BootstrapDatepickerDevelopmentLibraryTest,
+	#superclass : #WARenderingTest,
+	#category : 'Willow-Bootstrap-Tests-Datepicker'
+}
+
+{ #category : #tests }
+BootstrapDatepickerDevelopmentLibraryTest >> testDeployFiles [
+
+	self
+		useFileTestingPlatformDuring: [ BootstrapDatepickerDevelopmentLibrary default deployFiles.
+			self
+				assert: GRPlatform current createdFolders
+					equals: #('bootstrap-datepicker-1.7.0' 'bootstrap-datepicker-1.7.0/css' 'bootstrap-datepicker-1.7.0/js' 'bootstrap-datepicker-1.7.0/locales');
+				assert: GRPlatform current createdFiles
+					equals:
+					#('bootstrap-datepicker-1.7.0/css/bootstrap-datepicker3.css' 'bootstrap-datepicker-1.7.0/js/bootstrap-datepicker.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ar-tn.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ar.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.az.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.bg.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.bn.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.br.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.bs.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ca.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.cs.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.cy.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.da.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.de.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.el.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.en-AU.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.en-CA.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.en-GB.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.en-IE.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.en-NZ.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.en-ZA.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.eo.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.es.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.et.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.eu.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.fa.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.fi.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.fo.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.fr-CH.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.fr.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.gl.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.he.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.hi.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.hr.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.hu.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.hy.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.id.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.is.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.it-CH.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.it.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ja.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ka.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.kh.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.kk.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.km.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ko.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.kr.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.lt.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.lv.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.me.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.mk.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.mn.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ms.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.nb.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.nl-BE.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.nl.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.no.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.oc.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.pl.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.pt-BR.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.pt.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ro.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.rs-latin.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.rs.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ru.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.si.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.sk.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.sl.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.sq.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.sr-latin.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.sr.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.sv.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.sw.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.ta.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.tg.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.th.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.tr.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.uk.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.uz-cyrl.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.uz-latn.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.vi.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.zh-CN.js' 'bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.zh-TW.js') ]
+]
+
+{ #category : #tests }
+BootstrapDatepickerDevelopmentLibraryTest >> testForDevelopment [
+
+	self assert: BootstrapDatepickerLibrary forDevelopment equals: BootstrapDatepickerDevelopmentLibrary
+]
+
+{ #category : #tests }
+BootstrapDatepickerDevelopmentLibraryTest >> testIsForDevelopment [
+
+	self
+		assert: BootstrapDatepickerDevelopmentLibrary isForDevelopment;
+		deny: BootstrapDatepickerDevelopmentLibrary isForDeployment
+]
+
+{ #category : #tests }
+BootstrapDatepickerDevelopmentLibraryTest >> testUpdateRoot [
+
+	| html |
+
+	html := WAHtmlCanvas builder
+		fullDocument: true;
+		rootBlock: [ :root | BootstrapDatepickerDevelopmentLibrary default updateRoot: root ];
+		render: [ :canvas |  ].
+
+	self
+		assert: html
+		equals:
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-datepicker-1.7.0/css/bootstrap-datepicker3.css"/><script type="text/javascript" src="/files/bootstrap-datepicker-1.7.0/js/bootstrap-datepicker.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+]
+
+{ #category : #tests }
+BootstrapDatepickerDevelopmentLibraryTest >> testUpdateRootWithLocale [
+
+	| html |
+
+	html := WAHtmlCanvas builder
+		fullDocument: true;
+		rootBlock: [ :root | (BootstrapDatepickerDevelopmentLibrary using: (WALocale fromString: 'en-NZ')) updateRoot: root ];
+		render: [ :canvas |  ].
+
+	self
+		assert: html
+		equals:
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-datepicker-1.7.0/css/bootstrap-datepicker3.css"/><script type="text/javascript" src="/files/bootstrap-datepicker-1.7.0/js/bootstrap-datepicker.js"></script><script type="text/javascript" src="/files/bootstrap-datepicker-1.7.0/locales/bootstrap-datepicker.en-NZ.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+]
+
+{ #category : #tests }
+BootstrapDatepickerDevelopmentLibraryTest >> testUpdateRootWithUnsupportedLocale [
+
+	| html |
+
+	html := WAHtmlCanvas builder
+		fullDocument: true;
+		rootBlock: [ :root | (BootstrapDatepickerDevelopmentLibrary using: (WALocale fromString: 'xx-XX')) updateRoot: root ];
+		render: [ :canvas |  ].
+
+	self
+		assert: html
+		equals:
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-datepicker-1.7.0/css/bootstrap-datepicker3.css"/><script type="text/javascript" src="/files/bootstrap-datepicker-1.7.0/js/bootstrap-datepicker.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+]

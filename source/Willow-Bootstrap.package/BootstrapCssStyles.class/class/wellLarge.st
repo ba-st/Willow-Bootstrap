@@ -1,4 +1,0 @@
-Wells
-wellLarge
-
-	^ 'well-lg'

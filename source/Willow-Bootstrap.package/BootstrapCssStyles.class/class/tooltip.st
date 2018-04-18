@@ -1,4 +1,0 @@
-Tooltips
-tooltip
-
-	^ 'tooltip'

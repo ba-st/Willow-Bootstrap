@@ -1,1 +1,0 @@
-I represent the header in a Bootstrap modal. I can include the dismiss button or not.

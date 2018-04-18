@@ -1,4 +1,0 @@
-Configuring
-onCloseTrigger
-
-	^ closeButton onTrigger

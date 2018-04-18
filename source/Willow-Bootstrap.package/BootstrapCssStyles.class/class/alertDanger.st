@@ -1,4 +1,0 @@
-Alerts
-alertDanger
-
-	^ 'alert-danger'

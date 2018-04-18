@@ -1,4 +1,0 @@
-Forms
-formControl
-
-	^ 'form-control'

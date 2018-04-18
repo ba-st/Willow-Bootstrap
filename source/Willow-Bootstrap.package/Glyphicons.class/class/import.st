@@ -1,4 +1,0 @@
-Accessing
-import
-
-	^'glyphicon-import'

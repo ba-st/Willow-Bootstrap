@@ -1,4 +1,0 @@
-Accessing
-eur
-
-	^'glyphicon-eur'

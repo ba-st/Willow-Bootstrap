@@ -1,4 +1,0 @@
-Accessing
-ok
-
-	^'glyphicon-ok'

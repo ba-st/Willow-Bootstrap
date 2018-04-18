@@ -1,4 +1,0 @@
-Forms
-hasError
-
-	^ 'has-error'

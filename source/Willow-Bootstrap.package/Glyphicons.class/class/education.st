@@ -1,4 +1,0 @@
-Accessing
-education
-
-	^'glyphicon-education'

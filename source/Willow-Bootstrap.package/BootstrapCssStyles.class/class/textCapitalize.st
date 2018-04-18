@@ -1,4 +1,0 @@
-Typography
-textCapitalize
-
-	^ 'text-capitalize'

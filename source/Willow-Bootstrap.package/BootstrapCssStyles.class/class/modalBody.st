@@ -1,4 +1,0 @@
-Modal
-modalBody
-
-	^ 'modal-body'

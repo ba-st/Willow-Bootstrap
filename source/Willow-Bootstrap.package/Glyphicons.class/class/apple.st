@@ -1,4 +1,0 @@
-Accessing
-apple
-
-	^'glyphicon-apple'

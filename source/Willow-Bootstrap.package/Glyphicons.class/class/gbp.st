@@ -1,4 +1,0 @@
-Accessing
-gbp
-
-	^'glyphicon-gbp'
