@@ -1,12 +1,12 @@
 {
   "name": "willow-bootstrap",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "author": "Buenos Aires Smalltalk contributors",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "3.3.7",
-    "bootstrap-select": "1.12.4",
-    "bootstrap-datepicker": "1.7.0",
+    "bootstrap-select": "1.13.0",
+    "bootstrap-datepicker": "1.8.0",
     "bootstrap-3-typeahead": "4.0.2"
   }
   ,
