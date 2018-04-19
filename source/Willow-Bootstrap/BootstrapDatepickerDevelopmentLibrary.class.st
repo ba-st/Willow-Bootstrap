@@ -9,8 +9,6 @@ Class {
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> cssbootstrapdatepicker3Css [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'css/bootstrap-datepicker3.css'
 		mimeType: (WAMimeType main: 'text' sub: 'css')
@@ -20,10 +18,8 @@ BootstrapDatepickerDevelopmentLibrary >> cssbootstrapdatepicker3Css [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> cssbootstrapdatepicker3CssContent [
-
-	<ignoreForCoverage>
 	^ '/*!
- * Datepicker for Bootstrap v1.7.0 (https://github.com/uxsolutions/bootstrap-datepicker)
+ * Datepicker for Bootstrap v1.8.0 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
  */
@@ -700,7 +696,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   min-width: 16px;
   padding: 4px 5px;
   line-height: 1.42857143;
-  text-shadow: 0 1px 0 #fff;
   border-width: 1px 0;
   margin-left: -5px;
   margin-right: -5px;
@@ -710,8 +705,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-datepicker.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -721,17 +714,15 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
-
-	<ignoreForCoverage>
 	^ '/*!
- * Datepicker for Bootstrap v1.7.0 (https://github.com/uxsolutions/bootstrap-datepicker)
+ * Datepicker for Bootstrap v1.8.0 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
  */
 
 (function(factory){
-    if (typeof define === "function" && define.amd) {
-        define(["jquery"], factory);
+    if (typeof define === ''function'' && define.amd) {
+        define([''jquery''], factory);
     } else if (typeof exports === ''object'') {
         factory(require(''jquery''));
     } else {
@@ -1866,10 +1857,6 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 				nextIsDisabled,
 				factor = 1;
 			switch (this.viewMode){
-				case 0:
-					prevIsDisabled = year <= startYear && month <= startMonth;
-					nextIsDisabled = year >= endYear && month >= endMonth;
-					break;
 				case 4:
 					factor *= 10;
 					/* falls through */
@@ -1880,8 +1867,12 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 					factor *= 10;
 					/* falls through */
 				case 1:
-					prevIsDisabled = Math.floor(year / factor) * factor <= startYear;
-					nextIsDisabled = Math.floor(year / factor) * factor + factor >= endYear;
+					prevIsDisabled = Math.floor(year / factor) * factor < startYear;
+					nextIsDisabled = Math.floor(year / factor) * factor + factor > endYear;
+					break;
+				case 0:
+					prevIsDisabled = year <= startYear && month < startMonth;
+					nextIsDisabled = year >= endYear && month > endMonth;
 					break;
 			}
 
@@ -2255,6 +2246,11 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 			});
 			$.each(this.pickers, function(i, p){
 				p.setRange(range);
+			});
+		},
+		clearDates: function(){
+			$.each(this.pickers, function(i, p){
+				p.clearDates();
 			});
 		},
 		dateUpdated: function(e){
@@ -2723,7 +2719,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 
 	/* DATEPICKER VERSION
 	 * =================== */
-	$.fn.datepicker.version = ''1.7.0'';
+	$.fn.datepicker.version = ''1.8.0'';
 
 	$.fn.datepicker.deprecated = function(msg){
 		var console = window.console;
@@ -2758,8 +2754,6 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ar.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -2769,8 +2763,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Arabic translation for bootstrap-datepicker
  * Mohammed Alshehri <alshehri866@gmail.com>
@@ -2791,8 +2783,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ar-tn.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -2802,8 +2792,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Arabic-Tunisia translation for bootstrap-datepicker
  * Souhaieb Besbes <besbes.souhaieb@gmail.com>
@@ -2824,8 +2812,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.az.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -2835,8 +2821,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJsContent [
-
-	<ignoreForCoverage>
 	^ '// Azerbaijani
 ;(function($){
     $.fn.datepicker.dates[''az''] = {
@@ -2854,8 +2838,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bg.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -2865,8 +2847,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Bulgarian translation for bootstrap-datepicker
  * Apostol Apostolov <apostol.s.apostolov@gmail.com>
@@ -2886,8 +2866,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bn.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -2897,8 +2875,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Bengali (Bangla) translation for bootstrap-datepicker
  * Karim Khan <kkhancse91@gmail.com>
@@ -2923,8 +2899,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.br.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -2934,8 +2908,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Breton translation for bootstrap-datepicker
  * Gwenn Meynier <tornoz@laposte.net>
@@ -2959,8 +2931,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bs.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -2970,8 +2940,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Bosnian translation for bootstrap-datepicker
  */
@@ -2992,8 +2960,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ca.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3003,8 +2969,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Catalan translation for bootstrap-datepicker
  * J. Garcia <jogaco.en@gmail.com>
@@ -3028,8 +2992,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.cs.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3039,8 +3001,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Czech translation for bootstrap-datepicker
  * Matěj Koubík <matej@koubik.name>
@@ -3057,7 +3017,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJsContent [
 		clear: "Vymazat",
 		monthsTitle: "Měsíc",
 		weekStart: 1,
-		format: "dd.m.yyyy"
+		format: "dd.mm.yyyy"
 	};
 }(jQuery));
 '
@@ -3065,8 +3025,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.cy.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3076,8 +3034,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Welsh translation for bootstrap-datepicker
  * S. Morris <s.morris@bangor.ac.uk>
@@ -3097,8 +3053,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.da.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3108,8 +3062,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Danish translation for bootstrap-datepicker
  * Christian Pedersen <http://github.com/chripede>
@@ -3125,7 +3077,8 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJsContent [
 		today: "I Dag",
 		weekStart: 1,
 		clear: "Nulstil",
-        format: "dd/mm/yyyy"
+        format: "dd/mm/yyyy",
+        monthsTitle:"Måneder"
 	};
 }(jQuery));
 '
@@ -3133,8 +3086,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.de.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3144,8 +3095,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * German translation for bootstrap-datepicker
  * Sam Zurcher <sam@orelias.ch>
@@ -3169,8 +3118,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.el.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3180,8 +3127,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Greek translation for bootstrap-datepicker
  */
@@ -3203,8 +3148,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-AU.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3214,8 +3157,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Australian English translation for bootstrap-datepicker
  * Steve Chapman <steven.p.chapman@gmail.com>
@@ -3239,8 +3180,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-CA.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3250,8 +3189,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Canadian English translation for bootstrap-datepicker
  * Mike Nacey <mnacey@gmail.com>
@@ -3275,8 +3212,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-GB.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3286,8 +3221,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * British English translation for bootstrap-datepicker
  * Xavier Dutreilh <xavier@dutreilh.com>
@@ -3311,8 +3244,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-IE.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3322,8 +3253,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Irish English translation for bootstrap-datepicker
  */
@@ -3346,8 +3275,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-NZ.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3357,8 +3284,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * New Zealand English translation for bootstrap-datepicker
  */
@@ -3381,8 +3306,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-ZA.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3392,8 +3315,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * South African English translation for bootstrap-datepicker
  */
@@ -3416,8 +3337,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.eo.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3427,8 +3346,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Esperanto translation for bootstrap-datepicker
  * Emmanuel Debanne <https://github.com/debanne>
@@ -3451,8 +3368,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.es.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3462,8 +3377,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Spanish translation for bootstrap-datepicker
  * Bruno Bonamin <bruno.bonamin@gmail.com>
@@ -3487,8 +3400,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.et.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3498,8 +3409,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Estonian translation for bootstrap-datepicker
  * Ando Roots <https://github.com/anroots>
@@ -3523,8 +3432,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.eu.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3534,8 +3441,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Basque translation for bootstrap-datepicker
  * Arkaitz Etxeberria <kondi80@gmail.com>
@@ -3560,8 +3465,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fa.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3571,8 +3474,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Persian translation for bootstrap-datepicker
  * Mostafa Rokooie <mostafa.rokooie@gmail.com>
@@ -3595,8 +3496,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fi.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3606,8 +3505,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Finnish translation for bootstrap-datepicker
  * Jaakko Salonen <https://github.com/jsalonen>
@@ -3630,8 +3527,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fo.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3641,8 +3536,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Faroese translation for bootstrap-datepicker
  * Theodor Johannesen <http://github.com/theodorjohannesen>
@@ -3663,8 +3556,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fr-CH.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3674,8 +3565,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * French (Switzerland) translation for bootstrap-datepicker
  * Christoph Jossi <c.jossi@ascami.ch>
@@ -3702,8 +3591,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fr.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3713,8 +3600,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * French translation for bootstrap-datepicker
  * Nico Mollet <nico.mollet@gmail.com>
@@ -3738,8 +3623,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.gl.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3749,8 +3632,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJsContent [
-
-	<ignoreForCoverage>
 	^ ';(function($){
 	$.fn.datepicker.dates[''gl''] = {
 		days: ["Domingo", "Luns", "Martes", "Mércores", "Xoves", "Venres", "Sábado"],
@@ -3769,8 +3650,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.he.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3780,8 +3659,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Hebrew translation for bootstrap-datepicker
  * Sagie Maoz <sagie@maoz.info>
@@ -3802,8 +3679,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hi.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3813,8 +3688,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Hindi translation for bootstrap-datepicker
  * Visar Uruqi <visar.uruqi@gmail.com>
@@ -3838,8 +3711,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hr.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3849,8 +3720,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Croatian localisation
  */
@@ -3869,8 +3738,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hu.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3880,8 +3747,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Hungarian translation for bootstrap-datepicker
  * Sotus László <lacisan@gmail.com>
@@ -3905,8 +3770,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hy.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3916,8 +3779,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Armenian translation for bootstrap-datepicker
  * Hayk Chamyan <hamshen@gmail.com>
@@ -3941,8 +3802,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.id.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3952,8 +3811,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Bahasa translation for bootstrap-datepicker
  * Azwar Akbar <azwar.akbar@gmail.com>
@@ -3974,8 +3831,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.is.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -3985,8 +3840,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Icelandic translation for bootstrap-datepicker
  * Hinrik Örn Sigurðsson <hinrik.sig@gmail.com>
@@ -4006,8 +3859,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.it-CH.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4017,8 +3868,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Italian (Switzerland) translation for bootstrap-datepicker
  * Christoph Jossi <c.jossi@ascami.ch>
@@ -4044,8 +3893,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.it.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4055,8 +3902,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Italian translation for bootstrap-datepicker
  * Enrico Rubboli <rubboli@gmail.com>
@@ -4080,8 +3925,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ja.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4091,8 +3934,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Japanese translation for bootstrap-datepicker
  * Norio Suzuki <https://github.com/suzuki/>
@@ -4115,8 +3956,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ka.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4126,8 +3965,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Georgian translation for bootstrap-datepicker
  * Levan Melikishvili <levani0101@yahoo.com>
@@ -4150,8 +3987,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kh.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4161,8 +3996,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Cambodia (Khmer) translation for bootstrap-datepicker
  * Lytay TOUCH <lytaytouch@gmail.com>
@@ -4189,8 +4022,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kk.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4200,8 +4031,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Kazakh translation for bootstrap-datepicker
  * Yerzhan Tolekov <era.tolekov@gmail.com>
@@ -4222,8 +4051,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.km.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4233,8 +4060,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Khmer translation for bootstrap-datepicker
  * This is the Updated Version of: https://github.com/uxsolutions/bootstrap-datepicker/blob/71308d42cce9524284c50c6fac50422d1790ac0f/js/locales/bootstrap-datepicker.kh.js
@@ -4255,8 +4080,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ko.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4266,8 +4089,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Korean translation for bootstrap-datepicker
  * This is a port from https://github.com/moment/moment/blob/develop/src/locale/ko.js
@@ -4291,8 +4112,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kr.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4302,8 +4121,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Korean translation for bootstrap-datepicker
  * Gu Youn <http://github.com/guyoun>
@@ -4328,8 +4145,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.lt.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4339,8 +4154,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Lithuanian translation for bootstrap-datepicker
  * Šarūnas Gliebus <ssharunas@yahoo.co.uk>
@@ -4365,8 +4178,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.lv.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4376,8 +4187,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Latvian translation for bootstrap-datepicker
  * Artis Avotins <artis@apit.lv>
@@ -4390,6 +4199,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJsContent [
         daysMin: ["Sv", "Pr", "Ot", "Tr", "Ce", "Pk", "Se"],
         months: ["Janvāris", "Februāris", "Marts", "Aprīlis", "Maijs", "Jūnijs", "Jūlijs", "Augusts", "Septembris", "Oktobris", "Novembris", "Decembris"],
         monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jūn", "Jūl", "Aug", "Sep", "Okt", "Nov", "Dec"],
+        monthsTitle: "Mēneši",
         today: "Šodien",
         clear: "Nodzēst",
         weekStart: 1
@@ -4400,8 +4210,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.me.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4411,8 +4219,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Montenegrin translation for bootstrap-datepicker
  * Miodrag Nikač <miodrag@restartit.me>
@@ -4435,8 +4241,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.mk.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4446,8 +4250,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Macedonian translation for bootstrap-datepicker
  * Marko Aleksic <psybaron@gmail.com>
@@ -4468,8 +4270,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.mn.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4479,8 +4279,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Mongolian translation for bootstrap-datepicker
  * Andrey Torsunov <andrey.torsunov@gmail.com>
@@ -4503,8 +4301,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ms.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4514,8 +4310,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Malay translation for bootstrap-datepicker
  * Ateman Faiz <noorulfaiz@gmail.com>
@@ -4532,17 +4326,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJsContent [
 	};
 }(jQuery));
 '
-]
-
-{ #category : #'uploaded metadata' }
-BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernbJs [
-
-	<ignoreForCoverage>
-	^ WAFileLibraryResource
-		filepath: 'locales/bootstrap-datepicker.nb.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickernbJsContent)
 ]
 
 { #category : #uploaded }
@@ -4569,8 +4352,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernbJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.nl-BE.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4580,8 +4361,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Belgium-Dutch translation for bootstrap-datepicker
  * Julien Poulin <poulin_julien@hotmail.com>
@@ -4605,8 +4384,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.nl.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4616,8 +4393,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Dutch translation for bootstrap-datepicker
  * Reinier Goltstein <mrgoltstein@gmail.com>
@@ -4641,8 +4416,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.no.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4652,19 +4425,19 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
- *  Norwegian translation for bootstrap-datepicker
- **/
+ * Norwegian translation for bootstrap-datepicker
+ * George Gooding <george@nettsentrisk.no>
+ */
 ;(function($){
   $.fn.datepicker.dates[''no''] = {
-    days: [''Søndag'', ''Mandag'', ''Tirsdag'', ''Onsdag'', ''Torsdag'', ''Fredag'', ''Lørdag''],
-    daysShort: [''Søn'', ''Man'', ''Tir'', ''Ons'', ''Tor'', ''Fre'', ''Lør''],
-    daysMin: [''Sø'', ''Ma'', ''Ti'', ''On'', ''To'', ''Fr'', ''Lø''],
-    months: [''Januar'', ''Februar'', ''Mars'', ''April'', ''Mai'', ''Juni'', ''Juli'', ''August'', ''September'', ''Oktober'', ''November'', ''Desember''],
-    monthsShort: [''Jan'', ''Feb'', ''Mar'', ''Apr'', ''Mai'', ''Jun'', ''Jul'', ''Aug'', ''Sep'', ''Okt'', ''Nov'', ''Des''],
-    today: ''I dag'',
+    days: [''søndag'', ''mandag'', ''tirsdag'', ''onsdag'', ''torsdag'', ''fredag'', ''lørdag''],
+    daysShort: [''søn'', ''man'', ''tir'', ''ons'', ''tor'', ''fre'', ''lør''],
+    daysMin: [''sø'', ''ma'', ''ti'', ''on'', ''to'', ''fr'', ''lø''],
+    months: [''januar'', ''februar'', ''mars'', ''april'', ''mai'', ''juni'', ''juli'', ''august'', ''september'', ''oktober'', ''vovember'', ''desember''],
+    monthsShort: [''jan'', ''feb'', ''mar'', ''apr'', ''mai'', ''jun'', ''jul'', ''aug'', ''sep'', ''okt'', ''nov'', ''des''],
+    today: ''i dag'',
+    monthsTitle: ''Måneder'',
     clear: ''Nullstill'',
     weekStart: 1,
     format: ''dd.mm.yyyy''
@@ -4675,8 +4448,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.oc.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4686,8 +4457,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Occitan translation for bootstrap-datepicker
  */
@@ -4710,8 +4479,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pl.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4721,8 +4488,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Polish translation for bootstrap-datepicker
  * Robert <rtpm@gazeta.pl>
@@ -4745,8 +4510,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pt-BR.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4756,8 +4519,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Brazilian translation for bootstrap-datepicker
  * Cauan Cabral <cauan@radig.com.br>
@@ -4780,8 +4541,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pt.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4791,8 +4550,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Portuguese translation for bootstrap-datepicker
  * Original code: Cauan Cabral <cauan@radig.com.br>
@@ -4816,8 +4573,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ro.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4827,8 +4582,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Romanian translation for bootstrap-datepicker
  * Cristian Vasile <cristi.mie@gmail.com>
@@ -4851,8 +4604,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.rs.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4862,8 +4613,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Serbian cyrillic translation for bootstrap-datepicker
  * Bojan Milosavlević <milboj@gmail.com>
@@ -4889,8 +4638,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.rs-latin.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4900,8 +4647,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Serbian latin translation for bootstrap-datepicker
  * Bojan Milosavlević <milboj@gmail.com>
@@ -4927,8 +4672,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJsCont
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ru.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4938,8 +4681,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Russian translation for bootstrap-datepicker
  * Victor Taranenko <darwin@snowdale.com>
@@ -4963,8 +4704,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.si.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -4974,8 +4713,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Sinhala translation for bootstrap-datepicker
  * Chanaka Fernando <chanaka.fernando@hotmail.com>
@@ -4999,8 +4736,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sk.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5010,8 +4745,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Slovak translation for bootstrap-datepicker
  * Marek Lichtner <marek@licht.sk>
@@ -5035,8 +4768,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sl.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5046,8 +4777,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Slovene translation for bootstrap-datepicker
  * Gregor Rudolf <gregor.rudolf@gmail.com>
@@ -5068,8 +4797,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sq.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5079,8 +4806,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Albanian translation for bootstrap-datepicker
  * Tomor Pupovci <http://www.github.com/ttomor>
@@ -5101,8 +4826,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sr.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5112,8 +4835,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Serbian cyrillic translation for bootstrap-datepicker
  * Bojan Milosavlević <milboj@gmail.com>
@@ -5135,8 +4856,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sr-latin.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5146,8 +4865,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Serbian latin translation for bootstrap-datepicker
  * Bojan Milosavlević <milboj@gmail.com>
@@ -5169,8 +4886,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJsCont
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sv.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5180,19 +4895,17 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Swedish translation for bootstrap-datepicker
  * Patrik Ragnarsson <patrik@starkast.net>
  */
 ;(function($){
 	$.fn.datepicker.dates[''sv''] = {
-		days: ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"],
-		daysShort: ["Sön", "Mån", "Tis", "Ons", "Tor", "Fre", "Lör"],
-		daysMin: ["Sö", "Må", "Ti", "On", "To", "Fr", "Lö"],
-		months: ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"],
-		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
+		days: ["söndag", "måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag"],
+		daysShort: ["sön", "mån", "tis", "ons", "tor", "fre", "lör"],
+		daysMin: ["sö", "må", "ti", "on", "to", "fr", "lö"],
+		months: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"],
+		monthsShort: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"],
 		today: "Idag",
 		format: "yyyy-mm-dd",
 		weekStart: 1,
@@ -5204,8 +4917,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sw.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5215,8 +4926,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Swahili translation for bootstrap-datepicker
  * Edwin Mugendi <https://github.com/edwinmugendi>
@@ -5237,8 +4946,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ta.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5248,8 +4955,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Tamil translation for bootstrap-datepicker
  * Abubacker Siddik A <abuabdul86@hotmail.com>
@@ -5273,8 +4978,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.tg.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5284,8 +4987,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Tajik (cyrillic) translation for bootstrap-datepicker
  * Bakhtiyor Bahritidinov <i@bakhtiyor.tj>
@@ -5310,8 +5011,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.th.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5321,8 +5020,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Thai translation for bootstrap-datepicker
  * Suchau Jiraprapot <seroz24@gmail.com>
@@ -5341,9 +5038,39 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJsContent [
 ]
 
 { #category : #'uploaded metadata' }
-BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJs [
+BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertkJs [
+	^ WAFileLibraryResource
+		filepath: 'locales/bootstrap-datepicker.tk.js'
+		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertkJsContent)
+]
 
-	<ignoreForCoverage>
+{ #category : #uploaded }
+BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertkJsContent [
+	^ '/**
+ * Turkmen translation for bootstrap-datepicker
+ * N''Bayramberdiyev <nbayramberdiyev@outlook.com>
+ */
+;(function($){
+	$.fn.datepicker.dates[''tk''] = {
+		days: ["Ýekşenbe", "Duşenbe", "Sişenbe", "Çarşenbe", "Penşenbe", "Anna", "Şenbe"],
+		daysShort: ["Ýek", "Duş", "Siş", "Çar", "Pen", "Ann", "Şen"],
+		daysMin: ["Ýe", "Du", "Si", "Ça", "Pe", "An", "Şe"],
+		months: ["Ýanwar", "Fewral", "Mart", "Aprel", "Maý", "Iýun", "Iýul", "Awgust", "Sentýabr", "Oktýabr", "Noýabr", "Dekabr"],
+		monthsShort: ["Ýan", "Few", "Mar", "Apr", "Maý", "Iýn", "Iýl", "Awg", "Sen", "Okt", "Noý", "Dek"],
+		today: "Bu gün",
+		monthsTitle: "Aýlar",
+		clear: "Aýyr",
+		weekStart: 1,
+		format: "dd.mm.yyyy"
+	};
+}(jQuery));
+'
+]
+
+{ #category : #'uploaded metadata' }
+BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.tr.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5353,8 +5080,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Turkish translation for bootstrap-datepicker
  * Serkan Algur <kaisercrazy_2@hotmail.com>
@@ -5378,8 +5103,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uk.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5389,8 +5112,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Ukrainian translation for bootstrap-datepicker
  * Igor Polynets
@@ -5413,8 +5134,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uz-cyrl.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5424,8 +5143,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Uzbek latin translation for bootstrap-datepicker
  * Kakhramonov Javlonbek <kakjavlon@gmail.com>
@@ -5449,8 +5166,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJsConte
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uz-latn.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5460,8 +5175,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Uzbek latin translation for bootstrap-datepicker
  * Kakhramonov Javlonbek <kakjavlon@gmail.com>
@@ -5485,8 +5198,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJsConte
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.vi.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5496,8 +5207,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Vietnamese translation for bootstrap-datepicker
  * An Vo <https://github.com/anvoz/>
@@ -5519,8 +5228,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.zh-CN.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5530,8 +5237,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Simplified Chinese translation for bootstrap-datepicker
  * Yuan Cheung <advanimal@gmail.com>
@@ -5555,8 +5260,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJsContent
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhTWJs [
-
-	<ignoreForCoverage>
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.zh-TW.js'
 		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
@@ -5566,8 +5269,6 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhTWJs [
 
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhTWJsContent [
-
-	<ignoreForCoverage>
 	^ '/**
  * Traditional Chinese translation for bootstrap-datepicker
  * Rung-Sheng Jang <daniel@i-trend.co.cc>
