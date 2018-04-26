@@ -22,11 +22,11 @@ WillowBootstrapFileMetadataLibraryTest >> testCssContent [
 WillowBootstrapFileMetadataLibraryTest >> testDeployFiles [
 
 	self
-		useFileTestingPlatformDuring: [ WillowBootstrapFileMetadataLibrary default deployFiles.
-			self
-				assert: GRPlatform current createdFolders equals: #('willow-bootstrap-8.0.0' 'willow-bootstrap-8.0.0/css' 'willow-bootstrap-8.0.0/js');
-				assert: GRPlatform current createdFiles equals: #('willow-bootstrap-8.0.0/css/willow-bootstrap.css' 'willow-bootstrap-8.0.0/js/willow-bootstrap.js') ]
-
+		assertFileDeploymentOf: WillowBootstrapFileMetadataLibrary default
+		createsAsFolders: #('willow-bootstrap-8.0.0' 'willow-bootstrap-8.0.0/css' 'willow-bootstrap-8.0.0/js')
+		andFileContentsMatching:
+			{('willow-bootstrap-8.0.0/css/willow-bootstrap.css' -> 'ac56a8ae26202553d89bd1246e6631e7440fda84').
+			('willow-bootstrap-8.0.0/js/willow-bootstrap.js' -> 'f6a952e7149bb03d6f767b9523aed49b20372222')}
 ]
 
 { #category : #'tests-Accessing' }
