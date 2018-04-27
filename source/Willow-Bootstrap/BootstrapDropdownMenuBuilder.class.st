@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'containerBuildingCommand'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #Configuring }

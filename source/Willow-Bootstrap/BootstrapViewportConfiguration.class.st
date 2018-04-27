@@ -8,7 +8,7 @@ Class {
 		'selector',
 		'padding'
 	],
-	#category : 'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-Plugins'
 }
 
 { #category : #initialization }

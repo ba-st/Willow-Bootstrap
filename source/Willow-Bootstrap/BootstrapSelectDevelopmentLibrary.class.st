@@ -4,7 +4,7 @@ I'm a WALibary serving the files in source form, suitable for development
 Class {
 	#name : #BootstrapSelectDevelopmentLibrary,
 	#superclass : #BootstrapSelectLibrary,
-	#category : 'Willow-Bootstrap-Select'
+	#category : #'Willow-Bootstrap-Select'
 }
 
 { #category : #'uploaded metadata' }

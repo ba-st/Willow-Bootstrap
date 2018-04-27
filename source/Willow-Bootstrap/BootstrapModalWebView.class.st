@@ -9,7 +9,7 @@ Class {
 		'dialog',
 		'header'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #'Instance Creation' }

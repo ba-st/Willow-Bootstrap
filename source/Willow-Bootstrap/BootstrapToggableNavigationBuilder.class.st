@@ -8,7 +8,7 @@ Class {
 		'headers',
 		'contents'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #private }

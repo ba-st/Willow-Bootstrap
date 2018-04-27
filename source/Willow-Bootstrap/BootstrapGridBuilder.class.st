@@ -11,7 +11,7 @@ Class {
 		'columnBreakpointBlock',
 		'contents'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #Configuring }

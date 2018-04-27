@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'locale'
 	],
-	#category : 'Willow-Bootstrap-Select'
+	#category : #'Willow-Bootstrap-Select'
 }
 
 { #category : #'instance creation' }

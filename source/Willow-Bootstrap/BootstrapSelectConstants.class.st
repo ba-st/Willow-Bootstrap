@@ -4,7 +4,7 @@ This class provides access to several constants
 Class {
 	#name : #BootstrapSelectConstants,
 	#superclass : #Object,
-	#category : 'Willow-Bootstrap-Select'
+	#category : #'Willow-Bootstrap-Select'
 }
 
 { #category : #'Data-API' }

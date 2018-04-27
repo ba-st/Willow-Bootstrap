@@ -11,7 +11,7 @@ Class {
 		'labelCommand',
 		'inputCommand'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #'instance creation' }

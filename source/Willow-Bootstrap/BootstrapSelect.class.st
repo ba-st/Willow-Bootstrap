@@ -4,7 +4,7 @@ I'm a JQueryPlugin implementing  the bootstrap-select programmatic API
 Class {
 	#name : #BootstrapSelect,
 	#superclass : #BootstrapPlugin,
-	#category : 'Willow-Bootstrap-Select'
+	#category : #'Willow-Bootstrap-Select'
 }
 
 { #category : #Options }

@@ -4,7 +4,7 @@ I'm a component command enabling bootstrap-select
 Class {
 	#name : #BootstrapSelectCommand,
 	#superclass : #WebComponentCommand,
-	#category : 'Willow-Bootstrap-Frontend'
+	#category : #'Willow-Bootstrap-Frontend'
 }
 
 { #category : #processing }

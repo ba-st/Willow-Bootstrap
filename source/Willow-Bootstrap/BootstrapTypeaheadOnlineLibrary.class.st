@@ -4,7 +4,7 @@ I'm a WALibary serving the files from the official CDN.
 Class {
 	#name : #BootstrapTypeaheadOnlineLibrary,
 	#superclass : #WAOnlineLibrary,
-	#category : 'Willow-Bootstrap-Typeahead'
+	#category : #'Willow-Bootstrap-Typeahead'
 }
 
 { #category : #Updating }

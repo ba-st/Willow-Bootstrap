@@ -4,7 +4,7 @@ I'm a deployment library for Bootstrap Datepicker
 Class {
 	#name : #BootstrapDatepickerDeploymentLibrary,
 	#superclass : #BootstrapDatepickerLibrary,
-	#category : 'Willow-Bootstrap-Datepicker'
+	#category : #'Willow-Bootstrap-Datepicker'
 }
 
 { #category : #'uploaded metadata' }

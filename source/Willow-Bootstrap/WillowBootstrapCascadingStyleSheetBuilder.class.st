@@ -4,7 +4,7 @@ I provides some CSS required for the integration to work correctly.
 Class {
 	#name : #WillowBootstrapCascadingStyleSheetBuilder,
 	#superclass : #ReflectiveCascadingStyleSheetBuilder,
-	#category : 'Willow-Bootstrap-Libraries'
+	#category : #'Willow-Bootstrap-Libraries'
 }
 
 { #category : #Styling }

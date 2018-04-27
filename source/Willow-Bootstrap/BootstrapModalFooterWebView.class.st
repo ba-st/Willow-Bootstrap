@@ -8,7 +8,7 @@ Class {
 		'closeButton',
 		'buttons'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #Building }

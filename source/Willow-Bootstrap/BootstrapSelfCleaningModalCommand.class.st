@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'scriptCommand'
 	],
-	#category : 'Willow-Bootstrap-Frontend'
+	#category : #'Willow-Bootstrap-Frontend'
 }
 
 { #category : #processing }

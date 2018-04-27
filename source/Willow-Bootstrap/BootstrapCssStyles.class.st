@@ -4,7 +4,7 @@ All the Bootstrap specific CSS classes
 Class {
 	#name : #BootstrapCssStyles,
 	#superclass : #Object,
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #Buttons }

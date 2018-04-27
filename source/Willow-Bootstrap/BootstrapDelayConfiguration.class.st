@@ -8,7 +8,7 @@ Class {
 		'millisecondCountToShow',
 		'millisecondCountToHide'
 	],
-	#category : 'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-Plugins'
 }
 
 { #category : #initialization }

@@ -4,7 +4,7 @@ Add dropdown menus to nearly anything with this simple plugin, including the nav
 Class {
 	#name : #BootstrapDropdown,
 	#superclass : #BootstrapPlugin,
-	#category : 'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-Plugins'
 }
 
 { #category : #private }
