@@ -8,7 +8,7 @@ Class {
 		'title',
 		'dismissButtonOptional'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #'private - Instance Creation' }

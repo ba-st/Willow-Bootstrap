@@ -4,7 +4,7 @@ Add quick, dynamic pills functionality to transition through panes of local cont
 Class {
 	#name : #BootstrapToggablePillsBuilder,
 	#superclass : #BootstrapToggableNavigationBuilder,
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #adding }

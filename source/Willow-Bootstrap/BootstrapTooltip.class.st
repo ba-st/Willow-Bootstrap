@@ -4,7 +4,7 @@ The tooltip plugin let's  you show or  hide tooltips, via data attributes or Jav
 Class {
 	#name : #BootstrapTooltip,
 	#superclass : #BootstrapPlugin,
-	#category : 'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-Plugins'
 }
 
 { #category : #Options }

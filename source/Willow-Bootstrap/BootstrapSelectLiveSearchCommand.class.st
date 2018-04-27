@@ -9,7 +9,7 @@ Class {
 		'placeholderOptional',
 		'searchStyle'
 	],
-	#category : 'Willow-Bootstrap-Frontend'
+	#category : #'Willow-Bootstrap-Frontend'
 }
 
 { #category : #'Instance Creation' }

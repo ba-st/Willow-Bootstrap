@@ -4,7 +4,7 @@ Add quick, dynamic tab functionality to transition through panes of local conten
 Class {
 	#name : #BootstrapToggableTabsBuilder,
 	#superclass : #BootstrapToggableNavigationBuilder,
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #Configuring }

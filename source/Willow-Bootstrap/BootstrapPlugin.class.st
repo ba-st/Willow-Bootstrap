@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'functionName'
 	],
-	#category : 'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-Plugins'
 }
 
 { #category : #private }

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'container'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #'Instance Creation' }

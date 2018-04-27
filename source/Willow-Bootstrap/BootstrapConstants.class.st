@@ -4,7 +4,7 @@ Bootstrap specific constants
 Class {
 	#name : #BootstrapConstants,
 	#superclass : #Object,
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #Roles }

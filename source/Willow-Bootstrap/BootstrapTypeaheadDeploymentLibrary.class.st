@@ -4,7 +4,7 @@ I'm a WALibary serving the files in minified form, suitable for deployment
 Class {
 	#name : #BootstrapTypeaheadDeploymentLibrary,
 	#superclass : #BootstrapTypeaheadLibrary,
-	#category : 'Willow-Bootstrap-Typeahead'
+	#category : #'Willow-Bootstrap-Typeahead'
 }
 
 { #category : #'uploaded metadata' }

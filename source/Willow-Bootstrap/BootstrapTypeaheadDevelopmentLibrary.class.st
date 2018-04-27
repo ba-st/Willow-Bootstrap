@@ -4,7 +4,7 @@ I'm a WALibary serving the files in source form, suitable for development
 Class {
 	#name : #BootstrapTypeaheadDevelopmentLibrary,
 	#superclass : #BootstrapTypeaheadLibrary,
-	#category : 'Willow-Bootstrap-Typeahead'
+	#category : #'Willow-Bootstrap-Typeahead'
 }
 
 { #category : #'uploaded metadata' }

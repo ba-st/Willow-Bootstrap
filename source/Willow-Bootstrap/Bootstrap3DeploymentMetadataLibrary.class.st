@@ -4,7 +4,7 @@ I'm a WALibary serving the files in source form, suitable for deployment
 Class {
 	#name : #Bootstrap3DeploymentMetadataLibrary,
 	#superclass : #Bootstrap3MetadataLibrary,
-	#category : 'Willow-Bootstrap-Libraries'
+	#category : #'Willow-Bootstrap-Libraries'
 }
 
 { #category : #'uploaded metadata' }

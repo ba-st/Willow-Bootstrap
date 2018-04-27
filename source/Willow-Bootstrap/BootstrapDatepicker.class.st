@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'arguments'
 	],
-	#category : 'Willow-Bootstrap-Datepicker'
+	#category : #'Willow-Bootstrap-Datepicker'
 }
 
 { #category : #private }

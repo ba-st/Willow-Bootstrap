@@ -10,7 +10,7 @@ Class {
 		'brandView',
 		'navbarContent'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #'Instance Creation' }
@@ -66,9 +66,7 @@ BootstrapNavigationBar >> renderContentOn: aCanvas [
 	nav
 		with: [ aCanvas div
 				class: containerClass;
-				with: [ "We need that the container have assigned an id before the header is rendered"
-					navbarContent identifyIn: aCanvas.
-					self renderNavigationBarHeaderOn: aCanvas.
+				with: [ self renderNavigationBarHeaderOn: aCanvas.
 					aCanvas render: navbarContent ] ]
 ]
 
@@ -77,10 +75,13 @@ BootstrapNavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 
 	aCanvas div
 		class: BootstrapCssStyles navbarHeader;
-		with: [ aCanvas
+		with: [ 
+			navbarContent identifyIn: aCanvas.
+			aCanvas
 				render: (BootstrapHamburgerButton targeting: navbarContent identifier);
 				render:
 					(self componentSupplier
 						asynchronicLinkLabeled: brandView
-						applying: [ :anchor :constants | (anchor setAttribute: constants bootstrap role to: constants bootstrap button) + anchor addClass bootstrap navbarBrand ]) ]
+						applying:
+							[ :anchor :constants | (anchor setAttribute: constants bootstrap role to: constants bootstrap button) + anchor addClass bootstrap navbarBrand ]) ]
 ]

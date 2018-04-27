@@ -6,7 +6,7 @@ Popovers whose both title and content are zero-length are never displayed.
 Class {
 	#name : #BootstrapPopover,
 	#superclass : #BootstrapPlugin,
-	#category : 'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-Plugins'
 }
 
 { #category : #Options }

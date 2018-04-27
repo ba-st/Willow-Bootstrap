@@ -4,7 +4,7 @@ I provide access to bootstrap-datepicker constants
 Class {
 	#name : #BootstrapDatepickerConstants,
 	#superclass : #Object,
-	#category : 'Willow-Bootstrap-Datepicker'
+	#category : #'Willow-Bootstrap-Datepicker'
 }
 
 { #category : #'Accessing - Data-API' }

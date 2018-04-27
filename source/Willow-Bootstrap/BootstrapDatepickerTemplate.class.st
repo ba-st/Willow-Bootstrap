@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'options'
 	],
-	#category : 'Willow-Bootstrap-Datepicker'
+	#category : #'Willow-Bootstrap-Datepicker'
 }
 
 { #category : #'Instance Creation' }

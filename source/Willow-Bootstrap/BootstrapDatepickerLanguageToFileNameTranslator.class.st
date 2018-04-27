@@ -4,7 +4,7 @@ I'm a translator capable of taking an instance of WALocale and return the file n
 Class {
 	#name : #BootstrapDatepickerLanguageToFileNameTranslator,
 	#superclass : #GRObject,
-	#category : 'Willow-Bootstrap-Datepicker'
+	#category : #'Willow-Bootstrap-Datepicker'
 }
 
 { #category : #Accessing }

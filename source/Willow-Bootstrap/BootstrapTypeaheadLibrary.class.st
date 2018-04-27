@@ -4,7 +4,7 @@ I'm an abstract library for Bootstrap Typeahead
 Class {
 	#name : #BootstrapTypeaheadLibrary,
 	#superclass : #WADeploymentAwareFileMetadataLibrary,
-	#category : 'Willow-Bootstrap-Typeahead'
+	#category : #'Willow-Bootstrap-Typeahead'
 }
 
 { #category : #Accessing }

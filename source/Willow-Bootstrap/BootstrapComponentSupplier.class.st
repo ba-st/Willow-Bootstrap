@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'bootstrapLibraries'
 	],
-	#category : 'Willow-Bootstrap-Frontend'
+	#category : #'Willow-Bootstrap-Frontend'
 }
 
 { #category : #'Instance Creation' }

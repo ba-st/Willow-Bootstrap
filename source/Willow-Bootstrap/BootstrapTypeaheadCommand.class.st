@@ -8,7 +8,7 @@ Class {
 		'scriptCommand',
 		'searchResults'
 	],
-	#category : 'Willow-Bootstrap-Frontend'
+	#category : #'Willow-Bootstrap-Frontend'
 }
 
 { #category : #private }

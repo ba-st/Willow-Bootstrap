@@ -11,7 +11,7 @@ Class {
 		'additionalFooterButtons',
 		'dialogCommand'
 	],
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #Configuring }

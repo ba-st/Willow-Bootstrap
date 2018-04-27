@@ -4,7 +4,7 @@ I provide easy access to the glyhicons names
 Class {
 	#name : #Glyphicons,
 	#superclass : #Object,
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #Accessing }

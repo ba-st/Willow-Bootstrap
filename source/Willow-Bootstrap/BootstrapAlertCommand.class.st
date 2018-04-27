@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'classificationCommand'
 	],
-	#category : 'Willow-Bootstrap-Frontend'
+	#category : #'Willow-Bootstrap-Frontend'
 }
 
 { #category : #'private - Instance Creation' }

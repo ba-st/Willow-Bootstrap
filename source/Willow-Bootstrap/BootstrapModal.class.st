@@ -4,7 +4,7 @@ The modal plugin toggles your hidden content on demand, via data attributes or J
 Class {
 	#name : #BootstrapModal,
 	#superclass : #BootstrapPlugin,
-	#category : 'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-Plugins'
 }
 
 { #category : #Options }

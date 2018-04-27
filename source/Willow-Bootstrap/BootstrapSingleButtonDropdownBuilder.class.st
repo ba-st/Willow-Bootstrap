@@ -4,7 +4,7 @@ I'm a builder for turning a button into a dropdown toggle with some basic markup
 Class {
 	#name : #BootstrapSingleButtonDropdownBuilder,
 	#superclass : #BootstrapDropdownBuilder,
-	#category : 'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #building }

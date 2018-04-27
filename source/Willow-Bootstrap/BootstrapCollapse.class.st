@@ -4,7 +4,7 @@ Flexible plugin that utilizes a handful of classes for easy toggle behavior.
 Class {
 	#name : #BootstrapCollapse,
 	#superclass : #BootstrapPlugin,
-	#category : 'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-Plugins'
 }
 
 { #category : #Methods }

@@ -4,7 +4,7 @@ I'm a JQueryPlugin implementing  the bootstrap-typeahead programmatic API
 Class {
 	#name : #BootstrapTypeahead,
 	#superclass : #BootstrapPlugin,
-	#category : 'Willow-Bootstrap-Typeahead'
+	#category : #'Willow-Bootstrap-Typeahead'
 }
 
 { #category : #Options }
