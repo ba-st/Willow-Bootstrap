@@ -95,7 +95,10 @@ BootstrapPanelBuilderTest >> testRenderPanelWithListGroupsAndTables [
 	| panel html listGroup table |
 
 	table := supplier tableBuilder
-		addColumnTitled: 'First Name' rendering: [ :item | item first ];
+		addColumn: [ :column | 
+			column
+				titled: 'First Name';
+				rendering: [ :item | item first ] ];
 		build.
 
 	listGroup := supplier unorderedListApplying: [ :list |  ] listing: #(1 2) applyingToEach: [ :listItem |  ].
@@ -121,7 +124,10 @@ BootstrapPanelBuilderTest >> testRenderPanelWithTables [
 	| panel html table |
 
 	table := supplier tableBuilder
-		addColumnTitled: 'First Name' rendering: [ :item | item first ];
+		addColumn: [ :column | 
+			column
+				titled: 'First Name';
+				rendering: [ :item | item first ] ];
 		build.
 
 	panel := supplier panelBuilder

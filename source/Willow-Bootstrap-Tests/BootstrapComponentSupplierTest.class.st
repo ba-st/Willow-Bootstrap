@@ -186,7 +186,10 @@ BootstrapComponentSupplierTest >> testTableBuilder [
 	supplier := BootstrapComponentSupplier online.
 
 	table := supplier tableBuilder
-		addColumnTitled: 'Number' rendering: [ :number | number ];
+		addColumn: [ :column | 
+			column
+				titled: 'Number';
+				rendering: [ :number | number ] ];
 		build.
 
 	table changeContentsTo: #(1 2 3).
