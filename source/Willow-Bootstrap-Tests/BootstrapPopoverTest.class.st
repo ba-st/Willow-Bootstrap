@@ -179,7 +179,7 @@ BootstrapPopoverTest >> testPlacement [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover placement: CssConstants left  ].
+	html := self renderPopoverContentApplying: [ :popover | popover placement: RenoirSt constants >> #left  ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"placement":"left"});</script>'.
 

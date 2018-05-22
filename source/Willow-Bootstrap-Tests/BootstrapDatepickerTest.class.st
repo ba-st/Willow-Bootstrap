@@ -590,11 +590,9 @@ BootstrapDatepickerTest >> testOrientation [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker orientation: CssConstants bottom].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker orientation: RenoirSt constants >> #bottom ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"orientation":"bottom"});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"orientation":"bottom"});</script>'
 ]
 
 { #category : #'tests-Methods' }

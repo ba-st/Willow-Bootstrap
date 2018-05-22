@@ -143,7 +143,7 @@ BootstrapTooltipTest >> testPlacement [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip placement: CssConstants left  ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip placement: RenoirSt constants >> #left  ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"placement":"left"});</script>'.
 
