@@ -16,7 +16,7 @@ WillowBootstrapCascadingStyleSheetBuilder >> declareNumberInputStyleIn: builder 
 	builder
 		declareRuleSetFor:
 				[ :selector | (CssPseudoElementSelector named: '-webkit-outer-spin-button' of: (self numberInputFor: selector)) , (CssPseudoElementSelector named: '-webkit-inner-spin-button' of: (self numberInputFor: selector)) ]
-			with: [ :style | style propertyAt: '-webkit-appearance' put: CssConstants none ];
+			with: [ :style :constants | style propertyAt: '-webkit-appearance' put: constants >> #none ];
 		declareRuleSetFor: [ :selector | self numberInputFor: selector ] with: [ :style | style propertyAt: '-moz-appearance' put: 'textfield' ]
 ]
 
