@@ -35,6 +35,6 @@ BootstrapHelpTextWebView >> renderContentOn: aCanvas [
 
 	aCanvas render: fieldWebView.
 	aCanvas span
-		class: BootstrapCssStyles helpBlock;
+		class: Willow classes >> #bootstrap >>#helpBlock;
 		with: helpText
 ]

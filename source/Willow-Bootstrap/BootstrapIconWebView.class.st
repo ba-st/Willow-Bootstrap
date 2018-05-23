@@ -20,7 +20,7 @@ BootstrapIconWebView class >> applying: aComponentCommand [
 BootstrapIconWebView class >> classificationCommandFor: aGlyphiconName [
 
 	^ ComponentClassificationCommand
-		toStyleWithAll: (Array with: BootstrapCssStyles glyphicon with: aGlyphiconName)
+		toStyleWithAll: (Array with: Willow classes >> #bootstrap >>#glyphicon with: aGlyphiconName)
 ]
 
 { #category : #'Instance Creation' }

@@ -31,7 +31,7 @@ BootstrapDatePickerWebView >> initializeWrapping: aTextField applying: aComponen
 		wrapping: [ :canvas | 
 			canvas render: self textField.
 			canvas div
-				class: BootstrapCssStyles inputGroupAddon;
+				class: Willow classes >> #bootstrap >>#inputGroupAddon;
 				with: [ canvas small: (BootstrapIconWebView representing: Glyphicons triangleBottom) ] ]
 		applying: [ :div | div addClass bootstrap inputGroup + div addClass bootstrap date + BootstrapDatepickerCommand new + aComponentCommand ]
 ]

@@ -65,7 +65,7 @@ BootstrapPanelBuilder >> renderBodyOn: canvas [
 	bodyOptional
 		withContentDo: [ :renderableInsideBody | 
 			canvas div
-				class: BootstrapCssStyles panelBody;
+				class: Willow classes >> #bootstrap >>#panelBody;
 				with: renderableInsideBody ]
 ]
 
@@ -75,7 +75,7 @@ BootstrapPanelBuilder >> renderFooterOn: canvas [
 	footerOptional
 		withContentDo: [ :footer | 
 			canvas div
-				class: BootstrapCssStyles panelFooter;
+				class: Willow classes >> #bootstrap >>#panelFooter;
 				with: footer ]
 ]
 
@@ -85,7 +85,7 @@ BootstrapPanelBuilder >> renderHeadingOn: canvas [
 	headingOptional
 		withContentDo: [ :heading | 
 			canvas div
-				class: BootstrapCssStyles panelHeading;
+				class: Willow classes >> #bootstrap >>#panelHeading;
 				with: heading ]
 ]
 

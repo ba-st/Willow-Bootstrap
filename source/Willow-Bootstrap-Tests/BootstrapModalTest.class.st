@@ -14,7 +14,7 @@ BootstrapModalTest >> renderModalContentApplying: aBlock [
 		renderUsing: [ :canvas | 
 			| div modal |
 
-			div := canvas div class: BootstrapCssStyles modal.
+			div := canvas div class: Willow classes >> #bootstrap >>#modal.
 			modal := canvas jQuery new bootstrapModal.
 			aBlock value: modal.
 			div script: modal ]

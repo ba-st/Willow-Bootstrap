@@ -17,7 +17,7 @@ Class {
 BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
-		styledAs: BootstrapCssStyles container
+		styledAs: Willow classes >> #bootstrap >>#container
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent
@@ -27,7 +27,7 @@ BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView 
 BootstrapNavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
-		styledAs: BootstrapCssStyles containerFluid
+		styledAs: Willow classes >> #bootstrap >>#containerFluid
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent
@@ -61,7 +61,7 @@ BootstrapNavigationBar >> renderContentOn: aCanvas [
 	| nav |
 
 	nav := aCanvas navigation.
-	nav class: BootstrapCssStyles navbar.
+	nav class: Willow classes >> #bootstrap >>#navbar.
 	componentCommand applyTo: nav on: aCanvas.
 	nav
 		with: [ aCanvas div
@@ -74,7 +74,7 @@ BootstrapNavigationBar >> renderContentOn: aCanvas [
 BootstrapNavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 
 	aCanvas div
-		class: BootstrapCssStyles navbarHeader;
+		class: Willow classes >> #bootstrap >>#navbarHeader;
 		with: [ 
 			navbarContent identifyIn: aCanvas.
 			aCanvas

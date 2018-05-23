@@ -75,8 +75,8 @@ BootstrapNavigationBarTest >> testRenderContentOnWithContent [
 		brandedWith: 'Willow'
 		containing: [ :canvas | 
 			canvas paragraph
-				class: BootstrapCssStyles navbarText;
-				class: BootstrapCssStyles navbarRight;
+				class: Willow classes >> #bootstrap >>#navbarText;
+				class: Willow classes >> #bootstrap >>#navbarRight;
 				with: '2017' ]
 		applying: [ :navigation | navigation addClass bootstrap navbarDefault ].
 

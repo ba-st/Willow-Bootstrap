@@ -51,14 +51,14 @@ BootstrapDropdownBuilder >> addHeaderLabeled: aRenderable [
 	menuItems
 		add: [ :canvas | 
 			canvas listItem
-				class: BootstrapCssStyles dropdownHeader;
+				class: Willow classes >> #bootstrap >>#dropdownHeader;
 				with: aRenderable ]
 ]
 
 { #category : #Configuring }
 BootstrapDropdownBuilder >> beRightAligned [
 
-	listCssStyles add: BootstrapCssStyles dropdownMenuRight
+	listCssStyles add: Willow classes >> #bootstrap >>#dropdownMenuRight
 ]
 
 { #category : #private }
@@ -84,7 +84,7 @@ BootstrapDropdownBuilder >> initializeUsing: aSupplier [
 	supplier := aSupplier.
 	buttonBinding := Binding undefinedExplainedBy: 'Missing Dropdown Button Configuration'.
 	menuItems := OrderedCollection new.
-	listCssStyles := OrderedCollection with: BootstrapCssStyles dropdownMenu
+	listCssStyles := OrderedCollection with: Willow classes >> #bootstrap >>#dropdownMenu
 ]
 
 { #category : #Configuring }
@@ -97,5 +97,5 @@ BootstrapDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
 BootstrapDropdownBuilder >> renderCaretOn: canvas [
 
 	canvas space.
-	canvas span class: BootstrapCssStyles caret
+	canvas span class: Willow classes >> #bootstrap >>#caret
 ]

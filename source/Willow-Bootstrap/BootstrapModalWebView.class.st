@@ -41,7 +41,7 @@ BootstrapModalWebView >> contentWrapping: aBodyView [
 		wrapping: [ :canvas | 
 			canvas render: header.
 			canvas div
-				class: BootstrapCssStyles modalBody;
+				class: Willow classes >> #bootstrap >>#modalBody;
 				with: aBodyView.
 			canvas render: footer ]
 		applying: [ :container | container addClass bootstrap modalContent ]

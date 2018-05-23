@@ -11,411 +11,411 @@ Class {
 BootstrapCssStylesTest >> testAlerts [
 
 	self
-		assert: BootstrapCssStyles alert equals: 'alert';
-		assert: BootstrapCssStyles alertDanger equals: 'alert-danger';
-		assert: BootstrapCssStyles alertDismissible equals: 'alert-dismissible';
-		assert: BootstrapCssStyles alertInfo equals: 'alert-info';
-		assert: BootstrapCssStyles alertLink equals: 'alert-link';
-		assert: BootstrapCssStyles alertSuccess equals: 'alert-success';
-		assert: BootstrapCssStyles alertWarning equals: 'alert-warning'
+		assert: Willow classes >> #bootstrap >> #alert equals: 'alert';
+		assert: Willow classes >> #bootstrap >> #alertDanger equals: 'alert-danger';
+		assert: Willow classes >> #bootstrap >> #alertDismissible equals: 'alert-dismissible';
+		assert: Willow classes >> #bootstrap >> #alertInfo equals: 'alert-info';
+		assert: Willow classes >> #bootstrap >> #alertLink equals: 'alert-link';
+		assert: Willow classes >> #bootstrap >> #alertSuccess equals: 'alert-success';
+		assert: Willow classes >> #bootstrap >> #alertWarning equals: 'alert-warning'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testButtons [
 
 	self
-		assert: BootstrapCssStyles active equals: 'active';
-		assert: BootstrapCssStyles button equals: 'btn';
+		assert: Willow classes >> #bootstrap >> #active equals: 'active';
+		assert: Willow classes >> #bootstrap >> #button equals: 'btn';
 		"Styles"
-		assert: BootstrapCssStyles buttonDanger equals: 'btn-danger';
-		assert: BootstrapCssStyles buttonDefault equals: 'btn-default';
-		assert: BootstrapCssStyles buttonInfo equals: 'btn-info';
-		assert: BootstrapCssStyles buttonLink equals: 'btn-link';
-		assert: BootstrapCssStyles buttonPrimary equals: 'btn-primary';
-		assert: BootstrapCssStyles buttonSuccess equals: 'btn-success';
-		assert: BootstrapCssStyles buttonWarning equals: 'btn-warning';
+		assert: Willow classes >> #bootstrap >> #buttonDanger equals: 'btn-danger';
+		assert: Willow classes >> #bootstrap >> #buttonDefault equals: 'btn-default';
+		assert: Willow classes >> #bootstrap >> #buttonInfo equals: 'btn-info';
+		assert: Willow classes >> #bootstrap >> #buttonLink equals: 'btn-link';
+		assert: Willow classes >> #bootstrap >> #buttonPrimary equals: 'btn-primary';
+		assert: Willow classes >> #bootstrap >> #buttonSuccess equals: 'btn-success';
+		assert: Willow classes >> #bootstrap >> #buttonWarning equals: 'btn-warning';
 		"Sizes"
-		assert: BootstrapCssStyles buttonExtraSmall equals: 'btn-xs';
-		assert: BootstrapCssStyles buttonSmall equals: 'btn-sm';
-		assert: BootstrapCssStyles buttonLarge equals: 'btn-lg';
+		assert: Willow classes >> #bootstrap >> #buttonExtraSmall equals: 'btn-xs';
+		assert: Willow classes >> #bootstrap >> #buttonSmall equals: 'btn-sm';
+		assert: Willow classes >> #bootstrap >> #buttonLarge equals: 'btn-lg';
 		"Groups"
-		assert: BootstrapCssStyles buttonGroup equals: 'btn-group';
-		assert: BootstrapCssStyles buttonGroupExtraSmall equals: 'btn-group-xs';
-		assert: BootstrapCssStyles buttonGroupJustified equals: 'btn-group-justified';
-		assert: BootstrapCssStyles buttonGroupLarge equals: 'btn-group-lg';
-		assert: BootstrapCssStyles buttonGroupSmall equals: 'btn-group-sm';
-		assert: BootstrapCssStyles buttonGroupVertical equals: 'btn-group-vertical';
-		assert: BootstrapCssStyles buttonBlock equals: 'btn-block';
-		assert: BootstrapCssStyles buttonToolbar equals: 'btn-toolbar'
+		assert: Willow classes >> #bootstrap >> #buttonGroup equals: 'btn-group';
+		assert: Willow classes >> #bootstrap >> #buttonGroupExtraSmall equals: 'btn-group-xs';
+		assert: Willow classes >> #bootstrap >> #buttonGroupJustified equals: 'btn-group-justified';
+		assert: Willow classes >> #bootstrap >> #buttonGroupLarge equals: 'btn-group-lg';
+		assert: Willow classes >> #bootstrap >> #buttonGroupSmall equals: 'btn-group-sm';
+		assert: Willow classes >> #bootstrap >> #buttonGroupVertical equals: 'btn-group-vertical';
+		assert: Willow classes >> #bootstrap >> #buttonBlock equals: 'btn-block';
+		assert: Willow classes >> #bootstrap >> #buttonToolbar equals: 'btn-toolbar'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testCode [
 
-	self assert: BootstrapCssStyles preScrollable equals: 'pre-scrollable'
+	self assert: Willow classes >> #bootstrap >> #preScrollable equals: 'pre-scrollable'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testCollapse [
 
 	self
-		assert: BootstrapCssStyles collapse equals: 'collapse';
-		assert: BootstrapCssStyles collapsing equals: 'collapsing';
-		assert: BootstrapCssStyles in equals: 'in';
-		assert: BootstrapCssStyles collapsed equals: 'collapsed'
+		assert: Willow classes >> #bootstrap >> #collapse equals: 'collapse';
+		assert: Willow classes >> #bootstrap >> #collapsing equals: 'collapsing';
+		assert: Willow classes >> #bootstrap >> #in equals: 'in';
+		assert: Willow classes >> #bootstrap >> #collapsed equals: 'collapsed'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testContainers [
 
 	self
-		assert: BootstrapCssStyles container equals: 'container';
-		assert: BootstrapCssStyles containerFluid equals: 'container-fluid';
-		assert: BootstrapCssStyles jumbotron equals: 'jumbotron';
-		assert: BootstrapCssStyles pageHeader equals: 'page-header';
-		assert: BootstrapCssStyles thumbnail equals: 'thumbnail'
+		assert: Willow classes >> #bootstrap >> #container equals: 'container';
+		assert: Willow classes >> #bootstrap >> #containerFluid equals: 'container-fluid';
+		assert: Willow classes >> #bootstrap >> #jumbotron equals: 'jumbotron';
+		assert: Willow classes >> #bootstrap >> #pageHeader equals: 'page-header';
+		assert: Willow classes >> #bootstrap >> #thumbnail equals: 'thumbnail'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testDropdowns [
 
 	self
-		assert: BootstrapCssStyles divider equals: 'divider';
-		assert: BootstrapCssStyles dropdown equals: 'dropdown';
-		assert: BootstrapCssStyles dropdownBackdrop equals: 'dropdown-backdrop';
-		assert: BootstrapCssStyles dropdownHeader equals: 'dropdown-header';
-		assert: BootstrapCssStyles dropdownMenu equals: 'dropdown-menu';
-		assert: BootstrapCssStyles dropdownMenuLeft equals: 'dropdown-menu-left';
-		assert: BootstrapCssStyles dropdownMenuRight equals: 'dropdown-menu-right';
-		assert: BootstrapCssStyles dropdownToggle equals: 'dropdown-toggle';
-		assert: BootstrapCssStyles dropup equals: 'dropup';
-		assert: BootstrapCssStyles open equals: 'open'
+		assert: Willow classes >> #bootstrap >> #divider equals: 'divider';
+		assert: Willow classes >> #bootstrap >> #dropdown equals: 'dropdown';
+		assert: Willow classes >> #bootstrap >> #dropdownBackdrop equals: 'dropdown-backdrop';
+		assert: Willow classes >> #bootstrap >> #dropdownHeader equals: 'dropdown-header';
+		assert: Willow classes >> #bootstrap >> #dropdownMenu equals: 'dropdown-menu';
+		assert: Willow classes >> #bootstrap >> #dropdownMenuLeft equals: 'dropdown-menu-left';
+		assert: Willow classes >> #bootstrap >> #dropdownMenuRight equals: 'dropdown-menu-right';
+		assert: Willow classes >> #bootstrap >> #dropdownToggle equals: 'dropdown-toggle';
+		assert: Willow classes >> #bootstrap >> #dropup equals: 'dropup';
+		assert: Willow classes >> #bootstrap >> #open equals: 'open'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testForms [
 
 	self
-		assert: BootstrapCssStyles checkbox equals: 'checkbox';
-		assert: BootstrapCssStyles checkboxInline equals: 'checkbox-inline';
-		assert: BootstrapCssStyles disabled equals: 'disabled';
-		assert: BootstrapCssStyles formControl equals: 'form-control';
-		assert: BootstrapCssStyles formControlStatic equals: 'form-control-static';
-		assert: BootstrapCssStyles formGroup equals: 'form-group';
-		assert: BootstrapCssStyles formGroupLarge equals: 'form-group-lg';
-		assert: BootstrapCssStyles formGroupSmall equals: 'form-group-sm';
-		assert: BootstrapCssStyles formHorizontal equals: 'form-horizontal';
-		assert: BootstrapCssStyles formInline equals: 'form-inline';
-		assert: BootstrapCssStyles helpBlock equals: 'help-block';
-		assert: BootstrapCssStyles inputLarge equals: 'input-lg';
-		assert: BootstrapCssStyles inputSmall equals: 'input-sm';
-		assert: BootstrapCssStyles radio equals: 'radio';
-		assert: BootstrapCssStyles radioInline equals: 'radio-inline'.
+		assert: Willow classes >> #bootstrap >> #checkbox equals: 'checkbox';
+		assert: Willow classes >> #bootstrap >> #checkboxInline equals: 'checkbox-inline';
+		assert: Willow classes >> #bootstrap >> #disabled equals: 'disabled';
+		assert: Willow classes >> #bootstrap >> #formControl equals: 'form-control';
+		assert: Willow classes >> #bootstrap >> #formControlStatic equals: 'form-control-static';
+		assert: Willow classes >> #bootstrap >> #formGroup equals: 'form-group';
+		assert: Willow classes >> #bootstrap >> #formGroupLarge equals: 'form-group-lg';
+		assert: Willow classes >> #bootstrap >> #formGroupSmall equals: 'form-group-sm';
+		assert: Willow classes >> #bootstrap >> #formHorizontal equals: 'form-horizontal';
+		assert: Willow classes >> #bootstrap >> #formInline equals: 'form-inline';
+		assert: Willow classes >> #bootstrap >> #helpBlock equals: 'help-block';
+		assert: Willow classes >> #bootstrap >> #inputLarge equals: 'input-lg';
+		assert: Willow classes >> #bootstrap >> #inputSmall equals: 'input-sm';
+		assert: Willow classes >> #bootstrap >> #radio equals: 'radio';
+		assert: Willow classes >> #bootstrap >> #radioInline equals: 'radio-inline'.
 
 	self
-		assert: BootstrapCssStyles hasError equals: 'has-error';
-		assert: BootstrapCssStyles hasFeedback equals: 'has-feedback';
-		assert: BootstrapCssStyles hasWarning equals: 'has-warning';
-		assert: BootstrapCssStyles hasSuccess equals: 'has-success'
+		assert: Willow classes >> #bootstrap >> #hasError equals: 'has-error';
+		assert: Willow classes >> #bootstrap >> #hasFeedback equals: 'has-feedback';
+		assert: Willow classes >> #bootstrap >> #hasWarning equals: 'has-warning';
+		assert: Willow classes >> #bootstrap >> #hasSuccess equals: 'has-success'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testGridSystem [
 
 	self
-		assert: BootstrapCssStyles row equals: 'row';
-		assert: (BootstrapCssStyles columnExtraSmall: 6) equals: 'col-xs-6';
-		assert: (BootstrapCssStyles columnSmall: 6) equals: 'col-sm-6';
-		assert: (BootstrapCssStyles columnMedium: 6) equals: 'col-md-6';
-		assert: (BootstrapCssStyles columnLarge: 6) equals: 'col-lg-6'.
+		assert: Willow classes >> #bootstrap >> #row equals: 'row';
+		assert: (Willow classes >> #bootstrap >> #columnExtraSmall6) equals: 'col-xs-6';
+		assert: (Willow classes >> #bootstrap >> #columnSmall6) equals: 'col-sm-6';
+		assert: (Willow classes >> #bootstrap >> #columnMedium6) equals: 'col-md-6';
+		assert: (Willow classes >> #bootstrap >> #columnLarge6) equals: 'col-lg-6'.
 
 	self
-		assert: (BootstrapCssStyles columnExtraSmallOffset: 6) equals: 'col-xs-offset-6';
-		assert: (BootstrapCssStyles columnSmallOffset: 6) equals: 'col-sm-offset-6';
-		assert: (BootstrapCssStyles columnMediumOffset: 6) equals: 'col-md-offset-6';
-		assert: (BootstrapCssStyles columnLargeOffset: 6) equals: 'col-lg-offset-6'.
+		assert: (Willow classes >> #bootstrap >> #columnExtraSmallOffset6) equals: 'col-xs-offset-6';
+		assert: (Willow classes >> #bootstrap >> #columnSmallOffset6) equals: 'col-sm-offset-6';
+		assert: (Willow classes >> #bootstrap >> #columnMediumOffset6) equals: 'col-md-offset-6';
+		assert: (Willow classes >> #bootstrap >> #columnLargeOffset6) equals: 'col-lg-offset-6'.
 
 	self
-		assert: (BootstrapCssStyles columnExtraSmallPull: 2) equals: 'col-xs-pull-2';
-		assert: (BootstrapCssStyles columnSmallPull: 2) equals: 'col-sm-pull-2';
-		assert: (BootstrapCssStyles columnMediumPull: 2) equals: 'col-md-pull-2';
-		assert: (BootstrapCssStyles columnLargePull: 2) equals: 'col-lg-pull-2'.
+		assert: (Willow classes >> #bootstrap >> #columnExtraSmallPull2) equals: 'col-xs-pull-2';
+		assert: (Willow classes >> #bootstrap >> #columnSmallPull2) equals: 'col-sm-pull-2';
+		assert: (Willow classes >> #bootstrap >> #columnMediumPull2) equals: 'col-md-pull-2';
+		assert: (Willow classes >> #bootstrap >> #columnLargePull2) equals: 'col-lg-pull-2'.
 
 	self
-		assert: (BootstrapCssStyles columnExtraSmallPush: 2) equals: 'col-xs-push-2';
-		assert: (BootstrapCssStyles columnSmallPush: 2) equals: 'col-sm-push-2';
-		assert: (BootstrapCssStyles columnMediumPush: 2) equals: 'col-md-push-2';
-		assert: (BootstrapCssStyles columnLargePush: 2) equals: 'col-lg-push-2'
+		assert: (Willow classes >> #bootstrap >> #columnExtraSmallPush2) equals: 'col-xs-push-2';
+		assert: (Willow classes >> #bootstrap >> #columnSmallPush2) equals: 'col-sm-push-2';
+		assert: (Willow classes >> #bootstrap >> #columnMediumPush2) equals: 'col-md-push-2';
+		assert: (Willow classes >> #bootstrap >> #columnLargePush2) equals: 'col-lg-push-2'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testHelperClasses [
 
 	self
-		assert: BootstrapCssStyles backgroundDanger equals: 'bg-danger';
-		assert: BootstrapCssStyles backgroundInfo equals: 'bg-info';
-		assert: BootstrapCssStyles backgroundPrimary equals: 'bg-primary';
-		assert: BootstrapCssStyles backgroundSuccess equals: 'bg-success';
-		assert: BootstrapCssStyles backgroundWarning equals: 'bg-warning'.
+		assert: Willow classes >> #bootstrap >> #backgroundDanger equals: 'bg-danger';
+		assert: Willow classes >> #bootstrap >> #backgroundInfo equals: 'bg-info';
+		assert: Willow classes >> #bootstrap >> #backgroundPrimary equals: 'bg-primary';
+		assert: Willow classes >> #bootstrap >> #backgroundSuccess equals: 'bg-success';
+		assert: Willow classes >> #bootstrap >> #backgroundWarning equals: 'bg-warning'.
 
 	self
-		assert: BootstrapCssStyles caret equals: 'caret';
-		assert: BootstrapCssStyles centerBlock equals: 'center-block';
-		assert: BootstrapCssStyles clearfix equals: 'clearfix';
-		assert: BootstrapCssStyles close equals: 'close';
-		assert: BootstrapCssStyles hidden equals: 'hidden';
-		assert: BootstrapCssStyles invisible equals: 'invisible';
-		assert: BootstrapCssStyles pullLeft equals: 'pull-left';
-		assert: BootstrapCssStyles pullRight equals: 'pull-right';
-		assert: BootstrapCssStyles show equals: 'show'.
+		assert: Willow classes >> #bootstrap >> #caret equals: 'caret';
+		assert: Willow classes >> #bootstrap >> #centerBlock equals: 'center-block';
+		assert: Willow classes >> #bootstrap >> #clearfix equals: 'clearfix';
+		assert: Willow classes >> #bootstrap >> #close equals: 'close';
+		assert: Willow classes >> #bootstrap >> #hidden equals: 'hidden';
+		assert: Willow classes >> #bootstrap >> #invisible equals: 'invisible';
+		assert: Willow classes >> #bootstrap >> #pullLeft equals: 'pull-left';
+		assert: Willow classes >> #bootstrap >> #pullRight equals: 'pull-right';
+		assert: Willow classes >> #bootstrap >> #show equals: 'show'.
 
 	self
-		assert: BootstrapCssStyles screenReaderOnly equals: 'sr-only';
-		assert: BootstrapCssStyles screenReaderOnlyFocusable equals: 'sr-only-focusable'.
+		assert: Willow classes >> #bootstrap >> #screenReaderOnly equals: 'sr-only';
+		assert: Willow classes >> #bootstrap >> #screenReaderOnlyFocusable equals: 'sr-only-focusable'.
 
 	self
-		assert: BootstrapCssStyles textDanger equals: 'text-danger';
-		assert: BootstrapCssStyles textHide equals: 'text-hide';
-		assert: BootstrapCssStyles textInfo equals: 'text-info';
-		assert: BootstrapCssStyles textMuted equals: 'text-muted';
-		assert: BootstrapCssStyles textPrimary equals: 'text-primary';
-		assert: BootstrapCssStyles textSuccess equals: 'text-success';
-		assert: BootstrapCssStyles textWarning equals: 'text-warning'
+		assert: Willow classes >> #bootstrap >> #textDanger equals: 'text-danger';
+		assert: Willow classes >> #bootstrap >> #textHide equals: 'text-hide';
+		assert: Willow classes >> #bootstrap >> #textInfo equals: 'text-info';
+		assert: Willow classes >> #bootstrap >> #textMuted equals: 'text-muted';
+		assert: Willow classes >> #bootstrap >> #textPrimary equals: 'text-primary';
+		assert: Willow classes >> #bootstrap >> #textSuccess equals: 'text-success';
+		assert: Willow classes >> #bootstrap >> #textWarning equals: 'text-warning'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testImages [
 
 	self
-		assert: BootstrapCssStyles glyphicon equals: 'glyphicon';
-		assert: BootstrapCssStyles imageCircle equals: 'img-circle';
-		assert: BootstrapCssStyles imageResponsive equals: 'img-responsive';
-		assert: BootstrapCssStyles imageRounded equals: 'img-rounded';
-		assert: BootstrapCssStyles imageThumbnail equals: 'img-thumbnail'
+		assert: Willow classes >> #bootstrap >> #glyphicon equals: 'glyphicon';
+		assert: Willow classes >> #bootstrap >> #imageCircle equals: 'img-circle';
+		assert: Willow classes >> #bootstrap >> #imageResponsive equals: 'img-responsive';
+		assert: Willow classes >> #bootstrap >> #imageRounded equals: 'img-rounded';
+		assert: Willow classes >> #bootstrap >> #imageThumbnail equals: 'img-thumbnail'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testInputGroups [
 
 	self
-		assert: BootstrapCssStyles inputGroup equals: 'input-group';
-		assert: BootstrapCssStyles inputGroupAddon equals: 'input-group-addon';
-		assert: BootstrapCssStyles inputGroupButton equals: 'input-group-btn';
-		assert: BootstrapCssStyles inputGroupLarge equals: 'input-group-lg';
-		assert: BootstrapCssStyles inputGroupSmall equals: 'input-group-sm'
+		assert: Willow classes >> #bootstrap >> #inputGroup equals: 'input-group';
+		assert: Willow classes >> #bootstrap >> #inputGroupAddon equals: 'input-group-addon';
+		assert: Willow classes >> #bootstrap >> #inputGroupButton equals: 'input-group-btn';
+		assert: Willow classes >> #bootstrap >> #inputGroupLarge equals: 'input-group-lg';
+		assert: Willow classes >> #bootstrap >> #inputGroupSmall equals: 'input-group-sm'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testLabels [
 
 	self
-		assert: BootstrapCssStyles badge equals: 'badge';
-		assert: BootstrapCssStyles label equals: 'label';
-		assert: BootstrapCssStyles labelDanger equals: 'label-danger';
-		assert: BootstrapCssStyles labelDefault equals: 'label-default';
-		assert: BootstrapCssStyles labelInfo equals: 'label-info';
-		assert: BootstrapCssStyles labelPrimary equals: 'label-primary';
-		assert: BootstrapCssStyles labelSuccess equals: 'label-success';
-		assert: BootstrapCssStyles labelWarning equals: 'label-warning'
+		assert: Willow classes >> #bootstrap >> #badge equals: 'badge';
+		assert: Willow classes >> #bootstrap >> #label equals: 'label';
+		assert: Willow classes >> #bootstrap >> #labelDanger equals: 'label-danger';
+		assert: Willow classes >> #bootstrap >> #labelDefault equals: 'label-default';
+		assert: Willow classes >> #bootstrap >> #labelInfo equals: 'label-info';
+		assert: Willow classes >> #bootstrap >> #labelPrimary equals: 'label-primary';
+		assert: Willow classes >> #bootstrap >> #labelSuccess equals: 'label-success';
+		assert: Willow classes >> #bootstrap >> #labelWarning equals: 'label-warning'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testListGroups [
 
 	self
-		assert: BootstrapCssStyles listGroup equals: 'list-group';
-		assert: BootstrapCssStyles listGroupItem equals: 'list-group-item';
-		assert: BootstrapCssStyles listGroupItemDanger equals: 'list-group-item-danger';
-		assert: BootstrapCssStyles listGroupItemHeading equals: 'list-group-item-heading';
-		assert: BootstrapCssStyles listGroupItemInfo equals: 'list-group-item-info';
-		assert: BootstrapCssStyles listGroupItemSuccess equals: 'list-group-item-success';
-		assert: BootstrapCssStyles listGroupItemText equals: 'list-group-item-text';
-		assert: BootstrapCssStyles listGroupItemWarning equals: 'list-group-item-warning'
+		assert: Willow classes >> #bootstrap >> #listGroup equals: 'list-group';
+		assert: Willow classes >> #bootstrap >> #listGroupItem equals: 'list-group-item';
+		assert: Willow classes >> #bootstrap >> #listGroupItemDanger equals: 'list-group-item-danger';
+		assert: Willow classes >> #bootstrap >> #listGroupItemHeading equals: 'list-group-item-heading';
+		assert: Willow classes >> #bootstrap >> #listGroupItemInfo equals: 'list-group-item-info';
+		assert: Willow classes >> #bootstrap >> #listGroupItemSuccess equals: 'list-group-item-success';
+		assert: Willow classes >> #bootstrap >> #listGroupItemText equals: 'list-group-item-text';
+		assert: Willow classes >> #bootstrap >> #listGroupItemWarning equals: 'list-group-item-warning'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testMediaObjects [
 
 	self
-		assert: BootstrapCssStyles media equals: 'media';
-		assert: BootstrapCssStyles mediaBody equals: 'media-body';
-		assert: BootstrapCssStyles mediaHeading equals: 'media-heading';
-		assert: BootstrapCssStyles mediaLeft equals: 'media-left';
-		assert: BootstrapCssStyles mediaRight equals: 'media-right';
-		assert: BootstrapCssStyles mediaMiddle equals: 'media-middle';
-		assert: BootstrapCssStyles mediaList equals: 'media-list';
-		assert: BootstrapCssStyles mediaObject equals: 'media-object'
+		assert: Willow classes >> #bootstrap >> #media equals: 'media';
+		assert: Willow classes >> #bootstrap >> #mediaBody equals: 'media-body';
+		assert: Willow classes >> #bootstrap >> #mediaHeading equals: 'media-heading';
+		assert: Willow classes >> #bootstrap >> #mediaLeft equals: 'media-left';
+		assert: Willow classes >> #bootstrap >> #mediaRight equals: 'media-right';
+		assert: Willow classes >> #bootstrap >> #mediaMiddle equals: 'media-middle';
+		assert: Willow classes >> #bootstrap >> #mediaList equals: 'media-list';
+		assert: Willow classes >> #bootstrap >> #mediaObject equals: 'media-object'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testModal [
 
 	self
-		assert: BootstrapCssStyles modal equals: 'modal';
-		assert: BootstrapCssStyles modalBackdrop equals: 'modal-backdrop';
-		assert: BootstrapCssStyles modalBody equals: 'modal-body';
-		assert: BootstrapCssStyles modalContent equals: 'modal-content';
-		assert: BootstrapCssStyles modalDialog equals: 'modal-dialog';
-		assert: BootstrapCssStyles modalFooter equals: 'modal-footer';
-		assert: BootstrapCssStyles modalHeader equals: 'modal-header';
-		assert: BootstrapCssStyles modalLarge equals: 'modal-lg';
-		assert: BootstrapCssStyles modalOpen equals: 'modal-open';
-		assert: BootstrapCssStyles modalSmall equals: 'modal-sm';
-		assert: BootstrapCssStyles modalTitle equals: 'modal-title'
+		assert: Willow classes >> #bootstrap >> #modal equals: 'modal';
+		assert: Willow classes >> #bootstrap >> #modalBackdrop equals: 'modal-backdrop';
+		assert: Willow classes >> #bootstrap >> #modalBody equals: 'modal-body';
+		assert: Willow classes >> #bootstrap >> #modalContent equals: 'modal-content';
+		assert: Willow classes >> #bootstrap >> #modalDialog equals: 'modal-dialog';
+		assert: Willow classes >> #bootstrap >> #modalFooter equals: 'modal-footer';
+		assert: Willow classes >> #bootstrap >> #modalHeader equals: 'modal-header';
+		assert: Willow classes >> #bootstrap >> #modalLarge equals: 'modal-lg';
+		assert: Willow classes >> #bootstrap >> #modalOpen equals: 'modal-open';
+		assert: Willow classes >> #bootstrap >> #modalSmall equals: 'modal-sm';
+		assert: Willow classes >> #bootstrap >> #modalTitle equals: 'modal-title'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testNavigation [
 
 	self
-		assert: BootstrapCssStyles breadcrumb equals: 'breadcrumb';
-		assert: BootstrapCssStyles iconBar equals: 'icon-bar';
-		assert: BootstrapCssStyles nav equals: 'nav';
-		assert: BootstrapCssStyles navJustified equals: 'nav-justified';
-		assert: BootstrapCssStyles navPills equals: 'nav-pills';
-		assert: BootstrapCssStyles navStacked equals: 'nav-stacked';
-		assert: BootstrapCssStyles navTabs equals: 'nav-tabs';
-		assert: BootstrapCssStyles navbar equals: 'navbar';
-		assert: BootstrapCssStyles navbarBrand equals: 'navbar-brand';
-		assert: BootstrapCssStyles navbarButton equals: 'navbar-btn';
-		assert: BootstrapCssStyles navbarCollapse equals: 'navbar-collapse';
-		assert: BootstrapCssStyles navbarDefault equals: 'navbar-default';
-		assert: BootstrapCssStyles navbarFixedBottom equals: 'navbar-fixed-bottom';
-		assert: BootstrapCssStyles navbarFixedTop equals: 'navbar-fixed-top';
-		assert: BootstrapCssStyles navbarForm equals: 'navbar-form';
-		assert: BootstrapCssStyles navbarHeader equals: 'navbar-header';
-		assert: BootstrapCssStyles navbarInverse equals: 'navbar-inverse';
-		assert: BootstrapCssStyles navbarLeft equals: 'navbar-left';
-		assert: BootstrapCssStyles navbarRight equals: 'navbar-right';
-		assert: BootstrapCssStyles navbarLink equals: 'navbar-link';
-		assert: BootstrapCssStyles navbarStaticTop equals: 'navbar-static-top';
-		assert: BootstrapCssStyles navbarText equals: 'navbar-text';
-		assert: BootstrapCssStyles navbarToggle equals: 'navbar-toggle'
+		assert: Willow classes >> #bootstrap >> #breadcrumb equals: 'breadcrumb';
+		assert: Willow classes >> #bootstrap >> #iconBar equals: 'icon-bar';
+		assert: Willow classes >> #bootstrap >> #nav equals: 'nav';
+		assert: Willow classes >> #bootstrap >> #navJustified equals: 'nav-justified';
+		assert: Willow classes >> #bootstrap >> #navPills equals: 'nav-pills';
+		assert: Willow classes >> #bootstrap >> #navStacked equals: 'nav-stacked';
+		assert: Willow classes >> #bootstrap >> #navTabs equals: 'nav-tabs';
+		assert: Willow classes >> #bootstrap >> #navbar equals: 'navbar';
+		assert: Willow classes >> #bootstrap >> #navbarBrand equals: 'navbar-brand';
+		assert: Willow classes >> #bootstrap >> #navbarButton equals: 'navbar-btn';
+		assert: Willow classes >> #bootstrap >> #navbarCollapse equals: 'navbar-collapse';
+		assert: Willow classes >> #bootstrap >> #navbarDefault equals: 'navbar-default';
+		assert: Willow classes >> #bootstrap >> #navbarFixedBottom equals: 'navbar-fixed-bottom';
+		assert: Willow classes >> #bootstrap >> #navbarFixedTop equals: 'navbar-fixed-top';
+		assert: Willow classes >> #bootstrap >> #navbarForm equals: 'navbar-form';
+		assert: Willow classes >> #bootstrap >> #navbarHeader equals: 'navbar-header';
+		assert: Willow classes >> #bootstrap >> #navbarInverse equals: 'navbar-inverse';
+		assert: Willow classes >> #bootstrap >> #navbarLeft equals: 'navbar-left';
+		assert: Willow classes >> #bootstrap >> #navbarRight equals: 'navbar-right';
+		assert: Willow classes >> #bootstrap >> #navbarLink equals: 'navbar-link';
+		assert: Willow classes >> #bootstrap >> #navbarStaticTop equals: 'navbar-static-top';
+		assert: Willow classes >> #bootstrap >> #navbarText equals: 'navbar-text';
+		assert: Willow classes >> #bootstrap >> #navbarToggle equals: 'navbar-toggle'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testPagination [
 
 	self
-		assert: BootstrapCssStyles next equals: 'next';
-		assert: BootstrapCssStyles previous equals: 'previous';
-		assert: BootstrapCssStyles pager equals: 'pager';
-		assert: BootstrapCssStyles pagination equals: 'pagination';
-		assert: BootstrapCssStyles paginationLarge equals: 'pagination-lg';
-		assert: BootstrapCssStyles paginationSmall equals: 'pagination-sm'
+		assert: Willow classes >> #bootstrap >> #next equals: 'next';
+		assert: Willow classes >> #bootstrap >> #previous equals: 'previous';
+		assert: Willow classes >> #bootstrap >> #pager equals: 'pager';
+		assert: Willow classes >> #bootstrap >> #pagination equals: 'pagination';
+		assert: Willow classes >> #bootstrap >> #paginationLarge equals: 'pagination-lg';
+		assert: Willow classes >> #bootstrap >> #paginationSmall equals: 'pagination-sm'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testPanels [
 
 	self
-		assert: BootstrapCssStyles panel equals: 'panel';
-		assert: BootstrapCssStyles panelBody equals: 'panel-body';
-		assert: BootstrapCssStyles panelCollapse equals: 'panel-collapse';
-		assert: BootstrapCssStyles panelDanger equals: 'panel-danger';
-		assert: BootstrapCssStyles panelDefault equals: 'panel-default';
-		assert: BootstrapCssStyles panelFooter equals: 'panel-footer';
-		assert: BootstrapCssStyles panelGroup equals: 'panel-group';
-		assert: BootstrapCssStyles panelHeading equals: 'panel-heading';
-		assert: BootstrapCssStyles panelInfo equals: 'panel-info';
-		assert: BootstrapCssStyles panelPrimary equals: 'panel-primary';
-		assert: BootstrapCssStyles panelSuccess equals: 'panel-success';
-		assert: BootstrapCssStyles panelTitle equals: 'panel-title';
-		assert: BootstrapCssStyles panelWarning equals: 'panel-warning'
+		assert: Willow classes >> #bootstrap >> #panel equals: 'panel';
+		assert: Willow classes >> #bootstrap >> #panelBody equals: 'panel-body';
+		assert: Willow classes >> #bootstrap >> #panelCollapse equals: 'panel-collapse';
+		assert: Willow classes >> #bootstrap >> #panelDanger equals: 'panel-danger';
+		assert: Willow classes >> #bootstrap >> #panelDefault equals: 'panel-default';
+		assert: Willow classes >> #bootstrap >> #panelFooter equals: 'panel-footer';
+		assert: Willow classes >> #bootstrap >> #panelGroup equals: 'panel-group';
+		assert: Willow classes >> #bootstrap >> #panelHeading equals: 'panel-heading';
+		assert: Willow classes >> #bootstrap >> #panelInfo equals: 'panel-info';
+		assert: Willow classes >> #bootstrap >> #panelPrimary equals: 'panel-primary';
+		assert: Willow classes >> #bootstrap >> #panelSuccess equals: 'panel-success';
+		assert: Willow classes >> #bootstrap >> #panelTitle equals: 'panel-title';
+		assert: Willow classes >> #bootstrap >> #panelWarning equals: 'panel-warning'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testProgressBars [
 
 	self
-		assert: BootstrapCssStyles progress equals: 'progress';
-		assert: BootstrapCssStyles progressBar equals: 'progress-bar';
-		assert: BootstrapCssStyles progressBarDanger equals: 'progress-bar-danger';
-		assert: BootstrapCssStyles progressBarInfo equals: 'progress-bar-info';
-		assert: BootstrapCssStyles progressBarStriped equals: 'progress-bar-striped';
-		assert: BootstrapCssStyles progressBarSuccess equals: 'progress-bar-success';
-		assert: BootstrapCssStyles progressBarWarning equals: 'progress-bar-warning'
+		assert: Willow classes >> #bootstrap >> #progress equals: 'progress';
+		assert: Willow classes >> #bootstrap >> #progressBar equals: 'progress-bar';
+		assert: Willow classes >> #bootstrap >> #progressBarDanger equals: 'progress-bar-danger';
+		assert: Willow classes >> #bootstrap >> #progressBarInfo equals: 'progress-bar-info';
+		assert: Willow classes >> #bootstrap >> #progressBarStriped equals: 'progress-bar-striped';
+		assert: Willow classes >> #bootstrap >> #progressBarSuccess equals: 'progress-bar-success';
+		assert: Willow classes >> #bootstrap >> #progressBarWarning equals: 'progress-bar-warning'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testResponsiveUtilities [
 
 	self
-		assert: BootstrapCssStyles hiddenExtraSmall equals: 'hidden-xs';
-		assert: BootstrapCssStyles hiddenSmall equals: 'hidden-sm';
-		assert: BootstrapCssStyles hiddenMedium equals: 'hidden-md';
-		assert: BootstrapCssStyles hiddenLarge equals: 'hidden-lg';
-		assert: BootstrapCssStyles hiddenPrint equals: 'hidden-print'.
+		assert: Willow classes >> #bootstrap >> #hiddenExtraSmall equals: 'hidden-xs';
+		assert: Willow classes >> #bootstrap >> #hiddenSmall equals: 'hidden-sm';
+		assert: Willow classes >> #bootstrap >> #hiddenMedium equals: 'hidden-md';
+		assert: Willow classes >> #bootstrap >> #hiddenLarge equals: 'hidden-lg';
+		assert: Willow classes >> #bootstrap >> #hiddenPrint equals: 'hidden-print'.
 
 	self
-		assert: BootstrapCssStyles visibleExtraSmallBlock equals: 'visible-xs-block';
-		assert: BootstrapCssStyles visibleSmallBlock equals: 'visible-sm-block';
-		assert: BootstrapCssStyles visibleMediumBlock equals: 'visible-md-block';
-		assert: BootstrapCssStyles visibleLargeBlock equals: 'visible-lg-block';
-		assert: BootstrapCssStyles visiblePrintBlock equals: 'visible-print-block'.
+		assert: Willow classes >> #bootstrap >> #visibleExtraSmallBlock equals: 'visible-xs-block';
+		assert: Willow classes >> #bootstrap >> #visibleSmallBlock equals: 'visible-sm-block';
+		assert: Willow classes >> #bootstrap >> #visibleMediumBlock equals: 'visible-md-block';
+		assert: Willow classes >> #bootstrap >> #visibleLargeBlock equals: 'visible-lg-block';
+		assert: Willow classes >> #bootstrap >> #visiblePrintBlock equals: 'visible-print-block'.
 
 	self
-		assert: BootstrapCssStyles visibleExtraSmallInline equals: 'visible-xs-inline';
-		assert: BootstrapCssStyles visibleSmallInline equals: 'visible-sm-inline';
-		assert: BootstrapCssStyles visibleMediumInline equals: 'visible-md-inline';
-		assert: BootstrapCssStyles visibleLargeInline equals: 'visible-lg-inline';
-		assert: BootstrapCssStyles visiblePrintInline equals: 'visible-print-inline'.
+		assert: Willow classes >> #bootstrap >> #visibleExtraSmallInline equals: 'visible-xs-inline';
+		assert: Willow classes >> #bootstrap >> #visibleSmallInline equals: 'visible-sm-inline';
+		assert: Willow classes >> #bootstrap >> #visibleMediumInline equals: 'visible-md-inline';
+		assert: Willow classes >> #bootstrap >> #visibleLargeInline equals: 'visible-lg-inline';
+		assert: Willow classes >> #bootstrap >> #visiblePrintInline equals: 'visible-print-inline'.
 
 	self
-		assert: BootstrapCssStyles visibleExtraSmallInlineBlock equals: 'visible-xs-inline-block';
-		assert: BootstrapCssStyles visibleSmallInlineBlock equals: 'visible-sm-inline-block';
-		assert: BootstrapCssStyles visibleMediumInlineBlock equals: 'visible-md-inline-block';
-		assert: BootstrapCssStyles visibleLargeInlineBlock equals: 'visible-lg-inline-block';
-		assert: BootstrapCssStyles visiblePrintInlineBlock equals: 'visible-print-inline-block'
+		assert: Willow classes >> #bootstrap >> #visibleExtraSmallInlineBlock equals: 'visible-xs-inline-block';
+		assert: Willow classes >> #bootstrap >> #visibleSmallInlineBlock equals: 'visible-sm-inline-block';
+		assert: Willow classes >> #bootstrap >> #visibleMediumInlineBlock equals: 'visible-md-inline-block';
+		assert: Willow classes >> #bootstrap >> #visibleLargeInlineBlock equals: 'visible-lg-inline-block';
+		assert: Willow classes >> #bootstrap >> #visiblePrintInlineBlock equals: 'visible-print-inline-block'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testTables [
 
 	self
-		assert: BootstrapCssStyles table equals: 'table';
-		assert: BootstrapCssStyles tableBordered equals: 'table-bordered';
-		assert: BootstrapCssStyles tableCondensed equals: 'table-condensed';
-		assert: BootstrapCssStyles tableHover equals: 'table-hover';
-		assert: BootstrapCssStyles tableResponsive equals: 'table-responsive';
-		assert: BootstrapCssStyles tableStriped equals: 'table-striped'.
+		assert: Willow classes >> #bootstrap >> #table equals: 'table';
+		assert: Willow classes >> #bootstrap >> #tableBordered equals: 'table-bordered';
+		assert: Willow classes >> #bootstrap >> #tableCondensed equals: 'table-condensed';
+		assert: Willow classes >> #bootstrap >> #tableHover equals: 'table-hover';
+		assert: Willow classes >> #bootstrap >> #tableResponsive equals: 'table-responsive';
+		assert: Willow classes >> #bootstrap >> #tableStriped equals: 'table-striped'.
 
 
 	self
-		assert: BootstrapCssStyles tableDanger equals: 'danger';
-		assert: BootstrapCssStyles tableInfo equals: 'info';
-		assert: BootstrapCssStyles tableSuccess equals: 'success';
-		assert: BootstrapCssStyles tableWarning equals: 'warning'
+		assert: Willow classes >> #bootstrap >> #tableDanger equals: 'danger';
+		assert: Willow classes >> #bootstrap >> #tableInfo equals: 'info';
+		assert: Willow classes >> #bootstrap >> #tableSuccess equals: 'success';
+		assert: Willow classes >> #bootstrap >> #tableWarning equals: 'warning'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testTypography [
 
 	self
-		assert: BootstrapCssStyles blockquoteReverse equals: 'blockquote-reverse';
-		assert: BootstrapCssStyles definitionListHorizontal equals: 'dl-horizontal';
-		assert: BootstrapCssStyles initialism equals: 'initialism';
-		assert: BootstrapCssStyles lead equals: 'lead';
-		assert: BootstrapCssStyles listInline equals: 'list-inline';
-		assert: BootstrapCssStyles listUnstyled equals: 'list-unstyled';
-		assert: BootstrapCssStyles small equals: 'small'.
+		assert: Willow classes >> #bootstrap >> #blockquoteReverse equals: 'blockquote-reverse';
+		assert: Willow classes >> #bootstrap >> #definitionListHorizontal equals: 'dl-horizontal';
+		assert: Willow classes >> #bootstrap >> #initialism equals: 'initialism';
+		assert: Willow classes >> #bootstrap >> #lead equals: 'lead';
+		assert: Willow classes >> #bootstrap >> #listInline equals: 'list-inline';
+		assert: Willow classes >> #bootstrap >> #listUnstyled equals: 'list-unstyled';
+		assert: Willow classes >> #bootstrap >> #small equals: 'small'.
 
 	self
-		assert: BootstrapCssStyles textCapitalize equals: 'text-capitalize';
-		assert: BootstrapCssStyles textCenter equals: 'text-center';
-		assert: BootstrapCssStyles textJustify equals: 'text-justify';
-		assert: BootstrapCssStyles textLeft equals: 'text-left';
-		assert: BootstrapCssStyles textLowercase equals: 'text-lowercase';
-		assert: BootstrapCssStyles textNowrap equals: 'text-nowrap';
-		assert: BootstrapCssStyles textRight equals: 'text-right';
-		assert: BootstrapCssStyles textUppercase equals: 'text-uppercase'
+		assert: Willow classes >> #bootstrap >> #textCapitalize equals: 'text-capitalize';
+		assert: Willow classes >> #bootstrap >> #textCenter equals: 'text-center';
+		assert: Willow classes >> #bootstrap >> #textJustify equals: 'text-justify';
+		assert: Willow classes >> #bootstrap >> #textLeft equals: 'text-left';
+		assert: Willow classes >> #bootstrap >> #textLowercase equals: 'text-lowercase';
+		assert: Willow classes >> #bootstrap >> #textNowrap equals: 'text-nowrap';
+		assert: Willow classes >> #bootstrap >> #textRight equals: 'text-right';
+		assert: Willow classes >> #bootstrap >> #textUppercase equals: 'text-uppercase'
 ]
 
 { #category : #tests }
 BootstrapCssStylesTest >> testWells [
 
 	self
-		assert: BootstrapCssStyles well equals: 'well';
-		assert: BootstrapCssStyles wellLarge equals: 'well-lg';
-		assert: BootstrapCssStyles wellSmall equals: 'well-sm'
+		assert: Willow classes >> #bootstrap >> #well equals: 'well';
+		assert: Willow classes >> #bootstrap >> #wellLarge equals: 'well-lg';
+		assert: Willow classes >> #bootstrap >> #wellSmall equals: 'well-sm'
 ]

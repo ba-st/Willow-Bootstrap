@@ -83,7 +83,7 @@ BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 
 	| listItem |
 
-	listItem := canvas listItem class: BootstrapCssStyles active.
+	listItem := canvas listItem class: Willow classes >> #bootstrap >>#active.
 	self setRoleWith: BootstrapConstants presentation to: listItem on: canvas.
 	listItem with: headers first
 ]
@@ -104,7 +104,7 @@ BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 BootstrapToggableNavigationBuilder >> renderTabContentOn: aCanvas [
 
 	aCanvas div
-		class: BootstrapCssStyles tabContent;
+		class: Willow classes >> #bootstrap >>#tabContent;
 		with: [ contents do: [ :currentContent | aCanvas render: currentContent ] ]
 ]
 
@@ -133,7 +133,7 @@ BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 
 	list := canvas unorderedList.
 	list
-		class: BootstrapCssStyles nav;
+		class: Willow classes >> #bootstrap >>#nav;
 		class: self navigationTypeClass.
 	self setRoleWith: BootstrapConstants tablist to: list on: canvas.
 	^ list

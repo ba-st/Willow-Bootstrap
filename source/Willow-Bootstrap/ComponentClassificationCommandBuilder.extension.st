@@ -279,97 +279,97 @@ ComponentClassificationCommandBuilder >> collapsing [
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnExtraSmall: count [
 
-	^ self commandStyledWith: self halt
+	^ self commandStyledWith: (#'columnExtraSmall<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnExtraSmallOffset: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnExtraSmallOffset<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnExtraSmallPull: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnExtraSmallPull<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnExtraSmallPush: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnExtraSmallPush<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnLarge: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnLarge<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnLargeOffset: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnLargeOffset<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnLargePull: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnLargePull<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnLargePush: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnLargePush<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnMedium: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnMedium<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnMediumOffset: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnMediumOffset<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnMediumPull: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnMediumPull<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnMediumPush: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnMediumPush<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnSmall: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnSmall<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnSmallOffset: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnSmallOffset<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnSmallPull: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnSmallPull<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnSmallPush: count [
 
-	^ self commandStyledWith:  self halt
+	^ self commandStyledWith: (#'columnSmallPush<1p>' expandMacrosWith: count)
 ]
 
 { #category : #'*Willow-Bootstrap' }

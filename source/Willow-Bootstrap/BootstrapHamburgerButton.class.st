@@ -46,5 +46,5 @@ BootstrapHamburgerButton >> renderContentOn: aCanvas [
 { #category : #'private-rendering' }
 BootstrapHamburgerButton >> renderIconOn: aCanvas [
 
-	3 timesRepeat: [ aCanvas span class: BootstrapCssStyles iconBar ]
+	3 timesRepeat: [ aCanvas span class: Willow classes >> #bootstrap >>#iconBar ]
 ]

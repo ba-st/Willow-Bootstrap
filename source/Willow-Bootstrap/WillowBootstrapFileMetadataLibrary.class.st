@@ -41,7 +41,7 @@ WillowBootstrapFileMetadataLibrary >> cleanModalFunctionUsing: script [
 	function << ((script jQuery new alias: 'modal') next: WAScriptTag new tag) remove.
 	function << (script jQuery new alias: 'modal') remove.
 	function << ((script jQuery id: WillowConstants dialogSectionName) children length equalTo: 0)
-		nonInlinedThen: (script jQuery class: BootstrapCssStyles modalBackdrop) remove.
+		nonInlinedThen: (script jQuery class: Willow classes >> #bootstrap >>#modalBackdrop) remove.
 	^ function
 ]
 

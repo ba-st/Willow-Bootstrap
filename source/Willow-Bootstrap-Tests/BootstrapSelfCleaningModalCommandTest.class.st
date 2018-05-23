@@ -12,7 +12,7 @@ BootstrapSelfCleaningModalCommandTest >> testApplyToOn [
 
 	| html |
 
-	html := self apply: BootstrapSelfCleaningModalCommand new toComponentDefinedBy: [ :canvas | canvas div class: BootstrapCssStyles modal ].
+	html := self apply: BootstrapSelfCleaningModalCommand new toComponentDefinedBy: [ :canvas | canvas div class: Willow classes >> #bootstrap >>#modal ].
 
 	self
 		assert: html

@@ -52,10 +52,10 @@ BootstrapModalHeaderWebView >> onCloseTrigger [
 BootstrapModalHeaderWebView >> renderContentOn: aCanvas [
 
 	aCanvas div
-		class: BootstrapCssStyles modalHeader;
+		class: Willow classes >> #bootstrap >>#modalHeader;
 		with: [ dismissButtonOptional withContentDo: [ :dismissButton | aCanvas render: dismissButton ].
 			aCanvas heading
 				level4;
-				class: BootstrapCssStyles modalTitle;
+				class: Willow classes >> #bootstrap >>#modalTitle;
 				with: title ]
 ]
