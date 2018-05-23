@@ -15,7 +15,8 @@ WillowBootstrap class >> initialize [
 	Willow constants bind: #bootstrap to: Namespace new.
 	self
 		initializeBaseConstantsAndClasses;
-		initializeDatepickerConstantsAndClasses
+		initializeDatepickerConstantsAndClasses;
+		initializeSelectConstantsAndClasses
 ]
 
 { #category : #'private - initialization' }
@@ -589,6 +590,86 @@ WillowBootstrap class >> initializeRolesConstants [
 		bind: #tabpanel to: 'tabpanel';
 		bind: #tablist to: 'tablist';
 		bind: #alert to: 'alert'
+]
+
+{ #category : #'private - select' }
+WillowBootstrap class >> initializeSelectConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap >> #select)
+		bind: #static to: 'static';
+		bind: #contains to: 'contains';
+		bind: #auto to: 'auto';
+		bind: #style to: 'style';
+		bind: #startsWith to: 'startsWith';
+		bind: #fit to: 'fit';
+		bind: #values to: 'values';
+		bind: #count to: 'count'
+]
+
+{ #category : #'private - select' }
+WillowBootstrap class >> initializeSelectConstantsAndClasses [
+
+	<ignoreForCoverage>
+	(Willow classes >> #bootstrap)
+		bind: #selectpicker to: 'selectpicker';
+		bind: #bootstrapSelect to: 'bootstrap-select'.
+	Willow constants >> #bootstrap bind: #select to: Namespace new.
+	self
+		initializeSelectConstants;
+		initializeSelectDataAPIConstants;
+		initializeSelectEventsConstants
+]
+
+{ #category : #'private - select' }
+WillowBootstrap class >> initializeSelectDataAPIConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap >> #select)
+		bind: #header to: 'header';
+		bind: #liveSearch to: 'live-search';
+		bind: #deselectAllText to: 'deselect-all-text';
+		bind: #selectOnTab to: 'select-on-tab';
+		bind: #liveSearchStyle to: 'live-search-style';
+		bind: #tickIcon to: 'tick-icon';
+		bind: #showTick to: 'show-tick';
+		bind: #title to: 'title';
+		bind: #width to: 'width';
+		bind: #dropdownAlignRight to: 'dropdown-align-right';
+		bind: #dropupAuto to: 'dropup-auto';
+		bind: #selectedTextFormat to: 'selected-text-format';
+		bind: #multipleSeparator to: 'multiple-separator';
+		bind: #actionsBox to: 'actions-box';
+		bind: #maxOptions to: 'max-options';
+		bind: #liveSearchPlaceholder to: 'live-search-placeholder';
+		bind: #showIcon to: 'show-icon';
+		bind: #mobile to: 'mobile';
+		bind: #showContent to: 'show-content';
+		bind: #hideDisabled to: 'hide-disabled';
+		bind: #showSubtext to: 'show-subtext';
+		bind: #container to: 'container';
+		bind: #noneSelectedText to: 'none-selected-text';
+		bind: #iconBase to: 'icon-base';
+		bind: #countSelectedText to: 'count-selected-text';
+		bind: #liveSearchNormalize to: 'live-search-normalize';
+		bind: #selectAllText to: 'select-all-text';
+		bind: #maxOptionsText to: 'max-options-text';
+		bind: #windowPadding to: 'window-padding'
+]
+
+{ #category : #'private - select' }
+WillowBootstrap class >> initializeSelectEventsConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap >> #select)
+		bind: #hiddenSelect to: 'hidden.bs.select';
+		bind: #changedSelect to: 'changed.bs.select';
+		bind: #refreshedSelect to: 'refreshed.bs.select';
+		bind: #loadedSelect to: 'loaded.bs.select';
+		bind: #hideSelect to: 'hide.bs.select';
+		bind: #shownSelect to: 'shown.bs.select';
+		bind: #showSelect to: 'show.bs.select';
+		bind: #renderedSelect to: 'rendered.bs.select'
 ]
 
 { #category : #'private - initialization' }

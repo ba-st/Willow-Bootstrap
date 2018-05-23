@@ -135,7 +135,7 @@ BootstrapSelectTest >> testDropdownAlignRight [
 
 	| html |
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect dropdownAlignRight: BootstrapSelectConstants auto ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect dropdownAlignRight: Willow constants >> #bootstrap >> #select >> #auto ].
 
 	self
 		assert: html
@@ -220,7 +220,7 @@ BootstrapSelectTest >> testLiveSearchOptions [
 				liveSearch: true;
 				liveSearchNormalize: true;
 				liveSearchPlaceholder: 'Search...';
-				liveSearchStyle: BootstrapSelectConstants startsWith ].
+				liveSearchStyle: Willow constants >> #bootstrap >> #select >> #startsWith ].
 
 	self
 		assert: html
@@ -233,7 +233,7 @@ BootstrapSelectTest >> testLiveSearchStyle [
 
 	| html |
 
-	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect liveSearchStyle: BootstrapSelectConstants contains ].
+	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect liveSearchStyle: Willow constants >> #bootstrap >> #select >> #contains ].
 
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"liveSearchStyle":"contains"});</script>'
 ]
@@ -485,29 +485,33 @@ BootstrapSelectTest >> testSelectedTextFormat [
 
 	| html |
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: BootstrapSelectConstants values ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: Willow constants >> #bootstrap >> #select >> #values ].
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"values"});</script>'.
+		equals:
+			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"values"});</script>'.
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: BootstrapSelectConstants static ].
-
-	self
-		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"static"});</script>'.
-
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: BootstrapSelectConstants count ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: Willow constants >> #bootstrap >> #select >> #static ].
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count"});</script>'.
+		equals:
+			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"static"});</script>'.
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: (BootstrapSelectConstants countAfter: 3) ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: Willow constants >> #bootstrap >> #select >> #count ].
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count > 3"});</script>'
+		equals:
+			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count"});</script>'.
+
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormatCountAfter: 3 ].
+
+	self
+		assert: html
+		equals:
+			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count > 3"});</script>'
 ]
 
 { #category : #'tests-Methods' }
@@ -658,7 +662,7 @@ BootstrapSelectTest >> testWidth [
 
 	| html |
 
-	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect width: BootstrapSelectConstants fit  ].
+	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect width: Willow constants >> #bootstrap >> #select >> #fit  ].
 
 	self
 		assert: html

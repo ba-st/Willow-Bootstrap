@@ -11,42 +11,42 @@ Class {
 BootstrapSelectConstantsTest >> testClasses [
 
 	self
-		assert: BootstrapSelectConstants selectpicker equals: 'selectpicker';
-		assert: BootstrapSelectConstants bootstrapSelect equals: 'bootstrap-select'
+		assert: Willow classes >> #bootstrap >> #selectpicker equals: 'selectpicker';
+		assert: Willow classes >> #bootstrap >> #bootstrapSelect equals: 'bootstrap-select'
 ]
 
 { #category : #tests }
 BootstrapSelectConstantsTest >> testDataAPI [
 
 	self
-		assert: BootstrapSelectConstants selectedTextFormat equals: 'selected-text-format';
-		assert: BootstrapSelectConstants noneSelectedText equals: 'none-selected-text';
-		assert: BootstrapSelectConstants width equals: 'width';
-		assert: BootstrapSelectConstants actionsBox equals: 'actions-box';
-		assert: BootstrapSelectConstants container equals: 'container';
-		assert: BootstrapSelectConstants countSelectedText equals: 'count-selected-text';
-		assert: BootstrapSelectConstants deselectAllText equals: 'deselect-all-text';
-		assert: BootstrapSelectConstants dropdownAlignRight equals: 'dropdown-align-right';
-		assert: BootstrapSelectConstants dropupAuto equals: 'dropup-auto';
-		assert: BootstrapSelectConstants header equals: 'header';
-		assert: BootstrapSelectConstants hideDisabled equals: 'hide-disabled';
-		assert: BootstrapSelectConstants iconBase equals: 'icon-base';
-		assert: BootstrapSelectConstants liveSearch equals: 'live-search';
-		assert: BootstrapSelectConstants liveSearchNormalize equals: 'live-search-normalize';
-		assert: BootstrapSelectConstants liveSearchPlaceholder equals: 'live-search-placeholder';
-		assert: BootstrapSelectConstants liveSearchStyle equals: 'live-search-style';
-		assert: BootstrapSelectConstants maxOptions equals: 'max-options';
-		assert: BootstrapSelectConstants maxOptionsText equals: 'max-options-text';
-		assert: BootstrapSelectConstants mobile equals: 'mobile';
-		assert: BootstrapSelectConstants multipleSeparator equals: 'multiple-separator';
-		assert: BootstrapSelectConstants selectAllText equals: 'select-all-text';
-		assert: BootstrapSelectConstants selectOnTab equals: 'select-on-tab';
-		assert: BootstrapSelectConstants showContent equals: 'show-content';
-		assert: BootstrapSelectConstants showIcon equals: 'show-icon';
-		assert: BootstrapSelectConstants showSubtext equals: 'show-subtext';
-		assert: BootstrapSelectConstants showTick equals: 'show-tick';
-		assert: BootstrapSelectConstants style equals: 'style';
-		assert: BootstrapSelectConstants tickIcon equals: 'tick-icon';
-		assert: BootstrapSelectConstants title equals: 'title';
-		assert: BootstrapSelectConstants windowPadding equals: 'window-padding'
+		assert: Willow constants >> #bootstrap >> #select >> #selectedTextFormat equals: 'selected-text-format';
+		assert: Willow constants >> #bootstrap >> #select >> #noneSelectedText equals: 'none-selected-text';
+		assert: Willow constants >> #bootstrap >> #select >> #width equals: 'width';
+		assert: Willow constants >> #bootstrap >> #select >> #actionsBox equals: 'actions-box';
+		assert: Willow constants >> #bootstrap >> #select >> #container equals: 'container';
+		assert: Willow constants >> #bootstrap >> #select >> #countSelectedText equals: 'count-selected-text';
+		assert: Willow constants >> #bootstrap >> #select >> #deselectAllText equals: 'deselect-all-text';
+		assert: Willow constants >> #bootstrap >> #select >> #dropdownAlignRight equals: 'dropdown-align-right';
+		assert: Willow constants >> #bootstrap >> #select >> #dropupAuto equals: 'dropup-auto';
+		assert: Willow constants >> #bootstrap >> #select >> #header equals: 'header';
+		assert: Willow constants >> #bootstrap >> #select >> #hideDisabled equals: 'hide-disabled';
+		assert: Willow constants >> #bootstrap >> #select >> #iconBase equals: 'icon-base';
+		assert: Willow constants >> #bootstrap >> #select >> #liveSearch equals: 'live-search';
+		assert: Willow constants >> #bootstrap >> #select >> #liveSearchNormalize equals: 'live-search-normalize';
+		assert: Willow constants >> #bootstrap >> #select >> #liveSearchPlaceholder equals: 'live-search-placeholder';
+		assert: Willow constants >> #bootstrap >> #select >> #liveSearchStyle equals: 'live-search-style';
+		assert: Willow constants >> #bootstrap >> #select >> #maxOptions equals: 'max-options';
+		assert: Willow constants >> #bootstrap >> #select >> #maxOptionsText equals: 'max-options-text';
+		assert: Willow constants >> #bootstrap >> #select >> #mobile equals: 'mobile';
+		assert: Willow constants >> #bootstrap >> #select >> #multipleSeparator equals: 'multiple-separator';
+		assert: Willow constants >> #bootstrap >> #select >> #selectAllText equals: 'select-all-text';
+		assert: Willow constants >> #bootstrap >> #select >> #selectOnTab equals: 'select-on-tab';
+		assert: Willow constants >> #bootstrap >> #select >> #showContent equals: 'show-content';
+		assert: Willow constants >> #bootstrap >> #select >> #showIcon equals: 'show-icon';
+		assert: Willow constants >> #bootstrap >> #select >> #showSubtext equals: 'show-subtext';
+		assert: Willow constants >> #bootstrap >> #select >> #showTick equals: 'show-tick';
+		assert: Willow constants >> #bootstrap >> #select >> #style equals: 'style';
+		assert: Willow constants >> #bootstrap >> #select >> #tickIcon equals: 'tick-icon';
+		assert: Willow constants >> #bootstrap >> #select >> #title equals: 'title';
+		assert: Willow constants >> #bootstrap >> #select >> #windowPadding equals: 'window-padding'
 ]

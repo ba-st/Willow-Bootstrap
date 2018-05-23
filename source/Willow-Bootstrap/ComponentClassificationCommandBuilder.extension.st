@@ -103,6 +103,12 @@ ComponentClassificationCommandBuilder >> bootstrap [
 ]
 
 { #category : #'*Willow-Bootstrap' }
+ComponentClassificationCommandBuilder >> bootstrapSelect [
+
+	^ self commandStyledWith: #bootstrapSelect
+]
+
+{ #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> breadcrumb [
 
 	^ self commandStyledWith: #breadcrumb
@@ -1264,6 +1270,12 @@ ComponentClassificationCommandBuilder >> screenReaderOnly [
 ComponentClassificationCommandBuilder >> screenReaderOnlyFocusable [
 
 	^ self commandStyledWith: #screenReaderOnlyFocusable
+]
+
+{ #category : #'*Willow-Bootstrap' }
+ComponentClassificationCommandBuilder >> selectpicker [
+
+	^ self commandStyledWith: #selectpicker
 ]
 
 { #category : #'*Willow-Bootstrap' }
