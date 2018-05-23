@@ -20,7 +20,7 @@ BootstrapSelect >> container: aStringOrFalse [
 
 	"When set to a string, appends the select to a specific element or selector, e.g., container: 'body' | '.main-body'"
 
-	self optionAt: Willow constants >> #bootstrap >> #select >> #container put: aStringOrFalse
+	self optionAt: self constants >> #bootstrap >> #select >> #container put: aStringOrFalse
 ]
 
 { #category : #Options }
@@ -75,7 +75,7 @@ BootstrapSelect >> header: aString [
 
 	"Adds a header to the top of the menu; includes a close button by default"
 
-	self optionAt: Willow constants >> #bootstrap >> #select >> #header put: aString
+	self optionAt: self constants >> #bootstrap >> #select >> #header put: aString
 ]
 
 { #category : #Methods }
@@ -174,7 +174,7 @@ BootstrapSelect >> mobile: boolean [
 
 	"When set to true, enables the device's native menu for select menus."
 
-	self optionAt: Willow constants >> #bootstrap >> #select >> #mobile put: boolean 
+	self optionAt: self constants >> #bootstrap >> #select >> #mobile put: boolean 
 ]
 
 { #category : #Options }
@@ -197,49 +197,49 @@ BootstrapSelect >> noneSelectedText: string [
 { #category : #Events }
 BootstrapSelect >> onChanged: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #select >> #changedSelect with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #select >> #changedSelect with: aFunction
 ]
 
 { #category : #Events }
 BootstrapSelect >> onHidden: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #select >> #hiddenSelect with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #select >> #hiddenSelect with: aFunction
 ]
 
 { #category : #Events }
 BootstrapSelect >> onHide: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #select >> #hideSelect with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #select >> #hideSelect with: aFunction
 ]
 
 { #category : #Events }
 BootstrapSelect >> onLoaded: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #select >> #loadedSelect with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #select >> #loadedSelect with: aFunction
 ]
 
 { #category : #Events }
 BootstrapSelect >> onRefreshed: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #select >> #refreshedSelect with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #select >> #refreshedSelect with: aFunction
 ]
 
 { #category : #Events }
 BootstrapSelect >> onRendered: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #select >> #renderedSelect with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #select >> #renderedSelect with: aFunction
 ]
 
 { #category : #Events }
 BootstrapSelect >> onShow: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #select >> #showSelect with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #select >> #showSelect with: aFunction
 ]
 
 { #category : #Events }
 BootstrapSelect >> onShown: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #select >> #shownSelect with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #select >> #shownSelect with: aFunction
 ]
 
 { #category : #Methods }
@@ -356,7 +356,7 @@ BootstrapSelect >> style: string [
 
 	"When set to a string, add the value to the button's style."
 
-	self optionAt: Willow constants >> #bootstrap >> #select >> #style put: string 
+	self optionAt: self constants >> #bootstrap >> #select >> #style put: string 
 ]
 
 { #category : #Options }
@@ -373,7 +373,7 @@ BootstrapSelect >> title: string [
 
 	"The default title for the selectpicker."
 
-	self optionAt: Willow constants >> #bootstrap >> #select >> #title put: string 
+	self optionAt: self constants >> #bootstrap >> #select >> #title put: string 
 ]
 
 { #category : #Methods }
@@ -394,7 +394,7 @@ BootstrapSelect >> width: autoOrFitOrCssLengthOrFalse [
 	optionValue := autoOrFitOrCssLengthOrFalse == false
 		ifTrue: [ false ]
 		ifFalse: [ autoOrFitOrCssLengthOrFalse greaseString ].
-	self optionAt: Willow constants >> #bootstrap >> #select >> #width put: optionValue
+	self optionAt: self constants >> #bootstrap >> #select >> #width put: optionValue
 ]
 
 { #category : #Options }

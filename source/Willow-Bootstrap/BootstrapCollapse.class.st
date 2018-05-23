@@ -24,7 +24,7 @@ BootstrapCollapse >> parent: aSelector [
 
 	"If a selector is provided, then all collapsible elements under the specified parent will be closed 	when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent 	on the panel class)"
 
-	self optionAt: Willow constants >> #bootstrap >> #parent put: aSelector 
+	self optionAt: self constants >> #bootstrap >> #parent put: aSelector
 ]
 
 { #category : #Methods }
@@ -36,7 +36,7 @@ BootstrapCollapse >> show [
 { #category : #Methods }
 BootstrapCollapse >> toggle [
 
-	functionName := Willow constants >> #bootstrap >> #toggle
+	functionName := self constants >> #bootstrap >> #toggle
 ]
 
 { #category : #Options }
@@ -44,5 +44,5 @@ BootstrapCollapse >> toggle: aBoolean [
 
 	"Toggles the collapsible element on invocation"
 
-	self optionAt: Willow constants >> #bootstrap >> #toggle put: aBoolean
+	self optionAt: self constants >> #bootstrap >> #toggle put: aBoolean
 ]

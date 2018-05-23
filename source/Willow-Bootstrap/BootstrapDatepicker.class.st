@@ -373,7 +373,7 @@ Set a maximum limit for the view mode. Accepts: “days” or 0, “months” or
 { #category : #private }
 BootstrapDatepicker >> method [
 
-	^ Willow constants >> #bootstrap >> #datepicker >> #libraryName
+	^ self constants >> #bootstrap >> #datepicker >> #libraryName
 ]
 
 { #category : #Options }
@@ -409,55 +409,55 @@ The string that will appear between dates when generating the input’s value. W
 { #category : #Events }
 BootstrapDatepicker >> onCenturyChanged: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #changeCentury with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #changeCentury with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onDateChanged: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #changeDate with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #changeDate with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onDateCleared: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #clearDate with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #clearDate with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onDecadeChanged: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #changeDecade with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #changeDecade with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onHide: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #hide with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #hide with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onMonthChanged: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #changeMonth with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #changeMonth with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onShow: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #show with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #show with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onViewModeChanged: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #changeViewMode with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #changeViewMode with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onYearChanged: aFunction [
 
-	self call: 'on' with: Willow constants >> #bootstrap >> #datepicker >> #changeYear with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #datepicker >> #changeYear with: aFunction
 ]
 
 { #category : #Options }

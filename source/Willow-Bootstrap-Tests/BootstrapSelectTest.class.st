@@ -135,7 +135,7 @@ BootstrapSelectTest >> testDropdownAlignRight [
 
 	| html |
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect dropdownAlignRight: Willow constants >> #bootstrap >> #select >> #auto ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect dropdownAlignRight: bootstrapSelect constants >> #bootstrap >> #select >> #auto ].
 
 	self
 		assert: html
@@ -220,7 +220,7 @@ BootstrapSelectTest >> testLiveSearchOptions [
 				liveSearch: true;
 				liveSearchNormalize: true;
 				liveSearchPlaceholder: 'Search...';
-				liveSearchStyle: Willow constants >> #bootstrap >> #select >> #startsWith ].
+				liveSearchStyle: bootstrapSelect constants >> #bootstrap >> #select >> #startsWith ].
 
 	self
 		assert: html
@@ -233,7 +233,7 @@ BootstrapSelectTest >> testLiveSearchStyle [
 
 	| html |
 
-	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect liveSearchStyle: Willow constants >> #bootstrap >> #select >> #contains ].
+	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect liveSearchStyle: bootstrapSelect constants >> #bootstrap >> #select >> #contains ].
 
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"liveSearchStyle":"contains"});</script>'
 ]
@@ -485,21 +485,21 @@ BootstrapSelectTest >> testSelectedTextFormat [
 
 	| html |
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: Willow constants >> #bootstrap >> #select >> #values ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: bootstrapSelect constants >> #bootstrap >> #select >> #values ].
 
 	self
 		assert: html
 		equals:
 			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"values"});</script>'.
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: Willow constants >> #bootstrap >> #select >> #static ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: bootstrapSelect constants >> #bootstrap >> #select >> #static ].
 
 	self
 		assert: html
 		equals:
 			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"static"});</script>'.
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: Willow constants >> #bootstrap >> #select >> #count ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: bootstrapSelect constants >> #bootstrap >> #select >> #count ].
 
 	self
 		assert: html
@@ -662,12 +662,9 @@ BootstrapSelectTest >> testWidth [
 
 	| html |
 
-	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect width: Willow constants >> #bootstrap >> #select >> #fit  ].
+	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect width: bootstrapSelect constants >> #bootstrap >> #select >> #fit ].
 
-	self
-		assert: html
-		equals:
-			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"width":"fit"});</script>'
+	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"width":"fit"});</script>'
 ]
 
 { #category : #'tests-Options' }

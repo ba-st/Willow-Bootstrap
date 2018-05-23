@@ -12,7 +12,7 @@ BootstrapTooltip >> animation: aBoolean [
 
 	"Apply a CSS fade transition to the tooltip"
 
-	self optionAt: Willow constants >> #bootstrap >> #animation put: aBoolean
+	self optionAt: self constants >> #bootstrap >> #animation put: aBoolean
 ]
 
 { #category : #Options }
@@ -23,7 +23,7 @@ BootstrapTooltip >> container: aStringOrFalse [
 	This option is particularly useful in that it allows you to position the tooltip in the flow of the document near the triggering element
 	- which will prevent the tooltip from floating away from the triggering element during a window resize."
 
-	self optionAt: Willow constants >> #bootstrap >> #container put: aStringOrFalse
+	self optionAt: self constants >> #bootstrap >> #container put: aStringOrFalse
 ]
 
 { #category : #Options }
@@ -33,7 +33,7 @@ BootstrapTooltip >> delay: aNumberOrObject [
 	If a number is supplied, delay is applied to both hide/show
 	Use an instance of BootstrapDelayConfiguration to specify a different delay for hide or show"
 
-	self optionAt: Willow constants >> #bootstrap >> #delay put: aNumberOrObject
+	self optionAt: self constants >> #bootstrap >> #delay put: aNumberOrObject
 ]
 
 { #category : #Methods }
@@ -59,7 +59,7 @@ BootstrapTooltip >> html: aBoolean [
 
 	"Insert HTML into the tooltip. If false, jQuery's text method will be used to insert content into the DOM. Use text if you're worried about XSS attacks."
 
-	self optionAt: Willow constants >> #bootstrap >> #html put: aBoolean
+	self optionAt: self constants >> #bootstrap >> #html put: aBoolean
 ]
 
 { #category : #private }
@@ -78,7 +78,7 @@ BootstrapTooltip >> placement: aStringOrFunction [
 	When a function is used to determine the placement, it is called with the tooltip DOM node as its first argument and the triggering element DOM node as its second. 
 	The this context is set to the tooltip instance."
 
-	self optionAt: Willow constants >> #bootstrap >> #placement put: aStringOrFunction
+	self optionAt: self constants >> #bootstrap >> #placement put: aStringOrFunction
 ]
 
 { #category : #Options }
@@ -87,7 +87,7 @@ BootstrapTooltip >> selector: aString [
 	"If a selector is provided, tooltip objects will be delegated to the specified targets. 
 	In practice, this is used to enable dynamic HTML content to have tooltips added. "
 
-	self optionAt: Willow constants >> #bootstrap >> #selector put: aString
+	self optionAt: self constants >> #bootstrap >> #selector put: aString
 ]
 
 { #category : #Methods }
@@ -96,7 +96,7 @@ BootstrapTooltip >> show [
 	"Reveals an element's tooltip. Returns to the caller before the tooltip has actually been shown (i.e. before the shown.bs.tooltip event occurs). 
 	This is considered a manual triggering of the tooltip. Tooltips with zero-length titles are never displayed."
 
-	functionName := Willow constants >> #bootstrap >> #show
+	functionName := self constants >> #bootstrap >> #show
 ]
 
 { #category : #Options }
@@ -108,7 +108,7 @@ BootstrapTooltip >> template: aRenderable [
 	.tooltip-arrow will become the tooltip's arrow.
 	The outermost wrapper element should have the .tooltip class."
 
-	self optionAt: Willow constants >> #bootstrap >> #template put: (self render: aRenderable)
+	self optionAt: self constants >> #bootstrap >> #template put: (self render: aRenderable)
 ]
 
 { #category : #Options }
@@ -117,7 +117,7 @@ BootstrapTooltip >> title: aStringOrFunction [
 	"Default title value if title attribute isn't present.
 	If a function is given, it will be called with its this reference set to the element that the tooltip is attached to."
 
-	self optionAt: Willow constants >> #bootstrap >> #title put: aStringOrFunction
+	self optionAt: self constants >> #bootstrap >> #title put: aStringOrFunction
 ]
 
 { #category : #Methods }
@@ -126,7 +126,7 @@ BootstrapTooltip >> toggle [
 	"Toggles an element's tooltip. Returns to the caller before the tooltip has actually been shown or hidden. 
 	This is considered a manual triggering of the tooltip."
 
-	functionName := Willow constants >> #bootstrap >> #toggle
+	functionName := self constants >> #bootstrap >> #toggle
 ]
 
 { #category : #Options }
@@ -135,7 +135,7 @@ BootstrapTooltip >> trigger: aString [
 	"How tooltip is triggered - click | hover | focus | manual. 
 	You may pass multiple triggers; separate them with a space. manual cannot be combined with any other trigger."
 
-	self optionAt: Willow constants >> #bootstrap >> #trigger put: aString
+	self optionAt: self constants >> #bootstrap >> #trigger put: aString
 ]
 
 { #category : #Options }
@@ -145,5 +145,5 @@ BootstrapTooltip >> viewport: aStringViewportConfigurationOrFunction [
 	Example: viewport: '#viewport' or { 'selector': '#viewport', 'padding': 0 }
 	If a function is given, it is called with the triggering element DOM node as its only argument. The this context is set to the tooltip instance."
 
-	self optionAt: Willow constants >> #bootstrap >> #viewport put: aStringViewportConfigurationOrFunction
+	self optionAt: self constants >> #bootstrap >> #viewport put: aStringViewportConfigurationOrFunction
 ]

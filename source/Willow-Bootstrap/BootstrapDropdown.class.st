@@ -10,11 +10,11 @@ Class {
 { #category : #private }
 BootstrapDropdown >> method [
 
-	^ Willow constants >> #bootstrap >> #dropdown
+	^ self constants >> #bootstrap >> #dropdown
 ]
 
 { #category : #Methods }
 BootstrapDropdown >> toggle [
 
-	functionName := Willow constants >> #bootstrap >> #toggle
+	functionName := self constants >> #bootstrap >> #toggle
 ]

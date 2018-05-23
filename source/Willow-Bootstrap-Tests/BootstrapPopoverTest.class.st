@@ -268,7 +268,7 @@ BootstrapPopoverTest >> testTrigger [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover trigger: Willow constants >> #bootstrap >> #manual ].
+	html := self renderPopoverContentApplying: [ :popover | popover trigger: popover constants >> #bootstrap >> #manual ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"trigger":"manual"});</script>'
 ]

@@ -16,28 +16,34 @@ BootstrapAlertCommand class >> applyingClassificationCommandWith: aCssClass [
 	^ self new initializeApplying: (ComponentClassificationCommand toStyleWith: aCssClass)
 ]
 
+{ #category : #'private - Instance Creation' }
+BootstrapAlertCommand class >> bootstrapClasses [
+
+	^ Willow classes >> #bootstrap
+]
+
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> danger [
 
-	^ self applyingClassificationCommandWith: Willow classes >> #bootstrap >> #alertDanger
+	^ self applyingClassificationCommandWith: self bootstrapClasses >> #alertDanger
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> informational [
 
-	^ self applyingClassificationCommandWith: Willow classes >> #bootstrap >> #alertInfo
+	^ self applyingClassificationCommandWith: self bootstrapClasses >> #alertInfo
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> success [
 
-	^ self applyingClassificationCommandWith: Willow classes >> #bootstrap >> #alertSuccess
+	^ self applyingClassificationCommandWith: self bootstrapClasses >> #alertSuccess
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> warning [
 
-	^ self applyingClassificationCommandWith: Willow classes >> #bootstrap >> #alertWarning
+	^ self applyingClassificationCommandWith: self bootstrapClasses >> #alertWarning
 ]
 
 { #category : #processing }

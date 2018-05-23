@@ -14,7 +14,7 @@ BootstrapPopover >> animation: aBoolean [
 
 	"Apply a CSS fade transition to the popover"
 
-	self optionAt: Willow constants >> #bootstrap >> #animation put: aBoolean
+	self optionAt: self constants >> #bootstrap >> #animation put: aBoolean
 ]
 
 { #category : #Options }
@@ -25,7 +25,7 @@ BootstrapPopover >> container: aStringOrFalse [
 	This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element
 	- which will prevent the popover from floating away from the triggering element during a window resize."
 
-	self optionAt: Willow constants >> #bootstrap >> #container put: aStringOrFalse
+	self optionAt: self constants >> #bootstrap >> #container put: aStringOrFalse
 ]
 
 { #category : #Options }
@@ -34,7 +34,7 @@ BootstrapPopover >> content: aStringOrFunction [
 	"Default content value if data-content attribute isn't present.
 	If a function is given, it will be called with its this reference set to the element that the popover is attached to."
 
-	self optionAt: Willow constants >> #bootstrap >> #content put: aStringOrFunction
+	self optionAt: self constants >> #bootstrap >> #content put: aStringOrFunction
 ]
 
 { #category : #Options }
@@ -44,7 +44,7 @@ BootstrapPopover >> delay: aNumberOrObject [
 	If a number is supplied, delay is applied to both hide/show
 	Use an instance of BootstrapDelayConfiguration to specify a different delay for hide or show"
 
-	self optionAt: Willow constants >> #bootstrap >> #delay put: aNumberOrObject
+	self optionAt: self constants >> #bootstrap >> #delay put: aNumberOrObject
 ]
 
 { #category : #Methods }
@@ -70,7 +70,7 @@ BootstrapPopover >> html: aBoolean [
 
 	"Insert HTML into the popover. If false, jQuery's text method will be used to insert content into the DOM. Use text if you're worried about XSS attacks."
 
-	self optionAt: Willow constants >> #bootstrap >> #html put: aBoolean
+	self optionAt: self constants >> #bootstrap >> #html put: aBoolean
 ]
 
 { #category : #Options }
@@ -92,7 +92,7 @@ BootstrapPopover >> htmlTitle: aRenderable [
 { #category : #private }
 BootstrapPopover >> method [
 
-	^ Willow constants >> #bootstrap >> #popover
+	^ self constants >> #bootstrap >> #popover
 ]
 
 { #category : #Options }
@@ -105,7 +105,7 @@ BootstrapPopover >> placement: aStringOrFunction [
 	When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. 
 	The this context is set to the popover instance."
 
-	self optionAt: Willow constants >> #bootstrap >> #placement put: aStringOrFunction
+	self optionAt: self constants >> #bootstrap >> #placement put: aStringOrFunction
 ]
 
 { #category : #Options }
@@ -114,7 +114,7 @@ BootstrapPopover >> selector: aString [
 	"If a selector is provided, popover objects will be delegated to the specified targets. 
 	In practice, this is used to enable dynamic HTML content to have popovers added. "
 
-	self optionAt: Willow constants >> #bootstrap >> #selector put: aString
+	self optionAt: self constants >> #bootstrap >> #selector put: aString
 ]
 
 { #category : #Methods }
@@ -123,7 +123,7 @@ BootstrapPopover >> show [
 	"Reveals an element's popover. Returns to the caller before the popover has actually been shown (i.e. before the shown.bs.popover event occurs). 
 	This is considered a manual triggering of the popover. popovers with zero-length titles are never displayed."
 
-	functionName := Willow constants >> #bootstrap >> #show
+	functionName := self constants >> #bootstrap >> #show
 ]
 
 { #category : #Options }
@@ -136,7 +136,7 @@ BootstrapPopover >> template: aRenderable [
 	.arrow will become the popover's arrow.
 	The outermost wrapper element should have the .popover class."
 
-	self optionAt: Willow constants >> #bootstrap >> #template put: (self render: aRenderable)
+	self optionAt: self constants >> #bootstrap >> #template put: (self render: aRenderable)
 ]
 
 { #category : #Options }
@@ -145,7 +145,7 @@ BootstrapPopover >> title: aStringOrFunction [
 	"Default title value if title attribute isn't present.
 	If a function is given, it will be called with its this reference set to the element that the popover is attached to."
 
-	self optionAt: Willow constants >> #bootstrap >> #title put: aStringOrFunction
+	self optionAt: self constants >> #bootstrap >> #title put: aStringOrFunction
 ]
 
 { #category : #Methods }
@@ -154,7 +154,7 @@ BootstrapPopover >> toggle [
 	"Toggles an element's popover. Returns to the caller before the popover has actually been shown or hidden. 
 	This is considered a manual triggering of the popover."
 
-	functionName := Willow constants >> #bootstrap >> #toggle
+	functionName := self constants >> #bootstrap >> #toggle
 ]
 
 { #category : #Options }
@@ -163,7 +163,7 @@ BootstrapPopover >> trigger: aString [
 	"How popover is triggered - click | hover | focus | manual. 
 	You may pass multiple triggers; separate them with a space. manual cannot be combined with any other trigger."
 
-	self optionAt: Willow constants >> #bootstrap >> #trigger put: aString
+	self optionAt: self constants >> #bootstrap >> #trigger put: aString
 ]
 
 { #category : #Options }
@@ -173,5 +173,5 @@ BootstrapPopover >> viewport: aStringViewportConfigurationOrFunction [
 	Example: viewport: '#viewport' or { 'selector': '#viewport', 'padding': 0 }
 	If a function is given, it is called with the triggering element DOM node as its only argument. The this context is set to the popover instance."
 
-	self optionAt: Willow constants >> #bootstrap >> #viewport put: aStringViewportConfigurationOrFunction
+	self optionAt: self constants >> #bootstrap >> #viewport put: aStringViewportConfigurationOrFunction
 ]

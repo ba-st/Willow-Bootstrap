@@ -231,7 +231,7 @@ BootstrapTooltipTest >> testTrigger [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip trigger: Willow constants >> #bootstrap >> #manual ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip trigger: tooltip constants >> #bootstrap >> #manual ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"trigger":"manual"});</script>'
 ]

@@ -25,7 +25,7 @@ BootstrapModalTest >> testBackdrop [
 
 	| html |
 
-	html := self renderModalContentApplying: [ :modal | modal backdrop: Willow constants >> #bootstrap >> #static ].
+	html := self renderModalContentApplying: [ :modal | modal backdrop: modal constants >> #bootstrap >> #static ].
 
 	self
 		assert: html
