@@ -10,7 +10,9 @@ Class {
 { #category : #'class initialization' }
 WillowBootstrap class >> initialize [
 
+	<ignoreForCoverage>
 	Willow classes bind: #bootstrap to: Namespace new.
+	Willow constants bind: #bootstrap to: Namespace new.
 	self
 		initializeImagesClasses;
 		initializeInputGroupsClasses;
@@ -37,7 +39,12 @@ WillowBootstrap class >> initialize [
 		initializeCodeClasses;
 		initializeTablesClasses;
 		initializeNavigationClasses;
-		initializeButtonsClasses
+		initializeButtonsClasses.
+	self
+		initializeDataAPIConstants;
+		initializeEventsConstants;
+		initializeRolesConstants;
+		initializeWillowFunctionsConstants
 ]
 
 { #category : #'private - initialization' }
@@ -121,6 +128,42 @@ WillowBootstrap class >> initializeContainersClasses [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeDataAPIConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap)
+		bind: #trigger to: 'trigger';
+		bind: #content to: 'content';
+		bind: #static to: 'static';
+		bind: #selector to: 'selector';
+		bind: #manual to: 'manual';
+		bind: #focus to: 'focus';
+		bind: #container to: 'container';
+		bind: #dismiss to: 'dismiss';
+		bind: #pill to: 'pill';
+		bind: #popover to: 'popover';
+		bind: #toggle to: 'toggle';
+		bind: #show to: 'show';
+		bind: #hover to: 'hover';
+		bind: #placement to: 'placement';
+		bind: #target to: 'target';
+		bind: #backdrop to: 'backdrop';
+		bind: #role to: 'role';
+		bind: #title to: 'title';
+		bind: #viewport to: 'viewport';
+		bind: #html to: 'html';
+		bind: #keyboard to: 'keyboard';
+		bind: #dropdown to: 'dropdown';
+		bind: #delay to: 'delay';
+		bind: #template to: 'template';
+		bind: #click to: 'click';
+		bind: #animation to: 'animation';
+		bind: #parent to: 'parent';
+		bind: #buttons to: 'buttons';
+		bind: #modal to: 'modal'
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeDropdownsClasses [
 
 	<ignoreForCoverage>
@@ -135,6 +178,35 @@ WillowBootstrap class >> initializeDropdownsClasses [
 		bind: #dropdownMenu to: 'dropdown-menu';
 		bind: #dropdown to: 'dropdown';
 		bind: #dropdownMenuRight to: 'dropdown-menu-right'
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeEventsConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap)
+		bind: #showTooltip to: 'show.bs.tooltip';
+		bind: #insertedTooltip to: 'inserted.bs.tooltip';
+		bind: #hiddenCollapse to: 'hidden.bs.collapse';
+		bind: #insertedPopover to: 'inserted.bs.popover';
+		bind: #hideCollapse to: 'hide.bs.collapse';
+		bind: #hiddenModal to: 'hidden.bs.modal';
+		bind: #shownDropdown to: 'shown.bs.dropdown';
+		bind: #showCollapse to: 'show.bs.collapse';
+		bind: #showDropdown to: 'show.bs.dropdown';
+		bind: #hideModal to: 'hide.bs.modal';
+		bind: #hiddenDropdown to: 'hidden.bs.dropdown';
+		bind: #showModal to: 'show.bs.modal';
+		bind: #hidePopover to: 'hide.bs.popover';
+		bind: #hiddenPopover to: 'hidden.bs.popover';
+		bind: #shownModal to: 'shown.bs.modal';
+		bind: #shownTooltip to: 'shown.bs.tooltip';
+		bind: #hiddenTooltip to: 'hidden.bs.tooltip';
+		bind: #shownPopover to: 'shown.bs.popover';
+		bind: #hideDropdown to: 'hide.bs.dropdown';
+		bind: #showPopover to: 'show.bs.popover';
+		bind: #hideTooltip to: 'hide.bs.tooltip';
+		bind: #shownCollapse to: 'shown.bs.collapse'
 ]
 
 { #category : #'private - initialization' }
@@ -416,6 +488,26 @@ WillowBootstrap class >> initializeResponsiveUtilitiesClasses [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeRolesConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap)
+		bind: #presentation to: 'presentation';
+		bind: #separator to: 'separator';
+		bind: #progressbar to: 'progressbar';
+		bind: #navigation to: 'navigation';
+		bind: #toolbar to: 'toolbar';
+		bind: #group to: 'group';
+		bind: #tab to: 'tab';
+		bind: #button to: 'button';
+		bind: #dialog to: 'dialog';
+		bind: #document to: 'document';
+		bind: #tabpanel to: 'tabpanel';
+		bind: #tablist to: 'tablist';
+		bind: #alert to: 'alert'
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeTablesClasses [
 
 	<ignoreForCoverage>
@@ -472,4 +564,11 @@ WillowBootstrap class >> initializeWellsClasses [
 		bind: #wellLarge to: 'well-lg';
 		bind: #well to: 'well';
 		bind: #wellSmall to: 'well-sm'
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeWillowFunctionsConstants [
+
+	<ignoreForCoverage>
+	Willow constants >> #bootstrap bind: #cleanModalFunctionName to: 'cleanModal'
 ]

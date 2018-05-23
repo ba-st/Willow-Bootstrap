@@ -197,7 +197,7 @@ BootstrapTooltipTest >> testTemplate [
 							theCanvas
 								render: (GenericContainerWebView wrapping: '' applying: [ :container | container addClass bootstrap tooltipArrow ]);
 								render: (GenericContainerWebView wrapping: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap tooltipInner ]) ]
-						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants bootstrap role to: Willow classes >> #bootstrap >>#tooltip )]).
+						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants >> #bootstrap >> #role to: Willow classes >> #bootstrap >> #tooltip) ]).
 			div script: tooltip ].
 
 	self
@@ -231,7 +231,7 @@ BootstrapTooltipTest >> testTrigger [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip trigger: BootstrapConstants manual ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip trigger: Willow constants >> #bootstrap >> #manual ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"trigger":"manual"});</script>'
 ]

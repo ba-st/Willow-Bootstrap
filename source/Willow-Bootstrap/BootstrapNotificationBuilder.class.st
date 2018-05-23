@@ -29,7 +29,7 @@ BootstrapNotificationBuilder >> dismissibleWrapping: aRenderable [
 
 	| button |
 
-	button := BootstrapDismissButton dismissing: BootstrapConstants alert.
+	button := BootstrapDismissButton dismissing: Willow constants >> #bootstrap >> #alert.
 	content := [ :canvas | 
 	canvas
 		render: button;

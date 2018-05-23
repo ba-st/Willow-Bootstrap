@@ -234,7 +234,7 @@ BootstrapPopoverTest >> testTemplate [
 								render: (GenericContainerWebView wrapping: '' applying: [ :container | container addClass bootstrap arrow ]);
 								render: (HeadingWebView displaying: '' withLevel: 3 applying: [ :container | container addClass bootstrap popoverTitle ]);
 								render: (GenericContainerWebView wrapping: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap popoverContent ]) ]
-						applying: [ :container :constants | container addClass bootstrap popover + (container setAttribute: constants bootstrap role to: Willow classes >> #bootstrap >>#tooltip) ]).
+						applying: [ :container :constants | container addClass bootstrap popover + (container setAttribute: constants  >> #bootstrap  >> #role to: Willow classes >> #bootstrap >>#tooltip) ]).
 			div script: popover ].
 
 	self
@@ -268,7 +268,7 @@ BootstrapPopoverTest >> testTrigger [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover trigger: BootstrapConstants manual ].
+	html := self renderPopoverContentApplying: [ :popover | popover trigger: Willow constants >> #bootstrap >> #manual ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"trigger":"manual"});</script>'
 ]

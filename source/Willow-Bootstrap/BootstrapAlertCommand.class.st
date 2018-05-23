@@ -49,6 +49,6 @@ BootstrapAlertCommand >> applyTo: aComponent on: aCanvas [
 { #category : #initialization }
 BootstrapAlertCommand >> initializeApplying: aContextualClassificationCommand [
 
-	classificationCommand := [ :container :constants | container addClass bootstrap alert + aContextualClassificationCommand + (container setAttribute: constants bootstrap role to: constants bootstrap alert) ]
+	classificationCommand := [ :container :constants | container addClass bootstrap alert + aContextualClassificationCommand + (container setAttribute: constants  >> #bootstrap  >> #role to: constants  >> #bootstrap  >> #alert) ]
 		asWebComponentCommand
 ]

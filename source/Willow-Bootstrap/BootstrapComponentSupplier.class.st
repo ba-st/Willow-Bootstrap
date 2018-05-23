@@ -55,7 +55,7 @@ BootstrapComponentSupplier >> asynchronicLinkActingAsButtonLabeled: aRenderable 
 
 	^ self
 		asynchronicLinkLabeled: aRenderable
-		applying: [ :anchor :constants | (anchor setAttribute: constants bootstrap role to: constants bootstrap button) + anchor addClass bootstrap button + aComponentCommand ]
+		applying: [ :anchor :constants | (anchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) + anchor addClass bootstrap button + aComponentCommand ]
 ]
 
 { #category : #Supplying }

@@ -14,7 +14,7 @@ Class {
 { #category : #'private - Instance Creation' }
 BootstrapModalHeaderWebView class >> dismissButton [
 
-	^ BootstrapDismissButton dismissing: BootstrapConstants modal
+	^ BootstrapDismissButton dismissing: Willow constants >> #bootstrap >> #modal
 ]
 
 { #category : #'Instance Creation' }

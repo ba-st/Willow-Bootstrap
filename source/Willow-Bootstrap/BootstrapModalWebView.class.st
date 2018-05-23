@@ -52,7 +52,7 @@ BootstrapModalWebView >> documentWrapping: content applying: aDocumentCommand [
 
 	^ GenericContainerWebView
 		wrapping: content
-		applying: [ :container :constants | container addClass bootstrap modalDialog + (container setAttribute: 'role' to: constants bootstrap document) + aDocumentCommand ]
+		applying: [ :container :constants | container addClass bootstrap modalDialog + (container setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #document) + aDocumentCommand ]
 ]
 
 { #category : #initialize }
@@ -62,7 +62,8 @@ BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aB
 	footer := aBootstrapModalFooter.
 	dialog := GenericContainerWebView
 		wrapping: (self documentWrapping: (self contentWrapping: aBodyView) applying: aModalDocumentCommand)
-		applying: [ :container :constants | container addClass bootstrap modal + container disableTabCycle + (container setAttribute: 'role' to: constants bootstrap dialog) + aDialogCommand ]
+		applying:
+			[ :container :constants | container addClass bootstrap modal + container disableTabCycle + (container setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #dialog) + aDialogCommand ]
 ]
 
 { #category : #Configuring }

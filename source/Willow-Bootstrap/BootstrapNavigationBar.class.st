@@ -74,14 +74,13 @@ BootstrapNavigationBar >> renderContentOn: aCanvas [
 BootstrapNavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 
 	aCanvas div
-		class: Willow classes >> #bootstrap >>#navbarHeader;
-		with: [ 
-			navbarContent identifyIn: aCanvas.
+		class: Willow classes >> #bootstrap >> #navbarHeader;
+		with: [ navbarContent identifyIn: aCanvas.
 			aCanvas
 				render: (BootstrapHamburgerButton targeting: navbarContent identifier);
 				render:
 					(self componentSupplier
 						asynchronicLinkLabeled: brandView
 						applying:
-							[ :anchor :constants | (anchor setAttribute: constants bootstrap role to: constants bootstrap button) + anchor addClass bootstrap navbarBrand ]) ]
+							[ :anchor :constants | (anchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) + anchor addClass bootstrap navbarBrand ]) ]
 ]

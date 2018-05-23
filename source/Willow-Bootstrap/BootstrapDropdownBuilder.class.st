@@ -30,7 +30,7 @@ BootstrapDropdownBuilder >> addActionLabeled: aRenderable executing: anActionBlo
 
 	| anchor |
 
-	anchor := supplier asynchronicLinkLabeled: aRenderable applying: [ :link :constants | (link setAttribute: constants bootstrap role to: constants bootstrap button) + aCommand ].
+	anchor := supplier asynchronicLinkLabeled: aRenderable applying: [ :link :constants | (link setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) + aCommand ].
 	anActionBlock value: anchor.
 	menuItems add: [ :canvas | canvas listItem: anchor ]
 ]
@@ -40,7 +40,7 @@ BootstrapDropdownBuilder >> addDivider [
 
 	| dividerCommand |
 
-	dividerCommand := [ :listItem :constants | listItem addClass bootstrap divider + (listItem setARIAAttribute: constants bootstrap role to: 'divider') ] asWebComponentCommand.
+	dividerCommand := [ :listItem :constants | listItem addClass bootstrap divider + (listItem setARIAAttribute: constants >> #bootstrap >> #role to: 'divider') ] asWebComponentCommand.
 
 	menuItems add: [ :canvas | dividerCommand applyTo: canvas listItem on: canvas ]
 ]
@@ -74,7 +74,7 @@ BootstrapDropdownBuilder >> content [
 { #category : #private }
 BootstrapDropdownBuilder >> dropdownCommandFor: button using: constants [
 
-	^ button addClass bootstrap dropdownToggle + (button setData: constants bootstrap toggle to: constants bootstrap dropdown) + (button setARIAAttribute: 'haspopup' to: 'true')
+	^ button addClass bootstrap dropdownToggle + (button setData: constants >> #bootstrap >> #toggle to: constants >> #bootstrap >> #dropdown) + (button setARIAAttribute: 'haspopup' to: 'true')
 		+ (button setARIAAttribute: 'expanded' to: 'false')
 ]
 

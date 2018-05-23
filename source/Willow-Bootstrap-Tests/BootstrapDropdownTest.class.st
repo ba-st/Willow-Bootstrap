@@ -15,21 +15,21 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 			| div |
 
 			div := canvas div.
-			div class: Willow classes >> #bootstrap >>#dropdown.
+			div class: Willow classes >> #bootstrap >> #dropdown.
 			div
 				with: [ | anchor dropdown |
 
 					anchor := canvas anchor.
-					[ :dropdownAnchor :constants | (dropdownAnchor setData: constants bootstrap target to: constants bootstrap dropdown) + (dropdownAnchor setAttribute: constants bootstrap role to: constants bootstrap button) ]
+					[ :dropdownAnchor :constants | (dropdownAnchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown) + (dropdownAnchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) ]
 						asWebComponentCommand applyTo: anchor on: canvas.
 					dropdown := canvas jQuery new bootstrapDropdown.
 					aBlock value: dropdown.
 					anchor script: dropdown.
 					anchor
 						with: [ canvas render: 'Menu'.
-							canvas span class: Willow classes >> #bootstrap >>#caret ].
+							canvas span class: Willow classes >> #bootstrap >> #caret ].
 					canvas unorderedList
-						class: Willow classes >> #bootstrap >>#dropdownMenu;
+						class: Willow classes >> #bootstrap >> #dropdownMenu;
 						with: [ canvas
 								listItem: 'Menu option';
 								listItem: 'Other option' ] ] ]

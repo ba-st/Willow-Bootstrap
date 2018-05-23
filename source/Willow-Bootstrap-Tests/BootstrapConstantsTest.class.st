@@ -11,32 +11,32 @@ Class {
 BootstrapConstantsTest >> testDataAPI [
 
 	self
-		assert: BootstrapConstants dismiss equals: 'dismiss';
-		assert: BootstrapConstants parent equals: 'parent';
-		assert: BootstrapConstants target equals: 'target';
-		assert: BootstrapConstants toggle equals: 'toggle'.
+		assert: Willow constants >> #bootstrap >> #dismiss equals: 'dismiss';
+		assert: Willow constants >> #bootstrap >> #parent equals: 'parent';
+		assert: Willow constants >> #bootstrap >> #target equals: 'target';
+		assert: Willow constants >> #bootstrap >> #toggle equals: 'toggle'.
 
 	self
-		assert: BootstrapConstants click equals: 'click';
-		assert: BootstrapConstants focus equals: 'focus';
-		assert: BootstrapConstants hover equals: 'hover';
-		assert: BootstrapConstants manual equals: 'manual';
-		assert: BootstrapConstants buttons equals: 'buttons'
+		assert: Willow constants >> #bootstrap >> #click equals: 'click';
+		assert: Willow constants >> #bootstrap >> #focus equals: 'focus';
+		assert: Willow constants >> #bootstrap >> #hover equals: 'hover';
+		assert: Willow constants >> #bootstrap >> #manual equals: 'manual';
+		assert: Willow constants >> #bootstrap >> #buttons equals: 'buttons'
 ]
 
 { #category : #tests }
 BootstrapConstantsTest >> testRoles [
 
 	self
-		assert: BootstrapConstants alert equals: 'alert';
-		assert: BootstrapConstants button equals: 'button';
-		assert: BootstrapConstants dialog equals: 'dialog';
-		assert: BootstrapConstants document equals: 'document';
-		assert: BootstrapConstants group equals: 'group';
-		assert: BootstrapConstants navigation equals: 'navigation';
-		assert: BootstrapConstants presentation equals: 'presentation';
-		assert: BootstrapConstants progressbar equals: 'progressbar';
-		assert: BootstrapConstants separator equals: 'separator';
-		assert: BootstrapConstants tablist equals: 'tablist';
-		assert: BootstrapConstants toolbar equals: 'toolbar'
+		assert: Willow constants >> #bootstrap >> #alert equals: 'alert';
+		assert: Willow constants >> #bootstrap >> #button equals: 'button';
+		assert: Willow constants >> #bootstrap >> #dialog equals: 'dialog';
+		assert: Willow constants >> #bootstrap >> #document equals: 'document';
+		assert: Willow constants >> #bootstrap >> #group equals: 'group';
+		assert: Willow constants >> #bootstrap >> #navigation equals: 'navigation';
+		assert: Willow constants >> #bootstrap >> #presentation equals: 'presentation';
+		assert: Willow constants >> #bootstrap >> #progressbar equals: 'progressbar';
+		assert: Willow constants >> #bootstrap >> #separator equals: 'separator';
+		assert: Willow constants >> #bootstrap >> #tablist equals: 'tablist';
+		assert: Willow constants >> #bootstrap >> #toolbar equals: 'toolbar'
 ]

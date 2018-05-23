@@ -25,9 +25,10 @@ BootstrapToggableNavigationBuilder >> addNavigationHeadedBy: aRenderable contain
 { #category : #private }
 BootstrapToggableNavigationBuilder >> applyMetadataTo: aLink controling: identifiedContent on: canvas [
 
-	self setRoleWith: BootstrapConstants tab to: aLink on: canvas.
-	[ :link :constants | (link setData: constants bootstrap toggle to: self dataToggleValue) + (link setARIAAttribute: 'control' to: identifiedContent identifier) ]
-		asWebComponentCommand applyTo: aLink on: canvas
+	self setRoleWith: Willow constants >> #bootstrap >> #tab to: aLink on: canvas.
+	[ :link :constants | (link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue) + (link setARIAAttribute: 'control' to: identifiedContent identifier) ] asWebComponentCommand
+		applyTo: aLink
+		on: canvas
 ]
 
 { #category : #Building }
@@ -55,11 +56,12 @@ BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationConte
 
 	"The first tab content needs to be styled as active in order to function properly"
 	isFirstTab := contents isEmpty.
-	
+
 	^ IdentifiedWebView
 		forDivNamed: self dataToggleValue
 		containing: aNavigationContent
-		applying: [ :div :constants | (div setAttribute: constants bootstrap role to: constants bootstrap tabpanel) + div addClass bootstrap tabPane + (div when: [ isFirstTab ] apply: div addClass bootstrap active) ]
+		applying:
+			[ :div :constants | (div setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #tabpanel) + div addClass bootstrap tabPane + (div when: [ isFirstTab ] apply: div addClass bootstrap active) ]
 ]
 
 { #category : #initialization }
@@ -84,7 +86,7 @@ BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 	| listItem |
 
 	listItem := canvas listItem class: Willow classes >> #bootstrap >>#active.
-	self setRoleWith: BootstrapConstants presentation to: listItem on: canvas.
+	self setRoleWith: Willow constants >> #bootstrap >> #presentation to: listItem on: canvas.
 	listItem with: headers first
 ]
 
@@ -96,7 +98,7 @@ BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 			| listItem |
 
 			listItem := aCanvas listItem.
-			self setRoleWith: BootstrapConstants presentation to: listItem on: aCanvas.
+			self setRoleWith: Willow constants >> #bootstrap >> #presentation to: listItem on: aCanvas.
 			listItem with: header ]
 ]
 
@@ -123,7 +125,7 @@ BootstrapToggableNavigationBuilder >> renderTabListOn: aCanvas applying: aComman
 { #category : #private }
 BootstrapToggableNavigationBuilder >> setRoleWith: aRoleValue to: aComponent on: aCanvas [
 
-	[ :component :constants | component setAttribute: constants bootstrap role to: aRoleValue ] asWebComponentCommand applyTo: aComponent on: aCanvas
+	[ :component :constants | component setAttribute: constants >> #bootstrap >> #role to: aRoleValue ] asWebComponentCommand applyTo: aComponent on: aCanvas
 ]
 
 { #category : #'private - Rendering' }
@@ -135,7 +137,7 @@ BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 	list
 		class: Willow classes >> #bootstrap >>#nav;
 		class: self navigationTypeClass.
-	self setRoleWith: BootstrapConstants tablist to: list on: canvas.
+	self setRoleWith: Willow constants >> #bootstrap >> #tablist to: list on: canvas.
 	^ list
 ]
 
