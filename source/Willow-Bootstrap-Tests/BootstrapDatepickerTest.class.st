@@ -191,22 +191,18 @@ BootstrapDatepickerTest >> testDaysOfWeekDisabled [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekDisabled: BootstrapDatepickerConstants sunday ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekDisabled: Willow constants >> #bootstrap >> #datepicker >> #sunday ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":0});</script>'.
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":0});</script>'.
 
 	html := self
 		renderTextFieldApplying: [ :datepicker | 
 			datepicker
 				daysOfWeekDisabled:
-					{BootstrapDatepickerConstants saturday.
-					BootstrapDatepickerConstants sunday} ].
+					{(Willow constants >> #bootstrap >> #datepicker >> #saturday).
+					(Willow constants >> #bootstrap >> #datepicker >> #sunday)} ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":[6,0]});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":[6,0]});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -214,22 +210,18 @@ BootstrapDatepickerTest >> testDaysOfWeekHighlighted [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekHighlighted: BootstrapDatepickerConstants sunday ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekHighlighted: Willow constants >> #bootstrap >> #datepicker >> #sunday ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":0});</script>'.
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":0});</script>'.
 
 	html := self
 		renderTextFieldApplying: [ :datepicker | 
 			datepicker
 				daysOfWeekHighlighted:
-					{BootstrapDatepickerConstants saturday.
-					BootstrapDatepickerConstants sunday} ].
+					{(Willow constants >> #bootstrap >> #datepicker >> #saturday).
+					(Willow constants >> #bootstrap >> #datepicker >> #sunday)} ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":[6,0]});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":[6,0]});</script>'
 ]
 
 { #category : #'tests-Methods' }
@@ -440,11 +432,9 @@ BootstrapDatepickerTest >> testMaxViewMode [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker maxViewMode: BootstrapDatepickerConstants years ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker maxViewMode: Willow constants >> #bootstrap >> #datepicker >> #years ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"maxViewMode":"years"});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"maxViewMode":"years"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -452,11 +442,9 @@ BootstrapDatepickerTest >> testMinViewMode [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker minViewMode: BootstrapDatepickerConstants months ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker minViewMode: Willow constants >> #bootstrap >> #datepicker >> #months ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"minViewMode":"months"});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"minViewMode":"months"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -757,11 +745,9 @@ BootstrapDatepickerTest >> testStartView [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker startView: BootstrapDatepickerConstants millennium ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker startView: Willow constants >> #bootstrap >> #datepicker >> #millennium ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"startView":"millennium"});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"startView":"millennium"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -883,7 +869,7 @@ BootstrapDatepickerTest >> testWeekStart [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker weekStart: BootstrapDatepickerConstants wednesday ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker weekStart: Willow constants >> #bootstrap >> #datepicker >> #wednesday ].
 
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"weekStart":3});</script>'
 ]

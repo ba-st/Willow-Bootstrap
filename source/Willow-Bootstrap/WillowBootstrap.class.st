@@ -14,6 +14,38 @@ WillowBootstrap class >> initialize [
 	Willow classes bind: #bootstrap to: Namespace new.
 	Willow constants bind: #bootstrap to: Namespace new.
 	self
+		initializeBaseConstantsAndClasses;
+		initializeDatepickerConstantsAndClasses
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeAccessingClasses [
+
+	<ignoreForCoverage>
+	(Willow classes >> #bootstrap)
+		bind: #date to: 'date';
+		bind: #fade to: 'fade'
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeAlertsClasses [
+
+	<ignoreForCoverage>
+	(Willow classes >> #bootstrap)
+		bind: #alertInfo to: 'alert-info';
+		bind: #alertSuccess to: 'alert-success';
+		bind: #alert to: 'alert';
+		bind: #alertDismissible to: 'alert-dismissible';
+		bind: #alertLink to: 'alert-link';
+		bind: #alertDanger to: 'alert-danger';
+		bind: #alertWarning to: 'alert-warning'
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeBaseConstantsAndClasses [
+
+	<ignoreForCoverage>
+	self
 		initializeImagesClasses;
 		initializeInputGroupsClasses;
 		initializeTypographyClasses;
@@ -45,29 +77,6 @@ WillowBootstrap class >> initialize [
 		initializeEventsConstants;
 		initializeRolesConstants;
 		initializeWillowFunctionsConstants
-]
-
-{ #category : #'private - initialization' }
-WillowBootstrap class >> initializeAccessingClasses [
-
-	<ignoreForCoverage>
-	(Willow classes >> #bootstrap)
-		bind: #date to: 'date';
-		bind: #fade to: 'fade'
-]
-
-{ #category : #'private - initialization' }
-WillowBootstrap class >> initializeAlertsClasses [
-
-	<ignoreForCoverage>
-	(Willow classes >> #bootstrap)
-		bind: #alertInfo to: 'alert-info';
-		bind: #alertSuccess to: 'alert-success';
-		bind: #alert to: 'alert';
-		bind: #alertDismissible to: 'alert-dismissible';
-		bind: #alertLink to: 'alert-link';
-		bind: #alertDanger to: 'alert-danger';
-		bind: #alertWarning to: 'alert-warning'
 ]
 
 { #category : #'private - initialization' }
@@ -161,6 +170,81 @@ WillowBootstrap class >> initializeDataAPIConstants [
 		bind: #parent to: 'parent';
 		bind: #buttons to: 'buttons';
 		bind: #modal to: 'modal'
+]
+
+{ #category : #'private - datepicker' }
+WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
+
+	<ignoreForCoverage>
+	Willow constants >> #bootstrap bind: #datepicker to: Namespace new.
+	Willow constants >> #bootstrap >> #datepicker bind: #libraryName to: 'datepicker'.
+	self
+		initializeDatepickerDataAPIConstants;
+		initializeDatepickerEventsConstants;
+		initializeDatepickerViewModesConstants;
+		initializeDatepickerWeekStartConstants
+]
+
+{ #category : #'private - datepicker' }
+WillowBootstrap class >> initializeDatepickerDataAPIConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap >> #datepicker)
+		bind: #todayHighlight to: 'date-today-highlight';
+		bind: #language to: 'date-language';
+		bind: #todayButton to: 'date-today-btn';
+		bind: #orientation to: 'date-orientation';
+		bind: #keyboardNavigation to: 'date-keyboard-navigation';
+		bind: #autoclose to: 'date-autoclose';
+		bind: #forceParse to: 'date-force-parse'
+]
+
+{ #category : #'private - datepicker' }
+WillowBootstrap class >> initializeDatepickerEventsConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap >> #datepicker)
+		bind: #show to: 'show';
+		bind: #changeDate to: 'changeDate';
+		bind: #clearDate to: 'clearDate';
+		bind: #changeMonth to: 'changeMonth';
+		bind: #changeCentury to: 'changeCentury';
+		bind: #changeYear to: 'changeYear';
+		bind: #changeDecade to: 'changeDecade';
+		bind: #hide to: 'hide';
+		bind: #changeViewMode to: 'changeViewMode'
+]
+
+{ #category : #'private - datepicker' }
+WillowBootstrap class >> initializeDatepickerViewModesConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap >> #datepicker)
+		bind: #centuries to: 'centuries';
+		bind: #years to: 'years';
+		bind: #month to: 'month';
+		bind: #year to: 'year';
+		bind: #millennium to: 'millennium';
+		bind: #decade to: 'decade';
+		bind: #linked to: 'linked';
+		bind: #days to: 'days';
+		bind: #months to: 'months';
+		bind: #century to: 'century';
+		bind: #decades to: 'decades'
+]
+
+{ #category : #'private - datepicker' }
+WillowBootstrap class >> initializeDatepickerWeekStartConstants [
+
+	<ignoreForCoverage>
+	(Willow constants >> #bootstrap >> #datepicker)
+		bind: #sunday to: 0;
+		bind: #friday to: 5;
+		bind: #wednesday to: 3;
+		bind: #tuesday to: 2;
+		bind: #monday to: 1;
+		bind: #thursday to: 4;
+		bind: #saturday to: 6
 ]
 
 { #category : #'private - initialization' }

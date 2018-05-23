@@ -8,44 +8,44 @@ Class {
 BootstrapDatepickerConstantsTest >> testDataAPI [
 
 	self
-		assert: BootstrapDatepickerConstants autoclose equals: 'date-autoclose';
-		assert: BootstrapDatepickerConstants forceParse equals: 'date-force-parse';
-		assert: BootstrapDatepickerConstants keyboardNavigation equals: 'date-keyboard-navigation';
-		assert: BootstrapDatepickerConstants language equals: 'date-language';
-		assert: BootstrapDatepickerConstants orientation equals: 'date-orientation';
-		assert: BootstrapDatepickerConstants todayButton equals: 'date-today-btn';
-		assert: BootstrapDatepickerConstants todayHighlight equals: 'date-today-highlight'
+		assert: Willow constants >> #bootstrap >> #datepicker >> #autoclose equals: 'date-autoclose';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #forceParse equals: 'date-force-parse';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #keyboardNavigation equals: 'date-keyboard-navigation';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #language equals: 'date-language';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #orientation equals: 'date-orientation';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #todayButton equals: 'date-today-btn';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #todayHighlight equals: 'date-today-highlight'
 ]
 
 { #category : #tests }
 BootstrapDatepickerConstantsTest >> testStartWeekDays [
 
 	self
-		assert: BootstrapDatepickerConstants monday equals: 1;
-		assert: BootstrapDatepickerConstants tuesday equals: 2;
-		assert: BootstrapDatepickerConstants wednesday equals: 3;
-		assert: BootstrapDatepickerConstants thursday equals: 4;
-		assert: BootstrapDatepickerConstants friday equals: 5;
-		assert: BootstrapDatepickerConstants saturday equals: 6;
-		assert: BootstrapDatepickerConstants sunday equals: 0
+		assert: Willow constants >> #bootstrap >> #datepicker >> #monday equals: 1;
+		assert: Willow constants >> #bootstrap >> #datepicker >> #tuesday equals: 2;
+		assert: Willow constants >> #bootstrap >> #datepicker >> #wednesday equals: 3;
+		assert: Willow constants >> #bootstrap >> #datepicker >> #thursday equals: 4;
+		assert: Willow constants >> #bootstrap >> #datepicker >> #friday equals: 5;
+		assert: Willow constants >> #bootstrap >> #datepicker >> #saturday equals: 6;
+		assert: Willow constants >> #bootstrap >> #datepicker >> #sunday equals: 0
 ]
 
 { #category : #tests }
 BootstrapDatepickerConstantsTest >> testViewModes [
 
 	self
-		assert: BootstrapDatepickerConstants days equals: 'days';
-		assert: BootstrapDatepickerConstants months equals: 'months';
-		assert: BootstrapDatepickerConstants years equals: 'years';
-		assert: BootstrapDatepickerConstants decades equals: 'decades';
-		assert: BootstrapDatepickerConstants centuries equals: 'centuries'.
+		assert: Willow constants >> #bootstrap >> #datepicker >> #days equals: 'days';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #months equals: 'months';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #years equals: 'years';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #decades equals: 'decades';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #centuries equals: 'centuries'.
 
 	self
-		assert: BootstrapDatepickerConstants month equals: 'month';
-		assert: BootstrapDatepickerConstants year equals: 'year';
-		assert: BootstrapDatepickerConstants decade equals: 'decade';
-		assert: BootstrapDatepickerConstants century equals: 'century';
-		assert: BootstrapDatepickerConstants millennium equals: 'millennium'.
+		assert: Willow constants >> #bootstrap >> #datepicker >> #month equals: 'month';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #year equals: 'year';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #decade equals: 'decade';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #century equals: 'century';
+		assert: Willow constants >> #bootstrap >> #datepicker >> #millennium equals: 'millennium'.
 
-	self assert: BootstrapDatepickerConstants linked equals: 'linked'
+	self assert: Willow constants >> #bootstrap >> #datepicker >> #linked equals: 'linked'
 ]
