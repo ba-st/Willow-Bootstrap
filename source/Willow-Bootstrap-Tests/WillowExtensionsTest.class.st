@@ -4,7 +4,10 @@ I'm a test case for extensions of basic Willow objects
 Class {
 	#name : #WillowExtensionsTest,
 	#superclass : #WARenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Frontend'
+	#pools : [
+		'Willow'
+	],
+	#category : #'Willow-Bootstrap-Tests-Frontend'
 }
 
 { #category : #private }
@@ -19,20 +22,20 @@ WillowExtensionsTest >> assertColumnRenderingOf: columnSize at: index [
 						streamContents: [ :stream | 
 							stream
 								nextPutAll: '<div class="';
-								nextPutAll: Willow classes >> #bootstrap >> (#'column<1s><2s><3p>' expandMacrosWith: columnSize with: suffix with: index);
+								nextPutAll: Classification >> #bootstrap >> (#'column<1s><2s><3p>' expandMacrosWith: columnSize with: suffix with: index);
 								nextPutAll: '"></div>' ]) ]
 ]
 
 { #category : #private }
 WillowExtensionsTest >> assertRenderingOfDivApplying: aCommand equals: anExpectedHTML [
 
-	self assert: (self render: (GenericContainerWebView wrapping: [  ] applying: aCommand)) equals: anExpectedHTML
+	self assert: (self render: [ :html | html div apply: aCommand ]) equals: anExpectedHTML
 ]
 
 { #category : #tests }
 WillowExtensionsTest >> testBootstrapClassificationCommandBuilder [
 
-	(Willow classes >> #bootstrap) names
+	(Classification >> #bootstrap) names
 		select: [ :selector | (selector beginsWith: #column) not ]
 		thenDo: [ :selector | 
 			self
@@ -42,7 +45,7 @@ WillowExtensionsTest >> testBootstrapClassificationCommandBuilder [
 						streamContents: [ :stream | 
 							stream
 								nextPutAll: '<div class="';
-								nextPutAll: Willow classes >> #bootstrap >> selector;
+								nextPutAll: Classification >> #bootstrap >> selector;
 								nextPutAll: '"></div>' ]) ].
 
 	1 to: 12 do: [ :index | #('ExtraSmall' 'Small' 'Medium' 'Large') do: [ :columnSize | self assertColumnRenderingOf: columnSize at: index ] ]
