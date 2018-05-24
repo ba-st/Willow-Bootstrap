@@ -11,39 +11,33 @@ Class {
 }
 
 { #category : #'private - Instance Creation' }
-BootstrapAlertCommand class >> applyingClassificationCommandWith: aCssClass [
+BootstrapAlertCommand class >> applying: aCommand [
 
-	^ self new initializeApplying: (ComponentClassificationCommand toStyleWith: aCssClass)
-]
-
-{ #category : #'private - Instance Creation' }
-BootstrapAlertCommand class >> bootstrapClasses [
-
-	^ Willow classes >> #bootstrap
+	^ self new initializeApplying: aCommand asWebComponentCommand
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> danger [
 
-	^ self applyingClassificationCommandWith: self bootstrapClasses >> #alertDanger
+	^ self applying: [ :container | container addClass bootstrap alertDanger ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> informational [
 
-	^ self applyingClassificationCommandWith: self bootstrapClasses >> #alertInfo
+	^ self applying: [ :container | container addClass bootstrap alertInfo ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> success [
 
-	^ self applyingClassificationCommandWith: self bootstrapClasses >> #alertSuccess
+	^ self applying: [ :container | container addClass bootstrap alertSuccess ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> warning [
 
-	^ self applyingClassificationCommandWith: self bootstrapClasses >> #alertWarning
+	^ self applying: [ :container | container addClass bootstrap alertWarning ]
 ]
 
 { #category : #processing }
