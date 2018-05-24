@@ -16,7 +16,7 @@ BootstrapToggableTabsBuilder >> addTabHeadedBy: aRenderable containing: aTabCont
 { #category : #private }
 BootstrapToggableTabsBuilder >> dataToggleValue [
 
-	^ Willow constants >> #bootstrap >> #tab
+	^ Constants >> #bootstrap >> #tab
 ]
 
 { #category : #private }
