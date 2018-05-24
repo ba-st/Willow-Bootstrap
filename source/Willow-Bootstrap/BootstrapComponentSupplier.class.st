@@ -230,7 +230,7 @@ BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aCo
 BootstrapComponentSupplier >> tableBuilder [
 
 	^ TableWebViewBuilder new
-		styledWith: Willow classification >> #bootstrap >> #table;
+		apply: [ :table | table addClass bootstrap table ];
 		yourself
 ]
 
