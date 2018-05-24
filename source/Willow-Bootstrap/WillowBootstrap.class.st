@@ -180,8 +180,7 @@ WillowBootstrap class >> initializeDataAPIConstants [
 WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
 
 	<ignoreForCoverage>
-	Willow constants >> #bootstrap bind: #datepicker to: Namespace new.
-	Willow constants >> #bootstrap >> #datepicker bind: #libraryName to: 'datepicker'.
+	Constants >> #bootstrap bind: #datepicker to: 'datepicker'.
 	self
 		initializeDatepickerDataAPIConstants;
 		initializeDatepickerEventsConstants;
@@ -193,7 +192,7 @@ WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
 WillowBootstrap class >> initializeDatepickerDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap >> #datepicker)
+	(Constants >> #bootstrap)
 		bind: #todayHighlight to: 'date-today-highlight';
 		bind: #language to: 'date-language';
 		bind: #todayButton to: 'date-today-btn';
@@ -207,8 +206,7 @@ WillowBootstrap class >> initializeDatepickerDataAPIConstants [
 WillowBootstrap class >> initializeDatepickerEventsConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap >> #datepicker)
-		bind: #show to: 'show';
+	(Constants >> #bootstrap)
 		bind: #changeDate to: 'changeDate';
 		bind: #clearDate to: 'clearDate';
 		bind: #changeMonth to: 'changeMonth';
@@ -223,7 +221,7 @@ WillowBootstrap class >> initializeDatepickerEventsConstants [
 WillowBootstrap class >> initializeDatepickerViewModesConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap >> #datepicker)
+	(Constants >> #bootstrap)
 		bind: #centuries to: 'centuries';
 		bind: #years to: 'years';
 		bind: #month to: 'month';
@@ -241,7 +239,7 @@ WillowBootstrap class >> initializeDatepickerViewModesConstants [
 WillowBootstrap class >> initializeDatepickerWeekStartConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap >> #datepicker)
+	(Constants >> #bootstrap)
 		bind: #sunday to: 0;
 		bind: #friday to: 5;
 		bind: #wednesday to: 3;
