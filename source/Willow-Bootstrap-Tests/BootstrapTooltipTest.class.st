@@ -197,7 +197,7 @@ BootstrapTooltipTest >> testTemplate [
 							theCanvas
 								render: (GenericContainerWebView wrapping: '' applying: [ :container | container addClass bootstrap tooltipArrow ]);
 								render: (GenericContainerWebView wrapping: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap tooltipInner ]) ]
-						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants >> #bootstrap >> #role to: Willow classes >> #bootstrap >> #tooltip) ]).
+						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants >> #bootstrap >> #role to: Willow classification  >> #bootstrap >> #tooltip) ]).
 			div script: tooltip ].
 
 	self

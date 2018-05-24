@@ -22,5 +22,5 @@ BootstrapToggableTabsBuilder >> dataToggleValue [
 { #category : #private }
 BootstrapToggableTabsBuilder >> navigationTypeClass [
 
-	^ Willow classes >> #bootstrap >>#navTabs
+	^ Willow classification >> #bootstrap >>#navTabs
 ]

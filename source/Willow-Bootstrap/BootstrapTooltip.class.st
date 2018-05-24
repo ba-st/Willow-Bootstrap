@@ -65,7 +65,7 @@ BootstrapTooltip >> html: aBoolean [
 { #category : #private }
 BootstrapTooltip >> method [
 
-	^ Willow classes >> #bootstrap >>#tooltip
+	^ Willow classification >> #bootstrap >>#tooltip
 ]
 
 { #category : #Options }

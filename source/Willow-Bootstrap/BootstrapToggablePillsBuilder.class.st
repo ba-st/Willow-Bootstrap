@@ -22,5 +22,5 @@ BootstrapToggablePillsBuilder >> dataToggleValue [
 { #category : #private }
 BootstrapToggablePillsBuilder >> navigationTypeClass [
 
-	^ Willow classes >> #bootstrap >>#navPills
+	^ Willow classification >> #bootstrap >>#navPills
 ]

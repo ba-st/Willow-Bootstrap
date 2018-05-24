@@ -15,7 +15,7 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 			| div |
 
 			div := canvas div.
-			div class: Willow classes >> #bootstrap >> #dropdown.
+			div class: Willow classification >> #bootstrap >> #dropdown.
 			div
 				with: [ | anchor dropdown |
 
@@ -27,9 +27,9 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 					anchor script: dropdown.
 					anchor
 						with: [ canvas render: 'Menu'.
-							canvas span class: Willow classes >> #bootstrap >> #caret ].
+							canvas span class: Willow classification >> #bootstrap >> #caret ].
 					canvas unorderedList
-						class: Willow classes >> #bootstrap >> #dropdownMenu;
+						class: Willow classification >> #bootstrap >> #dropdownMenu;
 						with: [ canvas
 								listItem: 'Menu option';
 								listItem: 'Other option' ] ] ]

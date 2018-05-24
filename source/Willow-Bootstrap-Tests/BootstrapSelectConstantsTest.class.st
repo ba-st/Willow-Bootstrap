@@ -11,8 +11,8 @@ Class {
 BootstrapSelectConstantsTest >> testClasses [
 
 	self
-		assert: Willow classes >> #bootstrap >> #selectpicker equals: 'selectpicker';
-		assert: Willow classes >> #bootstrap >> #bootstrapSelect equals: 'bootstrap-select'
+		assert: Willow classification >> #bootstrap >> #selectpicker equals: 'selectpicker';
+		assert: Willow classification >> #bootstrap >> #bootstrapSelect equals: 'bootstrap-select'
 ]
 
 { #category : #tests }

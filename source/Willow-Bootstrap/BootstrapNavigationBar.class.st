@@ -17,7 +17,7 @@ Class {
 BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
-		styledAs: Willow classes >> #bootstrap >>#container
+		styledAs: Willow classification >> #bootstrap >>#container
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent
@@ -27,7 +27,7 @@ BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView 
 BootstrapNavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
-		styledAs: Willow classes >> #bootstrap >>#containerFluid
+		styledAs: Willow classification >> #bootstrap >>#containerFluid
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent
