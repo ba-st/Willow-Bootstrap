@@ -191,13 +191,12 @@ BootstrapTooltipTest >> testTemplate [
 			div := canvas div.
 			tooltip := canvas jQuery new bootstrapTooltip.
 			tooltip
-				template:
-					(GenericContainerWebView
-						wrapping: [ :theCanvas | 
-							theCanvas
-								render: (GenericContainerWebView wrapping: '' applying: [ :container | container addClass bootstrap tooltipArrow ]);
-								render: (GenericContainerWebView wrapping: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap tooltipInner ]) ]
-						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants >> #bootstrap >> #role to: Willow classification  >> #bootstrap >> #tooltip) ]).
+				template: [ :template | 
+					template div
+						with: [ 
+							template div apply: [ :container | container addClass bootstrap tooltipArrow ].
+							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap tooltipInner ] ]
+						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #tooltip) ] ].
 			div script: tooltip ].
 
 	self

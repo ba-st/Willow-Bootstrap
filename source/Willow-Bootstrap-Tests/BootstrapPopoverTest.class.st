@@ -227,14 +227,13 @@ BootstrapPopoverTest >> testTemplate [
 			div := canvas div.
 			popover := canvas jQuery new bootstrapPopover.
 			popover
-				template:
-					(GenericContainerWebView
-						wrapping: [ :theCanvas | 
-							theCanvas
-								render: (GenericContainerWebView wrapping: '' applying: [ :container | container addClass bootstrap arrow ]);
-								render: (HeadingWebView displaying: '' withLevel: 3 applying: [ :container | container addClass bootstrap popoverTitle ]);
-								render: (GenericContainerWebView wrapping: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap popoverContent ]) ]
-						applying: [ :container :constants | container addClass bootstrap popover + (container setAttribute: constants  >> #bootstrap  >> #role to: Willow classification >> #bootstrap >>#tooltip) ]).
+				template: [ :template | 
+					template div
+						with: [ 
+							template div apply: [ :container | container addClass bootstrap arrow ].
+							template render: (HeadingWebView displaying: '' withLevel: 3 applying: [ :container | container addClass bootstrap popoverTitle ]).
+							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap popoverContent ] ]
+						applying: [ :container :constants | container addClass bootstrap popover + (container setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #tooltip) ] ].
 			div script: popover ].
 
 	self

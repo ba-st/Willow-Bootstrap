@@ -583,6 +583,7 @@ WillowBootstrap class >> initializeRolesConstants [
 		bind: #progressbar to: 'progressbar';
 		bind: #navigation to: 'navigation';
 		bind: #toolbar to: 'toolbar';
+		bind: #tooltip to: 'tooltip';
 		bind: #group to: 'group';
 		bind: #tab to: 'tab';
 		bind: #button to: 'button';
