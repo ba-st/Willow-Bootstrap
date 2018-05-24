@@ -144,7 +144,7 @@ WillowBootstrap class >> initializeContainersClasses [
 WillowBootstrap class >> initializeDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap)
+	(Constants >> #bootstrap)
 		bind: #trigger to: 'trigger';
 		bind: #content to: 'content';
 		bind: #static to: 'static';
@@ -270,7 +270,7 @@ WillowBootstrap class >> initializeDropdownsClasses [
 WillowBootstrap class >> initializeEventsConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap)
+	(Constants >> #bootstrap)
 		bind: #showTooltip to: 'show.bs.tooltip';
 		bind: #insertedTooltip to: 'inserted.bs.tooltip';
 		bind: #hiddenCollapse to: 'hidden.bs.collapse';
@@ -577,7 +577,7 @@ WillowBootstrap class >> initializeResponsiveUtilitiesClasses [
 WillowBootstrap class >> initializeRolesConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap)
+	(Constants >> #bootstrap)
 		bind: #presentation to: 'presentation';
 		bind: #separator to: 'separator';
 		bind: #progressbar to: 'progressbar';
@@ -732,5 +732,5 @@ WillowBootstrap class >> initializeWellsClasses [
 WillowBootstrap class >> initializeWillowFunctionsConstants [
 
 	<ignoreForCoverage>
-	Willow constants >> #bootstrap bind: #cleanModalFunctionName to: 'cleanModal'
+	Constants >> #bootstrap bind: #cleanModalFunctionName to: 'cleanModal'
 ]
