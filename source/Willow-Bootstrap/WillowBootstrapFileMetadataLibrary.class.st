@@ -40,7 +40,7 @@ WillowBootstrapFileMetadataLibrary >> cleanModalFunctionUsing: script [
 	function := JSFunction new arguments: #(modal).
 	function << ((script jQuery new alias: 'modal') next: WAScriptTag new tag) remove.
 	function << (script jQuery new alias: 'modal') remove.
-	function << ((script jQuery id: Willow constants >> #willow >> #dialogSectionName) children length equalTo: 0)
+	function << ((script jQuery id: script constants >> #willow >> #dialogSectionName) children length equalTo: 0)
 		nonInlinedThen: (script jQuery class: Willow classification >> #bootstrap >> #modalBackdrop) remove.
 	^ function
 ]
@@ -87,7 +87,7 @@ WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJsContent [
 					bootstrap
 						assign:
 							(GRSmallDictionary new
-								at: Willow constants >> #bootstrap >> #cleanModalFunctionName put: (self cleanModalFunctionUsing: script);
+								at: script constants >> #bootstrap >> #cleanModalFunctionName put: (self cleanModalFunctionUsing: script);
 								yourself).
 					script << bootstrap asImmediatelyInvokedFunctionExpression ])
 ]

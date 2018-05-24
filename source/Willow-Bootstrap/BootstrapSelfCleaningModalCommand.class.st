@@ -23,9 +23,7 @@ BootstrapSelfCleaningModalCommand >> initialize [
 	scriptCommand := ComponentScriptCommand
 		toExecute: [ :canvas | 
 			canvas jQuery this bootstrapModal
-				backdrop: Willow constants >> #bootstrap >> #static;
+				backdrop: Constants >> #bootstrap >> #static;
 				onHidden:
-					(canvas javascript
-						call: (canvas jQuery willow bootstrap access: Willow constants >> #bootstrap >> #cleanModalFunctionName) asJavascript 
-						with: canvas jQuery this) asFunction ]
+					(canvas javascript call: (canvas jQuery willow bootstrap access: Constants >> #bootstrap >> #cleanModalFunctionName) asJavascript with: canvas jQuery this) asFunction ]
 ]
