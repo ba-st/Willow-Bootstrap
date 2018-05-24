@@ -20,7 +20,7 @@ BootstrapToggableTabsBuilder >> dataToggleValue [
 ]
 
 { #category : #private }
-BootstrapToggableTabsBuilder >> navigationTypeClass [
+BootstrapToggableTabsBuilder >> navigationTypeCommand [
 
-	^ Willow classification >> #bootstrap >>#navTabs
+	^ [ :list | list addClass bootstrap navTabs ] asWebComponentCommand 
 ]

@@ -22,15 +22,6 @@ BootstrapToggableNavigationBuilder >> addNavigationHeadedBy: aRenderable contain
 	contents add: identifiedContent
 ]
 
-{ #category : #private }
-BootstrapToggableNavigationBuilder >> applyMetadataTo: aLink controling: identifiedContent on: canvas [
-
-	self setRoleWith: Willow constants >> #bootstrap >> #tab to: aLink on: canvas.
-	[ :link :constants | (link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue) + (link setARIAAttribute: 'control' to: identifiedContent identifier) ] asWebComponentCommand
-		applyTo: aLink
-		on: canvas
-]
-
 { #category : #Building }
 BootstrapToggableNavigationBuilder >> buildApplying: aCommandToComponent [
 
@@ -41,6 +32,12 @@ BootstrapToggableNavigationBuilder >> buildApplying: aCommandToComponent [
 	^ [ :canvas | 
 	self renderTabListOn: canvas applying: aCommandToComponent asWebComponentCommand.
 	self renderTabContentOn: canvas ]
+]
+
+{ #category : #private }
+BootstrapToggableNavigationBuilder >> commandSettingRoleTo: aRoleValue [
+
+	^ [ :component :constants | component setAttribute: constants >> #bootstrap >> #role to: aRoleValue ] asWebComponentCommand
 ]
 
 { #category : #private }
@@ -73,7 +70,7 @@ BootstrapToggableNavigationBuilder >> initialize [
 ]
 
 { #category : #private }
-BootstrapToggableNavigationBuilder >> navigationTypeClass [
+BootstrapToggableNavigationBuilder >> navigationTypeCommand [
 
 	^ self subclassResponsibility
 ]
@@ -83,24 +80,16 @@ BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 
 	"The first header must be rendered specially because needs the active style"
 
-	| listItem |
-
-	listItem := canvas listItem.
-	listItem apply: [ :item | item addClass bootstrap active ].
-	self setRoleWith: Willow constants >> #bootstrap >> #presentation to: listItem on: canvas.
-	listItem with: headers first
+	canvas listItem
+		with: headers first
+		applying: [ :listItem :constants | listItem addClass bootstrap active + (self commandSettingRoleTo: constants >> #bootstrap >> #presentation) ]
 ]
 
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 
 	headers copyWithoutFirst
-		do: [ :header | 
-			| listItem |
-
-			listItem := aCanvas listItem.
-			self setRoleWith: Willow constants >> #bootstrap >> #presentation to: listItem on: aCanvas.
-			listItem with: header ]
+		do: [ :header | aCanvas listItem with: header applying: [ :listItem :constants | self commandSettingRoleTo: constants >> #bootstrap >> #presentation ] ]
 ]
 
 { #category : #'private - Rendering' }
@@ -118,34 +107,26 @@ BootstrapToggableNavigationBuilder >> renderTabListOn: aCanvas applying: aComman
 		applying: aCommantToTabList
 ]
 
-{ #category : #private }
-BootstrapToggableNavigationBuilder >> setRoleWith: aRoleValue to: aComponent on: aCanvas [
-
-	[ :component :constants | component setAttribute: constants >> #bootstrap >> #role to: aRoleValue ] asWebComponentCommand applyTo: aComponent on: aCanvas
-]
-
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 
-	| list |
-
-	list := canvas unorderedList.
-	list
-		apply: [ :theList | theList addClass bootstrap nav ];
-		class: self navigationTypeClass.
-	self setRoleWith: Willow constants >> #bootstrap >> #tablist to: list on: canvas.
-	^ list
+	^ canvas unorderedList
+		apply: [ :list :constants | list addClass bootstrap nav + self navigationTypeCommand + (self commandSettingRoleTo: constants >> #bootstrap >> #tablist) ];
+		yourself
 ]
 
 { #category : #private }
 BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identifiedContent [
 
 	^ [ :canvas | 
-	| link |
+	| titleLink |
 
-	link := canvas anchor.
+	titleLink := canvas anchor.
 	identifiedContent identifyIn: canvas.
-	link url: ('#<1s>' expandMacrosWith: identifiedContent identifier).
-	self applyMetadataTo: link controling: identifiedContent on: canvas.
-	link with: aRenderable ]
+	titleLink
+		url: ('#<1s>' expandMacrosWith: identifiedContent identifier);
+		with: aRenderable
+			applying: [ :link :constants | 
+			(self commandSettingRoleTo: constants >> #bootstrap >> #tab) + (link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue)
+				+ (link setARIAAttribute: 'control' to: identifiedContent identifier) ] ]
 ]

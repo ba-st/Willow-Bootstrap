@@ -20,7 +20,7 @@ BootstrapToggablePillsBuilder >> dataToggleValue [
 ]
 
 { #category : #private }
-BootstrapToggablePillsBuilder >> navigationTypeClass [
+BootstrapToggablePillsBuilder >> navigationTypeCommand [
 
-	^ Willow classification >> #bootstrap >>#navPills
+	^ [ :list | list addClass bootstrap navPills ] asWebComponentCommand
 ]
