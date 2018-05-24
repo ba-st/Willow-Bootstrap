@@ -73,11 +73,7 @@ BootstrapNavigationBarTest >> testRenderContentOnWithContent [
 
 	navigationBar := BootstrapNavigationBar
 		brandedWith: 'Willow'
-		containing: [ :canvas | 
-			canvas paragraph
-				class: Willow classes >> #bootstrap >>#navbarText;
-				class: Willow classes >> #bootstrap >>#navbarRight;
-				with: '2017' ]
+		containing: [ :canvas | canvas paragraph with: '2017' applying: [ :p | p addClass bootstrap navbarText + p addClass bootstrap navbarRight ] ]
 		applying: [ :navigation | navigation addClass bootstrap navbarDefault ].
 
 	html := self render: navigationBar.

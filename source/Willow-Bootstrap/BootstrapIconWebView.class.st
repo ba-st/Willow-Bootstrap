@@ -10,7 +10,7 @@ Class {
 	#category : #'Willow-Bootstrap-WebViews'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : #private }
 BootstrapIconWebView class >> applying: aComponentCommand [ 
 	
 	^self new initializeApplying: aComponentCommand 
@@ -19,8 +19,7 @@ BootstrapIconWebView class >> applying: aComponentCommand [
 { #category : #private }
 BootstrapIconWebView class >> classificationCommandFor: aGlyphiconName [
 
-	^ ComponentClassificationCommand
-		toStyleWithAll: (Array with: Willow classes >> #bootstrap >>#glyphicon with: aGlyphiconName)
+	^ [ :span | span addClass bootstrap glyphicon + (ComponentClassificationCommand toStyleWith: aGlyphiconName) ] asWebComponentCommand
 ]
 
 { #category : #'Instance Creation' }

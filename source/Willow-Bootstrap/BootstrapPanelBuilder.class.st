@@ -62,11 +62,7 @@ BootstrapPanelBuilder >> initialize [
 { #category : #'private - Rendering' }
 BootstrapPanelBuilder >> renderBodyOn: canvas [
 
-	bodyOptional
-		withContentDo: [ :renderableInsideBody | 
-			canvas div
-				class: Willow classes >> #bootstrap >>#panelBody;
-				with: renderableInsideBody ]
+	bodyOptional withContentDo: [ :renderableInsideBody | canvas div with: renderableInsideBody applying: [ :div | div addClass bootstrap panelBody ] ]
 ]
 
 { #category : #'private - Rendering' }

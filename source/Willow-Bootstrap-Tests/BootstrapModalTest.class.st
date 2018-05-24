@@ -12,12 +12,13 @@ BootstrapModalTest >> renderModalContentApplying: aBlock [
 
 	^ self
 		renderUsing: [ :canvas | 
-			| div modal |
+			| modal |
 
-			div := canvas div class: Willow classes >> #bootstrap >>#modal.
 			modal := canvas jQuery new bootstrapModal.
 			aBlock value: modal.
-			div script: modal ]
+			canvas div
+				apply: [ :div | div addClass bootstrap modal ];
+				script: modal ]
 ]
 
 { #category : #'tests-Options' }

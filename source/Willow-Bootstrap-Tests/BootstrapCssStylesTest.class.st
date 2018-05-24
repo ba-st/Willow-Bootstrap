@@ -10,7 +10,7 @@ Class {
 { #category : #'private - asserting' }
 BootstrapCssStylesTest >> assertClassificationAt: aSymbol equals: anExpectedString [
 
-	self assert: Willow classes >> #bootstrap >> aSymbol equals: anExpectedString
+	self assert: Willow classification >> #bootstrap >> aSymbol equals: anExpectedString
 ]
 
 { #category : #tests }

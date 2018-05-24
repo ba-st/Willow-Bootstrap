@@ -85,9 +85,7 @@ BootstrapDropdownMenuBuilderTest >> testRenderNavigationMenuContent [
 	| menu list |
 
 	list := canvas unorderedList.
-	list
-		class: Willow classes >> #bootstrap >>#nav;
-		class: Willow classes >> #bootstrap >>#navbarNavigation.
+	list apply: [ :theList | theList addClass bootstrap nav + theList addClass bootstrap navbarNavigation ].
 	menu := supplier dropdownMenuBuilder
 		beNavigationMenuIn: list;
 		labeled: 'Dropdown';
