@@ -4,13 +4,16 @@ A BootstrapCssStylesTest is a test class for testing the behavior of BootstrapCs
 Class {
 	#name : #BootstrapCssStylesTest,
 	#superclass : #TestCase,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#pools : [
+		'Willow'
+	],
+	#category : #'Willow-Bootstrap-Tests-WebViews'
 }
 
 { #category : #'private - asserting' }
 BootstrapCssStylesTest >> assertClassificationAt: aSymbol equals: anExpectedString [
 
-	self assert: Willow classification >> #bootstrap >> aSymbol equals: anExpectedString
+	self assert: Classification >> #bootstrap >> aSymbol equals: anExpectedString
 ]
 
 { #category : #tests }
@@ -373,6 +376,14 @@ BootstrapCssStylesTest >> testResponsiveUtilities [
 		assertClassificationAt: #visibleMediumInlineBlock equals: 'visible-md-inline-block';
 		assertClassificationAt: #visibleLargeInlineBlock equals: 'visible-lg-inline-block';
 		assertClassificationAt: #visiblePrintInlineBlock equals: 'visible-print-inline-block'
+]
+
+{ #category : #tests }
+BootstrapCssStylesTest >> testSelectClasses [
+
+	self
+		assertClassificationAt: #selectpicker equals: 'selectpicker';
+		assertClassificationAt: #bootstrapSelect equals: 'bootstrap-select'
 ]
 
 { #category : #tests }
