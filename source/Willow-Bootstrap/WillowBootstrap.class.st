@@ -597,8 +597,7 @@ WillowBootstrap class >> initializeRolesConstants [
 WillowBootstrap class >> initializeSelectConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap >> #select)
-		bind: #static to: 'static';
+	(Constants >> #bootstrap)
 		bind: #contains to: 'contains';
 		bind: #auto to: 'auto';
 		bind: #style to: 'style';
@@ -615,7 +614,6 @@ WillowBootstrap class >> initializeSelectConstantsAndClasses [
 	(Classification >> #bootstrap)
 		bind: #selectpicker to: 'selectpicker';
 		bind: #bootstrapSelect to: 'bootstrap-select'.
-	Willow constants >> #bootstrap bind: #select to: Namespace new.
 	self
 		initializeSelectConstants;
 		initializeSelectDataAPIConstants;
@@ -626,7 +624,7 @@ WillowBootstrap class >> initializeSelectConstantsAndClasses [
 WillowBootstrap class >> initializeSelectDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap >> #select)
+	(Constants >> #bootstrap)
 		bind: #header to: 'header';
 		bind: #liveSearch to: 'live-search';
 		bind: #deselectAllText to: 'deselect-all-text';
@@ -634,7 +632,6 @@ WillowBootstrap class >> initializeSelectDataAPIConstants [
 		bind: #liveSearchStyle to: 'live-search-style';
 		bind: #tickIcon to: 'tick-icon';
 		bind: #showTick to: 'show-tick';
-		bind: #title to: 'title';
 		bind: #width to: 'width';
 		bind: #dropdownAlignRight to: 'dropdown-align-right';
 		bind: #dropupAuto to: 'dropup-auto';
@@ -647,8 +644,7 @@ WillowBootstrap class >> initializeSelectDataAPIConstants [
 		bind: #mobile to: 'mobile';
 		bind: #showContent to: 'show-content';
 		bind: #hideDisabled to: 'hide-disabled';
-		bind: #showSubtext to: 'show-subtext';
-		bind: #container to: 'container';
+		bind: #showSubtext to: 'show-subtext'; 
 		bind: #noneSelectedText to: 'none-selected-text';
 		bind: #iconBase to: 'icon-base';
 		bind: #countSelectedText to: 'count-selected-text';
@@ -662,7 +658,7 @@ WillowBootstrap class >> initializeSelectDataAPIConstants [
 WillowBootstrap class >> initializeSelectEventsConstants [
 
 	<ignoreForCoverage>
-	(Willow constants >> #bootstrap >> #select)
+	(Constants >> #bootstrap)
 		bind: #hiddenSelect to: 'hidden.bs.select';
 		bind: #changedSelect to: 'changed.bs.select';
 		bind: #refreshedSelect to: 'refreshed.bs.select';
