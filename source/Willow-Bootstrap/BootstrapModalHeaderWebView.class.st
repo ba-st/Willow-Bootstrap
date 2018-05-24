@@ -8,13 +8,16 @@ Class {
 		'title',
 		'dismissButtonOptional'
 	],
+	#pools : [
+		'Willow'
+	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #'private - Instance Creation' }
 BootstrapModalHeaderWebView class >> dismissButton [
 
-	^ BootstrapDismissButton dismissing: Willow constants >> #bootstrap >> #modal
+	^ BootstrapDismissButton dismissing: Constants >> #bootstrap >> #modal
 ]
 
 { #category : #'Instance Creation' }
