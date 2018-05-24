@@ -85,7 +85,8 @@ BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 
 	| listItem |
 
-	listItem := canvas listItem class: Willow classes >> #bootstrap >>#active.
+	listItem := canvas listItem.
+	listItem apply: [ :item | item addClass bootstrap active ].
 	self setRoleWith: Willow constants >> #bootstrap >> #presentation to: listItem on: canvas.
 	listItem with: headers first
 ]
@@ -105,21 +106,16 @@ BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderTabContentOn: aCanvas [
 
-	aCanvas div
-		class: Willow classes >> #bootstrap >>#tabContent;
-		with: [ contents do: [ :currentContent | aCanvas render: currentContent ] ]
+	aCanvas div with: [ contents do: [ :currentContent | aCanvas render: currentContent ] ] applying: [ :div | div addClass bootstrap tabContent ]
 ]
 
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderTabListOn: aCanvas applying: aCommantToTabList [
 
-	| tabList |
-
-	tabList := self tabListOn: aCanvas.
-	aCommantToTabList applyTo: tabList on: aCanvas.
-	tabList
+	(self tabListOn: aCanvas)
 		with: [ self renderFirstTabHeaderOn: aCanvas.
 			self renderRemainingTabHeadersOn: aCanvas ]
+		applying: aCommantToTabList
 ]
 
 { #category : #private }
@@ -135,7 +131,7 @@ BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 
 	list := canvas unorderedList.
 	list
-		class: Willow classes >> #bootstrap >>#nav;
+		apply: [ :theList | theList addClass bootstrap nav ];
 		class: self navigationTypeClass.
 	self setRoleWith: Willow constants >> #bootstrap >> #tablist to: list on: canvas.
 	^ list

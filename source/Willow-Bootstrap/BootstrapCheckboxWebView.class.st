@@ -91,25 +91,20 @@ BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 	| checkbox |
 
 	checkbox := aCanvas checkbox.
-	commandToComponent applyTo: checkbox on: aCanvas.
 	checkbox
+		apply: commandToComponent;
 		value: isChecked;
 		callback: [ :value | 
 			value = isChecked
 				ifFalse: [ self toggleCurrentSelection ] ].
 	identifierAssigner withAssignedIdentifierDo: [ :id | checkbox id: id ].
-	interactionInterpreter applyTo: checkbox on: aCanvas
+	checkbox interactUsing: interactionInterpreter
 ]
 
 { #category : #rendering }
 BootstrapCheckboxWebView >> renderContentOn: aCanvas [
 
-	| div |
-
-	div := aCanvas div.
-	self commandToContainer applyTo: div on: aCanvas.
-	div with:
-		[ self renderLabelOn: aCanvas ]
+	aCanvas div with: [ self renderLabelOn: aCanvas ] applying: self commandToContainer
 ]
 
 { #category : #'rendering - private' }

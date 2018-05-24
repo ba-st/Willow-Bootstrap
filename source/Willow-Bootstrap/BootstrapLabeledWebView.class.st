@@ -65,9 +65,7 @@ BootstrapLabeledWebView >> renderContentOn: aCanvas [
 { #category : #'private - Rendering' }
 BootstrapLabeledWebView >> renderLabelFor: fieldIdentifier displaying: thePhrasingContent on: canvas applying: aCommandToLabel [
 
-	| label |
-
-	label := canvas label for: fieldIdentifier.
-	aCommandToLabel applyTo: label on: canvas.
-	label with: thePhrasingContent
+	canvas label
+		for: fieldIdentifier;
+		with: thePhrasingContent applying: aCommandToLabel
 ]

@@ -8,7 +8,7 @@ Class {
 		'menuItems',
 		'supplier',
 		'buttonBinding',
-		'listCssStyles'
+		'listClassificationCommand'
 	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
@@ -48,27 +48,21 @@ BootstrapDropdownBuilder >> addDivider [
 { #category : #Configuring }
 BootstrapDropdownBuilder >> addHeaderLabeled: aRenderable [
 
-	menuItems
-		add: [ :canvas | 
-			canvas listItem
-				class: Willow classes >> #bootstrap >>#dropdownHeader;
-				with: aRenderable ]
+	menuItems add: [ :canvas | canvas listItem with: aRenderable applying: [ :listItem | listItem addClass bootstrap dropdownHeader ] ]
 ]
 
 { #category : #Configuring }
 BootstrapDropdownBuilder >> beRightAligned [
 
-	listCssStyles add: Willow classes >> #bootstrap >>#dropdownMenuRight
+	listClassificationCommand := listClassificationCommand + [ :list | list addClass bootstrap dropdownMenuRight ] asWebComponentCommand
 ]
 
 { #category : #private }
 BootstrapDropdownBuilder >> content [
 
-	^[:canvas |
-		canvas render: buttonBinding content.
-		canvas unorderedList
-			classes: listCssStyles;
-			with: [menuItems do: [:menuItem | canvas render: menuItem]]]
+	^ [ :canvas | 
+	canvas render: buttonBinding content.
+	canvas unorderedList with: [ menuItems do: [ :menuItem | canvas render: menuItem ] ] applying: listClassificationCommand ]
 ]
 
 { #category : #private }
@@ -84,7 +78,7 @@ BootstrapDropdownBuilder >> initializeUsing: aSupplier [
 	supplier := aSupplier.
 	buttonBinding := Binding undefinedExplainedBy: 'Missing Dropdown Button Configuration'.
 	menuItems := OrderedCollection new.
-	listCssStyles := OrderedCollection with: Willow classes >> #bootstrap >>#dropdownMenu
+	listClassificationCommand := [ :list | list addClass bootstrap dropdownMenu ] asWebComponentCommand
 ]
 
 { #category : #Configuring }
@@ -97,5 +91,5 @@ BootstrapDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
 BootstrapDropdownBuilder >> renderCaretOn: canvas [
 
 	canvas space.
-	canvas span class: Willow classes >> #bootstrap >>#caret
+	canvas span apply: [ :span | span addClass bootstrap caret ]
 ]

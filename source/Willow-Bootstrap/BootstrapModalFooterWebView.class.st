@@ -60,10 +60,10 @@ BootstrapModalFooterWebView >> onTrigger [
 BootstrapModalFooterWebView >> renderContentOn: aCanvas [
 
 	aCanvas div
-		class: Willow classes >> #bootstrap >>#modalFooter;
 		with: [ aCanvas render: closeButton.
 			buttons
 				do: [ :button | 
 					button identifyIn: aCanvas.
 					aCanvas render: button ] ]
+		applying: [ :div | div addClass bootstrap modalFooter ]
 ]

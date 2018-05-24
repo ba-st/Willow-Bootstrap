@@ -58,29 +58,24 @@ BootstrapNavigationBar >> initializeStyledAs: aContainerClass brandedWith: aBran
 { #category : #rendering }
 BootstrapNavigationBar >> renderContentOn: aCanvas [
 
-	| nav |
-
-	nav := aCanvas navigation.
-	nav class: Willow classes >> #bootstrap >>#navbar.
-	componentCommand applyTo: nav on: aCanvas.
-	nav
+	aCanvas navigation
 		with: [ aCanvas div
 				class: containerClass;
 				with: [ self renderNavigationBarHeaderOn: aCanvas.
 					aCanvas render: navbarContent ] ]
+		applying: [ :nav | nav addClass bootstrap navbar + componentCommand ]
 ]
 
 { #category : #private }
 BootstrapNavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 
 	aCanvas div
-		class: Willow classes >> #bootstrap >> #navbarHeader;
 		with: [ navbarContent identifyIn: aCanvas.
 			aCanvas
 				render: (BootstrapHamburgerButton targeting: navbarContent identifier);
 				render:
 					(self componentSupplier
 						asynchronicLinkLabeled: brandView
-						applying:
-							[ :anchor :constants | (anchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) + anchor addClass bootstrap navbarBrand ]) ]
+						applying: [ :anchor :constants | (anchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) + anchor addClass bootstrap navbarBrand ]) ]
+		applying: [ :div | div addClass bootstrap navbarHeader ]
 ]

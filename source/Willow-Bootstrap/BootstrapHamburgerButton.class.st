@@ -34,16 +34,13 @@ BootstrapHamburgerButton >> initializeTargeting: aStringOrSymbol [
 { #category : #rendering }
 BootstrapHamburgerButton >> renderContentOn: aCanvas [
 
-	| button |
-
-	button := aCanvas button.
-	button bePush.
-	self buttonCommand applyTo: button on: aCanvas.
-	button with: [ self renderIconOn: aCanvas ]
+	aCanvas button
+		bePush;
+		with: [ self renderIconOn: aCanvas ] applying: self buttonCommand
 ]
 
 { #category : #'private-rendering' }
 BootstrapHamburgerButton >> renderIconOn: aCanvas [
 
-	3 timesRepeat: [ aCanvas span class: Willow classes >> #bootstrap >>#iconBar ]
+	3 timesRepeat: [ aCanvas span apply: [ :span | span addClass bootstrap iconBar ] ]
 ]

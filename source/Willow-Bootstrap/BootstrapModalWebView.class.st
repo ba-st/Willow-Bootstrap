@@ -40,9 +40,7 @@ BootstrapModalWebView >> contentWrapping: aBodyView [
 	^ GenericContainerWebView
 		wrapping: [ :canvas | 
 			canvas render: header.
-			canvas div
-				class: Willow classes >> #bootstrap >>#modalBody;
-				with: aBodyView.
+			canvas div with: aBodyView applying: [ :div | div addClass bootstrap modalBody ].
 			canvas render: footer ]
 		applying: [ :container | container addClass bootstrap modalContent ]
 ]

@@ -72,21 +72,13 @@ BootstrapPanelBuilder >> renderBodyOn: canvas [
 { #category : #'private - Rendering' }
 BootstrapPanelBuilder >> renderFooterOn: canvas [
 
-	footerOptional
-		withContentDo: [ :footer | 
-			canvas div
-				class: Willow classes >> #bootstrap >>#panelFooter;
-				with: footer ]
+	footerOptional withContentDo: [ :footer | canvas div with: footer applying: [ :div | div addClass bootstrap panelFooter ] ]
 ]
 
 { #category : #'private - Rendering' }
 BootstrapPanelBuilder >> renderHeadingOn: canvas [
 
-	headingOptional
-		withContentDo: [ :heading | 
-			canvas div
-				class: Willow classes >> #bootstrap >>#panelHeading;
-				with: heading ]
+	headingOptional withContentDo: [ :heading | canvas div with: heading applying: [ :div | div addClass bootstrap panelHeading ] ]
 ]
 
 { #category : #'private - Rendering' }
