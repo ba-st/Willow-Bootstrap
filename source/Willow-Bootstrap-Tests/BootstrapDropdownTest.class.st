@@ -12,27 +12,24 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 
 	^ self
 		renderUsing: [ :canvas | 
-			| div |
+			canvas div
+				with: [ | dropdown |
 
-			div := canvas div.
-			div class: Willow classification >> #bootstrap >> #dropdown.
-			div
-				with: [ | anchor dropdown |
-
-					anchor := canvas anchor.
-					[ :dropdownAnchor :constants | (dropdownAnchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown) + (dropdownAnchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) ]
-						asWebComponentCommand applyTo: anchor on: canvas.
 					dropdown := canvas jQuery new bootstrapDropdown.
 					aBlock value: dropdown.
-					anchor script: dropdown.
-					anchor
+					canvas anchor
+						script: dropdown;
 						with: [ canvas render: 'Menu'.
-							canvas span class: Willow classification >> #bootstrap >> #caret ].
+							canvas span apply: [ :span | span addClass bootstrap caret ] ]
+							applying:
+								[ :anchor :constants | (anchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown) 
+															+ (anchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) ].
 					canvas unorderedList
-						class: Willow classification >> #bootstrap >> #dropdownMenu;
 						with: [ canvas
 								listItem: 'Menu option';
-								listItem: 'Other option' ] ] ]
+								listItem: 'Other option' ]
+						applying: [ :list | list addClass bootstrap dropdownMenu ] ]
+				applying: [ :div | div addClass bootstrap dropdown ] ]
 ]
 
 { #category : #tests }
@@ -44,7 +41,7 @@ BootstrapDropdownTest >> testCallViaJavascript [
 	self
 		assert: html
 		equals:
-			'<div class="dropdown"><a data-target="dropdown" role="button" id="id1">Menu<span class="caret"></span></a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown();</script>'
+			'<div class="dropdown"><a id="id1" data-target="dropdown" role="button">Menu<span class="caret"></span></a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown();</script>'
 ]
 
 { #category : #tests }
@@ -92,5 +89,5 @@ BootstrapDropdownTest >> testToggle [
 	self
 		assert: html
 		equals:
-			'<div class="dropdown"><a data-target="dropdown" role="button" id="id1">Menu<span class="caret"></span></a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown("toggle");</script>'
+			'<div class="dropdown"><a id="id1" data-target="dropdown" role="button">Menu<span class="caret"></span></a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown("toggle");</script>'
 ]
