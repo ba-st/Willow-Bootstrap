@@ -614,7 +614,7 @@ WillowBootstrap class >> initializeSelectConstants [
 WillowBootstrap class >> initializeSelectConstantsAndClasses [
 
 	<ignoreForCoverage>
-	(Willow classes >> #bootstrap)
+	(Classification >> #bootstrap)
 		bind: #selectpicker to: 'selectpicker';
 		bind: #bootstrapSelect to: 'bootstrap-select'.
 	Willow constants >> #bootstrap bind: #select to: Namespace new.

@@ -10,7 +10,6 @@ Class {
 { #category : #processing }
 BootstrapSelectCommand >> applyTo: aComponent on: aCanvas [
 
-	(ComponentClassificationCommand toStyleWith: Willow classes >> #bootstrap >> #selectpicker) applyTo: aComponent on: aCanvas.
 	"We need to call the render method after the command application to get the right rendering"
-	(ComponentScriptCommand toExecute: [ :canvas | canvas jQuery this bootstrapSelect render ]) applyTo: aComponent on: aCanvas
+	[ :component | component addClass bootstrap selectpicker + (component addScript js: [ :canvas | canvas jQuery this bootstrapSelect render ]) ] asWebComponentCommand applyTo: aComponent on: aCanvas
 ]
