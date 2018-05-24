@@ -5,10 +5,10 @@ Class {
 	#name : #BootstrapNavigationBar,
 	#superclass : #WAPainter,
 	#instVars : [
-		'containerClass',
 		'componentCommand',
 		'brandView',
-		'navbarContent'
+		'navbarContent',
+		'containerCommand'
 	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
@@ -17,7 +17,7 @@ Class {
 BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
-		styledAs: Willow classification >> #bootstrap >>#container
+		styledAs: [ :container | container addClass bootstrap container ]
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent
@@ -27,26 +27,26 @@ BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView 
 BootstrapNavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
-		styledAs: Willow classification >> #bootstrap >>#containerFluid
+		styledAs: [ :container | container addClass bootstrap containerFluid ]
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent
 ]
 
 { #category : #'private-instance creation' }
-BootstrapNavigationBar class >> styledAs: aContainerClass brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
+BootstrapNavigationBar class >> styledAs: aContainerStylingCommand brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self new
-		initializeStyledAs: aContainerClass
+		initializeStyledAs: aContainerStylingCommand
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent asWebComponentCommand 
 ]
 
 { #category : #initialization }
-BootstrapNavigationBar >> initializeStyledAs: aContainerClass brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
+BootstrapNavigationBar >> initializeStyledAs: aContainerCommand brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
-	containerClass := aContainerClass.
+	containerCommand := aContainerCommand.
 	componentCommand := aCommandToComponent.
 	navbarContent := IdentifiedWebView
 		forDivNamed: 'navbar-content'
@@ -60,9 +60,9 @@ BootstrapNavigationBar >> renderContentOn: aCanvas [
 
 	aCanvas navigation
 		with: [ aCanvas div
-				class: containerClass;
 				with: [ self renderNavigationBarHeaderOn: aCanvas.
-					aCanvas render: navbarContent ] ]
+					aCanvas render: navbarContent ]
+				applying: containerCommand ]
 		applying: [ :nav | nav addClass bootstrap navbar + componentCommand ]
 ]
 
