@@ -5,7 +5,7 @@ Class {
 	#name : #BootstrapIconWebView,
 	#superclass : #WAPainter,
 	#instVars : [
-		'container'
+		'containerCommand'
 	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
@@ -37,11 +37,11 @@ BootstrapIconWebView class >> representing: aGlyphiconName applying: aCommandToC
 { #category : #initialize }
 BootstrapIconWebView >> initializeApplying: aComponentCommand [
 
-	container := PhrasingContainerWebView wrapping: '' applying: aComponentCommand
+	containerCommand := aComponentCommand
 ]
 
 { #category : #initialize }
 BootstrapIconWebView >> renderContentOn: aCanvas [
 
-	aCanvas render: container
+	aCanvas span apply: containerCommand
 ]

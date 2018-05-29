@@ -51,12 +51,6 @@ BootstrapCheckboxWebView class >> onModel: anObjectToUseWhenOn offModel: anObjec
 		applying: aCommandToComponent
 ]
 
-{ #category : #'accessing - private' }
-BootstrapCheckboxWebView >> commandToContainer [
-
-	^ [ :container | container addClass bootstrap checkbox + commandToComponent ] asWebComponentCommand
-]
-
 { #category : #accessing }
 BootstrapCheckboxWebView >> identifier [
 
@@ -104,7 +98,7 @@ BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 { #category : #rendering }
 BootstrapCheckboxWebView >> renderContentOn: aCanvas [
 
-	aCanvas div with: [ self renderLabelOn: aCanvas ] applying: self commandToContainer
+	aCanvas div with: [ self renderLabelOn: aCanvas ] applying: [ :div | div addClass bootstrap checkbox + commandToComponent ]
 ]
 
 { #category : #'rendering - private' }
