@@ -8,13 +8,16 @@ Class {
 		'title',
 		'dismissButtonOptional'
 	],
+	#pools : [
+		'Willow'
+	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
 
 { #category : #'private - Instance Creation' }
 BootstrapModalHeaderWebView class >> dismissButton [
 
-	^ BootstrapDismissButton dismissing: BootstrapConstants modal
+	^ BootstrapDismissButton dismissing: Constants >> #bootstrap >> #modal
 ]
 
 { #category : #'Instance Creation' }
@@ -52,10 +55,9 @@ BootstrapModalHeaderWebView >> onCloseTrigger [
 BootstrapModalHeaderWebView >> renderContentOn: aCanvas [
 
 	aCanvas div
-		class: BootstrapCssStyles modalHeader;
 		with: [ dismissButtonOptional withContentDo: [ :dismissButton | aCanvas render: dismissButton ].
 			aCanvas heading
 				level4;
-				class: BootstrapCssStyles modalTitle;
-				with: title ]
+				with: title applying: [ :heading | heading addClass bootstrap modalTitle ] ]
+		applying: [ :div | div addClass bootstrap modalHeader ]
 ]

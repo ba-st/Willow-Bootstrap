@@ -11,33 +11,33 @@ Class {
 }
 
 { #category : #'private - Instance Creation' }
-BootstrapAlertCommand class >> applyingClassificationCommandWith: aCssClass [
+BootstrapAlertCommand class >> applying: aCommand [
 
-	^ self new initializeApplying: (ComponentClassificationCommand toStyleWith: aCssClass)
+	^ self new initializeApplying: aCommand asWebComponentCommand
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> danger [
 
-	^ self applyingClassificationCommandWith: BootstrapCssStyles alertDanger 
+	^ self applying: [ :container | container addClass bootstrap alertDanger ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> informational [
 
-	^ self applyingClassificationCommandWith: BootstrapCssStyles alertInfo 
+	^ self applying: [ :container | container addClass bootstrap alertInfo ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> success [
 
-	^ self applyingClassificationCommandWith: BootstrapCssStyles alertSuccess
+	^ self applying: [ :container | container addClass bootstrap alertSuccess ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> warning [
 
-	^ self applyingClassificationCommandWith: BootstrapCssStyles alertWarning
+	^ self applying: [ :container | container addClass bootstrap alertWarning ]
 ]
 
 { #category : #processing }
@@ -49,6 +49,6 @@ BootstrapAlertCommand >> applyTo: aComponent on: aCanvas [
 { #category : #initialization }
 BootstrapAlertCommand >> initializeApplying: aContextualClassificationCommand [
 
-	classificationCommand := [ :container :constants | container addClass bootstrap alert + aContextualClassificationCommand + (container setAttribute: constants bootstrap role to: constants bootstrap alert) ]
+	classificationCommand := [ :container :constants | container addClass bootstrap alert + aContextualClassificationCommand + (container setAttribute: constants  >> #bootstrap  >> #role to: constants  >> #bootstrap  >> #alert) ]
 		asWebComponentCommand
 ]

@@ -38,10 +38,8 @@ BootstrapDatepickerCommand class >> new [
 { #category : #processing }
 BootstrapDatepickerCommand >> applyTo: aComponent on: aCanvas [
 
-	(ComponentMetadataCommand
-		toDeclare: 'provide'
-		with: BootstrapDatepickerConstants datepicker) applyTo: aComponent on: aCanvas.
-	additionalCommand applyTo: aComponent on: aCanvas
+	[ :component :constants | (component setData: 'provide' to: constants >> #bootstrap >> #datepicker) + additionalCommand ]
+		asWebComponentCommand applyTo: aComponent on: aCanvas
 ]
 
 { #category : #initialize }

@@ -16,11 +16,11 @@ BootstrapToggableTabsBuilder >> addTabHeadedBy: aRenderable containing: aTabCont
 { #category : #private }
 BootstrapToggableTabsBuilder >> dataToggleValue [
 
-	^ BootstrapConstants tab
+	^ Constants >> #bootstrap >> #tab
 ]
 
 { #category : #private }
-BootstrapToggableTabsBuilder >> navigationTypeClass [
+BootstrapToggableTabsBuilder >> navigationTypeCommand [
 
-	^ BootstrapCssStyles navTabs
+	^ [ :list | list addClass bootstrap navTabs ] asWebComponentCommand 
 ]

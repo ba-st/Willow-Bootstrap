@@ -10,11 +10,11 @@ Class {
 { #category : #private }
 BootstrapDropdown >> method [
 
-	^ BootstrapConstants dropdown
+	^ self lookupValue: #dropdown
 ]
 
 { #category : #Methods }
 BootstrapDropdown >> toggle [
 
-	functionName := BootstrapConstants toggle
+	functionName := self lookupValue: #toggle
 ]

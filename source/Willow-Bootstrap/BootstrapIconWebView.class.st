@@ -5,12 +5,12 @@ Class {
 	#name : #BootstrapIconWebView,
 	#superclass : #WAPainter,
 	#instVars : [
-		'container'
+		'containerCommand'
 	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : #private }
 BootstrapIconWebView class >> applying: aComponentCommand [ 
 	
 	^self new initializeApplying: aComponentCommand 
@@ -19,8 +19,7 @@ BootstrapIconWebView class >> applying: aComponentCommand [
 { #category : #private }
 BootstrapIconWebView class >> classificationCommandFor: aGlyphiconName [
 
-	^ ComponentClassificationCommand
-		toStyleWithAll: (Array with: BootstrapCssStyles glyphicon with: aGlyphiconName)
+	^ [ :span | span addClass bootstrap glyphicon + (ComponentClassificationCommand toStyleWith: aGlyphiconName) ] asWebComponentCommand
 ]
 
 { #category : #'Instance Creation' }
@@ -38,11 +37,11 @@ BootstrapIconWebView class >> representing: aGlyphiconName applying: aCommandToC
 { #category : #initialize }
 BootstrapIconWebView >> initializeApplying: aComponentCommand [
 
-	container := PhrasingContainerWebView wrapping: '' applying: aComponentCommand
+	containerCommand := aComponentCommand
 ]
 
 { #category : #initialize }
 BootstrapIconWebView >> renderContentOn: aCanvas [
 
-	aCanvas render: container
+	aCanvas span apply: containerCommand
 ]

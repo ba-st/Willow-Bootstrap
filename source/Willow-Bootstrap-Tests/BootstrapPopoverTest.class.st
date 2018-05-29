@@ -95,10 +95,9 @@ BootstrapPopoverTest >> testHtml [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover html:true ].
+	html := self renderPopoverContentApplying: [ :popover | popover html: true ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true});</script>'.
-
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -179,10 +178,9 @@ BootstrapPopoverTest >> testPlacement [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover placement: CssConstants left  ].
+	html := self renderPopoverContentApplying: [ :popover | popover placement: #left ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"placement":"left"});</script>'.
-
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"placement":"left"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -227,14 +225,13 @@ BootstrapPopoverTest >> testTemplate [
 			div := canvas div.
 			popover := canvas jQuery new bootstrapPopover.
 			popover
-				template:
-					(GenericContainerWebView
-						wrapping: [ :theCanvas | 
-							theCanvas
-								render: (GenericContainerWebView wrapping: '' applying: [ :container | container addClass bootstrap arrow ]);
-								render: (HeadingWebView displaying: '' withLevel: 3 applying: [ :container | container addClass bootstrap popoverTitle ]);
-								render: (GenericContainerWebView wrapping: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap popoverContent ]) ]
-						applying: [ :container :constants | container addClass bootstrap popover + (container setAttribute: constants bootstrap role to: BootstrapCssStyles tooltip) ]).
+				template: [ :template | 
+					template div
+						with: [ 
+							template div apply: [ :container | container addClass bootstrap arrow ].
+							template render: (HeadingWebView displaying: '' withLevel: 3 applying: [ :container | container addClass bootstrap popoverTitle ]).
+							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap popoverContent ] ]
+						applying: [ :container :constants | container addClass bootstrap popover + (container setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #tooltip) ] ].
 			div script: popover ].
 
 	self
@@ -268,7 +265,7 @@ BootstrapPopoverTest >> testTrigger [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover trigger: BootstrapConstants manual ].
+	html := self renderPopoverContentApplying: [ :popover | popover trigger: #manual ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"trigger":"manual"});</script>'
 ]

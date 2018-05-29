@@ -8,7 +8,7 @@ Class {
 		'menuItems',
 		'supplier',
 		'buttonBinding',
-		'listCssStyles'
+		'listClassificationCommand'
 	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
@@ -30,7 +30,7 @@ BootstrapDropdownBuilder >> addActionLabeled: aRenderable executing: anActionBlo
 
 	| anchor |
 
-	anchor := supplier asynchronicLinkLabeled: aRenderable applying: [ :link :constants | (link setAttribute: constants bootstrap role to: constants bootstrap button) + aCommand ].
+	anchor := supplier asynchronicLinkLabeled: aRenderable applying: [ :link :constants | (link setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) + aCommand ].
 	anActionBlock value: anchor.
 	menuItems add: [ :canvas | canvas listItem: anchor ]
 ]
@@ -40,7 +40,7 @@ BootstrapDropdownBuilder >> addDivider [
 
 	| dividerCommand |
 
-	dividerCommand := [ :listItem :constants | listItem addClass bootstrap divider + (listItem setARIAAttribute: constants bootstrap role to: 'divider') ] asWebComponentCommand.
+	dividerCommand := [ :listItem :constants | listItem addClass bootstrap divider + (listItem setARIAAttribute: constants >> #bootstrap >> #role to: 'divider') ] asWebComponentCommand.
 
 	menuItems add: [ :canvas | dividerCommand applyTo: canvas listItem on: canvas ]
 ]
@@ -48,33 +48,27 @@ BootstrapDropdownBuilder >> addDivider [
 { #category : #Configuring }
 BootstrapDropdownBuilder >> addHeaderLabeled: aRenderable [
 
-	menuItems
-		add: [ :canvas | 
-			canvas listItem
-				class: BootstrapCssStyles dropdownHeader;
-				with: aRenderable ]
+	menuItems add: [ :canvas | canvas listItem with: aRenderable applying: [ :listItem | listItem addClass bootstrap dropdownHeader ] ]
 ]
 
 { #category : #Configuring }
 BootstrapDropdownBuilder >> beRightAligned [
 
-	listCssStyles add: BootstrapCssStyles dropdownMenuRight
+	listClassificationCommand := listClassificationCommand + [ :list | list addClass bootstrap dropdownMenuRight ] asWebComponentCommand
 ]
 
 { #category : #private }
 BootstrapDropdownBuilder >> content [
 
-	^[:canvas |
-		canvas render: buttonBinding content.
-		canvas unorderedList
-			classes: listCssStyles;
-			with: [menuItems do: [:menuItem | canvas render: menuItem]]]
+	^ [ :canvas | 
+	canvas render: buttonBinding content.
+	canvas unorderedList with: [ menuItems do: [ :menuItem | canvas render: menuItem ] ] applying: listClassificationCommand ]
 ]
 
 { #category : #private }
 BootstrapDropdownBuilder >> dropdownCommandFor: button using: constants [
 
-	^ button addClass bootstrap dropdownToggle + (button setData: constants bootstrap toggle to: constants bootstrap dropdown) + (button setARIAAttribute: 'haspopup' to: 'true')
+	^ button addClass bootstrap dropdownToggle + (button setData: constants >> #bootstrap >> #toggle to: constants >> #bootstrap >> #dropdown) + (button setARIAAttribute: 'haspopup' to: 'true')
 		+ (button setARIAAttribute: 'expanded' to: 'false')
 ]
 
@@ -84,7 +78,7 @@ BootstrapDropdownBuilder >> initializeUsing: aSupplier [
 	supplier := aSupplier.
 	buttonBinding := Binding undefinedExplainedBy: 'Missing Dropdown Button Configuration'.
 	menuItems := OrderedCollection new.
-	listCssStyles := OrderedCollection with: BootstrapCssStyles dropdownMenu
+	listClassificationCommand := [ :list | list addClass bootstrap dropdownMenu ] asWebComponentCommand
 ]
 
 { #category : #Configuring }
@@ -97,5 +91,5 @@ BootstrapDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
 BootstrapDropdownBuilder >> renderCaretOn: canvas [
 
 	canvas space.
-	canvas span class: BootstrapCssStyles caret
+	canvas span apply: [ :span | span addClass bootstrap caret ]
 ]

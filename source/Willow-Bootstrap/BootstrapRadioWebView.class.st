@@ -64,9 +64,10 @@ BootstrapRadioWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCa
 
 	radioButton := aRadioGroup radioButton.
 	identifierAssigner withAssignedIdentifierDo: [ :id | radioButton id: id ].
-	inputCommand applyTo: radioButton on: aCanvas.
-	interactionInterpreter applyTo: radioButton on: aCanvas.
-	radioButton value: anElement.
+	radioButton
+		apply: inputCommand;
+		interactUsing: interactionInterpreter;
+		value: anElement.
 	self renderLabelContentFor: anElement on: aCanvas
 ]
 
@@ -79,11 +80,7 @@ BootstrapRadioWebView >> renderLabelContentFor: anElement on: aCanvas [
 { #category : #'private-rendering' }
 BootstrapRadioWebView >> renderLabelOn: aCanvas with: aRenderable [
 
-	| label |
-
-	label := aCanvas label.
-	labelCommand applyTo: label on: aCanvas.
-	label with: aRenderable
+	aCanvas label with: aRenderable applying: labelCommand
 ]
 
 { #category : #'private-rendering' }

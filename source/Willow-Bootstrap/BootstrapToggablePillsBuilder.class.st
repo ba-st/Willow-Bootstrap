@@ -16,11 +16,11 @@ BootstrapToggablePillsBuilder >> addPillHeadedBy: aRenderable containing: aTabCo
 { #category : #private }
 BootstrapToggablePillsBuilder >> dataToggleValue [
 
-	^ BootstrapConstants pill
+	^ Constants >> #bootstrap >> #pill
 ]
 
 { #category : #private }
-BootstrapToggablePillsBuilder >> navigationTypeClass [
+BootstrapToggablePillsBuilder >> navigationTypeCommand [
 
-	^ BootstrapCssStyles navPills
+	^ [ :list | list addClass bootstrap navPills ] asWebComponentCommand
 ]

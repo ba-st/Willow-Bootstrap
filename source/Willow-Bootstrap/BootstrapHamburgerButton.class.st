@@ -21,9 +21,8 @@ BootstrapHamburgerButton class >> targeting: aStringOrSymbol [
 BootstrapHamburgerButton >> buttonCommand [
 
 	^ [ :button :constants | 
-	button addClass bootstrap navbarToggle + button addClass bootstrap collapsed
-		+ (button setData: constants bootstrap toggle to: constants css collapse) + (button setData: constants bootstrap target to: targetIdentifier)
-		+ (button setARIAAttribute: 'expanded' to: false greaseString) ] asWebComponentCommand
+	button addClass bootstrap navbarToggle + button addClass bootstrap collapsed + (button setData: constants >> #bootstrap >> #toggle to: constants >> #css >> #collapse)
+		+ (button setData: constants >> #bootstrap >> #target to: targetIdentifier) + (button setARIAAttribute: 'expanded' to: false greaseString) ]
 ]
 
 { #category : #initialize }
@@ -35,16 +34,13 @@ BootstrapHamburgerButton >> initializeTargeting: aStringOrSymbol [
 { #category : #rendering }
 BootstrapHamburgerButton >> renderContentOn: aCanvas [
 
-	| button |
-
-	button := aCanvas button.
-	button bePush.
-	self buttonCommand applyTo: button on: aCanvas.
-	button with: [ self renderIconOn: aCanvas ]
+	aCanvas button
+		bePush;
+		with: [ self renderIconOn: aCanvas ] applying: self buttonCommand
 ]
 
 { #category : #'private-rendering' }
 BootstrapHamburgerButton >> renderIconOn: aCanvas [
 
-	3 timesRepeat: [ aCanvas span class: BootstrapCssStyles iconBar ]
+	3 timesRepeat: [ aCanvas span apply: [ :span | span addClass bootstrap iconBar ] ]
 ]

@@ -62,31 +62,19 @@ BootstrapPanelBuilder >> initialize [
 { #category : #'private - Rendering' }
 BootstrapPanelBuilder >> renderBodyOn: canvas [
 
-	bodyOptional
-		withContentDo: [ :renderableInsideBody | 
-			canvas div
-				class: BootstrapCssStyles panelBody;
-				with: renderableInsideBody ]
+	bodyOptional withContentDo: [ :renderableInsideBody | canvas div with: renderableInsideBody applying: [ :div | div addClass bootstrap panelBody ] ]
 ]
 
 { #category : #'private - Rendering' }
 BootstrapPanelBuilder >> renderFooterOn: canvas [
 
-	footerOptional
-		withContentDo: [ :footer | 
-			canvas div
-				class: BootstrapCssStyles panelFooter;
-				with: footer ]
+	footerOptional withContentDo: [ :footer | canvas div with: footer applying: [ :div | div addClass bootstrap panelFooter ] ]
 ]
 
 { #category : #'private - Rendering' }
 BootstrapPanelBuilder >> renderHeadingOn: canvas [
 
-	headingOptional
-		withContentDo: [ :heading | 
-			canvas div
-				class: BootstrapCssStyles panelHeading;
-				with: heading ]
+	headingOptional withContentDo: [ :heading | canvas div with: heading applying: [ :div | div addClass bootstrap panelHeading ] ]
 ]
 
 { #category : #'private - Rendering' }

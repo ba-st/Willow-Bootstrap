@@ -12,12 +12,13 @@ BootstrapModalTest >> renderModalContentApplying: aBlock [
 
 	^ self
 		renderUsing: [ :canvas | 
-			| div modal |
+			| modal |
 
-			div := canvas div class: BootstrapCssStyles modal.
 			modal := canvas jQuery new bootstrapModal.
 			aBlock value: modal.
-			div script: modal ]
+			canvas div
+				apply: [ :div | div addClass bootstrap modal ];
+				script: modal ]
 ]
 
 { #category : #'tests-Options' }
@@ -25,11 +26,9 @@ BootstrapModalTest >> testBackdrop [
 
 	| html |
 
-	html := self renderModalContentApplying: [ :modal | modal backdrop: BootstrapConstants static ].
+	html := self renderModalContentApplying: [ :modal | modal backdrop: #static ].
 
-	self
-		assert: html
-		equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal({"backdrop":"static"});</script>'
+	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal({"backdrop":"static"});</script>'
 ]
 
 { #category : #'tests-Options' }

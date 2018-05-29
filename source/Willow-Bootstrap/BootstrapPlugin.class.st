@@ -15,3 +15,25 @@ BootstrapPlugin >> arguments [
 
 	^ functionName ifNil: [ super arguments ] ifNotNil: [ :argument | Array with: argument ]
 ]
+
+{ #category : #private }
+BootstrapPlugin >> lookupCssValue: aSymbolOrFunction [
+
+	^ aSymbolOrFunction isSymbol
+		ifTrue: [ self constants >> #css >> aSymbolOrFunction ]
+		ifFalse: [ aSymbolOrFunction ]
+]
+
+{ #category : #private }
+BootstrapPlugin >> lookupValue: aSymbolOrObject [
+
+	^ aSymbolOrObject isSymbol
+		ifTrue: [ self constants >> #bootstrap >> aSymbolOrObject ]
+		ifFalse: [ aSymbolOrObject ]
+]
+
+{ #category : #private }
+BootstrapPlugin >> optionAt: aKey put: aValue [
+
+	^ super optionAt: (self lookupValue: aKey) put: (self lookupValue: aValue)
+]

@@ -135,19 +135,17 @@ BootstrapSelectTest >> testDropdownAlignRight [
 
 	| html |
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect dropdownAlignRight: BootstrapSelectConstants auto ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect dropdownAlignRight: #auto ].
 
 	self
 		assert: html
-		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":"auto"});</script>'.
+		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":"auto"});</script>'.
 
 	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect dropdownAlignRight: true ].
 
 	self
 		assert: html
-		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":true});</script>'
+		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":true});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -220,7 +218,7 @@ BootstrapSelectTest >> testLiveSearchOptions [
 				liveSearch: true;
 				liveSearchNormalize: true;
 				liveSearchPlaceholder: 'Search...';
-				liveSearchStyle: BootstrapSelectConstants startsWith ].
+				liveSearchStyle: #startsWith ].
 
 	self
 		assert: html
@@ -233,7 +231,7 @@ BootstrapSelectTest >> testLiveSearchStyle [
 
 	| html |
 
-	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect liveSearchStyle: BootstrapSelectConstants contains ].
+	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect liveSearchStyle: #contains ].
 
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"liveSearchStyle":"contains"});</script>'
 ]
@@ -485,25 +483,25 @@ BootstrapSelectTest >> testSelectedTextFormat [
 
 	| html |
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: BootstrapSelectConstants values ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: #values ].
 
 	self
 		assert: html
 		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"values"});</script>'.
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: BootstrapSelectConstants static ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: #static ].
 
 	self
 		assert: html
 		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"static"});</script>'.
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: BootstrapSelectConstants count ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: #count ].
 
 	self
 		assert: html
 		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count"});</script>'.
 
-	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: (BootstrapSelectConstants countAfter: 3) ].
+	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormatCountAfter: 3 ].
 
 	self
 		assert: html
@@ -658,12 +656,9 @@ BootstrapSelectTest >> testWidth [
 
 	| html |
 
-	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect width: BootstrapSelectConstants fit  ].
+	html := self renderSelectApplying: [ :bootstrapSelect | bootstrapSelect width: #fit ].
 
-	self
-		assert: html
-		equals:
-			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"width":"fit"});</script>'
+	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"width":"fit"});</script>'
 ]
 
 { #category : #'tests-Options' }

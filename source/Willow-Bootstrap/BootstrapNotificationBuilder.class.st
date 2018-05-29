@@ -29,9 +29,9 @@ BootstrapNotificationBuilder >> dismissibleWrapping: aRenderable [
 
 	| button |
 
-	button := BootstrapDismissButton dismissing: BootstrapConstants alert.
-	content := [ :canvas | 
-	canvas
+	button := BootstrapDismissButton dismissing: Constants >> #bootstrap >> #alert.
+	content := [ :html | 
+	html
 		render: button;
 		render: aRenderable ].
 	dismissCommand := [ :container | container addClass bootstrap alertDismissible ]

@@ -85,10 +85,9 @@ BootstrapTooltipTest >> testHtml [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip html:true ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip html: true ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true});</script>'.
-
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true});</script>'
 ]
 
 { #category : #'tests-Events' }
@@ -143,10 +142,9 @@ BootstrapTooltipTest >> testPlacement [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip placement: CssConstants left  ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip placement: #left ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"placement":"left"});</script>'.
-
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"placement":"left"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -191,13 +189,12 @@ BootstrapTooltipTest >> testTemplate [
 			div := canvas div.
 			tooltip := canvas jQuery new bootstrapTooltip.
 			tooltip
-				template:
-					(GenericContainerWebView
-						wrapping: [ :theCanvas | 
-							theCanvas
-								render: (GenericContainerWebView wrapping: '' applying: [ :container | container addClass bootstrap tooltipArrow ]);
-								render: (GenericContainerWebView wrapping: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap tooltipInner ]) ]
-						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants bootstrap role to: BootstrapCssStyles tooltip )]).
+				template: [ :template | 
+					template div
+						with: [ 
+							template div apply: [ :container | container addClass bootstrap tooltipArrow ].
+							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap tooltipInner ] ]
+						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #tooltip) ] ].
 			div script: tooltip ].
 
 	self
@@ -231,7 +228,7 @@ BootstrapTooltipTest >> testTrigger [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip trigger: BootstrapConstants manual ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip trigger: #manual ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"trigger":"manual"});</script>'
 ]

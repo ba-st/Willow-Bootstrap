@@ -14,7 +14,7 @@ BootstrapPopover >> animation: aBoolean [
 
 	"Apply a CSS fade transition to the popover"
 
-	self optionAt: BootstrapConstants animation put: aBoolean
+	self optionAt: #animation put: aBoolean
 ]
 
 { #category : #Options }
@@ -25,7 +25,7 @@ BootstrapPopover >> container: aStringOrFalse [
 	This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element
 	- which will prevent the popover from floating away from the triggering element during a window resize."
 
-	self optionAt: BootstrapConstants container put: aStringOrFalse
+	self optionAt: #container put: aStringOrFalse
 ]
 
 { #category : #Options }
@@ -34,7 +34,7 @@ BootstrapPopover >> content: aStringOrFunction [
 	"Default content value if data-content attribute isn't present.
 	If a function is given, it will be called with its this reference set to the element that the popover is attached to."
 
-	self optionAt: BootstrapConstants content put: aStringOrFunction
+	self optionAt: #content put: aStringOrFunction
 ]
 
 { #category : #Options }
@@ -44,7 +44,7 @@ BootstrapPopover >> delay: aNumberOrObject [
 	If a number is supplied, delay is applied to both hide/show
 	Use an instance of BootstrapDelayConfiguration to specify a different delay for hide or show"
 
-	self optionAt: BootstrapConstants delay put: aNumberOrObject
+	self optionAt: #delay put: aNumberOrObject
 ]
 
 { #category : #Methods }
@@ -62,7 +62,7 @@ BootstrapPopover >> hide [
 	"Hides an element's popover. Returns to the caller before the popover has actually been hidden (i.e. before the hidden.bs.popover event occurs). 
 	This is considered a manual triggering of the popover."
 
-	functionName := 'hide'
+	functionName := self lookupValue: #hide
 ]
 
 { #category : #Options }
@@ -70,7 +70,7 @@ BootstrapPopover >> html: aBoolean [
 
 	"Insert HTML into the popover. If false, jQuery's text method will be used to insert content into the DOM. Use text if you're worried about XSS attacks."
 
-	self optionAt: BootstrapConstants html put: aBoolean
+	self optionAt: #html put: aBoolean
 ]
 
 { #category : #Options }
@@ -92,7 +92,7 @@ BootstrapPopover >> htmlTitle: aRenderable [
 { #category : #private }
 BootstrapPopover >> method [
 
-	^ BootstrapConstants popover
+	^ self lookupValue: #popover
 ]
 
 { #category : #Options }
@@ -105,7 +105,7 @@ BootstrapPopover >> placement: aStringOrFunction [
 	When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. 
 	The this context is set to the popover instance."
 
-	self optionAt: BootstrapConstants placement put: aStringOrFunction
+	self optionAt: #placement put: (self lookupCssValue: aStringOrFunction)
 ]
 
 { #category : #Options }
@@ -114,7 +114,7 @@ BootstrapPopover >> selector: aString [
 	"If a selector is provided, popover objects will be delegated to the specified targets. 
 	In practice, this is used to enable dynamic HTML content to have popovers added. "
 
-	self optionAt: BootstrapConstants selector put: aString
+	self optionAt: #selector put: aString
 ]
 
 { #category : #Methods }
@@ -123,7 +123,7 @@ BootstrapPopover >> show [
 	"Reveals an element's popover. Returns to the caller before the popover has actually been shown (i.e. before the shown.bs.popover event occurs). 
 	This is considered a manual triggering of the popover. popovers with zero-length titles are never displayed."
 
-	functionName := BootstrapConstants show
+	functionName := self lookupValue: #show
 ]
 
 { #category : #Options }
@@ -136,7 +136,7 @@ BootstrapPopover >> template: aRenderable [
 	.arrow will become the popover's arrow.
 	The outermost wrapper element should have the .popover class."
 
-	self optionAt: BootstrapConstants template put: (self render: aRenderable)
+	self optionAt: #template put: (self render: aRenderable)
 ]
 
 { #category : #Options }
@@ -145,7 +145,7 @@ BootstrapPopover >> title: aStringOrFunction [
 	"Default title value if title attribute isn't present.
 	If a function is given, it will be called with its this reference set to the element that the popover is attached to."
 
-	self optionAt: BootstrapConstants title put: aStringOrFunction
+	self optionAt: #title put: aStringOrFunction
 ]
 
 { #category : #Methods }
@@ -154,7 +154,7 @@ BootstrapPopover >> toggle [
 	"Toggles an element's popover. Returns to the caller before the popover has actually been shown or hidden. 
 	This is considered a manual triggering of the popover."
 
-	functionName := BootstrapConstants toggle
+	functionName := self lookupValue: #toggle
 ]
 
 { #category : #Options }
@@ -163,7 +163,7 @@ BootstrapPopover >> trigger: aString [
 	"How popover is triggered - click | hover | focus | manual. 
 	You may pass multiple triggers; separate them with a space. manual cannot be combined with any other trigger."
 
-	self optionAt: BootstrapConstants trigger put: aString
+	self optionAt: #trigger put: aString
 ]
 
 { #category : #Options }
@@ -173,5 +173,5 @@ BootstrapPopover >> viewport: aStringViewportConfigurationOrFunction [
 	Example: viewport: '#viewport' or { 'selector': '#viewport', 'padding': 0 }
 	If a function is given, it is called with the triggering element DOM node as its only argument. The this context is set to the popover instance."
 
-	self optionAt: BootstrapConstants viewport put: aStringViewportConfigurationOrFunction
+	self optionAt: #viewport put: aStringViewportConfigurationOrFunction
 ]
