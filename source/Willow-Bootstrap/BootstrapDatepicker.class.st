@@ -168,7 +168,7 @@ BootstrapDatepicker >> daysOfWeekDisabled: aStringOrArray [
 
 	"Days of the week that should be disabled. Values are 0 (Sunday) to 6 (Saturday). Multiple values should be comma-separated. Example: disable weekends: '06' or '0,6' or [0,6]."
 
-	self optionAt: 'daysOfWeekDisabled' put: aStringOrArray 
+	self optionAt: 'daysOfWeekDisabled' put: (self lookupValueOrArray: aStringOrArray) 
 ]
 
 { #category : #Options }
@@ -176,7 +176,7 @@ BootstrapDatepicker >> daysOfWeekHighlighted: aStringOrArray [
 
 	"Days of the week that should be highlighted. Values are 0 (Sunday) to 6 (Saturday). Multiple values should be comma-separated. Example: highlight weekends: '06' or '0,6' or [0,6]."
 
-	self optionAt: 'daysOfWeekHighlighted' put: aStringOrArray 
+	self optionAt: 'daysOfWeekHighlighted' put: (self lookupValueOrArray: aStringOrArray)
 ]
 
 { #category : #Methods }
@@ -360,6 +360,14 @@ The IETF code (eg “en” for English, “pt-BR” for Brazilian Portuguese) of
 	self optionAt: 'language' put: aString
 ]
 
+{ #category : #private }
+BootstrapDatepicker >> lookupValueOrArray: aStringOrArray [
+
+	^ (aStringOrArray isCollection and: [ aStringOrArray isString not ])
+		ifTrue: [ aStringOrArray collect: [ :value | self lookupValue: value ] ]
+		ifFalse: [ aStringOrArray ]
+]
+
 { #category : #Options }
 BootstrapDatepicker >> maxViewMode: aStringOrNumber [
 
@@ -409,55 +417,55 @@ The string that will appear between dates when generating the input’s value. W
 { #category : #Events }
 BootstrapDatepicker >> onCenturyChanged: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #changeCentury with: aFunction
+	self call: 'on' with: (self lookupValue: #changeCentury) with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onDateChanged: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #changeDate with: aFunction
+	self call: 'on' with: (self lookupValue: #changeDate) with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onDateCleared: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #clearDate with: aFunction
+	self call: 'on' with: (self lookupValue: #clearDate) with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onDecadeChanged: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #changeDecade with: aFunction
+	self call: 'on' with: (self lookupValue: #changeDecade) with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onHide: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #hide with: aFunction
+	self call: 'on' with: (self lookupValue: #hide) with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onMonthChanged: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #changeMonth with: aFunction
+	self call: 'on' with: (self lookupValue: #changeMonth) with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onShow: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #show with: aFunction
+	self call: 'on' with: (self lookupValue: #show) with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onViewModeChanged: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #changeViewMode with: aFunction
+	self call: 'on' with: (self lookupValue: #changeViewMode) with: aFunction
 ]
 
 { #category : #Events }
 BootstrapDatepicker >> onYearChanged: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap >> #changeYear with: aFunction
+	self call: 'on' with: (self lookupValue: #changeYear) with: aFunction
 ]
 
 { #category : #Options }
@@ -471,7 +479,7 @@ A space-separated string consisting of one or two of “left” or “right”, 
 
 “auto” triggers “smart orientation” of the picker. Horizontal orientation will default to “left” and left offset will be tweaked to keep the picker inside the browser viewport; vertical orientation will simply choose “top” or “bottom”, whichever will show more of the picker in the viewport."
 
-	self optionAt: 'orientation' put: aString
+	self optionAt: 'orientation' put: (self lookupCssValue: aString)
 ]
 
 { #category : #Methods }
@@ -647,7 +655,10 @@ BootstrapDatepicker >> weekStart: anInteger [
 
 	"Day of the week start. 0 (Sunday) to 6 (Saturday). Take a look at BootstrapDatepickerConstants."
 
-	AssertionChecker enforce: [ anInteger between: 0 and: 6 ] because: 'The week start configuration must be an integer between 0 and 6' raising: Error.
+	AssertionChecker
+		enforce: [ (self lookupValue: anInteger) between: 0 and: 6 ]
+		because: 'The week start configuration must be an integer between 0 and 6'
+		raising: Error.
 	self optionAt: 'weekStart' put: anInteger
 ]
 

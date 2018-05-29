@@ -191,23 +191,13 @@ BootstrapDatepickerTest >> testDaysOfWeekDisabled [
 
 	| html |
 
-	html := self
-		renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekDisabled: datepicker constants >> #bootstrap >> #sunday ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekDisabled: #sunday ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":0});</script>'.
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":0});</script>'.
 
-	html := self
-		renderTextFieldApplying: [ :datepicker | 
-			datepicker
-				daysOfWeekDisabled:
-					{(datepicker constants >> #bootstrap >> #saturday).
-					(datepicker constants >> #bootstrap >> #sunday)} ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekDisabled: #(#saturday #sunday) ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":[6,0]});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":[6,0]});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -215,23 +205,13 @@ BootstrapDatepickerTest >> testDaysOfWeekHighlighted [
 
 	| html |
 
-	html := self
-		renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekHighlighted: datepicker constants >> #bootstrap >> #sunday ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekHighlighted: #sunday ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":0});</script>'.
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":0});</script>'.
 
-	html := self
-		renderTextFieldApplying: [ :datepicker | 
-			datepicker
-				daysOfWeekHighlighted:
-					{(datepicker constants >> #bootstrap >> #saturday).
-					(datepicker constants >> #bootstrap >> #sunday)} ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker daysOfWeekHighlighted: #(#saturday #sunday) ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":[6,0]});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":[6,0]});</script>'
 ]
 
 { #category : #'tests-Methods' }
@@ -442,7 +422,7 @@ BootstrapDatepickerTest >> testMaxViewMode [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker maxViewMode: datepicker constants >> #bootstrap >> #years ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker maxViewMode: #years ].
 
 	self
 		assert: html
@@ -454,11 +434,9 @@ BootstrapDatepickerTest >> testMinViewMode [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker minViewMode: datepicker constants >> #bootstrap >> #months ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker minViewMode: #months ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"minViewMode":"months"});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"minViewMode":"months"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -592,7 +570,7 @@ BootstrapDatepickerTest >> testOrientation [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker orientation: RenoirSt constants >> #bottom ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker orientation: #bottom ].
 
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"orientation":"bottom"});</script>'
 ]
@@ -760,7 +738,7 @@ BootstrapDatepickerTest >> testStartView [
 	| html |
 
 	html := self
-		renderTextFieldApplying: [ :datepicker | datepicker startView: datepicker constants >> #bootstrap >> #millennium ].
+		renderTextFieldApplying: [ :datepicker | datepicker startView: #millennium ].
 
 	self
 		assert: html
@@ -886,11 +864,9 @@ BootstrapDatepickerTest >> testWeekStart [
 
 	| html |
 
-	html := self renderTextFieldApplying: [ :datepicker | datepicker weekStart: datepicker constants >> #bootstrap >> #wednesday ].
+	html := self renderTextFieldApplying: [ :datepicker | datepicker weekStart: #wednesday ].
 
-	self
-		assert: html
-		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"weekStart":3});</script>'
+	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"weekStart":3});</script>'
 ]
 
 { #category : #'tests-Options' }

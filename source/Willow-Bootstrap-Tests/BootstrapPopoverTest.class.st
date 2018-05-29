@@ -95,10 +95,9 @@ BootstrapPopoverTest >> testHtml [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover html:true ].
+	html := self renderPopoverContentApplying: [ :popover | popover html: true ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true});</script>'.
-
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -179,10 +178,9 @@ BootstrapPopoverTest >> testPlacement [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover placement: RenoirSt constants >> #left  ].
+	html := self renderPopoverContentApplying: [ :popover | popover placement: #left ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"placement":"left"});</script>'.
-
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"placement":"left"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -267,7 +265,7 @@ BootstrapPopoverTest >> testTrigger [
 
 	| html |
 
-	html := self renderPopoverContentApplying: [ :popover | popover trigger: popover constants >> #bootstrap >> #manual ].
+	html := self renderPopoverContentApplying: [ :popover | popover trigger: #manual ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"trigger":"manual"});</script>'
 ]

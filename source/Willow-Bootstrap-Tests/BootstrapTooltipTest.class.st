@@ -85,10 +85,9 @@ BootstrapTooltipTest >> testHtml [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip html:true ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip html: true ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true});</script>'.
-
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true});</script>'
 ]
 
 { #category : #'tests-Events' }
@@ -143,10 +142,9 @@ BootstrapTooltipTest >> testPlacement [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip placement: RenoirSt constants >> #left  ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip placement: #left ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"placement":"left"});</script>'.
-
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"placement":"left"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -230,7 +228,7 @@ BootstrapTooltipTest >> testTrigger [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip trigger: tooltip constants >> #bootstrap >> #manual ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip trigger: #manual ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"trigger":"manual"});</script>'
 ]

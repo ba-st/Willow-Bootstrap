@@ -33,6 +33,12 @@ WillowBootstrapFileMetadataLibrary class >> version [
 ]
 
 { #category : #private }
+WillowBootstrapFileMetadataLibrary >> classification [
+
+	^ Willow classification
+]
+
+{ #category : #private }
 WillowBootstrapFileMetadataLibrary >> cleanModalFunctionUsing: script [
 
 	| function |
@@ -40,9 +46,16 @@ WillowBootstrapFileMetadataLibrary >> cleanModalFunctionUsing: script [
 	function := JSFunction new arguments: #(modal).
 	function << ((script jQuery new alias: 'modal') next: WAScriptTag new tag) remove.
 	function << (script jQuery new alias: 'modal') remove.
-	function << ((script jQuery id: script constants >> #willow >> #dialogSectionName) children length equalTo: 0)
-		nonInlinedThen: (script jQuery class: Willow classification >> #bootstrap >> #modalBackdrop) remove.
+	function <<	(script javascript
+				if: ((script jQuery id: self constants >> #willow >> #dialogSectionName) children length equalTo: 0)
+				then: (script jQuery class: self classification >> #bootstrap >> #modalBackdrop) remove).
 	^ function
+]
+
+{ #category : #private }
+WillowBootstrapFileMetadataLibrary >> constants [
+
+	^ Willow constants
 ]
 
 { #category : #Accessing }
@@ -82,12 +95,13 @@ WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJsContent [
 			(self
 				javascriptContentFrom: [ :script | 
 					| bootstrap |
+
 					self replaceTooltipDestroyFunctionIn: script.
 					bootstrap := script willow bootstrap.
 					bootstrap
 						assign:
 							(GRSmallDictionary new
-								at: script constants >> #bootstrap >> #cleanModalFunctionName put: (self cleanModalFunctionUsing: script);
+								at: self constants >> #bootstrap >> #cleanModalFunctionName put: (self cleanModalFunctionUsing: script);
 								yourself).
 					script << bootstrap asImmediatelyInvokedFunctionExpression ])
 ]
