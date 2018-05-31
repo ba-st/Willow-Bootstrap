@@ -25,14 +25,6 @@ BootstrapNavigationBarTest >> isSession [
 ^ true
 ]
 
-{ #category : #accessing }
-BootstrapNavigationBarTest >> session [
-
-	"I will simulate to be the session, because it's only used to ask it the componentSupplier"
-
-	^ self
-]
-
 { #category : #'tests-rendering' }
 BootstrapNavigationBarTest >> testRenderContentOn [
 
