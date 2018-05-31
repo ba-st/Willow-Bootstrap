@@ -14,6 +14,29 @@ BootstrapRadioWebViewTest >> newSingleSelectionView [
 ]
 
 { #category : #'tests-rendering' }
+BootstrapRadioWebViewTest >> testIdentifyIn [
+
+	| radioGroup html identifier |
+
+	radioGroup := BootstrapRadioWebView
+		renderingWith: [ :element | element asUppercase ]
+		applyingToLabel: [ :radio | radio addClass disabledComponent ]
+		applyingToInput: [ :radio | radio addClass disabledComponent ].
+
+	radioGroup allowAnyOf: 'abc'.
+	html := self
+		renderUsing: [ :canvas | 
+			identifier := radioGroup identifyIn: canvas.
+			canvas render: radioGroup ].
+
+	self
+		assert: html
+			equals:
+			'<label class="willow-disabled-component"><input name="2" id="radio-button-id1" class="willow-disabled-component" value="1" type="radio"/>A</label><label class="willow-disabled-component"><input name="2" id="radio-button-id1" class="willow-disabled-component" value="2" type="radio"/>B</label><label class="willow-disabled-component"><input name="2" id="radio-button-id1" class="willow-disabled-component" value="3" type="radio"/>C</label>';
+		assert: identifier equals: 'radio-button-id1'
+]
+
+{ #category : #'tests-rendering' }
 BootstrapRadioWebViewTest >> testOnTrigger [
 
 	| radioGroup html |
