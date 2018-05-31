@@ -40,7 +40,7 @@ BootstrapDropdownBuilder >> addDivider [
 
 	| dividerCommand |
 
-	dividerCommand := [ :listItem :constants | listItem addClass bootstrap divider + (listItem setARIAAttribute: constants >> #bootstrap >> #role to: 'divider') ] asWebComponentCommand.
+	dividerCommand := [ :listItem :constants | listItem addClass bootstrap divider + (listItem setARIARoleTo: #separator) ] asWebComponentCommand.
 
 	menuItems add: [ :canvas | dividerCommand applyTo: canvas listItem on: canvas ]
 ]

@@ -160,7 +160,6 @@ WillowBootstrap class >> initializeDataAPIConstants [
 		bind: #placement to: 'placement';
 		bind: #target to: 'target';
 		bind: #backdrop to: 'backdrop';
-		bind: #role to: 'role';
 		bind: #title to: 'title';
 		bind: #viewport to: 'viewport';
 		bind: #html to: 'html';
