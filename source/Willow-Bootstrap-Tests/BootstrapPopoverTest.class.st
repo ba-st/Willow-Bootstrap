@@ -227,11 +227,10 @@ BootstrapPopoverTest >> testTemplate [
 			popover
 				template: [ :template | 
 					template div
-						with: [ 
-							template div apply: [ :container | container addClass bootstrap arrow ].
+						with: [ template div apply: [ :container | container addClass bootstrap arrow ].
 							template render: (HeadingWebView displaying: '' withLevel: 3 applying: [ :container | container addClass bootstrap popoverTitle ]).
 							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap popoverContent ] ]
-						applying: [ :container :constants | container addClass bootstrap popover + (container setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #tooltip) ] ].
+						applying: [ :container :constants | container addClass bootstrap popover + (container setARIARoleTo: #tooltip) ] ].
 			div script: popover ].
 
 	self

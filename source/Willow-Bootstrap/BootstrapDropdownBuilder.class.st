@@ -30,7 +30,7 @@ BootstrapDropdownBuilder >> addActionLabeled: aRenderable executing: anActionBlo
 
 	| anchor |
 
-	anchor := supplier asynchronicLinkLabeled: aRenderable applying: [ :link :constants | (link setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) + aCommand ].
+	anchor := supplier asynchronicLinkLabeled: aRenderable applying: [ :link :constants | (link setARIARoleTo: #button) + aCommand ].
 	anActionBlock value: anchor.
 	menuItems add: [ :canvas | canvas listItem: anchor ]
 ]

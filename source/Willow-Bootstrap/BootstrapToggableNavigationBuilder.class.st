@@ -35,12 +35,6 @@ BootstrapToggableNavigationBuilder >> buildApplying: aCommandToComponent [
 ]
 
 { #category : #private }
-BootstrapToggableNavigationBuilder >> commandSettingRoleTo: aRoleValue [
-
-	^ [ :component :constants | component setAttribute: constants >> #bootstrap >> #role to: aRoleValue ] asWebComponentCommand
-]
-
-{ #category : #private }
 BootstrapToggableNavigationBuilder >> dataToggleValue [
 
 	^ self subclassResponsibility
@@ -57,8 +51,7 @@ BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationConte
 	^ IdentifiedWebView
 		forDivNamed: self dataToggleValue
 		containing: aNavigationContent
-		applying:
-			[ :div :constants | (div setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #tabpanel) + div addClass bootstrap tabPane + (div when: [ isFirstTab ] apply: div addClass bootstrap active) ]
+		applying: [ :div :constants | (div setARIARoleTo: #tabPanel) + div addClass bootstrap tabPane + (div when: [ isFirstTab ] apply: div addClass bootstrap active) ]
 ]
 
 { #category : #initialization }
@@ -80,16 +73,13 @@ BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 
 	"The first header must be rendered specially because needs the active style"
 
-	canvas listItem
-		with: headers first
-		applying: [ :listItem :constants | listItem addClass bootstrap active + (self commandSettingRoleTo: constants >> #bootstrap >> #presentation) ]
+	canvas listItem with: headers first applying: [ :listItem :constants | listItem addClass bootstrap active + (listItem setARIARoleTo: #presentation) ]
 ]
 
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 
-	headers copyWithoutFirst
-		do: [ :header | aCanvas listItem with: header applying: [ :listItem :constants | self commandSettingRoleTo: constants >> #bootstrap >> #presentation ] ]
+	headers copyWithoutFirst do: [ :header | aCanvas listItem with: header applying: [ :listItem :constants | listItem setARIARoleTo: #presentation ] ]
 ]
 
 { #category : #'private - Rendering' }
@@ -111,7 +101,7 @@ BootstrapToggableNavigationBuilder >> renderTabListOn: aCanvas applying: aComman
 BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 
 	^ canvas unorderedList
-		apply: [ :list :constants | list addClass bootstrap nav + self navigationTypeCommand + (self commandSettingRoleTo: constants >> #bootstrap >> #tablist) ];
+		apply: [ :list :constants | list addClass bootstrap nav + self navigationTypeCommand + (list setARIARoleTo: #tabList) ];
 		yourself
 ]
 
@@ -126,7 +116,5 @@ BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identi
 	titleLink
 		url: ('#<1s>' expandMacrosWith: identifiedContent identifier);
 		with: aRenderable
-			applying: [ :link :constants | 
-			(self commandSettingRoleTo: constants >> #bootstrap >> #tab) + (link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue)
-				+ (link setARIAAttribute: 'control' to: identifiedContent identifier) ] ]
+			applying: [ :link :constants | (link setARIARoleTo: #tab) + (link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue) + (link setARIAAttribute: 'control' to: identifiedContent identifier) ] ]
 ]

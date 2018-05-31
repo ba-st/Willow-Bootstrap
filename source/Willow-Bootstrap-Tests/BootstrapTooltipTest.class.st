@@ -191,10 +191,9 @@ BootstrapTooltipTest >> testTemplate [
 			tooltip
 				template: [ :template | 
 					template div
-						with: [ 
-							template div apply: [ :container | container addClass bootstrap tooltipArrow ].
+						with: [ template div apply: [ :container | container addClass bootstrap tooltipArrow ].
 							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap tooltipInner ] ]
-						applying: [ :container :constants | container addClass bootstrap tooltip + (container setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #tooltip) ] ].
+						applying: [ :container :constants | container addClass bootstrap tooltip + (container setARIARoleTo: #tooltip) ] ].
 			div script: tooltip ].
 
 	self
