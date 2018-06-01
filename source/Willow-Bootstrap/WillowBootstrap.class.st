@@ -79,7 +79,6 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 	self
 		initializeDataAPIConstants;
 		initializeEventsConstants;
-		initializeRolesConstants;
 		initializeWillowFunctionsConstants
 ]
 
@@ -161,7 +160,6 @@ WillowBootstrap class >> initializeDataAPIConstants [
 		bind: #placement to: 'placement';
 		bind: #target to: 'target';
 		bind: #backdrop to: 'backdrop';
-		bind: #role to: 'role';
 		bind: #title to: 'title';
 		bind: #viewport to: 'viewport';
 		bind: #html to: 'html';
@@ -571,27 +569,6 @@ WillowBootstrap class >> initializeResponsiveUtilitiesClasses [
 		bind: #visiblePrintInline to: 'visible-print-inline';
 		bind: #visibleSmallInline to: 'visible-sm-inline';
 		bind: #visibleMediumInline to: 'visible-md-inline'
-]
-
-{ #category : #'private - initialization' }
-WillowBootstrap class >> initializeRolesConstants [
-
-	<ignoreForCoverage>
-	(Constants >> #bootstrap)
-		bind: #presentation to: 'presentation';
-		bind: #separator to: 'separator';
-		bind: #progressbar to: 'progressbar';
-		bind: #navigation to: 'navigation';
-		bind: #toolbar to: 'toolbar';
-		bind: #tooltip to: 'tooltip';
-		bind: #group to: 'group';
-		bind: #tab to: 'tab';
-		bind: #button to: 'button';
-		bind: #dialog to: 'dialog';
-		bind: #document to: 'document';
-		bind: #tabpanel to: 'tabpanel';
-		bind: #tablist to: 'tablist';
-		bind: #alert to: 'alert'
 ]
 
 { #category : #'private - select' }

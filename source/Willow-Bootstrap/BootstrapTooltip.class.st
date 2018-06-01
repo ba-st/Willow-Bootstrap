@@ -65,7 +65,7 @@ BootstrapTooltip >> html: aBoolean [
 { #category : #private }
 BootstrapTooltip >> method [
 
-	^ self constants >> #bootstrap >> #tooltip
+	^ 'tooltip'
 ]
 
 { #category : #Options }

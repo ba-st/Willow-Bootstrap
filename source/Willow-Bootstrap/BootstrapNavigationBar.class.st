@@ -73,9 +73,6 @@ BootstrapNavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 		with: [ navbarContent identifyIn: aCanvas.
 			aCanvas
 				render: (BootstrapHamburgerButton targeting: navbarContent identifier);
-				render:
-					(self componentSupplier
-						asynchronicLinkLabeled: brandView
-						applying: [ :anchor :constants | (anchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) + anchor addClass bootstrap navbarBrand ]) ]
+				render: (self componentSupplier asynchronicLinkLabeled: brandView applying: [ :anchor :constants | (anchor setARIARoleTo: #button) + anchor addClass bootstrap navbarBrand ]) ]
 		applying: [ :div | div addClass bootstrap navbarHeader ]
 ]

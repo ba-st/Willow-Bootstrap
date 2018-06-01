@@ -16,7 +16,7 @@ BootstrapToggableTabsBuilder >> addTabHeadedBy: aRenderable containing: aTabCont
 { #category : #private }
 BootstrapToggableTabsBuilder >> dataToggleValue [
 
-	^ Constants >> #bootstrap >> #tab
+	^ Constants >> #aria >> #tab
 ]
 
 { #category : #private }

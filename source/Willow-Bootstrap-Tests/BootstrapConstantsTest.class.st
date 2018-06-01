@@ -80,23 +80,6 @@ BootstrapConstantsTest >> testDatepickerViewModes [
 ]
 
 { #category : #tests }
-BootstrapConstantsTest >> testRoles [
-
-	self
-		assertConstantAt: #alert equals: 'alert';
-		assertConstantAt: #button equals: 'button';
-		assertConstantAt: #dialog equals: 'dialog';
-		assertConstantAt: #document equals: 'document';
-		assertConstantAt: #group equals: 'group';
-		assertConstantAt: #navigation equals: 'navigation';
-		assertConstantAt: #presentation equals: 'presentation';
-		assertConstantAt: #progressbar equals: 'progressbar';
-		assertConstantAt: #separator equals: 'separator';
-		assertConstantAt: #tablist equals: 'tablist';
-		assertConstantAt: #toolbar equals: 'toolbar'
-]
-
-{ #category : #tests }
 BootstrapConstantsTest >> testSelectDataAPI [
 
 	self

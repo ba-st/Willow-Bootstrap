@@ -29,7 +29,7 @@ BootstrapNotificationBuilder >> dismissibleWrapping: aRenderable [
 
 	| button |
 
-	button := BootstrapDismissButton dismissing: Constants >> #bootstrap >> #alert.
+	button := BootstrapDismissButton dismissing: Constants >> #aria >> #alert.
 	content := [ :html | 
 	html
 		render: button;

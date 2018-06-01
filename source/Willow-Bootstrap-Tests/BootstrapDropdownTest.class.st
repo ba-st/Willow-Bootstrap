@@ -21,9 +21,7 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 						script: dropdown;
 						with: [ canvas render: 'Menu'.
 							canvas span apply: [ :span | span addClass bootstrap caret ] ]
-							applying:
-								[ :anchor :constants | (anchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown) 
-															+ (anchor setAttribute: constants >> #bootstrap >> #role to: constants >> #bootstrap >> #button) ].
+							applying: [ :anchor :constants | (anchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown) + (anchor setARIARoleTo: #button) ].
 					canvas unorderedList
 						with: [ canvas
 								listItem: 'Menu option';
