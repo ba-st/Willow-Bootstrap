@@ -84,7 +84,7 @@ BootstrapComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn offM
 { #category : #Supplying }
 BootstrapComponentSupplier >> dateFieldApplying: aComponentCommand [
 
-	^ self singleLineTextFieldApplying: [ :field | (field setMaximumLengthTo: 10) + aComponentCommand + BootstrapDatepickerCommand new ]
+	^ DateFieldWebView applying: [ :field | (field setMaximumLengthTo: 10) + aComponentCommand + BootstrapDatepickerCommand new ]
 ]
 
 { #category : #Supplying }
