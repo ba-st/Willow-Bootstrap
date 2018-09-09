@@ -33,6 +33,12 @@ WillowExtensionsTest >> assertRenderingOfDivApplying: aCommand equals: anExpecte
 ]
 
 { #category : #tests }
+WillowExtensionsTest >> testBootstrapClassification [
+
+	self assert: ReflectiveCascadingStyleSheetBuilder new bootstrap >> #textCenter equals: 'text-center'
+]
+
+{ #category : #tests }
 WillowExtensionsTest >> testBootstrapClassificationCommandBuilder [
 
 	(Classification >> #bootstrap) names

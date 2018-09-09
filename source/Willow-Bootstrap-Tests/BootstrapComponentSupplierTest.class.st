@@ -4,7 +4,7 @@ A BootstrapComponentSupplierTest is a test class for testing the behavior of Boo
 Class {
 	#name : #BootstrapComponentSupplierTest,
 	#superclass : #WARenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Frontend'
+	#category : #'Willow-Bootstrap-Tests-Frontend'
 }
 
 { #category : #private }
@@ -74,7 +74,7 @@ BootstrapComponentSupplierTest >> testDateFieldApplying [
 
 	self
 		assertRenderingOf: [ :supplier | supplier dateFieldApplying: [ :field | field addClass bootstrap textCenter ] ]
-		equals: '<input value="" name="1" class="form-control text-center" maxlength="10" data-provide="datepicker" type="text"/>'
+		equals: '<input value="" name="1" type="text" class="form-control text-center" maxlength="10" data-provide="datepicker"/>'
 ]
 
 { #category : #'tests-Supplying' }
