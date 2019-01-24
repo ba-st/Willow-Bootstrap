@@ -32,19 +32,19 @@ Bootstrap3OnlineLibrary >> initializeWithOptionalTheme: aBoolean [
 Bootstrap3OnlineLibrary >> updateRoot: aRoot [
 
 	aRoot stylesheet
-		url: ('https://maxcdn.bootstrapcdn.com/bootstrap/<1s>/css/bootstrap.min.css' expandMacrosWith: self version);
-		anonymousSubResourceIntegrity: 'sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u'.
+		url: ('https://stackpath.bootstrapcdn.com/bootstrap/<1s>/css/bootstrap.min.css' expandMacrosWith: self version);
+		anonymousSubResourceIntegrity: 'sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+'.
 	includeOptionalTheme
 		ifTrue: [ aRoot stylesheet
-				url: ('https://maxcdn.bootstrapcdn.com/bootstrap/<1s>/css/bootstrap-theme.min.css' expandMacrosWith: self version);
-				anonymousSubResourceIntegrity: 'sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp' ].
+				url: ('https://stackpath.bootstrapcdn.com/bootstrap/<1s>/css/bootstrap-theme.min.css' expandMacrosWith: self version);
+				anonymousSubResourceIntegrity: 'sha384-jzngWsPS6op3fgRCDTESqrEJwRKck+CILhJVO5VvaAZCq8JYf8HsR/HPpBOOPZfR' ].
 	aRoot javascript
-		url: ('https://maxcdn.bootstrapcdn.com/bootstrap/<1s>/js/bootstrap.min.js' expandMacrosWith: self version);
-		anonymousSubResourceIntegrity: 'sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa'
+		url: ('https://stackpath.bootstrapcdn.com/bootstrap/<1s>/js/bootstrap.min.js' expandMacrosWith: self version);
+		anonymousSubResourceIntegrity: 'sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw'
 ]
 
 { #category : #Accessing }
 Bootstrap3OnlineLibrary >> version [
 
-	^'3.3.7'
+	^'3.4.0'
 ]
