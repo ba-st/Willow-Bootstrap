@@ -3,16 +3,13 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'WillowBootstrap',
       #directory : 'source',
-      #load : [ 'Development' ],
+      #load : [ 'CI' ],
       #platforms : [  #pharo ]
     }
   ],
   #testing : {
     #coverage : {
-       #packages : [  'Willow-Bootstrap*' ]
-    },
-    #include : {
-       #packages : [ 'Willow-Bootstrap*-Tests' ]
+       #packages : [ 'Willow-Bootstrap*' ]
     }
   }
 }
