@@ -44,7 +44,7 @@ BootstrapSelectTest >> testActionsBox [
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"actionsBox":true});</script>'
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"actionsBox":true});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -67,7 +67,7 @@ BootstrapSelectTest >> testCountSelectedText [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"countSelectedText":"Selected {0} of {1}"});</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"countSelectedText":"Selected {0} of {1}"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -88,7 +88,7 @@ BootstrapSelectTest >> testCountSelectedTextWithFunction [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"countSelectedText":function(selectedCount,totalCount){return "Something selected"}});</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"countSelectedText":function(selectedCount,totalCount){return "Something selected"}});</script>'
 ]
 
 { #category : #'tests-Methods' }
@@ -101,7 +101,7 @@ BootstrapSelectTest >> testDeselectAll [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("deselectAll");</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("deselectAll");</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -114,7 +114,7 @@ BootstrapSelectTest >> testDeselectAllText [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"deselectAllText":"Remove Selection"});</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"deselectAllText":"Remove Selection"});</script>'
 ]
 
 { #category : #'tests-Methods' }
@@ -139,13 +139,13 @@ BootstrapSelectTest >> testDropdownAlignRight [
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":"auto"});</script>'.
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":"auto"});</script>'.
 
 	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect dropdownAlignRight: true ].
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":true});</script>'
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":true});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -250,7 +250,7 @@ BootstrapSelectTest >> testMaxOptions [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"maxOptions":5,"maxOptionsText":"Select no more than five items"});</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"maxOptions":5,"maxOptionsText":"Select no more than five items"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -267,7 +267,7 @@ BootstrapSelectTest >> testMaxOptionsWithArray [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"maxOptions":5,"maxOptionsText":["Total max","Group max"]});</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"maxOptions":5,"maxOptionsText":["Total max","Group max"]});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -290,7 +290,7 @@ BootstrapSelectTest >> testMobileMethod [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("mobile");</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("mobile");</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -302,7 +302,7 @@ BootstrapSelectTest >> testMultipleSeparator [
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"multipleSeparator":"/ "});</script>'
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"multipleSeparator":"/ "});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -314,7 +314,7 @@ BootstrapSelectTest >> testNoneSelectedText [
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"noneSelectedText":"Nothing"});</script>'
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"noneSelectedText":"Nothing"});</script>'
 ]
 
 { #category : #'tests-Events' }
@@ -437,7 +437,7 @@ BootstrapSelectTest >> testRender [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("render");</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("render");</script>'
 ]
 
 { #category : #'tests-Methods' }
@@ -450,7 +450,7 @@ BootstrapSelectTest >> testSelectAll [
 	self
 		assert: html
 		equals:
-			'<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("selectAll");</script>'
+			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("selectAll");</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -462,7 +462,7 @@ BootstrapSelectTest >> testSelectAllText [
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectAllText":"Select All"});</script>'
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectAllText":"Select All"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -487,25 +487,25 @@ BootstrapSelectTest >> testSelectedTextFormat [
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"values"});</script>'.
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"values"});</script>'.
 
 	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: #static ].
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"static"});</script>'.
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"static"});</script>'.
 
 	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormat: #count ].
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count"});</script>'.
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count"});</script>'.
 
 	html := self renderMultiSelectApplying: [ :bootstrapSelect | bootstrapSelect selectedTextFormatCountAfter: 3 ].
 
 	self
 		assert: html
-		equals: '<select id="id1" multiple="multiple"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count > 3"});</script>'
+		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count > 3"});</script>'
 ]
 
 { #category : #'tests-Methods' }

@@ -12,32 +12,40 @@ BaselineOfWillowBootstrap >> baseline: spec [
 
 	<baseline>
 	spec
-		for: #common
-		do: [ self setUpDependencies: spec.
+		for: #pharo
+		do: [ self
+				setUpDependencies: spec;
+				baselineWillowBootstrap: spec.
 			spec
-				package: 'Willow-Bootstrap' with: [ spec requires: #('Willow') ];
-				package: 'Willow-Bootstrap-Tests'
-					with: [ spec requires: #('Willow-Bootstrap' 'Willow-Tests' 'Seaside3-Tests') ].
-			spec
-				group: 'Deployment' with: #('Willow-Bootstrap');
-				group: 'Development' with: #('Deployment' 'Willow-Bootstrap-Tests');
-				group: 'default' with: #('Deployment') ]
+				group: 'CI' with: 'Tests';
+				group: 'Dependent-SUnit-Extensions' with: 'Willow-SUnit';
+				group: 'Tools' with: 'Willow-Tools';
+				group: 'Development' with: #('Tests' 'Tools')
+			]
+]
+
+{ #category : #baselines }
+BaselineOfWillowBootstrap >> baselineWillowBootstrap: spec [
+
+	spec
+		package: 'Willow-Bootstrap' with: [ spec requires: #('Willow-Deployment') ];
+		group: 'Deployment' with: #('Willow-Bootstrap');
+		package: 'Willow-Bootstrap-Tests' with: [ spec requires: #('Willow-Bootstrap' 'Willow-SUnit') ];
+		group: 'Tests' with: 'Willow-Bootstrap-Tests'
+]
+
+{ #category : #accessing }
+BaselineOfWillowBootstrap >> projectClass [
+
+	^ MetacelloCypressBaselineProject
 ]
 
 { #category : #baselines }
 BaselineOfWillowBootstrap >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Seaside3'
-			with: [ spec repository: 'github://SeasideSt/Seaside:v3.2.4/repository' ];
-		project: 'Seaside3-Tests'
-			copyFrom: 'Seaside3'
-			with: [ spec loads: #('Javascript-Tests-Core') ].
-	spec
-		baseline: 'Willow'
-			with: [ spec
-				repository: 'github://ba-st/Willow:v11/source';
-				loads: #('Willow') ];
-		project: 'Willow-Tests' copyFrom: 'Willow' with: [ spec loads: #('Willow-Tests') ]
-
+		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v11/source' ];
+		project: 'Willow-Deployment' copyFrom: 'Willow' with: [ spec loads: 'Deployment' ];
+		project: 'Willow-SUnit' copyFrom: 'Willow' with: [ spec loads: 'Dependent-SUnit-Extensions' ];
+		project: 'Willow-Tools' copyFrom: 'Willow' with: [ spec loads: 'Tools' ]
 ]

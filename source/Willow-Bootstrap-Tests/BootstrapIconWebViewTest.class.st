@@ -28,5 +28,5 @@ BootstrapIconWebViewTest >> testRepresentingApplying [
 
 	html := self render: icon.
 
-	self assert: html equals: '<span class="glyphicon glyphicon-menu-up" data-dismiss="data-dismiss"></span>'
+	self assert: html equals: '<span class="glyphicon glyphicon-menu-up" data-dismiss></span>'
 ]

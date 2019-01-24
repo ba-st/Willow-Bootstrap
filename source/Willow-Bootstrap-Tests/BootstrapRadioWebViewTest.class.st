@@ -81,7 +81,7 @@ BootstrapRadioWebViewTest >> testRenderContentOnWithElementsAndSomethingSelected
 	self
 		assert: html
 		equals:
-			'<label><input name="1" checked="checked" value="1" type="radio"/>Buenos Aires</label><label><input name="1" value="2" type="radio"/>CABA</label>'.
+			'<label><input name="1" checked value="1" type="radio"/>Buenos Aires</label><label><input name="1" value="2" type="radio"/>CABA</label>'.
 
 	radioGroup chooseAnySatisfying: [ :place | place beginsWith: 'C' ] ifNone: [ self fail ].
 
@@ -90,7 +90,7 @@ BootstrapRadioWebViewTest >> testRenderContentOnWithElementsAndSomethingSelected
 	self
 		assert: html
 		equals:
-			'<label><input name="1" value="1" type="radio"/>Buenos Aires</label><label><input name="1" checked="checked" value="2" type="radio"/>CABA</label>'
+			'<label><input name="1" value="1" type="radio"/>Buenos Aires</label><label><input name="1" checked value="2" type="radio"/>CABA</label>'
 ]
 
 { #category : #'tests-rendering' }

@@ -24,7 +24,7 @@ BootstrapCheckboxWebViewTest >> testIdentifyIn [
 	self
 		assert: html
 			equals:
-			'<div class="checkbox"><label><input checked="checked" name="2" id="checkbox-id1" type="checkbox"/><input name="3" type="hidden"/></label></div>';
+			'<div class="checkbox"><label><input checked name="2" id="checkbox-id1" type="checkbox"/><input name="3" type="hidden"/></label></div>';
 		assert: checkbox identifier equals: 'checkbox-id1'
 ]
 
@@ -40,7 +40,7 @@ BootstrapCheckboxWebViewTest >> testOnTrigger [
 	self
 		assert: html
 		equals:
-			'<div class="checkbox"><label><input checked="checked" name="1" id="input-id2" type="checkbox"/><input name="3" type="hidden"/></label></div><script type="text/javascript">$("#input-id2").click(function(event){$(this).prop("disabled",true)});</script>'
+			'<div class="checkbox"><label><input checked name="1" id="input-id2" type="checkbox"/><input name="3" type="hidden"/></label></div><script type="text/javascript">$("#input-id2").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
 { #category : #'tests-rendering' }
@@ -60,7 +60,7 @@ BootstrapCheckboxWebViewTest >> testRenderingAfterUpdatingModel [
 	html := self render: checkbox.
 	self
 		assert: html
-		equals: '<div class="checkbox willow"><label><input class="willow" checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>'
+		equals: '<div class="checkbox willow"><label><input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>'
 ]
 
 { #category : #'tests-rendering' }
@@ -79,7 +79,7 @@ BootstrapCheckboxWebViewTest >> testRenderingWithLabel [
 	self
 		assert: html
 		equals:
-			'<div class="checkbox willow"><label><input class="willow" checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/>Enable network</label></div>'
+			'<div class="checkbox willow"><label><input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/>Enable network</label></div>'
 ]
 
 { #category : #'tests-rendering' }
@@ -94,7 +94,7 @@ BootstrapCheckboxWebViewTest >> testWithNonBooleanModels [
 	self
 		assert: html
 			equals:
-			'<div class="checkbox"><label><input checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>';
+			'<div class="checkbox"><label><input checked name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>';
 		assert: checkbox currentSelection equals: 1.
 
 	checkbox toggleCurrentSelection.

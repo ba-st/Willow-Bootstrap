@@ -58,7 +58,7 @@ BootstrapComponentSupplierTest >> testCheckboxLabeledOnModelOffModelApplying [
 				onModel: 3
 				offModel: 'the off'
 				applying: [ :checkbox | checkbox addClass willow ] ]
-		equals: '<div class="checkbox willow"><label><input class="willow" checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/>Labelization</label></div>'
+		equals: '<div class="checkbox willow"><label><input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/>Labelization</label></div>'
 ]
 
 { #category : #'tests-Supplying' }
@@ -66,7 +66,7 @@ BootstrapComponentSupplierTest >> testCheckboxUnlabeledOnModelOffModelApplying [
 
 	self
 		assertRenderingOf: [ :supplier | supplier checkboxUnlabeledOnModel: 3 offModel: 'the off' applying: [ :checkbox | checkbox addClass willow ] ]
-		equals: '<div class="checkbox willow"><label><input class="willow" checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>'
+		equals: '<div class="checkbox willow"><label><input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>'
 ]
 
 { #category : #'tests-Supplying' }
@@ -101,7 +101,7 @@ BootstrapComponentSupplierTest >> testFieldSetContainingApplyingWithLegendApplyi
 				applying: [ :fieldSet | fieldSet beDisabled ]
 				withLegend: 'Its Title'
 				applying: [ :legend | legend beAutofocused ] ]
-		equals: '<fieldset disabled="disabled"><legend autofocus="autofocus">Its Title</legend>The View</fieldset>'
+		equals: '<fieldset disabled><legend autofocus>Its Title</legend>The View</fieldset>'
 ]
 
 { #category : #'tests-Supplying' }
@@ -117,7 +117,7 @@ BootstrapComponentSupplierTest >> testMultipleSelectionListBoxDisplayingAtOnceAp
 
 	self
 		assertRenderingOf: [ :supplier | supplier multipleSelectionListBoxDisplayingAtOnce: 10 applying: [ :listBox |  ] ]
-		equals: '<select name="1" size="10" class="form-control" multiple="multiple"></select><input name="2" type="hidden"/>'
+		equals: '<select name="1" size="10" class="form-control" multiple></select><input name="2" type="hidden"/>'
 ]
 
 { #category : #'tests-Supplying' }
