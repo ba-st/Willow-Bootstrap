@@ -12,6 +12,16 @@ Class {
 }
 
 { #category : #private }
+BootstrapTypeaheadCommand class >> actionToRefresh: anIdentifiedWebView [
+
+	^ [ :ajax :canvas | 
+		anIdentifiedWebView identifyIn: canvas.
+		ajax
+			onComplete: ( ( canvas jQuery id: anIdentifiedWebView identifier ) load html: anIdentifiedWebView view )
+		]
+]
+
+{ #category : #private }
 BootstrapTypeaheadCommand class >> defaultConfigurationBlock [
 
 	^ [ :typeahead |  ]
@@ -36,10 +46,22 @@ BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabe
 { #category : #'Instance Creation' }
 BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabelsBlock withSelectionDo: aSelectionCallback configuredBy: aConfigurationBlock [
 
+	^ self
+		searchingWith: aSearchAction
+		labeledBy: aLabelsBlock
+		withSelectionDo: aSelectionCallback
+		thenDo: [ :ajax :canvas |  ]
+		configuredBy: aConfigurationBlock
+]
+
+{ #category : #'Instance Creation' }
+BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabelsBlock withSelectionDo: aSelectionCallback thenDo: aPostProcessingCallback configuredBy: aConfigurationBlock [
+
 	^ self new
 		initializeSearchingWith: aSearchAction
 		labeledBy: aLabelsBlock
 		withSelectionDo: aSelectionCallback
+		thenDo: aPostProcessingCallback
 		configuredBy: aConfigurationBlock
 ]
 
@@ -59,16 +81,31 @@ BootstrapTypeaheadCommand class >> searchingWith: aSearchAction withSelectionDo:
 		configuredBy: aConfigurationBlock
 ]
 
+{ #category : #'Instance Creation' }
+BootstrapTypeaheadCommand class >> searchingWith: aSearchAction withSelectionDo: aSelectionCallback thenRefresh: anIdentifiedWebView configuredBy: aConfigurationBlock [
+
+	^ self
+		searchingWith: aSearchAction
+		labeledBy: self defaultLabelBlock
+		withSelectionDo: aSelectionCallback
+		thenDo: ( self actionToRefresh: anIdentifiedWebView )
+		configuredBy: aConfigurationBlock
+]
+
 { #category : #private }
-BootstrapTypeaheadCommand >> afterSelectFunctionEvaluate: aSelectionCallback on: aCanvas [
+BootstrapTypeaheadCommand >> afterSelectFunctionEvaluate: aSelectionCallback thenDo: aPostProcessingCallback on: aCanvas [
 
 	| selectedIndexHolder ajax |
 
 	selectedIndexHolder := WAValueHolder new.
 	ajax := aCanvas jQuery ajax.
 	ajax
-		callback: [ :activeItemIndex | selectedIndexHolder contents: activeItemIndex greaseInteger ] value: ((aCanvas jQuery alias: 'activeItem') access: self indexProperty);
-		script: [ :script | aSelectionCallback value: (searchResults at: selectedIndexHolder contents) ].
+		callback: [ :activeItemIndex | selectedIndexHolder contents: activeItemIndex greaseInteger ]
+			value: ( ( aCanvas jQuery alias: 'activeItem' ) access: self indexProperty );
+		script: [ :script | aSelectionCallback value: ( searchResults at: selectedIndexHolder contents ) ].
+
+	aPostProcessingCallback value: ajax value: aCanvas.
+
 	^ ajax asFunction: #('activeItem')
 ]
 
@@ -104,7 +141,7 @@ BootstrapTypeaheadCommand >> indexProperty [
 ]
 
 { #category : #initialization }
-BootstrapTypeaheadCommand >> initializeSearchingWith: aSearchAction labeledBy: aLabelsBlock withSelectionDo: aSelectionCallback configuredBy: aConfigurationBlock [
+BootstrapTypeaheadCommand >> initializeSearchingWith: aSearchAction labeledBy: aLabelsBlock withSelectionDo: aSelectionCallback thenDo: aPostProcessingCallback configuredBy: aConfigurationBlock [
 
 	searchResults := #().
 	scriptCommand := ComponentScriptCommand
@@ -113,11 +150,12 @@ BootstrapTypeaheadCommand >> initializeSearchingWith: aSearchAction labeledBy: a
 
 			typeahead := canvas jQuery this bootstrapTypeahead.
 			typeahead
-				source: (self searchWith: aSearchAction labels: aLabelsBlock on: canvas);
+				source: ( self searchWith: aSearchAction labels: aLabelsBlock on: canvas );
 				updater: self updaterFunction;
-				afterSelect: (self afterSelectFunctionEvaluate: aSelectionCallback on: canvas).
+				afterSelect: ( self afterSelectFunctionEvaluate: aSelectionCallback thenDo: aPostProcessingCallback on: canvas ).
 			aConfigurationBlock cull: typeahead cull: canvas.
-			typeahead ]
+			typeahead
+			]
 ]
 
 { #category : #private }
