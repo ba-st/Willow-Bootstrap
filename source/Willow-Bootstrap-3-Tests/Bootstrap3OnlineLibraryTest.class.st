@@ -4,7 +4,7 @@ A Bootstrap3OnlineLibraryTest is a test class for testing the behavior of Bootst
 Class {
 	#name : #Bootstrap3OnlineLibraryTest,
 	#superclass : #WARenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Libraries'
+	#category : #'Willow-Bootstrap-3-Tests-Libraries'
 }
 
 { #category : #'tests-Updating' }

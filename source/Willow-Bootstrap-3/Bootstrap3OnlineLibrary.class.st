@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'includeOptionalTheme'
 	],
-	#category : #'Willow-Bootstrap-Libraries'
+	#category : #'Willow-Bootstrap-3-Libraries'
 }
 
 { #category : #'instance creation' }
