@@ -1,10 +1,10 @@
 {
   "name": "willow-bootstrap",
-  "version": "11.1.0",
+  "version": "11.1.1",
   "author": "Buenos Aires Smalltalk contributors",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "3.4.0",
+    "bootstrap": "3.4.1",
     "bootstrap-select": "1.12.4",
     "bootstrap-datepicker": "1.8.0",
     "bootstrap-3-typeahead": "4.0.2"
