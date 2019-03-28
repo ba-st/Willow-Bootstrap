@@ -31,9 +31,9 @@ BaselineOfWillowBootstrap >> baselineWillowBootstrap: spec [
 	spec
 		package: 'Willow-Bootstrap' with: [ spec requires: #('Willow-Deployment') ];
 		package: 'Willow-Bootstrap-3' with: [ spec requires: 'Willow-Bootstrap' ];
-		group: 'Deployment-Bootstrap-3';
+		group: 'Deployment-Bootstrap-3' with: 'Willow-Bootstrap-3';
 		package: 'Willow-Bootstrap-4' with: [ spec requires: 'Willow-Bootstrap' ];
-		group: 'Deployment-Bootstrap-4';
+		group: 'Deployment-Bootstrap-4' with: 'Willow-Bootstrap-4';
 		package: 'Willow-Bootstrap-Tests' with: [ spec requires: #('Willow-Bootstrap' 'Willow-Tests') ];
 		group: 'Tests' with: 'Willow-Bootstrap-Tests';
 		package: 'Willow-Bootstrap-3-Tests'
