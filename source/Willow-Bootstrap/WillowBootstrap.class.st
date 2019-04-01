@@ -572,12 +572,25 @@ WillowBootstrap class >> initializeImagesClasses [
 WillowBootstrap class >> initializeInputGroupsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #inputGroupAddon to: 'input-group-addon';
-		bind: #inputGroupSmall to: 'input-group-sm';
-		bind: #inputGroupLarge to: 'input-group-lg';
-		bind: #inputGroupButton to: 'input-group-btn';
-		bind: #inputGroup to: 'input-group'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #inputGroup to: 'input-group';
+				bind: #inputGroupLarge to: 'input-group-lg';
+				bind: #inputGroupSmall to: 'input-group-sm'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #inputGroupAddon to: 'input-group-addon';
+				bind: #inputGroupButton to: 'input-group-btn'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #flexNoWrap to: 'flex-nowrap';
+				bind: #inputGroupAppend to: 'input-group-append';
+				bind: #inputGroupPrepend to: 'input-group-prepend';
+				bind: #inputGroupText to: 'input-group-text'
+			]
 ]
 
 { #category : #'private - initialization' }
