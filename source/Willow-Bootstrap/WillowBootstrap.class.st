@@ -719,47 +719,76 @@ WillowBootstrap class >> initializeNavigationClasses [
 		forBootstrap3And4Do: [ :namespace | 
 			namespace
 				bind: #breadcrumb to: 'breadcrumb';
-				bind: #breadcrumbItem to: 'breadcrumb-item'
-			].
-	( Classification >> #bootstrap3 )
-		bind: #navbarFixedTop to: 'navbar-fixed-top';
-		bind: #navbarForm to: 'navbar-form';
-		bind: #navPills to: 'nav-pills';
-		bind: #navbarInverse to: 'navbar-inverse';
-		bind: #navbarButton to: 'navbar-btn';
-		bind: #navJustified to: 'nav-justified';
-		bind: #navbarToggle to: 'navbar-toggle';
-		bind: #navbarHeader to: 'navbar-header';
-		bind: #navbarBrand to: 'navbar-brand';
-		bind: #tabPane to: 'tab-pane';
-		bind: #nav to: 'nav';
-		bind: #navbar to: 'navbar';
-		bind: #navbarText to: 'navbar-text';
-		bind: #tabContent to: 'tab-content';
-		bind: #iconBar to: 'icon-bar';
-		bind: #navbarStaticTop to: 'navbar-static-top';
-		bind: #navbarLeft to: 'navbar-left';
-		bind: #navbarCollapse to: 'navbar-collapse';
-		bind: #navStacked to: 'nav-stacked';
-		bind: #navTabs to: 'nav-tabs';
-		bind: #navbarRight to: 'navbar-right';
-		bind: #navbarFixedBottom to: 'navbar-fixed-bottom';
-		bind: #navbarNavigation to: 'navbar-nav';
-		bind: #navbarLink to: 'navbar-link';
-		bind: #navbarDefault to: 'navbar-default'
+				bind: #breadcrumbItem to: 'breadcrumb-item';
+				bind: #nav to: 'nav';
+				bind: #navbar to: 'navbar';
+				bind: #navbarBrand to: 'navbar-brand';
+				bind: #navbarCollapse to: 'navbar-collapse';
+				bind: #navbarNavigation to: 'navbar-nav';
+				bind: #navbarText to: 'navbar-text';
+				bind: #navLink to: 'nav-link';
+				bind: #navPills to: 'nav-pills';
+				bind: #navTabs to: 'nav-tabs';
+				bind: #tabContent to: 'tab-content';
+				bind: #tabPane to: 'tab-pane'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #iconBar to: 'icon-bar';
+				bind: #navbarButton to: 'navbar-btn';
+				bind: #navbarDefault to: 'navbar-default';
+				bind: #navbarFixedBottom to: 'navbar-fixed-bottom';
+				bind: #navbarFixedTop to: 'navbar-fixed-top';
+				bind: #navbarForm to: 'navbar-form';
+				bind: #navbarHeader to: 'navbar-header';
+				bind: #navbarInverse to: 'navbar-inverse';
+				bind: #navbarLeft to: 'navbar-left';
+				bind: #navbarLink to: 'navbar-link';
+				bind: #navbarRight to: 'navbar-right';
+				bind: #navbarStaticTop to: 'navbar-static-top';
+				bind: #navbarToggle to: 'navbar-toggle';
+				bind: #navJustified to: 'nav-justified';
+				bind: #navStacked to: 'nav-stacked'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #navbarDark to: 'navbar-dark';
+				bind: #navbarExpand to: 'navbar-expand';
+				bind: #navbarExpandLarge to: 'navbar-expand-lg';
+				bind: #navbarExpandMedium to: 'navbar-expand-md';
+				bind: #navbarExpandSmall to: 'navbar-expand-sm';
+				bind: #navbarExpandExtraLarge to: 'navbar-expand-xl';
+				bind: #navbarLight to: 'navbar-light';
+				bind: #navbarToggler to: 'navbar-toggler';
+				bind: #navbarTogglerIcon to: 'navbar-toggler-icon';
+				bind: #navFill to: 'nav-fill';
+				bind: #navItem to: 'nav-item';
+				bind: #navJustified to: 'nav-justified'
+			]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializePaginationClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #next to: 'next';
-		bind: #pager to: 'pager';
-		bind: #paginationLarge to: 'pagination-lg';
-		bind: #pagination to: 'pagination';
-		bind: #previous to: 'previous';
-		bind: #paginationSmall to: 'pagination-sm'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #pagination to: 'pagination';
+				bind: #paginationLarge to: 'pagination-lg';
+				bind: #paginationSmall to: 'pagination-sm'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #next to: 'next';
+				bind: #pager to: 'pager';
+				bind: #previous to: 'previous'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #pageItem to: 'page-item';
+				bind: #pageLink to: 'page-link'
+			]
 ]
 
 { #category : #'private - initialization' }
