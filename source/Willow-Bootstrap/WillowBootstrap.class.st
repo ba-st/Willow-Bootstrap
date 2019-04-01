@@ -89,6 +89,7 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeFigureClasses;
 		initializeAccessingClasses;
 		initializeCollapseClasses;
+		initializeCardClasses;
 		initializeHelperClassesClasses;
 		initializeFormsClasses;
 		initializePanelsClasses;
@@ -165,6 +166,31 @@ WillowBootstrap class >> initializeButtonsClasses [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeCardClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #card to: 'card';
+				bind: #cardBody to: 'card-body';
+				bind: #cardColumns to: 'card-columns';
+				bind: #carDeck to: 'card-deck';
+				bind: #cardFooter to: 'card-footer';
+				bind: #cardGroup to: 'card-group';
+				bind: #cardHeader to: 'card-header';
+				bind: #cardHeaderTabs to: 'card-header-tabs';
+				bind: #cardImage to: 'card-img';
+				bind: #cardImageOverlay to: 'card-img-overlay';
+				bind: #cardImageTop to: 'card-img-top';
+				bind: #cardLink to: 'card-link';
+				bind: #cardSubtitle to: 'card-subtitle';
+				bind: #cardText to: 'card-text';
+				bind: #cardTitle to: 'card-title'
+			]
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeCodeClasses [
 
 	<ignoreForCoverage>
@@ -175,11 +201,17 @@ WillowBootstrap class >> initializeCodeClasses [
 WillowBootstrap class >> initializeCollapseClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #collapsed to: 'collapsed';
-		bind: #collapsing to: 'collapsing';
-		bind: #in to: 'in';
-		bind: #collapse to: 'collapse'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #collapse to: 'collapse';
+				bind: #collapsing to: 'collapsing'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #collapsed to: 'collapsed';
+				bind: #in to: 'in'
+			]
 ]
 
 { #category : #'private - initialization' }
@@ -306,17 +338,32 @@ WillowBootstrap class >> initializeDatepickerWeekStartConstants [
 WillowBootstrap class >> initializeDropdownsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #dropdownToggle to: 'dropdown-toggle';
-		bind: #open to: 'open';
-		bind: #divider to: 'divider';
-		bind: #dropdownBackdrop to: 'dropdown-backdrop';
-		bind: #dropdownMenuLeft to: 'dropdown-menu-left';
-		bind: #dropdownHeader to: 'dropdown-header';
-		bind: #dropup to: 'dropup';
-		bind: #dropdownMenu to: 'dropdown-menu';
-		bind: #dropdown to: 'dropdown';
-		bind: #dropdownMenuRight to: 'dropdown-menu-right'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #dropdown to: 'dropdown';
+				bind: #dropdownHeader to: 'dropdown-header';
+				bind: #dropdownMenu to: 'dropdown-menu';
+				bind: #dropdownMenuLeft to: 'dropdown-menu-left';
+				bind: #dropdownMenuRight to: 'dropdown-menu-right';
+				bind: #dropdownToggle to: 'dropdown-toggle';
+				bind: #dropup to: 'dropup'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #open to: 'open';
+				bind: #divider to: 'divider';
+				bind: #dropdownBackdrop to: 'dropdown-backdrop'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #dropdownDivider to: 'dropdown-divider';
+				bind: #dropdownItem to: 'dropdown-item';
+				bind: #dropdownItemText to: 'dropdown-item-text';
+				bind: #dropdownToggleSplit to: 'dropdown-toggle-split';
+				bind: #dropleft to: 'dropleft';
+				bind: #dropright to: 'dropright'
+			]
 ]
 
 { #category : #'private - initialization' }
