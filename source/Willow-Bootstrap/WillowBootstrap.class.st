@@ -667,33 +667,48 @@ WillowBootstrap class >> initializeListGroupsClasses [
 WillowBootstrap class >> initializeMediaObjectClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #mediaObject to: 'media-object';
-		bind: #mediaList to: 'media-list';
-		bind: #mediaMiddle to: 'media-middle';
-		bind: #mediaBody to: 'media-body';
-		bind: #mediaHeading to: 'media-heading';
-		bind: #mediaRight to: 'media-right';
-		bind: #media to: 'media';
-		bind: #mediaLeft to: 'media-left'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #media to: 'media';
+				bind: #mediaBody to: 'media-body'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #mediaHeading to: 'media-heading';
+				bind: #mediaLeft to: 'media-left';
+				bind: #mediaList to: 'media-list';
+				bind: #mediaMiddle to: 'media-middle';
+				bind: #mediaObject to: 'media-object';
+				bind: #mediaRight to: 'media-right'
+			]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializeModalClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #modalHeader to: 'modal-header';
-		bind: #modalSmall to: 'modal-sm';
-		bind: #modalLarge to: 'modal-lg';
-		bind: #modalBackdrop to: 'modal-backdrop';
-		bind: #modalFooter to: 'modal-footer';
-		bind: #modalOpen to: 'modal-open';
-		bind: #modalDialog to: 'modal-dialog';
-		bind: #modal to: 'modal';
-		bind: #modalContent to: 'modal-content';
-		bind: #modalTitle to: 'modal-title';
-		bind: #modalBody to: 'modal-body'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #modal to: 'modal';
+				bind: #modalBackdrop to: 'modal-backdrop';
+				bind: #modalBody to: 'modal-body';
+				bind: #modalContent to: 'modal-content';
+				bind: #modalDialog to: 'modal-dialog';
+				bind: #modalFooter to: 'modal-footer';
+				bind: #modalHeader to: 'modal-header';
+				bind: #modalLarge to: 'modal-lg';
+				bind: #modalOpen to: 'modal-open';
+				bind: #modalSmall to: 'modal-sm';
+				bind: #modalTitle to: 'modal-title'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #modalDialogCentered to: 'modal-dialog-centered';
+				bind: #modaLDialogScrollable to: 'modal-dialog-scrollable';
+				bind: #modalExtraLarge to: 'modal-xl'
+			]
 ]
 
 { #category : #'private - initialization' }
