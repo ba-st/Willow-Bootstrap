@@ -97,12 +97,6 @@ ComponentClassificationCommandBuilder >> blockquoteReverse [
 ]
 
 { #category : #'*Willow-Bootstrap' }
-ComponentClassificationCommandBuilder >> bootstrap [
-
-	classificationNamespace := classificationNamespace >> #bootstrap
-]
-
-{ #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> bootstrapSelect [
 
 	^ self commandStyledWith: #bootstrapSelect

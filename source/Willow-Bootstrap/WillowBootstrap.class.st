@@ -10,12 +10,34 @@ Class {
 	#category : #'Willow-Bootstrap-Frontend'
 }
 
+{ #category : #private }
+WillowBootstrap class >> forBootstrap3And4Do: aBlock [
+
+	self
+		forBootstrap3Do: aBlock;
+		forBootstrap4Do: aBlock
+]
+
+{ #category : #private }
+WillowBootstrap class >> forBootstrap3Do: aBlock [
+
+	aBlock value: Classification >> #bootstrap3
+]
+
+{ #category : #private }
+WillowBootstrap class >> forBootstrap4Do: aBlock [
+
+	aBlock value: Classification >> #bootstrap4
+]
+
 { #category : #'class initialization' }
 WillowBootstrap class >> initialize [
 
 	<ignoreForCoverage>
-	Classification bind: #bootstrap to: Namespace new.
-	Constants bind: #bootstrap to: Namespace new.
+	Classification bind: #bootstrap3 to: Namespace new.
+	Classification bind: #bootstrap4 to: Namespace new.
+	Constants bind: #boostrap3 to: Namespace new.
+	Constants bind: #bootstrap4 to: Namespace new.
 	self
 		initializeBaseConstantsAndClasses;
 		initializeDatepickerConstantsAndClasses;
@@ -26,7 +48,7 @@ WillowBootstrap class >> initialize [
 WillowBootstrap class >> initializeAccessingClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #date to: 'date';
 		bind: #fade to: 'fade'
 ]
@@ -35,14 +57,25 @@ WillowBootstrap class >> initializeAccessingClasses [
 WillowBootstrap class >> initializeAlertsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
-		bind: #alertInfo to: 'alert-info';
-		bind: #alertSuccess to: 'alert-success';
-		bind: #alert to: 'alert';
-		bind: #alertDismissible to: 'alert-dismissible';
-		bind: #alertLink to: 'alert-link';
-		bind: #alertDanger to: 'alert-danger';
-		bind: #alertWarning to: 'alert-warning'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #alert to: 'alert';
+				bind: #alertDanger to: 'alert-danger';
+				bind: #alertDismissible to: 'alert-dismissible';
+				bind: #alertInfo to: 'alert-info';
+				bind: #alertLink to: 'alert-link';
+				bind: #alertSuccess to: 'alert-success';
+				bind: #alertWarning to: 'alert-warning'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #alertDark to: 'alert-dark';
+				bind: #alertHeading to: 'alert-heading';
+				bind: #alertLight to: 'alert-light';
+				bind: #alertPrimary to: 'alert-primary';
+				bind: #alertSecondary to: 'alert-secondary'
+			]
 ]
 
 { #category : #'private - initialization' }
@@ -53,6 +86,7 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeImagesClasses;
 		initializeInputGroupsClasses;
 		initializeTypographyClasses;
+		initializeFigureClasses;
 		initializeAccessingClasses;
 		initializeCollapseClasses;
 		initializeHelperClassesClasses;
@@ -86,41 +120,62 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 WillowBootstrap class >> initializeButtonsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
-		bind: #buttonGroupSmall to: 'btn-group-sm';
-		bind: #buttonDanger to: 'btn-danger';
-		bind: #buttonWarning to: 'btn-warning';
-		bind: #buttonPrimary to: 'btn-primary';
-		bind: #buttonToolbar to: 'btn-toolbar';
-		bind: #buttonInfo to: 'btn-info';
-		bind: #buttonBlock to: 'btn-block';
-		bind: #active to: 'active';
-		bind: #buttonGroup to: 'btn-group';
-		bind: #buttonDefault to: 'btn-default';
-		bind: #buttonSmall to: 'btn-sm';
-		bind: #button to: 'btn';
-		bind: #buttonLarge to: 'btn-lg';
-		bind: #buttonGroupJustified to: 'btn-group-justified';
-		bind: #buttonExtraSmall to: 'btn-xs';
-		bind: #buttonSuccess to: 'btn-success';
-		bind: #buttonGroupVertical to: 'btn-group-vertical';
-		bind: #buttonGroupExtraSmall to: 'btn-group-xs';
-		bind: #buttonGroupLarge to: 'btn-group-lg';
-		bind: #buttonLink to: 'btn-link'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #active to: 'active';
+				bind: #button to: 'btn';
+				bind: #buttonBlock to: 'btn-block';
+				bind: #buttonDanger to: 'btn-danger';
+				bind: #buttonGroup to: 'btn-group';
+				bind: #buttonGroupLarge to: 'btn-group-lg';
+				bind: #buttonGroupSmall to: 'btn-group-sm';
+				bind: #buttonGroupVertical to: 'btn-group-vertical';
+				bind: #buttonInfo to: 'btn-info';
+				bind: #buttonLarge to: 'btn-lg';
+				bind: #buttonLink to: 'btn-link';
+				bind: #buttonPrimary to: 'btn-primary';
+				bind: #buttonSuccess to: 'btn-success';
+				bind: #buttonSmall to: 'btn-sm';
+				bind: #buttonToolbar to: 'btn-toolbar';
+				bind: #buttonWarning to: 'btn-warning'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #buttonDefault to: 'btn-default';
+				bind: #buttonExtraSmall to: 'btn-xs';
+				bind: #buttonGroupJustified to: 'btn-group-justified';
+				bind: #buttonGroupExtraSmall to: 'btn-group-xs'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #buttonDark to: 'btn-dark';
+				bind: #buttonGroupToggle to: 'btn-group-toggle';
+				bind: #buttonLight to: 'btn-light';
+				bind: #buttonOutlineDanger to: 'btn-outline-danger';
+				bind: #buttonOutlineDark to: 'btn btn-outline-dark';
+				bind: #buttonOutlineInfo to: 'btn btn-outline-info';
+				bind: #buttonOutlineLight to: 'btn-outline-light';
+				bind: #buttonOutlinePrimary to: 'btn-outline-primary';
+				bind: #buttonOutlineSecondary to: 'btn-outline-secondary';
+				bind: #buttonOutlineSuccess to: 'btn-outline-success';
+				bind: #buttonOutlineWarning to: 'btn-outline-warning';
+				bind: #buttonSecondary to: 'btn-secondary'
+			]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializeCodeClasses [
 
 	<ignoreForCoverage>
-	Classification >> #bootstrap bind: #preScrollable to: 'pre-scrollable'
+	self forBootstrap3And4Do: [ :namespace | namespace bind: #preScrollable to: 'pre-scrollable' ]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializeCollapseClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #collapsed to: 'collapsed';
 		bind: #collapsing to: 'collapsing';
 		bind: #in to: 'in';
@@ -131,7 +186,7 @@ WillowBootstrap class >> initializeCollapseClasses [
 WillowBootstrap class >> initializeContainersClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #containerFluid to: 'container-fluid';
 		bind: #pageHeader to: 'page-header';
 		bind: #container to: 'container';
@@ -143,7 +198,7 @@ WillowBootstrap class >> initializeContainersClasses [
 WillowBootstrap class >> initializeDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #trigger to: 'trigger';
 		bind: #content to: 'content';
 		bind: #static to: 'static';
@@ -178,7 +233,7 @@ WillowBootstrap class >> initializeDataAPIConstants [
 WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
 
 	<ignoreForCoverage>
-	Constants >> #bootstrap bind: #datepicker to: 'datepicker'.
+	Constants >> #bootstrap3 bind: #datepicker to: 'datepicker'.
 	self
 		initializeDatepickerDataAPIConstants;
 		initializeDatepickerEventsConstants;
@@ -190,7 +245,7 @@ WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
 WillowBootstrap class >> initializeDatepickerDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #todayHighlight to: 'date-today-highlight';
 		bind: #language to: 'date-language';
 		bind: #todayButton to: 'date-today-btn';
@@ -204,7 +259,7 @@ WillowBootstrap class >> initializeDatepickerDataAPIConstants [
 WillowBootstrap class >> initializeDatepickerEventsConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #changeDate to: 'changeDate';
 		bind: #clearDate to: 'clearDate';
 		bind: #changeMonth to: 'changeMonth';
@@ -219,7 +274,7 @@ WillowBootstrap class >> initializeDatepickerEventsConstants [
 WillowBootstrap class >> initializeDatepickerViewModesConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #centuries to: 'centuries';
 		bind: #years to: 'years';
 		bind: #month to: 'month';
@@ -237,7 +292,7 @@ WillowBootstrap class >> initializeDatepickerViewModesConstants [
 WillowBootstrap class >> initializeDatepickerWeekStartConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #sunday to: 0;
 		bind: #friday to: 5;
 		bind: #wednesday to: 3;
@@ -251,7 +306,7 @@ WillowBootstrap class >> initializeDatepickerWeekStartConstants [
 WillowBootstrap class >> initializeDropdownsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #dropdownToggle to: 'dropdown-toggle';
 		bind: #open to: 'open';
 		bind: #divider to: 'divider';
@@ -268,7 +323,7 @@ WillowBootstrap class >> initializeDropdownsClasses [
 WillowBootstrap class >> initializeEventsConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #showTooltip to: 'show.bs.tooltip';
 		bind: #insertedTooltip to: 'inserted.bs.tooltip';
 		bind: #hiddenCollapse to: 'hidden.bs.collapse';
@@ -294,10 +349,23 @@ WillowBootstrap class >> initializeEventsConstants [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeFigureClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #figure to: 'figure';
+				bind: #figureImage to: 'figure-img';
+				bind: #figureCaption do: 'figure-caption'
+			]
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeFormsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #hasError to: 'has-error';
 		bind: #formHorizontal to: 'form-horizontal';
 		bind: #hasWarning to: 'has-warning';
@@ -324,23 +392,52 @@ WillowBootstrap class >> initializeFormsClasses [
 WillowBootstrap class >> initializeGridSystemClasses [
 
 	<ignoreForCoverage>
-	Classification >> #bootstrap bind: #row to: 'row'.
+	Classification >> #bootstrap3 bind: #row to: 'row'.
 	1 to: 12 do: [ :index | 
 		#('ExtraSmall' 'Small' 'Medium' 'Large')
 			with: #('xs' 'sm' 'md' 'lg')
 			do: [ :columnSize :abbr | 
-				(Classification >> #bootstrap)
-					bind: (#'column<1s><2p>' expandMacrosWith: columnSize with: index) to: ('col-<1s>-<2p>' expandMacrosWith: abbr with: index);
-					bind: (#'column<1s>Offset<2p>' expandMacrosWith: columnSize with: index) to: ('col-<1s>-offset-<2p>' expandMacrosWith: abbr with: index);
-					bind: (#'column<1s>Pull<2p>' expandMacrosWith: columnSize with: index) to: ('col-<1s>-pull-<2p>' expandMacrosWith: abbr with: index);
-					bind: (#'column<1s>Push<2p>' expandMacrosWith: columnSize with: index) to: ('col-<1s>-push-<2p>' expandMacrosWith: abbr with: index) ] ]
+				( Classification >> #bootstrap3 )
+					bind: ( #'column<1s><2p>' expandMacrosWith: columnSize with: index )
+						to: ( 'col-<1s>-<2p>' expandMacrosWith: abbr with: index );
+					bind: ( #'column<1s>Offset<2p>' expandMacrosWith: columnSize with: index )
+						to: ( 'col-<1s>-offset-<2p>' expandMacrosWith: abbr with: index );
+					bind: ( #'column<1s>Pull<2p>' expandMacrosWith: columnSize with: index )
+						to: ( 'col-<1s>-pull-<2p>' expandMacrosWith: abbr with: index );
+					bind: ( #'column<1s>Push<2p>' expandMacrosWith: columnSize with: index )
+						to: ( 'col-<1s>-push-<2p>' expandMacrosWith: abbr with: index )
+				]
+		].
+	( Classification >> #bootstrap4 )
+		bind: #row to: 'row';
+		bind: #column to: 'col';
+		bind: #columnExtraSmall to: 'col';
+		bind: #columnSmall to: 'col-sm';
+		bind: #columnMedium to: 'col-md';
+		bind: #columnLarge to: 'col-lg';
+		bind: #columnExtraLarge to: 'col-xl'.
+	1 to: 12 do: [ :index | 
+		( Classification >> #bootstrap4 )
+			bind: ( #'column<1p>' expandMacrosWith: index ) to: ( 'col-<1p>' expandMacrosWith: index );
+			bind: ( #'columnExtraSmall<1p>' expandMacrosWith: index )
+				to: ( 'col-<1p>' expandMacrosWith: index ).
+		#('Small' 'Medium' 'Large' 'ExtraLarge')
+			with: #('sm' 'md' 'lg' 'xl')
+			do: [ :columnSize :abbr | 
+				( Classification >> #bootstrap3 )
+					bind: ( #'column<1s><2p>' expandMacrosWith: columnSize with: index )
+						to: ( 'col-<1s>-<2p>' expandMacrosWith: abbr with: index );
+					bind: ( #'column<1s>Offset<2p>' expandMacrosWith: columnSize with: index )
+						to: ( 'col-<1s>-offset-<2p>' expandMacrosWith: abbr with: index )
+				]
+		]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializeHelperClassesClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #screenReaderOnly to: 'sr-only';
 		bind: #hidden to: 'hidden';
 		bind: #textDanger to: 'text-danger';
@@ -359,7 +456,6 @@ WillowBootstrap class >> initializeHelperClassesClasses [
 		bind: #textInfo to: 'text-info';
 		bind: #backgroundPrimary to: 'bg-primary';
 		bind: #textSuccess to: 'text-success';
-		bind: #textMuted to: 'text-muted';
 		bind: #close to: 'close';
 		bind: #caret to: 'caret';
 		bind: #centerBlock to: 'center-block';
@@ -370,19 +466,23 @@ WillowBootstrap class >> initializeHelperClassesClasses [
 WillowBootstrap class >> initializeImagesClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
-		bind: #imageResponsive to: 'img-responsive';
-		bind: #glyphicon to: 'glyphicon';
-		bind: #imageCircle to: 'img-circle';
-		bind: #imageThumbnail to: 'img-thumbnail';
-		bind: #imageRounded to: 'img-rounded'
+	self
+		forBootstrap3And4Do: [ :namespace | namespace bind: #imageThumbnail to: 'img-thumbnail' ];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #imageResponsive to: 'img-responsive';
+				bind: #glyphicon to: 'glyphicon';
+				bind: #imageCircle to: 'img-circle';
+				bind: #imageRounded to: 'img-rounded'
+			];
+		forBootstrap4Do: [ :namespace | namespace bind: #imageFluid to: 'img-fluid' ]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializeInputGroupsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #inputGroupAddon to: 'input-group-addon';
 		bind: #inputGroupSmall to: 'input-group-sm';
 		bind: #inputGroupLarge to: 'input-group-lg';
@@ -394,22 +494,37 @@ WillowBootstrap class >> initializeInputGroupsClasses [
 WillowBootstrap class >> initializeLabelsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
-		bind: #labelDefault to: 'label-default';
-		bind: #labelDanger to: 'label-danger';
-		bind: #labelSuccess to: 'label-success';
-		bind: #labelWarning to: 'label-warning';
-		bind: #label to: 'label';
-		bind: #badge to: 'badge';
-		bind: #labelPrimary to: 'label-primary';
-		bind: #labelInfo to: 'label-info'
+	self
+		forBootstrap3And4Do: [ :namespace | namespace bind: #badge to: 'badge' ];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #label to: 'label';
+				bind: #labelDanger to: 'label-danger';
+				bind: #labelDefault to: 'label-default';
+				bind: #labelInfo to: 'label-info';
+				bind: #labelPrimary to: 'label-primary';
+				bind: #labelSuccess to: 'label-success';
+				bind: #labelWarning to: 'label-warning'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #badgeDanger to: 'badge-danger';
+				bind: #badgeDark to: 'badge-dark';
+				bind: #badgeInfo to: 'badge-info';
+				bind: #badgeLight to: 'badge-light';
+				bind: #badgePill to: 'badge-pill';
+				bind: #badgePrimary to: 'badge-primary';
+				bind: #badgeSecondary to: 'badge-secondary';
+				bind: #badgeSuccess to: 'badge-success';
+				bind: #badgeWarning to: 'badge-warning'
+			]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializeListGroupsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #listGroupItemWarning to: 'list-group-item-warning';
 		bind: #listGroupItemHeading to: 'list-group-item-heading';
 		bind: #listGroupItemSuccess to: 'list-group-item-success';
@@ -424,7 +539,7 @@ WillowBootstrap class >> initializeListGroupsClasses [
 WillowBootstrap class >> initializeMediaObjectClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #mediaObject to: 'media-object';
 		bind: #mediaList to: 'media-list';
 		bind: #mediaMiddle to: 'media-middle';
@@ -439,7 +554,7 @@ WillowBootstrap class >> initializeMediaObjectClasses [
 WillowBootstrap class >> initializeModalClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #modalHeader to: 'modal-header';
 		bind: #modalSmall to: 'modal-sm';
 		bind: #modalLarge to: 'modal-lg';
@@ -457,7 +572,13 @@ WillowBootstrap class >> initializeModalClasses [
 WillowBootstrap class >> initializeNavigationClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #breadcrumb to: 'breadcrumb';
+				bind: #breadcrumbItem to: 'breadcrumb-item'
+			].
+	( Classification >> #bootstrap3 )
 		bind: #navbarFixedTop to: 'navbar-fixed-top';
 		bind: #navbarForm to: 'navbar-form';
 		bind: #navPills to: 'nav-pills';
@@ -477,7 +598,6 @@ WillowBootstrap class >> initializeNavigationClasses [
 		bind: #navbarLeft to: 'navbar-left';
 		bind: #navbarCollapse to: 'navbar-collapse';
 		bind: #navStacked to: 'nav-stacked';
-		bind: #breadcrumb to: 'breadcrumb';
 		bind: #navTabs to: 'nav-tabs';
 		bind: #navbarRight to: 'navbar-right';
 		bind: #navbarFixedBottom to: 'navbar-fixed-bottom';
@@ -490,7 +610,7 @@ WillowBootstrap class >> initializeNavigationClasses [
 WillowBootstrap class >> initializePaginationClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #next to: 'next';
 		bind: #pager to: 'pager';
 		bind: #paginationLarge to: 'pagination-lg';
@@ -503,7 +623,7 @@ WillowBootstrap class >> initializePaginationClasses [
 WillowBootstrap class >> initializePanelsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #panelFooter to: 'panel-footer';
 		bind: #panel to: 'panel';
 		bind: #panelCollapse to: 'panel-collapse';
@@ -523,7 +643,7 @@ WillowBootstrap class >> initializePanelsClasses [
 WillowBootstrap class >> initializePopoverClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #arrow to: 'arrow';
 		bind: #popover to: 'popover';
 		bind: #popoverContent to: 'popover-content';
@@ -534,7 +654,7 @@ WillowBootstrap class >> initializePopoverClasses [
 WillowBootstrap class >> initializeProgressBarsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #progressBarWarning to: 'progress-bar-warning';
 		bind: #progressBar to: 'progress-bar';
 		bind: #progressBarDanger to: 'progress-bar-danger';
@@ -548,7 +668,7 @@ WillowBootstrap class >> initializeProgressBarsClasses [
 WillowBootstrap class >> initializeResponsiveUtilitiesClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #hiddenExtraSmall to: 'hidden-xs';
 		bind: #visibleExtraSmallInline to: 'visible-xs-inline';
 		bind: #visibleMediumInlineBlock to: 'visible-md-inline-block';
@@ -575,7 +695,7 @@ WillowBootstrap class >> initializeResponsiveUtilitiesClasses [
 WillowBootstrap class >> initializeSelectConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #contains to: 'contains';
 		bind: #auto to: 'auto';
 		bind: #style to: 'style';
@@ -589,7 +709,7 @@ WillowBootstrap class >> initializeSelectConstants [
 WillowBootstrap class >> initializeSelectConstantsAndClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #selectpicker to: 'selectpicker';
 		bind: #bootstrapSelect to: 'bootstrap-select'.
 	self
@@ -602,7 +722,7 @@ WillowBootstrap class >> initializeSelectConstantsAndClasses [
 WillowBootstrap class >> initializeSelectDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #header to: 'header';
 		bind: #liveSearch to: 'live-search';
 		bind: #deselectAllText to: 'deselect-all-text';
@@ -636,7 +756,7 @@ WillowBootstrap class >> initializeSelectDataAPIConstants [
 WillowBootstrap class >> initializeSelectEventsConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	(Constants >> #bootstrap3)
 		bind: #hiddenSelect to: 'hidden.bs.select';
 		bind: #changedSelect to: 'changed.bs.select';
 		bind: #refreshedSelect to: 'refreshed.bs.select';
@@ -651,24 +771,43 @@ WillowBootstrap class >> initializeSelectEventsConstants [
 WillowBootstrap class >> initializeTablesClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
-		bind: #table to: 'table';
-		bind: #tableWarning to: 'warning';
-		bind: #tableBordered to: 'table-bordered';
-		bind: #tableDanger to: 'danger';
-		bind: #tableCondensed to: 'table-condensed';
-		bind: #tableInfo to: 'info';
-		bind: #tableSuccess to: 'success';
-		bind: #tableHover to: 'table-hover';
-		bind: #tableResponsive to: 'table-responsive';
-		bind: #tableStriped to: 'table-striped'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #table to: 'table';
+				bind: #tableBordered to: 'table-bordered';
+				bind: #tableDanger to: 'danger';
+				bind: #tableHover to: 'table-hover';
+				bind: #tableInfo to: 'info';
+				bind: #tableResponsive to: 'table-responsive';
+				bind: #tableStriped to: 'table-striped';
+				bind: #tableSuccess to: 'success';
+				bind: #tableWarning to: 'warning'
+			];
+		forBootstrap3Do: [ :namespace | namespace bind: #tableCondensed to: 'table-condensed' ];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #tableActive to: 'table-active';
+				bind: #tableBorderless to: 'table-borderless';
+				bind: #tableDark to: 'table-dark';
+				bind: #tableHeadDark to: 'thead-dark';
+				bind: #tableHeadLight to: 'thead-light';
+				bind: #tableLight to: 'table-light';
+				bind: #tablePrimary to: 'table-primary';
+				bind: #tableResponsiveExtraLarge to: 'table-responsive-xl';
+				bind: #tableResponsiveLarge to: 'table-responsive-lg';
+				bind: #tableResponsiveMedium to: 'table-responsive-md';
+				bind: #tableResponsiveSmall to: 'table-responsive-sm';
+				bind: #tableSecondary to: 'table-secondary';
+				bind: #tableSmall to: 'table-sm'
+			]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializeTooltipsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #tooltipArrow to: 'tooltip-arrow';
 		bind: #tooltipInner to: 'tooltip-inner';
 		bind: #tooltip to: 'tooltip'
@@ -678,29 +817,50 @@ WillowBootstrap class >> initializeTooltipsClasses [
 WillowBootstrap class >> initializeTypographyClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
-		bind: #textUppercase to: 'text-uppercase';
-		bind: #small to: 'small';
-		bind: #blockquoteReverse to: 'blockquote-reverse';
-		bind: #textJustify to: 'text-justify';
-		bind: #listInline to: 'list-inline';
-		bind: #textCapitalize to: 'text-capitalize';
-		bind: #textLowercase to: 'text-lowercase';
-		bind: #textRight to: 'text-right';
-		bind: #definitionListHorizontal to: 'dl-horizontal';
-		bind: #lead to: 'lead';
-		bind: #textNowrap to: 'text-nowrap';
-		bind: #listUnstyled to: 'list-unstyled';
-		bind: #textCenter to: 'text-center';
-		bind: #initialism to: 'initialism';
-		bind: #textLeft to: 'text-left'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #initialism to: 'initialism';
+				bind: #lead to: 'lead';
+				bind: #listInline to: 'list-inline';
+				bind: #listUnstyled to: 'list-unstyled';
+				bind: #textCenter to: 'text-center';
+				bind: #textLeft to: 'text-left';
+				bind: #textMuted to: 'text-muted';
+				bind: #textRight to: 'text-right'
+			].
+	self
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #textUppercase to: 'text-uppercase';
+				bind: #small to: 'small';
+				bind: #blockquoteReverse to: 'blockquote-reverse';
+				bind: #textJustify to: 'text-justify';
+				bind: #textCapitalize to: 'text-capitalize';
+				bind: #textLowercase to: 'text-lowercase';
+				bind: #definitionListHorizontal to: 'dl-horizontal';
+				bind: #textNowrap to: 'text-nowrap'
+			].
+	self
+		forBootstrap4Do: [ :namespace | 
+			1 to: 4 do: [ :index | 
+				namespace
+					bind: ( #'display<1p>' expandMacrosWith: index )
+					to: ( #'display-<1p>' expandMacrosWith: index )
+				].
+			namespace
+				bind: #blockquote to: 'blockquote';
+				bind: #blockquoteFooter to: 'blockquote-footer';
+				bind: #listInlineItem to: '#list-inline-item';
+				bind: #textTruncate to: 'text-truncate'
+			]
 ]
 
 { #category : #'private - initialization' }
 WillowBootstrap class >> initializeWellsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap)
+	(Classification >> #bootstrap3)
 		bind: #wellLarge to: 'well-lg';
 		bind: #well to: 'well';
 		bind: #wellSmall to: 'well-sm'
@@ -710,5 +870,5 @@ WillowBootstrap class >> initializeWellsClasses [
 WillowBootstrap class >> initializeWillowFunctionsConstants [
 
 	<ignoreForCoverage>
-	Constants >> #bootstrap bind: #cleanModalFunctionName to: 'cleanModal'
+	Constants >> #bootstrap3 bind: #cleanModalFunctionName to: 'cleanModal'
 ]

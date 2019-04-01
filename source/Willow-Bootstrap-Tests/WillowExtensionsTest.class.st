@@ -41,7 +41,7 @@ WillowExtensionsTest >> testBootstrapClassification [
 { #category : #tests }
 WillowExtensionsTest >> testBootstrapClassificationCommandBuilder [
 
-	(Classification >> #bootstrap) names
+	(Classification >> #bootstrap3) names
 		select: [ :selector | (selector beginsWith: #column) not ]
 		thenDo: [ :selector | 
 			self
@@ -51,7 +51,7 @@ WillowExtensionsTest >> testBootstrapClassificationCommandBuilder [
 						streamContents: [ :stream | 
 							stream
 								nextPutAll: '<div class="';
-								nextPutAll: Classification >> #bootstrap >> selector;
+								nextPutAll: Classification >> #bootstrap3 >> selector;
 								nextPutAll: '"></div>' ]) ].
 
 	1 to: 12 do: [ :index | #('ExtraSmall' 'Small' 'Medium' 'Large') do: [ :columnSize | self assertColumnRenderingOf: columnSize at: index ] ]
