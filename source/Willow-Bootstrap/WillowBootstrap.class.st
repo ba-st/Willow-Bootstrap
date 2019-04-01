@@ -412,27 +412,70 @@ WillowBootstrap class >> initializeFigureClasses [
 WillowBootstrap class >> initializeFormsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #hasError to: 'has-error';
-		bind: #formHorizontal to: 'form-horizontal';
-		bind: #hasWarning to: 'has-warning';
-		bind: #controlLabel to: 'control-label';
-		bind: #inputLarge to: 'input-lg';
-		bind: #formControl to: 'form-control';
-		bind: #inputSmall to: 'input-sm';
-		bind: #formControlStatic to: 'form-control-static';
-		bind: #hasFeedback to: 'has-feedback';
-		bind: #checkboxInline to: 'checkbox-inline';
-		bind: #disabled to: 'disabled';
-		bind: #helpBlock to: 'help-block';
-		bind: #radio to: 'radio';
-		bind: #radioInline to: 'radio-inline';
-		bind: #checkbox to: 'checkbox';
-		bind: #formGroupLarge to: 'form-group-lg';
-		bind: #formGroupSmall to: 'form-group-sm';
-		bind: #formInline to: 'form-inline';
-		bind: #hasSuccess to: 'has-success';
-		bind: #formGroup to: 'form-group'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #disabled to: 'disabled';
+				bind: #formControl to: 'form-control';
+				bind: #formGroup to: 'form-group';
+				bind: #formInline to: 'form-inline'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #checkbox to: 'checkbox';
+				bind: #checkboxInline to: 'checkbox-inline';
+				bind: #controlLabel to: 'control-label';
+				bind: #formControlStatic to: 'form-control-static';
+				bind: #formGroupLarge to: 'form-group-lg';
+				bind: #formGroupSmall to: 'form-group-sm';
+				bind: #formHorizontal to: 'form-horizontal';
+				bind: #hasFeedback to: 'has-feedback';
+				bind: #hasError to: 'has-error';
+				bind: #hasSuccess to: 'has-success';
+				bind: #hasWarning to: 'has-warning';
+				bind: #helpBlock to: 'help-block';
+				bind: #inputLarge to: 'input-lg';
+				bind: #inputSmall to: 'input-sm';
+				bind: #radio to: 'radio';
+				bind: #radioInline to: 'radio-inline'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #columnFormLabel to: 'col-form-label';
+				bind: #columnFormLabelLarge to: 'col-form-label-lg';
+				bind: #columnFormLabelSmall to: 'col-form-label-sm';
+				bind: #customCheckbox to: 'custom-checkbox';
+				bind: #customControl to: 'custom-control';
+				bind: #customControlInline to: 'custom-control-inline';
+				bind: #customControlLabel to: 'custom-control-label';
+				bind: #customFile to: 'custom-file';
+				bind: #customFileInput to: 'custom-file-input';
+				bind: #customFileLabel to: 'custom-file-label';
+				bind: #customRadio to: 'custom-radio';
+				bind: #customRange to: 'custom-range';
+				bind: #customSelect to: 'custom-select';
+				bind: #customSelectLarge to: 'custom-select-lg';
+				bind: #customSelectSmall to: 'custom-select-sm';
+				bind: #customSwitch to: 'custom-switch';
+				bind: #formCheck to: 'form-check';
+				bind: #formCheckInline to: 'form-check-inline';
+				bind: #formCheckInput to: 'form-check-input';
+				bind: #formCheckLabel to: 'form-check-label';
+				bind: #formControlFile to: 'form-control-file';
+				bind: #formControlLarge to: 'form-control-lg';
+				bind: #formControlPlainText to: 'form-control-plaintext';
+				bind: #formControlRange to: 'form-control-range';
+				bind: #formControlSmall to: 'form-control-sm';
+				bind: #formRow to: 'form-row';
+				bind: #formText to: 'form-text';
+				bind: #invalidFeedback to: 'invalid-feedback';
+				bind: #invalidTooltip to: 'invalid-tooltip';
+				bind: #isInvalid to: 'is-invalid ';
+				bind: #isValid to: 'is-valid ';
+				bind: #positionStatic to: 'position-static';
+				bind: #validFeedback to: 'valid-feedback';
+				bind: #validTooltip to: 'valid-tooltip'
+			]
 ]
 
 { #category : #'private - initialization' }
