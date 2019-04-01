@@ -218,11 +218,16 @@ WillowBootstrap class >> initializeCollapseClasses [
 WillowBootstrap class >> initializeContainersClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #containerFluid to: 'container-fluid';
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #container to: 'container';
+				bind: #containerFluid to: 'container-fluid';
+				bind: #jumbotron to: 'jumbotron'
+			];
+		forBootstrap4Do: [ :namespace | namespace bind: #jumbotronFluid to: 'jumbotron-fluid ' ].
+	( Classification >> #bootstrap3 )
 		bind: #pageHeader to: 'page-header';
-		bind: #container to: 'container';
-		bind: #jumbotron to: 'jumbotron';
 		bind: #thumbnail to: 'thumbnail'
 ]
 
@@ -627,15 +632,35 @@ WillowBootstrap class >> initializeLabelsClasses [
 WillowBootstrap class >> initializeListGroupsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #listGroupItemWarning to: 'list-group-item-warning';
-		bind: #listGroupItemHeading to: 'list-group-item-heading';
-		bind: #listGroupItemSuccess to: 'list-group-item-success';
-		bind: #listGroup to: 'list-group';
-		bind: #listGroupItemDanger to: 'list-group-item-danger';
-		bind: #listGroupItemInfo to: 'list-group-item-info';
-		bind: #listGroupItemText to: 'list-group-item-text';
-		bind: #listGroupItem to: 'list-group-item'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #listGroup to: 'list-group';
+				bind: #listGroupItem to: 'list-group-item';
+				bind: #listGroupItemDanger to: 'list-group-item-danger';
+				bind: #listGroupItemInfo to: 'list-group-item-info';
+				bind: #listGroupItemSuccess to: 'list-group-item-success';
+				bind: #listGroupItemWarning to: 'list-group-item-warning'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #listGroupItemHeading to: 'list-group-item-heading';
+				bind: #listGroupItemText to: 'list-group-item-text'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #listGroupItemAction to: 'list-group-item-action';
+				bind: #listGroupFlush to: 'list-group-flush';
+				bind: #listGroupHorizontal to: 'list-group-horizontal';
+				bind: #listGroupHorizontalLarge to: 'list-group-horizontal-lg';
+				bind: #listGroupHorizontalMedium to: 'list-group-horizontal-md';
+				bind: #listGroupHorizontalSmall to: 'list-group-horizontal-sm';
+				bind: #listGroupHorizontalExtraSmall to: 'list-group-horizontal-xl';
+				bind: #listGroupItemDark to: 'list-group-item-dark';
+				bind: #listGroupItemLight to: 'list-group-item-light';
+				bind: #listGroupItemPrimary to: 'list-group-item-primary';
+				bind: #listGroupItemSecondary to: 'list-group-item-secondary'
+			]
 ]
 
 { #category : #'private - initialization' }
