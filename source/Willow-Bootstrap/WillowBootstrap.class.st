@@ -83,6 +83,8 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 
 	<ignoreForCoverage>
 	self
+		initializeBorderUtitiliesClasses;
+		initializeDisplayUtilitiesClasses;
 		initializeImagesClasses;
 		initializeInputGroupsClasses;
 		initializeTypographyClasses;
@@ -110,11 +112,57 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeCodeClasses;
 		initializeTablesClasses;
 		initializeNavigationClasses;
+		initializeSpinnerClasses;
+		initializeToastClasses;
 		initializeButtonsClasses.
 	self
 		initializeDataAPIConstants;
 		initializeEventsConstants;
 		initializeWillowFunctionsConstants
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeBorderUtitiliesClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				"Additive"
+				bind: #border to: 'border';
+				bind: #borderBottom to: 'border-bottom';
+				bind: #borderLeft to: 'border-left';
+				bind: #borderRight to: 'border-right';
+				bind: #borderTop to: 'border-top';
+				"Subtractive"
+				bind: #border0 to: 'border-0';
+				bind: #borderBottom0 to: 'border-bottom-0';
+				bind: #borderLeft0 to: 'border-left-0';
+				bind: #borderRight0 to: 'border-right-0';
+				bind: #borderTop0 to: 'border-top-0';
+				"Colors"
+				bind: #borderPrimary to: 'border-primary';
+				bind: #borderSecondary to: 'border-secondary';
+				bind: #borderSuccess to: 'border-success';
+				bind: #borderDanger to: 'border-danger';
+				bind: #borderWarning to: 'border-warning';
+				bind: #borderInfo to: 'border-info';
+				bind: #borderLight to: 'border-light';
+				bind: #borderDark to: 'border-dark';
+				bind: #borderWhite to: 'border-white';
+				"Border-radius"
+				bind: #rounded to: 'rounded';
+				bind: #roundedTop to: 'rounded-top';
+				bind: #roundedRight to: 'rounded-right';
+				bind: #roundedBottom to: 'rounded-bottom';
+				bind: #roundedLeft to: 'rounded-left';
+				bind: #roundedCircle to: 'rounded-circle';
+				bind: #roundedPill to: 'rounded-pill';
+				bind: #rounded0 to: 'rounded-0';
+				"Size"
+				bind: #roundedLarge to: 'rounded-lg';
+				bind: #roundedSmall to: 'rounded-sm'
+			]
 ]
 
 { #category : #'private - initialization' }
@@ -340,6 +388,31 @@ WillowBootstrap class >> initializeDatepickerWeekStartConstants [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeDisplayUtilitiesClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			#(None Inline #InlineBlock Block Table #TableCell #TableRow Flex #InlineFlex)
+				with: #(none inline #'inline-block' block table #'table-cell' #'table-row' flex #'inline-flex')
+				do: [ :displayMethod :cssClass | 
+					namespace
+						bind: ( #'display<1s>' expandMacrosWith: displayMethod )
+							to: ( 'd-<1s>' expandMacrosWith: cssClass );
+						bind: ( #'displayPrint<1s>' expandMacrosWith: displayMethod )
+							to: ( 'd-print-<1s>' expandMacrosWith: cssClass ).
+					#(Small Medium Large ExtraLarge)
+						with: #('sm' 'md' 'lg' 'xl')
+						do: [ :columnSize :abbr | 
+							namespace
+								bind: ( #'display<1s><2s>' expandMacrosWith: columnSize with: displayMethod )
+								to: ( 'd-<1s>-<2s>' expandMacrosWith: abbr with: cssClass )
+							]
+					]
+			]
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeDropdownsClasses [
 
 	<ignoreForCoverage>
@@ -532,29 +605,60 @@ WillowBootstrap class >> initializeGridSystemClasses [
 WillowBootstrap class >> initializeHelperClassesClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #clearfix to: 'clearfix';
+				bind: #close to: 'close';
+				"Colors"
+					bind: #textPrimary to: 'text-primary';
+				bind: #textSuccess to: 'text-success';
+				bind: #textDanger to: 'text-danger';
+				bind: #textWarning to: 'text-warning';
+				bind: #textInfo to: 'text-info';
+				"Background Colors"
+					bind: #backgroundPrimary to: 'bg-primary';
+				bind: #backgroundWarning to: 'bg-warning';
+				bind: #backgroundInfo to: 'bg-info';
+				bind: #backgroundDanger to: 'bg-danger';
+				bind: #backgroundSuccess to: 'bg-success'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #textSecondary to: 'text-secondary';
+				bind: #textLight to: 'text-light';
+				bind: #textDark to: 'text-dark';
+				bind: #textBody to: 'text-body';
+				bind: #textMuted to: 'text-muted';
+				bind: #textWhite to: 'text-white';
+				bind: #textBlack50 to: 'text-black-50';
+				bind: #textWhite50 to: 'text-white-50';
+				bind: #backgroundSecondary to: 'bg-secondary';
+				bind: #backgroundLight to: 'bg-light';
+				bind: #backgroundDark to: 'bg-dark';
+				bind: #backgroundWhite to: 'bg-white';
+				bind: #backgroundTransparent to: 'bg-transparent';
+				"Background gradient"
+					bind: #backgroundGradientPrimary to: 'bg-gradient-rimary';
+				bind: #backgroundGradientWarning to: 'bg-gradient-warning';
+				bind: #backgroundGradientInfo to: 'bg-gradient-info';
+				bind: #backgroundGradientDanger to: 'bg-gradient-danger';
+				bind: #backgroundGradientSuccess to: 'bg-gradient-success';
+				bind: #backgroundGradientSecondary to: 'bg-gradient-secondary';
+				bind: #backgroundGradientLight to: 'bg-gradient-light';
+				bind: #backgroundGradientDark to: 'bg-gradient-dark'
+			].
+	( Classification >> #bootstrap3 )
 		bind: #screenReaderOnly to: 'sr-only';
 		bind: #hidden to: 'hidden';
-		bind: #textDanger to: 'text-danger';
-		bind: #textPrimary to: 'text-primary';
-		bind: #backgroundWarning to: 'bg-warning';
-		bind: #backgroundInfo to: 'bg-info';
-		bind: #backgroundDanger to: 'bg-danger';
 		bind: #invisible to: 'invisible';
 		bind: #screenReaderOnlyFocusable to: 'sr-only-focusable';
-		bind: #textWarning to: 'text-warning';
 		bind: #show to: 'show';
 		bind: #pullRight to: 'pull-right';
-		bind: #clearfix to: 'clearfix';
 		bind: #textHide to: 'text-hide';
 		bind: #pullLeft to: 'pull-left';
-		bind: #textInfo to: 'text-info';
-		bind: #backgroundPrimary to: 'bg-primary';
-		bind: #textSuccess to: 'text-success';
-		bind: #close to: 'close';
 		bind: #caret to: 'caret';
-		bind: #centerBlock to: 'center-block';
-		bind: #backgroundSuccess to: 'bg-success'
+		bind: #centerBlock to: 'center-block'
 ]
 
 { #category : #'private - initialization' }
@@ -826,14 +930,21 @@ WillowBootstrap class >> initializePopoverClasses [
 WillowBootstrap class >> initializeProgressBarsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #progressBarWarning to: 'progress-bar-warning';
-		bind: #progressBar to: 'progress-bar';
-		bind: #progressBarDanger to: 'progress-bar-danger';
-		bind: #progressBarSuccess to: 'progress-bar-success';
-		bind: #progressBarStriped to: 'progress-bar-striped';
-		bind: #progress to: 'progress';
-		bind: #progressBarInfo to: 'progress-bar-info'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #progress to: 'progress';
+				bind: #progressBar to: 'progress-bar';
+				bind: #progressBarStriped to: 'progress-bar-striped'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #progressBarWarning to: 'progress-bar-warning';
+				bind: #progressBarDanger to: 'progress-bar-danger';
+				bind: #progressBarInfo to: 'progress-bar-info';
+				bind: #progressBarSuccess to: 'progress-bar-success'
+			];
+		forBootstrap4Do: [ :namespace | namespace bind: #progressBarAnimated to: 'progress-bar-animated' ]
 ]
 
 { #category : #'private - initialization' }
@@ -940,6 +1051,20 @@ WillowBootstrap class >> initializeSelectEventsConstants [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeSpinnerClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #spinnerBorder to: 'spinner-border';
+				bind: #spinnerBorderSmall to: 'spinner-border-sm';
+				bind: #spinnerGrow to: 'spinner-grow';
+				bind: #spinnerGrowSmall to: 'spinner-grow-sm'
+			]
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeTablesClasses [
 
 	<ignoreForCoverage>
@@ -976,13 +1101,30 @@ WillowBootstrap class >> initializeTablesClasses [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeToastClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #toast to: 'toast';
+				bind: #toastBody to: 'toast-body';
+				bind: #toastHeader to: 'toast-header'
+			]
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeTooltipsClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #tooltipArrow to: 'tooltip-arrow';
-		bind: #tooltipInner to: 'tooltip-inner';
-		bind: #tooltip to: 'tooltip'
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #tooltip to: 'tooltip';
+				bind: #tooltipInner to: 'tooltip-inner'
+			];
+		forBootstrap3Do: [ :namespace | namespace bind: #tooltipArrow to: 'tooltip-arrow' ];
+		forBootstrap4Do: [ :namespace | namespace bind: #arrow to: 'arrow' ]
 ]
 
 { #category : #'private - initialization' }
