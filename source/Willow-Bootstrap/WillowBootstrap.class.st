@@ -85,6 +85,8 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 	self
 		initializeBorderUtitiliesClasses;
 		initializeDisplayUtilitiesClasses;
+		initializeEmbedClasses;
+		initializeFlexClasses;
 		initializeImagesClasses;
 		initializeInputGroupsClasses;
 		initializeTypographyClasses;
@@ -401,9 +403,8 @@ WillowBootstrap class >> initializeDisplayUtilitiesClasses [
 							to: ( 'd-<1s>' expandMacrosWith: cssClass );
 						bind: ( #'displayPrint<1s>' expandMacrosWith: displayMethod )
 							to: ( 'd-print-<1s>' expandMacrosWith: cssClass ).
-					#(Small Medium Large ExtraLarge)
-						with: #('sm' 'md' 'lg' 'xl')
-						do: [ :columnSize :abbr | 
+					self
+						withBootstrap4BreakpointsDo: [ :columnSize :abbr | 
 							namespace
 								bind: ( #'display<1s><2s>' expandMacrosWith: columnSize with: displayMethod )
 								to: ( 'd-<1s>-<2s>' expandMacrosWith: abbr with: cssClass )
@@ -441,6 +442,22 @@ WillowBootstrap class >> initializeDropdownsClasses [
 				bind: #dropdownToggleSplit to: 'dropdown-toggle-split';
 				bind: #dropleft to: 'dropleft';
 				bind: #dropright to: 'dropright'
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeEmbedClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #embedResponsive to: 'embed-responsive';
+				bind: #embedResponsiveItem to: 'embed-responsive-item';
+				bind: #embedReponsive1by1 to: 'embed-responsive-1by1';
+				bind: #embedReponsive4by3 to: 'embed-responsive-4by3';
+				bind: #embedReponsive16by9 to: 'embed-responsive-16by9';
+				bind: #embedReponsive21by9 to: 'embed-responsive-21by9'
 			]
 ]
 
@@ -483,6 +500,53 @@ WillowBootstrap class >> initializeFigureClasses [
 				bind: #figure to: 'figure';
 				bind: #figureImage to: 'figure-img';
 				bind: #figureCaption do: 'figure-caption'
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #flexColumn to: 'flex-column';
+				bind: #flexColumnReverse to: 'flex-column-reverse';
+				bind: #flexRow to: 'flex-row';
+				bind: #flexRowReverse to: 'flex-row-reverse'.
+			self
+				withBootstrap4BreakpointsDo: [ :columnSize :abbr | 
+					namespace
+						bind: ( #'flex<1s>Column' expandMacrosWith: columnSize )
+							to: ( 'flex-<1s>-column' expandMacrosWith: abbr );
+						bind: ( #'flex<1s>ColumnReverse' expandMacrosWith: columnSize )
+							to: ( 'flex-<1s>-column-reverse' expandMacrosWith: abbr );
+						bind: ( #'flex<1s>Row' expandMacrosWith: columnSize )
+							to: ( 'flex-<1s>-row' expandMacrosWith: abbr );
+						bind: ( #'flex<1s>RowReverse' expandMacrosWith: columnSize )
+							to: ( 'flex-<1s>-row-reverse' expandMacrosWith: abbr )
+					].
+
+			namespace
+				bind: #justifyContentStart to: 'justify-content-start';
+				bind: #justifyContentEnd to: 'justify-content-end';
+				bind: #justifyContentCenter to: 'justify-content-center';
+				bind: #justifyContentBetween to: 'justify-content-between';
+				bind: #justifyContentAround to: 'justify-content-around'.
+			self
+				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
+					namespace
+						bind: ( #'justifyContent<1s>Start' expandMacrosWith: columnSize )
+							to: ( 'justify-content-<1s>-start' expandMacrosWith: breakpoint );
+						bind: ( #'justifyContent<1s>End' expandMacrosWith: columnSize )
+							to: ( 'justify-content-<1s>-end' expandMacrosWith: breakpoint );
+						bind: ( #'justifyContent<1s>Center' expandMacrosWith: columnSize )
+							to: ( 'justify-content-<1s>-center' expandMacrosWith: breakpoint );
+						bind: ( #'justifyContent<1s>Between' expandMacrosWith: columnSize )
+							to: ( 'justify-content-<1s>-between' expandMacrosWith: breakpoint );
+						bind: ( #'justifyContent<1s>Around' expandMacrosWith: columnSize )
+							to: ( 'justify-content-<1s>-around' expandMacrosWith: breakpoint )
+					]
 			]
 ]
 
@@ -1185,4 +1249,10 @@ WillowBootstrap class >> initializeWillowFunctionsConstants [
 
 	<ignoreForCoverage>
 	Constants >> #bootstrap3 bind: #cleanModalFunctionName to: 'cleanModal'
+]
+
+{ #category : #private }
+WillowBootstrap class >> withBootstrap4BreakpointsDo: aDyadicBlock [
+
+	#(Small Medium Large ExtraLarge) with: #('sm' 'md' 'lg' 'xl') do: aDyadicBlock
 ]
