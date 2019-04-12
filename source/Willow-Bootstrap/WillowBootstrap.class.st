@@ -36,7 +36,7 @@ WillowBootstrap class >> initialize [
 	<ignoreForCoverage>
 	Classification bind: #bootstrap3 to: Namespace new.
 	Classification bind: #bootstrap4 to: Namespace new.
-	Constants bind: #boostrap3 to: Namespace new.
+	Constants bind: #bootstrap3 to: Namespace new.
 	Constants bind: #bootstrap4 to: Namespace new.
 	self
 		initializeBaseConstantsAndClasses;
@@ -106,7 +106,6 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeFlexAlignSelfClasses;
 		initializeFlexColumnClasses;
 		initializeFlexJustifyContentClasses;
-		initializeFlexMarginClasses;
 		initializeFlexOrderClasses;
 		initializeFlexWrapClasses;
 		initializeFloatClasses;
@@ -588,7 +587,7 @@ WillowBootstrap class >> initializeFigureClasses [
 			namespace
 				bind: #figure to: 'figure';
 				bind: #figureImage to: 'figure-img';
-				bind: #figureCaption do: 'figure-caption'
+				bind: #figureCaption to: 'figure-caption'
 			]
 ]
 
@@ -735,20 +734,6 @@ WillowBootstrap class >> initializeFlexJustifyContentClasses [
 ]
 
 { #category : #'private - flex' }
-WillowBootstrap class >> initializeFlexMarginClasses [
-
-	<ignoreForCoverage>
-	self
-		forBootstrap4Do: [ :namespace | 
-			namespace
-				bind: #marginRightAuto to: 'mr-auto';
-				bind: #marginLeftAuto to: 'ml-auto';
-				bind: #marginBottomAuto to: 'mb-auto';
-				bind: #marginTopAuto to: 'mt-auto'
-			]
-]
-
-{ #category : #'private - flex' }
 WillowBootstrap class >> initializeFlexOrderClasses [
 
 	<ignoreForCoverage>
@@ -881,7 +866,6 @@ WillowBootstrap class >> initializeFormsClasses [
 				bind: #invalidTooltip to: 'invalid-tooltip';
 				bind: #isInvalid to: 'is-invalid ';
 				bind: #isValid to: 'is-valid ';
-				bind: #positionStatic to: 'position-static';
 				bind: #validFeedback to: 'valid-feedback';
 				bind: #validTooltip to: 'valid-tooltip'
 			]
@@ -930,8 +914,7 @@ WillowBootstrap class >> initializeHelperClassesClasses [
 				bind: #textSecondary to: 'text-secondary';
 				bind: #textLight to: 'text-light';
 				bind: #textDark to: 'text-dark';
-				bind: #textBody to: 'text-body';
-				bind: #textMuted to: 'text-muted';
+				bind: #textBody to: 'text-body'; 
 				bind: #textWhite to: 'text-white';
 				bind: #textBlack50 to: 'text-black-50';
 				bind: #textWhite50 to: 'text-white-50';
