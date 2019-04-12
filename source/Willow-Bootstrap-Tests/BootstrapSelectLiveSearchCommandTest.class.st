@@ -28,7 +28,7 @@ BootstrapSelectLiveSearchCommandTest >> testNonDefaultApplyToOn [
 	html := self
 		apply:
 			[ :select :constants | 
-			(BootstrapSelectLiveSearchCommand normalize: true placeholderText: 'Search...' style: constants >> #bootstrap >> #startsWith) + BootstrapSelectCommand new ]
+			(BootstrapSelectLiveSearchCommand normalize: true placeholderText: 'Search...' style: constants >> #bootstrap3 >> #startsWith) + BootstrapSelectCommand new ]
 				asWebComponentCommand
 		toComponentDefinedBy: [ :canvas | canvas select ].
 

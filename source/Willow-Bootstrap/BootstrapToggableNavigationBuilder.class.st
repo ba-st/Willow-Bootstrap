@@ -125,5 +125,5 @@ BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identi
 	titleLink
 		url: ('#<1s>' expandMacrosWith: identifiedContent identifier);
 		with: aRenderable
-			applying: [ :link :constants | (link setARIARoleTo: #tab) + (link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue) + (link setARIAAttribute: 'control' to: identifiedContent identifier) ] ]
+			applying: [ :link :constants | (link setARIARoleTo: #tab) + (link setData: constants >> #bootstrap3 >> #toggle to: self dataToggleValue) + (link setARIAAttribute: 'control' to: identifiedContent identifier) ] ]
 ]

@@ -15,7 +15,7 @@ Class {
 { #category : #'Instance Creation' }
 BootstrapSelectLiveSearchCommand class >> default [
 
-	^ self normalize: false placeholderOptional: Optional unused style: Constants >> #bootstrap >> #contains
+	^ self normalize: false placeholderOptional: Optional unused style: Constants >> #bootstrap3 >> #contains
 ]
 
 { #category : #'Instance Creation' }

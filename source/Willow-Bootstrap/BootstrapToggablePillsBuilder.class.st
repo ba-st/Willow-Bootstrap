@@ -16,7 +16,7 @@ BootstrapToggablePillsBuilder >> addPillHeadedBy: aRenderable containing: aTabCo
 { #category : #private }
 BootstrapToggablePillsBuilder >> dataToggleValue [
 
-	^ Constants >> #bootstrap >> #pill
+	^ Constants >> #bootstrap3 >> #pill
 ]
 
 { #category : #private }

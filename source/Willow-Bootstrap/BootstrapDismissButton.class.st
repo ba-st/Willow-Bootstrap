@@ -26,7 +26,7 @@ BootstrapDismissButton >> initializeDismissing: aContainerType [
 				applying: [ :span | span setARIAAttribute: 'hidden' to: 'true' ] )
 		applying: [ :button :constants | 
 			button addClass bootstrap3 close
-				+ ( button setData: constants >> #bootstrap >> #dismiss to: aContainerType )
+				+ ( button setData: constants >> #bootstrap3 >> #dismiss to: aContainerType )
 				+ ( button setARIAAttribute: 'label' to: 'Close' )
 			]
 ]

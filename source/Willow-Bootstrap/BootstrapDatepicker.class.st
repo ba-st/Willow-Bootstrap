@@ -381,7 +381,7 @@ Set a maximum limit for the view mode. Accepts: “days” or 0, “months” or
 { #category : #private }
 BootstrapDatepicker >> method [
 
-	^ self constants >> #bootstrap >> #datepicker
+	^ self constants >> #bootstrap3 >> #datepicker
 ]
 
 { #category : #Options }

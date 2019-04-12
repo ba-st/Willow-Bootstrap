@@ -22,8 +22,8 @@ BootstrapHamburgerButton >> buttonCommand [
 
 	^ [ :button :constants | 
 	button addClass bootstrap3 navbarToggle + button addClass bootstrap3 collapsed
-		+ ( button setData: constants >> #bootstrap >> #toggle to: constants >> #css >> #collapse )
-		+ ( button setData: constants >> #bootstrap >> #target to: targetIdentifier )
+		+ ( button setData: constants >> #bootstrap3 >> #toggle to: constants >> #css >> #collapse )
+		+ ( button setData: constants >> #bootstrap3 >> #target to: targetIdentifier )
 		+ ( button setARIAAttribute: 'expanded' to: false greaseString )
 	]
 ]

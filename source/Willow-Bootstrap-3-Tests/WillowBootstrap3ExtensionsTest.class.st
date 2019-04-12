@@ -27,7 +27,7 @@ WillowBootstrap3ExtensionsTest >> assertColumnRenderingOf: columnSize at: index 
 							stream
 								nextPutAll: '<div class="';
 								nextPutAll:
-									Classification >> #bootstrap
+									Classification >> #bootstrap3
 										>> ( #'column<1s><2s><3p>' expandMacrosWith: columnSize with: suffix with: index );
 								nextPutAll: '"></div>'
 							] )

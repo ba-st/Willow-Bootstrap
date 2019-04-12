@@ -28,7 +28,7 @@ BootstrapPlugin >> lookupCssValue: aSymbolOrFunction [
 BootstrapPlugin >> lookupValue: aSymbolOrObject [
 
 	^ aSymbolOrObject isSymbol
-		ifTrue: [ self constants >> #bootstrap >> aSymbolOrObject ]
+		ifTrue: [ self constants >> #bootstrap3 >> aSymbolOrObject ]
 		ifFalse: [ aSymbolOrObject ]
 ]
 
