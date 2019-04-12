@@ -40,7 +40,8 @@ BootstrapDropdownBuilder >> addDivider [
 
 	| dividerCommand |
 
-	dividerCommand := [ :listItem :constants | listItem addClass bootstrap divider + (listItem setARIARoleTo: #separator) ] asWebComponentCommand.
+	dividerCommand := [ :listItem :constants | listItem addClass bootstrap3 divider + ( listItem setARIARoleTo: #separator ) ]
+		asWebComponentCommand.
 
 	menuItems add: [ :canvas | dividerCommand applyTo: canvas listItem on: canvas ]
 ]
@@ -48,13 +49,19 @@ BootstrapDropdownBuilder >> addDivider [
 { #category : #Configuring }
 BootstrapDropdownBuilder >> addHeaderLabeled: aRenderable [
 
-	menuItems add: [ :canvas | canvas listItem with: aRenderable applying: [ :listItem | listItem addClass bootstrap dropdownHeader ] ]
+	menuItems
+		add: [ :canvas | 
+			canvas listItem
+				with: aRenderable
+				applying: [ :listItem | listItem addClass bootstrap3 dropdownHeader ]
+			]
 ]
 
 { #category : #Configuring }
 BootstrapDropdownBuilder >> beRightAligned [
 
-	listClassificationCommand := listClassificationCommand + [ :list | list addClass bootstrap dropdownMenuRight ] asWebComponentCommand
+	listClassificationCommand := listClassificationCommand
+		+ [ :list | list addClass bootstrap3 dropdownMenuRight ] asWebComponentCommand
 ]
 
 { #category : #private }
@@ -68,8 +75,10 @@ BootstrapDropdownBuilder >> content [
 { #category : #private }
 BootstrapDropdownBuilder >> dropdownCommandFor: button using: constants [
 
-	^ button addClass bootstrap dropdownToggle + (button setData: constants >> #bootstrap >> #toggle to: constants >> #bootstrap >> #dropdown) + (button setARIAAttribute: 'haspopup' to: 'true')
-		+ (button setARIAAttribute: 'expanded' to: 'false')
+	^ button addClass bootstrap3 dropdownToggle
+		+ ( button setData: constants >> #bootstrap >> #toggle to: constants >> #bootstrap >> #dropdown )
+		+ ( button setARIAAttribute: 'haspopup' to: 'true' )
+		+ ( button setARIAAttribute: 'expanded' to: 'false' )
 ]
 
 { #category : #initialization }
@@ -78,7 +87,8 @@ BootstrapDropdownBuilder >> initializeUsing: aSupplier [
 	supplier := aSupplier.
 	buttonBinding := Binding undefinedExplainedBy: 'Missing Dropdown Button Configuration'.
 	menuItems := OrderedCollection new.
-	listClassificationCommand := [ :list | list addClass bootstrap dropdownMenu ] asWebComponentCommand
+	listClassificationCommand := [ :list | list addClass bootstrap3 dropdownMenu ]
+		asWebComponentCommand
 ]
 
 { #category : #Configuring }
@@ -91,5 +101,5 @@ BootstrapDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
 BootstrapDropdownBuilder >> renderCaretOn: canvas [
 
 	canvas space.
-	canvas span apply: [ :span | span addClass bootstrap caret ]
+	canvas span apply: [ :span | span addClass bootstrap3 caret ]
 ]

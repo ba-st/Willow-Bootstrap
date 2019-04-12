@@ -54,7 +54,7 @@ BootstrapToggablePillsBuilderTest >> testRenderContentOnWithCommands [
 	tabs := supplier pillsBuilder
 		addPillHeadedBy: 'Home' containing: 'The home page';
 		addPillHeadedBy: 'Profile' containing: [ :canvas | canvas strong: 'This is my profile.' ];
-		buildApplying: [ :pills | pills addClass bootstrap navStacked ].
+		buildApplying: [ :pills | pills addClass bootstrap3 navStacked ].
 
 	html := self render: tabs.
 

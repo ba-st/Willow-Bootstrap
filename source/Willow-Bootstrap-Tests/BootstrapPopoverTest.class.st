@@ -106,8 +106,13 @@ BootstrapPopoverTest >> testHtmlContent [
 	| html |
 
 	html := self
-		renderPopoverContentApplying:
-			[ :popover | popover htmlContent: (GenericContainerWebView wrapping: 'A more complex rendering' applying: [ :container | container addClass bootstrap container ]) ].
+		renderPopoverContentApplying: [ :popover | 
+			popover
+				htmlContent:
+					( GenericContainerWebView
+						wrapping: 'A more complex rendering'
+						applying: [ :container | container addClass bootstrap3 container ] )
+			].
 
 	self
 		assert: html
@@ -121,9 +126,18 @@ BootstrapPopoverTest >> testHtmlTitle [
 	| html |
 
 	html := self
-		renderPopoverContentApplying: [ :popover | popover htmlTitle: (GenericContainerWebView wrapping: 'A complex title' applying: [ :container | container addClass bootstrap container ]) ].
+		renderPopoverContentApplying: [ :popover | 
+			popover
+				htmlTitle:
+					( GenericContainerWebView
+						wrapping: 'A complex title'
+						applying: [ :container | container addClass bootstrap3 container ] )
+			].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"title":"<div class=\"container\">A complex title</div>"});</script>'
+	self
+		assert: html
+		equals:
+			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"title":"<div class=\"container\">A complex title</div>"});</script>'
 ]
 
 { #category : #'tests-Events' }
@@ -227,11 +241,22 @@ BootstrapPopoverTest >> testTemplate [
 			popover
 				template: [ :template | 
 					template div
-						with: [ template div apply: [ :container | container addClass bootstrap arrow ].
-							template render: (HeadingWebView displaying: '' withLevel: 3 applying: [ :container | container addClass bootstrap popoverTitle ]).
-							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap popoverContent ] ]
-						applying: [ :container :constants | container addClass bootstrap popover + (container setARIARoleTo: #tooltip) ] ].
-			div script: popover ].
+						with: [ template div apply: [ :container | container addClass bootstrap3 arrow ].
+							template
+								render:
+									( HeadingWebView
+										displaying: ''
+										withLevel: 3
+										applying: [ :container | container addClass bootstrap3 popoverTitle ] ).
+							template div
+								with: ( BootstrapIconWebView representing: Glyphicons menuUp )
+								applying: [ :container | container addClass bootstrap3 popoverContent ]
+							]
+						applying:
+							[ :container :constants | container addClass bootstrap3 popover + ( container setARIARoleTo: #tooltip ) ]
+					].
+			div script: popover
+			].
 
 	self
 		assert: html

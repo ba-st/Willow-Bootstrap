@@ -13,7 +13,12 @@ Class {
 { #category : #Configuring }
 BootstrapDropdownMenuBuilder >> beNavigationMenuIn: aNavigationBar [
 
-	containerBuildingCommand := [ :containerCommand | ListItemWebView itemizing: self content containedIn: aNavigationBar applying: [ :listItem | containerCommand asWebComponentCommand + listItem addClass bootstrap dropdown ] ]
+	containerBuildingCommand := [ :containerCommand | 
+	ListItemWebView
+		itemizing: self content
+		containedIn: aNavigationBar
+		applying: [ :listItem | containerCommand asWebComponentCommand + listItem addClass bootstrap3 dropdown ]
+	]
 ]
 
 { #category : #building }
@@ -26,7 +31,11 @@ BootstrapDropdownMenuBuilder >> buildApplying: aComponentCommand [
 BootstrapDropdownMenuBuilder >> initializeUsing: aSupplier [
 
 	super initializeUsing: aSupplier.
-	containerBuildingCommand := [ :containerCommand | GenericContainerWebView wrapping: self content applying: [ :div | containerCommand asWebComponentCommand + div addClass bootstrap dropdown ] ]
+	containerBuildingCommand := [ :containerCommand | 
+	GenericContainerWebView
+		wrapping: self content
+		applying: [ :div | containerCommand asWebComponentCommand + div addClass bootstrap3 dropdown ]
+	]
 ]
 
 { #category : #Configuring }

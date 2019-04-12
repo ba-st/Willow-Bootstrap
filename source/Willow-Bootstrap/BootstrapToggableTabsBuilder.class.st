@@ -22,5 +22,5 @@ BootstrapToggableTabsBuilder >> dataToggleValue [
 { #category : #private }
 BootstrapToggableTabsBuilder >> navigationTypeCommand [
 
-	^ [ :list | list addClass bootstrap navTabs ] asWebComponentCommand 
+	^ [ :list | list addClass bootstrap3 navTabs ] asWebComponentCommand
 ]

@@ -62,7 +62,7 @@ BootstrapDropdownMenuBuilderTest >> testRenderContentOnWithButton [
 	| menu html |
 
 	menu := supplier dropdownMenuBuilder
-		labeled: 'Dropdown' applying: [ :button | button addClass bootstrap buttonDefault ];
+		labeled: 'Dropdown' applying: [ :button | button addClass bootstrap3 buttonDefault ];
 		addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
 		addDivider;
 		addActionLabeled: 'Another action' executing: [ :button | button onTrigger disable ];
@@ -104,13 +104,15 @@ BootstrapDropdownMenuBuilderTest >> testRenderNavigationMenuContent [
 	| menu list |
 
 	list := canvas unorderedList.
-	list apply: [ :theList | theList addClass bootstrap nav + theList addClass bootstrap navbarNavigation ].
+	list
+		apply: [ :theList | theList addClass bootstrap3 nav + theList addClass bootstrap3 navbarNavigation ].
 	menu := supplier dropdownMenuBuilder
 		beNavigationMenuIn: list;
 		labeled: 'Dropdown';
 		addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
 		build.
-	list with: [ canvas render: menu ] ].
+	list with: [ canvas render: menu ]
+	].
 
 	html := self render: navigationBar.
 

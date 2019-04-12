@@ -34,5 +34,5 @@ BootstrapHelpTextWebView >> initializeBoundTo: aFieldWebView describedBy: aHelpT
 BootstrapHelpTextWebView >> renderContentOn: aCanvas [
 
 	aCanvas render: fieldWebView.
-	aCanvas span with: helpText applying: [ :span | span addClass bootstrap helpBlock ]
+	aCanvas span with: helpText applying: [ :span | span addClass bootstrap3 helpBlock ]
 ]

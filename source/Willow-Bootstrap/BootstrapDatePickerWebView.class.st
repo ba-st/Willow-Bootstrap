@@ -30,8 +30,14 @@ BootstrapDatePickerWebView >> initializeWrapping: aTextField applying: aComponen
 	container := GenericContainerWebView
 		wrapping: [ :canvas | 
 			canvas render: self textField.
-			canvas div with: [ canvas small: (BootstrapIconWebView representing: Glyphicons triangleBottom) ] applying: [ :div | div addClass bootstrap inputGroupAddon ] ]
-		applying: [ :div | div addClass bootstrap inputGroup + div addClass bootstrap date + BootstrapDatepickerCommand new + aComponentCommand ]
+			canvas div
+				with: [ canvas small: ( BootstrapIconWebView representing: Glyphicons triangleBottom ) ]
+				applying: [ :div | div addClass bootstrap3 inputGroupAddon ]
+			]
+		applying: [ :div | 
+			div addClass bootstrap3 inputGroup + div addClass bootstrap3 date + BootstrapDatepickerCommand new
+				+ aComponentCommand
+			]
 ]
 
 { #category : #initialization }

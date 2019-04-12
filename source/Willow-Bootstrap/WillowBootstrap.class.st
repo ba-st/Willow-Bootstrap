@@ -1106,14 +1106,12 @@ WillowBootstrap class >> initializeNavigationClasses [
 		forBootstrap3And4Do: [ :namespace | 
 			namespace
 				bind: #breadcrumb to: 'breadcrumb';
-				bind: #breadcrumbItem to: 'breadcrumb-item';
 				bind: #nav to: 'nav';
 				bind: #navbar to: 'navbar';
 				bind: #navbarBrand to: 'navbar-brand';
 				bind: #navbarCollapse to: 'navbar-collapse';
 				bind: #navbarNavigation to: 'navbar-nav';
 				bind: #navbarText to: 'navbar-text';
-				bind: #navLink to: 'nav-link';
 				bind: #navPills to: 'nav-pills';
 				bind: #navTabs to: 'nav-tabs';
 				bind: #tabContent to: 'tab-content';
@@ -1139,6 +1137,7 @@ WillowBootstrap class >> initializeNavigationClasses [
 			];
 		forBootstrap4Do: [ :namespace | 
 			namespace
+				bind: #breadcrumbItem to: 'breadcrumb-item';
 				bind: #navbarDark to: 'navbar-dark';
 				bind: #navbarExpand to: 'navbar-expand';
 				bind: #navbarExpandLarge to: 'navbar-expand-lg';
@@ -1150,6 +1149,7 @@ WillowBootstrap class >> initializeNavigationClasses [
 				bind: #navbarTogglerIcon to: 'navbar-toggler-icon';
 				bind: #navFill to: 'nav-fill';
 				bind: #navItem to: 'nav-item';
+				bind: #navLink to: 'nav-link';
 				bind: #navJustified to: 'nav-justified'
 			]
 ]

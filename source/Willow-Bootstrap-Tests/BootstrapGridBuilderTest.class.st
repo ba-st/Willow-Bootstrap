@@ -17,14 +17,15 @@ BootstrapGridBuilderTest >> testApplyingCellCommand [
 		addContent: 2;
 		addContent: 3;
 		addContent: 4;
-		applyingToCells: [ :cell | cell addClass bootstrap small ];
+		applyingToCells: [ :cell | cell addClass bootstrap3 small ];
 		build.
 
 	html := self render: grid.
 
 	self
 		assert: html
-		equals: '<div class="row"><div class="col-md-6 small">1</div><div class="col-md-6 small">2</div></div><div class="row"><div class="col-md-6 small">3</div><div class="col-md-6 small">4</div></div>'
+		equals:
+			'<div class="row"><div class="col-md-6 small">1</div><div class="col-md-6 small">2</div></div><div class="row"><div class="col-md-6 small">3</div><div class="col-md-6 small">4</div></div>'
 ]
 
 { #category : #tests }
@@ -38,11 +39,14 @@ BootstrapGridBuilderTest >> testApplyingRowCommand [
 		addContent: 2;
 		addContent: 3;
 		addContent: 4;
-		buildApplying: [ :row | row addClass bootstrap small ].
+		buildApplying: [ :row | row addClass bootstrap3 small ].
 
 	html := self render: grid.
 
-	self assert: html equals: '<div class="row small"><div class="col-md-4">1</div><div class="col-md-4">2</div><div class="col-md-4">3</div></div><div class="row small"><div class="col-md-4">4</div></div>'
+	self
+		assert: html
+		equals:
+			'<div class="row small"><div class="col-md-4">1</div><div class="col-md-4">2</div><div class="col-md-4">3</div></div><div class="row small"><div class="col-md-4">4</div></div>'
 ]
 
 { #category : #tests }

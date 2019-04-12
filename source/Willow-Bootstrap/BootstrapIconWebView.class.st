@@ -19,7 +19,8 @@ BootstrapIconWebView class >> applying: aComponentCommand [
 { #category : #private }
 BootstrapIconWebView class >> classificationCommandFor: aGlyphiconName [
 
-	^ [ :span | span addClass bootstrap glyphicon + (ComponentClassificationCommand toStyleWith: aGlyphiconName) ] asWebComponentCommand
+	^ [ :span | span addClass bootstrap3 glyphicon + ( ComponentClassificationCommand toStyleWith: aGlyphiconName ) ]
+		asWebComponentCommand
 ]
 
 { #category : #'Instance Creation' }

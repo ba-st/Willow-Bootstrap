@@ -64,25 +64,25 @@ BootstrapGridBuilder >> contentIndexAt: rowIndex and: columnIndex [
 { #category : #Configuring }
 BootstrapGridBuilder >> forExtraSmallDevices [
 
-	columnBreakpointBlock := [ :column :count | column addClass bootstrap columnExtraSmall: count ]
+	columnBreakpointBlock := [ :column :count | column addClass bootstrap3 columnExtraSmall: count ]
 ]
 
 { #category : #Configuring }
 BootstrapGridBuilder >> forLargeDevices [
 
-	columnBreakpointBlock := [ :column :count | column addClass bootstrap columnLarge: count ]
+	columnBreakpointBlock := [ :column :count | column addClass bootstrap3 columnLarge: count ]
 ]
 
 { #category : #Configuring }
 BootstrapGridBuilder >> forMediumDevices [
 
-	columnBreakpointBlock := [ :column :count | column addClass bootstrap columnMedium: count ]
+	columnBreakpointBlock := [ :column :count | column addClass bootstrap3 columnMedium: count ]
 ]
 
 { #category : #Configuring }
 BootstrapGridBuilder >> forSmallDevices [
 
-	columnBreakpointBlock := [ :column :count | column addClass bootstrap columnSmall: count ]
+	columnBreakpointBlock := [ :column :count | column addClass bootstrap3 columnSmall: count ]
 ]
 
 { #category : #initialization }
@@ -90,7 +90,7 @@ BootstrapGridBuilder >> initialize [
 
 	super initialize.
 	columnSpec := #(6 6).
-	rowCommand := [ :row | row addClass bootstrap row ] asWebComponentCommand.
+	rowCommand := [ :row | row addClass bootstrap3 row ] asWebComponentCommand.
 	cellCommand := [  ] asWebComponentCommand.
 	self forMediumDevices.
 	contents := OrderedCollection new

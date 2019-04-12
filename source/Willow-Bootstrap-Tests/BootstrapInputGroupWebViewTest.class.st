@@ -40,15 +40,15 @@ BootstrapInputGroupWebViewTest >> testRenderContentOn [
 	| inputGroup html |
 
 	inputGroup := BootstrapInputGroupWebView
-		wrapping: (supplier singleLineTextFieldApplying: [ :field |  ])
-		between: (supplier inputGroupAddOnWrapping: 'http://')
+		wrapping: ( supplier singleLineTextFieldApplying: [ :field |  ] )
+		between: ( supplier inputGroupAddOnWrapping: 'http://' )
 		and:
-			(supplier
+			( supplier
 				inputGroupButtonWrapping:
-					(supplier
+					( supplier
 						synchronicButtonLabeled: 'Go!'
-						applying: [ :button | button addClass bootstrap buttonDefault ]
-						evaluating: [  ]))
+						applying: [ :button | button addClass bootstrap3 buttonDefault ]
+						evaluating: [  ] ) )
 		applying: [ :group |  ].
 
 	html := self render: inputGroup.
@@ -78,14 +78,14 @@ BootstrapInputGroupWebViewTest >> testRenderContentOnWithCommands [
 
 	inputGroup := BootstrapInputGroupWebView
 		appending:
-			(supplier
+			( supplier
 				inputGroupButtonWrapping:
-					(supplier
+					( supplier
 						synchronicButtonLabeled: 'Go!'
-						applying: [ :button | button addClass bootstrap buttonDefault ]
-						evaluating: [  ]))
-		to: (supplier singleLineTextFieldApplying: [ :field |  ])
-		applying: [ :group | group addClass bootstrap inputGroupSmall ].
+						applying: [ :button | button addClass bootstrap3 buttonDefault ]
+						evaluating: [  ] ) )
+		to: ( supplier singleLineTextFieldApplying: [ :field |  ] )
+		applying: [ :group | group addClass bootstrap3 inputGroupSmall ].
 
 	html := self render: inputGroup.
 

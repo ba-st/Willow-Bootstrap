@@ -14,9 +14,9 @@ Class {
 BootstrapLabeledWebView class >> applying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	^ self new
-		initializeApplying: [ :container | container addClass bootstrap formGroup + aCommandToContainer ] asWebComponentCommand
+		initializeApplying: [ :container | container addClass bootstrap3 formGroup + aCommandToContainer ] asWebComponentCommand
 		displaying: thePhrasingContent
-		applying: [ :label | label addClass bootstrap controlLabel + aCommandToLabel ] asWebComponentCommand
+		applying: [ :label | label addClass bootstrap3 controlLabel + aCommandToLabel ] asWebComponentCommand
 		boundTo: aFieldWebView
 		applying: aCommandToField asWebComponentCommand
 ]

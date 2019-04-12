@@ -17,8 +17,9 @@ BootstrapModalTest >> renderModalContentApplying: aBlock [
 			modal := canvas jQuery new bootstrapModal.
 			aBlock value: modal.
 			canvas div
-				apply: [ :div | div addClass bootstrap modal ];
-				script: modal ]
+				apply: [ :div | div addClass bootstrap3 modal ];
+				script: modal
+			]
 ]
 
 { #category : #'tests-Options' }

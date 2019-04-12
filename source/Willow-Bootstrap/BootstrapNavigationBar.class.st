@@ -17,7 +17,7 @@ Class {
 BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
-		styledAs: [ :container | container addClass bootstrap container ]
+		styledAs: [ :container | container addClass bootstrap3 container ]
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent
@@ -27,7 +27,7 @@ BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView 
 BootstrapNavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
-		styledAs: [ :container | container addClass bootstrap containerFluid ]
+		styledAs: [ :container | container addClass bootstrap3 containerFluid ]
 		brandedWith: aBrandWebView
 		containing: aWebView
 		applying: aCommandToComponent
@@ -51,7 +51,7 @@ BootstrapNavigationBar >> initializeStyledAs: aContainerCommand brandedWith: aBr
 	navbarContent := IdentifiedWebView
 		forDivNamed: 'navbar-content'
 		containing: aWebView
-		applying: [ :div | div addClass bootstrap collapse + div addClass bootstrap navbarCollapse ].
+		applying: [ :div | div addClass bootstrap3 collapse + div addClass bootstrap3 navbarCollapse ].
 	brandView := aBrandWebView
 ]
 
@@ -61,9 +61,11 @@ BootstrapNavigationBar >> renderContentOn: aCanvas [
 	aCanvas navigation
 		with: [ aCanvas div
 				with: [ self renderNavigationBarHeaderOn: aCanvas.
-					aCanvas render: navbarContent ]
-				applying: containerCommand ]
-		applying: [ :nav | nav addClass bootstrap navbar + componentCommand ]
+					aCanvas render: navbarContent
+					]
+				applying: containerCommand
+			]
+		applying: [ :nav | nav addClass bootstrap3 navbar + componentCommand ]
 ]
 
 { #category : #private }
@@ -72,7 +74,11 @@ BootstrapNavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 	aCanvas div
 		with: [ navbarContent identifyIn: aCanvas.
 			aCanvas
-				render: (BootstrapHamburgerButton targeting: navbarContent identifier);
-				render: (self componentSupplier asynchronicLinkLabeled: brandView applying: [ :anchor :constants | (anchor setARIARoleTo: #button) + anchor addClass bootstrap navbarBrand ]) ]
-		applying: [ :div | div addClass bootstrap navbarHeader ]
+				render: ( BootstrapHamburgerButton targeting: navbarContent identifier );
+				render:
+					( self componentSupplier
+						asynchronicLinkLabeled: brandView
+						applying: [ :anchor :constants | ( anchor setARIARoleTo: #button ) + anchor addClass bootstrap3 navbarBrand ] )
+			]
+		applying: [ :div | div addClass bootstrap3 navbarHeader ]
 ]

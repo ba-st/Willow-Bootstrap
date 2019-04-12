@@ -51,7 +51,10 @@ BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationConte
 	^ IdentifiedWebView
 		forDivNamed: self dataToggleValue
 		containing: aNavigationContent
-		applying: [ :div :constants | (div setARIARoleTo: #tabPanel) + div addClass bootstrap tabPane + (div when: [ isFirstTab ] apply: div addClass bootstrap active) ]
+		applying: [ :div :constants | 
+			( div setARIARoleTo: #tabPanel ) + div addClass bootstrap3 tabPane
+				+ ( div when: [ isFirstTab ] apply: div addClass bootstrap3 active )
+			]
 ]
 
 { #category : #initialization }
@@ -73,7 +76,10 @@ BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 
 	"The first header must be rendered specially because needs the active style"
 
-	canvas listItem with: headers first applying: [ :listItem :constants | listItem addClass bootstrap active + (listItem setARIARoleTo: #presentation) ]
+	canvas listItem
+		with: headers first
+		applying:
+			[ :listItem :constants | listItem addClass bootstrap3 active + ( listItem setARIARoleTo: #presentation ) ]
 ]
 
 { #category : #'private - Rendering' }
@@ -85,7 +91,9 @@ BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderTabContentOn: aCanvas [
 
-	aCanvas div with: [ contents do: [ :currentContent | aCanvas render: currentContent ] ] applying: [ :div | div addClass bootstrap tabContent ]
+	aCanvas div
+		with: [ contents do: [ :currentContent | aCanvas render: currentContent ] ]
+		applying: [ :div | div addClass bootstrap3 tabContent ]
 ]
 
 { #category : #'private - Rendering' }
@@ -101,7 +109,8 @@ BootstrapToggableNavigationBuilder >> renderTabListOn: aCanvas applying: aComman
 BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 
 	^ canvas unorderedList
-		apply: [ :list :constants | list addClass bootstrap nav + self navigationTypeCommand + (list setARIARoleTo: #tabList) ];
+		apply:
+				[ :list :constants | list addClass bootstrap3 nav + self navigationTypeCommand + ( list setARIARoleTo: #tabList ) ];
 		yourself
 ]
 

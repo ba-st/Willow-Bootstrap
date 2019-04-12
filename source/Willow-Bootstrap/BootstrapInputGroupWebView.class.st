@@ -38,7 +38,7 @@ BootstrapInputGroupWebView class >> wrapping: aTextFieldWebView between: aWebVie
 		initializeWrapping: aTextFieldWebView
 		between: aWebViewToPrepend
 		and: aWebViewToAppend
-		applying: [ :group | group addClass bootstrap inputGroup + aComponentCommand ] asWebComponentCommand
+		applying: [ :group | group addClass bootstrap3 inputGroup + aComponentCommand ] asWebComponentCommand
 ]
 
 { #category : #configuring }

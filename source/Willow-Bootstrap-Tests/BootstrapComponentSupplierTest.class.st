@@ -26,7 +26,8 @@ BootstrapComponentSupplierTest >> testAsynchronicButtonLabeledApplying [
 		assertRenderingOf: [ :supplier | 
 			supplier
 				asynchronicButtonLabeled: 'Buy'
-				applying: [ :anchor | anchor addClass bootstrap buttonPrimary ] ]
+				applying: [ :anchor | anchor addClass bootstrap3 buttonPrimary ]
+			]
 		equals: '<button class="btn btn-primary" type="button">Buy</button>'
 ]
 
@@ -34,7 +35,11 @@ BootstrapComponentSupplierTest >> testAsynchronicButtonLabeledApplying [
 BootstrapComponentSupplierTest >> testAsynchronicLinkActingAsButtonLabeledApplying [
 
 	self
-		assertRenderingOf: [ :supplier | supplier asynchronicLinkActingAsButtonLabeled: 'Buy' applying: [ :link | link addClass bootstrap buttonPrimary ] ]
+		assertRenderingOf: [ :supplier | 
+			supplier
+				asynchronicLinkActingAsButtonLabeled: 'Buy'
+				applying: [ :link | link addClass bootstrap3 buttonPrimary ]
+			]
 		equals:
 			'<a id="a-id1" role="button" class="btn btn-primary">Buy</a><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});</script>'
 ]
@@ -43,7 +48,8 @@ BootstrapComponentSupplierTest >> testAsynchronicLinkActingAsButtonLabeledApplyi
 BootstrapComponentSupplierTest >> testAsynchronicLinkLabeledApplying [
 
 	self
-		assertRenderingOf: [ :supplier | supplier asynchronicLinkLabeled: 'Buy' applying: [ :link | link addClass bootstrap buttonPrimary ] ]
+		assertRenderingOf:
+			[ :supplier | supplier asynchronicLinkLabeled: 'Buy' applying: [ :link | link addClass bootstrap3 buttonPrimary ] ]
 		equals:
 			'<a id="a-id1" class="btn-primary">Buy</a><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});</script>'
 ]
@@ -73,8 +79,9 @@ BootstrapComponentSupplierTest >> testCheckboxUnlabeledOnModelOffModelApplying [
 BootstrapComponentSupplierTest >> testDateFieldApplying [
 
 	self
-		assertRenderingOf: [ :supplier | supplier dateFieldApplying: [ :field | field addClass bootstrap textCenter ] ]
-		equals: '<input value="" name="1" type="text" class="form-control text-center" maxlength="10" data-provide="datepicker"/>'
+		assertRenderingOf: [ :supplier | supplier dateFieldApplying: [ :field | field addClass bootstrap3 textCenter ] ]
+		equals:
+			'<input value="" name="1" type="text" class="form-control text-center" maxlength="10" data-provide="datepicker"/>'
 ]
 
 { #category : #'tests-Supplying' }
@@ -108,7 +115,8 @@ BootstrapComponentSupplierTest >> testFieldSetContainingApplyingWithLegendApplyi
 BootstrapComponentSupplierTest >> testMultiLineTextFieldApplying [
 
 	self
-		assertRenderingOf: [ :supplier | supplier multiLineTextFieldApplying: [ :field | field addClass bootstrap textCenter ] ]
+		assertRenderingOf:
+			[ :supplier | supplier multiLineTextFieldApplying: [ :field | field addClass bootstrap3 textCenter ] ]
 		equals: '<textarea rows="auto" cols="auto" name="1" class="form-control text-center"></textarea>'
 ]
 
@@ -173,8 +181,9 @@ BootstrapComponentSupplierTest >> testSynchronicButtonLabeledApplyingEvaluating 
 		assertRenderingOf: [ :supplier | 
 			supplier
 				synchronicButtonLabeled: 'Buy'
-				applying: [ :link | link addClass bootstrap buttonPrimary ]
-				evaluating: [  ] ]
+				applying: [ :link | link addClass bootstrap3 buttonPrimary ]
+				evaluating: [  ]
+			]
 		equals: '<button name="1" class="btn btn-primary" type="submit">Buy</button>'
 ]
 

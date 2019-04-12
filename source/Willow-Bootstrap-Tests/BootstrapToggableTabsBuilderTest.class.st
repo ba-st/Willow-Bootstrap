@@ -54,7 +54,7 @@ BootstrapToggableTabsBuilderTest >> testRenderContentOnWithCommands [
 	tabs := supplier tabsBuilder
 		addTabHeadedBy: 'Home' containing: 'The home page';
 		addTabHeadedBy: 'Profile' containing: [ :canvas | canvas strong: 'This is my profile.' ];
-		buildApplying: [ :container | container addClass bootstrap navStacked ].
+		buildApplying: [ :container | container addClass bootstrap3 navStacked ].
 
 	html := self render: tabs.
 

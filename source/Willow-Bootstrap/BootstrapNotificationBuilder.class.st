@@ -33,8 +33,9 @@ BootstrapNotificationBuilder >> dismissibleWrapping: aRenderable [
 	content := [ :html | 
 	html
 		render: button;
-		render: aRenderable ].
-	dismissCommand := [ :container | container addClass bootstrap alertDismissible ]
+		render: aRenderable
+	].
+	dismissCommand := [ :container | container addClass bootstrap3 alertDismissible ]
 ]
 
 { #category : #Configuring }

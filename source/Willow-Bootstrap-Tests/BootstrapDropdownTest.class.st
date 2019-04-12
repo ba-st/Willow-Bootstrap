@@ -20,14 +20,21 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 					canvas anchor
 						script: dropdown;
 						with: [ canvas render: 'Menu'.
-							canvas span apply: [ :span | span addClass bootstrap caret ] ]
-							applying: [ :anchor :constants | (anchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown) + (anchor setARIARoleTo: #button) ].
+							canvas span apply: [ :span | span addClass bootstrap3 caret ]
+							]
+							applying: [ :anchor :constants | 
+								( anchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown )
+									+ ( anchor setARIARoleTo: #button )
+								].
 					canvas unorderedList
 						with: [ canvas
 								listItem: 'Menu option';
-								listItem: 'Other option' ]
-						applying: [ :list | list addClass bootstrap dropdownMenu ] ]
-				applying: [ :div | div addClass bootstrap dropdown ] ]
+								listItem: 'Other option'
+							]
+						applying: [ :list | list addClass bootstrap3 dropdownMenu ]
+					]
+				applying: [ :div | div addClass bootstrap3 dropdown ]
+			]
 ]
 
 { #category : #tests }

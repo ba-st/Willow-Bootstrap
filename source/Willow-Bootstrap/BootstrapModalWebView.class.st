@@ -40,15 +40,21 @@ BootstrapModalWebView >> contentWrapping: aBodyView [
 	^ GenericContainerWebView
 		wrapping: [ :canvas | 
 			canvas render: header.
-			canvas div with: aBodyView applying: [ :div | div addClass bootstrap modalBody ].
-			canvas render: footer ]
-		applying: [ :container | container addClass bootstrap modalContent ]
+			canvas div with: aBodyView applying: [ :div | div addClass bootstrap3 modalBody ].
+			canvas render: footer
+			]
+		applying: [ :container | container addClass bootstrap3 modalContent ]
 ]
 
 { #category : #private }
 BootstrapModalWebView >> documentWrapping: content applying: aDocumentCommand [
 
-	^ GenericContainerWebView wrapping: content applying: [ :container :constants | container addClass bootstrap modalDialog + (container setARIARoleTo: #document) + aDocumentCommand ]
+	^ GenericContainerWebView
+		wrapping: content
+		applying: [ :container :constants | 
+			container addClass bootstrap3 modalDialog + ( container setARIARoleTo: #document )
+				+ aDocumentCommand
+			]
 ]
 
 { #category : #initialize }
@@ -57,8 +63,11 @@ BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aB
 	header := aBootstrapModalHeader.
 	footer := aBootstrapModalFooter.
 	dialog := GenericContainerWebView
-		wrapping: (self documentWrapping: (self contentWrapping: aBodyView) applying: aModalDocumentCommand)
-		applying: [ :container :constants | container addClass bootstrap modal + container disableTabCycle + (container setARIARoleTo: #dialog) + aDialogCommand ]
+		wrapping: ( self documentWrapping: ( self contentWrapping: aBodyView ) applying: aModalDocumentCommand )
+		applying: [ :container :constants | 
+			container addClass bootstrap3 modal + container disableTabCycle
+				+ ( container setARIARoleTo: #dialog ) + aDialogCommand
+			]
 ]
 
 { #category : #Configuring }

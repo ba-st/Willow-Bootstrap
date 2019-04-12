@@ -15,7 +15,8 @@ BootstrapSplitButtonDropdownBuilderTest >> testOnTrigger [
 	| splitButton html |
 
 	splitButton := BootstrapComponentSupplier online splitButtonDropdownBuilder
-		labeled: 'Dropdown' applying: [ :dropdownButton | dropdownButton addClass bootstrap buttonDanger ];
+		labeled: 'Dropdown'
+			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
 		build.
 
@@ -35,7 +36,8 @@ BootstrapSplitButtonDropdownBuilderTest >> testRenderContentOn [
 	| button html |
 
 	button := BootstrapComponentSupplier online splitButtonDropdownBuilder
-		labeled: 'Dropdown' applying: [ :dropdownButton | dropdownButton addClass bootstrap buttonDanger ];
+		labeled: 'Dropdown'
+			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
 		build.
 
@@ -53,7 +55,8 @@ BootstrapSplitButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 	| button html |
 
 	button := BootstrapComponentSupplier online splitButtonDropdownBuilder
-		labeled: 'Dropdown' applying: [ :dropdownButton | dropdownButton addClass bootstrap buttonDanger ];
+		labeled: 'Dropdown'
+			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
 		beRightAligned;
 		build.
@@ -74,7 +77,7 @@ BootstrapSplitButtonDropdownBuilderTest >> testRenderContentOnWithNonDropdownBut
 	splitButton := BootstrapComponentSupplier online splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applyingToMainButton: [ :mainButton | mainButton beDisabled ]
-			andToBoth: [ :button | button addClass bootstrap buttonDanger ];
+			andToBoth: [ :button | button addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
 		build.
 
@@ -92,7 +95,8 @@ BootstrapSplitButtonDropdownBuilderTest >> testRenderContentOnWithSeveralActions
 	| button html |
 
 	button := BootstrapComponentSupplier online splitButtonDropdownBuilder
-		labeled: 'Dropdown' applying: [ :dropdownButton | dropdownButton addClass bootstrap buttonDanger ];
+		labeled: 'Dropdown'
+			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action #1' executing: [ :action | action onTrigger disable ];
 		addActionLabeled: 'Action #2' executing: [ :action | action onTrigger serializeContainerForm ];
 		build.

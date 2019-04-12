@@ -48,7 +48,8 @@ BootstrapNavigationBarTest >> testRenderContentOnWithCommands [
 	navigationBar := BootstrapNavigationBar
 		brandedWith: 'Willow'
 		containing: ''
-		applying: [ :navigation | navigation addClass bootstrap navbarDefault + navigation addClass bootstrap navbarStaticTop ].
+		applying:
+			[ :navigation | navigation addClass bootstrap3 navbarDefault + navigation addClass bootstrap3 navbarStaticTop ].
 
 	html := self render: navigationBar.
 
@@ -65,8 +66,12 @@ BootstrapNavigationBarTest >> testRenderContentOnWithContent [
 
 	navigationBar := BootstrapNavigationBar
 		brandedWith: 'Willow'
-		containing: [ :canvas | canvas paragraph with: '2017' applying: [ :p | p addClass bootstrap navbarText + p addClass bootstrap navbarRight ] ]
-		applying: [ :navigation | navigation addClass bootstrap navbarDefault ].
+		containing: [ :canvas | 
+			canvas paragraph
+				with: '2017'
+				applying: [ :p | p addClass bootstrap3 navbarText + p addClass bootstrap3 navbarRight ]
+			]
+		applying: [ :navigation | navigation addClass bootstrap3 navbarDefault ].
 
 	html := self render: navigationBar.
 

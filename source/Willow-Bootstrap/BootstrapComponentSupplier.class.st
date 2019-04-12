@@ -47,13 +47,18 @@ BootstrapComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQuer
 { #category : #Supplying }
 BootstrapComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aComponentCommand [
 
-	^ AsynchronicButtonWebView labeled: aRenderable applying: [ :button | button addClass bootstrap button + aComponentCommand ]
+	^ AsynchronicButtonWebView
+		labeled: aRenderable
+		applying: [ :button | button addClass bootstrap3 button + aComponentCommand ]
 ]
 
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> asynchronicLinkActingAsButtonLabeled: aRenderable applying: aComponentCommand [
 
-	^ self asynchronicLinkLabeled: aRenderable applying: [ :anchor :constants | (anchor setARIARoleTo: #button) + anchor addClass bootstrap button + aComponentCommand ]
+	^ self
+		asynchronicLinkLabeled: aRenderable
+		applying:
+			[ :anchor :constants | ( anchor setARIARoleTo: #button ) + anchor addClass bootstrap3 button + aComponentCommand ]
 ]
 
 { #category : #Supplying }
@@ -83,15 +88,23 @@ BootstrapComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn offM
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> dateFieldApplying: aComponentCommand [
-	
+
 	"The datepicker plugin doesn't play nice with the HTML5 date input, so we use a text input instead."
-	^ DateFieldWebView applying: [ :field | field addClass bootstrap formControl + (field setMaximumLengthTo: 10) + aComponentCommand + BootstrapDatepickerCommand new + field beTextInput ]
+
+	^ DateFieldWebView
+		applying: [ :field | 
+			field addClass bootstrap3 formControl + ( field setMaximumLengthTo: 10 ) + aComponentCommand
+				+ BootstrapDatepickerCommand new + field beTextInput
+			]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
 
-	^ NumberFieldWebView applying: [ :field | field addClass bootstrap formControl + field addClass bootstrap textRight + aComponentCommand ] transformingWith: FloatCodec new
+	^ NumberFieldWebView
+		applying:
+			[ :field | field addClass bootstrap3 formControl + field addClass bootstrap3 textRight + aComponentCommand ]
+		transformingWith: FloatCodec new
 ]
 
 { #category : #'Supplying - Non Portable' }
@@ -103,7 +116,8 @@ BootstrapComponentSupplier >> dialogBuilder [
 { #category : #Supplying }
 BootstrapComponentSupplier >> dropdownListApplying: aComponentCommand [
 
-	^ DropDownListWebView applying: [ :field | field addClass bootstrap formControl + aComponentCommand + BootstrapSelectCommand new ]
+	^ DropDownListWebView
+		applying: [ :field | field addClass bootstrap3 formControl + aComponentCommand + BootstrapSelectCommand new ]
 ]
 
 { #category : #Supplying }
@@ -137,31 +151,43 @@ BootstrapComponentSupplier >> initializeUsing: aLibraryCollection [
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> inputGroupAddOnWrapping: aRenderable [
 
-	^ PhrasingContainerWebView wrapping: aRenderable applying: [ :container | container addClass bootstrap inputGroupAddon ]
+	^ PhrasingContainerWebView
+		wrapping: aRenderable
+		applying: [ :container | container addClass bootstrap3 inputGroupAddon ]
 ]
 
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> inputGroupButtonWrapping: aRenderable [
 
-	^ PhrasingContainerWebView wrapping: aRenderable applying: [ :container | container addClass bootstrap inputGroupButton ]
+	^ PhrasingContainerWebView
+		wrapping: aRenderable
+		applying: [ :container | container addClass bootstrap3 inputGroupButton ]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> multiLineTextFieldApplying: aComponentCommand [
 
-	^ TextFieldWebView multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap formControl + aComponentCommand ]
+	^ TextFieldWebView
+		multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap3 formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> multipleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
 
-	^ MultipleSelectionListBoxWebView displayingAtOnce: aNumberOfElements applying: [ :field | field addClass bootstrap formControl + aComponentCommand ]
+	^ MultipleSelectionListBoxWebView
+		displayingAtOnce: aNumberOfElements
+		applying: [ :field | field addClass bootstrap3 formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> naturalNumberFieldApplying: aComponentCommand [
 
-	^ NumberFieldWebView applying: [ :field | field addClass bootstrap formControl + field addClass bootstrap textRight + aComponentCommand + field boundNotNegative ] transformingWith: NaturalNumberCodec new
+	^ NumberFieldWebView
+		applying: [ :field | 
+			field addClass bootstrap3 formControl + field addClass bootstrap3 textRight + aComponentCommand
+				+ field boundNotNegative
+			]
+		transformingWith: NaturalNumberCodec new
 ]
 
 { #category : #Supplying }
@@ -201,13 +227,16 @@ BootstrapComponentSupplier >> singleButtonDropdownBuilder [
 { #category : #Supplying }
 BootstrapComponentSupplier >> singleLineTextFieldApplying: aComponentCommand [
 
-	^ TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap formControl + aComponentCommand ]
+	^ TextFieldWebView
+		singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap3 formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
 
-	^ SingleSelectionListBoxWebView displayingAtOnce: aNumberOfElements applying: [ :listBox | listBox addClass bootstrap formControl + aComponentCommand ]
+	^ SingleSelectionListBoxWebView
+		displayingAtOnce: aNumberOfElements
+		applying: [ :listBox | listBox addClass bootstrap3 formControl + aComponentCommand ]
 ]
 
 { #category : #'Supplying - Non Portable' }
@@ -221,7 +250,7 @@ BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aCo
 
 	^ SynchronicSubmitButtonWebView
 		labeled: aRenderable
-		applying: [ :field | field addClass bootstrap button + aComponentCommand ]
+		applying: [ :field | field addClass bootstrap3 button + aComponentCommand ]
 		evaluating: anActionBlock
 ]
 
@@ -229,7 +258,7 @@ BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aCo
 BootstrapComponentSupplier >> tableBuilder [
 
 	^ TableWebViewBuilder new
-		apply: [ :table | table addClass bootstrap table ];
+		apply: [ :table | table addClass bootstrap3 table ];
 		yourself
 ]
 
@@ -243,9 +272,9 @@ BootstrapComponentSupplier >> tabsBuilder [
 BootstrapComponentSupplier >> unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem [
 
 	^ UnorderedListWebView
-		applying: [ :list | list addClass bootstrap listGroup + aCommandToList ]
+		applying: [ :list | list addClass bootstrap3 listGroup + aCommandToList ]
 		listing: aCollection
-		applyingToEach: [ :listItem | listItem addClass bootstrap listGroupItem + aCommandToItem ]
+		applyingToEach: [ :listItem | listItem addClass bootstrap3 listGroupItem + aCommandToItem ]
 ]
 
 { #category : #Processing }

@@ -25,10 +25,13 @@ BootstrapPanelBuilderTest >> testRenderContextualAlternatives [
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel title' withLevel: 3;
 		wrapping: 'Panel content';
-		buildApplying: [ :container | container addClass bootstrap panelPrimary ].
+		buildApplying: [ :container | container addClass bootstrap3 panelPrimary ].
 	html := self render: panel.
 
-	self assert: html equals: '<div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title">Panel title</h3></div><div class="panel-body">Panel content</div></div>'
+	self
+		assert: html
+		equals:
+			'<div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title">Panel title</h3></div><div class="panel-body">Panel content</div></div>'
 ]
 
 { #category : #tests }
@@ -39,10 +42,13 @@ BootstrapPanelBuilderTest >> testRenderPanelWithFooter [
 	panel := supplier panelBuilder
 		wrapping: 'Panel content';
 		footer: 'Panel footer';
-		buildApplying: [ :container | container addClass bootstrap panelDefault ].
+		buildApplying: [ :container | container addClass bootstrap3 panelDefault ].
 	html := self render: panel.
 
-	self assert: html equals: '<div class="panel panel-default"><div class="panel-body">Panel content</div><div class="panel-footer">Panel footer</div></div>'
+	self
+		assert: html
+		equals:
+			'<div class="panel panel-default"><div class="panel-body">Panel content</div><div class="panel-footer">Panel footer</div></div>'
 ]
 
 { #category : #tests }
@@ -53,19 +59,25 @@ BootstrapPanelBuilderTest >> testRenderPanelWithHeading [
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel heading without title';
 		wrapping: 'Panel content';
-		buildApplying: [ :container | container addClass bootstrap panelDefault ].
+		buildApplying: [ :container | container addClass bootstrap3 panelDefault ].
 
 	html := self render: panel.
 
-	self assert: html equals: '<div class="panel panel-default"><div class="panel-heading">Panel heading without title</div><div class="panel-body">Panel content</div></div>'.
+	self
+		assert: html
+		equals:
+			'<div class="panel panel-default"><div class="panel-heading">Panel heading without title</div><div class="panel-body">Panel content</div></div>'.
 
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel title' withLevel: 3;
 		wrapping: 'Panel content';
-		buildApplying: [ :container | container addClass bootstrap panelDefault ].
+		buildApplying: [ :container | container addClass bootstrap3 panelDefault ].
 	html := self render: panel.
 
-	self assert: html equals: '<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Panel title</h3></div><div class="panel-body">Panel content</div></div>'
+	self
+		assert: html
+		equals:
+			'<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Panel title</h3></div><div class="panel-body">Panel content</div></div>'
 ]
 
 { #category : #tests }
@@ -73,13 +85,16 @@ BootstrapPanelBuilderTest >> testRenderPanelWithListGroups [
 
 	| panel html listGroup |
 
-	listGroup := supplier unorderedListApplying: [ :list |  ] listing: #(1 2) applyingToEach: [ :listItem |  ].
+	listGroup := supplier
+		unorderedListApplying: [ :list |  ]
+		listing: #(1 2)
+		applyingToEach: [ :listItem |  ].
 
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel heading';
 		wrapping: 'Panel content.';
 		withListGroup: listGroup;
-		buildApplying: [ :container | container addClass bootstrap panelDefault ].
+		buildApplying: [ :container | container addClass bootstrap3 panelDefault ].
 
 	html := self render: panel.
 
@@ -98,17 +113,21 @@ BootstrapPanelBuilderTest >> testRenderPanelWithListGroupsAndTables [
 		addColumn: [ :column | 
 			column
 				titled: 'First Name';
-				rendering: [ :item | item first ] ];
+				rendering: [ :item | item first ]
+			];
 		build.
 
-	listGroup := supplier unorderedListApplying: [ :list |  ] listing: #(1 2) applyingToEach: [ :listItem |  ].
+	listGroup := supplier
+		unorderedListApplying: [ :list |  ]
+		listing: #(1 2)
+		applyingToEach: [ :listItem |  ].
 
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel heading';
 		wrapping: 'Panel content.';
 		withListGroup: listGroup;
 		withTable: table;
-		buildApplying: [ :container | container addClass bootstrap panelDefault ].
+		buildApplying: [ :container | container addClass bootstrap3 panelDefault ].
 
 	html := self render: panel.
 
@@ -127,14 +146,15 @@ BootstrapPanelBuilderTest >> testRenderPanelWithTables [
 		addColumn: [ :column | 
 			column
 				titled: 'First Name';
-				rendering: [ :item | item first ] ];
+				rendering: [ :item | item first ]
+			];
 		build.
 
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel heading';
 		wrapping: 'Panel content.';
 		withTable: table;
-		buildApplying: [ :container | container addClass bootstrap panelDefault ].
+		buildApplying: [ :container | container addClass bootstrap3 panelDefault ].
 
 	html := self render: panel.
 
@@ -146,7 +166,7 @@ BootstrapPanelBuilderTest >> testRenderPanelWithTables [
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel heading';
 		withTable: table;
-		buildApplying: [ :container | container addClass bootstrap panelDefault ].
+		buildApplying: [ :container | container addClass bootstrap3 panelDefault ].
 	html := self render: panel.
 
 	self
@@ -162,9 +182,11 @@ BootstrapPanelBuilderTest >> testRenderingBasicExample [
 
 	panel := supplier panelBuilder
 		wrapping: 'Basic panel example';
-		buildApplying: [ :container | container addClass bootstrap panelDefault ].
+		buildApplying: [ :container | container addClass bootstrap3 panelDefault ].
 
 	html := self render: panel.
 
-	self assert: html equals: '<div class="panel panel-default"><div class="panel-body">Basic panel example</div></div>'
+	self
+		assert: html
+		equals: '<div class="panel panel-default"><div class="panel-body">Basic panel example</div></div>'
 ]

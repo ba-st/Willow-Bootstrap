@@ -23,7 +23,8 @@ BootstrapSingleButtonDropdownBuilderTest >> testRenderContentOn [
 	| button html |
 
 	button := supplier singleButtonDropdownBuilder
-		labeled: 'Dropdown' applying: [ :dropdownButton | dropdownButton addClass bootstrap buttonDanger ];
+		labeled: 'Dropdown'
+			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
 		build.
 
@@ -41,7 +42,8 @@ BootstrapSingleButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 	| button html |
 
 	button := supplier singleButtonDropdownBuilder
-		labeled: 'Dropdown' applying: [ :dropdownButton | dropdownButton addClass bootstrap buttonDanger ];
+		labeled: 'Dropdown'
+			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
 		beRightAligned;
 		build.

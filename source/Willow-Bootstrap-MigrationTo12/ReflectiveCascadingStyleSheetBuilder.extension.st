@@ -1,9 +1,9 @@
-Extension { #name : #ComponentClassificationCommandBuilder }
+Extension { #name : #ReflectiveCascadingStyleSheetBuilder }
 
 { #category : #'*Willow-Bootstrap-MigrationTo12' }
-ComponentClassificationCommandBuilder >> bootstrap [
+ReflectiveCascadingStyleSheetBuilder >> bootstrap [
 
 	self deprecated: 'Use bootstrap3' transformWith: '`@receiver bootstrap' -> '`@receiver bootstrap3'.
 
-	self bootstrap3
+	^ self bootstrap3
 ]

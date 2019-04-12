@@ -12,7 +12,7 @@ BootstrapModalBuilderTest >> testBeSelfCleaning [
 	dialog := BootstrapComponentSupplier online dialogBuilder
 		beSelfCleaning;
 		headerTitled: 'Terms and Conditions';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
+		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
 		build.
 
 	html := self render: dialog.
@@ -37,7 +37,7 @@ BootstrapModalBuilderTest >> testRenderContentOn [
 	dialog := BootstrapComponentSupplier online dialogBuilder
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
+		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
 		build.
 
 	html := self render: dialog.
@@ -56,9 +56,9 @@ BootstrapModalBuilderTest >> testRenderContentOnWithCommands [
 	legalDialog := BootstrapComponentSupplier online dialogBuilder
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
-		applyingToDialog: [ :dialog | dialog addClass bootstrap fade ];
-		buildApplying: [ :document | document addClass bootstrap modalLarge ].
+		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
+		applyingToDialog: [ :dialog | dialog addClass bootstrap3 fade ];
+		buildApplying: [ :document | document addClass bootstrap3 modalLarge ].
 
 	html := self render: legalDialog.
 
@@ -75,7 +75,7 @@ BootstrapModalBuilderTest >> testRenderContentOnWithDismissableHeader [
 
 	dialog := BootstrapComponentSupplier online dialogBuilder
 		dismissableHeaderTitled: 'Terms and Conditions';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
+		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
 		build.
 
 	html := self render: dialog.

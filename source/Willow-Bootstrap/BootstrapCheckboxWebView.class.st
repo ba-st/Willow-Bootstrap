@@ -98,7 +98,9 @@ BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 { #category : #rendering }
 BootstrapCheckboxWebView >> renderContentOn: aCanvas [
 
-	aCanvas div with: [ self renderLabelOn: aCanvas ] applying: [ :div | div addClass bootstrap checkbox + commandToComponent ]
+	aCanvas div
+		with: [ self renderLabelOn: aCanvas ]
+		applying: [ :div | div addClass bootstrap3 checkbox + commandToComponent ]
 ]
 
 { #category : #'rendering - private' }
