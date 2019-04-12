@@ -87,8 +87,10 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeDisplayUtilitiesClasses;
 		initializeEmbedClasses;
 		initializeFlexClasses;
+		initializeFloatClasses;
 		initializeImagesClasses;
 		initializeInputGroupsClasses;
+		initializePositionClasses;
 		initializeTypographyClasses;
 		initializeFigureClasses;
 		initializeAccessingClasses;
@@ -504,7 +506,109 @@ WillowBootstrap class >> initializeFigureClasses [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexAlignContentClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #alignContentStart to: 'align-content-start';
+				bind: #alignContentEnd to: 'align-content-end';
+				bind: #alignContentCenter to: 'align-content-center';
+				bind: #alignContentAround to: 'align-content-around';
+				bind: #alignContentStretch to: 'align-content-stretch'.
+			self
+				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
+					namespace
+						bind: ( #'alignContent<1s>Start' expandMacrosWith: columnSize )
+							to: ( 'align-content-<1s>-start' expandMacrosWith: breakpoint );
+						bind: ( #'alignContent<1s>End' expandMacrosWith: columnSize )
+							to: ( 'align-content-<1s>-end' expandMacrosWith: breakpoint );
+						bind: ( #'alignContent<1s>Center' expandMacrosWith: columnSize )
+							to: ( 'align-content-<1s>-center' expandMacrosWith: breakpoint );
+						bind: ( #'alignContent<1s>Around' expandMacrosWith: columnSize )
+							to: ( 'align-content-<1s>-around' expandMacrosWith: breakpoint );
+						bind: ( #'alignContent<1s>Stretch' expandMacrosWith: columnSize )
+							to: ( 'align-content-<1s>-stretch' expandMacrosWith: breakpoint )
+					]
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexAlignItemsClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #alignItemsStart to: 'align-items-start';
+				bind: #alignItemsEnd to: 'align-items-end';
+				bind: #alignItemsCenter to: 'align-items-center';
+				bind: #alignItemsBaseline to: 'align-items-baseline';
+				bind: #alignItemsStretch to: 'align-items-stretch'.
+			self
+				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
+					namespace
+						bind: ( #'alignItems<1s>Start' expandMacrosWith: columnSize )
+							to: ( 'align-items-<1s>-start' expandMacrosWith: breakpoint );
+						bind: ( #'alignItems<1s>End' expandMacrosWith: columnSize )
+							to: ( 'align-items-<1s>-end' expandMacrosWith: breakpoint );
+						bind: ( #'alignItems<1s>Center' expandMacrosWith: columnSize )
+							to: ( 'align-items-<1s>-center' expandMacrosWith: breakpoint );
+						bind: ( #'alignItems<1s>Baseline' expandMacrosWith: columnSize )
+							to: ( 'align-items-<1s>-baseline' expandMacrosWith: breakpoint );
+						bind: ( #'alignItems<1s>Stretch' expandMacrosWith: columnSize )
+							to: ( 'align-items-<1s>-stretch' expandMacrosWith: breakpoint )
+					]
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexAlignSelfClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #alignSelfStart to: 'align-self-start';
+				bind: #alignSelfEnd to: 'align-self-end';
+				bind: #alignSelfCenter to: 'align-self-center';
+				bind: #alignSelfBaseline to: 'align-self-baseline';
+				bind: #alignSelfStretch to: 'align-self-stretch'.
+			self
+				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
+					namespace
+						bind: ( #'alignSelf<1s>Start' expandMacrosWith: columnSize )
+							to: ( 'align-self-<1s>-start' expandMacrosWith: breakpoint );
+						bind: ( #'alignSelf<1s>End' expandMacrosWith: columnSize )
+							to: ( 'align-self-<1s>-end' expandMacrosWith: breakpoint );
+						bind: ( #'alignSelf<1s>Center' expandMacrosWith: columnSize )
+							to: ( 'align-self-<1s>-center' expandMacrosWith: breakpoint );
+						bind: ( #'alignSelf<1s>Baseline' expandMacrosWith: columnSize )
+							to: ( 'align-self-<1s>-baseline' expandMacrosWith: breakpoint );
+						bind: ( #'alignSelf<1s>Stretch' expandMacrosWith: columnSize )
+							to: ( 'align-self-<1s>-stretch' expandMacrosWith: breakpoint )
+					]
+			]
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeFlexClasses [
+
+	<ignoreForCoverage>
+	self
+		initializeFlexColumnClasses;
+		initializeFlexJustifyContentClasses;
+		initializeFlexAlignItemsClasses;
+		initializeFlexAlignSelfClasses;
+		initializeFlexMarginClasses;
+		initializeFlexWrapClasses;
+		initializeFlexOrderClasses;
+		initializeFlexAlignContentClasses
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexColumnClasses [
 
 	<ignoreForCoverage>
 	self
@@ -525,8 +629,16 @@ WillowBootstrap class >> initializeFlexClasses [
 							to: ( 'flex-<1s>-row' expandMacrosWith: abbr );
 						bind: ( #'flex<1s>RowReverse' expandMacrosWith: columnSize )
 							to: ( 'flex-<1s>-row-reverse' expandMacrosWith: abbr )
-					].
+					]
+			]
+]
 
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexJustifyContentClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
 			namespace
 				bind: #justifyContentStart to: 'justify-content-start';
 				bind: #justifyContentEnd to: 'justify-content-end';
@@ -546,6 +658,86 @@ WillowBootstrap class >> initializeFlexClasses [
 							to: ( 'justify-content-<1s>-between' expandMacrosWith: breakpoint );
 						bind: ( #'justifyContent<1s>Around' expandMacrosWith: columnSize )
 							to: ( 'justify-content-<1s>-around' expandMacrosWith: breakpoint )
+					]
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexMarginClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #marginRightAuto to: 'mr-auto';
+				bind: #marginLeftAuto to: 'ml-auto';
+				bind: #marginBottomAuto to: 'mb-auto';
+				bind: #marginTopAuto to: 'mt-auto'
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexOrderClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			0 to: 12 do: [ :index | 
+				namespace
+					bind: ( #'order<1p>' expandMacrosWith: index )
+					to: ( 'order-<1p>' expandMacrosWith: index ).
+				self
+					withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
+						namespace
+							bind: ( #'order<1s><2p>' expandMacrosWith: columnSize with: index )
+							to: ( 'order-<1s>-<2p>' expandMacrosWith: breakpoint with: index )
+						]
+				]
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFlexWrapClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #flexWrap to: 'flex-wrap';
+				bind: #flexNowrap to: 'flex-nowrap';
+				bind: #flexWrapReverse to: 'flex-wrap-reverse'.
+			self
+				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
+					namespace
+						bind: ( #'flex<1s>Wrap' expandMacrosWith: columnSize )
+							to: ( 'flex-<1s>-wrap' expandMacrosWith: breakpoint );
+						bind: ( #'flex<1s>Nowrap' expandMacrosWith: columnSize )
+							to: ( 'flex-<1s>-nowrap' expandMacrosWith: breakpoint );
+						bind: ( #'flex<1s>WrapReverse' expandMacrosWith: columnSize )
+							to: ( 'flex-<1s>-wrap-reverse' expandMacrosWith: breakpoint )
+					]
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeFloatClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #floatLeft to: 'float-left';
+				bind: #floatRight to: 'float-right';
+				bind: #floatNone to: 'float-none'.
+			self
+				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
+					namespace
+						bind: ( #'float<1s>Left' expandMacrosWith: columnSize )
+							to: ( 'float-<1s>-left' expandMacrosWith: breakpoint );
+						bind: ( #'float<1s>Right' expandMacrosWith: columnSize )
+							to: ( 'float-<1s>-right' expandMacrosWith: breakpoint );
+						bind: ( #'float<1s>None' expandMacrosWith: columnSize )
+							to: ( 'float-<1s>-none' expandMacrosWith: breakpoint )
 					]
 			]
 ]
@@ -685,7 +877,9 @@ WillowBootstrap class >> initializeHelperClassesClasses [
 				bind: #backgroundWarning to: 'bg-warning';
 				bind: #backgroundInfo to: 'bg-info';
 				bind: #backgroundDanger to: 'bg-danger';
-				bind: #backgroundSuccess to: 'bg-success'
+				bind: #backgroundSuccess to: 'bg-success';
+				"Utilities"
+					bind: #textHide to: 'text-hide'
 			];
 		forBootstrap4Do: [ :namespace | 
 			namespace
@@ -719,7 +913,6 @@ WillowBootstrap class >> initializeHelperClassesClasses [
 		bind: #screenReaderOnlyFocusable to: 'sr-only-focusable';
 		bind: #show to: 'show';
 		bind: #pullRight to: 'pull-right';
-		bind: #textHide to: 'text-hide';
 		bind: #pullLeft to: 'pull-left';
 		bind: #caret to: 'caret';
 		bind: #centerBlock to: 'center-block'
@@ -988,6 +1181,25 @@ WillowBootstrap class >> initializePopoverClasses [
 		bind: #popover to: 'popover';
 		bind: #popoverContent to: 'popover-content';
 		bind: #popoverTitle to: 'popover-title'
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializePositionClasses [
+
+	<ignoreForCoverage>
+	<bootstrap4>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #positionStatic to: 'position-static';
+				bind: #positionRelative to: 'position-relative';
+				bind: #positionAbsolute to: 'position-absolute';
+				bind: #positionFixed to: 'position-fixed';
+				bind: #positionSticky to: 'position-sticky';
+				bind: #fixedTop to: 'fixed-top';
+				bind: #fixedBottom to: 'fixed-bottom';
+				bind: #stickyTop to: 'sticky-top'
+			]
 ]
 
 { #category : #'private - initialization' }
