@@ -94,6 +94,7 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeSizingClasses;
 		initializeSpacingClasses;
 		initializeTypographyClasses;
+		initializeVerticalAlignmnetClasses;
 		initializeFigureClasses;
 		initializeAccessingClasses;
 		initializeCollapseClasses;
@@ -120,7 +121,8 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeNavigationClasses;
 		initializeSpinnerClasses;
 		initializeToastClasses;
-		initializeButtonsClasses.
+		initializeButtonsClasses;
+		initializeVisibilityClasses.
 	self
 		initializeDataAPIConstants;
 		initializeEventsConstants;
@@ -1506,6 +1508,34 @@ WillowBootstrap class >> initializeTypographyClasses [
 								to: ( 'text-<1s>-center' expandMacrosWith: breakpoint with: alignment asLowercase )
 							]
 					]
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeVerticalAlignmnetClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #alignBaseline to: 'align-baseline';
+				bind: #alignBottom to: 'align-bottom';
+				bind: #alignMiddle to: 'align-middle';
+				bind: #alignTextBottom to: 'align-text-bottom';
+				bind: #alignTextTop to: 'align-text-top';
+				bind: #alignTop to: 'align-top'
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeVisibilityClasses [
+
+	<ignoreForCoverage>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #visible to: 'visible';
+				bind: #invisible to: 'invisible'
 			]
 ]
 
