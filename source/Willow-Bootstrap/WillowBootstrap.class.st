@@ -91,6 +91,8 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeImagesClasses;
 		initializeInputGroupsClasses;
 		initializePositionClasses;
+		initializeSizingClasses;
+		initializeSpacingClasses;
 		initializeTypographyClasses;
 		initializeFigureClasses;
 		initializeAccessingClasses;
@@ -879,7 +881,10 @@ WillowBootstrap class >> initializeHelperClassesClasses [
 				bind: #backgroundDanger to: 'bg-danger';
 				bind: #backgroundSuccess to: 'bg-success';
 				"Utilities"
-					bind: #textHide to: 'text-hide'
+					bind: #textHide to: 'text-hide';
+				"Screen Readers"
+					bind: #screenReaderOnly to: 'sr-only';
+				bind: #screenReaderOnlyFocusable to: 'sr-only-focusable'
 			];
 		forBootstrap4Do: [ :namespace | 
 			namespace
@@ -907,10 +912,8 @@ WillowBootstrap class >> initializeHelperClassesClasses [
 				bind: #backgroundGradientDark to: 'bg-gradient-dark'
 			].
 	( Classification >> #bootstrap3 )
-		bind: #screenReaderOnly to: 'sr-only';
 		bind: #hidden to: 'hidden';
 		bind: #invisible to: 'invisible';
-		bind: #screenReaderOnlyFocusable to: 'sr-only-focusable';
 		bind: #show to: 'show';
 		bind: #pullRight to: 'pull-right';
 		bind: #pullLeft to: 'pull-left';
@@ -1327,6 +1330,53 @@ WillowBootstrap class >> initializeSelectEventsConstants [
 ]
 
 { #category : #'private - initialization' }
+WillowBootstrap class >> initializeSizingClasses [
+
+	<ignoreForCoverage>
+	<bootstrap4>
+	self
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #width25Percent to: 'w-25';
+				bind: #width50Percent to: 'w-50';
+				bind: #width75Percent to: 'w-75';
+				bind: #width100Percent to: 'w-100';
+				bind: #maxWidth100Percent to: 'mw-100';
+				bind: #height25Percent to: 'h-25';
+				bind: #height50Percent to: 'h-50';
+				bind: #height75Percent to: 'h-75';
+				bind: #height100Percent to: 'h-100';
+				bind: #maxHeight100Percent to: 'mh-100'
+			]
+]
+
+{ #category : #'private - initialization' }
+WillowBootstrap class >> initializeSpacingClasses [
+
+	<ignoreForCoverage>
+	<boostrap4>
+	self
+		forBootstrap4Do: [ :namespace | 
+			#('m' 'p')
+				with: #(margin padding)
+				do: [ :propertyPrefix :property | 
+					#('t' 'b' 'l' 'r' 'x' 'y' '')
+						with: #(Top Bottom Left Right Horizontal Vertical '')
+						do: [ :sidePrefix :side | 
+							1 to: 5 do: [ :index | 
+								namespace
+									bind: ( #'<1s><2s><3p>' expandMacrosWith: property with: side with: index )
+									to: ( '<1s><2s>-<3p>' expandMacrosWith: propertyPrefix with: sidePrefix with: index )
+								].
+							namespace
+								bind: ( #'<1s><2s>Auto' expandMacrosWith: property with: side )
+								to: ( '<1s><2s>-auto' expandMacrosWith: propertyPrefix with: sidePrefix )
+							]
+					]
+			]
+]
+
+{ #category : #'private - initialization' }
 WillowBootstrap class >> initializeSpinnerClasses [
 
 	<ignoreForCoverage>
@@ -1414,22 +1464,22 @@ WillowBootstrap class >> initializeTypographyClasses [
 				bind: #lead to: 'lead';
 				bind: #listInline to: 'list-inline';
 				bind: #listUnstyled to: 'list-unstyled';
+				bind: #textCapitalize to: 'text-capitalize';
 				bind: #textCenter to: 'text-center';
+				bind: #textJustify to: 'text-justify';
 				bind: #textLeft to: 'text-left';
+				bind: #textLowercase to: 'text-lowercase';
 				bind: #textMuted to: 'text-muted';
-				bind: #textRight to: 'text-right'
+				bind: #textNowrap to: 'text-nowrap';
+				bind: #textRight to: 'text-right';
+				bind: #textUppercase to: 'text-uppercase'
 			].
 	self
 		forBootstrap3Do: [ :namespace | 
 			namespace
-				bind: #textUppercase to: 'text-uppercase';
 				bind: #small to: 'small';
 				bind: #blockquoteReverse to: 'blockquote-reverse';
-				bind: #textJustify to: 'text-justify';
-				bind: #textCapitalize to: 'text-capitalize';
-				bind: #textLowercase to: 'text-lowercase';
-				bind: #definitionListHorizontal to: 'dl-horizontal';
-				bind: #textNowrap to: 'text-nowrap'
+				bind: #definitionListHorizontal to: 'dl-horizontal'
 			].
 	self
 		forBootstrap4Do: [ :namespace | 
@@ -1441,8 +1491,21 @@ WillowBootstrap class >> initializeTypographyClasses [
 			namespace
 				bind: #blockquote to: 'blockquote';
 				bind: #blockquoteFooter to: 'blockquote-footer';
+				bind: #fontItalic to: 'font-italic';
+				bind: #fontWeightBold to: 'font-weight-bold';
+				bind: #fontWeightLight to: 'font-weight-light';
+				bind: #fontWeightNormal to: 'font-weight-normal';
 				bind: #listInlineItem to: '#list-inline-item';
-				bind: #textTruncate to: 'text-truncate'
+				bind: #textTruncate to: 'text-truncate'.
+			self
+				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
+					#(Center Justify Left Right)
+						do: [ :alignment | 
+							namespace
+								bind: ( #'text<1s><2s>' expandMacrosWith: columnSize with: alignment )
+								to: ( 'text-<1s>-center' expandMacrosWith: breakpoint with: alignment asLowercase )
+							]
+					]
 			]
 ]
 
