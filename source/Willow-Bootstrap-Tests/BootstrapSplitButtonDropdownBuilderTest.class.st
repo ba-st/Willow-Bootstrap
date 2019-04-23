@@ -14,7 +14,7 @@ BootstrapSplitButtonDropdownBuilderTest >> testOnTrigger [
 
 	| splitButton html |
 
-	splitButton := BootstrapComponentSupplier online splitButtonDropdownBuilder
+	splitButton := Bootstrap3ComponentSupplier online splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
@@ -35,7 +35,7 @@ BootstrapSplitButtonDropdownBuilderTest >> testRenderContentOn [
 
 	| button html |
 
-	button := BootstrapComponentSupplier online splitButtonDropdownBuilder
+	button := Bootstrap3ComponentSupplier online splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
@@ -54,7 +54,7 @@ BootstrapSplitButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 
 	| button html |
 
-	button := BootstrapComponentSupplier online splitButtonDropdownBuilder
+	button := Bootstrap3ComponentSupplier online splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
@@ -74,7 +74,7 @@ BootstrapSplitButtonDropdownBuilderTest >> testRenderContentOnWithNonDropdownBut
 
 	| splitButton html |
 
-	splitButton := BootstrapComponentSupplier online splitButtonDropdownBuilder
+	splitButton := Bootstrap3ComponentSupplier online splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applyingToMainButton: [ :mainButton | mainButton beDisabled ]
 			andToBoth: [ :button | button addClass bootstrap3 buttonDanger ];
@@ -94,7 +94,7 @@ BootstrapSplitButtonDropdownBuilderTest >> testRenderContentOnWithSeveralActions
 
 	| button html |
 
-	button := BootstrapComponentSupplier online splitButtonDropdownBuilder
+	button := Bootstrap3ComponentSupplier online splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
 		addActionLabeled: 'Action #1' executing: [ :action | action onTrigger disable ];

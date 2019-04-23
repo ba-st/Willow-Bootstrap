@@ -75,7 +75,7 @@ BootstrapModalWebViewTest >> testOnTriggerWithButtons [
 
 	| html dialog |
 
-	dialog := BootstrapComponentSupplier online dialogBuilder
+	dialog := Bootstrap3ComponentSupplier online dialogBuilder
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
 		closeButtonLabeled: 'Disagree'

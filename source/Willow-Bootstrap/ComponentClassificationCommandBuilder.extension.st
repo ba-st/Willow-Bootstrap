@@ -91,6 +91,12 @@ ComponentClassificationCommandBuilder >> badge [
 ]
 
 { #category : #'*Willow-Bootstrap' }
+ComponentClassificationCommandBuilder >> bootstrapCommon [
+
+	classificationNamespace := classificationNamespace >> #bootstrapCommon
+]
+
+{ #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> bootstrapSelect [
 
 	^ self commandStyledWith: #bootstrapSelect

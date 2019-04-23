@@ -15,7 +15,10 @@ WillowBootstrap class >> forBootstrap3And4Do: aBlock [
 
 	self
 		forBootstrap3Do: aBlock;
-		forBootstrap4Do: aBlock
+		forBootstrap4Do: aBlock.	
+			
+	"The common namespace must be used internally in the library provided views, not by the end users."
+	aBlock value: Classification >> #bootstrapCommon
 ]
 
 { #category : #private }
@@ -36,6 +39,7 @@ WillowBootstrap class >> initialize [
 	<ignoreForCoverage>
 	Classification bind: #bootstrap3 to: Namespace new.
 	Classification bind: #bootstrap4 to: Namespace new.
+	Classification bind: #bootstrapCommon to: Namespace new.
 	Constants bind: #bootstrap3 to: Namespace new.
 	Constants bind: #bootstrap4 to: Namespace new.
 	self

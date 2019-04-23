@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 WillowBootstrapApplicationTest >> componentSupplier [
 
-	^ BootstrapComponentSupplier online
+	^ Bootstrap3ComponentSupplier online
 ]
 
 { #category : #accessing }

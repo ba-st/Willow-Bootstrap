@@ -14,7 +14,7 @@ Class {
 BootstrapToggableTabsBuilderTest >> setUp [
 
 	super setUp.
-	supplier := BootstrapComponentSupplier online
+	supplier := Bootstrap3ComponentSupplier online
 ]
 
 { #category : #tests }

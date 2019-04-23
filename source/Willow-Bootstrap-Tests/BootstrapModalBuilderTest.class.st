@@ -9,7 +9,7 @@ BootstrapModalBuilderTest >> testBeSelfCleaning [
 
 	| html dialog |
 
-	dialog := BootstrapComponentSupplier online dialogBuilder
+	dialog := Bootstrap3ComponentSupplier online dialogBuilder
 		beSelfCleaning;
 		headerTitled: 'Terms and Conditions';
 		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
@@ -26,7 +26,7 @@ BootstrapModalBuilderTest >> testBeSelfCleaning [
 { #category : #tests }
 BootstrapModalBuilderTest >> testCantBuildWithoutHeaderSpec [
 
-	self should: [ BootstrapComponentSupplier online dialogBuilder build ] raise: AssertionFailed
+	self should: [ Bootstrap3ComponentSupplier online dialogBuilder build ] raise: AssertionFailed
 ]
 
 { #category : #tests }
@@ -34,7 +34,7 @@ BootstrapModalBuilderTest >> testRenderContentOn [
 
 	| html dialog |
 
-	dialog := BootstrapComponentSupplier online dialogBuilder
+	dialog := Bootstrap3ComponentSupplier online dialogBuilder
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
 		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
@@ -53,7 +53,7 @@ BootstrapModalBuilderTest >> testRenderContentOnWithCommands [
 
 	| html legalDialog |
 
-	legalDialog := BootstrapComponentSupplier online dialogBuilder
+	legalDialog := Bootstrap3ComponentSupplier online dialogBuilder
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
 		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
@@ -73,7 +73,7 @@ BootstrapModalBuilderTest >> testRenderContentOnWithDismissableHeader [
 
 	| html dialog |
 
-	dialog := BootstrapComponentSupplier online dialogBuilder
+	dialog := Bootstrap3ComponentSupplier online dialogBuilder
 		dismissableHeaderTitled: 'Terms and Conditions';
 		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
 		build.
@@ -93,7 +93,7 @@ BootstrapModalBuilderTest >> testSimplestDialog [
 
 	html := self
 		render:
-			(BootstrapComponentSupplier online dialogBuilder
+			(Bootstrap3ComponentSupplier online dialogBuilder
 				headerTitled: 'Title';
 				build).
 

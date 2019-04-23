@@ -102,7 +102,7 @@ BootstrapGridBuilderTest >> testForSmallDevices [
 
 	| grid html |
 
-	grid := BootstrapComponentSupplier online gridBuilder
+	grid := Bootstrap3ComponentSupplier online gridBuilder
 		addContent: 1;
 		forSmallDevices;
 		build.

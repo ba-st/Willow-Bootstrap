@@ -10,7 +10,7 @@ Class {
 { #category : #accessing }
 BootstrapDialogClosingCommandTest >> componentSupplier [
 
-	^ BootstrapComponentSupplier online
+	^ Bootstrap3ComponentSupplier online
 ]
 
 { #category : #accessing }
