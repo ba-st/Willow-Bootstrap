@@ -88,9 +88,7 @@ BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 	checkbox
 		apply: commandToComponent;
 		value: isChecked;
-		callback: [ :value | 
-			value = isChecked
-				ifFalse: [ self toggleCurrentSelection ] ].
+		callback: [ :value | [ self toggleCurrentSelection ] unless: value = isChecked ].
 	identifierAssigner withAssignedIdentifierDo: [ :id | checkbox id: id ].
 	checkbox interactUsing: interactionInterpreter
 ]

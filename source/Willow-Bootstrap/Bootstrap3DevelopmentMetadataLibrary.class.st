@@ -10085,6 +10085,6 @@ if (typeof jQuery === ''undefined'') {
 Bootstrap3DevelopmentMetadataLibrary >> selectorsToInclude [
 
 	^ includeOptionalTheme
-		ifTrue: [ #(cssbootstrapCss cssbootstrapthemeCss jsbootstrapJs) ]
-		ifFalse: [ #(cssbootstrapCss jsbootstrapJs) ]
+		then: [ #(cssbootstrapCss cssbootstrapthemeCss jsbootstrapJs) ]
+		otherwise: [ #(cssbootstrapCss jsbootstrapJs) ]
 ]

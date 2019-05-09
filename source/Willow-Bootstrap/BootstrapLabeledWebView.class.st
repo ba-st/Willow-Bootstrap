@@ -37,10 +37,10 @@ BootstrapLabeledWebView >> initializeApplying: aCommandToContainer displaying: t
 
 	| fieldToRender |
 
-	fieldToRender := aCommandToField isNullCommand
-		ifTrue: [ aFieldWebView ]
-		ifFalse: [ GenericContainerWebView wrapping: aFieldWebView applying: aCommandToField  ].
-		
+	fieldToRender := [ GenericContainerWebView wrapping: aFieldWebView applying: aCommandToField ]
+		unless: aCommandToField isNullCommand
+		inWhichCase: [ aFieldWebView ].
+
 	formGroupContainer := GenericContainerWebView
 		wrapping: [ :canvas | 
 			| fieldIdentifier |
@@ -52,7 +52,8 @@ BootstrapLabeledWebView >> initializeApplying: aCommandToContainer displaying: t
 				on: canvas
 				applying: aCommandToLabel.
 
-			canvas render: fieldToRender ]
+			canvas render: fieldToRender
+			]
 		applying: aCommandToContainer
 ]
 
