@@ -3,7 +3,7 @@ PA BootstrapTypeaheadDevelopmentLibraryTest is a test class for testing the beha
 "
 Class {
 	#name : #BootstrapTypeaheadDevelopmentLibraryTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Typeahead'
 }
 

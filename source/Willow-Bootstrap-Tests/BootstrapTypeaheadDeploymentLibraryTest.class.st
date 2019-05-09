@@ -3,7 +3,7 @@ A BootstrapTypeaheadDeploymentLibraryTest is a test class for testing the behavi
 "
 Class {
 	#name : #BootstrapTypeaheadDeploymentLibraryTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Typeahead'
 }
 

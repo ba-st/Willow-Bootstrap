@@ -3,7 +3,7 @@ A BootstrapDatePickerWebViewTest is a test class for testing the behavior of Boo
 "
 Class {
 	#name : #BootstrapDatePickerWebViewTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 

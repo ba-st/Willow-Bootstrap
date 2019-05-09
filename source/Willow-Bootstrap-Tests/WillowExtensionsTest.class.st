@@ -3,7 +3,7 @@ I'm a test case for extensions of basic Willow objects
 "
 Class {
 	#name : #WillowExtensionsTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#pools : [
 		'Willow'
 	],

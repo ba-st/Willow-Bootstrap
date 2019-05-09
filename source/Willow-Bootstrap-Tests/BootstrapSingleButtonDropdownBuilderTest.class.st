@@ -3,7 +3,7 @@ A BootstrapSingleButtonDropdownBuilderTest is a test class for testing the behav
 "
 Class {
 	#name : #BootstrapSingleButtonDropdownBuilderTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],

@@ -3,7 +3,7 @@ A BootstrapGridBuilderTest is a test class for testing the behavior of Bootstrap
 "
 Class {
 	#name : #BootstrapGridBuilderTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 

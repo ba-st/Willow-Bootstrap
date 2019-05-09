@@ -3,7 +3,7 @@ A BootstrapNotificationBuilderTest is a test class for testing the behavior of B
 "
 Class {
 	#name : #BootstrapNotificationBuilderTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 

@@ -3,7 +3,7 @@ A BootstrapToggablePillsBuilderTest is a test class for testing the behavior of 
 "
 Class {
 	#name : #BootstrapToggablePillsBuilderTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],

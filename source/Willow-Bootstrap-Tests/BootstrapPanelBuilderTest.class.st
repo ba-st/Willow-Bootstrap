@@ -3,7 +3,7 @@ A BootstrapPanelBuilderTest is a test class for testing the behavior of Bootstra
 "
 Class {
 	#name : #BootstrapPanelBuilderTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],

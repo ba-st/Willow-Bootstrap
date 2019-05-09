@@ -3,7 +3,7 @@ A BootstrapToggableTabsBuilderTest is a test class for testing the behavior of B
 "
 Class {
 	#name : #BootstrapToggableTabsBuilderTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],

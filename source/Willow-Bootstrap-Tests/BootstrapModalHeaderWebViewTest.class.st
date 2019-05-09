@@ -3,7 +3,7 @@ A BootstrapModalHeaderTest is a test class for testing the behavior of Bootstrap
 "
 Class {
 	#name : #BootstrapModalHeaderWebViewTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 
