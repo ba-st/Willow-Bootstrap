@@ -44,7 +44,7 @@ BaselineOfWillowBootstrap >> projectClass [
 BaselineOfWillowBootstrap >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v11/source' ];
+		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v12/source' ];
 		project: 'Willow-Deployment' copyFrom: 'Willow' with: [ spec loads: 'Deployment' ];
 		project: 'Willow-SUnit' copyFrom: 'Willow' with: [ spec loads: 'Dependent-SUnit-Extensions' ];
 		project: 'Willow-Tests' copyFrom: 'Willow' with: [ spec loads: 'Tests' ];

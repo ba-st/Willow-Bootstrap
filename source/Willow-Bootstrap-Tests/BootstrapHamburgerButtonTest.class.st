@@ -3,7 +3,7 @@ A BootstrapHamburgerButtonTest is a test class for testing the behavior of Boots
 "
 Class {
 	#name : #BootstrapHamburgerButtonTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 

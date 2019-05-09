@@ -3,7 +3,7 @@ A BootstrapTypeaheadTest is a test class for testing the behavior of BootstrapTy
 "
 Class {
 	#name : #BootstrapTypeaheadTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Typeahead'
 }
 

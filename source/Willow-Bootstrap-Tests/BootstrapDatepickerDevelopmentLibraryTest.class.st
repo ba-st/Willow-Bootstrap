@@ -3,7 +3,7 @@ A BootstrapDatepickerDevelopmentLibraryTest is a test class for testing the beha
 "
 Class {
 	#name : #BootstrapDatepickerDevelopmentLibraryTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Datepicker'
 }
 

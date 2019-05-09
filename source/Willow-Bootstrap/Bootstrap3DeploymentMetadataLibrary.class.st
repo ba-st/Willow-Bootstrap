@@ -101,6 +101,6 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap''s JavaScript requires 
 Bootstrap3DeploymentMetadataLibrary >> selectorsToInclude [
 
 	^ includeOptionalTheme
-		ifTrue: [ #(cssbootstrapminCss cssbootstrapthememinCss jsbootstrapminJs) ]
-		ifFalse: [ #(cssbootstrapminCss jsbootstrapminJs) ]
+		then: [ #(cssbootstrapminCss cssbootstrapthememinCss jsbootstrapminJs) ]
+		otherwise: [ #(cssbootstrapminCss jsbootstrapminJs) ]
 ]

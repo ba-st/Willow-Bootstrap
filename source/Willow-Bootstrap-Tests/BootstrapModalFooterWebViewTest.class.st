@@ -3,7 +3,7 @@ A BootstrapModalFooterTest is a test class for testing the behavior of Bootstrap
 "
 Class {
 	#name : #BootstrapModalFooterWebViewTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 

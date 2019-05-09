@@ -20,16 +20,16 @@ BootstrapPlugin >> arguments [
 BootstrapPlugin >> lookupCssValue: aSymbolOrFunction [
 
 	^ aSymbolOrFunction isSymbol
-		ifTrue: [ self constants >> #css >> aSymbolOrFunction ]
-		ifFalse: [ aSymbolOrFunction ]
+		then: [ self constants >> #css >> aSymbolOrFunction ]
+		otherwise: [ aSymbolOrFunction ]
 ]
 
 { #category : #private }
 BootstrapPlugin >> lookupValue: aSymbolOrObject [
 
 	^ aSymbolOrObject isSymbol
-		ifTrue: [ self constants >> #bootstrap >> aSymbolOrObject ]
-		ifFalse: [ aSymbolOrObject ]
+		then: [ self constants >> #bootstrap >> aSymbolOrObject ]
+		otherwise: [ aSymbolOrObject ]
 ]
 
 { #category : #private }

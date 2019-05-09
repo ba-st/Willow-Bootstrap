@@ -3,7 +3,7 @@ A BootstrapLabeledWebViewTest is a test class for testing the behavior of Bootst
 "
 Class {
 	#name : #BootstrapLabeledWebViewTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],

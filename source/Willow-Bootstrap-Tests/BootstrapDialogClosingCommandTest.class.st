@@ -3,7 +3,7 @@ A BootstrapDialogClosingCommandTest is a test class for testing the behavior of 
 "
 Class {
 	#name : #BootstrapDialogClosingCommandTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebInteraction'
 }
 
