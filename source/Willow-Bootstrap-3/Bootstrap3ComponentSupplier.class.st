@@ -45,29 +45,6 @@ Bootstrap3ComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQue
 ]
 
 { #category : #Supplying }
-Bootstrap3ComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aComponentCommand [
-
-	^ AsynchronicButtonWebView
-		labeled: aRenderable
-		applying: [ :button | button addClass bootstrap3 button + aComponentCommand ]
-]
-
-{ #category : #'Supplying - Non Portable' }
-Bootstrap3ComponentSupplier >> asynchronicLinkActingAsButtonLabeled: aRenderable applying: aComponentCommand [
-
-	^ self
-		asynchronicLinkLabeled: aRenderable
-		applying:
-			[ :anchor :constants | ( anchor setARIARoleTo: #button ) + anchor addClass bootstrap3 button + aComponentCommand ]
-]
-
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> asynchronicLinkLabeled: aRenderable applying: aComponentCommand [
-
-	^ LinkWebView asynchronicLabeled: aRenderable applying: aComponentCommand
-]
-
-{ #category : #Supplying }
 Bootstrap3ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 
 	^ BootstrapCheckboxWebView
@@ -120,10 +97,10 @@ Bootstrap3ComponentSupplier >> dropdownListApplying: aComponentCommand [
 		applying: [ :field | field addClass bootstrap3 formControl + aComponentCommand + BootstrapSelectCommand new ]
 ]
 
-{ #category : #Supplying }
+{ #category : #'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> dropdownMenuBuilder [
 
-	^ BootstrapDropdownMenuBuilder using: self
+	^ Bootstrap3DropdownMenuBuilder using: self
 ]
 
 { #category : #Supplying }
@@ -215,7 +192,7 @@ Bootstrap3ComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLab
 { #category : #'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> singleButtonDropdownBuilder [
 
-	^ BootstrapSingleButtonDropdownBuilder using: self
+	^ Bootstrap3SingleButtonDropdownBuilder using: self
 ]
 
 { #category : #Supplying }
@@ -236,7 +213,7 @@ Bootstrap3ComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOf
 { #category : #'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> splitButtonDropdownBuilder [
 
-	^ BootstrapSplitButtonDropdownBuilder using: self
+	^ Bootstrap3SplitButtonDropdownBuilder using: self
 ]
 
 { #category : #Supplying }

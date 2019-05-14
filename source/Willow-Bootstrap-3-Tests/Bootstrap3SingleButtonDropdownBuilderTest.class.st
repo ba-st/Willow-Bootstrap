@@ -2,23 +2,23 @@
 A BootstrapSingleButtonDropdownBuilderTest is a test class for testing the behavior of BootstrapSingleButtonDropdownBuilder
 "
 Class {
-	#name : #BootstrapSingleButtonDropdownBuilderTest,
+	#name : #Bootstrap3SingleButtonDropdownBuilderTest,
 	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #initialization }
-BootstrapSingleButtonDropdownBuilderTest >> setUp [
+Bootstrap3SingleButtonDropdownBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap3ComponentSupplier online
 ]
 
 { #category : #tests }
-BootstrapSingleButtonDropdownBuilderTest >> testRenderContentOn [
+Bootstrap3SingleButtonDropdownBuilderTest >> testRenderContentOn [
 
 	| button html |
 
@@ -37,7 +37,7 @@ BootstrapSingleButtonDropdownBuilderTest >> testRenderContentOn [
 ]
 
 { #category : #tests }
-BootstrapSingleButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
+Bootstrap3SingleButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 
 	| button html |
 

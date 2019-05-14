@@ -2,16 +2,16 @@
 I create split button dropdowns with the same markup changes, only with a separate button.
 "
 Class {
-	#name : #BootstrapSplitButtonDropdownBuilder,
-	#superclass : #BootstrapDropdownBuilder,
+	#name : #Bootstrap3SplitButtonDropdownBuilder,
+	#superclass : #Bootstrap3DropdownBuilder,
 	#instVars : [
 		'mainButtonBinding'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-3-WebViews'
 }
 
 { #category : #building }
-BootstrapSplitButtonDropdownBuilder >> buildApplying: aComponentCommand [
+Bootstrap3SplitButtonDropdownBuilder >> buildApplying: aComponentCommand [
 
 	^ BootstrapSplitButtonWebView
 		with:
@@ -22,20 +22,20 @@ BootstrapSplitButtonDropdownBuilder >> buildApplying: aComponentCommand [
 ]
 
 { #category : #Configuring }
-BootstrapSplitButtonDropdownBuilder >> initialize [
+Bootstrap3SplitButtonDropdownBuilder >> initialize [
 
 	super initialize.
 	mainButtonBinding := Binding undefinedExplainedBy: 'Missing main button definition'
 ]
 
 { #category : #Configuring }
-BootstrapSplitButtonDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
+Bootstrap3SplitButtonDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
 
 	self labeled: aRenderable applyingToMainButton: [  ] andToBoth: aComponentCommand
 ]
 
 { #category : #Configuring }
-BootstrapSplitButtonDropdownBuilder >> labeled: aRenderable applyingToMainButton: theMainButtonCommand andToBoth: theSplitButtonCommand [
+Bootstrap3SplitButtonDropdownBuilder >> labeled: aRenderable applyingToMainButton: theMainButtonCommand andToBoth: theSplitButtonCommand [
 
 	| mainButton |
 

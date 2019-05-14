@@ -14,31 +14,6 @@ Bootstrap3ComponentSupplierTest >> supplierClass [
 ]
 
 { #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testAsynchronicButtonLabeledApplying [
-
-	self
-		assertRenderingOf: [ :supplier | 
-			supplier
-				asynchronicButtonLabeled: 'Buy'
-				applying: [ :anchor | anchor addClass bootstrap3 buttonPrimary ]
-			]
-		equals: '<button class="btn btn-primary" type="button">Buy</button>'
-]
-
-{ #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testAsynchronicLinkActingAsButtonLabeledApplying [
-
-	self
-		assertRenderingOf: [ :supplier | 
-			supplier
-				asynchronicLinkActingAsButtonLabeled: 'Buy'
-				applying: [ :link | link addClass bootstrap3 buttonPrimary ]
-			]
-		equals:
-			'<a id="a-id1" role="button" class="btn btn-primary">Buy</a><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});</script>'
-]
-
-{ #category : #'tests-Supplying' }
 Bootstrap3ComponentSupplierTest >> testAsynchronicLinkLabeledApplying [
 
 	self
@@ -126,18 +101,6 @@ Bootstrap3ComponentSupplierTest >> testMultipleSelectionListBoxDisplayingAtOnceA
 Bootstrap3ComponentSupplierTest >> testNaturalNumberFieldApplying [
 
 	self assertRenderingOf: [ :supplier | supplier naturalNumberFieldApplying: [ :field |  ] ] equals: '<input value="" name="1" type="number" class="form-control text-right" min="0"/>'
-]
-
-{ #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testNotificationBuilder [
-
-	self
-		assertRenderingOf: [ :supplier | 
-			supplier notificationBuilder
-				wrapping: 'Ouch!';
-				danger;
-				buildApplying: [  ] ]
-		equals: '<div class="alert alert-danger" role="alert">Ouch!</div>'
 ]
 
 { #category : #'tests-Supplying' }

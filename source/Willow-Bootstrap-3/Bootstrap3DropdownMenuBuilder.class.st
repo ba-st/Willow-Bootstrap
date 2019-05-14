@@ -2,16 +2,16 @@
 I'm a builder of bootstrap dropdown menus
 "
 Class {
-	#name : #BootstrapDropdownMenuBuilder,
-	#superclass : #BootstrapDropdownBuilder,
+	#name : #Bootstrap3DropdownMenuBuilder,
+	#superclass : #Bootstrap3DropdownBuilder,
 	#instVars : [
 		'containerBuildingCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-3-WebViews'
 }
 
 { #category : #Configuring }
-BootstrapDropdownMenuBuilder >> beNavigationMenuIn: aNavigationBar [
+Bootstrap3DropdownMenuBuilder >> beNavigationMenuIn: aNavigationBar [
 
 	containerBuildingCommand := [ :containerCommand | 
 	ListItemWebView
@@ -22,13 +22,13 @@ BootstrapDropdownMenuBuilder >> beNavigationMenuIn: aNavigationBar [
 ]
 
 { #category : #building }
-BootstrapDropdownMenuBuilder >> buildApplying: aComponentCommand [
+Bootstrap3DropdownMenuBuilder >> buildApplying: aComponentCommand [
 
 	^ containerBuildingCommand value: aComponentCommand asWebComponentCommand 
 ]
 
 { #category : #initialization }
-BootstrapDropdownMenuBuilder >> initializeUsing: aSupplier [
+Bootstrap3DropdownMenuBuilder >> initializeUsing: aSupplier [
 
 	super initializeUsing: aSupplier.
 	containerBuildingCommand := [ :containerCommand | 
@@ -39,7 +39,7 @@ BootstrapDropdownMenuBuilder >> initializeUsing: aSupplier [
 ]
 
 { #category : #Configuring }
-BootstrapDropdownMenuBuilder >> labeled: aRenderable [
+Bootstrap3DropdownMenuBuilder >> labeled: aRenderable [
 
 	buttonBinding := Binding to:
 		(supplier
@@ -50,7 +50,7 @@ BootstrapDropdownMenuBuilder >> labeled: aRenderable [
 ]
 
 { #category : #Configuring }
-BootstrapDropdownMenuBuilder >> labeled: aRenderable applying: aComponentCommand [
+Bootstrap3DropdownMenuBuilder >> labeled: aRenderable applying: aComponentCommand [
 
 	buttonBinding := Binding to:
 		(supplier

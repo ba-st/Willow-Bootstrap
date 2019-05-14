@@ -33,6 +33,12 @@ Bootstrap4ComponentSupplier >> initializeUsing: aLibraryCollection [
 	bootstrapLibraries := aLibraryCollection
 ]
 
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> singleButtonDropdownBuilder [
+
+	^ Bootstrap4SingleButtonDropdownBuilder using: self
+]
+
 { #category : #Supplying }
 Bootstrap4ComponentSupplier >> tableBuilder [
 

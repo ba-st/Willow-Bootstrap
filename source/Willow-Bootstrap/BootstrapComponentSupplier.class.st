@@ -8,9 +8,46 @@ Class {
 }
 
 { #category : #Supplying }
+BootstrapComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aComponentCommand [
+
+	^ AsynchronicButtonWebView
+		labeled: aRenderable
+		applying: [ :button | button addClass bootstrapCommon button + aComponentCommand ]
+]
+
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> asynchronicLinkActingAsButtonLabeled: aRenderable applying: aComponentCommand [
+
+	^ self
+		asynchronicLinkLabeled: aRenderable
+		applying: [ :anchor :constants | 
+			( anchor setARIARoleTo: #button ) + anchor addClass bootstrapCommon button + aComponentCommand
+				+ ( anchor setAttribute: 'href' to: '#' )
+			]
+]
+
+{ #category : #Supplying }
+BootstrapComponentSupplier >> asynchronicLinkLabeled: aRenderable applying: aComponentCommand [
+
+	^ LinkWebView asynchronicLabeled: aRenderable applying: aComponentCommand
+]
+
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> dropdownMenuBuilder [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #Supplying }
 BootstrapComponentSupplier >> notificationBuilder [ 
 
 	^BootstrapNotificationBuilder new
+]
+
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> singleButtonDropdownBuilder [
+
+	^ self subclassResponsibility
 ]
 
 { #category : #Supplying }

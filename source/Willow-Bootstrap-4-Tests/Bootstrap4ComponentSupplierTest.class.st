@@ -11,7 +11,7 @@ Bootstrap4ComponentSupplierTest >> supplierClass [
 ]
 
 { #category : #tests }
-Bootstrap4ComponentSupplierTest >> testNotificationBuilder [
+Bootstrap4ComponentSupplierTest >> testNotificationBuilderWithHeading [
 
 	self
 		assertRenderingOf: [ :supplier | 
