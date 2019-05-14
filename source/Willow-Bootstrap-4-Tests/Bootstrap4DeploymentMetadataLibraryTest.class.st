@@ -3,7 +3,7 @@ A Bootstrap4DeploymentMetadataLibraryTest is a test class for testing the behavi
 "
 Class {
 	#name : #Bootstrap4DeploymentMetadataLibraryTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : #'Willow-Bootstrap-4-Tests-Libraries'
 }
 

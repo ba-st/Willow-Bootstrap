@@ -3,7 +3,7 @@ I'm a test for extensions to Willow for Bootstrap 3
 "
 Class {
 	#name : #WillowBootstrap3ExtensionsTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#pools : [
 		'Willow'
 	],
