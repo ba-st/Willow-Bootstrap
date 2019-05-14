@@ -112,6 +112,8 @@ BootstrapGridBuilder >> renderColumnsAt: rowIndex on: aCanvas [
 { #category : #private }
 BootstrapGridBuilder >> renderContentAt: aContentIndex spanning: aColumnCount on: aCanvas [
 
-	aContentIndex > contents size
-		ifFalse: [ aCanvas div with: (contents at: aContentIndex) applying: [ :cell | (columnBreakpointBlock value: cell value: aColumnCount) + cellCommand ] ]
+	[ aCanvas div
+		with: ( contents at: aContentIndex )
+		applying: [ :cell | ( columnBreakpointBlock value: cell value: aColumnCount ) + cellCommand ]
+	] unless: aContentIndex > contents size
 ]

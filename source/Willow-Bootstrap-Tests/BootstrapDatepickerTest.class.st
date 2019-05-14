@@ -3,7 +3,7 @@ A BootstrapDatepickerTest is a test class for testing the behavior of BootstrapD
 "
 Class {
 	#name : #BootstrapDatepickerTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Datepicker'
 }
 

@@ -3,7 +3,7 @@ A BootstrapInputGroupWebViewTest is a test class for testing the behavior of Boo
 "
 Class {
 	#name : #BootstrapInputGroupWebViewTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],

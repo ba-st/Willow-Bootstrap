@@ -3,7 +3,7 @@ A BootstrapIconTest is a test class for testing the behavior of BootstrapIconWeb
 "
 Class {
 	#name : #BootstrapIconWebViewTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 

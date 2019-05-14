@@ -3,7 +3,7 @@ A BootstrapCollapseTest is a test class for testing the behavior of BootstrapCol
 "
 Class {
 	#name : #BootstrapCollapseTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Plugins'
 }
 

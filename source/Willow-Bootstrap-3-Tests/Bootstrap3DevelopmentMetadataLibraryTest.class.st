@@ -3,7 +3,7 @@ A Bootstrap3DevelopmentMetadataLibraryTest is a test class for testing the behav
 "
 Class {
 	#name : #Bootstrap3DevelopmentMetadataLibraryTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : #'Willow-Bootstrap-3-Tests-Libraries'
 }
 

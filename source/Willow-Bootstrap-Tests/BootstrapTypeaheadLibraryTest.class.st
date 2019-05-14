@@ -3,7 +3,7 @@ A BootstrapTypeaheadLibraryTest is a test class for testing the behavior of Boot
 "
 Class {
 	#name : #BootstrapTypeaheadLibraryTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Typeahead'
 }
 

@@ -3,7 +3,7 @@ A BootstrapTooltipTest is a test class for testing the behavior of BootstrapTool
 "
 Class {
 	#name : #BootstrapTooltipTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Plugins'
 }
 

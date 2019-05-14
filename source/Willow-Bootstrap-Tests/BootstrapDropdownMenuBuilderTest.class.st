@@ -3,7 +3,7 @@ A BootstrapDropdownMenuBuilderTest is a test class for testing the behavior of B
 "
 Class {
 	#name : #BootstrapDropdownMenuBuilderTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],

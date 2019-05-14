@@ -1,6 +1,6 @@
 Class {
 	#name : #BootstrapComponentSupplierTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : #'Willow-Bootstrap-Tests-Frontend'
 }
 

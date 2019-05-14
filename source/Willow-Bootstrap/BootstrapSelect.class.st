@@ -392,8 +392,8 @@ BootstrapSelect >> width: autoOrFitOrCssLengthOrFalse [
 	| optionValue |
 
 	optionValue := autoOrFitOrCssLengthOrFalse == false
-		ifTrue: [ false ]
-		ifFalse: [ autoOrFitOrCssLengthOrFalse greaseString ].
+		then: [ false ]
+		otherwise: [ autoOrFitOrCssLengthOrFalse greaseString ].
 	self optionAt: #width put: optionValue
 ]
 

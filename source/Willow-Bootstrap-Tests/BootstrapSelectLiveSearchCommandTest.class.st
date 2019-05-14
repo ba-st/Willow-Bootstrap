@@ -3,7 +3,7 @@ A BootstrapSelectLiveSearchCommandTest is a test class for testing the behavior 
 "
 Class {
 	#name : #BootstrapSelectLiveSearchCommandTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Frontend'
 }
 

@@ -3,7 +3,7 @@ A BootstrapDropdownTest is a test class for testing the behavior of BootstrapDro
 "
 Class {
 	#name : #BootstrapDropdownTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Plugins'
 }
 

@@ -3,7 +3,7 @@ A BootstrapSplitButtonDropdownBuilderTest is a test class for testing the behavi
 "
 Class {
 	#name : #BootstrapSplitButtonDropdownBuilderTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 

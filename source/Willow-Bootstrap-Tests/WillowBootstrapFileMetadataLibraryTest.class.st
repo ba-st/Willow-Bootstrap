@@ -3,7 +3,7 @@ A WillowBootstrapFileMetadataLibraryTest is a test class for testing the behavio
 "
 Class {
 	#name : #WillowBootstrapFileMetadataLibraryTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Libraries'
 }
 

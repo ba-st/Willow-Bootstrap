@@ -3,7 +3,7 @@ A BootstrapTypeaheadCommandTest is a test class for testing the behavior of Boot
 "
 Class {
 	#name : #BootstrapTypeaheadCommandTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Frontend'
 }
 

@@ -3,7 +3,7 @@ A BootstrapSelectTest is a test class for testing the behavior of BootstrapSelec
 "
 Class {
 	#name : #BootstrapSelectTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Select'
 }
 

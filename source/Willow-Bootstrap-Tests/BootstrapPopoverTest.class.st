@@ -3,7 +3,7 @@ A BootstrapPopoverTest is a test class for testing the behavior of BootstrapPopo
 "
 Class {
 	#name : #BootstrapPopoverTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-Plugins'
 }
 

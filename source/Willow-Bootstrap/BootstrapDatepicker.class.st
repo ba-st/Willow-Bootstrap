@@ -364,8 +364,8 @@ The IETF code (eg “en” for English, “pt-BR” for Brazilian Portuguese) of
 BootstrapDatepicker >> lookupValueOrArray: aStringOrArray [
 
 	^ (aStringOrArray isCollection and: [ aStringOrArray isString not ])
-		ifTrue: [ aStringOrArray collect: [ :value | self lookupValue: value ] ]
-		ifFalse: [ aStringOrArray ]
+		then: [ aStringOrArray collect: [ :value | self lookupValue: value ] ]
+		otherwise: [ aStringOrArray ]
 ]
 
 { #category : #Options }

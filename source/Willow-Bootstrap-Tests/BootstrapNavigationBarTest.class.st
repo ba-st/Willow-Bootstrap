@@ -3,7 +3,7 @@ A BootstrapNavigationBarTest is a test class for testing the behavior of Bootstr
 "
 Class {
 	#name : #BootstrapNavigationBarTest,
-	#superclass : #WARenderingTest,
+	#superclass : #BWRenderingTest,
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 
