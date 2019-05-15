@@ -39,6 +39,12 @@ Bootstrap4ComponentSupplier >> singleButtonDropdownBuilder [
 	^ Bootstrap4SingleButtonDropdownBuilder using: self
 ]
 
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> splitButtonDropdownBuilder [
+
+	^ Bootstrap4SplitButtonDropdownBuilder using: self
+]
+
 { #category : #Supplying }
 Bootstrap4ComponentSupplier >> tableBuilder [
 

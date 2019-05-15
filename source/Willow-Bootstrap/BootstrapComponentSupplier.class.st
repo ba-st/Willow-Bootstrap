@@ -50,6 +50,12 @@ BootstrapComponentSupplier >> singleButtonDropdownBuilder [
 	^ self subclassResponsibility
 ]
 
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> splitButtonDropdownBuilder [
+
+	^ self subclassResponsibility
+]
+
 { #category : #Supplying }
 BootstrapComponentSupplier >> tableBuilder [
 
