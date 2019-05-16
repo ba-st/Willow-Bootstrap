@@ -32,6 +32,43 @@ BootstrapComponentSupplier >> asynchronicLinkLabeled: aRenderable applying: aCom
 	^ LinkWebView asynchronicLabeled: aRenderable applying: aComponentCommand
 ]
 
+{ #category : #Supplying }
+BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
+
+	^ NumberFieldWebView
+		applying: [ :field | 
+			field addClass bootstrapCommon formControl + field addClass bootstrapCommon textRight
+				+ aComponentCommand
+			]
+		transformingWith: FloatCodec new
+]
+
+{ #category : #Supplying }
+BootstrapComponentSupplier >> multiLineTextFieldApplying: aComponentCommand [
+
+	^ TextFieldWebView
+		multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
+]
+
+{ #category : #Supplying }
+BootstrapComponentSupplier >> multipleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
+
+	^ MultipleSelectionListBoxWebView
+		displayingAtOnce: aNumberOfElements
+		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
+]
+
+{ #category : #Supplying }
+BootstrapComponentSupplier >> naturalNumberFieldApplying: aComponentCommand [
+
+	^ NumberFieldWebView
+		applying: [ :field | 
+			field addClass bootstrapCommon formControl + field addClass bootstrapCommon textRight + aComponentCommand
+				+ field boundNotNegative
+			]
+		transformingWith: NaturalNumberCodec new
+]
+
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> navigationDropdownMenuBuilder [
 
@@ -48,6 +85,21 @@ BootstrapComponentSupplier >> notificationBuilder [
 BootstrapComponentSupplier >> singleButtonDropdownBuilder [
 
 	^ self subclassResponsibility
+]
+
+{ #category : #Supplying }
+BootstrapComponentSupplier >> singleLineTextFieldApplying: aComponentCommand [
+
+	^ TextFieldWebView
+		singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
+]
+
+{ #category : #Supplying }
+BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
+
+	^ SingleSelectionListBoxWebView
+		displayingAtOnce: aNumberOfElements
+		applying: [ :listBox | listBox addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #'Supplying - Non Portable' }

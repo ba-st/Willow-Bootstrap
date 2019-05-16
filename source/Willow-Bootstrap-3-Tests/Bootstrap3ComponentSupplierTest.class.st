@@ -54,12 +54,6 @@ Bootstrap3ComponentSupplierTest >> testDateFieldApplying [
 ]
 
 { #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testDecimalNumberFieldApplying [
-
-	self assertRenderingOf: [ :supplier | supplier decimalNumberFieldApplying: [ :field |  ] ] equals: '<input value="" name="1" type="number" class="form-control text-right"/>'
-]
-
-{ #category : #'tests-Supplying' }
 Bootstrap3ComponentSupplierTest >> testDropdownListApplying [
 
 	self
@@ -78,29 +72,6 @@ Bootstrap3ComponentSupplierTest >> testFieldSetContainingApplyingWithLegendApply
 				withLegend: 'Its Title'
 				applying: [ :legend | legend beAutofocused ] ]
 		equals: '<fieldset disabled><legend autofocus>Its Title</legend>The View</fieldset>'
-]
-
-{ #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testMultiLineTextFieldApplying [
-
-	self
-		assertRenderingOf:
-			[ :supplier | supplier multiLineTextFieldApplying: [ :field | field addClass bootstrap3 textCenter ] ]
-		equals: '<textarea rows="auto" cols="auto" name="1" class="form-control text-center"></textarea>'
-]
-
-{ #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testMultipleSelectionListBoxDisplayingAtOnceApplying [
-
-	self
-		assertRenderingOf: [ :supplier | supplier multipleSelectionListBoxDisplayingAtOnce: 10 applying: [ :listBox |  ] ]
-		equals: '<select name="1" size="10" class="form-control" multiple></select><input name="2" type="hidden"/>'
-]
-
-{ #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testNaturalNumberFieldApplying [
-
-	self assertRenderingOf: [ :supplier | supplier naturalNumberFieldApplying: [ :field |  ] ] equals: '<input value="" name="1" type="number" class="form-control text-right" min="0"/>'
 ]
 
 { #category : #'tests-Supplying' }
@@ -123,12 +94,6 @@ Bootstrap3ComponentSupplierTest >> testRadioRenderingWithApplyingToLabelApplying
 		assert: html
 		equals:
 			'<label class="willow"><input name="1" class="willow" value="1" type="radio"/>F</label><label class="willow"><input name="1" class="willow" value="2" type="radio"/>H</label>'
-]
-
-{ #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testSingleSelectionListBoxDisplayingAtOnceApplying [
-
-	self assertRenderingOf: [ :supplier | supplier singleSelectionListBoxDisplayingAtOnce: 10 applying: [ :listBox |  ] ] equals: '<select name="1" size="10" class="form-control"></select>'
 ]
 
 { #category : #'tests-Supplying' }

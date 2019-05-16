@@ -27,6 +27,25 @@ Bootstrap4ComponentSupplier class >> usingLibraries: aLibraryCollection [
 	^ self new initializeUsing: aLibraryCollection
 ]
 
+{ #category : #Supplying }
+Bootstrap4ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
+
+	^ Bootstrap4CheckboxWebView
+		labeled: aRenderable
+		onModel: anObjectToUseWhenOn
+		offModel: anObjectToUseWhenOff
+		applying: aCommandToComponent
+]
+
+{ #category : #Supplying }
+Bootstrap4ComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
+
+	^ Bootstrap4CheckboxWebView
+		onModel: anObjectToUseWhenOn
+		offModel: anObjectToUseWhenOff
+		applying: aCommandToComponent
+]
+
 { #category : #initialization }
 Bootstrap4ComponentSupplier >> initializeUsing: aLibraryCollection [
 

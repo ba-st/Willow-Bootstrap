@@ -47,7 +47,7 @@ Bootstrap3ComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQue
 { #category : #Supplying }
 Bootstrap3ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 
-	^ BootstrapCheckboxWebView
+	^ Bootstrap3CheckboxWebView
 		labeled: aRenderable
 		onModel: anObjectToUseWhenOn
 		offModel: anObjectToUseWhenOff
@@ -57,7 +57,7 @@ Bootstrap3ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToU
 { #category : #Supplying }
 Bootstrap3ComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 
-	^ BootstrapCheckboxWebView
+	^ Bootstrap3CheckboxWebView
 		onModel: anObjectToUseWhenOn
 		offModel: anObjectToUseWhenOff
 		applying: aCommandToComponent
@@ -70,18 +70,9 @@ Bootstrap3ComponentSupplier >> dateFieldApplying: aComponentCommand [
 
 	^ DateFieldWebView
 		applying: [ :field | 
-			field addClass bootstrap3 formControl + ( field setMaximumLengthTo: 10 ) + aComponentCommand
+			field addClass bootstrapCommon formControl + ( field setMaximumLengthTo: 10 ) + aComponentCommand
 				+ BootstrapDatepickerCommand new + field beTextInput
 			]
-]
-
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
-
-	^ NumberFieldWebView
-		applying:
-			[ :field | field addClass bootstrap3 formControl + field addClass bootstrap3 textRight + aComponentCommand ]
-		transformingWith: FloatCodec new
 ]
 
 { #category : #'Supplying - Non Portable' }
@@ -94,7 +85,7 @@ Bootstrap3ComponentSupplier >> dialogBuilder [
 Bootstrap3ComponentSupplier >> dropdownListApplying: aComponentCommand [
 
 	^ DropDownListWebView
-		applying: [ :field | field addClass bootstrap3 formControl + aComponentCommand + BootstrapSelectCommand new ]
+		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand + BootstrapSelectCommand new ]
 ]
 
 { #category : #Supplying }
@@ -135,32 +126,6 @@ Bootstrap3ComponentSupplier >> inputGroupButtonWrapping: aRenderable [
 		applying: [ :container | container addClass bootstrap3 inputGroupButton ]
 ]
 
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> multiLineTextFieldApplying: aComponentCommand [
-
-	^ TextFieldWebView
-		multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap3 formControl + aComponentCommand ]
-]
-
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> multipleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
-
-	^ MultipleSelectionListBoxWebView
-		displayingAtOnce: aNumberOfElements
-		applying: [ :field | field addClass bootstrap3 formControl + aComponentCommand ]
-]
-
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> naturalNumberFieldApplying: aComponentCommand [
-
-	^ NumberFieldWebView
-		applying: [ :field | 
-			field addClass bootstrap3 formControl + field addClass bootstrap3 textRight + aComponentCommand
-				+ field boundNotNegative
-			]
-		transformingWith: NaturalNumberCodec new
-]
-
 { #category : #'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> navigationDropdownMenuBuilder [
 
@@ -193,21 +158,6 @@ Bootstrap3ComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLab
 Bootstrap3ComponentSupplier >> singleButtonDropdownBuilder [
 
 	^ Bootstrap3SingleButtonDropdownBuilder using: self
-]
-
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> singleLineTextFieldApplying: aComponentCommand [
-
-	^ TextFieldWebView
-		singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap3 formControl + aComponentCommand ]
-]
-
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
-
-	^ SingleSelectionListBoxWebView
-		displayingAtOnce: aNumberOfElements
-		applying: [ :listBox | listBox addClass bootstrap3 formControl + aComponentCommand ]
 ]
 
 { #category : #'Supplying - Non Portable' }

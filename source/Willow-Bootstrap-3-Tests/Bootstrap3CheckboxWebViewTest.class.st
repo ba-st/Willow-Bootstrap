@@ -1,17 +1,17 @@
 Class {
-	#name : #BootstrapCheckboxWebViewTest,
+	#name : #Bootstrap3CheckboxWebViewTest,
 	#superclass : #BinaryChoiceWebViewTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #'instance creation' }
-BootstrapCheckboxWebViewTest >> newBinaryChoiceView [
+Bootstrap3CheckboxWebViewTest >> newBinaryChoiceView [
 
-	^ BootstrapCheckboxWebView onModel: true offModel: false
+	^ Bootstrap3CheckboxWebView onModel: true offModel: false
 ]
 
 { #category : #'tests-rendering' }
-BootstrapCheckboxWebViewTest >> testIdentifyIn [
+Bootstrap3CheckboxWebViewTest >> testIdentifyIn [
 
 	| html checkbox |
 
@@ -29,7 +29,7 @@ BootstrapCheckboxWebViewTest >> testIdentifyIn [
 ]
 
 { #category : #'tests-configuring' }
-BootstrapCheckboxWebViewTest >> testOnTrigger [
+Bootstrap3CheckboxWebViewTest >> testOnTrigger [
 
 	| html binaryChoiceView |
 
@@ -44,11 +44,11 @@ BootstrapCheckboxWebViewTest >> testOnTrigger [
 ]
 
 { #category : #'tests-rendering' }
-BootstrapCheckboxWebViewTest >> testRenderingAfterUpdatingModel [
+Bootstrap3CheckboxWebViewTest >> testRenderingAfterUpdatingModel [
 
 	| html checkbox |
 
-	checkbox := BootstrapCheckboxWebView onModel: 1 offModel: 2 applying: [ :theCheckbox | theCheckbox addClass willow ].
+	checkbox := Bootstrap3CheckboxWebView onModel: 1 offModel: 2 applying: [ :theCheckbox | theCheckbox addClass willow ].
 
 	checkbox selectOffModel.
 	html := self render: checkbox.
@@ -64,11 +64,11 @@ BootstrapCheckboxWebViewTest >> testRenderingAfterUpdatingModel [
 ]
 
 { #category : #'tests-rendering' }
-BootstrapCheckboxWebViewTest >> testRenderingWithLabel [
+Bootstrap3CheckboxWebViewTest >> testRenderingWithLabel [
 
 	| html checkbox |
 
-	checkbox := BootstrapCheckboxWebView
+	checkbox := Bootstrap3CheckboxWebView
 		labeled: 'Enable network'
 		onModel: 1
 		offModel: 2
@@ -83,11 +83,11 @@ BootstrapCheckboxWebViewTest >> testRenderingWithLabel [
 ]
 
 { #category : #'tests-rendering' }
-BootstrapCheckboxWebViewTest >> testWithNonBooleanModels [
+Bootstrap3CheckboxWebViewTest >> testWithNonBooleanModels [
 
 	| html checkbox |
 
-	checkbox := BootstrapCheckboxWebView onModel: 1 offModel: 2.
+	checkbox := Bootstrap3CheckboxWebView onModel: 1 offModel: 2.
 
 	html := self render: checkbox.
 

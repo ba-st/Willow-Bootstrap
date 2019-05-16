@@ -51,6 +51,12 @@ BootstrapCheckboxWebView class >> onModel: anObjectToUseWhenOn offModel: anObjec
 		applying: aCommandToComponent
 ]
 
+{ #category : #'rendering - private' }
+BootstrapCheckboxWebView >> commandToInput [
+
+	^ commandToComponent
+]
+
 { #category : #accessing }
 BootstrapCheckboxWebView >> identifier [
 
@@ -86,27 +92,11 @@ BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 
 	checkbox := aCanvas checkbox.
 	checkbox
-		apply: commandToComponent;
+		apply: self commandToInput;
 		value: isChecked;
 		callback: [ :value | [ self toggleCurrentSelection ] unless: value = isChecked ].
 	identifierAssigner withAssignedIdentifierDo: [ :id | checkbox id: id ].
 	checkbox interactUsing: interactionInterpreter
-]
-
-{ #category : #rendering }
-BootstrapCheckboxWebView >> renderContentOn: aCanvas [
-
-	aCanvas div
-		with: [ self renderLabelOn: aCanvas ]
-		applying: [ :div | div addClass bootstrap3 checkbox + commandToComponent ]
-]
-
-{ #category : #'rendering - private' }
-BootstrapCheckboxWebView >> renderLabelOn: aCanvas [
-
-	aCanvas
-		label: [ self renderCheckboxOn: aCanvas.
-			labelOptional withContentDo: [ :label | aCanvas render: label ] ]
 ]
 
 { #category : #'Binary Choice-API' }
