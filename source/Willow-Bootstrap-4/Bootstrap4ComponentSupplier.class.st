@@ -58,6 +58,15 @@ Bootstrap4ComponentSupplier >> navigationDropdownMenuBuilder [
 	^ Bootstrap4NavigationDropdownMenuBuilder using: self
 ]
 
+{ #category : #Supplying }
+Bootstrap4ComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
+
+	^Bootstrap4RadioWebView 
+		renderingWith: aRenderingBlock 
+		applyingToLabel: aLabelCommand
+		applyingToInput: anInputCommand
+]
+
 { #category : #'Supplying - Non Portable' }
 Bootstrap4ComponentSupplier >> singleButtonDropdownBuilder [
 

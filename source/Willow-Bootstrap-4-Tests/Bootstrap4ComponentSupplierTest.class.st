@@ -54,3 +54,25 @@ Bootstrap4ComponentSupplierTest >> testNotificationBuilderWithHeading [
 		equals:
 			'<div class="alert alert-dark" role="alert"><h4 class="alert-heading">Well done!</h4><p>Ouch!</p></div>'
 ]
+
+{ #category : #tests }
+Bootstrap4ComponentSupplierTest >> testRadioRenderingWithApplyingToLabelApplyingToInput [
+
+	| supplier radio html |
+
+	supplier := self supplierClass online.
+	radio := supplier
+		radioRenderingWith: #asUppercase
+		applyingToLabel: [ :theRadio | theRadio addClass willow ]
+		applyingToInput: [ :theRadio | theRadio addClass willow ].
+
+	html := self render: radio.
+	self assert: html isEmpty.
+
+	radio allowAnyOf: #(f h).
+	html := self render: radio.
+	self
+		assert: html
+		equals:
+			'<div class="form-check"><input name="1" id="radio-button-id2" class="willow form-check-input" value="1" type="radio"/><label for="radio-button-id2" class="willow form-check-label">F</label></div><div class="form-check"><input name="1" id="radio-button-id3" class="willow form-check-input" value="2" type="radio"/><label for="radio-button-id3" class="willow form-check-label">H</label></div>'
+]

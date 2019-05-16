@@ -147,7 +147,7 @@ Bootstrap3ComponentSupplier >> pillsBuilder [
 { #category : #Supplying }
 Bootstrap3ComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
 
-	^BootstrapRadioWebView 
+	^Bootstrap3RadioWebView 
 		renderingWith: aRenderingBlock 
 		applyingToLabel: aLabelCommand
 		applyingToInput: anInputCommand

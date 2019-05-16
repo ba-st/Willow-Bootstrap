@@ -7,7 +7,6 @@ Class {
 	#instVars : [
 		'interactionInterpreter',
 		'renderingBlock',
-		'identifierAssigner',
 		'labelCommand',
 		'inputCommand'
 	],
@@ -23,22 +22,13 @@ BootstrapRadioWebView class >> renderingWith: aRenderingBlock applyingToLabel: a
 		applyingToInput: anInputCommand asWebComponentCommand
 ]
 
-{ #category : #configuring }
-BootstrapRadioWebView >> identifyIn: aCanvas [
-
-	^identifierAssigner identifyIn: aCanvas
-]
-
 { #category : #initialization }
-BootstrapRadioWebView >> initializeRenderingWith: aRenderingBlock
-	applyingToLabel: aLabelCommand
-	applyingToInput: anInputCommand [
+BootstrapRadioWebView >> initializeRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
 
 	renderingBlock := aRenderingBlock.
 	labelCommand := aLabelCommand.
 	inputCommand := anInputCommand.
-	interactionInterpreter := WebInteractionInterpreter forChangeInComponentValue.
-	identifierAssigner := IdentifierAssigner prefixedBy: 'radio-button'
+	interactionInterpreter := WebInteractionInterpreter forChangeInComponentValue
 ]
 
 { #category : #configuring }
@@ -60,15 +50,17 @@ BootstrapRadioWebView >> renderContentOn: aCanvas [
 { #category : #'private-rendering' }
 BootstrapRadioWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas [
 
-	| radioButton |
+	| radioButton radioButtonId |
+
+	radioButtonId := ( IdentifierAssigner prefixedBy: 'radio-button' ) identifyIn: aCanvas.
 
 	radioButton := aRadioGroup radioButton.
-	identifierAssigner withAssignedIdentifierDo: [ :id | radioButton id: id ].
 	radioButton
+		id: radioButtonId;
 		apply: inputCommand;
 		interactUsing: interactionInterpreter;
 		value: anElement.
-	self renderLabelContentFor: anElement on: aCanvas
+	^ radioButton
 ]
 
 { #category : #'private-rendering' }
@@ -78,14 +70,7 @@ BootstrapRadioWebView >> renderLabelContentFor: anElement on: aCanvas [
 ]
 
 { #category : #'private-rendering' }
-BootstrapRadioWebView >> renderLabelOn: aCanvas with: aRenderable [
-
-	aCanvas label with: aRenderable applying: labelCommand
-]
-
-{ #category : #'private-rendering' }
 BootstrapRadioWebView >> renderRadioButtonFor: anElement asPartOf: aRadioGroup on: aCanvas [
- 		
-	 self renderLabelOn: aCanvas
-			with: [ self renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas ] 
+
+	self subclassResponsibility
 ]

@@ -79,7 +79,7 @@ Bootstrap3ComponentSupplierTest >> testRadioRenderingWithApplyingToLabelApplying
 
 	| supplier radio html |
 
-	supplier := Bootstrap3ComponentSupplier online.
+	supplier := self supplierClass online.
 	radio := supplier
 		radioRenderingWith: #asUppercase
 		applyingToLabel: [ :theRadio | theRadio addClass willow ]
@@ -93,7 +93,7 @@ Bootstrap3ComponentSupplierTest >> testRadioRenderingWithApplyingToLabelApplying
 	self
 		assert: html
 		equals:
-			'<label class="willow"><input name="1" class="willow" value="1" type="radio"/>F</label><label class="willow"><input name="1" class="willow" value="2" type="radio"/>H</label>'
+			'<label class="willow"><input name="1" id="radio-button-id2" class="willow" value="1" type="radio"/>F</label><label class="willow"><input name="1" id="radio-button-id3" class="willow" value="2" type="radio"/>H</label>'
 ]
 
 { #category : #'tests-Supplying' }
