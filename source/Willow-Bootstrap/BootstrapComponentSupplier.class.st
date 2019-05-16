@@ -43,6 +43,18 @@ BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
 		transformingWith: FloatCodec new
 ]
 
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> labeledFieldApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
+
+	^ self subclassResponsibility
+]
+
 { #category : #Supplying }
 BootstrapComponentSupplier >> multiLineTextFieldApplying: aComponentCommand [
 

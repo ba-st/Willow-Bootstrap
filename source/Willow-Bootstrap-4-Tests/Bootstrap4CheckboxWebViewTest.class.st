@@ -89,6 +89,27 @@ Bootstrap4CheckboxWebViewTest >> testRenderingWithLabel [
 ]
 
 { #category : #'tests-rendering' }
+Bootstrap4CheckboxWebViewTest >> testRenderingWithLabelAndCustomStyle [
+
+	| html checkbox |
+
+	checkbox := Bootstrap4CheckboxWebView
+		labeled: 'Enable network'
+		onModel: 1
+		offModel: 2
+		applying: [ :theCheckbox | theCheckbox addClass willow ].
+
+	checkbox beCustom.
+
+	html := self render: checkbox.
+
+	self
+		assert: html
+		equals:
+			'<div class="custom-control custom-checkbox willow"><input class="willow custom-control-input" checked name="2" id="checkbox-id1" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id1" class="custom-control-label">Enable network</label></div>'
+]
+
+{ #category : #'tests-rendering' }
 Bootstrap4CheckboxWebViewTest >> testWithNonBooleanModels [
 
 	| html checkbox |

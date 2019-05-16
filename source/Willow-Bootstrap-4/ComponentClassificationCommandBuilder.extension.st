@@ -79,6 +79,12 @@ ComponentClassificationCommandBuilder >> customControlInline [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> customControlInput [
+
+	^ self commandStyledWith: #customControlInput
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> customControlLabel [
 
 	^ self commandStyledWith: #customControlLabel

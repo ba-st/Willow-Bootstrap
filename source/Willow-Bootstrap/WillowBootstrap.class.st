@@ -845,6 +845,7 @@ WillowBootstrap class >> initializeFormsClasses [
 				bind: #customCheckbox to: 'custom-checkbox';
 				bind: #customControl to: 'custom-control';
 				bind: #customControlInline to: 'custom-control-inline';
+				bind: #customControlInput to: 'custom-control-input';
 				bind: #customControlLabel to: 'custom-control-label';
 				bind: #customFile to: 'custom-file';
 				bind: #customFileInput to: 'custom-file-input';

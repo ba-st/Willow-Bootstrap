@@ -1,8 +1,11 @@
 "
-I'm useful for wrapping labels and controls  for optimum spacing.
+I'm useful for wrapping labels and controls for optimum spacing. 
+
+I'm not intended to be used directly, but with the mediation of the component supplier, because
+the markup depends on the bootstrap version.
 "
 Class {
-	#name : #BootstrapLabeledWebView,
+	#name : #BootstrapLabeledFieldWebView,
 	#superclass : #WAPainter,
 	#instVars : [
 		'formGroupContainer'
@@ -11,18 +14,20 @@ Class {
 }
 
 { #category : #'Instance Creation' }
-BootstrapLabeledWebView class >> applying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
+BootstrapLabeledFieldWebView class >> applying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	^ self new
-		initializeApplying: [ :container | container addClass bootstrap3 formGroup + aCommandToContainer ] asWebComponentCommand
+		initializeApplying:
+			[ :container | container addClass bootstrapCommon formGroup + aCommandToContainer ]
+				asWebComponentCommand
 		displaying: thePhrasingContent
-		applying: [ :label | label addClass bootstrap3 controlLabel + aCommandToLabel ] asWebComponentCommand
+		applying: aCommandToLabel
 		boundTo: aFieldWebView
 		applying: aCommandToField asWebComponentCommand
 ]
 
 { #category : #'Instance Creation' }
-BootstrapLabeledWebView class >> displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
+BootstrapLabeledFieldWebView class >> displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	^ self
 		applying: [ :container |  ]
@@ -33,7 +38,7 @@ BootstrapLabeledWebView class >> displaying: thePhrasingContent applying: aComma
 ]
 
 { #category : #initialization }
-BootstrapLabeledWebView >> initializeApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
+BootstrapLabeledFieldWebView >> initializeApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	| fieldToRender |
 
@@ -58,13 +63,13 @@ BootstrapLabeledWebView >> initializeApplying: aCommandToContainer displaying: t
 ]
 
 { #category : #rendering }
-BootstrapLabeledWebView >> renderContentOn: aCanvas [
+BootstrapLabeledFieldWebView >> renderContentOn: aCanvas [
 
 	aCanvas render: formGroupContainer
 ]
 
 { #category : #'private - Rendering' }
-BootstrapLabeledWebView >> renderLabelFor: fieldIdentifier displaying: thePhrasingContent on: canvas applying: aCommandToLabel [
+BootstrapLabeledFieldWebView >> renderLabelFor: fieldIdentifier displaying: thePhrasingContent on: canvas applying: aCommandToLabel [
 
 	canvas label
 		for: fieldIdentifier;

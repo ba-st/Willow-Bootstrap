@@ -46,10 +46,27 @@ Bootstrap4ComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn off
 		applying: aCommandToComponent
 ]
 
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
+
+	^ Bootstrap4HelpTextWebView boundTo: aFieldWebView describedBy: aHelpText
+]
+
 { #category : #initialization }
 Bootstrap4ComponentSupplier >> initializeUsing: aLibraryCollection [
 
 	bootstrapLibraries := aLibraryCollection
+]
+
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> labeledFieldApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
+
+	^ BootstrapLabeledFieldWebView
+		applying: aCommandToContainer
+		displaying: thePhrasingContent
+		applying: aCommandToLabel
+		boundTo: aFieldWebView
+		applying: aCommandToField
 ]
 
 { #category : #'Supplying - Non Portable' }

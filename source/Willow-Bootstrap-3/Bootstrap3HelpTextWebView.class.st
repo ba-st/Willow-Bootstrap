@@ -2,36 +2,36 @@
 Block level help text for form controls.
 "
 Class {
-	#name : #BootstrapHelpTextWebView,
+	#name : #Bootstrap3HelpTextWebView,
 	#superclass : #WAPainter,
 	#instVars : [
 		'fieldWebView',
 		'helpText'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-3-WebViews'
 }
 
 { #category : #'Instance Creation' }
-BootstrapHelpTextWebView class >> boundTo: aFieldWebView describedBy: aHelpText [
+Bootstrap3HelpTextWebView class >> boundTo: aFieldWebView describedBy: aHelpText [
 
 	^ self new initializeBoundTo: aFieldWebView describedBy: aHelpText
 ]
 
 { #category : #configuring }
-BootstrapHelpTextWebView >> identifyIn: aCanvas [
+Bootstrap3HelpTextWebView >> identifyIn: aCanvas [
 
 	^ fieldWebView identifyIn: aCanvas
 ]
 
 { #category : #initialization }
-BootstrapHelpTextWebView >> initializeBoundTo: aFieldWebView describedBy: aHelpText [
+Bootstrap3HelpTextWebView >> initializeBoundTo: aFieldWebView describedBy: aHelpText [
 
 	fieldWebView := aFieldWebView.
 	helpText := aHelpText
 ]
 
 { #category : #rendering }
-BootstrapHelpTextWebView >> renderContentOn: aCanvas [
+Bootstrap3HelpTextWebView >> renderContentOn: aCanvas [
 
 	aCanvas render: fieldWebView.
 	aCanvas span with: helpText applying: [ :span | span addClass bootstrap3 helpBlock ]

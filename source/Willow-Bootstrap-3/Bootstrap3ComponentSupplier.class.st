@@ -104,6 +104,12 @@ Bootstrap3ComponentSupplier >> gridBuilder [
 	^ BootstrapGridBuilder new
 ]
 
+{ #category : #'Supplying - Non Portable' }
+Bootstrap3ComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
+
+	^ Bootstrap3HelpTextWebView boundTo: aFieldWebView describedBy: aHelpText
+]
+
 { #category : #initialization }
 Bootstrap3ComponentSupplier >> initializeUsing: aLibraryCollection [
 
@@ -124,6 +130,17 @@ Bootstrap3ComponentSupplier >> inputGroupButtonWrapping: aRenderable [
 	^ PhrasingContainerWebView
 		wrapping: aRenderable
 		applying: [ :container | container addClass bootstrap3 inputGroupButton ]
+]
+
+{ #category : #'Supplying - Non Portable' }
+Bootstrap3ComponentSupplier >> labeledFieldApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
+
+	^ BootstrapLabeledFieldWebView
+		applying: aCommandToContainer
+		displaying: thePhrasingContent
+		applying: [ :label | label addClass bootstrap3 controlLabel + aCommandToLabel ] asWebComponentCommand
+		boundTo: aFieldWebView
+		applying: aCommandToField
 ]
 
 { #category : #'Supplying - Non Portable' }
