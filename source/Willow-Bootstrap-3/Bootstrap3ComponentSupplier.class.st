@@ -97,12 +97,6 @@ Bootstrap3ComponentSupplier >> dropdownListApplying: aComponentCommand [
 		applying: [ :field | field addClass bootstrap3 formControl + aComponentCommand + BootstrapSelectCommand new ]
 ]
 
-{ #category : #'Supplying - Non Portable' }
-Bootstrap3ComponentSupplier >> dropdownMenuBuilder [
-
-	^ Bootstrap3DropdownMenuBuilder using: self
-]
-
 { #category : #Supplying }
 Bootstrap3ComponentSupplier >> fieldSetContaining: aWebView applying: fieldSetCommand withLegend: aTitle applying: legendCommand [
 
@@ -165,6 +159,12 @@ Bootstrap3ComponentSupplier >> naturalNumberFieldApplying: aComponentCommand [
 				+ field boundNotNegative
 			]
 		transformingWith: NaturalNumberCodec new
+]
+
+{ #category : #'Supplying - Non Portable' }
+Bootstrap3ComponentSupplier >> navigationDropdownMenuBuilder [
+
+	^ Bootstrap3NavigationDropdownMenuBuilder using: self
 ]
 
 { #category : #'Supplying - Non Portable' }

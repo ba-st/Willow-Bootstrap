@@ -37,6 +37,12 @@ ComponentClassificationCommandBuilder >> bootstrap4 [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> breadcrumbItem [
+
+	^ self commandStyledWith: #breadcrumbItem
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> dropdownDivider [
 
 	^ self commandStyledWith: #dropdownDivider
@@ -70,4 +76,76 @@ ComponentClassificationCommandBuilder >> dropleft [
 ComponentClassificationCommandBuilder >> dropright [
 
 	^ self commandStyledWith: #dropright
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navFill [
+
+	^ self commandStyledWith: #navFill
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navItem [
+
+	^ self commandStyledWith: #navItem
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navLink [
+
+	^ self commandStyledWith: #navLink
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarDark [
+
+	^ self commandStyledWith: #navbarDark
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarExpand [
+
+	^ self commandStyledWith: #navbarExpand
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarExpandExtraLarge [
+
+	^ self commandStyledWith: #navbarExpandExtraLarge
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarExpandLarge [
+
+	^ self commandStyledWith: #navbarExpandLarge
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarExpandMedium [
+
+	^ self commandStyledWith: #navbarExpandMedium
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarExpandSmall [
+
+	^ self commandStyledWith: #navbarExpandSmall
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarLight [
+
+	^ self commandStyledWith: #navbarLight
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarToggler [
+
+	^ self commandStyledWith: #navbarToggler
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> navbarTogglerIcon [
+
+	^ self commandStyledWith: #navbarTogglerIcon
 ]

@@ -34,6 +34,12 @@ Bootstrap4ComponentSupplier >> initializeUsing: aLibraryCollection [
 ]
 
 { #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> navigationDropdownMenuBuilder [
+
+	^ Bootstrap4NavigationDropdownMenuBuilder using: self
+]
+
+{ #category : #'Supplying - Non Portable' }
 Bootstrap4ComponentSupplier >> singleButtonDropdownBuilder [
 
 	^ Bootstrap4SingleButtonDropdownBuilder using: self

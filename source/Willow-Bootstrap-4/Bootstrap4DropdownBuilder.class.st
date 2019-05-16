@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'menuClassificationCommand'
 	],
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#category : #'Willow-Bootstrap-4-WebViews'
 }
 
 { #category : #configuring }
@@ -27,7 +27,7 @@ Bootstrap4DropdownBuilder >> addDivider [
 
 	| dividerCommand |
 
-	dividerCommand := [ :div :constants | div addClass bootstrap dropdownDivider + ( div setARIARoleTo: #separator ) ]
+	dividerCommand := [ :div :constants | div addClass bootstrap4 dropdownDivider + ( div setARIARoleTo: #separator ) ]
 		asWebComponentCommand.
 
 	menuItems add: [ :canvas | dividerCommand applyTo: canvas div on: canvas ]

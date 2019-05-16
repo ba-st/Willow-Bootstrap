@@ -33,7 +33,7 @@ BootstrapComponentSupplier >> asynchronicLinkLabeled: aRenderable applying: aCom
 ]
 
 { #category : #'Supplying - Non Portable' }
-BootstrapComponentSupplier >> dropdownMenuBuilder [
+BootstrapComponentSupplier >> navigationDropdownMenuBuilder [
 
 	^ self subclassResponsibility
 ]
