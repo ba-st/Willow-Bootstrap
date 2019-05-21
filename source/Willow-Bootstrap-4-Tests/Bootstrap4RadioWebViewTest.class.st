@@ -99,3 +99,23 @@ Bootstrap4RadioWebViewTest >> testRenderingWithApplying [
 		equals:
 			'<div class="form-check"><input name="1" id="radio-button-id2" class="willow-disabled-component form-check-input" value="1" type="radio"/><label for="radio-button-id2" class="willow-disabled-component form-check-label">A</label></div><div class="form-check"><input name="1" id="radio-button-id3" class="willow-disabled-component form-check-input" value="2" type="radio"/><label for="radio-button-id3" class="willow-disabled-component form-check-label">B</label></div>'
 ]
+
+{ #category : #'tests-rendering' }
+Bootstrap4RadioWebViewTest >> testRenderingWithCustomStyle [
+
+	| radioGroup html |
+
+	radioGroup := Bootstrap4RadioWebView
+		renderingWith: [ :element | element asUppercase ]
+		applyingToLabel: [ :radio | radio addClass disabledComponent ]
+		applyingToInput: [ :radio | radio addClass disabledComponent ].
+
+	radioGroup beCustom.
+	radioGroup allowAnyOf: #($a $b).
+	html := self render: radioGroup.
+
+	self
+		assert: html
+		equals:
+			'<div class="custom-control custom-radio"><input name="1" id="radio-button-id2" class="willow-disabled-component custom-control-input" value="1" type="radio"/><label for="radio-button-id2" class="willow-disabled-component custom-control-label">A</label></div><div class="custom-control custom-radio"><input name="1" id="radio-button-id3" class="willow-disabled-component custom-control-input" value="2" type="radio"/><label for="radio-button-id3" class="willow-disabled-component custom-control-label">B</label></div>'
+]

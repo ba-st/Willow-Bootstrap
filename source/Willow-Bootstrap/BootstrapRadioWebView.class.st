@@ -31,6 +31,12 @@ BootstrapRadioWebView >> initializeRenderingWith: aRenderingBlock applyingToLabe
 	interactionInterpreter := WebInteractionInterpreter forChangeInComponentValue
 ]
 
+{ #category : #'private - accessing' }
+BootstrapRadioWebView >> inputCommand [
+
+	^ inputCommand
+]
+
 { #category : #configuring }
 BootstrapRadioWebView >> onTrigger [
 
@@ -57,7 +63,7 @@ BootstrapRadioWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCa
 	radioButton := aRadioGroup radioButton.
 	radioButton
 		id: radioButtonId;
-		apply: inputCommand;
+		apply: self inputCommand;
 		interactUsing: interactionInterpreter;
 		value: anElement.
 	^ radioButton

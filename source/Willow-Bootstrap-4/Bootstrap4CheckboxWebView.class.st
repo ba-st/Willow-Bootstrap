@@ -23,6 +23,20 @@ Bootstrap4CheckboxWebView >> beCustom [
 			]
 ]
 
+{ #category : #configuring }
+Bootstrap4CheckboxWebView >> beSwitch [
+
+	commandToContainer := [ :div | div addClass bootstrap4 customControl + div addClass bootstrap4 customSwitch ].
+	commandToLabel := [ :label | label addClass bootstrap4 customControlLabel ].
+	additionalInputCommand := [ :input | input addClass bootstrap4 customControlInput ]
+		asWebComponentCommand.
+	labelOptional
+		withContentDo: [  ]
+		ifUnused: [ additionalInputCommand := additionalInputCommand
+				+ [ :input | input addClass bootstrap4 positionStatic ]
+			]
+]
+
 { #category : #'private - rendering' }
 Bootstrap4CheckboxWebView >> commandToContainer [
 
