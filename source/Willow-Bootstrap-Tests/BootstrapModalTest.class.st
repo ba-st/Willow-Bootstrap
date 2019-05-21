@@ -45,6 +45,16 @@ BootstrapModalTest >> testBackdropBoolean [
 ]
 
 { #category : #'tests-Methods' }
+BootstrapModalTest >> testHandleUpdate [
+
+	| html |
+
+	html := self renderModalContentApplying: [ :modal | modal handleUpdate ].
+
+	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal("handleUpdate");</script>'
+]
+
+{ #category : #'tests-Methods' }
 BootstrapModalTest >> testHide [
 
 	| html |

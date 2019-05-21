@@ -16,6 +16,14 @@ BootstrapModal >> backdrop: aBooleanOrStatic [
 ]
 
 { #category : #Methods }
+BootstrapModal >> handleUpdate [
+
+	"Manually readjust the modal’s position if the height of a modal changes while it is open (i.e. in case a scrollbar appears)."
+
+	functionName := 'handleUpdate'
+]
+
+{ #category : #Methods }
 BootstrapModal >> hide [
 
 	"Manually hides a modal. Returns to the caller before the modal has actually been hidden"
