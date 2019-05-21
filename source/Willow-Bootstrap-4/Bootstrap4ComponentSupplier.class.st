@@ -81,6 +81,14 @@ Bootstrap4ComponentSupplier >> navigationDropdownMenuBuilder [
 	^ Bootstrap4NavigationDropdownMenuBuilder using: self
 ]
 
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> pillsBuilder [
+
+	^ BootstrapToggablePillsBuilder new
+		beBootstrap4Aware;
+		yourself
+]
+
 { #category : #Supplying }
 Bootstrap4ComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
 
@@ -107,6 +115,14 @@ Bootstrap4ComponentSupplier >> tableBuilder [
 
 	^ TableWebViewBuilder new
 		apply: [ :table | table addClass bootstrap4 table ];
+		yourself
+]
+
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> tabsBuilder [
+
+	^ BootstrapToggableTabsBuilder new
+		beBootstrap4Aware;
 		yourself
 ]
 

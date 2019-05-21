@@ -2,23 +2,23 @@
 A BootstrapToggableTabsBuilderTest is a test class for testing the behavior of BootstrapToggableTabsBuilder
 "
 Class {
-	#name : #BootstrapToggableTabsBuilderTest,
+	#name : #Bootstrap3ToggableTabsBuilderTest,
 	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #initialization }
-BootstrapToggableTabsBuilderTest >> setUp [
+Bootstrap3ToggableTabsBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap3ComponentSupplier online
 ]
 
 { #category : #tests }
-BootstrapToggableTabsBuilderTest >> testCantBuildWithLessThanTwoPanes [
+Bootstrap3ToggableTabsBuilderTest >> testCantBuildWithLessThanTwoPanes [
 
 	self
 		should: [ supplier tabsBuilder buildApplying: [ :tabs |  ] ] raise: AssertionFailed;
@@ -29,7 +29,7 @@ BootstrapToggableTabsBuilderTest >> testCantBuildWithLessThanTwoPanes [
 ]
 
 { #category : #tests }
-BootstrapToggableTabsBuilderTest >> testRenderContentOn [
+Bootstrap3ToggableTabsBuilderTest >> testRenderContentOn [
 
 	| tabs html |
 
@@ -47,7 +47,7 @@ BootstrapToggableTabsBuilderTest >> testRenderContentOn [
 ]
 
 { #category : #tests }
-BootstrapToggableTabsBuilderTest >> testRenderContentOnWithCommands [
+Bootstrap3ToggableTabsBuilderTest >> testRenderContentOnWithCommands [
 
 	| tabs html |
 

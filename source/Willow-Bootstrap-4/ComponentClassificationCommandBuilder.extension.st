@@ -193,6 +193,30 @@ ComponentClassificationCommandBuilder >> fixedTop [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> flexColumn [
+
+	^ self commandStyledWith: #flexColumn
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> flexColumnReverse [
+
+	^ self commandStyledWith: #flexColumnReverse
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> flexRow [
+
+	^ self commandStyledWith: #flexRow
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> flexRowReverse [
+
+	^ self commandStyledWith: #flexRowReverse
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> formCheck [
 
 	^ self commandStyledWith: #formCheck
@@ -298,6 +322,36 @@ ComponentClassificationCommandBuilder >> isInvalid [
 ComponentClassificationCommandBuilder >> isValid [
 
 	^ self commandStyledWith: #isValid
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> justifyContentAround [
+
+	^ self commandStyledWith: #justifyContentAround
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> justifyContentBetween [
+
+	^ self commandStyledWith: #justifyContentBetween
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> justifyContentCenter [
+
+	^ self commandStyledWith: #justifyContentCenter
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> justifyContentEnd [
+
+	^ self commandStyledWith: #justifyContentEnd
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> justifyContentStart [
+
+	^ self commandStyledWith: #justifyContentStart
 ]
 
 { #category : #'*Willow-Bootstrap-4' }

@@ -114,6 +114,12 @@ BootstrapComponentSupplier >> notificationBuilder [
 ]
 
 { #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> pillsBuilder [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> singleButtonDropdownBuilder [
 
 	^ self subclassResponsibility
@@ -146,6 +152,12 @@ BootstrapComponentSupplier >> tableBuilder [
 	^ TableWebViewBuilder new
 		apply: [ :table | table addClass bootstrapCommon table ];
 		yourself
+]
+
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> tabsBuilder [
+
+	^ self subclassResponsibility
 ]
 
 { #category : #Supplying }

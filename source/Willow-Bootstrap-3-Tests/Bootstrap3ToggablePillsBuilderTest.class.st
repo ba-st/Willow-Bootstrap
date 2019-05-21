@@ -2,23 +2,23 @@
 A BootstrapToggablePillsBuilderTest is a test class for testing the behavior of BootstrapToggablePillsBuilder
 "
 Class {
-	#name : #BootstrapToggablePillsBuilderTest,
+	#name : #Bootstrap3ToggablePillsBuilderTest,
 	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #initialization }
-BootstrapToggablePillsBuilderTest >> setUp [
+Bootstrap3ToggablePillsBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap3ComponentSupplier online
 ]
 
 { #category : #tests }
-BootstrapToggablePillsBuilderTest >> testCantBuildWithLessThanTwoPanes [
+Bootstrap3ToggablePillsBuilderTest >> testCantBuildWithLessThanTwoPanes [
 
 	self
 		should: [ supplier pillsBuilder buildApplying: [ :pills |  ] ] raise: AssertionFailed;
@@ -29,7 +29,7 @@ BootstrapToggablePillsBuilderTest >> testCantBuildWithLessThanTwoPanes [
 ]
 
 { #category : #tests }
-BootstrapToggablePillsBuilderTest >> testRenderContentOn [
+Bootstrap3ToggablePillsBuilderTest >> testRenderContentOn [
 
 	| tabs html |
 
@@ -47,7 +47,7 @@ BootstrapToggablePillsBuilderTest >> testRenderContentOn [
 ]
 
 { #category : #tests }
-BootstrapToggablePillsBuilderTest >> testRenderContentOnWithCommands [
+Bootstrap3ToggablePillsBuilderTest >> testRenderContentOnWithCommands [
 
 	| tabs html |
 
