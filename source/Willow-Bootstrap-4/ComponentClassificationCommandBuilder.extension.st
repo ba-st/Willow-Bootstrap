@@ -445,6 +445,18 @@ ComponentClassificationCommandBuilder >> navbarTogglerIcon [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> popoverBody [
+
+	^ self commandStyledWith: #popoverBody
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> popoverHeader [
+
+	^ self commandStyledWith: #popoverHeader
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> positionAbsolute [
 
 	^ self commandStyledWith: #positionAbsolute

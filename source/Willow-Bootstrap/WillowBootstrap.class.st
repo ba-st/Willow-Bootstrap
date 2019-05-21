@@ -1216,12 +1216,20 @@ WillowBootstrap class >> initializePopoverClasses [
 
 	<ignoreForCoverage>
 	self
-		forBootstrap3Do: [ :namespace | 
+		forBootstrap3And4Do: [ :namespace | 
 			namespace
 				bind: #arrow to: 'arrow';
-				bind: #popover to: 'popover';
-				bind: #popoverContent to: 'popover-content';
-				bind: #popoverTitle to: 'popover-title'
+				bind: #popover to: 'popover'
+			];
+		forBootstrap3Do: [ :namespace | 
+			namespace
+				bind: #popoverTitle to: 'popover-title';
+				bind: #popoverContent to: 'popover-content'
+			];
+		forBootstrap4Do: [ :namespace | 
+			namespace
+				bind: #popoverHeader to: 'popover-header';
+				bind: #popoverBody to: 'popover-body'
 			]
 ]
 
@@ -1491,8 +1499,7 @@ WillowBootstrap class >> initializeTooltipsClasses [
 				bind: #tooltip to: 'tooltip';
 				bind: #tooltipInner to: 'tooltip-inner'
 			];
-		forBootstrap3Do: [ :namespace | namespace bind: #tooltipArrow to: 'tooltip-arrow' ];
-		forBootstrap4Do: [ :namespace | namespace bind: #arrow to: 'arrow' ]
+		forBootstrap3Do: [ :namespace | namespace bind: #tooltipArrow to: 'tooltip-arrow' ]
 ]
 
 { #category : #'private - initialization - classes' }

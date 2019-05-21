@@ -243,43 +243,6 @@ BootstrapPopoverTest >> testShow [
 ]
 
 { #category : #'tests-Options' }
-BootstrapPopoverTest >> testTemplate [
-
-	| html |
-
-	html := self
-		renderUsing: [ :canvas | 
-			| div popover |
-
-			div := canvas div.
-			popover := canvas jQuery new bootstrapPopover.
-			popover
-				template: [ :template | 
-					template div
-						with: [ template div apply: [ :container | container addClass bootstrap3 arrow ].
-							template
-								render:
-									( HeadingWebView
-										displaying: ''
-										withLevel: 3
-										applying: [ :container | container addClass bootstrap3 popoverTitle ] ).
-							template div
-								with: ( BootstrapIconWebView representing: Glyphicons menuUp )
-								applying: [ :container | container addClass bootstrap3 popoverContent ]
-							]
-						applying:
-							[ :container :constants | container addClass bootstrap3 popover + ( container setARIARoleTo: #tooltip ) ]
-					].
-			div script: popover
-			].
-
-	self
-		assert: html
-		equals:
-			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"template":"<div class=\"popover\" role=\"tooltip\"><div class=\"arrow\"></div><h3 class=\"popover-title\"></h3><div class=\"popover-content\"><span class=\"glyphicon glyphicon-menu-up\"></span></div></div>"});</script>'
-]
-
-{ #category : #'tests-Options' }
 BootstrapPopoverTest >> testTitle [
 
 	| html |

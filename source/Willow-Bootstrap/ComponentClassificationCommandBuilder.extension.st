@@ -601,18 +601,6 @@ ComponentClassificationCommandBuilder >> popover [
 ]
 
 { #category : #'*Willow-Bootstrap' }
-ComponentClassificationCommandBuilder >> popoverContent [
-
-	^ self commandStyledWith: #popoverContent
-]
-
-{ #category : #'*Willow-Bootstrap' }
-ComponentClassificationCommandBuilder >> popoverTitle [
-
-	^ self commandStyledWith: #popoverTitle
-]
-
-{ #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> preScrollable [
 
 	^ self commandStyledWith: #preScrollable

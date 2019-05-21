@@ -571,6 +571,18 @@ ComponentClassificationCommandBuilder >> panelWarning [
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
+ComponentClassificationCommandBuilder >> popoverContent [
+
+	^ self commandStyledWith: #popoverContent
+]
+
+{ #category : #'*Willow-Bootstrap-3' }
+ComponentClassificationCommandBuilder >> popoverTitle [
+
+	^ self commandStyledWith: #popoverTitle
+]
+
+{ #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> progressBarDanger [
 
 	^ self commandStyledWith: #progressBarDanger
