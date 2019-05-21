@@ -188,15 +188,6 @@ Bootstrap3ComponentSupplier >> tabsBuilder [
 	^ BootstrapToggableTabsBuilder new
 ]
 
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem [
-
-	^ UnorderedListWebView
-		applying: [ :list | list addClass bootstrap3 listGroup + aCommandToList ]
-		listing: aCollection
-		applyingToEach: [ :listItem | listItem addClass bootstrap3 listGroupItem + aCommandToItem ]
-]
-
 { #category : #Processing }
 Bootstrap3ComponentSupplier >> updateRoot: aRoot [
 

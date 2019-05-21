@@ -136,6 +136,15 @@ BootstrapComponentSupplier >> tableBuilder [
 		yourself
 ]
 
+{ #category : #Supplying }
+BootstrapComponentSupplier >> unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem [
+
+	^ UnorderedListWebView
+		applying: [ :list | list addClass bootstrapCommon listGroup + aCommandToList ]
+		listing: aCollection
+		applyingToEach: [ :listItem | listItem addClass bootstrapCommon listGroupItem + aCommandToItem ]
+]
+
 { #category : #Processing }
 BootstrapComponentSupplier >> updateRoot: aRoot [
 
