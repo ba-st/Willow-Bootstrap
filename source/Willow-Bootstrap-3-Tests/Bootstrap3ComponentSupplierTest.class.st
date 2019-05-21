@@ -1,5 +1,5 @@
 "
-A BootstrapComponentSupplierTest is a test class for testing the behavior of BootstrapComponentSupplier
+A Bootstrap3ComponentSupplierTest is a test class for testing the behavior of Bootstrap3ComponentSupplier
 "
 Class {
 	#name : #Bootstrap3ComponentSupplierTest,

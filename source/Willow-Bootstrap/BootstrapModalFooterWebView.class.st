@@ -71,5 +71,5 @@ BootstrapModalFooterWebView >> renderContentOn: aCanvas [
 					aCanvas render: button
 					]
 			]
-		applying: [ :div | div addClass bootstrap3 modalFooter ]
+		applying: [ :div | div addClass bootstrapCommon modalFooter ]
 ]

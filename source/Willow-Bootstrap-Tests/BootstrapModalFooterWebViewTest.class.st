@@ -23,7 +23,7 @@ BootstrapModalFooterWebViewTest >> testOnCloseTrigger [
 	footer := BootstrapModalFooterWebView
 		with: self acceptButton
 		andCloseButtonLabeled: 'Close'
-		applyingToIt: [ :closeButton | closeButton addClass bootstrap3 buttonLink ].
+		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
 	footer onCloseTrigger disable.
 
@@ -43,7 +43,7 @@ BootstrapModalFooterWebViewTest >> testOnTrigger [
 	footer := BootstrapModalFooterWebView
 		with: self acceptButton
 		andCloseButtonLabeled: 'Close'
-		applyingToIt: [ :closeButton | closeButton addClass bootstrap3 buttonLink ].
+		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
 	footer onTrigger disable.
 
@@ -62,7 +62,7 @@ BootstrapModalFooterWebViewTest >> testRenderContentOn [
 
 	footer := BootstrapModalFooterWebView
 		withCloseButtonLabeled: 'Close'
-		applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ].
+		applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
 	html := self render: footer.
 
@@ -80,7 +80,7 @@ BootstrapModalFooterWebViewTest >> testRenderContentOnWithAdditionalButtons [
 	footer := BootstrapModalFooterWebView
 		with: self acceptButton
 		andCloseButtonLabeled: 'Close'
-		applyingToIt: [ :closeButton | closeButton addClass bootstrap3 buttonLink ].
+		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
 	html := self render: footer.
 

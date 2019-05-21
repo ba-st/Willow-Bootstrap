@@ -44,6 +44,12 @@ BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
 ]
 
 { #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> dialogBuilder [
+
+	^ BootstrapModalBuilder new
+]
+
+{ #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> fieldAddonBuilder [
 
 	"A Field addon builder allows to extend fields by adding text, buttons or button groups on either side of the field"

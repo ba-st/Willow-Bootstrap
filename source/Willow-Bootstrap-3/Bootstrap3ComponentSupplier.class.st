@@ -75,12 +75,6 @@ Bootstrap3ComponentSupplier >> dateFieldApplying: aComponentCommand [
 			]
 ]
 
-{ #category : #'Supplying - Non Portable' }
-Bootstrap3ComponentSupplier >> dialogBuilder [
-
-	^ BootstrapModalBuilder new
-]
-
 { #category : #Supplying }
 Bootstrap3ComponentSupplier >> dropdownListApplying: aComponentCommand [
 

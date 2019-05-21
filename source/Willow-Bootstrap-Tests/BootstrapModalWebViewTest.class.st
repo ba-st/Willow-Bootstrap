@@ -30,7 +30,7 @@ BootstrapModalWebViewTest >> testOnCloseTrigger [
 
 	footer := BootstrapModalFooterWebView
 		withCloseButtonLabeled: 'Ok'
-		applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ].
+		applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 	header := BootstrapModalHeaderWebView dismissableTitled: 'Terms and Conditions'.
 	dialog := BootstrapModalWebView
 		withHeader: header
@@ -54,7 +54,7 @@ BootstrapModalWebViewTest >> testOnTriggerDoesNothingWithoutAdditionalActionButt
 
 	footer := BootstrapModalFooterWebView
 		withCloseButtonLabeled: 'Ok'
-		applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ].
+		applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.
 	dialog := BootstrapModalWebView
 		withHeader: header
@@ -75,11 +75,11 @@ BootstrapModalWebViewTest >> testOnTriggerWithButtons [
 
 	| html dialog |
 
-	dialog := Bootstrap3ComponentSupplier online dialogBuilder
+	dialog := BootstrapModalBuilder new
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
 		closeButtonLabeled: 'Disagree'
-			applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
+			applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ];
 		addFooterButton: self agreeButton;
 		addFooterButton: self takeMySoulButton;
 		build.
@@ -101,7 +101,7 @@ BootstrapModalWebViewTest >> testRenderContentOn [
 
 	footer := BootstrapModalFooterWebView
 		withCloseButtonLabeled: 'Ok'
-		applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ].
+		applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.
 
 	dialog := BootstrapModalWebView
@@ -124,15 +124,15 @@ BootstrapModalWebViewTest >> testRenderContentOnWithCommands [
 
 	footer := BootstrapModalFooterWebView
 		withCloseButtonLabeled: 'Ok'
-		applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ].
+		applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.
 
 	legalDialog := BootstrapModalWebView
 		withHeader: header
 		content: 'Some very large legal stuff. ;)'
 		footer: footer
-		applyingToDialog: [ :dialog | dialog addClass bootstrap3 fade ]
-		andModalDocument: [ :document | document addClass bootstrap3 modalLarge ].
+		applyingToDialog: [ :dialog | dialog addClass bootstrapCommon fade ]
+		andModalDocument: [ :document | document addClass bootstrapCommon modalLarge ].
 
 	html := self render: legalDialog.
 

@@ -151,12 +151,6 @@ ComponentClassificationCommandBuilder >> dropdownBackdrop [
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
-ComponentClassificationCommandBuilder >> fade [
-
-	^ self commandStyledWith: #fade
-]
-
-{ #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> formControlStatic [
 
 	^ self commandStyledWith: #formControlStatic

@@ -301,6 +301,24 @@ ComponentClassificationCommandBuilder >> isValid [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> modalDialogCentered [
+
+	^ self commandStyledWith: #modalDialogCentered
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> modalDialogScrollable [
+
+	^ self commandStyledWith: #modalDialogScrollable
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> modalExtraLarge [
+
+	^ self commandStyledWith: #modalExtraLarge
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> navFill [
 
 	^ self commandStyledWith: #navFill

@@ -52,13 +52,9 @@ WillowBootstrap class >> initialize [
 WillowBootstrap class >> initializeAccessingClasses [
 
 	<ignoreForCoverage>
-	<bootstrap3>
 	self
-		forBootstrap3Do: [ :namespace | 
-			namespace
-				bind: #date to: 'date';
-				bind: #fade to: 'fade'
-			]
+		forBootstrap3And4Do: [ :namespace | namespace bind: #fade to: 'fade' ];
+		forBootstrap3Do: [ :namespace | namespace bind: #date to: 'date' ]
 ]
 
 { #category : #'private - initialization - classes' }
@@ -1098,7 +1094,7 @@ WillowBootstrap class >> initializeModalClasses [
 		forBootstrap4Do: [ :namespace | 
 			namespace
 				bind: #modalDialogCentered to: 'modal-dialog-centered';
-				bind: #modaLDialogScrollable to: 'modal-dialog-scrollable';
+				bind: #modalDialogScrollable to: 'modal-dialog-scrollable';
 				bind: #modalExtraLarge to: 'modal-xl'
 			]
 ]

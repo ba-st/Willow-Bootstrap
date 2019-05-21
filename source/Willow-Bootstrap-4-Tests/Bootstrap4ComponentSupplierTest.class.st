@@ -1,3 +1,6 @@
+"
+A Bootstrap4ComponentSupplierTest is a test class for testing the behavior of Bootstrap4ComponentSupplier
+"
 Class {
 	#name : #Bootstrap4ComponentSupplierTest,
 	#superclass : #BootstrapComponentSupplierTest,

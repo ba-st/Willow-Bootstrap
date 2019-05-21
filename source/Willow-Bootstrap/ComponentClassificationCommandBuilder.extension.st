@@ -325,6 +325,12 @@ ComponentClassificationCommandBuilder >> dropup [
 ]
 
 { #category : #'*Willow-Bootstrap' }
+ComponentClassificationCommandBuilder >> fade [
+
+	^ self commandStyledWith: #fade
+]
+
+{ #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> formControl [
 
 	^ self commandStyledWith: #formControl
