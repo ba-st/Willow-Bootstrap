@@ -367,7 +367,7 @@ WillowBootstrap class >> initializeContainersClasses [
 WillowBootstrap class >> initializeDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap)
+	( Constants >> #bootstrap )
 		bind: #trigger to: 'trigger';
 		bind: #content to: 'content';
 		bind: #static to: 'static';
@@ -395,7 +395,18 @@ WillowBootstrap class >> initializeDataAPIConstants [
 		bind: #animation to: 'animation';
 		bind: #parent to: 'parent';
 		bind: #buttons to: 'buttons';
-		bind: #modal to: 'modal'
+		bind: #modal to: 'modal';
+		bind: #sanitize to: 'sanitize';
+		bind: #sanitizeFn to: 'sanitizeFn';
+		bind: #whiteList to: 'whiteList';
+		bind: #offset to: 'offset';
+		bind: #fallbackPlacement to: 'fallbackPlacement';
+		bind: #boundary to: 'boundary';
+		bind: #flip to: 'flip';
+		bind: #clockwise to: 'clockwise';
+		bind: #counterclockwise to: 'counterclockwise';
+		bind: #scrollParent to: 'scrollParent';
+		bind: #window to: 'window'
 ]
 
 { #category : #'private - datepicker' }

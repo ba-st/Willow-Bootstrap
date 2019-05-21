@@ -2,17 +2,17 @@
 I'm a JSObject representing a viewport configuration for Bootstrap.
 "
 Class {
-	#name : #BootstrapViewportConfiguration,
+	#name : #Bootstrap3ViewportConfiguration,
 	#superclass : #JSObject,
 	#instVars : [
 		'selector',
 		'padding'
 	],
-	#category : #'Willow-Bootstrap-Plugins'
+	#category : #'Willow-Bootstrap-3-Plugins'
 }
 
 { #category : #initialization }
-BootstrapViewportConfiguration >> initialize [
+Bootstrap3ViewportConfiguration >> initialize [
 
 	super initialize.
 	selector := 'body'.
@@ -20,7 +20,7 @@ BootstrapViewportConfiguration >> initialize [
 ]
 
 { #category : #printing }
-BootstrapViewportConfiguration >> javascriptContentOn: aStream [
+Bootstrap3ViewportConfiguration >> javascriptContentOn: aStream [
 
 	aStream nextPut: ${.
 	JSStream encodeKey: 'selector' value: selector on: aStream.
@@ -30,7 +30,7 @@ BootstrapViewportConfiguration >> javascriptContentOn: aStream [
 ]
 
 { #category : #Configuring }
-BootstrapViewportConfiguration >> selector: aString padding: aNumber [
+Bootstrap3ViewportConfiguration >> selector: aString padding: aNumber [
 
 	selector := aString.
 	padding := aNumber

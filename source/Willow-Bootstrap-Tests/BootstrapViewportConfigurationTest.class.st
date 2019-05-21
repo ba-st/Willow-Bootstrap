@@ -11,6 +11,6 @@ Class {
 BootstrapViewportConfigurationTest >> testJavascriptContentOn [
 
 	self
-		assert: BootstrapViewportConfiguration new asJavascript equals: '{"selector":"body","padding":0}';
-		assert: (BootstrapViewportConfiguration new selector: 'div' padding: 15) asJavascript equals: '{"selector":"div","padding":15}'
+		assert: Bootstrap3ViewportConfiguration new asJavascript equals: '{"selector":"body","padding":0}';
+		assert: (Bootstrap3ViewportConfiguration new selector: 'div' padding: 15) asJavascript equals: '{"selector":"div","padding":15}'
 ]

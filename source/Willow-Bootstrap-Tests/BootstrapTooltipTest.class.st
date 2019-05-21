@@ -254,7 +254,7 @@ BootstrapTooltipTest >> testViewportWithPadding [
 	| html |
 
 	html := self
-		renderTooltipContentApplying: [ :tooltip | tooltip viewport: (BootstrapViewportConfiguration new selector: '#id1' padding: 5) ].
+		renderTooltipContentApplying: [ :tooltip | tooltip viewport: (Bootstrap3ViewportConfiguration new selector: '#id1' padding: 5) ].
 
 	self
 		assert: html

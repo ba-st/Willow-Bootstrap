@@ -71,16 +71,6 @@ BootstrapPopoverTest >> testDelay [
 ]
 
 { #category : #'tests-Methods' }
-BootstrapPopoverTest >> testDestroy [
-
-	| html |
-
-	html := self renderPopoverContentApplying: [ :popover | popover destroy ].
-
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover("destroy");</script>'
-]
-
-{ #category : #'tests-Methods' }
 BootstrapPopoverTest >> testHide [
 
 	| html |
@@ -208,6 +198,31 @@ BootstrapPopoverTest >> testPlacementWithFunction [
 ]
 
 { #category : #'tests-Options' }
+BootstrapPopoverTest >> testSanitize [
+
+	| html |
+
+	html := self renderPopoverContentApplying: [ :popover | popover sanitize: true ].
+
+	self
+		assert: html
+		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"sanitize":true});</script>'
+]
+
+{ #category : #'tests-Options' }
+BootstrapPopoverTest >> testSanitizeFunction [
+
+	| html |
+
+	html := self renderPopoverContentApplying: [ :popover | popover sanitizeFunction: JSFunction new ].
+
+	self
+		assert: html
+		equals:
+			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"sanitizeFn":function(){}});</script>'
+]
+
+{ #category : #'tests-Options' }
 BootstrapPopoverTest >> testSelector [
 
 	| html |
@@ -295,24 +310,20 @@ BootstrapPopoverTest >> testTrigger [
 ]
 
 { #category : #'tests-Options' }
-BootstrapPopoverTest >> testViewport [
-
-	| html |
-
-	html := self renderPopoverContentApplying: [ :popover | popover viewport: '#id1' ].
-
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"viewport":"#id1"});</script>'
-]
-
-{ #category : #'tests-Options' }
-BootstrapPopoverTest >> testViewportWithPadding [
+BootstrapPopoverTest >> testWhiteList [
 
 	| html |
 
 	html := self
-		renderPopoverContentApplying: [ :popover | popover viewport: (BootstrapViewportConfiguration new selector: '#id1' padding: 5) ].
+		renderPopoverContentApplying: [ :popover | 
+			popover
+				whiteList:
+					{( 'a' -> #() ).
+					( 'img' -> #('src' 'alt') )}
+			].
 
 	self
 		assert: html
-		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"viewport":{"selector":"#id1","padding":5}});</script>'
+		equals:
+			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"whiteList":{"a":[],"img":["src","alt"]}});</script>'
 ]
