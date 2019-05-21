@@ -13,7 +13,7 @@ Class {
 { #category : #private }
 Bootstrap3ConstantsTest >> assertConstantAt: aSymbol equals: anExpectedValue [
 
-	self assert: Constants >> #bootstrap3 >> aSymbol equals: anExpectedValue
+	self assert: Constants >> #bootstrap >> aSymbol equals: anExpectedValue
 ]
 
 { #category : #tests }

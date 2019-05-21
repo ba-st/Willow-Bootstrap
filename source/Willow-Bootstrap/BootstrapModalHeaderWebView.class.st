@@ -17,7 +17,7 @@ Class {
 { #category : #'private - Instance Creation' }
 BootstrapModalHeaderWebView class >> dismissButton [
 
-	^ BootstrapDismissButton dismissing: Constants >> #bootstrap3 >> #modal
+	^ BootstrapDismissButton dismissing: Constants >> #bootstrap >> #modal
 ]
 
 { #category : #'Instance Creation' }

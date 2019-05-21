@@ -38,7 +38,7 @@ BootstrapDatepickerCommand class >> new [
 { #category : #processing }
 BootstrapDatepickerCommand >> applyTo: aComponent on: aCanvas [
 
-	[ :component :constants | (component setData: 'provide' to: constants >> #bootstrap3 >> #datepicker) + additionalCommand ]
+	[ :component :constants | (component setData: 'provide' to: constants >> #bootstrap >> #datepicker) + additionalCommand ]
 		asWebComponentCommand applyTo: aComponent on: aCanvas
 ]
 

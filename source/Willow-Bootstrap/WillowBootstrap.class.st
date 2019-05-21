@@ -40,8 +40,7 @@ WillowBootstrap class >> initialize [
 	Classification bind: #bootstrap3 to: Namespace new.
 	Classification bind: #bootstrap4 to: Namespace new.
 	Classification bind: #bootstrapCommon to: Namespace new.
-	Constants bind: #bootstrap3 to: Namespace new.
-	Constants bind: #bootstrap4 to: Namespace new.
+	Constants bind: #bootstrap to: Namespace new.
 	self
 		initializeBaseConstantsAndClasses;
 		initializeDatepickerConstantsAndClasses;
@@ -368,7 +367,7 @@ WillowBootstrap class >> initializeContainersClasses [
 WillowBootstrap class >> initializeDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #trigger to: 'trigger';
 		bind: #content to: 'content';
 		bind: #static to: 'static';
@@ -403,7 +402,7 @@ WillowBootstrap class >> initializeDataAPIConstants [
 WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
 
 	<ignoreForCoverage>
-	Constants >> #bootstrap3 bind: #datepicker to: 'datepicker'.
+	Constants >> #bootstrap bind: #datepicker to: 'datepicker'.
 	self
 		initializeDatepickerDataAPIConstants;
 		initializeDatepickerEventsConstants;
@@ -415,7 +414,7 @@ WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
 WillowBootstrap class >> initializeDatepickerDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #todayHighlight to: 'date-today-highlight';
 		bind: #language to: 'date-language';
 		bind: #todayButton to: 'date-today-btn';
@@ -429,7 +428,7 @@ WillowBootstrap class >> initializeDatepickerDataAPIConstants [
 WillowBootstrap class >> initializeDatepickerEventsConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #changeDate to: 'changeDate';
 		bind: #clearDate to: 'clearDate';
 		bind: #changeMonth to: 'changeMonth';
@@ -444,7 +443,7 @@ WillowBootstrap class >> initializeDatepickerEventsConstants [
 WillowBootstrap class >> initializeDatepickerViewModesConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #centuries to: 'centuries';
 		bind: #years to: 'years';
 		bind: #month to: 'month';
@@ -462,7 +461,7 @@ WillowBootstrap class >> initializeDatepickerViewModesConstants [
 WillowBootstrap class >> initializeDatepickerWeekStartConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #sunday to: 0;
 		bind: #friday to: 5;
 		bind: #wednesday to: 3;
@@ -552,7 +551,7 @@ WillowBootstrap class >> initializeEmbedClasses [
 WillowBootstrap class >> initializeEventsConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #showTooltip to: 'show.bs.tooltip';
 		bind: #insertedTooltip to: 'inserted.bs.tooltip';
 		bind: #hiddenCollapse to: 'hidden.bs.collapse';
@@ -1289,7 +1288,7 @@ WillowBootstrap class >> initializeResponsiveUtilitiesClasses [
 WillowBootstrap class >> initializeSelectConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #contains to: 'contains';
 		bind: #auto to: 'auto';
 		bind: #style to: 'style';
@@ -1316,7 +1315,7 @@ WillowBootstrap class >> initializeSelectConstantsAndClasses [
 WillowBootstrap class >> initializeSelectDataAPIConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #header to: 'header';
 		bind: #liveSearch to: 'live-search';
 		bind: #deselectAllText to: 'deselect-all-text';
@@ -1350,7 +1349,7 @@ WillowBootstrap class >> initializeSelectDataAPIConstants [
 WillowBootstrap class >> initializeSelectEventsConstants [
 
 	<ignoreForCoverage>
-	(Constants >> #bootstrap3)
+	(Constants >> #bootstrap)
 		bind: #hiddenSelect to: 'hidden.bs.select';
 		bind: #changedSelect to: 'changed.bs.select';
 		bind: #refreshedSelect to: 'refreshed.bs.select';
@@ -1586,7 +1585,7 @@ WillowBootstrap class >> initializeWellsClasses [
 WillowBootstrap class >> initializeWillowFunctionsConstants [
 
 	<ignoreForCoverage>
-	Constants >> #bootstrap3 bind: #cleanModalFunctionName to: 'cleanModal'
+	Constants >> #bootstrap bind: #cleanModalFunctionName to: 'cleanModal'
 ]
 
 { #category : #private }

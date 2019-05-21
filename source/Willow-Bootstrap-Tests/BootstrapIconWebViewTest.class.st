@@ -24,7 +24,7 @@ BootstrapIconWebViewTest >> testRepresentingApplying [
 
 	| icon html |
 
-	icon := BootstrapIconWebView representing: Glyphicons menuUp applying: [ :span :constants | span setData: constants >> #bootstrap3 >> #dismiss to: true ].
+	icon := BootstrapIconWebView representing: Glyphicons menuUp applying: [ :span :constants | span setData: constants >> #bootstrap >> #dismiss to: true ].
 
 	html := self render: icon.
 

@@ -25,5 +25,5 @@ BootstrapSelfCleaningModalCommand >> initialize [
 			canvas jQuery this bootstrapModal
 				backdrop: #static;
 				onHidden:
-					(canvas javascript call: (canvas jQuery willow bootstrap access: Constants >> #bootstrap3 >> #cleanModalFunctionName) asJavascript with: canvas jQuery this) asFunction ]
+					(canvas javascript call: (canvas jQuery willow bootstrap access: Constants >> #bootstrap >> #cleanModalFunctionName) asJavascript with: canvas jQuery this) asFunction ]
 ]

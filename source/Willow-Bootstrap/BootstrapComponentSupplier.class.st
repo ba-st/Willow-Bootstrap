@@ -7,6 +7,12 @@ Class {
 	#category : #'Willow-Bootstrap-Frontend'
 }
 
+{ #category : #Interaction }
+BootstrapComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas [
+
+	aJSScript << (dialogSupplier value: (jQueryMatchingDialogContainer children: 'div')) bootstrapModal hide
+]
+
 { #category : #Supplying }
 BootstrapComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aComponentCommand [
 

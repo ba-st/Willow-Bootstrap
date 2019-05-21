@@ -49,7 +49,7 @@ BootstrapDropdownBuilder >> beRightAligned [
 BootstrapDropdownBuilder >> dropdownCommandFor: button using: constants [
 
 	^ button addClass bootstrapCommon dropdownToggle
-		+ ( button setData: constants >> #bootstrap3  >> #toggle to: constants >> #bootstrap3 >> #dropdown )
+		+ ( button setData: constants >> #bootstrap  >> #toggle to: constants >> #bootstrap >> #dropdown )
 		+ ( button setARIAAttribute: 'haspopup' to: 'true' )
 		+ ( button setARIAAttribute: 'expanded' to: 'false' )
 ]

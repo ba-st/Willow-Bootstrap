@@ -18,7 +18,7 @@ BootstrapModalFooterWebView class >> closeButtonLabeled: aRenderable applying: a
 		labeled: aRenderable
 		applying: [ :button :constants | 
 			button addClass bootstrap3 button
-				+ ( button setData: constants >> #bootstrap3 >> #dismiss to: constants >> #bootstrap3 >> #modal )
+				+ ( button setData: constants >> #bootstrap >> #dismiss to: constants >> #bootstrap >> #modal )
 				+ aComponentCommand
 			]
 ]

@@ -38,12 +38,6 @@ Bootstrap3ComponentSupplier class >> withBootstrapLibrary: aBootstrapLibrary sel
 			aTypeaheadLibrary}
 ]
 
-{ #category : #Interaction }
-Bootstrap3ComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas [
-
-	aJSScript << (dialogSupplier value: (jQueryMatchingDialogContainer children: 'div')) bootstrapModal hide
-]
-
 { #category : #Supplying }
 Bootstrap3ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 
@@ -193,5 +187,5 @@ Bootstrap3ComponentSupplier >> updateRoot: aRoot [
 		name: 'viewport';
 		content: 'width=device-width, initial-scale=1.0'.
 	bootstrapLibraries do: [ :library | library updateRoot: aRoot ].
-	WillowBootstrapFileMetadataLibrary default updateRoot: aRoot
+	WillowBootstrap3FileMetadataLibrary default updateRoot: aRoot
 ]

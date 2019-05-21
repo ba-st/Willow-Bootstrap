@@ -23,7 +23,7 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 							canvas span apply: [ :span | span addClass bootstrap3 caret ]
 							]
 							applying: [ :anchor :constants | 
-								( anchor setData: constants >> #bootstrap3 >> #target to: constants >> #bootstrap3 >> #dropdown )
+								( anchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown )
 									+ ( anchor setARIARoleTo: #button )
 								].
 					canvas unorderedList

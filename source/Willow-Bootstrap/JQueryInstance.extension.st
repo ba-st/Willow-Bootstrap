@@ -57,107 +57,107 @@ JQueryInstance >> bootstrapTypeahead [
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onHiddenCollapse: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #hiddenCollapse with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #hiddenCollapse with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onHiddenDropdown: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #hiddenDropdown with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #hiddenDropdown with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onHiddenPopover: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #hiddenPopover with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #hiddenPopover with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onHiddenTooltip: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #hiddenTooltip with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #hiddenTooltip with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onHideCollapse: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #hideCollapse with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #hideCollapse with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onHideDropdown: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #hideDropdown with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #hideDropdown with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onHidePopover: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #hidePopover with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #hidePopover with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onHideTooltip: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #hideTooltip with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #hideTooltip with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onInsertedPopover: aFunction [
  
-	self call: 'on' with: self constants >> #bootstrap3 >> #insertedPopover with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #insertedPopover with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onInsertedTooltip: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #insertedTooltip with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #insertedTooltip with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onShowCollapse: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #showCollapse with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #showCollapse with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onShowDropdown: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #showDropdown with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #showDropdown with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onShowPopover: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #showPopover with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #showPopover with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onShowTooltip: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #showTooltip with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #showTooltip with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onShownCollapse: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #shownCollapse with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #shownCollapse with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onShownDropdown: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #shownDropdown with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #shownDropdown with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onShownPopover: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #shownPopover with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #shownPopover with: aFunction
 ]
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onShownTooltip: aFunction [
 
-	self call: 'on' with: self constants >> #bootstrap3 >> #shownTooltip with: aFunction
+	self call: 'on' with: self constants >> #bootstrap >> #shownTooltip with: aFunction
 ]
