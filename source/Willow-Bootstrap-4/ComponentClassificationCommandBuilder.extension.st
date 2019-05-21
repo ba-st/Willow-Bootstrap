@@ -259,6 +259,24 @@ ComponentClassificationCommandBuilder >> formText [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> inputGroupAppend [
+
+	^ self commandStyledWith: #inputGroupAppend
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> inputGroupPrepend [
+
+	^ self commandStyledWith: #inputGroupPrepend
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> inputGroupText [
+
+	^ self commandStyledWith: #inputGroupText
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> invalidFeedback [
 
 	^ self commandStyledWith: #invalidFeedback

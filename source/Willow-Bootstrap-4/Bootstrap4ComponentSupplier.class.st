@@ -47,6 +47,12 @@ Bootstrap4ComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn off
 ]
 
 { #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> fieldAddonBuilder [
+
+	^ Bootstrap4FieldAddonBuilder new
+]
+
+{ #category : #'Supplying - Non Portable' }
 Bootstrap4ComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
 
 	^ Bootstrap4HelpTextWebView boundTo: aFieldWebView describedBy: aHelpText

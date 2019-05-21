@@ -44,6 +44,14 @@ BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
 ]
 
 { #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> fieldAddonBuilder [
+
+	"A Field addon builder allows to extend fields by adding text, buttons or button groups on either side of the field"
+
+	^ self subclassResponsibility
+]
+
+{ #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
 
 	^ self subclassResponsibility

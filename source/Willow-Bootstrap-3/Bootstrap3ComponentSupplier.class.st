@@ -88,6 +88,12 @@ Bootstrap3ComponentSupplier >> dropdownListApplying: aComponentCommand [
 		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand + BootstrapSelectCommand new ]
 ]
 
+{ #category : #'Supplying - Non Portable' }
+Bootstrap3ComponentSupplier >> fieldAddonBuilder [
+
+	^ Bootstrap3FieldAddonBuilder new 
+]
+
 { #category : #Supplying }
 Bootstrap3ComponentSupplier >> fieldSetContaining: aWebView applying: fieldSetCommand withLegend: aTitle applying: legendCommand [
 
@@ -114,22 +120,6 @@ Bootstrap3ComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelp
 Bootstrap3ComponentSupplier >> initializeUsing: aLibraryCollection [
 
 	bootstrapLibraries := aLibraryCollection
-]
-
-{ #category : #'Supplying - Non Portable' }
-Bootstrap3ComponentSupplier >> inputGroupAddOnWrapping: aRenderable [
-
-	^ PhrasingContainerWebView
-		wrapping: aRenderable
-		applying: [ :container | container addClass bootstrap3 inputGroupAddon ]
-]
-
-{ #category : #'Supplying - Non Portable' }
-Bootstrap3ComponentSupplier >> inputGroupButtonWrapping: aRenderable [
-
-	^ PhrasingContainerWebView
-		wrapping: aRenderable
-		applying: [ :container | container addClass bootstrap3 inputGroupButton ]
 ]
 
 { #category : #'Supplying - Non Portable' }
