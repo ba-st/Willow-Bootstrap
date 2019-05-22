@@ -63,6 +63,16 @@ BootstrapComponentSupplier >> fieldAddonBuilder [
 	^ self subclassResponsibility
 ]
 
+{ #category : #Supplying }
+BootstrapComponentSupplier >> fieldSetContaining: aWebView applying: fieldSetCommand withLegend: aTitle applying: legendCommand [
+
+	^ FieldSetWebView
+		containing: aWebView
+		applying: fieldSetCommand
+		withLegend: aTitle
+		applying: legendCommand
+]
+
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
 

@@ -63,6 +63,19 @@ BootstrapComponentSupplierTest >> testDecimalNumberFieldApplying [
 ]
 
 { #category : #'tests-Supplying' }
+BootstrapComponentSupplierTest >> testFieldSetContainingApplyingWithLegendApplying [
+
+	self
+		assertRenderingOf: [ :supplier | 
+			supplier
+				fieldSetContaining: 'The View'
+				applying: [ :fieldSet | fieldSet beDisabled ]
+				withLegend: 'Its Title'
+				applying: [ :legend | legend beAutofocused ] ]
+		equals: '<fieldset disabled><legend autofocus>Its Title</legend>The View</fieldset>'
+]
+
+{ #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testMultiLineTextFieldApplying [
 
 	self

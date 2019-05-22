@@ -82,16 +82,6 @@ Bootstrap3ComponentSupplier >> fieldAddonBuilder [
 	^ Bootstrap3FieldAddonBuilder new 
 ]
 
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> fieldSetContaining: aWebView applying: fieldSetCommand withLegend: aTitle applying: legendCommand [
-
-	^ FieldSetWebView
-		containing: aWebView
-		applying: fieldSetCommand
-		withLegend: aTitle
-		applying: legendCommand
-]
-
 { #category : #'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> gridBuilder [
 
