@@ -121,7 +121,7 @@ BootstrapPopoverTest >> testHtmlTitle [
 				htmlTitle:
 					( GenericContainerWebView
 						wrapping: 'A complex title'
-						applying: [ :container | container addClass bootstrap3 container ] )
+						applying: [ :container | container addClass bootstrapCommon container ] )
 			].
 
 	self

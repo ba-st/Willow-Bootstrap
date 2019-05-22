@@ -37,15 +37,6 @@ BootstrapTooltip >> delay: aNumberOrObject [
 ]
 
 { #category : #Methods }
-BootstrapTooltip >> destroy [
-
-	"Hides and destroys an element's tooltip. 
-	Tooltips that use delegation (which are created using the selector option) cannot be individually destroyed on descendant trigger elements."
-
-	functionName := 'destroy'
-]
-
-{ #category : #Methods }
 BootstrapTooltip >> hide [
 
 	"Hides an element's tooltip. Returns to the caller before the tooltip has actually been hidden (i.e. before the hidden.bs.tooltip event occurs). 
@@ -60,6 +51,14 @@ BootstrapTooltip >> html: aBoolean [
 	"Insert HTML into the tooltip. If false, jQuery's text method will be used to insert content into the DOM. Use text if you're worried about XSS attacks."
 
 	self optionAt: #html put: aBoolean
+]
+
+{ #category : #Options }
+BootstrapTooltip >> htmlTitle: aRenderable [
+
+	self
+		html: true;
+		title: (self render: aRenderable)
 ]
 
 { #category : #private }
@@ -79,6 +78,22 @@ BootstrapTooltip >> placement: aStringOrFunction [
 	The this context is set to the tooltip instance."
 
 	self optionAt: #placement put: (self lookupCssValue: aStringOrFunction)
+]
+
+{ #category : #Options }
+BootstrapTooltip >> sanitize: aBoolean [
+
+	"Enable or disable the sanitization. If activated 'template', 'content' and 'title' options will be sanitized."
+
+	self optionAt: #sanitize put: aBoolean
+]
+
+{ #category : #Options }
+BootstrapTooltip >> sanitizeFunction: aJSFunction [
+
+	"Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization."
+
+	self optionAt: #sanitizeFn put: aJSFunction
 ]
 
 { #category : #Options }
@@ -139,11 +154,13 @@ BootstrapTooltip >> trigger: aString [
 ]
 
 { #category : #Options }
-BootstrapTooltip >> viewport: aStringViewportConfigurationOrFunction [
+BootstrapTooltip >> whiteList: anAssociationArray [
 
-	"Keeps the tooltip within the bounds of this element. 
-	Example: viewport: '#viewport' or { 'selector': '#viewport', 'padding': 0 }
-	If a function is given, it is called with the triggering element DOM node as its only argument. The this context is set to the tooltip instance."
+	"Object which contains allowed attributes and tags"
 
-	self optionAt: #viewport put: aStringViewportConfigurationOrFunction
+	| object |
+
+	object := GRSmallDictionary new.
+	anAssociationArray do: [ :association | object at: association key put: association value asArray ].
+	self optionAt: #whiteList put: object
 ]
