@@ -2,17 +2,17 @@
 A BootstrapGridBuilderTest is a test class for testing the behavior of BootstrapGridBuilder
 "
 Class {
-	#name : #BootstrapGridBuilderTest,
+	#name : #Bootstrap3GridBuilderTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #tests }
-BootstrapGridBuilderTest >> testApplyingCellCommand [
+Bootstrap3GridBuilderTest >> testApplyingCellCommand [
 
 	| grid html |
 
-	grid := BootstrapGridBuilder new
+	grid := Bootstrap3GridBuilder new
 		addContent: 1;
 		addContent: 2;
 		addContent: 3;
@@ -29,11 +29,11 @@ BootstrapGridBuilderTest >> testApplyingCellCommand [
 ]
 
 { #category : #tests }
-BootstrapGridBuilderTest >> testApplyingRowCommand [
+Bootstrap3GridBuilderTest >> testApplyingRowCommand [
 
 	| grid html |
 
-	grid := BootstrapGridBuilder new
+	grid := Bootstrap3GridBuilder new
 		columnsPerRow: 3;
 		addContent: 1;
 		addContent: 2;
@@ -50,11 +50,11 @@ BootstrapGridBuilderTest >> testApplyingRowCommand [
 ]
 
 { #category : #tests }
-BootstrapGridBuilderTest >> testEvenlyDistributed [
+Bootstrap3GridBuilderTest >> testEvenlyDistributed [
 
 	| grid html |
 
-	grid := BootstrapGridBuilder new
+	grid := Bootstrap3GridBuilder new
 		columnsPerRow: 3;
 		addContent: 1;
 		addContent: 2;
@@ -68,11 +68,11 @@ BootstrapGridBuilderTest >> testEvenlyDistributed [
 ]
 
 { #category : #tests }
-BootstrapGridBuilderTest >> testForExtraSmallDevices [
+Bootstrap3GridBuilderTest >> testForExtraSmallDevices [
 
 	| grid html |
 
-	grid := BootstrapGridBuilder new
+	grid := Bootstrap3GridBuilder new
 		addContent: 1;
 		forExtraSmallDevices;
 		build.
@@ -83,11 +83,11 @@ BootstrapGridBuilderTest >> testForExtraSmallDevices [
 ]
 
 { #category : #tests }
-BootstrapGridBuilderTest >> testForLargeDevices [
+Bootstrap3GridBuilderTest >> testForLargeDevices [
 
 	| grid html |
 
-	grid := BootstrapGridBuilder new
+	grid := Bootstrap3GridBuilder new
 		addContent: 1;
 		forLargeDevices;
 		build.
@@ -98,7 +98,7 @@ BootstrapGridBuilderTest >> testForLargeDevices [
 ]
 
 { #category : #tests }
-BootstrapGridBuilderTest >> testForSmallDevices [
+Bootstrap3GridBuilderTest >> testForSmallDevices [
 
 	| grid html |
 
@@ -113,11 +113,11 @@ BootstrapGridBuilderTest >> testForSmallDevices [
 ]
 
 { #category : #tests }
-BootstrapGridBuilderTest >> testWithCustomColumnWidths [
+Bootstrap3GridBuilderTest >> testWithCustomColumnWidths [
 
 	| grid html |
 
-	grid := BootstrapGridBuilder new
+	grid := Bootstrap3GridBuilder new
 		columnsWidths: #(1 4 7);
 		addContent: 1;
 		addContent: 2;

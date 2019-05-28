@@ -65,6 +65,12 @@ Bootstrap4ComponentSupplier >> fieldAddonBuilder [
 ]
 
 { #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> gridBuilder [
+
+	^ Bootstrap4GridBuilder new
+]
+
+{ #category : #'Supplying - Non Portable' }
 Bootstrap4ComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
 
 	^ Bootstrap4HelpTextWebView boundTo: aFieldWebView describedBy: aHelpText

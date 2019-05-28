@@ -80,6 +80,12 @@ BootstrapComponentSupplier >> fieldSetContaining: aWebView applying: fieldSetCom
 ]
 
 { #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> gridBuilder [
+
+	self subclassResponsibility
+]
+
+{ #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
 
 	^ self subclassResponsibility

@@ -7,6 +7,12 @@ Class {
 	#category : #'Willow-Bootstrap-WebViews'
 }
 
+{ #category : #testing }
+BootstrapFieldAddonBuilder class >> isAbstract [
+
+	^ self name = #BootstrapFieldAddonBuilder
+]
+
 { #category : #configuring }
 BootstrapFieldAddonBuilder >> appendButton: aButtonLikeComponent [
 

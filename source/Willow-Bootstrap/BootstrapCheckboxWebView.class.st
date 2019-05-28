@@ -14,6 +14,12 @@ Class {
 	#category : #'Willow-Bootstrap-WebViews'
 }
 
+{ #category : #testing }
+BootstrapCheckboxWebView class >> isAbstract [
+
+	^ self name = #BootstrapCheckboxWebView
+]
+
 { #category : #'instance creation' }
 BootstrapCheckboxWebView class >> labeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 

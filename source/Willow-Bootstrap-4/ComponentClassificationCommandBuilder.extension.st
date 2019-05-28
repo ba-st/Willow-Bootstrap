@@ -205,6 +205,30 @@ ComponentClassificationCommandBuilder >> cardTitle [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> column [
+
+	^ self commandStyledWith: #column
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> column: count [
+
+	^ self commandStyledWith: (#'column<1p>' expandMacrosWith: count)
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> columnExtraLarge [
+
+	^ self commandStyledWith: #columnExtraLarge
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> columnExtraSmall [
+
+	^ self commandStyledWith: #columnExtraSmall
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> columnFormLabel [
 
 	^ self commandStyledWith: #columnFormLabel
@@ -220,6 +244,24 @@ ComponentClassificationCommandBuilder >> columnFormLabelLarge [
 ComponentClassificationCommandBuilder >> columnFormLabelSmall [
 
 	^ self commandStyledWith: #columnFormLabelSmall
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> columnLarge [
+
+	^ self commandStyledWith: #columnLarge
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> columnMedium [
+
+	^ self commandStyledWith: #columnMedium
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> columnSmall [
+
+	^ self commandStyledWith: #columnSmall
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
@@ -445,6 +487,30 @@ ComponentClassificationCommandBuilder >> formText [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> height100Percent [
+
+	^ self commandStyledWith: #height100Percent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> height25Percent [
+
+	^ self commandStyledWith: #height25Percent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> height50Percent [
+
+	^ self commandStyledWith: #height50Percent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> height75Percent [
+
+	^ self commandStyledWith: #height75Percent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> inputGroupAppend [
 
 	^ self commandStyledWith: #inputGroupAppend
@@ -580,6 +646,18 @@ ComponentClassificationCommandBuilder >> listGroupItemPrimary [
 ComponentClassificationCommandBuilder >> listGroupItemSecondary [
 
 	^ self commandStyledWith: #listGroupItemSecondary
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> maxHeight100Percent [
+
+	^ self commandStyledWith: #maxHeight100Percent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> maxWidth100Percent [
+
+	^ self commandStyledWith: #maxWidth100Percent
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
@@ -772,4 +850,28 @@ ComponentClassificationCommandBuilder >> validFeedback [
 ComponentClassificationCommandBuilder >> validTooltip [
 
 	^ self commandStyledWith: #validTooltip
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> width100Percent [
+
+	^ self commandStyledWith: #width100Percent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> width25Percent [
+
+	^ self commandStyledWith: #width25Percent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> width50Percent [
+
+	^ self commandStyledWith: #width50Percent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> width75Percent [
+
+	^ self commandStyledWith: #width75Percent
 ]

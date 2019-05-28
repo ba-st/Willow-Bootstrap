@@ -85,7 +85,7 @@ Bootstrap3ComponentSupplier >> fieldAddonBuilder [
 { #category : #'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> gridBuilder [
 
-	^ BootstrapGridBuilder new
+	^ Bootstrap3GridBuilder new
 ]
 
 { #category : #'Supplying - Non Portable' }

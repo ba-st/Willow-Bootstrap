@@ -9,6 +9,12 @@ Class {
 	#category : #'Willow-Bootstrap-WebViews'
 }
 
+{ #category : #testing }
+BootstrapDropdownBuilder class >> isAbstract [
+
+	^ self name = #BootstrapDropdownBuilder
+]
+
 { #category : #'instance creation' }
 BootstrapDropdownBuilder class >> using: aComponentSupplier [
 
