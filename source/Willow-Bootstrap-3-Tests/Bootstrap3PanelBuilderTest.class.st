@@ -2,23 +2,23 @@
 A BootstrapPanelBuilderTest is a test class for testing the behavior of BootstrapPanelBuilder
 "
 Class {
-	#name : #BootstrapPanelBuilderTest,
+	#name : #Bootstrap3PanelBuilderTest,
 	#superclass : #BWRenderingTest,
 	#instVars : [
 		'supplier'
 	],
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #initialization }
-BootstrapPanelBuilderTest >> setUp [
+Bootstrap3PanelBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap3ComponentSupplier online
 ]
 
 { #category : #tests }
-BootstrapPanelBuilderTest >> testRenderContextualAlternatives [
+Bootstrap3PanelBuilderTest >> testRenderContextualAlternatives [
 
 	| panel html |
 
@@ -35,7 +35,7 @@ BootstrapPanelBuilderTest >> testRenderContextualAlternatives [
 ]
 
 { #category : #tests }
-BootstrapPanelBuilderTest >> testRenderPanelWithFooter [
+Bootstrap3PanelBuilderTest >> testRenderPanelWithFooter [
 
 	| panel html |
 
@@ -52,7 +52,7 @@ BootstrapPanelBuilderTest >> testRenderPanelWithFooter [
 ]
 
 { #category : #tests }
-BootstrapPanelBuilderTest >> testRenderPanelWithHeading [
+Bootstrap3PanelBuilderTest >> testRenderPanelWithHeading [
 
 	| panel html |
 
@@ -81,7 +81,7 @@ BootstrapPanelBuilderTest >> testRenderPanelWithHeading [
 ]
 
 { #category : #tests }
-BootstrapPanelBuilderTest >> testRenderPanelWithListGroups [
+Bootstrap3PanelBuilderTest >> testRenderPanelWithListGroups [
 
 	| panel html listGroup |
 
@@ -105,7 +105,7 @@ BootstrapPanelBuilderTest >> testRenderPanelWithListGroups [
 ]
 
 { #category : #tests }
-BootstrapPanelBuilderTest >> testRenderPanelWithListGroupsAndTables [
+Bootstrap3PanelBuilderTest >> testRenderPanelWithListGroupsAndTables [
 
 	| panel html listGroup table |
 
@@ -138,7 +138,7 @@ BootstrapPanelBuilderTest >> testRenderPanelWithListGroupsAndTables [
 ]
 
 { #category : #tests }
-BootstrapPanelBuilderTest >> testRenderPanelWithTables [
+Bootstrap3PanelBuilderTest >> testRenderPanelWithTables [
 
 	| panel html table |
 
@@ -176,7 +176,7 @@ BootstrapPanelBuilderTest >> testRenderPanelWithTables [
 ]
 
 { #category : #tests }
-BootstrapPanelBuilderTest >> testRenderingBasicExample [
+Bootstrap3PanelBuilderTest >> testRenderingBasicExample [
 
 	| panel html |
 

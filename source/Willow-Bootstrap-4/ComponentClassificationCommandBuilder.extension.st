@@ -31,6 +31,84 @@ ComponentClassificationCommandBuilder >> alertSecondary [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundDark [
+
+	^ self commandStyledWith: #backgroundDark
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundGradientDanger [
+
+	^ self commandStyledWith: #backgroundGradientDanger
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundGradientDark [
+
+	^ self commandStyledWith: #backgroundGradientDark
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundGradientInfo [
+
+	^ self commandStyledWith: #backgroundGradientInfo
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundGradientLight [
+
+	^ self commandStyledWith: #backgroundGradientLight
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundGradientPrimary [
+
+	^ self commandStyledWith: #backgroundGradientPrimary
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundGradientSecondary [
+
+	^ self commandStyledWith: #backgroundGradientSecondary
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundGradientSuccess [
+
+	^ self commandStyledWith: #backgroundGradientSuccess
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundGradientWarning [
+
+	^ self commandStyledWith: #backgroundGradientWarning
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundLight [
+
+	^ self commandStyledWith: #backgroundLight
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundSecondary [
+
+	^ self commandStyledWith: #backgroundSecondary
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundTransparent [
+
+	^ self commandStyledWith: #backgroundTransparent
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> backgroundWhite [
+
+	^ self commandStyledWith: #backgroundWhite
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> bootstrap4 [
 
 	classificationNamespace := classificationNamespace >> #bootstrap4
@@ -40,6 +118,90 @@ ComponentClassificationCommandBuilder >> bootstrap4 [
 ComponentClassificationCommandBuilder >> breadcrumbItem [
 
 	^ self commandStyledWith: #breadcrumbItem
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> carDeck [
+
+	^ self commandStyledWith: #carDeck
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> card [
+
+	^ self commandStyledWith: #card
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardBody [
+
+	^ self commandStyledWith: #cardBody
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardColumns [
+
+	^ self commandStyledWith: #cardColumns
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardFooter [
+
+	^ self commandStyledWith: #cardFooter
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardGroup [
+
+	^ self commandStyledWith: #cardGroup
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardHeader [
+
+	^ self commandStyledWith: #cardHeader
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardImage [
+
+	^ self commandStyledWith: #cardImage
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardImageOverlay [
+
+	^ self commandStyledWith: #cardImageOverlay
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardImageTop [
+
+	^ self commandStyledWith: #cardImageTop
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardLink [
+
+	^ self commandStyledWith: #cardLink
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardSubtitle [
+
+	^ self commandStyledWith: #cardSubtitle
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardText [
+
+	^ self commandStyledWith: #cardText
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardTitle [
+
+	^ self commandStyledWith: #cardTitle
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
@@ -355,6 +517,72 @@ ComponentClassificationCommandBuilder >> justifyContentStart [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupFlush [
+
+	^ self commandStyledWith: #listGroupFlush
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupHorizontal [
+
+	^ self commandStyledWith: #listGroupHorizontal
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupHorizontalExtraSmall [
+
+	^ self commandStyledWith: #listGroupHorizontalExtraSmall
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupHorizontalLarge [
+
+	^ self commandStyledWith: #listGroupHorizontalLarge
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupHorizontalMedium [
+
+	^ self commandStyledWith: #listGroupHorizontalMedium
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupHorizontalSmall [
+
+	^ self commandStyledWith: #listGroupHorizontalSmall
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupItemAction [
+
+	^ self commandStyledWith: #listGroupItemAction
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupItemDark [
+
+	^ self commandStyledWith: #listGroupItemDark
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupItemLight [
+
+	^ self commandStyledWith: #listGroupItemLight
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupItemPrimary [
+
+	^ self commandStyledWith: #listGroupItemPrimary
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> listGroupItemSecondary [
+
+	^ self commandStyledWith: #listGroupItemSecondary
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> modalDialogCentered [
 
 	^ self commandStyledWith: #modalDialogCentered
@@ -490,6 +718,48 @@ ComponentClassificationCommandBuilder >> positionSticky [
 ComponentClassificationCommandBuilder >> stickyTop [
 
 	^ self commandStyledWith: #stickyTop
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> textBlack50 [
+
+	^ self commandStyledWith: #textBlack50
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> textBody [
+
+	^ self commandStyledWith: #textBody
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> textDark [
+
+	^ self commandStyledWith: #textDark
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> textLight [
+
+	^ self commandStyledWith: #textLight
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> textSecondary [
+
+	^ self commandStyledWith: #textSecondary
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> textWhite [
+
+	^ self commandStyledWith: #textWhite
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> textWhite50 [
+
+	^ self commandStyledWith: #textWhite50
 ]
 
 { #category : #'*Willow-Bootstrap-4' }

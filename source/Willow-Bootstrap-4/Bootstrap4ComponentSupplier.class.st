@@ -27,6 +27,12 @@ Bootstrap4ComponentSupplier class >> usingLibraries: aLibraryCollection [
 	^ self new initializeUsing: aLibraryCollection
 ]
 
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> cardBuilder [
+
+	^ Bootstrap4CardBuilder new
+]
+
 { #category : #Supplying }
 Bootstrap4ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 
@@ -79,6 +85,12 @@ Bootstrap4ComponentSupplier >> labeledFieldApplying: aCommandToContainer display
 Bootstrap4ComponentSupplier >> navigationDropdownMenuBuilder [
 
 	^ Bootstrap4NavigationDropdownMenuBuilder using: self
+]
+
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> panelBuilder [
+
+	^ self cardBuilder
 ]
 
 { #category : #'Supplying - Non Portable' }

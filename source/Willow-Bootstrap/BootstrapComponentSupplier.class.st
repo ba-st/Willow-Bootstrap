@@ -7,6 +7,12 @@ Class {
 	#category : #'Willow-Bootstrap-Frontend'
 }
 
+{ #category : #testing }
+BootstrapComponentSupplier class >> isAbstract [
+
+	^ self name = #BootstrapComponentSupplier
+]
+
 { #category : #Interaction }
 BootstrapComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas [
 
@@ -124,6 +130,12 @@ BootstrapComponentSupplier >> notificationBuilder [
 ]
 
 { #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> panelBuilder [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> pillsBuilder [
 
 	^ self subclassResponsibility
@@ -154,6 +166,15 @@ BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfE
 BootstrapComponentSupplier >> splitButtonDropdownBuilder [
 
 	^ self subclassResponsibility
+]
+
+{ #category : #Supplying }
+BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aComponentCommand evaluating: anActionBlock [
+
+	^ SynchronicSubmitButtonWebView
+		labeled: aRenderable
+		applying: [ :field | field addClass bootstrapCommon button + aComponentCommand ]
+		evaluating: anActionBlock
 ]
 
 { #category : #Supplying }

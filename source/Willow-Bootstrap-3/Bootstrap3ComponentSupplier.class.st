@@ -120,7 +120,7 @@ Bootstrap3ComponentSupplier >> navigationDropdownMenuBuilder [
 { #category : #'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> panelBuilder [
 
-	^ BootstrapPanelBuilder new
+	^ Bootstrap3PanelBuilder new
 ]
 
 { #category : #'Supplying - Non Portable' }
@@ -149,15 +149,6 @@ Bootstrap3ComponentSupplier >> singleButtonDropdownBuilder [
 Bootstrap3ComponentSupplier >> splitButtonDropdownBuilder [
 
 	^ Bootstrap3SplitButtonDropdownBuilder using: self
-]
-
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aComponentCommand evaluating: anActionBlock [
-
-	^ SynchronicSubmitButtonWebView
-		labeled: aRenderable
-		applying: [ :field | field addClass bootstrap3 button + aComponentCommand ]
-		evaluating: anActionBlock
 ]
 
 { #category : #'Supplying - Non Portable' }

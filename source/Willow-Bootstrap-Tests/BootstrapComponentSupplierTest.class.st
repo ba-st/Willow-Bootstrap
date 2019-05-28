@@ -57,6 +57,16 @@ BootstrapComponentSupplierTest >> testAsynchronicLinkActingAsButtonLabeledApplyi
 ]
 
 { #category : #'tests-Supplying' }
+BootstrapComponentSupplierTest >> testAsynchronicLinkLabeledApplying [
+
+	self
+		assertRenderingOf:
+			[ :supplier | supplier asynchronicLinkLabeled: 'Buy' applying: [ :link | link addClass bootstrapCommon buttonPrimary ] ]
+		equals:
+			'<a id="a-id1" class="btn-primary">Buy</a><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});</script>'
+]
+
+{ #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testDecimalNumberFieldApplying [
 
 	self assertRenderingOf: [ :supplier | supplier decimalNumberFieldApplying: [ :field |  ] ] equals: '<input value="" name="1" type="number" class="form-control text-right"/>'
@@ -114,6 +124,19 @@ BootstrapComponentSupplierTest >> testNotificationBuilder [
 BootstrapComponentSupplierTest >> testSingleSelectionListBoxDisplayingAtOnceApplying [
 
 	self assertRenderingOf: [ :supplier | supplier singleSelectionListBoxDisplayingAtOnce: 10 applying: [ :listBox |  ] ] equals: '<select name="1" size="10" class="form-control"></select>'
+]
+
+{ #category : #'tests-Supplying' }
+BootstrapComponentSupplierTest >> testSynchronicButtonLabeledApplyingEvaluating [
+
+	self
+		assertRenderingOf: [ :supplier | 
+			supplier
+				synchronicButtonLabeled: 'Buy'
+				applying: [ :link | link addClass bootstrapCommon buttonPrimary ]
+				evaluating: [  ]
+			]
+		equals: '<button name="1" class="btn btn-primary" type="submit">Buy</button>'
 ]
 
 { #category : #'tests-Supplying' }
