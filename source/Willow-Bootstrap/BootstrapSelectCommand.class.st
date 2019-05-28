@@ -13,7 +13,7 @@ BootstrapSelectCommand >> applyTo: aComponent on: aCanvas [
 	"We need to call the render method after the command application to get the right rendering"
 
 	[ :component | 
-	component addClass bootstrapCommon selectpicker
+	component addClass bootstrap3 selectpicker
 		+ ( component addScript js: [ :canvas | canvas jQuery this bootstrapSelect render ] )
 	] asWebComponentCommand applyTo: aComponent on: aCanvas
 ]
