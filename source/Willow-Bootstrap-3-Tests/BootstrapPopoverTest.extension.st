@@ -32,7 +32,7 @@ BootstrapPopoverTest >> testTemplateForBootstrap3 [
 										withLevel: 3
 										applying: [ :container | container addClass bootstrap3 popoverTitle ] ).
 							template div
-								with: ( BootstrapIconWebView representing: Glyphicons menuUp )
+								with: ( Bootstrap3IconWebView representing: Glyphicons menuUp )
 								applying: [ :container | container addClass bootstrap3 popoverContent ]
 							]
 						applying:

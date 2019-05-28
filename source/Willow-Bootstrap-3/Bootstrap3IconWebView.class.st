@@ -2,47 +2,47 @@
 I'm a bootstrap icon.. basically a span with the correct classes.
 "
 Class {
-	#name : #BootstrapIconWebView,
+	#name : #Bootstrap3IconWebView,
 	#superclass : #WAPainter,
 	#instVars : [
 		'containerCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-3-WebViews'
 }
 
 { #category : #private }
-BootstrapIconWebView class >> applying: aComponentCommand [ 
+Bootstrap3IconWebView class >> applying: aComponentCommand [ 
 	
 	^self new initializeApplying: aComponentCommand 
 ]
 
 { #category : #private }
-BootstrapIconWebView class >> classificationCommandFor: aGlyphiconName [
+Bootstrap3IconWebView class >> classificationCommandFor: aGlyphiconName [
 
 	^ [ :span | span addClass bootstrap3 glyphicon + ( ComponentClassificationCommand toStyleWith: aGlyphiconName ) ]
 		asWebComponentCommand
 ]
 
 { #category : #'Instance Creation' }
-BootstrapIconWebView class >> representing: aGlyphiconName [
+Bootstrap3IconWebView class >> representing: aGlyphiconName [
 
 	^ self applying: (self classificationCommandFor: aGlyphiconName)
 ]
 
 { #category : #'Instance Creation' }
-BootstrapIconWebView class >> representing: aGlyphiconName applying: aCommandToComponent [
+Bootstrap3IconWebView class >> representing: aGlyphiconName applying: aCommandToComponent [
 
 	^ self applying: (self classificationCommandFor: aGlyphiconName) + aCommandToComponent
 ]
 
 { #category : #initialize }
-BootstrapIconWebView >> initializeApplying: aComponentCommand [
+Bootstrap3IconWebView >> initializeApplying: aComponentCommand [
 
 	containerCommand := aComponentCommand
 ]
 
 { #category : #initialize }
-BootstrapIconWebView >> renderContentOn: aCanvas [
+Bootstrap3IconWebView >> renderContentOn: aCanvas [
 
 	aCanvas span apply: containerCommand
 ]

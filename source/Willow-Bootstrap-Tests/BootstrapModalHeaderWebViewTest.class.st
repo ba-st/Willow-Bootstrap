@@ -53,7 +53,7 @@ BootstrapModalHeaderWebViewTest >> testRenderContentOnWithComplexTitle [
 	header := BootstrapModalHeaderWebView
 		titled: [ :canvas | 
 			canvas
-				render: (BootstrapIconWebView representing: Glyphicons menuUp);
+				render: (Bootstrap3IconWebView representing: Glyphicons menuUp);
 				render: 'Up!' ].
 	html := self render: header.
 

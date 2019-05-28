@@ -3,22 +3,22 @@ The hamburger button  is a button typically placed in the top left or top right 
 Selecting (tapping or clicking) this button results in a menu being revealed (sliding out or popping up).
 "
 Class {
-	#name : #BootstrapHamburgerButton,
+	#name : #Bootstrap3HamburgerButton,
 	#superclass : #WAPainter,
 	#instVars : [
 		'targetIdentifier'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-3-WebViews'
 }
 
 { #category : #'Instance Creation' }
-BootstrapHamburgerButton class >> targeting: aStringOrSymbol [
+Bootstrap3HamburgerButton class >> targeting: aStringOrSymbol [
 
 	^self new initializeTargeting: aStringOrSymbol 
 ]
 
 { #category : #'private-rendering' }
-BootstrapHamburgerButton >> buttonCommand [
+Bootstrap3HamburgerButton >> buttonCommand [
 
 	^ [ :button :constants | 
 	button addClass bootstrap3 navbarToggle + button addClass bootstrap3 collapsed
@@ -29,13 +29,13 @@ BootstrapHamburgerButton >> buttonCommand [
 ]
 
 { #category : #initialize }
-BootstrapHamburgerButton >> initializeTargeting: aStringOrSymbol [
+Bootstrap3HamburgerButton >> initializeTargeting: aStringOrSymbol [
 
 	targetIdentifier := '#', aStringOrSymbol greaseString
 ]
 
 { #category : #rendering }
-BootstrapHamburgerButton >> renderContentOn: aCanvas [
+Bootstrap3HamburgerButton >> renderContentOn: aCanvas [
 
 	aCanvas button
 		bePush;
@@ -43,7 +43,7 @@ BootstrapHamburgerButton >> renderContentOn: aCanvas [
 ]
 
 { #category : #'private-rendering' }
-BootstrapHamburgerButton >> renderIconOn: aCanvas [
+Bootstrap3HamburgerButton >> renderIconOn: aCanvas [
 
 	3 timesRepeat: [ aCanvas span apply: [ :span | span addClass bootstrap3 iconBar ] ]
 ]

@@ -2,17 +2,17 @@
 A BootstrapDatePickerWebViewTest is a test class for testing the behavior of BootstrapDatePickerWebView
 "
 Class {
-	#name : #BootstrapDatePickerWebViewTest,
+	#name : #Bootstrap3DatePickerWebViewTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #'tests-initialization' }
-BootstrapDatePickerWebViewTest >> testRenderContentOn [
+Bootstrap3DatePickerWebViewTest >> testRenderContentOn [
 
 	| html |
 
-	html := self render: (BootstrapDatePickerWebView wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])).
+	html := self render: (Bootstrap3DatePickerWebView wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])).
 
 	self
 		assert: html
@@ -21,13 +21,13 @@ BootstrapDatePickerWebViewTest >> testRenderContentOn [
 ]
 
 { #category : #'tests-initialization' }
-BootstrapDatePickerWebViewTest >> testRenderContentOnWithCommands [
+Bootstrap3DatePickerWebViewTest >> testRenderContentOnWithCommands [
 
 	| html |
 
 	html := self
 		render:
-			(BootstrapDatePickerWebView
+			(Bootstrap3DatePickerWebView
 				wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])
 				applying:
 					(BootstrapDatepickerCommand

@@ -2,7 +2,7 @@
 Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.
 "
 Class {
-	#name : #BootstrapNavigationBar,
+	#name : #Bootstrap3NavigationBar,
 	#superclass : #WAPainter,
 	#instVars : [
 		'componentCommand',
@@ -10,11 +10,11 @@ Class {
 		'navbarContent',
 		'containerCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-3-WebViews'
 }
 
 { #category : #'Instance Creation' }
-BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
+Bootstrap3NavigationBar class >> brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
 		styledAs: [ :container | container addClass bootstrap3 container ]
@@ -24,7 +24,7 @@ BootstrapNavigationBar class >> brandedWith: aBrandWebView containing: aWebView 
 ]
 
 { #category : #'Instance Creation' }
-BootstrapNavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
+Bootstrap3NavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
 		styledAs: [ :container | container addClass bootstrap3 containerFluid ]
@@ -34,7 +34,7 @@ BootstrapNavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWeb
 ]
 
 { #category : #'private-instance creation' }
-BootstrapNavigationBar class >> styledAs: aContainerStylingCommand brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
+Bootstrap3NavigationBar class >> styledAs: aContainerStylingCommand brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self new
 		initializeStyledAs: aContainerStylingCommand
@@ -44,7 +44,7 @@ BootstrapNavigationBar class >> styledAs: aContainerStylingCommand brandedWith: 
 ]
 
 { #category : #initialization }
-BootstrapNavigationBar >> initializeStyledAs: aContainerCommand brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
+Bootstrap3NavigationBar >> initializeStyledAs: aContainerCommand brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	containerCommand := aContainerCommand.
 	componentCommand := aCommandToComponent.
@@ -56,7 +56,7 @@ BootstrapNavigationBar >> initializeStyledAs: aContainerCommand brandedWith: aBr
 ]
 
 { #category : #rendering }
-BootstrapNavigationBar >> renderContentOn: aCanvas [
+Bootstrap3NavigationBar >> renderContentOn: aCanvas [
 
 	aCanvas navigation
 		with: [ aCanvas div
@@ -69,12 +69,12 @@ BootstrapNavigationBar >> renderContentOn: aCanvas [
 ]
 
 { #category : #private }
-BootstrapNavigationBar >> renderNavigationBarHeaderOn: aCanvas [
+Bootstrap3NavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 
 	aCanvas div
 		with: [ navbarContent identifyIn: aCanvas.
 			aCanvas
-				render: ( BootstrapHamburgerButton targeting: navbarContent identifier );
+				render: ( Bootstrap3HamburgerButton targeting: navbarContent identifier );
 				render:
 					( self componentSupplier
 						asynchronicLinkLabeled: brandView

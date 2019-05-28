@@ -759,8 +759,8 @@ BootstrapDatepickerTest >> testTemplates [
 			datepicker
 				templates:
 					(canvas jQuery new bootstrapDatepickerTemplate
-						leftArrow: (BootstrapIconWebView representing: Glyphicons menuUp)
-						rightArrow: (BootstrapIconWebView representing: Glyphicons menuUp)).
+						leftArrow: (Bootstrap3IconWebView representing: Glyphicons menuUp)
+						rightArrow: (Bootstrap3IconWebView representing: Glyphicons menuUp)).
 			select script: datepicker ].
 
 	self

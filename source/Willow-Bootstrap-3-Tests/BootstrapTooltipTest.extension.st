@@ -16,7 +16,7 @@ BootstrapTooltipTest >> testTemplateForBootstrap3 [
 					template div
 						with: [ template div apply: [ :container | container addClass bootstrap3 tooltipArrow ].
 							template div
-								with: ( BootstrapIconWebView representing: Glyphicons menuUp )
+								with: ( Bootstrap3IconWebView representing: Glyphicons menuUp )
 								applying: [ :container | container addClass bootstrap3 tooltipInner ]
 							]
 						applying:

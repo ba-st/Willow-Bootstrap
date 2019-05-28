@@ -2,13 +2,13 @@
 A BootstrapHamburgerButtonTest is a test class for testing the behavior of BootstrapHamburgerButton
 "
 Class {
-	#name : #BootstrapHamburgerButtonTest,
+	#name : #Bootstrap3HamburgerButtonTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #'tests-rendering' }
-BootstrapHamburgerButtonTest >> testRenderContentOn [
+Bootstrap3HamburgerButtonTest >> testRenderContentOn [
 
 	| html |
 
@@ -17,7 +17,7 @@ BootstrapHamburgerButtonTest >> testRenderContentOn [
 			| targetId |
 
 			targetId := canvas nextId.
-			canvas render: (BootstrapHamburgerButton targeting: targetId) ].
+			canvas render: (Bootstrap3HamburgerButton targeting: targetId) ].
 
 	self
 		assert: html

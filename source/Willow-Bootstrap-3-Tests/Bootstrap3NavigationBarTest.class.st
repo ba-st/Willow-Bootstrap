@@ -2,35 +2,35 @@
 A BootstrapNavigationBarTest is a test class for testing the behavior of BootstrapNavigationBar
 "
 Class {
-	#name : #BootstrapNavigationBarTest,
+	#name : #Bootstrap3NavigationBarTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
 { #category : #accessing }
-BootstrapNavigationBarTest >> componentSupplier [
+Bootstrap3NavigationBarTest >> componentSupplier [
 
 	^ Bootstrap3ComponentSupplier online
 ]
 
 { #category : #accessing }
-BootstrapNavigationBarTest >> createHandlers [
+Bootstrap3NavigationBarTest >> createHandlers [
 
 	^ Array with: self
 ]
 
 { #category : #accessing }
-BootstrapNavigationBarTest >> isSession [
+Bootstrap3NavigationBarTest >> isSession [
 
 ^ true
 ]
 
 { #category : #'tests-rendering' }
-BootstrapNavigationBarTest >> testRenderContentOn [
+Bootstrap3NavigationBarTest >> testRenderContentOn [
 
 	| navigationBar html |
 
-	navigationBar := BootstrapNavigationBar fluidBrandedWith: 'Willow' containing: '' applying: [ :nav |  ].
+	navigationBar := Bootstrap3NavigationBar fluidBrandedWith: 'Willow' containing: '' applying: [ :nav |  ].
 
 	html := self render: navigationBar.
 
@@ -41,11 +41,11 @@ BootstrapNavigationBarTest >> testRenderContentOn [
 ]
 
 { #category : #'tests-rendering' }
-BootstrapNavigationBarTest >> testRenderContentOnWithCommands [
+Bootstrap3NavigationBarTest >> testRenderContentOnWithCommands [
 
 	| navigationBar html |
 
-	navigationBar := BootstrapNavigationBar
+	navigationBar := Bootstrap3NavigationBar
 		brandedWith: 'Willow'
 		containing: ''
 		applying:
@@ -60,11 +60,11 @@ BootstrapNavigationBarTest >> testRenderContentOnWithCommands [
 ]
 
 { #category : #'tests-rendering' }
-BootstrapNavigationBarTest >> testRenderContentOnWithContent [
+Bootstrap3NavigationBarTest >> testRenderContentOnWithContent [
 
 	| navigationBar html |
 
-	navigationBar := BootstrapNavigationBar
+	navigationBar := Bootstrap3NavigationBar
 		brandedWith: 'Willow'
 		containing: [ :canvas | 
 			canvas paragraph

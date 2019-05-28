@@ -2,36 +2,36 @@
 I represent a bootstrap-datepicker component
 "
 Class {
-	#name : #BootstrapDatePickerWebView,
+	#name : #Bootstrap3DatePickerWebView,
 	#superclass : #WAPainter,
 	#instVars : [
 		'textField',
 		'container'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : #'Willow-Bootstrap-3-WebViews'
 }
 
 { #category : #'Instance Creation' }
-BootstrapDatePickerWebView class >> wrapping: aTextFieldWebView [
+Bootstrap3DatePickerWebView class >> wrapping: aTextFieldWebView [
 
 	^ self wrapping: aTextFieldWebView applying: [ :field |  ]
 ]
 
 { #category : #'Instance Creation' }
-BootstrapDatePickerWebView class >> wrapping: aTextFieldWebView applying: aComponentCommand [
+Bootstrap3DatePickerWebView class >> wrapping: aTextFieldWebView applying: aComponentCommand [
 
 	^ self new initializeWrapping: aTextFieldWebView applying: aComponentCommand
 ]
 
 { #category : #initialization }
-BootstrapDatePickerWebView >> initializeWrapping: aTextField applying: aComponentCommand [
+Bootstrap3DatePickerWebView >> initializeWrapping: aTextField applying: aComponentCommand [
 
 	textField := aTextField.
 	container := GenericContainerWebView
 		wrapping: [ :canvas | 
 			canvas render: self textField.
 			canvas div
-				with: [ canvas small: ( BootstrapIconWebView representing: Glyphicons triangleBottom ) ]
+				with: [ canvas small: ( Bootstrap3IconWebView representing: Glyphicons triangleBottom ) ]
 				applying: [ :div | div addClass bootstrap3 inputGroupAddon ]
 			]
 		applying: [ :div | 
@@ -41,13 +41,13 @@ BootstrapDatePickerWebView >> initializeWrapping: aTextField applying: aComponen
 ]
 
 { #category : #initialization }
-BootstrapDatePickerWebView >> renderContentOn: aCanvas [
+Bootstrap3DatePickerWebView >> renderContentOn: aCanvas [
 
 	aCanvas render: container
 ]
 
 { #category : #accessing }
-BootstrapDatePickerWebView >> textField [
+Bootstrap3DatePickerWebView >> textField [
 
 	^ textField
 ]
