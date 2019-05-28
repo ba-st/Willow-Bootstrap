@@ -9,25 +9,128 @@ Class {
 	#name : #Bootstrap4CardBuilder,
 	#superclass : #BootstrapPanelBuilder,
 	#instVars : [
-		'bodyOptional',
 		'headingOptional',
-		'tablesAndListGroups',
-		'footerOptional'
+		'footerOptional',
+		'topImageOptional',
+		'bottomImageOptional',
+		'elements',
+		'currentBody',
+		'supplier'
 	],
 	#category : #'Willow-Bootstrap-4-WebViews'
 }
 
+{ #category : #'instance creation' }
+Bootstrap4CardBuilder class >> using: aComponentSupplier [
+
+	^ self new initializeUsing: aComponentSupplier
+]
+
+{ #category : #private }
+Bootstrap4CardBuilder >> add: anElementToRender [
+
+	elements add: anElementToRender
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> addActionLabeled: aRenderable executing: anActionBlock [
+
+	self addActionLabeled: aRenderable executing: anActionBlock applying: [  ]
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> addActionLabeled: aRenderable executing: anActionBlock applying: aCommand [
+
+	| anchor |
+
+	anchor := supplier
+		asynchronicLinkLabeled: aRenderable
+		applying:
+			[ :link :constants | ( link setAttribute: 'href' to: '#' ) + link addClass bootstrap4 cardLink + aCommand ].
+	anActionBlock value: anchor.
+	self addToBody: anchor
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> addSubtitle: aRenderable withLevel: aLevel [
+
+	self addSubtitle: aRenderable withLevel: aLevel applying: [  ]
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> addSubtitle: aRenderable withLevel: aLevel applying: aCommand [
+
+	self
+		addToBody:
+			( HeadingWebView
+				displaying: aRenderable
+				withLevel: aLevel
+				applying: [ :heading | heading addClass bootstrap4 cardSubtitle + aCommand ] )
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> addText: aRenderable [
+
+	self
+		addToBody: [ :canvas | canvas paragraph with: aRenderable applying: [ :p | p addClass bootstrap4 cardText ] ]
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> addTitle: aRenderable withLevel: aLevel [
+
+	self addTitle: aRenderable withLevel: aLevel applying: [  ]
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> addTitle: aRenderable withLevel: aLevel applying: aCommand [
+
+	self
+		addToBody:
+			( HeadingWebView
+				displaying: aRenderable
+				withLevel: aLevel
+				applying: [ :heading | heading addClass bootstrap4 cardTitle + aCommand ] )
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> addToBody: aRenderable [
+
+	currentBody add: aRenderable
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> bottomImageCapLocatedAt: aLocation applying: anImageCommand [
+
+	bottomImageOptional := Optional
+		containing:
+			( ImageWebView
+				locatedAt: aLocation
+				applying: [ :image | image addClass bootstrap4 cardImageTop + anImageCommand ] )
+]
+
 { #category : #building }
 Bootstrap4CardBuilder >> buildApplying: aCommandToCard [
 
+	self resetCurrentBody.
 	^ GenericContainerWebView
 		wrapping: [ :canvas | 
+			self renderTopImageOn: canvas.
 			self renderHeadingOn: canvas.
-			self renderBodyOn: canvas.
-			self renderTableOrListGroupOn: canvas.
-			self renderFooterOn: canvas
+			self renderBodyElementsOn: canvas.
+			self renderFooterOn: canvas.
+			self renderBottomImageOn: canvas
 			]
 		applying: [ :panel | panel addClass bootstrap4 card + aCommandToCard ]
+]
+
+{ #category : #'private - rendering' }
+Bootstrap4CardBuilder >> cardBodyRenderingAll: bodyElements [
+
+	^ [ :canvas | 
+	canvas div
+		with: [ bodyElements do: [ :bodyElement | canvas render: bodyElement ] ]
+		applying: [ :div | div addClass bootstrap4 cardBody ]
+	]
 ]
 
 { #category : #Configuring }
@@ -61,21 +164,27 @@ Bootstrap4CardBuilder >> headingDisplaying: aRenderable withLevel: aHeadingLevel
 ]
 
 { #category : #initialization }
-Bootstrap4CardBuilder >> initialize [
+Bootstrap4CardBuilder >> initializeUsing: aSupplier [
 
-	super initialize.
+	supplier := aSupplier.
+	topImageOptional := Optional unused.
 	headingOptional := Optional unused.
-	bodyOptional := Optional unused.
-	tablesAndListGroups := OrderedCollection new.
-	footerOptional := Optional unused
+	elements := OrderedCollection new.
+	currentBody := OrderedCollection new.
+	footerOptional := Optional unused.
+	bottomImageOptional := Optional unused
 ]
 
 { #category : #'private - rendering' }
-Bootstrap4CardBuilder >> renderBodyOn: canvas [
+Bootstrap4CardBuilder >> renderBodyElementsOn: canvas [
 
-	bodyOptional
-		withContentDo:
-			[ :renderableInsideBody | canvas div with: renderableInsideBody applying: [ :div | div addClass bootstrap4 cardBody ] ]
+	elements do: [ :element | canvas render: element ]
+]
+
+{ #category : #'private - rendering' }
+Bootstrap4CardBuilder >> renderBottomImageOn: canvas [
+
+	bottomImageOptional withContentDo: [ :image | canvas render: image ]
 ]
 
 { #category : #'private - rendering' }
@@ -92,26 +201,46 @@ Bootstrap4CardBuilder >> renderHeadingOn: canvas [
 ]
 
 { #category : #'private - rendering' }
-Bootstrap4CardBuilder >> renderTableOrListGroupOn: canvas [
+Bootstrap4CardBuilder >> renderTopImageOn: canvas [
 
-	tablesAndListGroups do: [ :tableOrListGroup | canvas render: tableOrListGroup ]
+	topImageOptional withContentDo: [ :image | canvas render: image ]
+]
+
+{ #category : #initialization }
+Bootstrap4CardBuilder >> resetCurrentBody [
+
+	currentBody ifNotEmpty: [ self add: (self cardBodyRenderingAll: currentBody) ].
+	currentBody := OrderedCollection new
+]
+
+{ #category : #Configuring }
+Bootstrap4CardBuilder >> topImageCapLocatedAt: aLocation applying: anImageCommand [
+
+	topImageOptional := Optional
+		containing:
+			( ImageWebView
+				locatedAt: aLocation
+				applying: [ :image | image addClass bootstrap4 cardImageTop + anImageCommand ] )
 ]
 
 { #category : #Configuring }
 Bootstrap4CardBuilder >> withListGroup: aListWebView [
 
+	self resetCurrentBody.
 	aListWebView embeddedInCard.
-	self withTable: aListWebView
+	self add: aListWebView
 ]
 
 { #category : #Configuring }
 Bootstrap4CardBuilder >> withTable: aTableWebView [
 
-	tablesAndListGroups add: aTableWebView
+	self resetCurrentBody.
+	self add: aTableWebView
 ]
 
 { #category : #Configuring }
 Bootstrap4CardBuilder >> wrapping: theBodyContent [
 
-	bodyOptional := Optional containing: theBodyContent
+	self resetCurrentBody.
+	self add: ( self cardBodyRenderingAll: {theBodyContent} )
 ]

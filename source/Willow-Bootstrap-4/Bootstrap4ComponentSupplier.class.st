@@ -30,7 +30,7 @@ Bootstrap4ComponentSupplier class >> usingLibraries: aLibraryCollection [
 { #category : #'Supplying - Non Portable' }
 Bootstrap4ComponentSupplier >> cardBuilder [
 
-	^ Bootstrap4CardBuilder new
+	^ Bootstrap4CardBuilder using: self
 ]
 
 { #category : #Supplying }
