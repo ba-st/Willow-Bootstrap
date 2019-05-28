@@ -33,6 +33,12 @@ Bootstrap4ComponentSupplier >> cardBuilder [
 	^ Bootstrap4CardBuilder using: self
 ]
 
+{ #category : #'Supplying - Non Portable' }
+Bootstrap4ComponentSupplier >> cardLayoutBuilder [
+
+	^ Bootstrap4CardLayoutBuilder using: self
+]
+
 { #category : #Supplying }
 Bootstrap4ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 

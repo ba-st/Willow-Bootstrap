@@ -299,7 +299,7 @@ WillowBootstrap class >> initializeCardClasses [
 				bind: #card to: 'card';
 				bind: #cardBody to: 'card-body';
 				bind: #cardColumns to: 'card-columns';
-				bind: #carDeck to: 'card-deck';
+				bind: #cardDeck to: 'card-deck';
 				bind: #cardFooter to: 'card-footer';
 				bind: #cardGroup to: 'card-group';
 				bind: #cardHeader to: 'card-header';

@@ -121,12 +121,6 @@ ComponentClassificationCommandBuilder >> breadcrumbItem [
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
-ComponentClassificationCommandBuilder >> carDeck [
-
-	^ self commandStyledWith: #carDeck
-]
-
-{ #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> card [
 
 	^ self commandStyledWith: #card
@@ -142,6 +136,12 @@ ComponentClassificationCommandBuilder >> cardBody [
 ComponentClassificationCommandBuilder >> cardColumns [
 
 	^ self commandStyledWith: #cardColumns
+]
+
+{ #category : #'*Willow-Bootstrap-4' }
+ComponentClassificationCommandBuilder >> cardDeck [
+
+	^ self commandStyledWith: #cardDeck
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
