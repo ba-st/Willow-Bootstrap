@@ -56,9 +56,7 @@ Bootstrap4DropdownBuilder >> content [
 
 	^ [ :canvas | 
 	canvas render: buttonBinding content.
-	canvas div
-		with: [ menuItems do: [ :menuItem | canvas render: menuItem ] ]
-		applying: menuClassificationCommand
+	canvas div with: menuItems applying: menuClassificationCommand
 	]
 ]
 

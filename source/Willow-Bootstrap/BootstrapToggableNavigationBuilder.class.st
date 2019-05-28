@@ -113,9 +113,7 @@ BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderTabContentOn: aCanvas [
 
-	aCanvas div
-		with: [ contents do: [ :currentContent | aCanvas render: currentContent ] ]
-		applying: [ :div | div addClass bootstrapCommon tabContent ]
+	aCanvas div with: contents applying: [ :div | div addClass bootstrapCommon tabContent ]
 ]
 
 { #category : #'private - Rendering' }

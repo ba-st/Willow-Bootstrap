@@ -98,16 +98,14 @@ Bootstrap4FieldAddonBuilder >> prependText: aRenderable [
 Bootstrap4FieldAddonBuilder >> renderAppendedComponentsOn: canvas [
 
 	^ componentsToAppend
-		ifNotEmpty: [ canvas div
-				with: [ componentsToAppend do: [ :component | canvas render: component ] ]
-				applying: [ :div | div addClass bootstrap4 inputGroupAppend ]
-			]
+		ifNotEmpty:
+			[ canvas div with: componentsToAppend applying: [ :div | div addClass bootstrap4 inputGroupAppend ] ]
 ]
 
 { #category : #private }
 Bootstrap4FieldAddonBuilder >> renderFieldsOn: canvas [
 
-	fields do: [ :field | canvas render: field ]
+	canvas render: fields
 ]
 
 { #category : #private }
@@ -115,9 +113,8 @@ Bootstrap4FieldAddonBuilder >> renderPrependedComponentsOn: canvas [
 
 	componentsToPrepend
 		ifNotEmpty: [ canvas div
-				with: [ componentsToPrepend do: [ :component | canvas render: component ] ]
-				applying: [ :div | div addClass bootstrap4 inputGroupPrepend ]
-			]
+				with: componentsToPrepend
+				applying: [ :div | div addClass bootstrap4 inputGroupPrepend ] ]
 ]
 
 { #category : #configuring }

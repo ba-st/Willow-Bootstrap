@@ -54,7 +54,8 @@ Bootstrap3DropdownBuilder >> content [
 
 	^ [ :canvas | 
 	canvas render: buttonBinding content.
-	canvas unorderedList with: [ menuItems do: [ :menuItem | canvas render: menuItem ] ] applying: listClassificationCommand ]
+	canvas unorderedList with: menuItems applying: listClassificationCommand
+	]
 ]
 
 { #category : #initialization }

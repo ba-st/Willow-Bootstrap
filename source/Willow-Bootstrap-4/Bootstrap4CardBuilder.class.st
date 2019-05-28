@@ -126,11 +126,7 @@ Bootstrap4CardBuilder >> buildApplying: aCommandToCard [
 { #category : #'private - rendering' }
 Bootstrap4CardBuilder >> cardBodyRenderingAll: bodyElements [
 
-	^ [ :canvas | 
-	canvas div
-		with: [ bodyElements do: [ :bodyElement | canvas render: bodyElement ] ]
-		applying: [ :div | div addClass bootstrap4 cardBody ]
-	]
+	^ [ :canvas | canvas div with: bodyElements applying: [ :div | div addClass bootstrap4 cardBody ] ]
 ]
 
 { #category : #Configuring }
@@ -178,7 +174,7 @@ Bootstrap4CardBuilder >> initializeUsing: aSupplier [
 { #category : #'private - rendering' }
 Bootstrap4CardBuilder >> renderBodyElementsOn: canvas [
 
-	elements do: [ :element | canvas render: element ]
+	canvas render: elements
 ]
 
 { #category : #'private - rendering' }

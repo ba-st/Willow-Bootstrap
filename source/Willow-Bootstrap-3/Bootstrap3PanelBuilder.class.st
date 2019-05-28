@@ -90,7 +90,7 @@ Bootstrap3PanelBuilder >> renderHeadingOn: canvas [
 { #category : #'private - Rendering' }
 Bootstrap3PanelBuilder >> renderTableOrListGroupOn: canvas [
 
-	tablesAndListGroups do: [ :tableOrListGroup | canvas render: tableOrListGroup ]
+	canvas render: tablesAndListGroups
 ]
 
 { #category : #Configuring }

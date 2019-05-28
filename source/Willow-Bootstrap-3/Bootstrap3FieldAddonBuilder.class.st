@@ -100,10 +100,8 @@ Bootstrap3FieldAddonBuilder >> renderAppendedComponentsOn: aCanvas [
 	appendedTextOptional
 		withContentDo: [ :text | aCanvas render: text ]
 		ifUnused: [ appendedButtons
-				ifNotEmpty: [ aCanvas div
-						with: [ appendedButtons do: [ :button | aCanvas render: button ] ]
-						applying: [ :div | div addClass bootstrap3 inputGroupButton ]
-					]
+				ifNotEmpty:
+					[ aCanvas div with: appendedButtons applying: [ :div | div addClass bootstrap3 inputGroupButton ] ]
 			]
 ]
 
@@ -121,10 +119,8 @@ Bootstrap3FieldAddonBuilder >> renderPrependedComponentsOn: aCanvas [
 	prependedTextOptional
 		withContentDo: [ :text | aCanvas render: text ]
 		ifUnused: [ prependedButtons
-				ifNotEmpty: [ aCanvas div
-						with: [ prependedButtons do: [ :button | aCanvas render: button ] ]
-						applying: [ :div | div addClass bootstrap3 inputGroupButton ]
-					]
+				ifNotEmpty:
+					[ aCanvas div with: prependedButtons applying: [ :div | div addClass bootstrap3 inputGroupButton ] ]
 			]
 ]
 
