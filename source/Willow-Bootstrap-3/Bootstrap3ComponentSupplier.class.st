@@ -57,13 +57,6 @@ Bootstrap3ComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn off
 		applying: aCommandToComponent
 ]
 
-{ #category : #Supplying }
-Bootstrap3ComponentSupplier >> dropdownListApplying: aComponentCommand [
-
-	^ DropDownListWebView
-		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand + BootstrapSelectCommand new ]
-]
-
 { #category : #'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> fieldAddonBuilder [
 

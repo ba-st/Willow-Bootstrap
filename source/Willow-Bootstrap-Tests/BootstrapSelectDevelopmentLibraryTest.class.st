@@ -12,46 +12,49 @@ BootstrapSelectDevelopmentLibraryTest >> testDeployFiles [
 
 	self
 		assertFileDeploymentOf: BootstrapSelectDevelopmentLibrary default
-		createsAsFolders: #('bootstrap-select-1.12.4' 'bootstrap-select-1.12.4/css' 'bootstrap-select-1.12.4/js' 'bootstrap-select-1.12.4/js/i18n')
+		createsAsFolders: #('bootstrap-select-1.13.10' 'bootstrap-select-1.13.10/css' 'bootstrap-select-1.13.10/js' 'bootstrap-select-1.13.10/js/i18n')
 		andFileContentsMatching:
-			{('bootstrap-select-1.12.4/css/bootstrap-select.css' -> '3702c3c94c8f6705858b793dabe47a732155a4f1').
-			('bootstrap-select-1.12.4/js/bootstrap-select.js' -> '8e4cf25395e988ce963bde70c0d769aa375614e3').
-			('bootstrap-select-1.12.4/js/i18n/defaults-ar_AR.js' -> '4556b3d1c9d6601ec7331d31e60fc2740af1eee5').
-			('bootstrap-select-1.12.4/js/i18n/defaults-bg_BG.js' -> '7e5c049180c17d35be237d5b74b2d76a9892aec7').
-			('bootstrap-select-1.12.4/js/i18n/defaults-cro_CRO.js' -> 'd682beb54d5ae46ed224d21ea70746f6a97a81ad').
-			('bootstrap-select-1.12.4/js/i18n/defaults-cs_CZ.js' -> 'a972fdda00e8d8b9f64b7a268e570ad5ba8e023f').
-			('bootstrap-select-1.12.4/js/i18n/defaults-da_DK.js' -> 'bc8ebc280b8eb566f9e1f10af5314bfd033a8556').
-			('bootstrap-select-1.12.4/js/i18n/defaults-de_DE.js' -> '8699b3cc0e9bed9dd5a1621eaff8d19293bf5c9c').
-			('bootstrap-select-1.12.4/js/i18n/defaults-en_US.js' -> '02ea297e43f1e3eb5c94110076502b1087421d7a').
-			('bootstrap-select-1.12.4/js/i18n/defaults-es_CL.js' -> 'f065a39e2e78529d9c88e36d59d189f4ef1f688e').
-			('bootstrap-select-1.12.4/js/i18n/defaults-es_ES.js' -> 'f065a39e2e78529d9c88e36d59d189f4ef1f688e').
-			('bootstrap-select-1.12.4/js/i18n/defaults-et_EE.js' -> 'c25d5ed862a5e7894d5908676e21d494d5f30fa9').
-			('bootstrap-select-1.12.4/js/i18n/defaults-eu.js' -> 'ff0974f25361d8b984f4374f6d0160868fce7c62').
-			('bootstrap-select-1.12.4/js/i18n/defaults-fa_IR.js' -> 'eeeba90fab04908a82b89cbef41880918a14e38b').
-			('bootstrap-select-1.12.4/js/i18n/defaults-fi_FI.js' -> '3527d3d94483d5bd20245568cc8384764cddc73b').
-			('bootstrap-select-1.12.4/js/i18n/defaults-fr_FR.js' -> '28f9c1f14142f4b70ac1b96f3cb20ebb4064a471').
-			('bootstrap-select-1.12.4/js/i18n/defaults-hu_HU.js' -> 'd464c886e164f0b5a2aaaed65e42f09368ccea45').
-			('bootstrap-select-1.12.4/js/i18n/defaults-id_ID.js' -> 'f143c25c5543dbfe078f30d9d8d28b3629fec3a8').
-			('bootstrap-select-1.12.4/js/i18n/defaults-it_IT.js' -> 'bb95df8118815a7c804080f4580c17d89efd2991').
-			('bootstrap-select-1.12.4/js/i18n/defaults-ja_JP.js' -> '79605f6107612194808b825ae9cc73f2b615e44e').
-			('bootstrap-select-1.12.4/js/i18n/defaults-kh_KM.js' -> '799a446a3e5436d3afae1e4391b394c25b74018a').
-			('bootstrap-select-1.12.4/js/i18n/defaults-ko_KR.js' -> 'f4a5e6fce9781fac2b3a62ba362ce6bdd18eb1fb').
-			('bootstrap-select-1.12.4/js/i18n/defaults-lt_LT.js' -> '80121f8d5432bd203b22c7fc05c58260d719007b').
-			('bootstrap-select-1.12.4/js/i18n/defaults-nb_NO.js' -> 'c5b74bb7f1c792af64ef9569cad7128ade6e8aa9').
-			('bootstrap-select-1.12.4/js/i18n/defaults-nl_NL.js' -> '8427f2f5cbe404d990923eed8477388eb3778440').
-			('bootstrap-select-1.12.4/js/i18n/defaults-pl_PL.js' -> '2c10a68a9d4759f32e22e8ffc1fba211acf64b02').
-			('bootstrap-select-1.12.4/js/i18n/defaults-pt_BR.js' -> 'f83aaf3470599280521bc2b7e7dbca508d2de36b').
-			('bootstrap-select-1.12.4/js/i18n/defaults-pt_PT.js' -> '12898f1da1c0f1fbd99c9268b4a0b54e5406ee1b').
-			('bootstrap-select-1.12.4/js/i18n/defaults-ro_RO.js' -> '34762a1ed7af0844f3799cecc119cc3a68fa2b1a').
-			('bootstrap-select-1.12.4/js/i18n/defaults-ru_RU.js' -> 'c08ee5b2d60fb29ab60aee7cfc8da9e2a75cb53f').
-			('bootstrap-select-1.12.4/js/i18n/defaults-sk_SK.js' -> '612a380cd5c6c106f7266d6903f9f19c930b212a').
-			('bootstrap-select-1.12.4/js/i18n/defaults-sl_SI.js' -> '790036204c946e4d07bb81f091437c08b3e95c0a').
-			('bootstrap-select-1.12.4/js/i18n/defaults-sv_SE.js' -> 'ebb97b5f93023fce45b1870cd12fcbcbe41cb994').
-			('bootstrap-select-1.12.4/js/i18n/defaults-tr_TR.js' -> '0f4a8cfa9d405df4e8ea8fc248755225de89ab51').
-			('bootstrap-select-1.12.4/js/i18n/defaults-ua_UA.js' -> '2d6400b2b6198f8c1899261cff1dad22bf73c649').
-			('bootstrap-select-1.12.4/js/i18n/defaults-vi_VN.js' -> '4740ac8be3a271e6f6a4184fa30b947242a9d377').
-			('bootstrap-select-1.12.4/js/i18n/defaults-zh_CN.js' -> '555699b723cf783a0c1f0d2da24cb670365a1246').
-			('bootstrap-select-1.12.4/js/i18n/defaults-zh_TW.js' -> '65664fff5124c94dca0155fafb9a04f4badb64ac')}
+			{('bootstrap-select-1.13.10/css/bootstrap-select.css' -> '85df722a86852967c67c07dc164b38624f559fd1').
+			('bootstrap-select-1.13.10/js/bootstrap-select.js' -> '1b151adb84f5426b77bfe289cbfb210aa35abca8').
+			('bootstrap-select-1.13.10/js/i18n/defaults-am_ET.js' -> '627948897e8939aeceaed82cb0a57f6020aa04dd').
+			('bootstrap-select-1.13.10/js/i18n/defaults-ar_AR.js' -> 'b428dac1c480b09870fc2282385fa43aab6a84c9').
+			('bootstrap-select-1.13.10/js/i18n/defaults-bg_BG.js' -> '2497c587fb75e45c9d5e171c3cd4d361f61df51b').
+			('bootstrap-select-1.13.10/js/i18n/defaults-cro_CRO.js' -> 'd682beb54d5ae46ed224d21ea70746f6a97a81ad').
+			('bootstrap-select-1.13.10/js/i18n/defaults-cs_CZ.js' -> '2630d51643d223d555c560cc7e8e9cb0a76fbf96').
+			('bootstrap-select-1.13.10/js/i18n/defaults-da_DK.js' -> '1ceb5f40cced2352eb657d4f4a68856d8c8596c8').
+			('bootstrap-select-1.13.10/js/i18n/defaults-de_DE.js' -> '079aa6fc7ded5829ce219ae20845a0fab466bf3b').
+			('bootstrap-select-1.13.10/js/i18n/defaults-en_US.js' -> '8948399ad2cbcebd4a9f187bb51a840be39af441').
+			('bootstrap-select-1.13.10/js/i18n/defaults-es_CL.js' -> '961b749f4b7ca2faf9046fa668eb8f66e82d5e52').
+			('bootstrap-select-1.13.10/js/i18n/defaults-es_ES.js' -> '9b8825a3b23299c424c627a2a4ca04c8de7fdb4f').
+			('bootstrap-select-1.13.10/js/i18n/defaults-et_EE.js' -> '239454008e12801b1f11236626cbe8b2268389d2').
+			('bootstrap-select-1.13.10/js/i18n/defaults-eu.js' -> 'e6e3ee61113bd44a5135c8d389ca481e20d76f23').
+			('bootstrap-select-1.13.10/js/i18n/defaults-fa_IR.js' -> '1490441b19a82fa5c484a030103e5a2c13027ab1').
+			('bootstrap-select-1.13.10/js/i18n/defaults-fi_FI.js' -> '8c563ca902e6c53cbd8c85a859dd0142db88d303').
+			('bootstrap-select-1.13.10/js/i18n/defaults-fr_FR.js' -> '4af26470a56b1c27e27c77c4d0de979f6c4444af').
+			('bootstrap-select-1.13.10/js/i18n/defaults-hr_HR.js' -> '8b9ca03bae05d3b88c7b4baf983cb4cfabd7a6f4').
+			('bootstrap-select-1.13.10/js/i18n/defaults-hu_HU.js' -> '3fb02b41339492df3b3558211c507d9b0d928746').
+			('bootstrap-select-1.13.10/js/i18n/defaults-id_ID.js' -> '44f9e5b0f6b0a568776d81d8cd4be8996e59bc44').
+			('bootstrap-select-1.13.10/js/i18n/defaults-it_IT.js' -> '173a7b26069f3e088f6f733f1598edb6d7e89048').
+			('bootstrap-select-1.13.10/js/i18n/defaults-ja_JP.js' -> 'ecda6172249aba0102d01e3153ae8000f6962639').
+			('bootstrap-select-1.13.10/js/i18n/defaults-kh_KM.js' -> '710baf09ce353e6d90d0ca807a91fefb8097623a').
+			('bootstrap-select-1.13.10/js/i18n/defaults-ko_KR.js' -> '7fd8c5a39236ed2496de0f5385af92907da0d647').
+			('bootstrap-select-1.13.10/js/i18n/defaults-lt_LT.js' -> 'bc31fc76926e8ede0da7051d8de9408d9050350b').
+			('bootstrap-select-1.13.10/js/i18n/defaults-lv_LV.js' -> '2571e9f147c6a498da27b6e6e73a0a30e7fe1185').
+			('bootstrap-select-1.13.10/js/i18n/defaults-nb_NO.js' -> '4d0549076ddb488d4e947eaf09e72313c38955d9').
+			('bootstrap-select-1.13.10/js/i18n/defaults-nl_NL.js' -> 'bc301da22a608b022f83b5fc4bbe28b120aff70d').
+			('bootstrap-select-1.13.10/js/i18n/defaults-pl_PL.js' -> 'eefe7934adff144ded437b8e52d36f7d26464572').
+			('bootstrap-select-1.13.10/js/i18n/defaults-pt_BR.js' -> '8c568655f747e1b40ae0988a8c4fe4b94bd0981e').
+			('bootstrap-select-1.13.10/js/i18n/defaults-pt_PT.js' -> '77643e9e9cd4aca2e3b126d5985255537e37990e').
+			('bootstrap-select-1.13.10/js/i18n/defaults-ro_RO.js' -> 'cb7773fd2ea6ba0ffc20184228e000a3060dbf05').
+			('bootstrap-select-1.13.10/js/i18n/defaults-ru_RU.js' -> '6bbeb811b99f68d398b5231299781d9bfb78b5cb').
+			('bootstrap-select-1.13.10/js/i18n/defaults-sk_SK.js' -> '0e1c6621a0529195d60d2556caa08f9eb5200b53').
+			('bootstrap-select-1.13.10/js/i18n/defaults-sl_SI.js' -> 'daebdb83c333f4c8878117df5da3c2e1dacc92c9').
+			('bootstrap-select-1.13.10/js/i18n/defaults-sv_SE.js' -> '0c34aa3ea4f2326ef58238c0d0d537646479cf00').
+			('bootstrap-select-1.13.10/js/i18n/defaults-tr_TR.js' -> 'bd123f36a84bd049fc40a334010e15ee06ea31bb').
+			('bootstrap-select-1.13.10/js/i18n/defaults-ua_UA.js' -> 'aca4729b826ee1a64bd342aab2f6a3ce08d8a6dd').
+			('bootstrap-select-1.13.10/js/i18n/defaults-vi_VN.js' -> '9dce99958871bd16622903333467c02ae700ee6e').
+			('bootstrap-select-1.13.10/js/i18n/defaults-zh_CN.js' -> '74d6fd2a20140a6d240e87e1e885c35345ba0a22').
+			('bootstrap-select-1.13.10/js/i18n/defaults-zh_TW.js' -> 'b941163e8a66b5bb5e4fa059c175b2efbcebd878')}
 ]
 
 { #category : #tests }
@@ -79,7 +82,7 @@ BootstrapSelectDevelopmentLibraryTest >> testUpdateRoot [
 	self
 		assert: html
 		equals:
-			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.12.4/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/i18n/defaults-en_US.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.13.10/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.13.10/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.13.10/js/i18n/defaults-en_US.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
 { #category : #tests }
@@ -89,14 +92,15 @@ BootstrapSelectDevelopmentLibraryTest >> testUpdateRootWithLocale [
 
 	html := WAHtmlCanvas builder
 		fullDocument: true;
-		rootBlock: [ :root | (BootstrapSelectDevelopmentLibrary using: (WALocale fromString: 'es-AR')) updateRoot: root ];
+		rootBlock:
+				[ :root | ( BootstrapSelectDevelopmentLibrary using: ( WALocale fromString: 'es-AR' ) ) updateRoot: root ];
 		render: [ :canvas |  ].
 
 
 	self
 		assert: html
 		equals:
-			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.12.4/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/i18n/defaults-es_ES.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.13.10/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.13.10/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.13.10/js/i18n/defaults-es_ES.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
 { #category : #tests }
@@ -106,12 +110,13 @@ BootstrapSelectDevelopmentLibraryTest >> testUpdateRootWithUnsupportedLocale [
 
 	html := WAHtmlCanvas builder
 		fullDocument: true;
-		rootBlock: [ :root | (BootstrapSelectDevelopmentLibrary using: (WALocale fromString: 'xx-XX')) updateRoot: root ];
+		rootBlock:
+				[ :root | ( BootstrapSelectDevelopmentLibrary using: ( WALocale fromString: 'xx-XX' ) ) updateRoot: root ];
 		render: [ :canvas |  ].
 
 
 	self
 		assert: html
 		equals:
-			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.12.4/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/i18n/defaults-en_US.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.13.10/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.13.10/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.13.10/js/i18n/defaults-en_US.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]

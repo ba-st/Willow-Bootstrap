@@ -1321,9 +1321,12 @@ WillowBootstrap class >> initializeSelectConstants [
 WillowBootstrap class >> initializeSelectConstantsAndClasses [
 
 	<ignoreForCoverage>
-	(Classification >> #bootstrap3)
-		bind: #selectpicker to: 'selectpicker';
-		bind: #bootstrapSelect to: 'bootstrap-select'.
+	self
+		forBootstrap3And4Do: [ :namespace | 
+			namespace
+				bind: #selectpicker to: 'selectpicker';
+				bind: #bootstrapSelect to: 'bootstrap-select'
+			].
 	self
 		initializeSelectConstants;
 		initializeSelectDataAPIConstants;

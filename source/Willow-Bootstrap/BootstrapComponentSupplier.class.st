@@ -71,6 +71,13 @@ BootstrapComponentSupplier >> dialogBuilder [
 	^ BootstrapModalBuilder new
 ]
 
+{ #category : #Supplying }
+BootstrapComponentSupplier >> dropdownListApplying: aComponentCommand [
+
+	^ DropDownListWebView
+		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand + BootstrapSelectCommand new ]
+]
+
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> fieldAddonBuilder [
 
