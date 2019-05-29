@@ -67,6 +67,15 @@ BootstrapComponentSupplierTest >> testAsynchronicLinkLabeledApplying [
 ]
 
 { #category : #'tests-Supplying' }
+BootstrapComponentSupplierTest >> testDateFieldApplying [
+
+	self
+		assertRenderingOf: [ :supplier | supplier dateFieldApplying: [ :field | field addClass bootstrapCommon textCenter ] ]
+		equals:
+			'<input value="" name="1" type="text" class="form-control text-center" maxlength="10" data-provide="datepicker"/>'
+]
+
+{ #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testDecimalNumberFieldApplying [
 
 	self assertRenderingOf: [ :supplier | supplier decimalNumberFieldApplying: [ :field |  ] ] equals: '<input value="" name="1" type="number" class="form-control text-right"/>'

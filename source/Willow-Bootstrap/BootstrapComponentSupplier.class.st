@@ -45,6 +45,16 @@ BootstrapComponentSupplier >> asynchronicLinkLabeled: aRenderable applying: aCom
 ]
 
 { #category : #Supplying }
+BootstrapComponentSupplier >> dateFieldApplying: aComponentCommand [
+
+	^ DateFieldWebView
+		applying: [ :field | 
+			field addClass bootstrapCommon formControl + ( field setMaximumLengthTo: 10 ) + aComponentCommand
+				+ BootstrapDatepickerCommand new + field beTextInput	"The datepicker plugin doesn't play nice with the HTML5 date input, so we use a text input instead."
+			]
+]
+
+{ #category : #Supplying }
 BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
 
 	^ NumberFieldWebView

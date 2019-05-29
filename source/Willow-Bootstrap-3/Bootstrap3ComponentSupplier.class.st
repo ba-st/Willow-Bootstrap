@@ -58,18 +58,6 @@ Bootstrap3ComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn off
 ]
 
 { #category : #Supplying }
-Bootstrap3ComponentSupplier >> dateFieldApplying: aComponentCommand [
-
-	"The datepicker plugin doesn't play nice with the HTML5 date input, so we use a text input instead."
-
-	^ DateFieldWebView
-		applying: [ :field | 
-			field addClass bootstrapCommon formControl + ( field setMaximumLengthTo: 10 ) + aComponentCommand
-				+ BootstrapDatepickerCommand new + field beTextInput
-			]
-]
-
-{ #category : #Supplying }
 Bootstrap3ComponentSupplier >> dropdownListApplying: aComponentCommand [
 
 	^ DropDownListWebView

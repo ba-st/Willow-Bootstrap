@@ -35,15 +35,6 @@ Bootstrap3ComponentSupplierTest >> testCheckboxUnlabeledOnModelOffModelApplying 
 ]
 
 { #category : #'tests-Supplying' }
-Bootstrap3ComponentSupplierTest >> testDateFieldApplying [
-
-	self
-		assertRenderingOf: [ :supplier | supplier dateFieldApplying: [ :field | field addClass bootstrap3 textCenter ] ]
-		equals:
-			'<input value="" name="1" type="text" class="form-control text-center" maxlength="10" data-provide="datepicker"/>'
-]
-
-{ #category : #'tests-Supplying' }
 Bootstrap3ComponentSupplierTest >> testDropdownListApplying [
 
 	self
