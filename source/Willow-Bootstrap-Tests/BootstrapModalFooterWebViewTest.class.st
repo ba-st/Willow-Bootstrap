@@ -12,7 +12,7 @@ BootstrapModalFooterWebViewTest >> acceptButton [
 
 	^ AsynchronicButtonWebView
 		labeled: 'Accept'
-		applying: [ :button | button addClass bootstrap3 button + button addClass bootstrap3 buttonPrimary ]
+		applying: [ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonPrimary ]
 ]
 
 { #category : #'tests-Configuring' }

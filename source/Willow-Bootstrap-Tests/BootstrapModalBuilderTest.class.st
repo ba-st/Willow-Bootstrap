@@ -69,9 +69,10 @@ BootstrapModalBuilderTest >> testRenderContentOnWithCommands [
 	legalDialog := self supplier dialogBuilder
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap3 buttonLink ];
-		applyingToDialog: [ :dialog | dialog addClass bootstrap3 fade ];
-		buildApplying: [ :document | document addClass bootstrap3 modalLarge ].
+		closeButtonLabeled: 'Ok'
+			applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ];
+		applyingToDialog: [ :dialog | dialog addClass bootstrapCommon fade ];
+		buildApplying: [ :document | document addClass bootstrapCommon modalLarge ].
 
 	html := self render: legalDialog.
 

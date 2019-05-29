@@ -12,7 +12,8 @@ BootstrapModalWebViewTest >> agreeButton [
 
 	^ AsynchronicButtonWebView
 		labeled: 'Agree'
-		applying: [ :button | button addClass bootstrap3 button + button addClass bootstrap3 buttonDefault ]
+		applying:
+			[ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonSuccess ]
 ]
 
 { #category : #private }
@@ -20,7 +21,7 @@ BootstrapModalWebViewTest >> takeMySoulButton [
 
 	^ AsynchronicButtonWebView
 		labeled: 'Just take my soul'
-		applying: [ :button | button addClass bootstrap3 button + button addClass bootstrap3 buttonPrimary ]
+		applying: [ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonPrimary ]
 ]
 
 { #category : #tests }
@@ -91,7 +92,7 @@ BootstrapModalWebViewTest >> testOnTriggerWithButtons [
 	self
 		assert: html
 		equals:
-			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Disagree</button><button id="button-id1" class="btn btn-default" type="button">Agree</button><button id="button-id2" class="btn btn-primary" type="button">Just take my soul</button></div></div></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#button-id2").click(function(event){$(this).prop("disabled",true)});</script>'
+			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Disagree</button><button id="button-id1" class="btn btn-success" type="button">Agree</button><button id="button-id2" class="btn btn-primary" type="button">Just take my soul</button></div></div></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#button-id2").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
 { #category : #tests }

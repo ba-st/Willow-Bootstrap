@@ -14,7 +14,7 @@ BootstrapSelfCleaningModalCommandTest >> testApplyToOn [
 
 	html := self
 		apply: BootstrapSelfCleaningModalCommand new
-		toComponentDefinedBy: [ :canvas | canvas div apply: [ :div | div addClass bootstrap3 modal ] ].
+		toComponentDefinedBy: [ :canvas | canvas div apply: [ :div | div addClass bootstrapCommon modal ] ].
 
 	self
 		assert: html

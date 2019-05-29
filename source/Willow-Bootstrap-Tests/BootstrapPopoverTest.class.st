@@ -101,7 +101,7 @@ BootstrapPopoverTest >> testHtmlContent [
 				htmlContent:
 					( GenericContainerWebView
 						wrapping: 'A more complex rendering'
-						applying: [ :container | container addClass bootstrap3 container ] )
+						applying: [ :container | container addClass bootstrapCommon container ] )
 			].
 
 	self
