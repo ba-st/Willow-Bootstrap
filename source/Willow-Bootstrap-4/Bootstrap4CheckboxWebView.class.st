@@ -12,7 +12,13 @@ Class {
 { #category : #configuring }
 Bootstrap4CheckboxWebView >> beCustom [
 
-	commandToContainer := [ :div | div addClass bootstrap4 customControl + div addClass bootstrap4 customCheckbox ].
+	self beCustomControlApplying: [ :div | div addClass bootstrap4 customCheckbox ]
+]
+
+{ #category : #'private - configuring' }
+Bootstrap4CheckboxWebView >> beCustomControlApplying: aCommand [
+
+	commandToContainer := [ :div | div addClass bootstrap4 customControl + aCommand ].
 	commandToLabel := [ :label | label addClass bootstrap4 customControlLabel ].
 	additionalInputCommand := [ :input | input addClass bootstrap4 customControlInput ]
 		asWebComponentCommand.
@@ -26,15 +32,7 @@ Bootstrap4CheckboxWebView >> beCustom [
 { #category : #configuring }
 Bootstrap4CheckboxWebView >> beSwitch [
 
-	commandToContainer := [ :div | div addClass bootstrap4 customControl + div addClass bootstrap4 customSwitch ].
-	commandToLabel := [ :label | label addClass bootstrap4 customControlLabel ].
-	additionalInputCommand := [ :input | input addClass bootstrap4 customControlInput ]
-		asWebComponentCommand.
-	labelOptional
-		withContentDo: [  ]
-		ifUnused: [ additionalInputCommand := additionalInputCommand
-				+ [ :input | input addClass bootstrap4 positionStatic ]
-			]
+	self beCustomControlApplying: [ :div | div addClass bootstrap4 customSwitch ]
 ]
 
 { #category : #'private - rendering' }
