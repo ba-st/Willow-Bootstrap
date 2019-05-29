@@ -1,7 +1,7 @@
 <p align="center"><img src="assets/logos/128x128.png">
  <h1 align="center">Willow-Bootstrap</h1>
   <p align="center">
-    Willow Bootstrap provides integration between <a href="https://github.com/ba-st/Willow">Willow</a> and <a href="http://getbootstrap.com/">Bootstrap 3</a>
+    Willow Bootstrap provides integration between <a href="https://github.com/ba-st/Willow">Willow</a> and <a href="http://getbootstrap.com/">Bootstrap 3/4</a>
     <br>
     <a href="docs/"><strong>Explore the docs »</strong></a>
     <br>
