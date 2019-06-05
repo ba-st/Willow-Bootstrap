@@ -7,10 +7,16 @@ Class {
 	#category : 'Willow-Bootstrap-Tests-WebInteraction'
 }
 
+{ #category : #testing }
+BootstrapDialogClosingCommandTest class >> isAbstract [ 
+
+	^self name = #BootstrapDialogClosingCommandTest
+]
+
 { #category : #accessing }
 BootstrapDialogClosingCommandTest >> componentSupplier [
 
-	^ BootstrapComponentSupplier online
+	^ self subclassResponsibility
 ]
 
 { #category : #accessing }

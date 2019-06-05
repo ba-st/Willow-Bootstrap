@@ -48,7 +48,7 @@ WillowBootstrapFileMetadataLibrary >> cleanModalFunctionUsing: script [
 	function << (script jQuery new alias: 'modal') remove.
 	function <<	(script javascript
 				if: ((script jQuery id: self constants >> #willow >> #dialogSectionName) children length equalTo: 0)
-				then: (script jQuery class: self classification >> #bootstrap >> #modalBackdrop) remove).
+				then: (script jQuery class: self classification >> #bootstrapCommon >> #modalBackdrop) remove).
 	^ function
 ]
 
@@ -92,44 +92,26 @@ WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJsContent [
 	^ '/*<n>* willow-bootstrap.js v<1s><n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n><2s>'
 		expandMacrosWith: self version
 		with:
-			(self
+			( self
 				javascriptContentFrom: [ :script | 
 					| bootstrap |
 
-					self replaceTooltipDestroyFunctionIn: script.
+					self putVersionSpecificHacksOn: script.
 					bootstrap := script willow bootstrap.
 					bootstrap
 						assign:
-							(GRSmallDictionary new
-								at: self constants >> #bootstrap >> #cleanModalFunctionName put: (self cleanModalFunctionUsing: script);
-								yourself).
-					script << bootstrap asImmediatelyInvokedFunctionExpression ])
+							( GRSmallDictionary new
+								at: self constants >> #bootstrap >> #cleanModalFunctionName
+									put: ( self cleanModalFunctionUsing: script );
+								yourself ).
+					script << bootstrap asImmediatelyInvokedFunctionExpression
+					] )
 ]
 
-{ #category : #private }
-WillowBootstrapFileMetadataLibrary >> replaceTooltipDestroyFunctionIn: script [
+{ #category : #Accessing }
+WillowBootstrapFileMetadataLibrary >> putVersionSpecificHacksOn: script [
 
-	"This fixes a problem in Bootstrap v3.3.7 when calling destroy in a tooltip twice. Checkout https://github.com/twbs/bootstrap/issues/21830 "
-
-	script << (JSStream this alias: '$.prototype.tooltip.Constructor.prototype.destroy')
-		assign:
-			(JSFunction new
-				add:
-					(JSStream
-						on:
-							'var that = this
-	clearTimeout(this.timeout)
-	this.hide(function () {
-	  null!=that.$element && that.$element.off("." + that.type).removeData("bs." + that.type)
-	  if (that.$tip) {
-		that.$tip.detach()
-	  }
-	  that.$tip = null
-	  that.$arrow = null
-	  that.$viewport = null
-	  that.$element = null
-	})');
-				yourself)
+	
 ]
 
 { #category : #Accessing }

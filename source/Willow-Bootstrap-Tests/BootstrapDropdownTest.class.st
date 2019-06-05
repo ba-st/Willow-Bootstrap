@@ -19,15 +19,20 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 					aBlock value: dropdown.
 					canvas anchor
 						script: dropdown;
-						with: [ canvas render: 'Menu'.
-							canvas span apply: [ :span | span addClass bootstrap caret ] ]
-							applying: [ :anchor :constants | (anchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown) + (anchor setARIARoleTo: #button) ].
+						with: 'Menu'
+							applying: [ :anchor :constants | 
+							( anchor setData: constants >> #bootstrap >> #target to: constants >> #bootstrap >> #dropdown )
+								+ ( anchor setARIARoleTo: #button )
+							].
 					canvas unorderedList
 						with: [ canvas
 								listItem: 'Menu option';
-								listItem: 'Other option' ]
-						applying: [ :list | list addClass bootstrap dropdownMenu ] ]
-				applying: [ :div | div addClass bootstrap dropdown ] ]
+								listItem: 'Other option'
+							]
+						applying: [ :list | list addClass bootstrapCommon dropdownMenu ]
+					]
+				applying: [ :div | div addClass bootstrapCommon dropdown ]
+			]
 ]
 
 { #category : #tests }
@@ -39,7 +44,7 @@ BootstrapDropdownTest >> testCallViaJavascript [
 	self
 		assert: html
 		equals:
-			'<div class="dropdown"><a id="id1" data-target="dropdown" role="button">Menu<span class="caret"></span></a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown();</script>'
+			'<div class="dropdown"><a id="id1" data-target="dropdown" role="button">Menu</a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown();</script>'
 ]
 
 { #category : #tests }
@@ -87,5 +92,5 @@ BootstrapDropdownTest >> testToggle [
 	self
 		assert: html
 		equals:
-			'<div class="dropdown"><a id="id1" data-target="dropdown" role="button">Menu<span class="caret"></span></a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown("toggle");</script>'
+			'<div class="dropdown"><a id="id1" data-target="dropdown" role="button">Menu</a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown("toggle");</script>'
 ]

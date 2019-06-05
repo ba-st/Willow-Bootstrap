@@ -71,16 +71,6 @@ BootstrapPopoverTest >> testDelay [
 ]
 
 { #category : #'tests-Methods' }
-BootstrapPopoverTest >> testDestroy [
-
-	| html |
-
-	html := self renderPopoverContentApplying: [ :popover | popover destroy ].
-
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover("destroy");</script>'
-]
-
-{ #category : #'tests-Methods' }
 BootstrapPopoverTest >> testHide [
 
 	| html |
@@ -106,8 +96,13 @@ BootstrapPopoverTest >> testHtmlContent [
 	| html |
 
 	html := self
-		renderPopoverContentApplying:
-			[ :popover | popover htmlContent: (GenericContainerWebView wrapping: 'A more complex rendering' applying: [ :container | container addClass bootstrap container ]) ].
+		renderPopoverContentApplying: [ :popover | 
+			popover
+				htmlContent:
+					( GenericContainerWebView
+						wrapping: 'A more complex rendering'
+						applying: [ :container | container addClass bootstrapCommon container ] )
+			].
 
 	self
 		assert: html
@@ -121,9 +116,18 @@ BootstrapPopoverTest >> testHtmlTitle [
 	| html |
 
 	html := self
-		renderPopoverContentApplying: [ :popover | popover htmlTitle: (GenericContainerWebView wrapping: 'A complex title' applying: [ :container | container addClass bootstrap container ]) ].
+		renderPopoverContentApplying: [ :popover | 
+			popover
+				htmlTitle:
+					( GenericContainerWebView
+						wrapping: 'A complex title'
+						applying: [ :container | container addClass bootstrapCommon container ] )
+			].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"title":"<div class=\"container\">A complex title</div>"});</script>'
+	self
+		assert: html
+		equals:
+			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"title":"<div class=\"container\">A complex title</div>"});</script>'
 ]
 
 { #category : #'tests-Events' }
@@ -194,6 +198,31 @@ BootstrapPopoverTest >> testPlacementWithFunction [
 ]
 
 { #category : #'tests-Options' }
+BootstrapPopoverTest >> testSanitize [
+
+	| html |
+
+	html := self renderPopoverContentApplying: [ :popover | popover sanitize: true ].
+
+	self
+		assert: html
+		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"sanitize":true});</script>'
+]
+
+{ #category : #'tests-Options' }
+BootstrapPopoverTest >> testSanitizeFunction [
+
+	| html |
+
+	html := self renderPopoverContentApplying: [ :popover | popover sanitizeFunction: JSFunction new ].
+
+	self
+		assert: html
+		equals:
+			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"sanitizeFn":function(){}});</script>'
+]
+
+{ #category : #'tests-Options' }
 BootstrapPopoverTest >> testSelector [
 
 	| html |
@@ -211,32 +240,6 @@ BootstrapPopoverTest >> testShow [
 	html := self renderPopoverContentApplying: [ :popover | popover show ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover("show");</script>'
-]
-
-{ #category : #'tests-Options' }
-BootstrapPopoverTest >> testTemplate [
-
-	| html |
-
-	html := self
-		renderUsing: [ :canvas | 
-			| div popover |
-
-			div := canvas div.
-			popover := canvas jQuery new bootstrapPopover.
-			popover
-				template: [ :template | 
-					template div
-						with: [ template div apply: [ :container | container addClass bootstrap arrow ].
-							template render: (HeadingWebView displaying: '' withLevel: 3 applying: [ :container | container addClass bootstrap popoverTitle ]).
-							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap popoverContent ] ]
-						applying: [ :container :constants | container addClass bootstrap popover + (container setARIARoleTo: #tooltip) ] ].
-			div script: popover ].
-
-	self
-		assert: html
-		equals:
-			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"template":"<div class=\"popover\" role=\"tooltip\"><div class=\"arrow\"></div><h3 class=\"popover-title\"></h3><div class=\"popover-content\"><span class=\"glyphicon glyphicon-menu-up\"></span></div></div>"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -270,24 +273,20 @@ BootstrapPopoverTest >> testTrigger [
 ]
 
 { #category : #'tests-Options' }
-BootstrapPopoverTest >> testViewport [
-
-	| html |
-
-	html := self renderPopoverContentApplying: [ :popover | popover viewport: '#id1' ].
-
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"viewport":"#id1"});</script>'
-]
-
-{ #category : #'tests-Options' }
-BootstrapPopoverTest >> testViewportWithPadding [
+BootstrapPopoverTest >> testWhiteList [
 
 	| html |
 
 	html := self
-		renderPopoverContentApplying: [ :popover | popover viewport: (BootstrapViewportConfiguration new selector: '#id1' padding: 5) ].
+		renderPopoverContentApplying: [ :popover | 
+			popover
+				whiteList:
+					{( 'a' -> #() ).
+					( 'img' -> #('src' 'alt') )}
+			].
 
 	self
 		assert: html
-		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"viewport":{"selector":"#id1","padding":5}});</script>'
+		equals:
+			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"whiteList":{"a":[],"img":["src","alt"]}});</script>'
 ]

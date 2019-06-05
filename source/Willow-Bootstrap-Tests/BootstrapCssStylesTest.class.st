@@ -13,7 +13,7 @@ Class {
 { #category : #'private - asserting' }
 BootstrapCssStylesTest >> assertClassificationAt: aSymbol equals: anExpectedString [
 
-	self assert: Classification >> #bootstrap >> aSymbol equals: anExpectedString
+	self assert: Classification >> #bootstrap3 >> aSymbol equals: anExpectedString
 ]
 
 { #category : #tests }

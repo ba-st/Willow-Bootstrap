@@ -10,7 +10,9 @@ Class {
 { #category : #private }
 BootstrapModalFooterWebViewTest >> acceptButton [
 
-	^ AsynchronicButtonWebView labeled: 'Accept' applying: [ :button | button addClass bootstrap button + button addClass bootstrap buttonPrimary ]
+	^ AsynchronicButtonWebView
+		labeled: 'Accept'
+		applying: [ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonPrimary ]
 ]
 
 { #category : #'tests-Configuring' }
@@ -18,7 +20,10 @@ BootstrapModalFooterWebViewTest >> testOnCloseTrigger [
 
 	| footer html |
 
-	footer := BootstrapModalFooterWebView with: self acceptButton andCloseButtonLabeled: 'Close' applyingToIt: [ :closeButton | closeButton addClass bootstrap buttonLink ].
+	footer := BootstrapModalFooterWebView
+		with: self acceptButton
+		andCloseButtonLabeled: 'Close'
+		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
 	footer onCloseTrigger disable.
 
@@ -35,7 +40,10 @@ BootstrapModalFooterWebViewTest >> testOnTrigger [
 
 	| footer html |
 
-	footer := BootstrapModalFooterWebView with: self acceptButton andCloseButtonLabeled: 'Close' applyingToIt: [ :closeButton | closeButton addClass bootstrap buttonLink ].
+	footer := BootstrapModalFooterWebView
+		with: self acceptButton
+		andCloseButtonLabeled: 'Close'
+		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
 	footer onTrigger disable.
 
@@ -52,11 +60,16 @@ BootstrapModalFooterWebViewTest >> testRenderContentOn [
 
 	| footer html |
 
-	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Close' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ].
+	footer := BootstrapModalFooterWebView
+		withCloseButtonLabeled: 'Close'
+		applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
 	html := self render: footer.
 
-	self assert: html equals: '<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button></div>'
+	self
+		assert: html
+		equals:
+			'<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button></div>'
 ]
 
 { #category : #tests }
@@ -64,11 +77,15 @@ BootstrapModalFooterWebViewTest >> testRenderContentOnWithAdditionalButtons [
 
 	| footer html |
 
-	footer := BootstrapModalFooterWebView with: self acceptButton andCloseButtonLabeled: 'Close' applyingToIt: [ :closeButton | closeButton addClass bootstrap buttonLink ].
+	footer := BootstrapModalFooterWebView
+		with: self acceptButton
+		andCloseButtonLabeled: 'Close'
+		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
 	html := self render: footer.
 
 	self
 		assert: html
-		equals: '<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button><button id="button-id1" class="btn btn-primary" type="button">Accept</button></div>'
+		equals:
+			'<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button><button id="button-id1" class="btn btn-primary" type="button">Accept</button></div>'
 ]

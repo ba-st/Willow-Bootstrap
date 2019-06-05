@@ -1,41 +1,16 @@
 "
-I have the responsibility to provide Bootstrap components. 
+I'm the abstract superclass of the Bootstrap components suppliers. 
 "
 Class {
 	#name : #BootstrapComponentSupplier,
 	#superclass : #FrontendComponentSupplier,
-	#instVars : [
-		'bootstrapLibraries'
-	],
 	#category : #'Willow-Bootstrap-Frontend'
 }
 
-{ #category : #'Instance Creation' }
-BootstrapComponentSupplier class >> online [
+{ #category : #testing }
+BootstrapComponentSupplier class >> isAbstract [
 
-	^ self
-		usingLibraries:
-			{Bootstrap3OnlineLibrary default.
-			BootstrapSelectOnlineLibrary default.
-			BootstrapDatepickerOnlineLibrary default.
-			BootstrapTypeaheadOnlineLibrary default}
-]
-
-{ #category : #'private - Instance Creation' }
-BootstrapComponentSupplier class >> usingLibraries: aLibraryCollection [
-
-	^ self new initializeUsing: aLibraryCollection
-]
-
-{ #category : #'Instance Creation' }
-BootstrapComponentSupplier class >> withBootstrapLibrary: aBootstrapLibrary selectLibrary: aBootstrapSelectLibrary datepickerLibrary: aDatePickerLibrary typeaheadLibrary: aTypeaheadLibrary [
-
-	^ self
-		usingLibraries:
-			{aBootstrapLibrary.
-			aBootstrapSelectLibrary.
-			aDatePickerLibrary.
-			aTypeaheadLibrary}
+	^ self name = #BootstrapComponentSupplier
 ]
 
 { #category : #Interaction }
@@ -47,13 +22,20 @@ BootstrapComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQuer
 { #category : #Supplying }
 BootstrapComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aComponentCommand [
 
-	^ AsynchronicButtonWebView labeled: aRenderable applying: [ :button | button addClass bootstrap button + aComponentCommand ]
+	^ AsynchronicButtonWebView
+		labeled: aRenderable
+		applying: [ :button | button addClass bootstrapCommon button + aComponentCommand ]
 ]
 
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> asynchronicLinkActingAsButtonLabeled: aRenderable applying: aComponentCommand [
 
-	^ self asynchronicLinkLabeled: aRenderable applying: [ :anchor :constants | (anchor setARIARoleTo: #button) + anchor addClass bootstrap button + aComponentCommand ]
+	^ self
+		asynchronicLinkLabeled: aRenderable
+		applying: [ :anchor :constants | 
+			( anchor setARIARoleTo: #button ) + anchor addClass bootstrapCommon button + aComponentCommand
+				+ ( anchor setAttribute: 'href' to: '#' )
+			]
 ]
 
 { #category : #Supplying }
@@ -63,35 +45,24 @@ BootstrapComponentSupplier >> asynchronicLinkLabeled: aRenderable applying: aCom
 ]
 
 { #category : #Supplying }
-BootstrapComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
-
-	^ BootstrapCheckboxWebView
-		labeled: aRenderable
-		onModel: anObjectToUseWhenOn
-		offModel: anObjectToUseWhenOff
-		applying: aCommandToComponent
-]
-
-{ #category : #Supplying }
-BootstrapComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
-
-	^ BootstrapCheckboxWebView
-		onModel: anObjectToUseWhenOn
-		offModel: anObjectToUseWhenOff
-		applying: aCommandToComponent
-]
-
-{ #category : #Supplying }
 BootstrapComponentSupplier >> dateFieldApplying: aComponentCommand [
-	
-	"The datepicker plugin doesn't play nice with the HTML5 date input, so we use a text input instead."
-	^ DateFieldWebView applying: [ :field | field addClass bootstrap formControl + (field setMaximumLengthTo: 10) + aComponentCommand + BootstrapDatepickerCommand new + field beTextInput ]
+
+	^ DateFieldWebView
+		applying: [ :field | 
+			field addClass bootstrapCommon formControl + ( field setMaximumLengthTo: 10 ) + aComponentCommand
+				+ BootstrapDatepickerCommand new + field beTextInput	"The datepicker plugin doesn't play nice with the HTML5 date input, so we use a text input instead."
+			]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
 
-	^ NumberFieldWebView applying: [ :field | field addClass bootstrap formControl + field addClass bootstrap textRight + aComponentCommand ] transformingWith: FloatCodec new
+	^ NumberFieldWebView
+		applying: [ :field | 
+			field addClass bootstrapCommon formControl + field addClass bootstrapCommon textRight
+				+ aComponentCommand
+			]
+		transformingWith: FloatCodec new
 ]
 
 { #category : #'Supplying - Non Portable' }
@@ -103,13 +74,16 @@ BootstrapComponentSupplier >> dialogBuilder [
 { #category : #Supplying }
 BootstrapComponentSupplier >> dropdownListApplying: aComponentCommand [
 
-	^ DropDownListWebView applying: [ :field | field addClass bootstrap formControl + aComponentCommand + BootstrapSelectCommand new ]
+	^ DropDownListWebView
+		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand + BootstrapSelectCommand new ]
 ]
 
-{ #category : #Supplying }
-BootstrapComponentSupplier >> dropdownMenuBuilder [
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> fieldAddonBuilder [
 
-	^ BootstrapDropdownMenuBuilder using: self
+	"A Field addon builder allows to extend fields by adding text, buttons or button groups on either side of the field"
+
+	^ self subclassResponsibility
 ]
 
 { #category : #Supplying }
@@ -125,43 +99,51 @@ BootstrapComponentSupplier >> fieldSetContaining: aWebView applying: fieldSetCom
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> gridBuilder [
 
-	^ BootstrapGridBuilder new
-]
-
-{ #category : #initialization }
-BootstrapComponentSupplier >> initializeUsing: aLibraryCollection [
-
-	bootstrapLibraries := aLibraryCollection
+	self subclassResponsibility
 ]
 
 { #category : #'Supplying - Non Portable' }
-BootstrapComponentSupplier >> inputGroupAddOnWrapping: aRenderable [
+BootstrapComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
 
-	^ PhrasingContainerWebView wrapping: aRenderable applying: [ :container | container addClass bootstrap inputGroupAddon ]
+	^ self subclassResponsibility
 ]
 
 { #category : #'Supplying - Non Portable' }
-BootstrapComponentSupplier >> inputGroupButtonWrapping: aRenderable [
+BootstrapComponentSupplier >> labeledFieldApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
-	^ PhrasingContainerWebView wrapping: aRenderable applying: [ :container | container addClass bootstrap inputGroupButton ]
+	^ self subclassResponsibility
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> multiLineTextFieldApplying: aComponentCommand [
 
-	^ TextFieldWebView multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap formControl + aComponentCommand ]
+	^ TextFieldWebView
+		multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> multipleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
 
-	^ MultipleSelectionListBoxWebView displayingAtOnce: aNumberOfElements applying: [ :field | field addClass bootstrap formControl + aComponentCommand ]
+	^ MultipleSelectionListBoxWebView
+		displayingAtOnce: aNumberOfElements
+		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> naturalNumberFieldApplying: aComponentCommand [
 
-	^ NumberFieldWebView applying: [ :field | field addClass bootstrap formControl + field addClass bootstrap textRight + aComponentCommand + field boundNotNegative ] transformingWith: NaturalNumberCodec new
+	^ NumberFieldWebView
+		applying: [ :field | 
+			field addClass bootstrapCommon formControl + field addClass bootstrapCommon textRight + aComponentCommand
+				+ field boundNotNegative
+			]
+		transformingWith: NaturalNumberCodec new
+]
+
+{ #category : #'Supplying - Non Portable' }
+BootstrapComponentSupplier >> navigationDropdownMenuBuilder [
+
+	^ self subclassResponsibility
 ]
 
 { #category : #Supplying }
@@ -173,47 +155,40 @@ BootstrapComponentSupplier >> notificationBuilder [
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> panelBuilder [
 
-	^ BootstrapPanelBuilder new
+	^ self subclassResponsibility
 ]
 
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> pillsBuilder [
-	
-	^BootstrapToggablePillsBuilder new
-]
 
-{ #category : #Supplying }
-BootstrapComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
-
-	^BootstrapRadioWebView 
-		renderingWith: aRenderingBlock 
-		applyingToLabel: aLabelCommand
-		applyingToInput: anInputCommand
-
+	^ self subclassResponsibility
 ]
 
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> singleButtonDropdownBuilder [
 
-	^ BootstrapSingleButtonDropdownBuilder using: self
+	^ self subclassResponsibility
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> singleLineTextFieldApplying: aComponentCommand [
 
-	^ TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap formControl + aComponentCommand ]
+	^ TextFieldWebView
+		singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
 
-	^ SingleSelectionListBoxWebView displayingAtOnce: aNumberOfElements applying: [ :listBox | listBox addClass bootstrap formControl + aComponentCommand ]
+	^ SingleSelectionListBoxWebView
+		displayingAtOnce: aNumberOfElements
+		applying: [ :listBox | listBox addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> splitButtonDropdownBuilder [
 
-	^ BootstrapSplitButtonDropdownBuilder using: self
+	^ self subclassResponsibility
 ]
 
 { #category : #Supplying }
@@ -221,7 +196,7 @@ BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aCo
 
 	^ SynchronicSubmitButtonWebView
 		labeled: aRenderable
-		applying: [ :field | field addClass bootstrap button + aComponentCommand ]
+		applying: [ :field | field addClass bootstrapCommon button + aComponentCommand ]
 		evaluating: anActionBlock
 ]
 
@@ -229,35 +204,27 @@ BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aCo
 BootstrapComponentSupplier >> tableBuilder [
 
 	^ TableWebViewBuilder new
-		apply: [ :table | table addClass bootstrap table ];
+		apply: [ :table | table addClass bootstrapCommon table ];
 		yourself
 ]
 
 { #category : #'Supplying - Non Portable' }
 BootstrapComponentSupplier >> tabsBuilder [
 
-	^ BootstrapToggableTabsBuilder new
+	^ self subclassResponsibility
 ]
 
 { #category : #Supplying }
 BootstrapComponentSupplier >> unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem [
 
 	^ UnorderedListWebView
-		applying: [ :list | list addClass bootstrap listGroup + aCommandToList ]
+		applying: [ :list | list addClass bootstrapCommon listGroup + aCommandToList ]
 		listing: aCollection
-		applyingToEach: [ :listItem | listItem addClass bootstrap listGroupItem + aCommandToItem ]
+		applyingToEach: [ :listItem | listItem addClass bootstrapCommon listGroupItem + aCommandToItem ]
 ]
 
 { #category : #Processing }
 BootstrapComponentSupplier >> updateRoot: aRoot [
 
-	aRoot beHtml5.
-	aRoot meta
-		responseHeaderName: 'X-UA-Compatible';
-		content: 'IE=edge'.
-	aRoot meta
-		name: 'viewport';
-		content: 'width=device-width, initial-scale=1.0'.
-	bootstrapLibraries do: [ :library | library updateRoot: aRoot ].
-	WillowBootstrapFileMetadataLibrary default updateRoot: aRoot
+	aRoot beHtml5
 ]

@@ -4,15 +4,28 @@ Class {
 	#category : 'Willow-Bootstrap-Tests-WebViews'
 }
 
+{ #category : #testing }
+BootstrapModalBuilderTest class >> isAbstract [
+
+	^ self name = #BootstrapModalBuilderTest
+]
+
+{ #category : #private }
+BootstrapModalBuilderTest >> supplier [
+
+	^ self subclassResponsibility
+]
+
 { #category : #tests }
 BootstrapModalBuilderTest >> testBeSelfCleaning [
 
 	| html dialog |
 
-	dialog := BootstrapComponentSupplier online dialogBuilder
+	dialog := self supplier dialogBuilder
 		beSelfCleaning;
 		headerTitled: 'Terms and Conditions';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
+		closeButtonLabeled: 'Ok'
+			applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ];
 		build.
 
 	html := self render: dialog.
@@ -26,7 +39,7 @@ BootstrapModalBuilderTest >> testBeSelfCleaning [
 { #category : #tests }
 BootstrapModalBuilderTest >> testCantBuildWithoutHeaderSpec [
 
-	self should: [ BootstrapComponentSupplier online dialogBuilder build ] raise: AssertionFailed
+	self should: [ self supplier dialogBuilder build ] raise: AssertionFailed
 ]
 
 { #category : #tests }
@@ -34,10 +47,10 @@ BootstrapModalBuilderTest >> testRenderContentOn [
 
 	| html dialog |
 
-	dialog := BootstrapComponentSupplier online dialogBuilder
+	dialog := self supplier dialogBuilder
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
+		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ];
 		build.
 
 	html := self render: dialog.
@@ -53,12 +66,13 @@ BootstrapModalBuilderTest >> testRenderContentOnWithCommands [
 
 	| html legalDialog |
 
-	legalDialog := BootstrapComponentSupplier online dialogBuilder
+	legalDialog := self supplier dialogBuilder
 		headerTitled: 'Terms and Conditions';
 		wrapping: 'Some very large legal stuff. ;)';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
-		applyingToDialog: [ :dialog | dialog addClass bootstrap fade ];
-		buildApplying: [ :document | document addClass bootstrap modalLarge ].
+		closeButtonLabeled: 'Ok'
+			applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ];
+		applyingToDialog: [ :dialog | dialog addClass bootstrapCommon fade ];
+		buildApplying: [ :document | document addClass bootstrapCommon modalLarge ].
 
 	html := self render: legalDialog.
 
@@ -73,9 +87,9 @@ BootstrapModalBuilderTest >> testRenderContentOnWithDismissableHeader [
 
 	| html dialog |
 
-	dialog := BootstrapComponentSupplier online dialogBuilder
+	dialog := self supplier dialogBuilder
 		dismissableHeaderTitled: 'Terms and Conditions';
-		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];
+		closeButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ];
 		build.
 
 	html := self render: dialog.
@@ -93,7 +107,7 @@ BootstrapModalBuilderTest >> testSimplestDialog [
 
 	html := self
 		render:
-			(BootstrapComponentSupplier online dialogBuilder
+			(self supplier dialogBuilder
 				headerTitled: 'Title';
 				build).
 

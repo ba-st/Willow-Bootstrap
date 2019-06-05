@@ -48,15 +48,6 @@ BootstrapPopover >> delay: aNumberOrObject [
 ]
 
 { #category : #Methods }
-BootstrapPopover >> destroy [
-
-	"Hides and destroys an element's popover. 
-	Tooltips that use delegation (which are created using the selector option) cannot be individually destroyed on descendant trigger elements."
-
-	functionName := 'destroy'
-]
-
-{ #category : #Methods }
 BootstrapPopover >> hide [
 
 	"Hides an element's popover. Returns to the caller before the popover has actually been hidden (i.e. before the hidden.bs.popover event occurs). 
@@ -106,6 +97,22 @@ BootstrapPopover >> placement: aStringOrFunction [
 	The this context is set to the popover instance."
 
 	self optionAt: #placement put: (self lookupCssValue: aStringOrFunction)
+]
+
+{ #category : #Options }
+BootstrapPopover >> sanitize: aBoolean [
+
+	"Enable or disable the sanitization. If activated 'template', 'content' and 'title' options will be sanitized."
+
+	self optionAt: #sanitize put: aBoolean
+]
+
+{ #category : #Options }
+BootstrapPopover >> sanitizeFunction: aJSFunction [
+
+	"Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization."
+
+	self optionAt: #sanitizeFn put: aJSFunction
 ]
 
 { #category : #Options }
@@ -167,11 +174,13 @@ BootstrapPopover >> trigger: aString [
 ]
 
 { #category : #Options }
-BootstrapPopover >> viewport: aStringViewportConfigurationOrFunction [
+BootstrapPopover >> whiteList: anAssociationArray [
 
-	"Keeps the popover within the bounds of this element. 
-	Example: viewport: '#viewport' or { 'selector': '#viewport', 'padding': 0 }
-	If a function is given, it is called with the triggering element DOM node as its only argument. The this context is set to the popover instance."
+	"Object which contains allowed attributes and tags"
 
-	self optionAt: #viewport put: aStringViewportConfigurationOrFunction
+	| object |
+
+	object := GRSmallDictionary new.
+	anAssociationArray do: [ :association | object at: association key put: association value asArray ].
+	self optionAt: #whiteList put: object
 ]

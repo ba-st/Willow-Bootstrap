@@ -19,25 +19,25 @@ BootstrapAlertCommand class >> applying: aCommand [
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> danger [
 
-	^ self applying: [ :container | container addClass bootstrap alertDanger ]
+	^ self applying: [ :container | container addClass bootstrapCommon alertDanger ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> informational [
 
-	^ self applying: [ :container | container addClass bootstrap alertInfo ]
+	^ self applying: [ :container | container addClass bootstrapCommon alertInfo ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> success [
 
-	^ self applying: [ :container | container addClass bootstrap alertSuccess ]
+	^ self applying: [ :container | container addClass bootstrapCommon alertSuccess ]
 ]
 
 { #category : #'Instance Creation' }
 BootstrapAlertCommand class >> warning [
 
-	^ self applying: [ :container | container addClass bootstrap alertWarning ]
+	^ self applying: [ :container | container addClass bootstrapCommon alertWarning ]
 ]
 
 { #category : #processing }
@@ -49,5 +49,8 @@ BootstrapAlertCommand >> applyTo: aComponent on: aCanvas [
 { #category : #initialization }
 BootstrapAlertCommand >> initializeApplying: aContextualClassificationCommand [
 
-	classificationCommand := [ :container :constants | container addClass bootstrap alert + aContextualClassificationCommand + (container setARIARoleTo: #alert) ] asWebComponentCommand
+	classificationCommand := [ :container :constants | 
+	container addClass bootstrapCommon alert + aContextualClassificationCommand
+		+ ( container setARIARoleTo: #alert )
+	] asWebComponentCommand
 ]

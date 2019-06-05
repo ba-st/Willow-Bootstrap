@@ -104,7 +104,7 @@ JQueryInstance >> onHideTooltip: aFunction [
 
 { #category : #'*Willow-Bootstrap' }
 JQueryInstance >> onInsertedPopover: aFunction [
-
+ 
 	self call: 'on' with: self constants >> #bootstrap >> #insertedPopover with: aFunction
 ]
 

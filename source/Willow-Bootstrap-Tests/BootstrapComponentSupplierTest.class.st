@@ -7,16 +7,28 @@ Class {
 	#category : #'Willow-Bootstrap-Tests-Frontend'
 }
 
+{ #category : #testing }
+BootstrapComponentSupplierTest class >> isAbstract [
+
+	^ self name = #BootstrapComponentSupplierTest
+]
+
 { #category : #private }
 BootstrapComponentSupplierTest >> assertRenderingOf: aComponentCreationBlock equals: anExpectedHtml [
 
 	| component html |
 
-	component := aComponentCreationBlock value: BootstrapComponentSupplier online.
+	component := aComponentCreationBlock value: self supplierClass online.
 
 	html := self render: component.
 
 	self assert: html equals: anExpectedHtml
+]
+
+{ #category : #private }
+BootstrapComponentSupplierTest >> supplierClass [
+
+	^ self subclassResponsibility
 ]
 
 { #category : #'tests-Supplying' }
@@ -26,7 +38,8 @@ BootstrapComponentSupplierTest >> testAsynchronicButtonLabeledApplying [
 		assertRenderingOf: [ :supplier | 
 			supplier
 				asynchronicButtonLabeled: 'Buy'
-				applying: [ :anchor | anchor addClass bootstrap buttonPrimary ] ]
+				applying: [ :anchor | anchor addClass bootstrapCommon buttonPrimary ]
+			]
 		equals: '<button class="btn btn-primary" type="button">Buy</button>'
 ]
 
@@ -34,61 +47,38 @@ BootstrapComponentSupplierTest >> testAsynchronicButtonLabeledApplying [
 BootstrapComponentSupplierTest >> testAsynchronicLinkActingAsButtonLabeledApplying [
 
 	self
-		assertRenderingOf: [ :supplier | supplier asynchronicLinkActingAsButtonLabeled: 'Buy' applying: [ :link | link addClass bootstrap buttonPrimary ] ]
+		assertRenderingOf: [ :supplier | 
+			supplier
+				asynchronicLinkActingAsButtonLabeled: 'Buy'
+				applying: [ :link | link addClass bootstrapCommon buttonPrimary ]
+			]
 		equals:
-			'<a id="a-id1" role="button" class="btn btn-primary">Buy</a><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});</script>'
+			'<a id="a-id1" role="button" class="btn btn-primary" href="#">Buy</a><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});</script>'
 ]
 
 { #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testAsynchronicLinkLabeledApplying [
 
 	self
-		assertRenderingOf: [ :supplier | supplier asynchronicLinkLabeled: 'Buy' applying: [ :link | link addClass bootstrap buttonPrimary ] ]
+		assertRenderingOf:
+			[ :supplier | supplier asynchronicLinkLabeled: 'Buy' applying: [ :link | link addClass bootstrapCommon buttonPrimary ] ]
 		equals:
 			'<a id="a-id1" class="btn-primary">Buy</a><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});</script>'
-]
-
-{ #category : #'tests-Supplying' }
-BootstrapComponentSupplierTest >> testCheckboxLabeledOnModelOffModelApplying [
-
-	self
-		assertRenderingOf: [ :supplier | 
-			supplier
-				checkboxLabeled: 'Labelization'
-				onModel: 3
-				offModel: 'the off'
-				applying: [ :checkbox | checkbox addClass willow ] ]
-		equals: '<div class="checkbox willow"><label><input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/>Labelization</label></div>'
-]
-
-{ #category : #'tests-Supplying' }
-BootstrapComponentSupplierTest >> testCheckboxUnlabeledOnModelOffModelApplying [
-
-	self
-		assertRenderingOf: [ :supplier | supplier checkboxUnlabeledOnModel: 3 offModel: 'the off' applying: [ :checkbox | checkbox addClass willow ] ]
-		equals: '<div class="checkbox willow"><label><input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>'
 ]
 
 { #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testDateFieldApplying [
 
 	self
-		assertRenderingOf: [ :supplier | supplier dateFieldApplying: [ :field | field addClass bootstrap textCenter ] ]
-		equals: '<input value="" name="1" type="text" class="form-control text-center" maxlength="10" data-provide="datepicker"/>'
+		assertRenderingOf: [ :supplier | supplier dateFieldApplying: [ :field | field addClass bootstrapCommon textCenter ] ]
+		equals:
+			'<input value="" name="1" type="text" class="form-control text-center" maxlength="10" data-provide="datepicker"/>'
 ]
 
 { #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testDecimalNumberFieldApplying [
 
 	self assertRenderingOf: [ :supplier | supplier decimalNumberFieldApplying: [ :field |  ] ] equals: '<input value="" name="1" type="number" class="form-control text-right"/>'
-]
-
-{ #category : #'tests-Supplying' }
-BootstrapComponentSupplierTest >> testDropdownListApplying [
-
-	self
-		assertRenderingOf: [ :supplier | supplier dropdownListApplying: [ :dropdownList | dropdownList setData: 'size' to: 10 ] ]
-		equals: '<select name="1" class="form-control selectpicker" data-size="10" id="id2"></select><script type="text/javascript">$("#id2").selectpicker("render");</script>'
 ]
 
 { #category : #'tests-Supplying' }
@@ -108,7 +98,8 @@ BootstrapComponentSupplierTest >> testFieldSetContainingApplyingWithLegendApplyi
 BootstrapComponentSupplierTest >> testMultiLineTextFieldApplying [
 
 	self
-		assertRenderingOf: [ :supplier | supplier multiLineTextFieldApplying: [ :field | field addClass bootstrap textCenter ] ]
+		assertRenderingOf:
+			[ :supplier | supplier multiLineTextFieldApplying: [ :field | field addClass bootstrapCommon textCenter ] ]
 		equals: '<textarea rows="auto" cols="auto" name="1" class="form-control text-center"></textarea>'
 ]
 
@@ -139,28 +130,6 @@ BootstrapComponentSupplierTest >> testNotificationBuilder [
 ]
 
 { #category : #'tests-Supplying' }
-BootstrapComponentSupplierTest >> testRadioRenderingWithApplyingToLabelApplyingToInput [
-
-	| supplier radio html |
-
-	supplier := BootstrapComponentSupplier online.
-	radio := supplier
-		radioRenderingWith: #asUppercase
-		applyingToLabel: [ :theRadio | theRadio addClass willow ]
-		applyingToInput: [ :theRadio | theRadio addClass willow ].
-
-	html := self render: radio.
-	self assert: html isEmpty.
-
-	radio allowAnyOf: #(f h).
-	html := self render: radio.
-	self
-		assert: html
-		equals:
-			'<label class="willow"><input name="1" class="willow" value="1" type="radio"/>F</label><label class="willow"><input name="1" class="willow" value="2" type="radio"/>H</label>'
-]
-
-{ #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testSingleSelectionListBoxDisplayingAtOnceApplying [
 
 	self assertRenderingOf: [ :supplier | supplier singleSelectionListBoxDisplayingAtOnce: 10 applying: [ :listBox |  ] ] equals: '<select name="1" size="10" class="form-control"></select>'
@@ -173,93 +142,46 @@ BootstrapComponentSupplierTest >> testSynchronicButtonLabeledApplyingEvaluating 
 		assertRenderingOf: [ :supplier | 
 			supplier
 				synchronicButtonLabeled: 'Buy'
-				applying: [ :link | link addClass bootstrap buttonPrimary ]
-				evaluating: [  ] ]
+				applying: [ :link | link addClass bootstrapCommon buttonPrimary ]
+				evaluating: [  ]
+			]
 		equals: '<button name="1" class="btn btn-primary" type="submit">Buy</button>'
 ]
 
 { #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testTableBuilder [
 
-	| supplier table html |
-
-	supplier := BootstrapComponentSupplier online.
-
-	table := supplier tableBuilder
-		addColumn: [ :column | 
-			column
-				titled: 'Number';
-				rendering: [ :number | number ] ];
-		build.
-
-	table changeContentsTo: #(1 2 3).
-
-	html := self render: table.
-
 	self
-		assert: html
+		assertRenderingOf: [ :supplier | 
+			| table |
+
+			table := supplier tableBuilder
+				addColumn: [ :column | 
+					column
+						titled: 'Number';
+						rendering: [ :number | number ]
+					];
+				build.
+
+			table
+				changeContentsTo: #(1 2 3);
+				yourself
+			]
 		equals:
 			'<table id="table-id1" class="table"><thead><th>Number</th></thead><tbody><tr><td>1</td></tr><tr><td>2</td></tr><tr><td>3</td></tr></tbody></table>'
 ]
 
-{ #category : #'tests-Processing' }
-BootstrapComponentSupplierTest >> testUpdateRoot [
-
-	| html |
-
-	html := WAHtmlCanvas builder
-		fullDocument: true;
-		rootBlock: [ :root | BootstrapComponentSupplier online updateRoot: root ];
-		render: [ :canvas |  ].
+{ #category : #'tests-Supplying' }
+BootstrapComponentSupplierTest >> testUnorderedListApplyingListingApplyingToEach [ 
 
 	self
-		assert: html
-		equals: '<!DOCTYPE html><html><head><title></title><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"/><link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"/><script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css" integrity="sha256-/us3egi2cVp0mEkVR8cnqLsuDY6BmrDuvTPUuEr1HJQ=" crossorigin="anonymous"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js" integrity="sha256-19J3rT3tQdidgtqqdQ3xNu++Gd7EoP/ag/0x1lHi0xY=" crossorigin="anonymous"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-en_US.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css" integrity="sha256-mlKJFBS1jbZwwDrZD1ApO7YFS6MA1XDN37jZ9GDFC64=" crossorigin="anonymous"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js" integrity="sha256-tW5LzEC7QjhG0CiAvxlseMTs2qJS7u3DRPauDjFJ3zo=" crossorigin="anonymous"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script><link rel="stylesheet" type="text/css" href="/files/willow-bootstrap-8.0.0/css/willow-bootstrap.css"/><script type="text/javascript" src="/files/willow-bootstrap-8.0.0/js/willow-bootstrap.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
-			
-]
-
-{ #category : #'tests-Processing' }
-BootstrapComponentSupplierTest >> testUpdateRootWithSelfHostedLibraries [
-
-	| html |
-
-	html := WAHtmlCanvas builder
-		fullDocument: true;
-		rootBlock: [ :root | 
-			( BootstrapComponentSupplier
-				withBootstrapLibrary: Bootstrap3DevelopmentMetadataLibrary default
-				selectLibrary: BootstrapSelectDevelopmentLibrary default
-				datepickerLibrary: BootstrapDatepickerDevelopmentLibrary default
-				typeaheadLibrary: BootstrapTypeaheadDevelopmentLibrary default ) updateRoot: root
-			];
-		render: [ :canvas |  ].
-
-	self
-		assert: html
-		equals: '<!DOCTYPE html><html><head><title></title><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" type="text/css" href="/files/bootstrap-3.4.1/css/bootstrap.css"/><link rel="stylesheet" type="text/css" href="/files/bootstrap-3.4.1/css/bootstrap-theme.css"/><script type="text/javascript" src="/files/bootstrap-3.4.1/js/bootstrap.js"></script><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.12.4/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/i18n/defaults-en_US.js"></script><link rel="stylesheet" type="text/css" href="/files/bootstrap-datepicker-1.8.0/css/bootstrap-datepicker3.css"/><script type="text/javascript" src="/files/bootstrap-datepicker-1.8.0/js/bootstrap-datepicker.js"></script><script type="text/javascript" src="/files/bootstrap-typeahead-4.0.2/bootstrap3-typeahead.js"></script><link rel="stylesheet" type="text/css" href="/files/willow-bootstrap-8.0.0/css/willow-bootstrap.css"/><script type="text/javascript" src="/files/willow-bootstrap-8.0.0/js/willow-bootstrap.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
-]
-
-{ #category : #'tests-Processing' }
-BootstrapComponentSupplierTest >> testUpdateRootWithSelfHostedLibrariesAndLanguageSupport [
-
-	| html |
-
-	html := WAHtmlCanvas builder
-		fullDocument: true;
-		rootBlock: [ :root | 
-			| locale |
-
-			locale := WALocale fromString: 'it'.
-			( BootstrapComponentSupplier
-				withBootstrapLibrary: Bootstrap3DevelopmentMetadataLibrary default
-				selectLibrary: ( BootstrapSelectDevelopmentLibrary using: locale )
-				datepickerLibrary: ( BootstrapDatepickerDevelopmentLibrary using: locale )
-				typeaheadLibrary: BootstrapTypeaheadDevelopmentLibrary default ) updateRoot: root
-			];
-		render: [ :canvas |  ].
-
-	self
-		assert: html
-		equals: '<!DOCTYPE html><html><head><title></title><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" type="text/css" href="/files/bootstrap-3.4.1/css/bootstrap.css"/><link rel="stylesheet" type="text/css" href="/files/bootstrap-3.4.1/css/bootstrap-theme.css"/><script type="text/javascript" src="/files/bootstrap-3.4.1/js/bootstrap.js"></script><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.12.4/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.12.4/js/i18n/defaults-it_IT.js"></script><link rel="stylesheet" type="text/css" href="/files/bootstrap-datepicker-1.8.0/css/bootstrap-datepicker3.css"/><script type="text/javascript" src="/files/bootstrap-datepicker-1.8.0/js/bootstrap-datepicker.js"></script><script type="text/javascript" src="/files/bootstrap-datepicker-1.8.0/locales/bootstrap-datepicker.it.js"></script><script type="text/javascript" src="/files/bootstrap-typeahead-4.0.2/bootstrap3-typeahead.js"></script><link rel="stylesheet" type="text/css" href="/files/willow-bootstrap-8.0.0/css/willow-bootstrap.css"/><script type="text/javascript" src="/files/willow-bootstrap-8.0.0/js/willow-bootstrap.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
-		 
+		assertRenderingOf: [ :supplier | 
+			supplier
+				unorderedListApplying: [  ]
+				listing:
+					#('Cras justo odio' 'Dapibus ac facilisis in' 'Morbi leo risus' 'Porta ac consectetur ac' 'Vestibulum at eros')
+				applyingToEach: [  ]
+			]
+		equals:
+			'<ul class="list-group"><li class="list-group-item">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
 ]

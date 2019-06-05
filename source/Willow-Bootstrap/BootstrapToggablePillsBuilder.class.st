@@ -22,5 +22,5 @@ BootstrapToggablePillsBuilder >> dataToggleValue [
 { #category : #private }
 BootstrapToggablePillsBuilder >> navigationTypeCommand [
 
-	^ [ :list | list addClass bootstrap navPills ] asWebComponentCommand
+	^ [ :list | list addClass bootstrapCommon navPills ] asWebComponentCommand
 ]

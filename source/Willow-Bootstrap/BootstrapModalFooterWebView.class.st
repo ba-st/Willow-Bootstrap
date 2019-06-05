@@ -16,7 +16,11 @@ BootstrapModalFooterWebView class >> closeButtonLabeled: aRenderable applying: a
 
 	^ AsynchronicButtonWebView
 		labeled: aRenderable
-		applying: [ :button :constants | button addClass bootstrap button + (button setData: constants >> #bootstrap >> #dismiss to: constants >> #bootstrap >> #modal) + aComponentCommand ]
+		applying: [ :button :constants | 
+			button addClass bootstrapCommon button
+				+ ( button setData: constants >> #bootstrap >> #dismiss to: constants >> #bootstrap >> #modal )
+				+ aComponentCommand
+			]
 ]
 
 { #category : #'Instance Creation' }
@@ -64,6 +68,8 @@ BootstrapModalFooterWebView >> renderContentOn: aCanvas [
 			buttons
 				do: [ :button | 
 					button identifyIn: aCanvas.
-					aCanvas render: button ] ]
-		applying: [ :div | div addClass bootstrap modalFooter ]
+					aCanvas render: button
+					]
+			]
+		applying: [ :div | div addClass bootstrapCommon modalFooter ]
 ]

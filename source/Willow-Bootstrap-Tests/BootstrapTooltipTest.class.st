@@ -90,6 +90,26 @@ BootstrapTooltipTest >> testHtml [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true});</script>'
 ]
 
+{ #category : #'tests-Options' }
+BootstrapTooltipTest >> testHtmlTitle [
+
+	| html |
+
+	html := self
+		renderTooltipContentApplying: [ :tooltip | 
+			tooltip
+				htmlTitle:
+					( GenericContainerWebView
+						wrapping: 'A complex tooltip'
+						applying: [ :container | container addClass bootstrapCommon container ] )
+			].
+
+	self
+		assert: html
+		equals:
+			'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true,"title":"<div class=\"container\">A complex tooltip</div>"});</script>'
+]
+
 { #category : #'tests-Events' }
 BootstrapTooltipTest >> testOnHidden [
 
@@ -158,6 +178,26 @@ BootstrapTooltipTest >> testPlacementWithFunction [
 ]
 
 { #category : #'tests-Options' }
+BootstrapTooltipTest >> testSanitize [
+
+	| html |
+
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip sanitize: true ].
+
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"sanitize":true});</script>'
+]
+
+{ #category : #'tests-Options' }
+BootstrapTooltipTest >> testSanitizeFunction [
+
+	| html |
+
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip sanitizeFunction: JSFunction new ].
+
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"sanitizeFn":function(){}});</script>'
+]
+
+{ #category : #'tests-Options' }
 BootstrapTooltipTest >> testSelector [
 
 	| html |
@@ -175,31 +215,6 @@ BootstrapTooltipTest >> testShow [
 	html := self renderTooltipContentApplying: [ :tooltip | tooltip show ].
 
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip("show");</script>'
-]
-
-{ #category : #'tests-Options' }
-BootstrapTooltipTest >> testTemplate [
-
-	| html |
-
-	html := self
-		renderUsing: [ :canvas | 
-			| div tooltip |
-
-			div := canvas div.
-			tooltip := canvas jQuery new bootstrapTooltip.
-			tooltip
-				template: [ :template | 
-					template div
-						with: [ template div apply: [ :container | container addClass bootstrap tooltipArrow ].
-							template div with: (BootstrapIconWebView representing: Glyphicons menuUp) applying: [ :container | container addClass bootstrap tooltipInner ] ]
-						applying: [ :container :constants | container addClass bootstrap tooltip + (container setARIARoleTo: #tooltip) ] ].
-			div script: tooltip ].
-
-	self
-		assert: html
-		equals:
-			'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"template":"<div class=\"tooltip\" role=\"tooltip\"><div class=\"tooltip-arrow\"></div><div class=\"tooltip-inner\"><span class=\"glyphicon glyphicon-menu-up\"></span></div></div>"});</script>'
 ]
 
 { #category : #'tests-Options' }
@@ -233,24 +248,13 @@ BootstrapTooltipTest >> testTrigger [
 ]
 
 { #category : #'tests-Options' }
-BootstrapTooltipTest >> testViewport [
+BootstrapTooltipTest >> testWhiteList [
 
 	| html |
 
-	html := self renderTooltipContentApplying: [ :tooltip | tooltip viewport: '#id1' ].
+	html := self renderTooltipContentApplying: [ :tooltip | tooltip 	whiteList:
+					{( 'a' -> #() ).
+					( 'img' -> #('src' 'alt') )} ].
 
-	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"viewport":"#id1"});</script>'
-]
-
-{ #category : #'tests-Options' }
-BootstrapTooltipTest >> testViewportWithPadding [
-
-	| html |
-
-	html := self
-		renderTooltipContentApplying: [ :tooltip | tooltip viewport: (BootstrapViewportConfiguration new selector: '#id1' padding: 5) ].
-
-	self
-		assert: html
-		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"viewport":{"selector":"#id1","padding":5}});</script>'
+	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"whiteList":{"a":[],"img":["src","alt"]}});</script>'
 ]

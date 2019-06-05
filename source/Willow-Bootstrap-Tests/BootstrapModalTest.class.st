@@ -17,8 +17,9 @@ BootstrapModalTest >> renderModalContentApplying: aBlock [
 			modal := canvas jQuery new bootstrapModal.
 			aBlock value: modal.
 			canvas div
-				apply: [ :div | div addClass bootstrap modal ];
-				script: modal ]
+				apply: [ :div | div addClass bootstrapCommon modal ];
+				script: modal
+			]
 ]
 
 { #category : #'tests-Options' }
@@ -41,6 +42,16 @@ BootstrapModalTest >> testBackdropBoolean [
 	self
 		assert: html
 		equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal({"backdrop":true});</script>'
+]
+
+{ #category : #'tests-Methods' }
+BootstrapModalTest >> testHandleUpdate [
+
+	| html |
+
+	html := self renderModalContentApplying: [ :modal | modal handleUpdate ].
+
+	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal("handleUpdate");</script>'
 ]
 
 { #category : #'tests-Methods' }

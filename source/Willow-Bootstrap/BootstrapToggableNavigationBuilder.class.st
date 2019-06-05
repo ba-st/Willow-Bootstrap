@@ -6,7 +6,11 @@ Class {
 	#superclass : #WillowComponentBuilder,
 	#instVars : [
 		'headers',
-		'contents'
+		'contents',
+		'tabHeaderCommand',
+		'tabTitleCommand',
+		'firstTabHeaderCommand',
+		'firstTitleCommand'
 	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
@@ -17,8 +21,10 @@ BootstrapToggableNavigationBuilder >> addNavigationHeadedBy: aRenderable contain
 	| identifiedContent |
 
 	identifiedContent := self identifiedViewContaining: aNavigationContent.
-	
-	headers add: (self tabTitleWith: aRenderable linkedTo: identifiedContent).
+
+	headers
+		ifEmpty: [ headers add: ( self firstTabTitleWith: aRenderable linkedTo: identifiedContent ) ]
+		ifNotEmpty: [ headers add: ( self tabTitleWith: aRenderable linkedTo: identifiedContent ) ].
 	contents add: identifiedContent
 ]
 
@@ -41,6 +47,12 @@ BootstrapToggableNavigationBuilder >> dataToggleValue [
 ]
 
 { #category : #private }
+BootstrapToggableNavigationBuilder >> firstTabTitleWith: aRenderable linkedTo: identifiedContent [
+
+	^ self tabTitleWith: aRenderable linkedTo: identifiedContent applying: firstTitleCommand
+]
+
+{ #category : #private }
 BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationContent [
 
 	| isFirstTab |
@@ -51,7 +63,10 @@ BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationConte
 	^ IdentifiedWebView
 		forDivNamed: self dataToggleValue
 		containing: aNavigationContent
-		applying: [ :div :constants | (div setARIARoleTo: #tabPanel) + div addClass bootstrap tabPane + (div when: [ isFirstTab ] apply: div addClass bootstrap active) ]
+		applying: [ :div :constants | 
+			( div setARIARoleTo: #tabPanel ) + div addClass bootstrapCommon tabPane
+				+ ( div when: [ isFirstTab ] apply: div addClass bootstrapCommon active )
+			]
 ]
 
 { #category : #initialization }
@@ -59,7 +74,12 @@ BootstrapToggableNavigationBuilder >> initialize [
 
 	super initialize.
 	headers := OrderedCollection new.
-	contents := OrderedCollection new
+	contents := OrderedCollection new.
+	firstTabHeaderCommand := [ :listItem | listItem addClass bootstrapCommon active ]
+		asWebComponentCommand.
+	firstTitleCommand := [  ] asWebComponentCommand.
+	tabHeaderCommand := [  ] asWebComponentCommand.
+	tabTitleCommand := [  ] asWebComponentCommand
 ]
 
 { #category : #private }
@@ -73,19 +93,27 @@ BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 
 	"The first header must be rendered specially because needs the active style"
 
-	canvas listItem with: headers first applying: [ :listItem :constants | listItem addClass bootstrap active + (listItem setARIARoleTo: #presentation) ]
+	canvas listItem
+		with: headers first
+		applying:
+			[ :listItem :constants | tabHeaderCommand + firstTabHeaderCommand + ( listItem setARIARoleTo: #presentation ) ]
 ]
 
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 
-	headers copyWithoutFirst do: [ :header | aCanvas listItem with: header applying: [ :listItem :constants | listItem setARIARoleTo: #presentation ] ]
+	headers copyWithoutFirst
+		do: [ :header | 
+			aCanvas listItem
+				with: header
+				applying: [ :listItem :constants | tabHeaderCommand + ( listItem setARIARoleTo: #presentation ) ]
+			]
 ]
 
 { #category : #'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderTabContentOn: aCanvas [
 
-	aCanvas div with: [ contents do: [ :currentContent | aCanvas render: currentContent ] ] applying: [ :div | div addClass bootstrap tabContent ]
+	aCanvas div with: contents applying: [ :div | div addClass bootstrapCommon tabContent ]
 ]
 
 { #category : #'private - Rendering' }
@@ -101,12 +129,19 @@ BootstrapToggableNavigationBuilder >> renderTabListOn: aCanvas applying: aComman
 BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 
 	^ canvas unorderedList
-		apply: [ :list :constants | list addClass bootstrap nav + self navigationTypeCommand + (list setARIARoleTo: #tabList) ];
+		apply:
+				[ :list :constants | list addClass bootstrapCommon nav + self navigationTypeCommand + ( list setARIARoleTo: #tabList ) ];
 		yourself
 ]
 
 { #category : #private }
 BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identifiedContent [
+
+	^ self tabTitleWith: aRenderable linkedTo: identifiedContent applying: [  ]
+]
+
+{ #category : #private }
+BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identifiedContent applying: aCommand [
 
 	^ [ :canvas | 
 	| titleLink |
@@ -114,7 +149,12 @@ BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identi
 	titleLink := canvas anchor.
 	identifiedContent identifyIn: canvas.
 	titleLink
-		url: ('#<1s>' expandMacrosWith: identifiedContent identifier);
+		url: ( '#<1s>' expandMacrosWith: identifiedContent identifier );
 		with: aRenderable
-			applying: [ :link :constants | (link setARIARoleTo: #tab) + (link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue) + (link setARIAAttribute: 'control' to: identifiedContent identifier) ] ]
+			applying: [ :link :constants | 
+			tabTitleCommand + aCommand + ( link setARIARoleTo: #tab )
+				+ ( link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue )
+				+ ( link setARIAAttribute: 'control' to: identifiedContent identifier )
+			]
+	]
 ]

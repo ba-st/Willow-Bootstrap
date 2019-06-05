@@ -58,6 +58,7 @@ BootstrapModalHeaderWebView >> renderContentOn: aCanvas [
 		with: [ dismissButtonOptional withContentDo: [ :dismissButton | aCanvas render: dismissButton ].
 			aCanvas heading
 				level4;
-				with: title applying: [ :heading | heading addClass bootstrap modalTitle ] ]
-		applying: [ :div | div addClass bootstrap modalHeader ]
+				with: title applying: [ :heading | heading addClass bootstrapCommon modalTitle ]
+			]
+		applying: [ :div | div addClass bootstrapCommon modalHeader ]
 ]
