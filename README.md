@@ -13,9 +13,12 @@
 </p>
 
 [![GitHub release](https://img.shields.io/github/release/ba-st/Willow-Bootstrap.svg)](https://github.com/ba-st/Willow-Bootstrap/releases/latest)
-[![Build Status](https://travis-ci.org/ba-st/Willow-Bootstrap.svg?branch=release-candidate)](https://travis-ci.org/ba-st/Willow-Bootstrap)
-[![Coverage Status](https://coveralls.io/repos/github/ba-st/Willow-Bootstrap/badge.svg?branch=release-candidate)](https://coveralls.io/github/ba-st/Willow-Bootstrap?branch=release-candidate)
+[![Build Status](https://github.com/ba-st/Willow-Bootstrap/workflows/Build/badge.svg?branch=release-candidate)](https://github.com/ba-st/Willow-Bootstrap/actions?query=workflow%3ABuild)
+[![Coverage Status](https://codecov.io/github/ba-st/Willow-Bootstrap/coverage.svg?branch=release-candidate)](https://codecov.io/gh/ba-st/Willow-Bootstrap/branch/release-candidate)
 [![Javascript Dependency Status](https://david-dm.org/ba-st/Willow-Bootstrap.svg)](https://david-dm.org/ba-st/Willow-Bootstrap)
+[![Pharo 6.1](https://img.shields.io/badge/Pharo-6.1-informational)](https://pharo.org)
+[![Pharo 7.0](https://img.shields.io/badge/Pharo-7.0-informational)](https://pharo.org)
+[![Pharo 8.0](https://img.shields.io/badge/Pharo-8.0-informational)](https://pharo.org)
 
 The project goal is to complement Willow with a component supplier that allows the creation of Bootstrap applications.
 
