@@ -19,7 +19,7 @@ BootstrapDatepickerDevelopmentLibrary >> cssbootstrapdatepicker3Css [
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> cssbootstrapdatepicker3CssContent [
 	^ '/*!
- * Datepicker for Bootstrap v1.8.0 (https://github.com/uxsolutions/bootstrap-datepicker)
+ * Datepicker for Bootstrap v1.9.0 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
  */
@@ -707,7 +707,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJs [
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-datepicker.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsbootstrapdatepickerJsContent)
 ]
@@ -715,7 +715,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJs [
 { #category : #uploaded }
 BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 	^ '/*!
- * Datepicker for Bootstrap v1.8.0 (https://github.com/uxsolutions/bootstrap-datepicker)
+ * Datepicker for Bootstrap v1.9.0 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
  */
@@ -805,6 +805,10 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 
 	var Datepicker = function(element, options){
 		$.data(element, ''datepicker'', this);
+
+		this._events = [];
+		this._secondaryEvents = [];
+
 		this._process_options(options);
 
 		this.dates = new DateArray();
@@ -814,7 +818,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 		this.element = $(element);
 		this.isInput = this.element.is(''input'');
 		this.inputField = this.isInput ? this.element : this.element.find(''input'');
-		this.component = this.element.hasClass(''date'') ? this.element.find(''.add-on, .input-group-addon, .btn'') : false;
+		this.component = this.element.hasClass(''date'') ? this.element.find(''.add-on, .input-group-addon, .input-group-append, .input-group-prepend, .btn'') : false;
 		if (this.component && this.component.length === 0)
 			this.component = false;
 		this.isInline = !this.component && this.element.is(''div'');
@@ -1024,8 +1028,6 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 				o.defaultViewDate = UTCToday();
 			}
 		},
-		_events: [],
-		_secondaryEvents: [],
 		_applyEvents: function(evs){
 			for (var i=0, el, ch, ev; i < evs.length; i++){
 				el = evs[i][0];
@@ -1181,7 +1183,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 		},
 
 		show: function(){
-			if (this.inputField.prop(''disabled'') || (this.inputField.prop(''readonly'') && this.o.enableOnReadonly === false))
+			if (this.inputField.is('':disabled'') || (this.inputField.prop(''readonly'') && this.o.enableOnReadonly === false))
 				return;
 			if (!this.isInline)
 				this.picker.appendTo(this.o.container);
@@ -1678,7 +1680,9 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 				endMonth = this.o.endDate !== Infinity ? this.o.endDate.getUTCMonth() : Infinity,
 				todaytxt = dates[this.o.language].today || dates[''en''].today || '''',
 				cleartxt = dates[this.o.language].clear || dates[''en''].clear || '''',
-				titleFormat = dates[this.o.language].titleFormat || dates[''en''].titleFormat,
+        titleFormat = dates[this.o.language].titleFormat || dates[''en''].titleFormat,
+        todayDate = UTCToday(),
+        titleBtnVisible = (this.o.todayBtn === true || this.o.todayBtn === ''linked'') && todayDate >= this.o.startDate && todayDate <= this.o.endDate && !this.weekOfDateIsDisabled(todayDate),
 				tooltip,
 				before;
 			if (isNaN(year) || isNaN(month))
@@ -1687,7 +1691,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 						.text(DPGlobal.formatDate(d, titleFormat, this.o.language));
 			this.picker.find(''tfoot .today'')
 						.text(todaytxt)
-						.css(''display'', this.o.todayBtn === true || this.o.todayBtn === ''linked'' ? ''table-cell'' : ''none'');
+            .css(''display'', titleBtnVisible ? ''table-cell'' : ''none'');
 			this.picker.find(''tfoot .clear'')
 						.text(cleartxt)
 						.css(''display'', this.o.clearBtn === true ? ''table-cell'' : ''none'');
@@ -1867,12 +1871,12 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 					factor *= 10;
 					/* falls through */
 				case 1:
-					prevIsDisabled = Math.floor(year / factor) * factor < startYear;
+					prevIsDisabled = Math.floor(year / factor) * factor <= startYear;
 					nextIsDisabled = Math.floor(year / factor) * factor + factor > endYear;
 					break;
 				case 0:
-					prevIsDisabled = year <= startYear && month < startMonth;
-					nextIsDisabled = year >= endYear && month > endMonth;
+					prevIsDisabled = year <= startYear && month <= startMonth;
+					nextIsDisabled = year >= endYear && month >= endMonth;
 					break;
 			}
 
@@ -2719,7 +2723,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 
 	/* DATEPICKER VERSION
 	 * =================== */
-	$.fn.datepicker.version = ''1.8.0'';
+	$.fn.datepicker.version = ''1.9.0'';
 
 	$.fn.datepicker.deprecated = function(msg){
 		var console = window.console;
@@ -2756,7 +2760,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ar.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerarJsContent)
 ]
@@ -2785,7 +2789,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ar-tn.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerartnJsContent)
 ]
@@ -2814,7 +2818,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.az.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerazJsContent)
 ]
@@ -2830,7 +2834,9 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJsContent [
         months: ["Yanvar", "Fevral", "Mart", "Aprel", "May", "İyun", "İyul", "Avqust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"],
         monthsShort: ["Yan", "Fev", "Mar", "Apr", "May", "İyun", "İyul", "Avq", "Sen", "Okt", "Noy", "Dek"],
         today: "Bu gün",
-        weekStart: 1
+        weekStart: 1,
+        clear: "Təmizlə",
+        monthsTitle: ''Aylar''
     };
 }(jQuery));
 '
@@ -2840,7 +2846,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bg.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbgJsContent)
 ]
@@ -2865,10 +2871,42 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJsContent [
 ]
 
 { #category : #'uploaded metadata' }
+BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbmJs [
+	^ WAFileLibraryResource
+		filepath: 'locales/bootstrap-datepicker.bm.js'
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
+		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbmJsContent)
+]
+
+{ #category : #uploaded }
+BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbmJsContent [
+	^ '/**
+ * Bamanankan (bm) translation for bootstrap-datepicker
+ * Fatou Fall <fatou@medicmobile.org>
+ */
+;(function($){
+  $.fn.datepicker.dates[''bm''] = {
+    days: ["Kari","Ntɛnɛn","Tarata","Araba","Alamisa","Juma","Sibiri"],
+    daysShort: ["Kar","Ntɛ","Tar","Ara","Ala","Jum","Sib"],
+    daysMin: ["Ka","Nt","Ta","Ar","Al","Ju","Si"],
+    months: ["Zanwuyekalo","Fewuruyekalo","Marisikalo","Awirilikalo","Mɛkalo","Zuwɛnkalo","Zuluyekalo","Utikalo","Sɛtanburukalo","ɔkutɔburukalo","Nowanburukalo","Desanburukalo"],
+    monthsShort: ["Zan","Few","Mar","Awi","Mɛ","Zuw","Zul","Uti","Sɛt","ɔku","Now","Des"],
+    today: "Bi",
+    monthsTitle: "Kalo",
+    clear: "Ka jɔsi",
+    weekStart: 1,
+    format: "dd/mm/yyyy"
+  };
+}(jQuery));
+'
+]
+
+{ #category : #'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bn.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbnJsContent)
 ]
@@ -2901,7 +2939,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.br.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbrJsContent)
 ]
@@ -2933,7 +2971,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bs.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbsJsContent)
 ]
@@ -2962,7 +3000,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ca.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickercaJsContent)
 ]
@@ -2994,7 +3032,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.cs.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickercsJsContent)
 ]
@@ -3027,7 +3065,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.cy.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickercyJsContent)
 ]
@@ -3055,7 +3093,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.da.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerdaJsContent)
 ]
@@ -3088,7 +3126,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.de.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerdeJsContent)
 ]
@@ -3120,7 +3158,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.el.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerelJsContent)
 ]
@@ -3150,7 +3188,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-AU.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenAUJsContent)
 ]
@@ -3182,7 +3220,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-CA.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenCAJsContent)
 ]
@@ -3214,7 +3252,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-GB.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenGBJsContent)
 ]
@@ -3246,7 +3284,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-IE.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenIEJsContent)
 ]
@@ -3277,7 +3315,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-NZ.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenNZJsContent)
 ]
@@ -3308,7 +3346,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-ZA.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenZAJsContent)
 ]
@@ -3339,7 +3377,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.eo.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickereoJsContent)
 ]
@@ -3370,7 +3408,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.es.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeresJsContent)
 ]
@@ -3402,7 +3440,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.et.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeretJsContent)
 ]
@@ -3434,7 +3472,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.eu.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickereuJsContent)
 ]
@@ -3467,7 +3505,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fa.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfaJsContent)
 ]
@@ -3498,7 +3536,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fi.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfiJsContent)
 ]
@@ -3529,7 +3567,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fo.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfoJsContent)
 ]
@@ -3558,7 +3596,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fr-CH.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfrCHJsContent)
 ]
@@ -3593,7 +3631,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fr.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfrJsContent)
 ]
@@ -3625,7 +3663,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.gl.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerglJsContent)
 ]
@@ -3652,7 +3690,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.he.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerheJsContent)
 ]
@@ -3681,7 +3719,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hi.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhiJsContent)
 ]
@@ -3713,7 +3751,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hr.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhrJsContent)
 ]
@@ -3740,7 +3778,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hu.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhuJsContent)
 ]
@@ -3772,7 +3810,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hy.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhyJsContent)
 ]
@@ -3804,7 +3842,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.id.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeridJsContent)
 ]
@@ -3833,7 +3871,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.is.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerisJsContent)
 ]
@@ -3861,7 +3899,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.it-CH.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeritCHJsContent)
 ]
@@ -3895,7 +3933,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.it.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeritJsContent)
 ]
@@ -3927,7 +3965,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ja.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerjaJsContent)
 ]
@@ -3958,7 +3996,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ka.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkaJsContent)
 ]
@@ -3989,7 +4027,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kh.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkhJsContent)
 ]
@@ -4024,7 +4062,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kk.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkkJsContent)
 ]
@@ -4053,7 +4091,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.km.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkmJsContent)
 ]
@@ -4082,7 +4120,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ko.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkoJsContent)
 ]
@@ -4114,7 +4152,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kr.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkrJsContent)
 ]
@@ -4147,7 +4185,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.lt.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerltJsContent)
 ]
@@ -4180,7 +4218,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.lv.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerlvJsContent)
 ]
@@ -4212,7 +4250,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.me.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermeJsContent)
 ]
@@ -4243,7 +4281,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.mk.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermkJsContent)
 ]
@@ -4272,7 +4310,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.mn.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermnJsContent)
 ]
@@ -4303,7 +4341,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ms.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermsJsContent)
 ]
@@ -4354,7 +4392,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernbJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.nl-BE.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickernlBEJsContent)
 ]
@@ -4386,7 +4424,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.nl.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickernlJsContent)
 ]
@@ -4418,7 +4456,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.no.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickernoJsContent)
 ]
@@ -4434,7 +4472,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJsContent [
     days: [''søndag'', ''mandag'', ''tirsdag'', ''onsdag'', ''torsdag'', ''fredag'', ''lørdag''],
     daysShort: [''søn'', ''man'', ''tir'', ''ons'', ''tor'', ''fre'', ''lør''],
     daysMin: [''sø'', ''ma'', ''ti'', ''on'', ''to'', ''fr'', ''lø''],
-    months: [''januar'', ''februar'', ''mars'', ''april'', ''mai'', ''juni'', ''juli'', ''august'', ''september'', ''oktober'', ''vovember'', ''desember''],
+    months: [''januar'', ''februar'', ''mars'', ''april'', ''mai'', ''juni'', ''juli'', ''august'', ''september'', ''oktober'', ''november'', ''desember''],
     monthsShort: [''jan'', ''feb'', ''mar'', ''apr'', ''mai'', ''jun'', ''jul'', ''aug'', ''sep'', ''okt'', ''nov'', ''des''],
     today: ''i dag'',
     monthsTitle: ''Måneder'',
@@ -4450,7 +4488,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.oc.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerocJsContent)
 ]
@@ -4481,7 +4519,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pl.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerplJsContent)
 ]
@@ -4512,7 +4550,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pt-BR.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerptBRJsContent)
 ]
@@ -4543,7 +4581,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pt.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerptJsContent)
 ]
@@ -4575,7 +4613,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ro.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerroJsContent)
 ]
@@ -4606,7 +4644,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.rs.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerrsJsContent)
 ]
@@ -4640,7 +4678,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.rs-latin.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerrslatinJsContent)
 ]
@@ -4674,7 +4712,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJsCont
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ru.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerruJsContent)
 ]
@@ -4706,7 +4744,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.si.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersiJsContent)
 ]
@@ -4738,7 +4776,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sk.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerskJsContent)
 ]
@@ -4770,7 +4808,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sl.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerslJsContent)
 ]
@@ -4799,7 +4837,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sq.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersqJsContent)
 ]
@@ -4817,7 +4855,11 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJsContent [
 		daysMin: ["Di", "Hë", "Ma", "Më", "En", "Pr", "Sht"],
 		months: ["Janar", "Shkurt", "Mars", "Prill", "Maj", "Qershor", "Korrik", "Gusht", "Shtator", "Tetor", "Nëntor", "Dhjetor"],
 		monthsShort: ["Jan", "Shk", "Mar", "Pri", "Maj", "Qer", "Korr", "Gu", "Sht", "Tet", "Nën", "Dhjet"],
-		today: "Sot"
+    monthsTitle: "Muaj",
+		today: "Sot",
+    weekStart: 1,
+    format: "dd/mm/yyyy",
+    clear: "Pastro"
 	};
 }(jQuery));
 
@@ -4828,7 +4870,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sr.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersrJsContent)
 ]
@@ -4858,7 +4900,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sr-latin.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersrlatinJsContent)
 ]
@@ -4888,7 +4930,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJsCont
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sv.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersvJsContent)
 ]
@@ -4919,7 +4961,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sw.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerswJsContent)
 ]
@@ -4948,7 +4990,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ta.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertaJsContent)
 ]
@@ -4980,7 +5022,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.tg.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertgJsContent)
 ]
@@ -5013,7 +5055,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.th.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerthJsContent)
 ]
@@ -5041,7 +5083,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertkJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.tk.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertkJsContent)
 ]
@@ -5073,7 +5115,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertkJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.tr.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertrJsContent)
 ]
@@ -5105,7 +5147,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uk.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerukJsContent)
 ]
@@ -5136,7 +5178,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uz-cyrl.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeruzcyrlJsContent)
 ]
@@ -5168,7 +5210,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJsConte
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uz-latn.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeruzlatnJsContent)
 ]
@@ -5200,7 +5242,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJsConte
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.vi.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerviJsContent)
 ]
@@ -5230,7 +5272,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJsContent [
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.zh-CN.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerzhCNJsContent)
 ]
@@ -5245,12 +5287,13 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJsContent
 	$.fn.datepicker.dates[''zh-CN''] = {
 		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
 		daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
-		daysMin:  ["日", "一", "二", "三", "四", "五", "六"],
+		daysMin: ["日", "一", "二", "三", "四", "五", "六"],
 		months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
 		monthsShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-		today: "今日",
+		today: "今天",
+		monthsTitle: "选择月份",
 		clear: "清除",
-		format: "yyyy年mm月dd日",
+		format: "yyyy-mm-dd",
 		titleFormat: "yyyy年mm月",
 		weekStart: 1
 	};
@@ -5262,7 +5305,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJsContent
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhTWJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.zh-TW.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerzhTWJsContent)
 ]

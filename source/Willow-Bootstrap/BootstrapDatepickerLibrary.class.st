@@ -43,7 +43,7 @@ BootstrapDatepickerLibrary class >> using: aWALocale [
 { #category : #Accessing }
 BootstrapDatepickerLibrary class >> version [
 
-	^ '1.8.0'
+	^ '1.9.0'
 ]
 
 { #category : #initialization }
