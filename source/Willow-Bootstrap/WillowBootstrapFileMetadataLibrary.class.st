@@ -81,7 +81,7 @@ WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJs [
 
 	^ WAFileLibraryResource
 		filepath: 'js/willow-bootstrap.js'
-		mimeType: WAMimeType textJavascript
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: self class defaultCacheDuration
 		contents: self jswillowbootstrapJsContent
 ]
