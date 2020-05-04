@@ -19,12 +19,36 @@ BootstrapSelectDevelopmentLibrary >> cssbootstrapselectCss [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> cssbootstrapselectCssContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
+@-webkit-keyframes bs-notify-fadeOut {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes bs-notify-fadeOut {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bs-notify-fadeOut {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 select.bs-select-hidden,
 .bootstrap-select > select.bs-select-hidden,
 select.selectpicker {
@@ -110,11 +134,11 @@ select.selectpicker {
 .has-error .bootstrap-select .dropdown-toggle,
 .error .bootstrap-select .dropdown-toggle,
 .bootstrap-select.is-invalid .dropdown-toggle,
-.was-validated .bootstrap-select .selectpicker:invalid + .dropdown-toggle {
+.was-validated .bootstrap-select select:invalid + .dropdown-toggle {
   border-color: #b94a48;
 }
 .bootstrap-select.is-valid .dropdown-toggle,
-.was-validated .bootstrap-select .selectpicker:valid + .dropdown-toggle {
+.was-validated .bootstrap-select select:valid + .dropdown-toggle {
   border-color: #28a745;
 }
 .bootstrap-select.fit-width {
@@ -320,6 +344,11 @@ select.selectpicker {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+.bootstrap-select .dropdown-menu .notify.fadeOut {
+  -webkit-animation: 300ms linear 750ms forwards bs-notify-fadeOut;
+       -o-animation: 300ms linear 750ms forwards bs-notify-fadeOut;
+          animation: 300ms linear 750ms forwards bs-notify-fadeOut;
+}
 .bootstrap-select .no-results {
   padding: 3px;
   background: #f5f5f5;
@@ -359,6 +388,8 @@ select.selectpicker {
   height: 1em;
   border-style: solid;
   border-width: 0 0.26em 0.26em 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
        -o-transform: rotate(45deg);
@@ -453,7 +484,7 @@ select.selectpicker {
 BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJs [
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-select.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsbootstrapselectJsContent)
 ]
@@ -461,9 +492,9 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -817,7 +848,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       opt = options[i];
 
       if (!(opt.disabled || opt.parentNode.tagName === ''OPTGROUP'' && opt.parentNode.disabled)) {
-        value.push(opt.value || opt.text);
+        value.push(opt.value);
       }
     }
 
@@ -1139,6 +1170,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
   }
 
   var elementTemplates = {
+    div: document.createElement(''div''),
     span: document.createElement(''span''),
     i: document.createElement(''i''),
     subtext: document.createElement(''small''),
@@ -1148,7 +1180,12 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
     fragment: document.createDocumentFragment()
   }
 
+  elementTemplates.noResults = elementTemplates.li.cloneNode(false);
+  elementTemplates.noResults.className = ''no-results'';
+
   elementTemplates.a.setAttribute(''role'', ''option'');
+  if (version.major === ''4'') elementTemplates.a.className = ''dropdown-item'';
+
   elementTemplates.subtext.className = ''text-muted'';
 
   elementTemplates.text = elementTemplates.span.cloneNode(false);
@@ -1188,8 +1225,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
         }
       }
 
-      if (typeof classes !== ''undefined'' && classes !== '''') a.className = classes;
-      if (version.major === ''4'') a.classList.add(''dropdown-item'');
+      if (typeof classes !== ''undefined'' && classes !== '''') a.classList.add.apply(a.classList, classes.split(/\s+/));
       if (inline) a.setAttribute(''style'', inline);
 
       return a;
@@ -1211,7 +1247,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           // need to use <i> for icons in the button to prevent a breaking change
           // note: switch to span in next major release
           iconElement = (useFragment === true ? elementTemplates.i : elementTemplates.span).cloneNode(false);
-          iconElement.className = options.iconBase + '' '' + options.icon;
+          iconElement.className = this.options.iconBase + '' '' + options.icon;
 
           elementTemplates.fragment.appendChild(iconElement);
           elementTemplates.fragment.appendChild(whitespace);
@@ -1240,13 +1276,13 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           subtextElement,
           iconElement;
 
-      textElement.innerHTML = options.label;
+      textElement.innerHTML = options.display;
 
       if (options.icon) {
         var whitespace = elementTemplates.whitespace.cloneNode(false);
 
         iconElement = elementTemplates.span.cloneNode(false);
-        iconElement.className = options.iconBase + '' '' + options.icon;
+        iconElement.className = this.options.iconBase + '' '' + options.icon;
 
         elementTemplates.fragment.appendChild(iconElement);
         elementTemplates.fragment.appendChild(whitespace);
@@ -1261,6 +1297,13 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       elementTemplates.fragment.appendChild(textElement);
 
       return elementTemplates.fragment;
+    }
+  }
+
+  function showNoResults (searchMatch, searchValue) {
+    if (!searchMatch.length) {
+      elementTemplates.noResults.innerHTML = this.options.noneResultsText.replace(''{0}'', ''"'' + htmlEscape(searchValue) + ''"'');
+      this.$menuInner[0].firstChild.appendChild(elementTemplates.noResults);
     }
   }
 
@@ -1283,6 +1326,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       search: {},
       current: {}, // current changes if a search is in progress
       view: {},
+      isSearching: false,
       keydown: {
         keyHistory: '''',
         resetKeyHistory: {
@@ -1294,6 +1338,9 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
         }
       }
     };
+
+    this.sizeInfo = {};
+
     // If we have no title yet, try to pull it from the html title attribute (jQuery doesnt'' pick it up as it''s not a
     // data-attribute)
     if (this.options.title === null) {
@@ -1321,7 +1368,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
     this.init();
   };
 
-  Selectpicker.VERSION = ''1.13.10'';
+  Selectpicker.VERSION = ''1.13.16'';
 
   // part of this is duplicated in i18n/defaults-en_US.js. Make sure to update both.
   Selectpicker.DEFAULTS = {
@@ -1398,6 +1445,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       }
 
       this.$newElement = this.createDropdown();
+      this.buildData();
       this.$element
         .after(this.$newElement)
         .prependTo(this.$newElement);
@@ -1486,7 +1534,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       }
 
       setTimeout(function () {
-        that.createLi();
+        that.buildList();
         that.$element.trigger(''loaded'' + EVENT_KEY);
       });
     },
@@ -1521,7 +1569,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       if (this.options.liveSearch) {
         searchbox =
           ''<div class="bs-searchbox">'' +
-            ''<input type="text" class="form-control" autocomplete="off"'' +
+            ''<input type="search" class="form-control" autocomplete="off"'' +
               (
                 this.options.liveSearchPlaceholder === null ? ''''
                 :
@@ -1629,6 +1677,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           selected,
           prevActive;
 
+      this.selectpicker.isSearching = isSearching;
       this.selectpicker.current = isSearching ? this.selectpicker.search : this.selectpicker.main;
 
       this.setPositionData();
@@ -1674,15 +1723,6 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 
         that.selectpicker.view.scrollTop = scrollTop;
 
-        if (isVirtual === true) {
-          // if an option that is encountered that is wider than the current menu width, update the menu width accordingly
-          if (that.sizeInfo.hasScrollBar && that.$menu[0].offsetWidth > that.sizeInfo.totalMenuWidth) {
-            that.sizeInfo.menuWidth = that.$menu[0].offsetWidth;
-            that.sizeInfo.totalMenuWidth = that.sizeInfo.menuWidth + that.sizeInfo.scrollBarWidth;
-            that.$menu.css(''min-width'', that.sizeInfo.menuWidth);
-          }
-        }
-
         chunkSize = Math.ceil(that.sizeInfo.menuInnerHeight / that.sizeInfo.liHeight * 1.5); // number of options in a chunk
         chunkCount = Math.round(size / chunkSize) || 1; // number of chunks
 
@@ -1700,7 +1740,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 
           if (!size) break;
 
-          if (currentChunk === undefined && scrollTop <= that.selectpicker.current.data[endOfChunk - 1].position - that.sizeInfo.menuInnerHeight) {
+          if (currentChunk === undefined && scrollTop - 1 <= that.selectpicker.current.data[endOfChunk - 1].position - that.sizeInfo.menuInnerHeight) {
             currentChunk = i;
           }
         }
@@ -1805,6 +1845,29 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
             }
 
             menuInner.firstChild.appendChild(menuFragment);
+
+            // if an option is encountered that is wider than the current menu width, update the menu width accordingly
+            // switch to ResizeObserver with increased browser support
+            if (isVirtual === true && that.sizeInfo.hasScrollBar) {
+              var menuInnerInnerWidth = menuInner.firstChild.offsetWidth;
+
+              if (init && menuInnerInnerWidth < that.sizeInfo.menuInnerInnerWidth && that.sizeInfo.totalMenuWidth > that.sizeInfo.selectWidth) {
+                menuInner.firstChild.style.minWidth = that.sizeInfo.menuInnerInnerWidth + ''px'';
+              } else if (menuInnerInnerWidth > that.sizeInfo.menuInnerInnerWidth) {
+                // set to 0 to get actual width of menu
+                that.$menu[0].style.minWidth = 0;
+
+                var actualMenuWidth = menuInner.firstChild.offsetWidth;
+
+                if (actualMenuWidth > that.sizeInfo.menuInnerInnerWidth) {
+                  that.sizeInfo.menuInnerInnerWidth = actualMenuWidth;
+                  menuInner.firstChild.style.minWidth = that.sizeInfo.menuInnerInnerWidth + ''px'';
+                }
+
+                // reset to default CSS styling
+                that.$menu[0].style.minWidth = '''';
+              }
+            }
           }
         }
 
@@ -1903,22 +1966,13 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       return updateIndex;
     },
 
-    createLi: function () {
-      var that = this,
-          iconBase = this.options.iconBase,
-          optionSelector = '':not([hidden]):not([data-hidden="true"])'',
-          mainElements = [],
+    buildData: function () {
+      var optionSelector = '':not([hidden]):not([data-hidden="true"])'',
           mainData = [],
-          widestOptionLength = 0,
           optID = 0,
           startIndex = this.setPlaceholder() ? 1 : 0; // append the titleOption if necessary and skip the first option in the loop
 
       if (this.options.hideDisabled) optionSelector += '':not(:disabled)'';
-
-      if ((that.options.showTick || that.multiple) && !elementTemplates.checkMark.parentNode) {
-        elementTemplates.checkMark.className = iconBase + '' '' + that.options.tickIcon + '' check-mark'';
-        elementTemplates.a.appendChild(elementTemplates.checkMark);
-      }
 
       var selectOptions = this.$element[0].querySelectorAll(''select > *'' + optionSelector);
 
@@ -1936,14 +1990,6 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 
         config = config || {};
         config.type = ''divider'';
-
-        mainElements.push(
-          generateOption.li(
-            false,
-            classNames.DIVIDER,
-            (config.optID ? config.optID + ''div'' : undefined)
-          )
-        );
 
         mainData.push(config);
       }
@@ -1965,30 +2011,14 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 
           if (config.optID) optionClass = ''opt '' + optionClass;
 
+          config.optionClass = optionClass.trim();
+          config.inlineStyle = inlineStyle;
           config.text = option.textContent;
 
           config.content = option.getAttribute(''data-content'');
           config.tokens = option.getAttribute(''data-tokens'');
           config.subtext = option.getAttribute(''data-subtext'');
           config.icon = option.getAttribute(''data-icon'');
-          config.iconBase = iconBase;
-
-          var textElement = generateOption.text(config);
-          var liElement = generateOption.li(
-            generateOption.a(
-              textElement,
-              optionClass,
-              inlineStyle
-            ),
-            '''',
-            config.optID
-          );
-
-          if (liElement.firstChild) {
-            liElement.firstChild.id = that.selectId + ''-'' + liIndex;
-          }
-
-          mainElements.push(liElement);
 
           option.liIndex = liIndex;
 
@@ -1996,44 +2026,29 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           config.type = ''option'';
           config.index = liIndex;
           config.option = option;
-          config.disabled = config.disabled || option.disabled;
+          config.selected = !!option.selected;
+          config.disabled = config.disabled || !!option.disabled;
 
           mainData.push(config);
-
-          var combinedLength = 0;
-
-          // count the number of characters in the option - not perfect, but should work in most cases
-          if (config.display) combinedLength += config.display.length;
-          if (config.subtext) combinedLength += config.subtext.length;
-          // if there is an icon, ensure this option''s width is checked
-          if (config.icon) combinedLength += 1;
-
-          if (combinedLength > widestOptionLength) {
-            widestOptionLength = combinedLength;
-
-            // guess which option is the widest
-            // use this when calculating menu width
-            // not perfect, but it''s fast, and the width will be updating accordingly when scrolling
-            that.selectpicker.view.widestOption = mainElements[mainElements.length - 1];
-          }
         }
       }
 
       function addOptgroup (index, selectOptions) {
         var optgroup = selectOptions[index],
-            previous = selectOptions[index - 1],
+            // skip placeholder option
+            previous = index - 1 < startIndex ? false : selectOptions[index - 1],
             next = selectOptions[index + 1],
             options = optgroup.querySelectorAll(''option'' + optionSelector);
 
         if (!options.length) return;
 
         var config = {
-              label: htmlEscape(optgroup.label),
+              display: htmlEscape(optgroup.label),
               subtext: optgroup.getAttribute(''data-subtext''),
               icon: optgroup.getAttribute(''data-icon''),
-              iconBase: iconBase
+              type: ''optgroup-label'',
+              optgroupClass: '' '' + (optgroup.className || '''')
             },
-            optgroupClass = '' '' + (optgroup.className || ''''),
             headerIndex,
             lastIndex;
 
@@ -2043,18 +2058,9 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           addDivider({ optID: optID });
         }
 
-        var labelElement = generateOption.label(config);
+        config.optID = optID;
 
-        mainElements.push(
-          generateOption.li(labelElement, ''dropdown-header'' + optgroupClass, optID)
-        );
-
-        mainData.push({
-          display: config.label,
-          subtext: config.subtext,
-          type: ''optgroup-label'',
-          optID: optID
-        });
+        mainData.push(config);
 
         for (var j = 0, len = options.length; j < len; j++) {
           var option = options[j];
@@ -2067,8 +2073,8 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           addOption(option, {
             headerIndex: headerIndex,
             lastIndex: lastIndex,
-            optID: optID,
-            optgroupClass: optgroupClass,
+            optID: config.optID,
+            optgroupClass: config.optgroupClass,
             disabled: optgroup.disabled
           });
         }
@@ -2088,10 +2094,87 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
         }
       }
 
-      this.selectpicker.main.elements = mainElements;
-      this.selectpicker.main.data = mainData;
+      this.selectpicker.main.data = this.selectpicker.current.data = mainData;
+    },
 
-      this.selectpicker.current = this.selectpicker.main;
+    buildList: function () {
+      var that = this,
+          selectData = this.selectpicker.main.data,
+          mainElements = [],
+          widestOptionLength = 0;
+
+      if ((that.options.showTick || that.multiple) && !elementTemplates.checkMark.parentNode) {
+        elementTemplates.checkMark.className = this.options.iconBase + '' '' + that.options.tickIcon + '' check-mark'';
+        elementTemplates.a.appendChild(elementTemplates.checkMark);
+      }
+
+      function buildElement (item) {
+        var liElement,
+            combinedLength = 0;
+
+        switch (item.type) {
+          case ''divider'':
+            liElement = generateOption.li(
+              false,
+              classNames.DIVIDER,
+              (item.optID ? item.optID + ''div'' : undefined)
+            );
+
+            break;
+
+          case ''option'':
+            liElement = generateOption.li(
+              generateOption.a(
+                generateOption.text.call(that, item),
+                item.optionClass,
+                item.inlineStyle
+              ),
+              '''',
+              item.optID
+            );
+
+            if (liElement.firstChild) {
+              liElement.firstChild.id = that.selectId + ''-'' + item.index;
+            }
+
+            break;
+
+          case ''optgroup-label'':
+            liElement = generateOption.li(
+              generateOption.label.call(that, item),
+              ''dropdown-header'' + item.optgroupClass,
+              item.optID
+            );
+
+            break;
+        }
+
+        item.element = liElement;
+        mainElements.push(liElement);
+
+        // count the number of characters in the option - not perfect, but should work in most cases
+        if (item.display) combinedLength += item.display.length;
+        if (item.subtext) combinedLength += item.subtext.length;
+        // if there is an icon, ensure this option''s width is checked
+        if (item.icon) combinedLength += 1;
+
+        if (combinedLength > widestOptionLength) {
+          widestOptionLength = combinedLength;
+
+          // guess which option is the widest
+          // use this when calculating menu width
+          // not perfect, but it''s fast, and the width will be updating accordingly when scrolling
+          that.selectpicker.view.widestOption = mainElements[mainElements.length - 1];
+        }
+      }
+
+      for (var len = selectData.length, i = 0; i < len; i++) {
+        var item = selectData[i];
+
+        buildElement(item);
+      }
+
+      this.selectpicker.main.elements = this.selectpicker.current.elements = mainElements;
     },
 
     findLis: function () {
@@ -2099,11 +2182,10 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
     },
 
     render: function () {
-      // ensure titleOption is appended and selected (if necessary) before getting selectedOptions
-      this.setPlaceholder();
-
       var that = this,
           element = this.$element[0],
+          // ensure titleOption is appended and selected (if necessary) before getting selectedOptions
+          placeholderSelected = this.setPlaceholder() && element.selectedIndex === 0,
           selectedOptions = getSelectedOptions(element, this.options.hideDisabled),
           selectedCount = selectedOptions.length,
           button = this.$button[0],
@@ -2119,7 +2201,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       this.tabIndex();
 
       if (this.options.selectedTextFormat === ''static'') {
-        titleFragment = generateOption.text({ text: this.options.title }, true);
+        titleFragment = generateOption.text.call(this, { text: this.options.title }, true);
       } else {
         showCount = this.multiple && this.options.selectedTextFormat.indexOf(''count'') !== -1 && selectedCount > 1;
 
@@ -2131,43 +2213,42 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 
         // only loop through all selected options if the count won''t be shown
         if (showCount === false) {
-          for (var selectedIndex = 0; selectedIndex < selectedCount; selectedIndex++) {
-            if (selectedIndex < 50) {
-              var option = selectedOptions[selectedIndex],
-                  titleOptions = {},
-                  thisData = {
-                    content: option.getAttribute(''data-content''),
-                    subtext: option.getAttribute(''data-subtext''),
-                    icon: option.getAttribute(''data-icon'')
-                  };
+          if (!placeholderSelected) {
+            for (var selectedIndex = 0; selectedIndex < selectedCount; selectedIndex++) {
+              if (selectedIndex < 50) {
+                var option = selectedOptions[selectedIndex],
+                    thisData = this.selectpicker.main.data[option.liIndex],
+                    titleOptions = {};
 
-              if (this.multiple && selectedIndex > 0) {
-                titleFragment.appendChild(multipleSeparator.cloneNode(false));
-              }
-
-              if (option.title) {
-                titleOptions.text = option.title;
-              } else if (thisData.content && that.options.showContent) {
-                titleOptions.content = thisData.content.toString();
-                hasContent = true;
-              } else {
-                if (that.options.showIcon) {
-                  titleOptions.icon = thisData.icon;
-                  titleOptions.iconBase = this.options.iconBase;
+                if (this.multiple && selectedIndex > 0) {
+                  titleFragment.appendChild(multipleSeparator.cloneNode(false));
                 }
-                if (that.options.showSubtext && !that.multiple && thisData.subtext) titleOptions.subtext = '' '' + thisData.subtext;
-                titleOptions.text = option.textContent.trim();
+
+                if (option.title) {
+                  titleOptions.text = option.title;
+                } else if (thisData) {
+                  if (thisData.content && that.options.showContent) {
+                    titleOptions.content = thisData.content.toString();
+                    hasContent = true;
+                  } else {
+                    if (that.options.showIcon) {
+                      titleOptions.icon = thisData.icon;
+                    }
+                    if (that.options.showSubtext && !that.multiple && thisData.subtext) titleOptions.subtext = '' '' + thisData.subtext;
+                    titleOptions.text = option.textContent.trim();
+                  }
+                }
+
+                titleFragment.appendChild(generateOption.text.call(this, titleOptions, true));
+              } else {
+                break;
               }
-
-              titleFragment.appendChild(generateOption.text(titleOptions, true));
-            } else {
-              break;
             }
-          }
 
-          // add ellipsis
-          if (selectedCount > 49) {
-            titleFragment.appendChild(document.createTextNode(''...''));
+            // add ellipsis
+            if (selectedCount > 49) {
+              titleFragment.appendChild(document.createTextNode(''...''));
+            }
           }
         } else {
           var optionSelector = '':not([hidden]):not([data-hidden="true"]):not([data-divider="true"])'';
@@ -2177,7 +2258,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           var totalCount = this.$element[0].querySelectorAll(''select > option'' + optionSelector + '', optgroup'' + optionSelector + '' option'' + optionSelector).length,
               tr8nText = (typeof this.options.countSelectedText === ''function'') ? this.options.countSelectedText(selectedCount, totalCount) : this.options.countSelectedText;
 
-          titleFragment = generateOption.text({
+          titleFragment = generateOption.text.call(this, {
             text: tr8nText.replace(''{0}'', selectedCount.toString()).replace(''{1}'', totalCount.toString())
           }, true);
         }
@@ -2190,7 +2271,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 
       // If the select doesn''t have a title, then use the default, or if nothing is set at all, use noneSelectedText
       if (!titleFragment.childNodes.length) {
-        titleFragment = generateOption.text({
+        titleFragment = generateOption.text.call(this, {
           text: typeof this.options.title !== ''undefined'' ? this.options.title : this.options.noneSelectedText
         }, true);
       }
@@ -2238,7 +2319,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       if (version.major < 4) {
         newElement.classList.add(''bs3'');
 
-        if (newElement.parentNode.classList.contains(''input-group'') &&
+        if (newElement.parentNode.classList && newElement.parentNode.classList.contains(''input-group'') &&
             (newElement.previousElementSibling || newElement.nextElementSibling) &&
             (newElement.previousElementSibling || newElement.nextElementSibling).classList.contains(''input-group-addon'')
         ) {
@@ -2263,21 +2344,19 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
     },
 
     liHeight: function (refresh) {
-      if (!refresh && (this.options.size === false || this.sizeInfo)) return;
+      if (!refresh && (this.options.size === false || Object.keys(this.sizeInfo).length)) return;
 
-      if (!this.sizeInfo) this.sizeInfo = {};
-
-      var newElement = document.createElement(''div''),
-          menu = document.createElement(''div''),
-          menuInner = document.createElement(''div''),
+      var newElement = elementTemplates.div.cloneNode(false),
+          menu = elementTemplates.div.cloneNode(false),
+          menuInner = elementTemplates.div.cloneNode(false),
           menuInnerInner = document.createElement(''ul''),
-          divider = document.createElement(''li''),
-          dropdownHeader = document.createElement(''li''),
-          li = document.createElement(''li''),
-          a = document.createElement(''a''),
-          text = document.createElement(''span''),
+          divider = elementTemplates.li.cloneNode(false),
+          dropdownHeader = elementTemplates.li.cloneNode(false),
+          li,
+          a = elementTemplates.a.cloneNode(false),
+          text = elementTemplates.span.cloneNode(false),
           header = this.options.header && this.$menu.find(''.'' + classNames.POPOVERHEADER).length > 0 ? this.$menu.find(''.'' + classNames.POPOVERHEADER)[0].cloneNode(true) : null,
-          search = this.options.liveSearch ? document.createElement(''div'') : null,
+          search = this.options.liveSearch ? elementTemplates.div.cloneNode(false) : null,
           actions = this.options.actionsBox && this.multiple && this.$menu.find(''.bs-actionsbox'').length > 0 ? this.$menu.find(''.bs-actionsbox'')[0].cloneNode(true) : null,
           doneButton = this.options.doneButton && this.multiple && this.$menu.find(''.bs-donebutton'').length > 0 ? this.$menu.find(''.bs-donebutton'')[0].cloneNode(true) : null,
           firstOption = this.$element.find(''option'')[0];
@@ -2287,7 +2366,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       text.className = ''text'';
       a.className = ''dropdown-item '' + (firstOption ? firstOption.className : '''');
       newElement.className = this.$menu[0].parentNode.className + '' '' + classNames.SHOW;
-      newElement.style.width = this.sizeInfo.selectWidth + ''px'';
+      newElement.style.width = 0; // ensure button width doesn''t affect natural width of menu when calculating
       if (this.options.width === ''auto'') menu.style.minWidth = 0;
       menu.className = classNames.MENU + '' '' + classNames.SHOW;
       menuInner.className = ''inner '' + classNames.SHOW;
@@ -2296,8 +2375,21 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       dropdownHeader.className = ''dropdown-header'';
 
       text.appendChild(document.createTextNode(''\u200b''));
-      a.appendChild(text);
-      li.appendChild(a);
+
+      if (this.selectpicker.current.data.length) {
+        for (var i = 0; i < this.selectpicker.current.data.length; i++) {
+          var data = this.selectpicker.current.data[i];
+          if (data.type === ''option'') {
+            li = data.element;
+            break;
+          }
+        }
+      } else {
+        li = elementTemplates.li.cloneNode(false);
+        a.appendChild(text);
+        li.appendChild(a);
+      }
+
       dropdownHeader.appendChild(text.cloneNode(true));
 
       if (this.selectpicker.view.widestOption) {
@@ -2370,6 +2462,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       this.sizeInfo.menuPadding = menuPadding;
       this.sizeInfo.menuExtras = menuExtras;
       this.sizeInfo.menuWidth = menuWidth;
+      this.sizeInfo.menuInnerInnerWidth = menuWidth - menuPadding.horiz;
       this.sizeInfo.totalMenuWidth = this.sizeInfo.menuWidth;
       this.sizeInfo.scrollBarWidth = scrollBarWidth;
       this.sizeInfo.selectHeight = this.$newElement[0].offsetHeight;
@@ -2420,7 +2513,8 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           _minHeight,
           maxHeight,
           menuInnerMinHeight,
-          estimate;
+          estimate,
+          isDropup;
 
       if (this.options.dropupAuto) {
         // Get the estimated height of the menu without scrollbars.
@@ -2428,7 +2522,16 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
         // below the button without setting dropup, but we can''t know
         // the exact height of the menu until createView is called later
         estimate = liHeight * this.selectpicker.current.elements.length + menuPadding.vert;
-        this.$newElement.toggleClass(classNames.DROPUP, this.sizeInfo.selectOffsetTop - this.sizeInfo.selectOffsetBot > this.sizeInfo.menuExtras.vert && estimate + this.sizeInfo.menuExtras.vert + 50 > this.sizeInfo.selectOffsetBot);
+
+        isDropup = this.sizeInfo.selectOffsetTop - this.sizeInfo.selectOffsetBot > this.sizeInfo.menuExtras.vert && estimate + this.sizeInfo.menuExtras.vert + 50 > this.sizeInfo.selectOffsetBot;
+
+        // ensure dropup doesn''t change while searching (so menu doesn''t bounce back and forth)
+        if (this.selectpicker.isSearching === true) {
+          isDropup = this.selectpicker.dropup;
+        }
+
+        this.$newElement.toggleClass(classNames.DROPUP, isDropup);
+        this.selectpicker.dropup = isDropup;
       }
 
       if (this.options.size === ''auto'') {
@@ -2454,10 +2557,6 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
         minHeight = menuInnerMinHeight = '''';
       }
 
-      if (this.options.dropdownAlignRight === ''auto'') {
-        this.$menu.toggleClass(classNames.MENURIGHT, this.sizeInfo.selectOffsetLeft > this.sizeInfo.selectOffsetRight && this.sizeInfo.selectOffsetRight < (this.sizeInfo.totalMenuWidth - selectWidth));
-      }
-
       this.$menu.css({
         ''max-height'': maxHeight + ''px'',
         ''overflow'': ''hidden'',
@@ -2476,8 +2575,10 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       if (this.selectpicker.current.data.length && this.selectpicker.current.data[this.selectpicker.current.data.length - 1].position > this.sizeInfo.menuInnerHeight) {
         this.sizeInfo.hasScrollBar = true;
         this.sizeInfo.totalMenuWidth = this.sizeInfo.menuWidth + this.sizeInfo.scrollBarWidth;
+      }
 
-        this.$menu.css(''min-width'', this.sizeInfo.totalMenuWidth);
+      if (this.options.dropdownAlignRight === ''auto'') {
+        this.$menu.toggleClass(classNames.MENURIGHT, this.sizeInfo.selectOffsetLeft > this.sizeInfo.selectOffsetRight && this.sizeInfo.selectOffsetRight < (this.sizeInfo.totalMenuWidth - selectWidth));
       }
 
       if (this.dropdown && this.dropdown._popper) this.dropdown._popper.update();
@@ -2487,32 +2588,33 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       this.liHeight(refresh);
 
       if (this.options.header) this.$menu.css(''padding-top'', 0);
-      if (this.options.size === false) return;
 
-      var that = this,
-          $window = $(window);
+      if (this.options.size !== false) {
+        var that = this,
+            $window = $(window);
 
-      this.setMenuSize();
+        this.setMenuSize();
 
-      if (this.options.liveSearch) {
-        this.$searchbox
-          .off(''input.setMenuSize propertychange.setMenuSize'')
-          .on(''input.setMenuSize propertychange.setMenuSize'', function () {
-            return that.setMenuSize();
-          });
+        if (this.options.liveSearch) {
+          this.$searchbox
+            .off(''input.setMenuSize propertychange.setMenuSize'')
+            .on(''input.setMenuSize propertychange.setMenuSize'', function () {
+              return that.setMenuSize();
+            });
+        }
+
+        if (this.options.size === ''auto'') {
+          $window
+            .off(''resize'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'' + '' scroll'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'')
+            .on(''resize'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'' + '' scroll'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'', function () {
+              return that.setMenuSize();
+            });
+        } else if (this.options.size && this.options.size != ''auto'' && this.selectpicker.current.elements.length > this.options.size) {
+          $window.off(''resize'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'' + '' scroll'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'');
+        }
       }
 
-      if (this.options.size === ''auto'') {
-        $window
-          .off(''resize'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'' + '' scroll'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'')
-          .on(''resize'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'' + '' scroll'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'', function () {
-            return that.setMenuSize();
-          });
-      } else if (this.options.size && this.options.size != ''auto'' && this.selectpicker.current.elements.length > this.options.size) {
-        $window.off(''resize'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'' + '' scroll'' + EVENT_KEY + ''.'' + this.selectId + ''.setMenuSize'');
-      }
-
-      that.createView(false, true, refresh);
+      this.createView(false, true, refresh);
     },
 
     setWidth: function () {
@@ -2742,8 +2844,6 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
     },
 
     checkDisabled: function () {
-      var that = this;
-
       if (this.isDisabled()) {
         this.$newElement[0].classList.add(classNames.DISABLED);
         this.$button.addClass(classNames.DISABLED).attr(''tabindex'', -1).attr(''aria-disabled'', true);
@@ -2757,10 +2857,6 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           this.$button.removeAttr(''tabindex'');
         }
       }
-
-      this.$button.on(''click'', function () {
-        return !that.isDisabled();
-      });
     },
 
     tabIndex: function () {
@@ -2857,8 +2953,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 
         // Don''t run if the select is disabled
         if (!that.isDisabled() && !$this.parent().hasClass(classNames.DISABLED)) {
-          var $options = that.$element.find(''option''),
-              option = clickedData.option,
+          var option = clickedData.option,
               $option = $(option),
               state = option.selected,
               $optgroup = $option.parent(''optgroup''),
@@ -2874,7 +2969,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           }
 
           if (!that.multiple) { // Deselect all others if not multi select box
-            prevOption.selected = false;
+            if (prevOption) prevOption.selected = false;
             option.selected = true;
             that.setSelected(clickedIndex, true);
           } else { // Toggle the one we have chosen if we are multi select.
@@ -2884,28 +2979,22 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
             $this.trigger(''blur'');
 
             if (maxOptions !== false || maxOptionsGrp !== false) {
-              var maxReached = maxOptions < $options.filter('':selected'').length,
+              var maxReached = maxOptions < getSelectedOptions(element).length,
                   maxReachedGrp = maxOptionsGrp < $optgroup.find(''option:selected'').length;
 
               if ((maxOptions && maxReached) || (maxOptionsGrp && maxReachedGrp)) {
                 if (maxOptions && maxOptions == 1) {
-                  $options.prop(''selected'', false);
-                  $option.prop(''selected'', true);
-
-                  for (var i = 0; i < $options.length; i++) {
-                    that.setSelected(i, false);
-                  }
-
-                  that.setSelected(clickedIndex, true);
+                  element.selectedIndex = -1;
+                  option.selected = true;
+                  that.setOptionStatus(true);
                 } else if (maxOptionsGrp && maxOptionsGrp == 1) {
-                  $optgroup.find(''option:selected'').prop(''selected'', false);
-                  $option.prop(''selected'', true);
-
                   for (var i = 0; i < $optgroupOptions.length; i++) {
-                    var option = $optgroupOptions[i];
-                    that.setSelected($options.index(option), false);
+                    var _option = $optgroupOptions[i];
+                    _option.selected = false;
+                    that.setSelected(_option.liIndex, false);
                   }
 
+                  option.selected = true;
                   that.setSelected(clickedIndex, true);
                 } else {
                   var maxOptionsText = typeof that.options.maxOptionsText === ''string'' ? [that.options.maxOptionsText, that.options.maxOptionsText] : that.options.maxOptionsText,
@@ -2920,7 +3009,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
                     maxTxtGrp = maxTxtGrp.replace(''{var}'', maxOptionsArr[2][maxOptionsGrp > 1 ? 0 : 1]);
                   }
 
-                  $option.prop(''selected'', false);
+                  option.selected = false;
 
                   that.$menu.append($notify);
 
@@ -2940,9 +3029,11 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
                     that.setSelected(clickedIndex, false);
                   }, 10);
 
-                  $notify.delay(750).fadeOut(300, function () {
-                    $(this).remove();
-                  });
+                  $notify[0].classList.add(''fadeOut'');
+
+                  setTimeout(function () {
+                    $notify.remove();
+                  }, 1050);
                 }
               }
             }
@@ -3025,8 +3116,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
     },
 
     liveSearchListener: function () {
-      var that = this,
-          noResults = document.createElement(''li'');
+      var that = this;
 
       this.$button.on(''click.bs.dropdown.data-api'', function () {
         if (!!that.$searchbox.val()) {
@@ -3054,8 +3144,6 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
               normalizeSearch = that.options.liveSearchNormalize;
 
           if (normalizeSearch) q = normalizeToBase(q);
-
-          that._$lisSelected = that.$menuInner.find(''.selected'');
 
           for (var i = 0; i < that.selectpicker.main.data.length; i++) {
             var li = that.selectpicker.main.data[i];
@@ -3096,12 +3184,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           that.$menuInner.scrollTop(0);
           that.selectpicker.search.elements = searchMatch;
           that.createView(true);
-
-          if (!searchMatch.length) {
-            noResults.className = ''no-results'';
-            noResults.innerHTML = that.options.noneResultsText.replace(''{0}'', ''"'' + htmlEscape(searchValue) + ''"'');
-            that.$menuInner[0].firstChild.appendChild(noResults);
-          }
+          showNoResults.call(that, searchMatch, searchValue);
         } else {
           that.$menuInner.scrollTop(0);
           that.createView(false);
@@ -3159,14 +3242,14 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 
       element.classList.add(''bs-select-hidden'');
 
-      for (var i = 0, len = this.selectpicker.current.elements.length; i < len; i++) {
-        var liData = this.selectpicker.current.data[i],
+      for (var i = 0, data = this.selectpicker.current.data, len = data.length; i < len; i++) {
+        var liData = data[i],
             option = liData.option;
 
         if (option && !liData.disabled && liData.type !== ''divider'') {
           if (liData.selected) previousSelected++;
           option.selected = status;
-          if (status) currentSelected++;
+          if (status === true) currentSelected++;
         }
       }
 
@@ -3215,6 +3298,9 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           scrollTop = that.$menuInner[0].scrollTop,
           isVirtual = that.isVirtual(),
           position0 = isVirtual === true ? that.selectpicker.view.position0 : 0;
+
+      // do nothing if a function key is pressed
+      if (e.which >= 112 && e.which <= 123) return;
 
       isActive = that.$newElement.hasClass(classNames.SHOW);
 
@@ -3424,9 +3510,10 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
       this.options = config;
 
       this.checkDisabled();
+      this.buildData();
       this.setStyle();
       this.render();
-      this.createLi();
+      this.buildList();
       this.setWidth();
 
       this.setSize(true);
@@ -3534,7 +3621,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           var dataAttributes = $this.data();
 
           for (var dataAttr in dataAttributes) {
-            if (dataAttributes.hasOwnProperty(dataAttr) && $.inArray(dataAttr, DISALLOWED_ATTRIBUTES) !== -1) {
+            if (Object.prototype.hasOwnProperty.call(dataAttributes, dataAttr) && $.inArray(dataAttr, DISALLOWED_ATTRIBUTES) !== -1) {
               delete dataAttributes[dataAttr];
             }
           }
@@ -3544,7 +3631,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
           $this.data(''selectpicker'', (data = new Selectpicker(this, config)));
         } else if (options) {
           for (var i in options) {
-            if (options.hasOwnProperty(i)) {
+            if (Object.prototype.hasOwnProperty.call(options, i)) {
               data.options[i] = options[i];
             }
           }
@@ -3579,8 +3666,19 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
     return this;
   };
 
+  // get Bootstrap''s keydown event handler for either Bootstrap 4 or Bootstrap 3
+  function keydownHandler () {
+    if ($.fn.dropdown) {
+      // wait to define until function is called in case Bootstrap isn''t loaded yet
+      var bootstrapKeydown = $.fn.dropdown.Constructor._dataApiKeydownHandler || $.fn.dropdown.Constructor.prototype.keydown;
+      return bootstrapKeydown.apply(this, arguments);
+    }
+  }
+
   $(document)
     .off(''keydown.bs.dropdown.data-api'')
+    .on(''keydown.bs.dropdown.data-api'', '':not(.bootstrap-select) > [data-toggle="dropdown"]'', keydownHandler)
+    .on(''keydown.bs.dropdown.data-api'', '':not(.bootstrap-select) > .dropdown-menu'', keydownHandler)
     .on(''keydown'' + EVENT_KEY, ''.bootstrap-select [data-toggle="dropdown"], .bootstrap-select [role="listbox"], .bootstrap-select .bs-searchbox input'', Selectpicker.prototype.keydown)
     .on(''focusin.modal'', ''.bootstrap-select [data-toggle="dropdown"], .bootstrap-select [role="listbox"], .bootstrap-select .bs-searchbox input'', function (e) {
       e.stopPropagation();
@@ -3605,7 +3703,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-am_ET.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsamETJsContent)
 ]
@@ -3613,9 +3711,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -3664,7 +3762,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ar_AR.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsarARJsContent)
 ]
@@ -3672,9 +3770,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -3728,7 +3826,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsbgBGJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-bg_BG.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsbgBGJsContent)
 ]
@@ -3736,9 +3834,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsbgBGJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsbgBGJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -3845,7 +3943,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscroCROJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-cs_CZ.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultscsCZJsContent)
 ]
@@ -3853,9 +3951,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -3878,13 +3976,13 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJsContent [
 
 (function ($) {
   $.fn.selectpicker.defaults = {
-    noneSelectedText: ''Nic není vybráno'',
-    noneResultsText: ''Žádné výsledky {0}'',
-    countSelectedText: ''Označeno {0} z {1}'',
+    noneSelectedText: ''Vyberte ze seznamu'',
+    noneResultsText: ''Pro hledání {0} nebyly nalezeny žádné výsledky'',
+    countSelectedText: ''Vybrané {0} z {1}'',
     maxOptionsText: [''Limit překročen ({n} {var} max)'', ''Limit skupiny překročen ({n} {var} max)'', [''položek'', ''položka'']],
     multipleSeparator: '', '',
-    selectAllText: ''Vybrat Vše'',
-    deselectAllText: ''Odznačit Vše''
+    selectAllText: ''Vybrat vše'',
+    deselectAllText: ''Zrušit výběr''
   };
 })(jQuery);
 
@@ -3897,7 +3995,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-da_DK.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsdaDKJsContent)
 ]
@@ -3905,9 +4003,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -3956,7 +4054,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-de_DE.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsdeDEJsContent)
 ]
@@ -3964,9 +4062,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4015,7 +4113,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-en_US.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsenUSJsContent)
 ]
@@ -4023,9 +4121,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4074,7 +4172,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-es_CL.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsesCLJsContent)
 ]
@@ -4082,9 +4180,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4126,7 +4224,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-es_ES.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsesESJsContent)
 ]
@@ -4134,9 +4232,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4178,7 +4276,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-et_EE.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsetEEJsContent)
 ]
@@ -4186,9 +4284,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4237,7 +4335,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-eu.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultseuJsContent)
 ]
@@ -4245,9 +4343,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4289,7 +4387,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fa_IR.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfaIRJsContent)
 ]
@@ -4297,9 +4395,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4341,7 +4439,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fi_FI.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfiFIJsContent)
 ]
@@ -4349,9 +4447,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4400,7 +4498,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fr_FR.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfrFRJsContent)
 ]
@@ -4408,9 +4506,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4459,7 +4557,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-hr_HR.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultshrHRJsContent)
 ]
@@ -4467,9 +4565,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4518,7 +4616,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-hu_HU.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultshuHUJsContent)
 ]
@@ -4526,9 +4624,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4577,7 +4675,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-id_ID.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsidIDJsContent)
 ]
@@ -4585,9 +4683,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4629,7 +4727,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-it_IT.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsitITJsContent)
 ]
@@ -4637,9 +4735,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4683,7 +4781,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ja_JP.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsjaJPJsContent)
 ]
@@ -4691,9 +4789,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4716,12 +4814,12 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJsContent [
 
 (function ($) {
   $.fn.selectpicker.defaults = {
-    noneSelectedText: ''何もが選択した'',
-    noneResultsText: ''\''{0}\''が結果を返さない'',
-    countSelectedText: ''{0}/{1}が選択した'',
-    maxOptionsText: [''限界は達した({n}{var}最大)'', ''限界をグループは達した({n}{var}最大)'', [''アイテム'', ''アイテム'']],
-    selectAllText: ''全部を選択する'',
-    deselectAllText: ''何も選択しない'',
+    noneSelectedText: ''選択されていません'',
+    noneResultsText: ''\''{0}\''は見つかりません'',
+    countSelectedText: ''{0}/{1} 選択中'',
+    maxOptionsText: [''選択上限数を超えています(最大{n}{var})'', ''グループの選択上限数を超えています(最大{n}{var})'', [''アイテム'', ''アイテム'']],
+    selectAllText: ''全て選択'',
+    deselectAllText: ''選択をクリア'',
     multipleSeparator: '', ''
   };
 })(jQuery);
@@ -4735,7 +4833,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-kh_KM.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultskhKMJsContent)
 ]
@@ -4743,9 +4841,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4794,7 +4892,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ko_KR.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultskoKRJsContent)
 ]
@@ -4802,9 +4900,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4853,7 +4951,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-lt_LT.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsltLTJsContent)
 ]
@@ -4861,9 +4959,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4912,7 +5010,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-lv_LV.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultslvLVJsContent)
 ]
@@ -4920,9 +5018,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -4971,7 +5069,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-nb_NO.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsnbNOJsContent)
 ]
@@ -4979,9 +5077,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5030,7 +5128,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-nl_NL.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsnlNLJsContent)
 ]
@@ -5038,9 +5136,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5082,7 +5180,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pl_PL.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsplPLJsContent)
 ]
@@ -5090,9 +5188,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5134,7 +5232,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pt_BR.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsptBRJsContent)
 ]
@@ -5142,9 +5240,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5186,7 +5284,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pt_PT.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsptPTJsContent)
 ]
@@ -5194,9 +5292,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5238,7 +5336,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ro_RO.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsroROJsContent)
 ]
@@ -5246,9 +5344,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5291,7 +5389,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ru_RU.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsruRUJsContent)
 ]
@@ -5299,9 +5397,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5344,7 +5442,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sk_SK.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsskSKJsContent)
 ]
@@ -5352,9 +5450,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5396,7 +5494,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sl_SI.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsslSIJsContent)
 ]
@@ -5404,9 +5502,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5450,10 +5548,69 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJsContent [
 ]
 
 { #category : #'uploaded metadata' }
+BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssrSPJs [
+	^ WAFileLibraryResource
+		filepath: 'js/i18n/defaults-sr_SP.js'
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
+		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultssrSPJsContent)
+]
+
+{ #category : #uploaded }
+BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssrSPJsContent [
+	^ '/*!
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
+ *
+ * Copyright 2012-2020 SnapAppointments, LLC
+ * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
+ */
+
+(function (root, factory) {
+  if (root === undefined && window !== undefined) root = window;
+  if (typeof define === ''function'' && define.amd) {
+    // AMD. Register as an anonymous module unless amdModuleId is set
+    define(["jquery"], function (a0) {
+      return (factory(a0));
+    });
+  } else if (typeof module === ''object'' && module.exports) {
+    // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = factory(require("jquery"));
+  } else {
+    factory(root["jQuery"]);
+  }
+}(this, function (jQuery) {
+
+(function ($) {
+  $.fn.selectpicker.defaults = {
+    noneSelectedText: ''Izaberite'',
+    noneResultsText: ''Nema rezultata za {0}'',
+    countSelectedText: function (numSelected, numTotal) {
+      return (numSelected == 1) ? ''{0} izabrana'' : ''{0} izabrane'';
+    },
+    maxOptionsText: function (numAll, numGroup) {
+      return [
+        (numAll == 1) ? ''Limit je dostignut ({n} stvar maximalno)'' : ''Limit je dostignut ({n} stavke maksimalno)'',
+        (numGroup == 1) ? ''Grupni limit je dostignut ({n} stvar maksimalno)'' : ''Grupni limit je dostignut ({n} stavke maksimalno)''
+      ];
+    },
+    selectAllText: ''Izaberi sve'',
+    deselectAllText: ''Obrisi sve'',
+    multipleSeparator: '', ''
+  };
+})(jQuery);
+
+
+}));
+//# sourceMappingURL=defaults-sr_SP.js.map'
+]
+
+{ #category : #'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sv_SE.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultssvSEJsContent)
 ]
@@ -5461,9 +5618,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5509,10 +5666,62 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJsContent [
 ]
 
 { #category : #'uploaded metadata' }
+BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsthTHJs [
+	^ WAFileLibraryResource
+		filepath: 'js/i18n/defaults-th_TH.js'
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
+		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsthTHJsContent)
+]
+
+{ #category : #uploaded }
+BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsthTHJsContent [
+	^ '/*!
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
+ *
+ * Copyright 2012-2020 SnapAppointments, LLC
+ * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
+ */
+
+(function (root, factory) {
+  if (root === undefined && window !== undefined) root = window;
+  if (typeof define === ''function'' && define.amd) {
+    // AMD. Register as an anonymous module unless amdModuleId is set
+    define(["jquery"], function (a0) {
+      return (factory(a0));
+    });
+  } else if (typeof module === ''object'' && module.exports) {
+    // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = factory(require("jquery"));
+  } else {
+    factory(root["jQuery"]);
+  }
+}(this, function (jQuery) {
+
+(function ($) {
+  $.fn.selectpicker.defaults = {
+    noneSelectedText: ''ไม่ได้เลือกอะไรเลย'',
+    noneResultsText: ''ไม่มีผลลัพธ์ที่ตรงกัน {0}'',
+    countSelectedText: ''{0} รายการที่เลือก'',
+    maxOptionsText: [''เกินจำนวนที่กำหนด (สูงสุด {n} รายการ)'', ''เกินจำนวนที่กำหนด (สูงสุด {n} กลุ่ม)''],
+    selectAllText: ''เลือกทั้งหมด'',
+    deselectAllText: ''ไม่เลือกทั้งหมด'',
+    multipleSeparator: '', ''
+  };
+})(jQuery);
+
+
+}));
+//# sourceMappingURL=defaults-th_TH.js.map'
+]
+
+{ #category : #'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-tr_TR.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultstrTRJsContent)
 ]
@@ -5520,9 +5729,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5571,7 +5780,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ua_UA.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsuaUAJsContent)
 ]
@@ -5579,9 +5788,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5623,7 +5832,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-vi_VN.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsviVNJsContent)
 ]
@@ -5631,9 +5840,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5682,7 +5891,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-zh_CN.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultszhCNJsContent)
 ]
@@ -5690,9 +5899,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -5734,7 +5943,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJsContent [
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhTWJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-zh_TW.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
+		mimeType: (WAMimeType main: 'application' sub: 'javascript')
 		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultszhTWJsContent)
 ]
@@ -5742,9 +5951,9 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhTWJs [
 { #category : #uploaded }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhTWJsContent [
 	^ '/*!
- * Bootstrap-select v1.13.10 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.13.16 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2019 SnapAppointments, LLC
+ * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 

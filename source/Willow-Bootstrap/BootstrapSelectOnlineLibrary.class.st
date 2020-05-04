@@ -54,15 +54,15 @@ BootstrapSelectOnlineLibrary >> updateRoot: aRoot [
 
 	aRoot stylesheet
 		url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/css/bootstrap-select.min.css' expandMacrosWith: self version);
-		anonymousSubResourceIntegrity: 'sha256-jwJEU4p1YdtymLFwAjYfam5Pj5NOnylms63k7LYQ9Jk='.
+		anonymousSubResourceIntegrity: 'sha256-g19F2KOr/H58l6XdI/rhCdEK3NmB8OILHwP/QYBQ8M4='.
 	aRoot javascript
 		url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/js/bootstrap-select.min.js' expandMacrosWith: self version);
-		anonymousSubResourceIntegrity: 'sha256-FXzZGmaRFZngOjUKy3lWZJq/MflaMpffBbu3lPT0izE='.
+		anonymousSubResourceIntegrity: 'sha256-COIM4OdXvo3jkE0/jD/QIEDe3x0jRuqHhOdGTkno3uM='.
 	self updateLocaleIn: aRoot 
 ]
 
 { #category : #Accessing }
 BootstrapSelectOnlineLibrary >> version [
 
-	^'1.13.10'
+	^'1.13.16'
 ]

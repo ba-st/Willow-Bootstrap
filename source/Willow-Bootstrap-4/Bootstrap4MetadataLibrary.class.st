@@ -37,7 +37,7 @@ Bootstrap4MetadataLibrary class >> libraryName [
 { #category : #Accessing }
 Bootstrap4MetadataLibrary class >> version [
 
-	^ '4.3.1'
+	^ '4.4.1'
 ]
 
 { #category : #'instance creation' }

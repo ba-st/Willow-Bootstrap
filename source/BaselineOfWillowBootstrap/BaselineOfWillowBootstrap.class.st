@@ -4,7 +4,7 @@ Metacello Baseline definition for Willow-Bootstrap
 Class {
 	#name : #BaselineOfWillowBootstrap,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfWillowBootstrap'
+	#category : #BaselineOfWillowBootstrap
 }
 
 { #category : #baselines }
@@ -15,7 +15,7 @@ BaselineOfWillowBootstrap >> baseline: spec [
 		for: #pharo
 		do: [ self
 				setUpDependencies: spec;
-				baselineWillowBootstrap: spec.
+				setUpPackages: spec.
 			spec
 				group: 'Deployment' with: #('Deployment-Bootstrap-3' 'Deployment-Bootstrap-4');
 				group: 'CI' with: 'Tests';
@@ -25,8 +25,25 @@ BaselineOfWillowBootstrap >> baseline: spec [
 			]
 ]
 
+{ #category : #accessing }
+BaselineOfWillowBootstrap >> projectClass [
+
+	^ MetacelloCypressBaselineProject
+]
+
 { #category : #baselines }
-BaselineOfWillowBootstrap >> baselineWillowBootstrap: spec [
+BaselineOfWillowBootstrap >> setUpDependencies: spec [
+
+	spec
+		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v13/source' ];
+		project: 'Willow-Deployment' copyFrom: 'Willow' with: [ spec loads: 'Deployment' ];
+		project: 'Willow-SUnit' copyFrom: 'Willow' with: [ spec loads: 'Dependent-SUnit-Extensions' ];
+		project: 'Willow-Tests' copyFrom: 'Willow' with: [ spec loads: 'Tests' ];
+		project: 'Willow-Tools' copyFrom: 'Willow' with: [ spec loads: 'Tools' ]
+]
+
+{ #category : #baselines }
+BaselineOfWillowBootstrap >> setUpPackages: spec [
 
 	spec
 		package: 'Willow-Bootstrap' with: [ spec requires: #('Willow-Deployment') ];
@@ -42,21 +59,4 @@ BaselineOfWillowBootstrap >> baselineWillowBootstrap: spec [
 		package: 'Willow-Bootstrap-4-Tests'
 			with: [ spec requires: #('Willow-Bootstrap-4' 'Willow-Bootstrap-Tests') ];
 		group: 'Tests' with: 'Willow-Bootstrap-4-Tests'
-]
-
-{ #category : #accessing }
-BaselineOfWillowBootstrap >> projectClass [
-
-	^ MetacelloCypressBaselineProject
-]
-
-{ #category : #baselines }
-BaselineOfWillowBootstrap >> setUpDependencies: spec [
-
-	spec
-		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v12/source' ];
-		project: 'Willow-Deployment' copyFrom: 'Willow' with: [ spec loads: 'Deployment' ];
-		project: 'Willow-SUnit' copyFrom: 'Willow' with: [ spec loads: 'Dependent-SUnit-Extensions' ];
-		project: 'Willow-Tests' copyFrom: 'Willow' with: [ spec loads: 'Tests' ];
-		project: 'Willow-Tools' copyFrom: 'Willow' with: [ spec loads: 'Tools' ]
 ]
