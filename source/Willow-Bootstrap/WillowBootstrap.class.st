@@ -1555,7 +1555,7 @@ WillowBootstrap class >> initializeTypographyClasses [
 						do: [ :alignment | 
 							namespace
 								bind: ( #'text<1s><2s>' expandMacrosWith: columnSize with: alignment )
-								to: ( 'text-<1s>-center' expandMacrosWith: breakpoint with: alignment asLowercase )
+								to: ( 'text-<1s>-<2s>' expandMacrosWith: breakpoint with: alignment asLowercase )
 							]
 					]
 			]
