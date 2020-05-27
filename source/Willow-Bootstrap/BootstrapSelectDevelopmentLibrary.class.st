@@ -9,11 +9,12 @@ Class {
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> cssbootstrapselectCss [
+
 	^ WAFileLibraryResource
 		filepath: 'css/bootstrap-select.css'
-		mimeType: (WAMimeType main: 'text' sub: 'css')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #cssbootstrapselectCssContent)
+		mimeType: ( WAMimeType main: 'text' sub: 'css' )
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #cssbootstrapselectCssContent )
 ]
 
 { #category : #uploaded }
@@ -486,12 +487,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJs [
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-select.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsbootstrapselectJsContent )
 ]
 
@@ -3711,12 +3707,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-am_ET.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsamETJsContent )
 ]
 
@@ -3776,12 +3767,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ar_AR.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsarARJsContent )
 ]
 
@@ -3846,12 +3832,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsbgBGJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-bg_BG.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsbgBGJsContent )
 ]
 
@@ -3911,12 +3892,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscroCROJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-cro_CRO.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultscroCROJsContent )
 ]
 
@@ -3975,12 +3951,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-cs_CZ.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultscsCZJsContent )
 ]
 
@@ -4033,12 +4004,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-da_DK.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsdaDKJsContent )
 ]
 
@@ -4098,12 +4064,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-de_DE.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsdeDEJsContent )
 ]
 
@@ -4163,12 +4124,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-en_US.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsenUSJsContent )
 ]
 
@@ -4228,12 +4184,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-es_CL.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsesCLJsContent )
 ]
 
@@ -4286,12 +4237,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-es_ES.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsesESJsContent )
 ]
 
@@ -4344,12 +4290,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-et_EE.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsetEEJsContent )
 ]
 
@@ -4409,12 +4350,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-eu.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultseuJsContent )
 ]
 
@@ -4467,12 +4403,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fa_IR.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsfaIRJsContent )
 ]
 
@@ -4525,12 +4456,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fi_FI.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsfiFIJsContent )
 ]
 
@@ -4590,12 +4516,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fr_FR.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsfrFRJsContent )
 ]
 
@@ -4655,12 +4576,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-hr_HR.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultshrHRJsContent )
 ]
 
@@ -4720,12 +4636,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-hu_HU.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultshuHUJsContent )
 ]
 
@@ -4785,12 +4696,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-id_ID.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsidIDJsContent )
 ]
 
@@ -4843,12 +4749,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-it_IT.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsitITJsContent )
 ]
 
@@ -4903,12 +4804,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ja_JP.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsjaJPJsContent )
 ]
 
@@ -4961,12 +4857,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-kh_KM.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultskhKMJsContent )
 ]
 
@@ -5026,12 +4917,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ko_KR.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultskoKRJsContent )
 ]
 
@@ -5091,12 +4977,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-lt_LT.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsltLTJsContent )
 ]
 
@@ -5156,12 +5037,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-lv_LV.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultslvLVJsContent )
 ]
 
@@ -5221,12 +5097,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-nb_NO.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsnbNOJsContent )
 ]
 
@@ -5286,12 +5157,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-nl_NL.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsnlNLJsContent )
 ]
 
@@ -5344,12 +5210,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pl_PL.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsplPLJsContent )
 ]
 
@@ -5402,12 +5263,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pt_BR.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsptBRJsContent )
 ]
 
@@ -5460,12 +5316,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pt_PT.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsptPTJsContent )
 ]
 
@@ -5518,12 +5369,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ro_RO.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsroROJsContent )
 ]
 
@@ -5577,12 +5423,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ru_RU.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsruRUJsContent )
 ]
 
@@ -5636,12 +5477,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sk_SK.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsskSKJsContent )
 ]
 
@@ -5694,12 +5530,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sl_SI.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsslSIJsContent )
 ]
 
@@ -5757,12 +5588,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssrSPJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sr_SP.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultssrSPJsContent )
 ]
 
@@ -5822,12 +5648,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sv_SE.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultssvSEJsContent )
 ]
 
@@ -5887,12 +5708,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsthTHJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-th_TH.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsthTHJsContent )
 ]
 
@@ -5945,12 +5761,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-tr_TR.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultstrTRJsContent )
 ]
 
@@ -6010,12 +5821,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ua_UA.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsuaUAJsContent )
 ]
 
@@ -6068,12 +5874,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-vi_VN.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsviVNJsContent )
 ]
 
@@ -6133,12 +5934,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-zh_CN.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultszhCNJsContent )
 ]
 
@@ -6191,12 +5987,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhTWJs [
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-zh_TW.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultszhTWJsContent )
 ]
 

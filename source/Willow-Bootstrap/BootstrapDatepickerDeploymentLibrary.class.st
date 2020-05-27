@@ -9,11 +9,12 @@ Class {
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDeploymentLibrary >> cssbootstrapdatepicker3cssMap [
+
 	^ WAFileLibraryResource
 		filepath: 'css/bootstrap-datepicker3.css.map'
-		mimeType: (WAMimeType main: 'application' sub: 'octet-stream')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #cssbootstrapdatepicker3cssMapContent)
+		mimeType: ( WAMimeType main: 'application' sub: 'octet-stream' )
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #cssbootstrapdatepicker3cssMapContent )
 ]
 
 { #category : #uploaded }
@@ -23,11 +24,12 @@ BootstrapDatepickerDeploymentLibrary >> cssbootstrapdatepicker3cssMapContent [
 
 { #category : #'uploaded metadata' }
 BootstrapDatepickerDeploymentLibrary >> cssbootstrapdatepicker3minCss [
+
 	^ WAFileLibraryResource
 		filepath: 'css/bootstrap-datepicker3.min.css'
-		mimeType: (WAMimeType main: 'text' sub: 'css')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #cssbootstrapdatepicker3minCssContent)
+		mimeType: ( WAMimeType main: 'text' sub: 'css' )
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #cssbootstrapdatepicker3minCssContent )
 ]
 
 { #category : #uploaded }
@@ -47,12 +49,7 @@ BootstrapDatepickerDeploymentLibrary >> jsbootstrapdatepickerminJs [
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-datepicker.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #jsbootstrapdatepickerminJsContent )
 ]
 
@@ -74,12 +71,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerarminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ar.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerarminJsContent )
 ]
 
@@ -94,12 +86,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerartnminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ar-tn.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerartnminJsContent )
 ]
 
@@ -114,12 +101,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerazminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.az.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerazminJsContent )
 ]
 
@@ -134,12 +116,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerbgminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bg.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbgminJsContent )
 ]
 
@@ -154,12 +131,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerbmminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bm.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbmminJsContent )
 ]
 
@@ -174,12 +146,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerbnminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bn.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbnminJsContent )
 ]
 
@@ -194,12 +161,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerbrminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.br.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbrminJsContent )
 ]
 
@@ -214,12 +176,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerbsminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.bs.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbsminJsContent )
 ]
 
@@ -234,12 +191,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickercaminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ca.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickercaminJsContent )
 ]
 
@@ -254,12 +206,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickercsminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.cs.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickercsminJsContent )
 ]
 
@@ -274,12 +221,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickercyminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.cy.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickercyminJsContent )
 ]
 
@@ -294,12 +236,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerdaminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.da.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerdaminJsContent )
 ]
 
@@ -314,12 +251,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerdeminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.de.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerdeminJsContent )
 ]
 
@@ -334,12 +266,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerelminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.el.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerelminJsContent )
 ]
 
@@ -354,12 +281,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerenAUminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-AU.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenAUminJsContent )
 ]
 
@@ -374,12 +296,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerenCAminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-CA.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenCAminJsContent )
 ]
 
@@ -394,12 +311,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerenGBminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-GB.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenGBminJsContent )
 ]
 
@@ -414,12 +326,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerenIEminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-IE.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenIEminJsContent )
 ]
 
@@ -434,12 +341,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerenNZminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-NZ.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenNZminJsContent )
 ]
 
@@ -454,12 +356,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerenZAminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.en-ZA.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenZAminJsContent )
 ]
 
@@ -474,12 +371,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickereominJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.eo.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickereominJsContent )
 ]
 
@@ -494,12 +386,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickeresminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.es.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickeresminJsContent )
 ]
 
@@ -514,12 +401,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickeretminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.et.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickeretminJsContent )
 ]
 
@@ -534,12 +416,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickereuminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.eu.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickereuminJsContent )
 ]
 
@@ -554,12 +431,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerfaminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fa.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfaminJsContent )
 ]
 
@@ -574,12 +446,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerfiminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fi.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfiminJsContent )
 ]
 
@@ -594,12 +461,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerfominJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fo.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfominJsContent )
 ]
 
@@ -614,12 +476,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerfrCHminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fr-CH.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfrCHminJsContent )
 ]
 
@@ -634,12 +491,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerfrminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.fr.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfrminJsContent )
 ]
 
@@ -654,12 +506,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerglminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.gl.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerglminJsContent )
 ]
 
@@ -674,12 +521,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerheminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.he.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerheminJsContent )
 ]
 
@@ -694,12 +536,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerhiminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hi.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhiminJsContent )
 ]
 
@@ -714,12 +551,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerhrminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hr.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhrminJsContent )
 ]
 
@@ -734,12 +566,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerhuminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hu.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhuminJsContent )
 ]
 
@@ -754,12 +581,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerhyminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.hy.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhyminJsContent )
 ]
 
@@ -774,12 +596,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickeridminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.id.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickeridminJsContent )
 ]
 
@@ -794,12 +611,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerisminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.is.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerisminJsContent )
 ]
 
@@ -814,12 +626,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickeritCHminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.it-CH.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickeritCHminJsContent )
 ]
 
@@ -834,12 +641,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickeritminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.it.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickeritminJsContent )
 ]
 
@@ -854,12 +656,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerjaminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ja.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerjaminJsContent )
 ]
 
@@ -874,12 +671,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerkaminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ka.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkaminJsContent )
 ]
 
@@ -894,12 +686,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerkhminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kh.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkhminJsContent )
 ]
 
@@ -914,12 +701,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerkkminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kk.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkkminJsContent )
 ]
 
@@ -934,12 +716,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerkmminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.km.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkmminJsContent )
 ]
 
@@ -954,12 +731,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerkominJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ko.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkominJsContent )
 ]
 
@@ -974,12 +746,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerkrminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.kr.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkrminJsContent )
 ]
 
@@ -994,12 +761,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerltminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.lt.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerltminJsContent )
 ]
 
@@ -1014,12 +776,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerlvminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.lv.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerlvminJsContent )
 ]
 
@@ -1034,12 +791,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickermeminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.me.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickermeminJsContent )
 ]
 
@@ -1054,12 +806,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickermkminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.mk.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickermkminJsContent )
 ]
 
@@ -1074,12 +821,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickermnminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.mn.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickermnminJsContent )
 ]
 
@@ -1094,12 +836,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickermsminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ms.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickermsminJsContent )
 ]
 
@@ -1114,12 +851,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickernlBEminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.nl-BE.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickernlBEminJsContent )
 ]
 
@@ -1134,12 +866,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickernlminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.nl.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickernlminJsContent )
 ]
 
@@ -1154,12 +881,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickernominJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.no.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickernominJsContent )
 ]
 
@@ -1174,12 +896,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerocminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.oc.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerocminJsContent )
 ]
 
@@ -1194,12 +911,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerplminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pl.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerplminJsContent )
 ]
 
@@ -1214,12 +926,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerptBRminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pt-BR.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerptBRminJsContent )
 ]
 
@@ -1234,12 +941,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerptminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.pt.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerptminJsContent )
 ]
 
@@ -1254,12 +956,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerrominJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ro.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerrominJsContent )
 ]
 
@@ -1274,12 +971,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerrslatinminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.rs-latin.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerrslatinminJsContent )
 ]
 
@@ -1294,12 +986,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerrsminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.rs.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerrsminJsContent )
 ]
 
@@ -1314,12 +1001,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerruminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ru.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerruminJsContent )
 ]
 
@@ -1334,12 +1016,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickersiminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.si.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickersiminJsContent )
 ]
 
@@ -1354,12 +1031,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerskminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sk.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerskminJsContent )
 ]
 
@@ -1374,12 +1046,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerslminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sl.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerslminJsContent )
 ]
 
@@ -1394,12 +1061,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickersqminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sq.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickersqminJsContent )
 ]
 
@@ -1414,12 +1076,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickersrlatinminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sr-latin.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickersrlatinminJsContent )
 ]
 
@@ -1434,12 +1091,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickersrminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sr.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickersrminJsContent )
 ]
 
@@ -1454,12 +1106,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickersvminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sv.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickersvminJsContent )
 ]
 
@@ -1474,12 +1121,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerswminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.sw.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerswminJsContent )
 ]
 
@@ -1494,12 +1136,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickertaminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.ta.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickertaminJsContent )
 ]
 
@@ -1514,12 +1151,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickertgminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.tg.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickertgminJsContent )
 ]
 
@@ -1534,12 +1166,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerthminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.th.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerthminJsContent )
 ]
 
@@ -1554,12 +1181,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickertkminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.tk.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickertkminJsContent )
 ]
 
@@ -1574,12 +1196,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickertrminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.tr.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickertrminJsContent )
 ]
 
@@ -1594,12 +1211,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerukminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uk.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerukminJsContent )
 ]
 
@@ -1614,12 +1226,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickeruzcyrlminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uz-cyrl.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickeruzcyrlminJsContent )
 ]
 
@@ -1634,12 +1241,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickeruzlatnminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.uz-latn.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickeruzlatnminJsContent )
 ]
 
@@ -1654,12 +1256,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerviminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.vi.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerviminJsContent )
 ]
 
@@ -1674,12 +1271,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerzhCNminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.zh-CN.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerzhCNminJsContent )
 ]
 
@@ -1694,12 +1286,7 @@ BootstrapDatepickerDeploymentLibrary >> localesbootstrapdatepickerzhTWminJs [
 	^ WAFileLibraryResource
 		filepath: 'locales/bootstrap-datepicker.zh-TW.min.js'
 		mimeType: WAMimeType applicationJavascript
-		cacheDuration:
-			( Duration
-				days: 0
-				hours: 0
-				minutes: 30
-				seconds: 0 )
+		cacheDuration: self class defaultCacheDuration
 		contents: ( GRDelayedSend receiver: self selector: #localesbootstrapdatepickerzhTWminJsContent )
 ]
 
