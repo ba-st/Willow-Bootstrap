@@ -7491,9 +7491,9 @@ Bootstrap3DevelopmentMetadataLibrary >> jsbootstrapJs [
 
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
+		mimeType: WAMimeType applicationJavascript
 		cacheDuration: self class defaultCacheDuration
-		contents: (GRDelayedSend receiver: self selector: #jsbootstrapJsContent)
+		contents: ( GRDelayedSend receiver: self selector: #jsbootstrapJsContent )
 ]
 
 { #category : #uploaded }

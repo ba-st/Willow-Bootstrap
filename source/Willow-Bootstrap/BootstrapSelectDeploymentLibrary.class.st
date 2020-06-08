@@ -9,11 +9,12 @@ Class {
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> cssbootstrapselectcssMap [
+
 	^ WAFileLibraryResource
 		filepath: 'css/bootstrap-select.css.map'
-		mimeType: (WAMimeType main: 'application' sub: 'octet-stream')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #cssbootstrapselectcssMapContent)
+		mimeType: ( WAMimeType main: 'application' sub: 'octet-stream' )
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #cssbootstrapselectcssMapContent )
 ]
 
 { #category : #uploaded }
@@ -23,11 +24,12 @@ BootstrapSelectDeploymentLibrary >> cssbootstrapselectcssMapContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> cssbootstrapselectminCss [
+
 	^ WAFileLibraryResource
 		filepath: 'css/bootstrap-select.min.css'
-		mimeType: (WAMimeType main: 'text' sub: 'css')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #cssbootstrapselectminCssContent)
+		mimeType: ( WAMimeType main: 'text' sub: 'css' )
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #cssbootstrapselectminCssContent )
 ]
 
 { #category : #uploaded }
@@ -42,11 +44,12 @@ BootstrapSelectDeploymentLibrary >> cssbootstrapselectminCssContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsbootstrapselectminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-select.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsbootstrapselectminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsbootstrapselectminJsContent )
 ]
 
 { #category : #uploaded }
@@ -64,11 +67,12 @@ BootstrapSelectDeploymentLibrary >> jsbootstrapselectminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsbootstrapselectminjsMap [
+
 	^ WAFileLibraryResource
 		filepath: 'js/bootstrap-select.min.js.map'
-		mimeType: (WAMimeType main: 'application' sub: 'octet-stream')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsbootstrapselectminjsMapContent)
+		mimeType: ( WAMimeType main: 'application' sub: 'octet-stream' )
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsbootstrapselectminjsMapContent )
 ]
 
 { #category : #uploaded }
@@ -78,11 +82,12 @@ BootstrapSelectDeploymentLibrary >> jsbootstrapselectminjsMapContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsamETminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-am_ET.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsamETminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsamETminJsContent )
 ]
 
 { #category : #uploaded }
@@ -99,11 +104,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsamETminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsarARminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ar_AR.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsarARminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsarARminJsContent )
 ]
 
 { #category : #uploaded }
@@ -120,11 +126,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsarARminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsbgBGminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-bg_BG.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsbgBGminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsbgBGminJsContent )
 ]
 
 { #category : #uploaded }
@@ -141,11 +148,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsbgBGminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultscroCROminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-cro_CRO.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'x-javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultscroCROminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultscroCROminJsContent )
 ]
 
 { #category : #uploaded }
@@ -161,11 +169,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultscroCROminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultscsCZminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-cs_CZ.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultscsCZminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultscsCZminJsContent )
 ]
 
 { #category : #uploaded }
@@ -182,11 +191,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultscsCZminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsdaDKminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-da_DK.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsdaDKminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsdaDKminJsContent )
 ]
 
 { #category : #uploaded }
@@ -203,11 +213,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsdaDKminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsdeDEminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-de_DE.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsdeDEminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsdeDEminJsContent )
 ]
 
 { #category : #uploaded }
@@ -224,11 +235,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsdeDEminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsenUSminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-en_US.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsenUSminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsenUSminJsContent )
 ]
 
 { #category : #uploaded }
@@ -245,11 +257,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsenUSminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsesCLminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-es_CL.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsesCLminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsesCLminJsContent )
 ]
 
 { #category : #uploaded }
@@ -266,11 +279,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsesCLminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsesESminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-es_ES.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsesESminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsesESminJsContent )
 ]
 
 { #category : #uploaded }
@@ -287,11 +301,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsesESminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsetEEminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-et_EE.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsetEEminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsetEEminJsContent )
 ]
 
 { #category : #uploaded }
@@ -308,11 +323,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsetEEminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultseuminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-eu.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultseuminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultseuminJsContent )
 ]
 
 { #category : #uploaded }
@@ -329,11 +345,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultseuminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsfaIRminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fa_IR.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfaIRminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsfaIRminJsContent )
 ]
 
 { #category : #uploaded }
@@ -350,11 +367,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsfaIRminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsfiFIminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fi_FI.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfiFIminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsfiFIminJsContent )
 ]
 
 { #category : #uploaded }
@@ -371,11 +389,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsfiFIminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsfrFRminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-fr_FR.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfrFRminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsfrFRminJsContent )
 ]
 
 { #category : #uploaded }
@@ -392,11 +411,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsfrFRminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultshrHRminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-hr_HR.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultshrHRminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultshrHRminJsContent )
 ]
 
 { #category : #uploaded }
@@ -413,11 +433,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultshrHRminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultshuHUminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-hu_HU.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultshuHUminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultshuHUminJsContent )
 ]
 
 { #category : #uploaded }
@@ -434,11 +455,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultshuHUminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsidIDminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-id_ID.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsidIDminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsidIDminJsContent )
 ]
 
 { #category : #uploaded }
@@ -455,11 +477,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsidIDminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsitITminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-it_IT.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsitITminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsitITminJsContent )
 ]
 
 { #category : #uploaded }
@@ -476,11 +499,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsitITminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsjaJPminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ja_JP.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsjaJPminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsjaJPminJsContent )
 ]
 
 { #category : #uploaded }
@@ -497,11 +521,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsjaJPminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultskhKMminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-kh_KM.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultskhKMminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultskhKMminJsContent )
 ]
 
 { #category : #uploaded }
@@ -518,11 +543,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultskhKMminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultskoKRminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ko_KR.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultskoKRminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultskoKRminJsContent )
 ]
 
 { #category : #uploaded }
@@ -539,11 +565,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultskoKRminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsltLTminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-lt_LT.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsltLTminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsltLTminJsContent )
 ]
 
 { #category : #uploaded }
@@ -560,11 +587,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsltLTminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultslvLVminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-lv_LV.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultslvLVminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultslvLVminJsContent )
 ]
 
 { #category : #uploaded }
@@ -581,11 +609,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultslvLVminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsnbNOminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-nb_NO.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsnbNOminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsnbNOminJsContent )
 ]
 
 { #category : #uploaded }
@@ -602,11 +631,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsnbNOminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsnlNLminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-nl_NL.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsnlNLminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsnlNLminJsContent )
 ]
 
 { #category : #uploaded }
@@ -623,11 +653,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsnlNLminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsplPLminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pl_PL.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsplPLminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsplPLminJsContent )
 ]
 
 { #category : #uploaded }
@@ -644,11 +675,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsplPLminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsptBRminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pt_BR.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsptBRminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsptBRminJsContent )
 ]
 
 { #category : #uploaded }
@@ -665,11 +697,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsptBRminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsptPTminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-pt_PT.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsptPTminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsptPTminJsContent )
 ]
 
 { #category : #uploaded }
@@ -686,11 +719,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsptPTminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsroROminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ro_RO.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsroROminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsroROminJsContent )
 ]
 
 { #category : #uploaded }
@@ -707,11 +741,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsroROminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsruRUminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ru_RU.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsruRUminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsruRUminJsContent )
 ]
 
 { #category : #uploaded }
@@ -728,11 +763,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsruRUminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsskSKminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sk_SK.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsskSKminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsskSKminJsContent )
 ]
 
 { #category : #uploaded }
@@ -749,11 +785,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsskSKminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsslSIminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sl_SI.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsslSIminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsslSIminJsContent )
 ]
 
 { #category : #uploaded }
@@ -770,11 +807,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsslSIminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultssrSPminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sr_SP.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultssrSPminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultssrSPminJsContent )
 ]
 
 { #category : #uploaded }
@@ -791,11 +829,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultssrSPminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultssvSEminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-sv_SE.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultssvSEminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultssvSEminJsContent )
 ]
 
 { #category : #uploaded }
@@ -812,11 +851,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultssvSEminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsthTHminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-th_TH.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsthTHminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsthTHminJsContent )
 ]
 
 { #category : #uploaded }
@@ -833,11 +873,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsthTHminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultstrTRminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-tr_TR.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultstrTRminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultstrTRminJsContent )
 ]
 
 { #category : #uploaded }
@@ -854,11 +895,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultstrTRminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsuaUAminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-ua_UA.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsuaUAminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsuaUAminJsContent )
 ]
 
 { #category : #uploaded }
@@ -875,11 +917,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsuaUAminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultsviVNminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-vi_VN.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsviVNminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultsviVNminJsContent )
 ]
 
 { #category : #uploaded }
@@ -896,11 +939,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultsviVNminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultszhCNminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-zh_CN.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultszhCNminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultszhCNminJsContent )
 ]
 
 { #category : #uploaded }
@@ -917,11 +961,12 @@ BootstrapSelectDeploymentLibrary >> jsi18ndefaultszhCNminJsContent [
 
 { #category : #'uploaded metadata' }
 BootstrapSelectDeploymentLibrary >> jsi18ndefaultszhTWminJs [
+
 	^ WAFileLibraryResource
 		filepath: 'js/i18n/defaults-zh_TW.min.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
-		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultszhTWminJsContent)
+		mimeType: WAMimeType applicationJavascript
+		cacheDuration: self class defaultCacheDuration
+		contents: ( GRDelayedSend receiver: self selector: #jsi18ndefaultszhTWminJsContent )
 ]
 
 { #category : #uploaded }

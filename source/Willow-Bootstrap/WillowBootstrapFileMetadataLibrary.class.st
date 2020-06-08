@@ -61,10 +61,10 @@ WillowBootstrapFileMetadataLibrary >> constants [
 { #category : #Accessing }
 WillowBootstrapFileMetadataLibrary >> csswillowbootstrapCss [
 
-	^WAFileLibraryResource
+	^ WAFileLibraryResource
 		filepath: 'css/willow-bootstrap.css'
 		mimeType: WAMimeType textCss
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		cacheDuration: self class defaultCacheDuration
 		contents: self csswillowbootstrapCssContent
 ]
 
@@ -81,7 +81,7 @@ WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJs [
 
 	^ WAFileLibraryResource
 		filepath: 'js/willow-bootstrap.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
+		mimeType: WAMimeType applicationJavascript
 		cacheDuration: self class defaultCacheDuration
 		contents: self jswillowbootstrapJsContent
 ]

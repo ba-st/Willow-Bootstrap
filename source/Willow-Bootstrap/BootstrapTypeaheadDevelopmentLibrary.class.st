@@ -12,9 +12,9 @@ BootstrapTypeaheadDevelopmentLibrary >> bootstrap3typeaheadJs [
 
 	^ WAFileLibraryResource
 		filepath: 'bootstrap3-typeahead.js'
-		mimeType: (WAMimeType main: 'application' sub: 'javascript')
+		mimeType: WAMimeType applicationJavascript
 		cacheDuration: self class defaultCacheDuration
-		contents: (GRDelayedSend receiver: self selector: #bootstrap3typeaheadJsContent)
+		contents: ( GRDelayedSend receiver: self selector: #bootstrap3typeaheadJsContent )
 ]
 
 { #category : #uploaded }
