@@ -13,23 +13,24 @@ Class {
 { #category : #private }
 WillowBootstrap class >> forBootstrap3And4Do: aBlock [
 
+	<ignoreForCoverage>
 	self
 		forBootstrap3Do: aBlock;
-		forBootstrap4Do: aBlock.	
-			
-	"The common namespace must be used internally in the library provided views, not by the end users."
+		forBootstrap4Do: aBlock.	"The common namespace must be used internally in the library provided views, not by the end users."
 	aBlock value: Classification >> #bootstrapCommon
 ]
 
 { #category : #private }
 WillowBootstrap class >> forBootstrap3Do: aBlock [
 
+	<ignoreForCoverage>
 	aBlock value: Classification >> #bootstrap3
 ]
 
 { #category : #private }
 WillowBootstrap class >> forBootstrap4Do: aBlock [
 
+	<ignoreForCoverage>
 	aBlock value: Classification >> #bootstrap4
 ]
 
@@ -143,6 +144,7 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 { #category : #'private - initialization - classes' }
 WillowBootstrap class >> initializeBootstrap3GridClasses [
 
+	<ignoreForCoverage>
 	self
 		forBootstrap3Do: [ :namespace | 
 			1 to: 12 do: [ :index | 
@@ -166,6 +168,7 @@ WillowBootstrap class >> initializeBootstrap3GridClasses [
 { #category : #'private - initialization - classes' }
 WillowBootstrap class >> initializeBootstrap4GridClasses [
 
+	<ignoreForCoverage>
 	self
 		forBootstrap4Do: [ :namespace | 
 			namespace
@@ -1613,5 +1616,6 @@ WillowBootstrap class >> initializeWillowFunctionsConstants [
 { #category : #private }
 WillowBootstrap class >> withBootstrap4BreakpointsDo: aDyadicBlock [
 
+	<ignoreForCoverage>
 	#(Small Medium Large ExtraLarge) with: #('sm' 'md' 'lg' 'xl') do: aDyadicBlock
 ]
