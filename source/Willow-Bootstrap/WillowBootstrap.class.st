@@ -150,13 +150,13 @@ WillowBootstrap class >> initializeBootstrap3GridClasses [
 					with: #('xs' 'sm' 'md' 'lg')
 					do: [ :columnSize :abbr | 
 						namespace
-							bind: ( #'column<1s><2p>' expandMacrosWith: columnSize with: index )
+							bind: ( 'column<1s><2p>' expandMacrosWith: columnSize with: index ) asSymbol
 								to: ( 'col-<1s>-<2p>' expandMacrosWith: abbr with: index );
-							bind: ( #'column<1s>Offset<2p>' expandMacrosWith: columnSize with: index )
+							bind: ( 'column<1s>Offset<2p>' expandMacrosWith: columnSize with: index ) asSymbol
 								to: ( 'col-<1s>-offset-<2p>' expandMacrosWith: abbr with: index );
-							bind: ( #'column<1s>Pull<2p>' expandMacrosWith: columnSize with: index )
+							bind: ( 'column<1s>Pull<2p>' expandMacrosWith: columnSize with: index ) asSymbol
 								to: ( 'col-<1s>-pull-<2p>' expandMacrosWith: abbr with: index );
-							bind: ( #'column<1s>Push<2p>' expandMacrosWith: columnSize with: index )
+							bind: ( 'column<1s>Push<2p>' expandMacrosWith: columnSize with: index ) asSymbol
 								to: ( 'col-<1s>-push-<2p>' expandMacrosWith: abbr with: index )
 						]
 				]
@@ -177,16 +177,17 @@ WillowBootstrap class >> initializeBootstrap4GridClasses [
 				bind: #columnExtraLarge to: 'col-xl'.
 			1 to: 12 do: [ :index | 
 				namespace
-					bind: ( #'column<1p>' expandMacrosWith: index ) to: ( 'col-<1p>' expandMacrosWith: index );
-					bind: ( #'columnExtraSmall<1p>' expandMacrosWith: index )
+					bind: ( 'column<1p>' expandMacrosWith: index ) asSymbol
+						to: ( 'col-<1p>' expandMacrosWith: index );
+					bind: ( 'columnExtraSmall<1p>' expandMacrosWith: index ) asSymbol
 						to: ( 'col-<1p>' expandMacrosWith: index ).
 				#('Small' 'Medium' 'Large' 'ExtraLarge')
 					with: #('sm' 'md' 'lg' 'xl')
 					do: [ :columnSize :abbr | 
 						namespace
-							bind: ( #'column<1s><2p>' expandMacrosWith: columnSize with: index )
+							bind: ( 'column<1s><2p>' expandMacrosWith: columnSize with: index ) asSymbol
 								to: ( 'col-<1s>-<2p>' expandMacrosWith: abbr with: index );
-							bind: ( #'column<1s>Offset<2p>' expandMacrosWith: columnSize with: index )
+							bind: ( 'column<1s>Offset<2p>' expandMacrosWith: columnSize with: index ) asSymbol
 								to: ( 'col-<1s>-offset-<2p>' expandMacrosWith: abbr with: index )
 						]
 				]
@@ -493,14 +494,14 @@ WillowBootstrap class >> initializeDisplayUtilitiesClasses [
 				with: #(none inline #'inline-block' block table #'table-cell' #'table-row' flex #'inline-flex')
 				do: [ :displayMethod :cssClass | 
 					namespace
-						bind: ( #'display<1s>' expandMacrosWith: displayMethod )
+						bind: ( 'display<1s>' expandMacrosWith: displayMethod ) asSymbol
 							to: ( 'd-<1s>' expandMacrosWith: cssClass );
-						bind: ( #'displayPrint<1s>' expandMacrosWith: displayMethod )
+						bind: ( 'displayPrint<1s>' expandMacrosWith: displayMethod ) asSymbol
 							to: ( 'd-print-<1s>' expandMacrosWith: cssClass ).
 					self
 						withBootstrap4BreakpointsDo: [ :columnSize :abbr | 
 							namespace
-								bind: ( #'display<1s><2s>' expandMacrosWith: columnSize with: displayMethod )
+								bind: ( 'display<1s><2s>' expandMacrosWith: columnSize with: displayMethod ) asSymbol
 								to: ( 'd-<1s>-<2s>' expandMacrosWith: abbr with: cssClass )
 							]
 					]
@@ -616,15 +617,15 @@ WillowBootstrap class >> initializeFlexAlignContentClasses [
 			self
 				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
 					namespace
-						bind: ( #'alignContent<1s>Start' expandMacrosWith: columnSize )
+						bind: ( 'alignContent<1s>Start' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-content-<1s>-start' expandMacrosWith: breakpoint );
-						bind: ( #'alignContent<1s>End' expandMacrosWith: columnSize )
+						bind: ( 'alignContent<1s>End' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-content-<1s>-end' expandMacrosWith: breakpoint );
-						bind: ( #'alignContent<1s>Center' expandMacrosWith: columnSize )
+						bind: ( 'alignContent<1s>Center' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-content-<1s>-center' expandMacrosWith: breakpoint );
-						bind: ( #'alignContent<1s>Around' expandMacrosWith: columnSize )
+						bind: ( 'alignContent<1s>Around' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-content-<1s>-around' expandMacrosWith: breakpoint );
-						bind: ( #'alignContent<1s>Stretch' expandMacrosWith: columnSize )
+						bind: ( 'alignContent<1s>Stretch' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-content-<1s>-stretch' expandMacrosWith: breakpoint )
 					]
 			]
@@ -645,15 +646,15 @@ WillowBootstrap class >> initializeFlexAlignItemsClasses [
 			self
 				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
 					namespace
-						bind: ( #'alignItems<1s>Start' expandMacrosWith: columnSize )
+						bind: ( 'alignItems<1s>Start' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-items-<1s>-start' expandMacrosWith: breakpoint );
-						bind: ( #'alignItems<1s>End' expandMacrosWith: columnSize )
+						bind: ( 'alignItems<1s>End' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-items-<1s>-end' expandMacrosWith: breakpoint );
-						bind: ( #'alignItems<1s>Center' expandMacrosWith: columnSize )
+						bind: ( 'alignItems<1s>Center' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-items-<1s>-center' expandMacrosWith: breakpoint );
-						bind: ( #'alignItems<1s>Baseline' expandMacrosWith: columnSize )
+						bind: ( 'alignItems<1s>Baseline' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-items-<1s>-baseline' expandMacrosWith: breakpoint );
-						bind: ( #'alignItems<1s>Stretch' expandMacrosWith: columnSize )
+						bind: ( #'alignItems<1s>Stretch' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-items-<1s>-stretch' expandMacrosWith: breakpoint )
 					]
 			]
@@ -674,15 +675,15 @@ WillowBootstrap class >> initializeFlexAlignSelfClasses [
 			self
 				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
 					namespace
-						bind: ( #'alignSelf<1s>Start' expandMacrosWith: columnSize )
+						bind: ( 'alignSelf<1s>Start' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-self-<1s>-start' expandMacrosWith: breakpoint );
-						bind: ( #'alignSelf<1s>End' expandMacrosWith: columnSize )
+						bind: ( 'alignSelf<1s>End' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-self-<1s>-end' expandMacrosWith: breakpoint );
-						bind: ( #'alignSelf<1s>Center' expandMacrosWith: columnSize )
+						bind: ( 'alignSelf<1s>Center' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-self-<1s>-center' expandMacrosWith: breakpoint );
-						bind: ( #'alignSelf<1s>Baseline' expandMacrosWith: columnSize )
+						bind: ( 'alignSelf<1s>Baseline' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-self-<1s>-baseline' expandMacrosWith: breakpoint );
-						bind: ( #'alignSelf<1s>Stretch' expandMacrosWith: columnSize )
+						bind: ( 'alignSelf<1s>Stretch' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'align-self-<1s>-stretch' expandMacrosWith: breakpoint )
 					]
 			]
@@ -702,13 +703,13 @@ WillowBootstrap class >> initializeFlexColumnClasses [
 			self
 				withBootstrap4BreakpointsDo: [ :columnSize :abbr | 
 					namespace
-						bind: ( #'flex<1s>Column' expandMacrosWith: columnSize )
+						bind: ( 'flex<1s>Column' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'flex-<1s>-column' expandMacrosWith: abbr );
-						bind: ( #'flex<1s>ColumnReverse' expandMacrosWith: columnSize )
+						bind: ( 'flex<1s>ColumnReverse' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'flex-<1s>-column-reverse' expandMacrosWith: abbr );
-						bind: ( #'flex<1s>Row' expandMacrosWith: columnSize )
+						bind: ( 'flex<1s>Row' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'flex-<1s>-row' expandMacrosWith: abbr );
-						bind: ( #'flex<1s>RowReverse' expandMacrosWith: columnSize )
+						bind: ( 'flex<1s>RowReverse' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'flex-<1s>-row-reverse' expandMacrosWith: abbr )
 					]
 			]
@@ -729,15 +730,15 @@ WillowBootstrap class >> initializeFlexJustifyContentClasses [
 			self
 				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
 					namespace
-						bind: ( #'justifyContent<1s>Start' expandMacrosWith: columnSize )
+						bind: ( 'justifyContent<1s>Start' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'justify-content-<1s>-start' expandMacrosWith: breakpoint );
-						bind: ( #'justifyContent<1s>End' expandMacrosWith: columnSize )
+						bind: ( 'justifyContent<1s>End' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'justify-content-<1s>-end' expandMacrosWith: breakpoint );
-						bind: ( #'justifyContent<1s>Center' expandMacrosWith: columnSize )
+						bind: ( 'justifyContent<1s>Center' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'justify-content-<1s>-center' expandMacrosWith: breakpoint );
-						bind: ( #'justifyContent<1s>Between' expandMacrosWith: columnSize )
+						bind: ( 'justifyContent<1s>Between' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'justify-content-<1s>-between' expandMacrosWith: breakpoint );
-						bind: ( #'justifyContent<1s>Around' expandMacrosWith: columnSize )
+						bind: ( 'justifyContent<1s>Around' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'justify-content-<1s>-around' expandMacrosWith: breakpoint )
 					]
 			]
@@ -751,12 +752,12 @@ WillowBootstrap class >> initializeFlexOrderClasses [
 		forBootstrap4Do: [ :namespace | 
 			0 to: 12 do: [ :index | 
 				namespace
-					bind: ( #'order<1p>' expandMacrosWith: index )
+					bind: ( 'order<1p>' expandMacrosWith: index ) asSymbol
 					to: ( 'order-<1p>' expandMacrosWith: index ).
 				self
 					withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
 						namespace
-							bind: ( #'order<1s><2p>' expandMacrosWith: columnSize with: index )
+							bind: ( 'order<1s><2p>' expandMacrosWith: columnSize with: index ) asSymbol
 							to: ( 'order-<1s>-<2p>' expandMacrosWith: breakpoint with: index )
 						]
 				]
@@ -776,11 +777,11 @@ WillowBootstrap class >> initializeFlexWrapClasses [
 			self
 				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
 					namespace
-						bind: ( #'flex<1s>Wrap' expandMacrosWith: columnSize )
+						bind: ( 'flex<1s>Wrap' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'flex-<1s>-wrap' expandMacrosWith: breakpoint );
-						bind: ( #'flex<1s>Nowrap' expandMacrosWith: columnSize )
+						bind: ( 'flex<1s>Nowrap' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'flex-<1s>-nowrap' expandMacrosWith: breakpoint );
-						bind: ( #'flex<1s>WrapReverse' expandMacrosWith: columnSize )
+						bind: ( 'flex<1s>WrapReverse' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'flex-<1s>-wrap-reverse' expandMacrosWith: breakpoint )
 					]
 			]
@@ -800,11 +801,11 @@ WillowBootstrap class >> initializeFloatClasses [
 			self
 				withBootstrap4BreakpointsDo: [ :columnSize :breakpoint | 
 					namespace
-						bind: ( #'float<1s>Left' expandMacrosWith: columnSize )
+						bind: ( 'float<1s>Left' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'float-<1s>-left' expandMacrosWith: breakpoint );
-						bind: ( #'float<1s>Right' expandMacrosWith: columnSize )
+						bind: ( 'float<1s>Right' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'float-<1s>-right' expandMacrosWith: breakpoint );
-						bind: ( #'float<1s>None' expandMacrosWith: columnSize )
+						bind: ( 'float<1s>None' expandMacrosWith: columnSize ) asSymbol
 							to: ( 'float-<1s>-none' expandMacrosWith: breakpoint )
 					]
 			]
@@ -1418,11 +1419,11 @@ WillowBootstrap class >> initializeSpacingClasses [
 						do: [ :sidePrefix :side | 
 							1 to: 5 do: [ :index | 
 								namespace
-									bind: ( #'<1s><2s><3p>' expandMacrosWith: property with: side with: index )
+									bind: ( '<1s><2s><3p>' expandMacrosWith: property with: side with: index ) asSymbol
 									to: ( '<1s><2s>-<3p>' expandMacrosWith: propertyPrefix with: sidePrefix with: index )
 								].
 							namespace
-								bind: ( #'<1s><2s>Auto' expandMacrosWith: property with: side )
+								bind: ( '<1s><2s>Auto' expandMacrosWith: property with: side ) asSymbol
 								to: ( '<1s><2s>-auto' expandMacrosWith: propertyPrefix with: sidePrefix )
 							]
 					]
@@ -1537,7 +1538,7 @@ WillowBootstrap class >> initializeTypographyClasses [
 		forBootstrap4Do: [ :namespace | 
 			1 to: 4 do: [ :index | 
 				namespace
-					bind: ( #'display<1p>' expandMacrosWith: index )
+					bind: ( 'display<1p>' expandMacrosWith: index ) asSymbol
 					to: ( #'display-<1p>' expandMacrosWith: index )
 				].
 			namespace
@@ -1554,7 +1555,7 @@ WillowBootstrap class >> initializeTypographyClasses [
 					#(Center Justify Left Right)
 						do: [ :alignment | 
 							namespace
-								bind: ( #'text<1s><2s>' expandMacrosWith: columnSize with: alignment )
+								bind: ( 'text<1s><2s>' expandMacrosWith: columnSize with: alignment ) asSymbol
 								to: ( 'text-<1s>-<2s>' expandMacrosWith: breakpoint with: alignment asLowercase )
 							]
 					]
