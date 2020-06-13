@@ -69,55 +69,55 @@ ComponentClassificationCommandBuilder >> collapsed [
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnExtraSmallOffset: count [
 
-	^ self commandStyledWith: (#'columnExtraSmallOffset<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnExtraSmallOffset<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnExtraSmallPull: count [
 
-	^ self commandStyledWith: (#'columnExtraSmallPull<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnExtraSmallPull<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnExtraSmallPush: count [
 
-	^ self commandStyledWith: (#'columnExtraSmallPush<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnExtraSmallPush<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnLargePull: count [
 
-	^ self commandStyledWith: (#'columnLargePull<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnLargePull<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnLargePush: count [
 
-	^ self commandStyledWith: (#'columnLargePush<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnLargePush<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnMediumPull: count [
 
-	^ self commandStyledWith: (#'columnMediumPull<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnMediumPull<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnMediumPush: count [
 
-	^ self commandStyledWith: (#'columnMediumPush<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ( 'columnMediumPush<1p>' expandMacrosWith: count ) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnSmallPull: count [
 
-	^ self commandStyledWith: (#'columnSmallPull<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ( 'columnSmallPull<1p>' expandMacrosWith: count ) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }
 ComponentClassificationCommandBuilder >> columnSmallPush: count [
 
-	^ self commandStyledWith: (#'columnSmallPush<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnSmallPush<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-3' }

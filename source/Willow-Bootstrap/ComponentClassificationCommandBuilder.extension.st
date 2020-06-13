@@ -225,43 +225,43 @@ ComponentClassificationCommandBuilder >> collapsing [
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnExtraSmall: count [
 
-	^ self commandStyledWith: (#'columnExtraSmall<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnExtraSmall<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnLarge: count [
 
-	^ self commandStyledWith: (#'columnLarge<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnLarge<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnLargeOffset: count [
 
-	^ self commandStyledWith: (#'columnLargeOffset<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnLargeOffset<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnMedium: count [
 
-	^ self commandStyledWith: (#'columnMedium<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnMedium<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnMediumOffset: count [
 
-	^ self commandStyledWith: (#'columnMediumOffset<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnMediumOffset<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnSmall: count [
 
-	^ self commandStyledWith: (#'columnSmall<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ( 'columnSmall<1p>' expandMacrosWith: count ) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap' }
 ComponentClassificationCommandBuilder >> columnSmallOffset: count [
 
-	^ self commandStyledWith: (#'columnSmallOffset<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('columnSmallOffset<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap' }

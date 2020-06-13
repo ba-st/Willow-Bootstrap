@@ -1029,7 +1029,7 @@ ComponentClassificationCommandBuilder >> column9 [
 { #category : #'*Willow-Bootstrap-4' }
 ComponentClassificationCommandBuilder >> column: count [
 
-	^ self commandStyledWith: (#'column<1p>' expandMacrosWith: count)
+	^ self commandStyledWith: ('column<1p>' expandMacrosWith: count) asSymbol
 ]
 
 { #category : #'*Willow-Bootstrap-4' }
