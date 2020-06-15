@@ -18,7 +18,7 @@ WillowBootstrap3ExtensionsTest >> assertColumnRenderingOf: columnSize at: index 
 			self
 				assertRenderingOfDivApplying: [ :div | 
 					div addClass bootstrap3
-						perform: ( #'column<1s><2s>:' expandMacrosWith: columnSize with: suffix )
+						perform: ( 'column<1s><2s>:' expandMacrosWith: columnSize with: suffix ) asSymbol
 						with: index
 					]
 				equals:
@@ -28,7 +28,7 @@ WillowBootstrap3ExtensionsTest >> assertColumnRenderingOf: columnSize at: index 
 								nextPutAll: '<div class="';
 								nextPutAll:
 									Classification >> #bootstrap3
-										>> ( #'column<1s><2s><3p>' expandMacrosWith: columnSize with: suffix with: index );
+										>> ( 'column<1s><2s><3p>' expandMacrosWith: columnSize with: suffix with: index ) asSymbol;
 								nextPutAll: '"></div>'
 							] )
 			]
