@@ -58,5 +58,8 @@ BaselineOfWillowBootstrap >> setUpPackages: spec [
 		group: 'Tests' with: 'Willow-Bootstrap-3-Tests';
 		package: 'Willow-Bootstrap-4-Tests'
 			with: [ spec requires: #('Willow-Bootstrap-4' 'Willow-Bootstrap-Tests') ];
-		group: 'Tests' with: 'Willow-Bootstrap-4-Tests'
+		group: 'Tests' with: 'Willow-Bootstrap-4-Tests';
+		package: 'Willow-Live-Documentation'
+			with: [ spec requires: #('Willow-Bootstrap-3' 'Willow-Bootstrap-4') ];
+		group: 'Tools' with: 'Willow-Live-Documentation'
 ]
