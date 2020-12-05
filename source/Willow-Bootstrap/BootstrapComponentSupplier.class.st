@@ -13,6 +13,12 @@ BootstrapComponentSupplier class >> isAbstract [
 	^ self name = #BootstrapComponentSupplier
 ]
 
+{ #category : #Interaction }
+BootstrapComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas [
+
+	aJSScript << (dialogSupplier value: (jQueryMatchingDialogContainer children: 'div')) bootstrapModal hide
+]
+
 { #category : #Supplying }
 BootstrapComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aComponentCommand [
 
@@ -183,12 +189,6 @@ BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfE
 BootstrapComponentSupplier >> splitButtonDropdownBuilder [
 
 	^ self subclassResponsibility
-]
-
-{ #category : #Interaction }
-BootstrapComponentSupplier >> statementToCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas [
-
-	^ ( dialogSupplier value: ( jQueryMatchingDialogContainer children: 'div' ) ) bootstrapModal hide
 ]
 
 { #category : #Supplying }

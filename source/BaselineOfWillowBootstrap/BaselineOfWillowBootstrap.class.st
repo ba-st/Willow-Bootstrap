@@ -35,10 +35,10 @@ BaselineOfWillowBootstrap >> projectClass [
 BaselineOfWillowBootstrap >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v14/source' ];
+		baseline: 'Willow' with: [ spec repository: 'github://ba-st/Willow:v13/source' ];
 		project: 'Willow-Deployment' copyFrom: 'Willow' with: [ spec loads: 'Deployment' ];
 		project: 'Willow-SUnit' copyFrom: 'Willow' with: [ spec loads: 'Dependent-SUnit-Extensions' ];
-		project: 'Willow-Core-Tests' copyFrom: 'Willow' with: [ spec loads: 'Tests' ];
+		project: 'Willow-Tests' copyFrom: 'Willow' with: [ spec loads: 'Tests' ];
 		project: 'Willow-Tools' copyFrom: 'Willow' with: [ spec loads: 'Tools' ]
 ]
 
@@ -51,8 +51,7 @@ BaselineOfWillowBootstrap >> setUpPackages: spec [
 		group: 'Deployment-Bootstrap-3' with: 'Willow-Bootstrap-3';
 		package: 'Willow-Bootstrap-4' with: [ spec requires: 'Willow-Bootstrap' ];
 		group: 'Deployment-Bootstrap-4' with: 'Willow-Bootstrap-4';
-		package: 'Willow-Bootstrap-Tests'
-			with: [ spec requires: #('Willow-Bootstrap' 'Willow-Core-Tests') ];
+		package: 'Willow-Bootstrap-Tests' with: [ spec requires: #('Willow-Bootstrap' 'Willow-Tests') ];
 		group: 'Tests' with: 'Willow-Bootstrap-Tests';
 		package: 'Willow-Bootstrap-3-Tests'
 			with: [ spec requires: #('Willow-Bootstrap-3' 'Willow-Bootstrap-Tests') ];

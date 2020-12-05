@@ -4,7 +4,7 @@ A BootstrapDialogClosingCommandTest is a test class for testing the behavior of 
 Class {
 	#name : #BootstrapDialogClosingCommandTest,
 	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-WebInteraction'
+	#category : 'Willow-Bootstrap-Tests-WebInteraction'
 }
 
 { #category : #testing }
@@ -43,9 +43,8 @@ BootstrapDialogClosingCommandTest >> testModelLoadingActionsWhenOnlyRemovingLast
 			script := canvas javascript.
 			anchor := canvas anchor.
 			canvas ensureIdFor: anchor.
-			DialogClosingCommand onlyForLastDialog modelLoadingInstructions appendTo: script on: canvas.
-			anchor script: ( canvas jQuery this onClick: script )
-			].
+			DialogClosingCommand onlyForLastDialog modelLoadingActions do: [ :action | action value: script value: canvas ].
+			anchor script: (canvas jQuery this onClick: script) ].
 
 	self
 		assert: html
@@ -65,9 +64,8 @@ BootstrapDialogClosingCommandTest >> testModelLoadingActionsWhenRemovingAllDialo
 			script := canvas javascript.
 			anchor := canvas anchor.
 			canvas ensureIdFor: anchor.
-			DialogClosingCommand forAllDialogs modelLoadingInstructions appendTo: script on: canvas.
-			anchor script: ( canvas jQuery this onClick: script )
-			].
+			DialogClosingCommand forAllDialogs modelLoadingActions do: [ :action | action value: script value: canvas ].
+			anchor script: (canvas jQuery this onClick: script) ].
 
 	self
 		assert: html
