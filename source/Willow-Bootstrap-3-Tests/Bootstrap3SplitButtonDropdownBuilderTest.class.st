@@ -23,7 +23,7 @@ Bootstrap3SplitButtonDropdownBuilderTest >> testOnTrigger [
 	splitButton := self supplier splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		build.
 
 	splitButton onTrigger disable.
@@ -44,7 +44,7 @@ Bootstrap3SplitButtonDropdownBuilderTest >> testRenderContentOn [
 	button := self supplier splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		build.
 
 	html := self render: button.
@@ -63,7 +63,7 @@ Bootstrap3SplitButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 	button := self supplier splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		beRightAligned;
 		build.
 
@@ -84,7 +84,7 @@ Bootstrap3SplitButtonDropdownBuilderTest >> testRenderContentOnWithNonDropdownBu
 		labeled: 'Dropdown'
 			applyingToMainButton: [ :mainButton | mainButton beDisabled ]
 			andToBoth: [ :button | button addClass bootstrap3 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		build.
 
 	html := self render: splitButton.
@@ -103,8 +103,8 @@ Bootstrap3SplitButtonDropdownBuilderTest >> testRenderContentOnWithSeveralAction
 	button := self supplier splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap3 buttonDanger ];
-		addActionLabeled: 'Action #1' executing: [ :action | action onTrigger disable ];
-		addActionLabeled: 'Action #2' executing: [ :action | action onTrigger serializeContainerForm ];
+		addActionLabeled: 'Action #1' executing: [ :action | action on trigger disable ];
+		addActionLabeled: 'Action #2' executing: [ :action | action on trigger serializeContainerForm ];
 		build.
 
 	html := self render: button.

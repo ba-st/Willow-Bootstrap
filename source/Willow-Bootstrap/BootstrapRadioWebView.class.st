@@ -28,7 +28,7 @@ BootstrapRadioWebView >> initializeRenderingWith: aRenderingBlock applyingToLabe
 	renderingBlock := aRenderingBlock.
 	labelCommand := aLabelCommand.
 	inputCommand := anInputCommand.
-	interactionInterpreter := WebInteractionInterpreter forChangeInComponentValue
+	interactionInterpreter := EventInterpreterDispatcher defaultingToChange
 ]
 
 { #category : #'private - accessing' }

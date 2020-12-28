@@ -35,7 +35,7 @@ Bootstrap4CheckboxWebViewTest >> testOnTrigger [
 	| html binaryChoiceView |
 
 	binaryChoiceView := self newBinaryChoiceView.
-	binaryChoiceView onTrigger disable.
+	binaryChoiceView on trigger disable.
 	html := self render: binaryChoiceView.
 
 	self

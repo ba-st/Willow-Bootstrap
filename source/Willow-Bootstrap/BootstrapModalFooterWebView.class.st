@@ -51,13 +51,13 @@ BootstrapModalFooterWebView >> initializeContaining: aButtonCollection andCloseB
 { #category : #Configuring }
 BootstrapModalFooterWebView >> onCloseTrigger [
 
-	^ closeButton onTrigger
+	^ closeButton on trigger
 ]
 
 { #category : #Configuring }
 BootstrapModalFooterWebView >> onTrigger [
 
-	^ CombinedWebInteractionInterpreter combiningInterpretersOf: buttons
+	^ CombinedEventInterpreterDispatcher combiningInterpretersOfAll: buttons
 ]
 
 { #category : #rendering }

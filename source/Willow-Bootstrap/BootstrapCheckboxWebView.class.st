@@ -57,7 +57,7 @@ BootstrapCheckboxWebView class >> onModel: anObjectToUseWhenOn offModel: anObjec
 		applying: aCommandToComponent
 ]
 
-{ #category : #'rendering - private' }
+{ #category : #'private - rendering' }
 BootstrapCheckboxWebView >> commandToInput [
 
 	^ commandToComponent
@@ -80,18 +80,27 @@ BootstrapCheckboxWebView >> initializeLabeledAccordingTo: anOptionalLabel applyi
 
 	labelOptional := anOptionalLabel.
 	commandToComponent := aCommandToComponent.
-	interactionInterpreter := WebInteractionInterpreter forClickOnHiddenInputDependentComponent.
+	interactionInterpreter := EventInterpreterDispatcher defaultingToClickHidden.
 	identifierAssigner := IdentifierAssigner prefixedBy: 'checkbox'.
 	isChecked := true
 ]
 
 { #category : #configuring }
-BootstrapCheckboxWebView >> onTrigger [
+BootstrapCheckboxWebView >> on [
 
 	^ interactionInterpreter
 ]
 
-{ #category : #'rendering - private' }
+{ #category : #configuring }
+BootstrapCheckboxWebView >> onTrigger [
+
+	self
+		deprecated: 'Use #on instead.'
+		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
+	^ self on trigger
+]
+
+{ #category : #'private - rendering' }
 BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 
 	| checkbox |

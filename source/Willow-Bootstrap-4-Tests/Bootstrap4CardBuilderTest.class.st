@@ -51,8 +51,8 @@ Bootstrap4CardBuilderTest >> testRenderingMixedContent [
 			withLevel: 6
 			applying: [ :sub | sub addClass bootstrap4 textMuted ];
 		withListGroup: listGroup;
-		addActionLabeled: 'Card Link' executing: [ :link | link onTrigger disable ];
-		addActionLabeled: 'Another Link' executing: [ :link | link onTrigger disable ];
+		addActionLabeled: 'Card Link' executing: [ :link | link on trigger disable ];
+		addActionLabeled: 'Another Link' executing: [ :link | link on trigger disable ];
 		buildApplying: [ :card | card setStyleTo: [ :style | style width: 18 rem ] ].
 
 	html := self render: complexCard.
@@ -70,10 +70,12 @@ Bootstrap4CardBuilderTest >> testRenderingTitlesTextAndLinks [
 
 	complexCard := supplier cardBuilder
 		addTitle: 'Willow Bootstrap' withLevel: 5;
-		addSubtitle: 'Cool ajax-based web apps' withLevel: 6 applying: [ :sub | sub addClass bootstrap4 textMuted ];
+		addSubtitle: 'Cool ajax-based web apps'
+			withLevel: 6
+			applying: [ :sub | sub addClass bootstrap4 textMuted ];
 		addText: 'Some quick example text to build on the card title and make up the bulk of the card''s content';
-		addActionLabeled: 'Card Link' executing: [ :link | link onTrigger disable ];
-		addActionLabeled: 'Another Link' executing: [ :link | link onTrigger disable ];
+		addActionLabeled: 'Card Link' executing: [ :link | link on trigger disable ];
+		addActionLabeled: 'Another Link' executing: [ :link | link on trigger disable ];
 		buildApplying: [ :card | card setStyleTo: [ :style | style width: 18 rem ] ].
 
 	html := self render: complexCard.

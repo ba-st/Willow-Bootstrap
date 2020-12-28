@@ -20,7 +20,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testOnTrigger [
 	splitButton := self supplier splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap4 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		build.
 
 	splitButton onTrigger disable.
@@ -29,7 +29,8 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testOnTrigger [
 
 	self
 		assert: html
-		equals: '<div class="btn-group"><button id="button-id1" class="btn btn-danger" type="button">Dropdown</button><button class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><span class="sr-only">Toggle dropdown</span></button><div class="dropdown-menu"><a id="a-id2" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
+		equals:
+			'<div class="btn-group"><button id="button-id1" class="btn btn-danger" type="button">Dropdown</button><button class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><span class="sr-only">Toggle dropdown</span></button><div class="dropdown-menu"><a id="a-id2" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
 { #category : #tests }
@@ -40,7 +41,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOn [
 	button := self supplier splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap4 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		build.
 
 	html := self render: button.
@@ -48,7 +49,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOn [
 	self
 		assert: html
 		equals:
-			 '<div class="btn-group"><button class="btn btn-danger" type="button">Dropdown</button><button class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><span class="sr-only">Toggle dropdown</span></button><div class="dropdown-menu"><a id="a-id1" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
+			'<div class="btn-group"><button class="btn btn-danger" type="button">Dropdown</button><button class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><span class="sr-only">Toggle dropdown</span></button><div class="dropdown-menu"><a id="a-id1" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
 { #category : #tests }
@@ -59,7 +60,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 	button := self supplier splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap4 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		beRightAligned;
 		build.
 
@@ -80,7 +81,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOnWithNonDropdownBu
 		labeled: 'Dropdown'
 			applyingToMainButton: [ :mainButton | mainButton beDisabled ]
 			andToBoth: [ :button | button addClass bootstrap4 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		build.
 
 	html := self render: splitButton.
@@ -99,8 +100,8 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOnWithSeveralAction
 	button := self supplier splitButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap4 buttonDanger ];
-		addActionLabeled: 'Action #1' executing: [ :action | action onTrigger disable ];
-		addActionLabeled: 'Action #2' executing: [ :action | action onTrigger serializeContainerForm ];
+		addActionLabeled: 'Action #1' executing: [ :action | action on trigger disable ];
+		addActionLabeled: 'Action #2' executing: [ :action | action on trigger serializeContainerForm ];
 		build.
 
 	html := self render: button.

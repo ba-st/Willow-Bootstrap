@@ -34,7 +34,7 @@ BootstrapDismissButton >> initializeDismissing: aContainerType [
 { #category : #configuring }
 BootstrapDismissButton >> onTrigger [
 
-	^ dismissButton onTrigger
+	^ dismissButton on trigger
 ]
 
 { #category : #rendering }
