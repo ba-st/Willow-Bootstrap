@@ -32,9 +32,18 @@ BootstrapDismissButton >> initializeDismissing: aContainerType [
 ]
 
 { #category : #configuring }
+BootstrapDismissButton >> on [
+
+	^ dismissButton on
+]
+
+{ #category : #configuring }
 BootstrapDismissButton >> onTrigger [
 
-	^ dismissButton on trigger
+	self
+		deprecated: 'Use #on instead.'
+		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
+	^ self on trigger
 ]
 
 { #category : #rendering }

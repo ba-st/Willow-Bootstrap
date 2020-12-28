@@ -4,7 +4,7 @@ A BootstrapModalHeaderTest is a test class for testing the behavior of Bootstrap
 Class {
 	#name : #BootstrapModalHeaderWebViewTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-Tests-WebViews'
 }
 
 { #category : #tests }
@@ -13,7 +13,7 @@ BootstrapModalHeaderWebViewTest >> testOnCloseTriggerDoesNothingIfNotDismissable
 	| header html |
 
 	header := BootstrapModalHeaderWebView titled: 'Welcome!'.
-	header onCloseTrigger disable.
+	header onClose disable.
 	html := self render: header.
 
 	self assert: html equals: '<div class="modal-header"><h4 class="modal-title">Welcome!</h4></div>'
@@ -25,7 +25,7 @@ BootstrapModalHeaderWebViewTest >> testOnCloseTriggerWhenDismissable [
 	| header html |
 
 	header := BootstrapModalHeaderWebView dismissableTitled: 'Welcome!'.
-	header onCloseTrigger disable.
+	header onClose disable.
 	html := self render: header.
 
 	self

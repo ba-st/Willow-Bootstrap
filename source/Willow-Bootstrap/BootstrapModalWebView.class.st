@@ -71,20 +71,38 @@ BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aB
 ]
 
 { #category : #Configuring }
-BootstrapModalWebView >> onCloseTrigger [
+BootstrapModalWebView >> on [
+
+	"The footer contains the buttons that can trigger some action (except the close button, but the modal have specific events for this action)"
+
+	^ footer on
+]
+
+{ #category : #Configuring }
+BootstrapModalWebView >> onClose [
 
 	^ CombinedWebInteractionInterpreter
 		combining:
-			{header onCloseTrigger.
-			footer onCloseTrigger}
+			{header onClose.
+			footer onClose}
+]
+
+{ #category : #Configuring }
+BootstrapModalWebView >> onCloseTrigger [
+
+	self
+		deprecated: 'Use #onClose instead.'
+		transformWith: '`@receiver onCloseTrigger' -> '`@receiver onClose'.
+	^ self onClose
 ]
 
 { #category : #Configuring }
 BootstrapModalWebView >> onTrigger [
 
-	"The footer contains the buttons that can trigger some action (except the close button, but the modal have specific events for this action)"
-
-	^ footer onTrigger
+	self
+		deprecated: 'Use #on instead.'
+		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
+	^ self on trigger
 ]
 
 { #category : #rendering }

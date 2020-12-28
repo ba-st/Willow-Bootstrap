@@ -25,9 +25,18 @@ BootstrapSplitButtonWebView >> initializeWith: aGenericContainerWebView and: anA
 ]
 
 { #category : #configuring }
+BootstrapSplitButtonWebView >> on [
+
+	^ mainButton on
+]
+
+{ #category : #configuring }
 BootstrapSplitButtonWebView >> onTrigger [
 
-	^ mainButton on trigger
+	self
+		deprecated: 'Use #on instead.'
+		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
+	^ self on trigger
 ]
 
 { #category : #rendering }

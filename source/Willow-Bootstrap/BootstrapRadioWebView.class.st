@@ -38,9 +38,18 @@ BootstrapRadioWebView >> inputCommand [
 ]
 
 { #category : #configuring }
-BootstrapRadioWebView >> onTrigger [
+BootstrapRadioWebView >> on [
 
 	^ interactionInterpreter
+]
+
+{ #category : #configuring }
+BootstrapRadioWebView >> onTrigger [
+
+	self
+		deprecated: 'Use #on instead.'
+		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
+	^ self on trigger
 ]
 
 { #category : #rendering }

@@ -49,15 +49,33 @@ BootstrapModalFooterWebView >> initializeContaining: aButtonCollection andCloseB
 ]
 
 { #category : #Configuring }
-BootstrapModalFooterWebView >> onCloseTrigger [
+BootstrapModalFooterWebView >> on [
+
+	^ CombinedEventInterpreterDispatcher combiningInterpretersOfAll: buttons
+]
+
+{ #category : #Configuring }
+BootstrapModalFooterWebView >> onClose [
 
 	^ closeButton on trigger
 ]
 
 { #category : #Configuring }
+BootstrapModalFooterWebView >> onCloseTrigger [
+
+	self
+		deprecated: 'Use #onClose instead.'
+		transformWith: '`@receiver onCloseTrigger' -> '`@receiver onClose'.
+	^ self onClose
+]
+
+{ #category : #Configuring }
 BootstrapModalFooterWebView >> onTrigger [
 
-	^ CombinedEventInterpreterDispatcher combiningInterpretersOfAll: buttons
+	self
+		deprecated: 'Use #on instead.'
+		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
+	^ self on trigger
 ]
 
 { #category : #rendering }

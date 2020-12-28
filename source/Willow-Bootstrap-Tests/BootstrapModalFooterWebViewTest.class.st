@@ -4,7 +4,7 @@ A BootstrapModalFooterTest is a test class for testing the behavior of Bootstrap
 Class {
 	#name : #BootstrapModalFooterWebViewTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-Tests-WebViews'
 }
 
 { #category : #private }
@@ -25,7 +25,7 @@ BootstrapModalFooterWebViewTest >> testOnCloseTrigger [
 		andCloseButtonLabeled: 'Close'
 		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
-	footer onCloseTrigger disable.
+	footer onClose disable.
 
 	html := self render: footer.
 
@@ -45,7 +45,7 @@ BootstrapModalFooterWebViewTest >> testOnTrigger [
 		andCloseButtonLabeled: 'Close'
 		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
 
-	footer onTrigger disable.
+	footer on trigger disable.
 
 	html := self render: footer.
 

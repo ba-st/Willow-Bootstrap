@@ -23,7 +23,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testOnTrigger [
 		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		build.
 
-	splitButton onTrigger disable.
+	splitButton on trigger disable.
 
 	html := self render: splitButton.
 
