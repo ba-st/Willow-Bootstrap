@@ -12,7 +12,7 @@ Bootstrap3DatePickerWebViewTest >> testRenderContentOn [
 
 	| html |
 
-	html := self render: (Bootstrap3DatePickerWebView wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])).
+	html := self render: (Bootstrap3DatePickerWebView wrapping: (TextFieldWebView singleLineApplying: [ :field |  ])).
 
 	self
 		assert: html
@@ -28,7 +28,7 @@ Bootstrap3DatePickerWebViewTest >> testRenderContentOnWithCommands [
 	html := self
 		render:
 			(Bootstrap3DatePickerWebView
-				wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])
+				wrapping: (TextFieldWebView singleLineApplying: [ :field |  ])
 				applying:
 					(BootstrapDatepickerCommand
 						configuredBy: [ :datepicker | 

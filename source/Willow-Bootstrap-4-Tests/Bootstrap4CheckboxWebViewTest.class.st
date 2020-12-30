@@ -30,7 +30,7 @@ Bootstrap4CheckboxWebViewTest >> testIdentifyIn [
 ]
 
 { #category : #'tests-configuring' }
-Bootstrap4CheckboxWebViewTest >> testOnTrigger [
+Bootstrap4CheckboxWebViewTest >> testOn [
 
 	| html binaryChoiceView |
 

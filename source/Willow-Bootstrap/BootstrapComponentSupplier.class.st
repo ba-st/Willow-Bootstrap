@@ -112,7 +112,7 @@ BootstrapComponentSupplier >> labeledFieldApplying: aCommandToContainer displayi
 BootstrapComponentSupplier >> multiLineTextFieldApplying: aComponentCommand [
 
 	^ TextFieldWebView
-		multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
+		multiLineApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
@@ -168,7 +168,7 @@ BootstrapComponentSupplier >> singleButtonDropdownBuilder [
 BootstrapComponentSupplier >> singleLineTextFieldApplying: aComponentCommand [
 
 	^ TextFieldWebView
-		singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
+		singleLineApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }

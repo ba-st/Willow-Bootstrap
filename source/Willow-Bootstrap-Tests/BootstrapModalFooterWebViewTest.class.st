@@ -15,6 +15,26 @@ BootstrapModalFooterWebViewTest >> acceptButton [
 		applying: [ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonPrimary ]
 ]
 
+{ #category : #tests }
+BootstrapModalFooterWebViewTest >> testOn [
+
+	| footer html |
+
+	footer := BootstrapModalFooterWebView
+		with: self acceptButton
+		andCloseButtonLabeled: 'Close'
+		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
+
+	footer on trigger disable.
+
+	html := self render: footer.
+
+	self
+		assert: html
+		equals:
+			'<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button><button id="button-id1" class="btn btn-primary" type="button">Accept</button></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});</script>'
+]
+
 { #category : #'tests-Configuring' }
 BootstrapModalFooterWebViewTest >> testOnCloseTrigger [
 
@@ -33,26 +53,6 @@ BootstrapModalFooterWebViewTest >> testOnCloseTrigger [
 		assert: html
 		equals:
 			'<div class="modal-footer"><button id="button-id1" class="btn btn-link" data-dismiss="modal" type="button">Close</button><button id="button-id2" class="btn btn-primary" type="button">Accept</button></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});</script>'
-]
-
-{ #category : #tests }
-BootstrapModalFooterWebViewTest >> testOnTrigger [
-
-	| footer html |
-
-	footer := BootstrapModalFooterWebView
-		with: self acceptButton
-		andCloseButtonLabeled: 'Close'
-		applyingToIt: [ :closeButton | closeButton addClass bootstrapCommon buttonLink ].
-
-	footer on trigger disable.
-
-	html := self render: footer.
-
-	self
-		assert: html
-		equals:
-			'<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button><button id="button-id1" class="btn btn-primary" type="button">Accept</button></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
 { #category : #tests }

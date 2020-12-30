@@ -29,7 +29,7 @@ Bootstrap3CheckboxWebViewTest >> testIdentifyIn [
 ]
 
 { #category : #'tests-configuring' }
-Bootstrap3CheckboxWebViewTest >> testOnTrigger [
+Bootstrap3CheckboxWebViewTest >> testOn [
 
 	| html binaryChoiceView |
 

@@ -14,7 +14,7 @@ Bootstrap3RadioWebViewTest >> newSingleSelectionView [
 ]
 
 { #category : #'tests-rendering' }
-Bootstrap3RadioWebViewTest >> testOnTrigger [
+Bootstrap3RadioWebViewTest >> testOn [
 
 	| radioGroup html |
 

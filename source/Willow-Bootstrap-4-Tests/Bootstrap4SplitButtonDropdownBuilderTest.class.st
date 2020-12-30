@@ -11,7 +11,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> supplier [
 ]
 
 { #category : #tests }
-Bootstrap4SplitButtonDropdownBuilderTest >> testOnTrigger [
+Bootstrap4SplitButtonDropdownBuilderTest >> testOn [
 
 	"This is a Split Button, so onTrigger must act on the main button not the dropdown one."
 
