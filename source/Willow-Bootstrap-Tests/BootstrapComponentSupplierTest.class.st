@@ -172,6 +172,14 @@ BootstrapComponentSupplierTest >> testTableBuilder [
 ]
 
 { #category : #'tests-Supplying' }
+BootstrapComponentSupplierTest >> testTimeFieldApplying [
+
+	self
+		assertRenderingOf: [ :supplier | supplier timeFieldApplying: [ :field |  ] ]
+		equals: '<input value="" name="1" class="form-control text-center" maxlength="8" type="text"/>'
+]
+
+{ #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testUnorderedListApplyingListingApplyingToEach [ 
 
 	self

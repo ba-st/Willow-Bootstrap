@@ -215,6 +215,14 @@ BootstrapComponentSupplier >> tabsBuilder [
 ]
 
 { #category : #Supplying }
+BootstrapComponentSupplier >> timeFieldApplying: aComponentCommand [
+
+	^ self
+		singleLineTextFieldApplying:
+			[ :field | field addClass bootstrapCommon textCenter + ( field setMaximumLengthTo: 8 ) + aComponentCommand ]
+]
+
+{ #category : #Supplying }
 BootstrapComponentSupplier >> unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem [
 
 	^ UnorderedListWebView
