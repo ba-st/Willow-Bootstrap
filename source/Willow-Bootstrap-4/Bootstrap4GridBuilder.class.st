@@ -14,12 +14,13 @@ Class {
 { #category : #building }
 Bootstrap4GridBuilder >> buildApplying: aRowCommand [
 
-	^ GenericContainerWebView
+	^ ContainerWebView
 		wrapping: [ :canvas | 
 			( 1 to: self numberOfRows )
 				do: [ :rowIndex | self renderColumnsAt: rowIndex on: canvas ]
 				separatedBy: [ canvas div apply: [ :div | div addClass bootstrap4 width100Percent ] ]
 			]
+		intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 		applying: rowCommand + aRowCommand
 ]
 

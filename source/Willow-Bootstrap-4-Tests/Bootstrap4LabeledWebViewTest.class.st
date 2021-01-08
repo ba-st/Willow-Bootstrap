@@ -7,7 +7,25 @@ Class {
 	#category : #'Willow-Bootstrap-4-Tests-WebViews'
 }
 
-{ #category : #'tests-rendering' }
+{ #category : #accessing }
+Bootstrap4LabeledWebViewTest >> componentSupplier [
+
+	^ supplier
+]
+
+{ #category : #accessing }
+Bootstrap4LabeledWebViewTest >> createHandlers [
+
+	^ Array with: self
+]
+
+{ #category : #accessing }
+Bootstrap4LabeledWebViewTest >> isSession [
+
+	^ true
+]
+
+{ #category : #initialization }
 Bootstrap4LabeledWebViewTest >> setUp [
 
 	super setUp.

@@ -72,9 +72,8 @@ Bootstrap3NavigationBar >> renderContentOn: aCanvas [
 Bootstrap3NavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 
 	aCanvas div
-		with: [ navbarContent identifyIn: aCanvas.
-			aCanvas
-				render: ( Bootstrap3HamburgerButton targeting: navbarContent identifier );
+		with: [ aCanvas
+				render: ( Bootstrap3HamburgerButton targeting: ( navbarContent identifierOn: aCanvas ) );
 				render:
 					( self componentSupplier
 						asynchronicLinkLabeled: brandView

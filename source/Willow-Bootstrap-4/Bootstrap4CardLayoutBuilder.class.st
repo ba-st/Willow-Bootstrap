@@ -34,7 +34,7 @@ Bootstrap4CardLayoutBuilder >> addCard: aCardBuildingBlock applying: aCommandToC
 { #category : #building }
 Bootstrap4CardLayoutBuilder >> buildApplying: aCommand [
 
-	^ GenericContainerWebView wrapping: cards applying: self layoutCommand + aCommand
+	^ supplier divisionContainerWrapping: cards applying: self layoutCommand + aCommand
 ]
 
 { #category : #initialization }

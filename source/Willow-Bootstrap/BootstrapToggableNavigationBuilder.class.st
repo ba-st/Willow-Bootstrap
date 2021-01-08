@@ -147,14 +147,13 @@ BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identi
 	| titleLink |
 
 	titleLink := canvas anchor.
-	identifiedContent identifyIn: canvas.
 	titleLink
-		url: ( '#<1s>' expandMacrosWith: identifiedContent identifier );
+		url: ( '#<1s>' expandMacrosWith: ( identifiedContent identifierOn: canvas ) );
 		with: aRenderable
 			applying: [ :link :constants | 
 			tabTitleCommand + aCommand + ( link setARIARoleTo: #tab )
 				+ ( link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue )
-				+ ( link setARIAAttribute: 'control' to: identifiedContent identifier )
+				+ ( link setARIAAttribute: 'control' to: ( identifiedContent identifierOn: canvas ) )
 			]
 	]
 ]

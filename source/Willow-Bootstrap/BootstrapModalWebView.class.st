@@ -37,8 +37,8 @@ BootstrapModalWebView class >> withHeader: aBootstrapModalHeader content: aBodyV
 { #category : #private }
 BootstrapModalWebView >> contentWrapping: aBodyView [
 
-	^ GenericContainerWebView
-		wrapping: [ :canvas | 
+	^ self componentSupplier
+		divisionContainerWrapping: [ :canvas | 
 			canvas render: header.
 			canvas div with: aBodyView applying: [ :div | div addClass bootstrapCommon modalBody ].
 			canvas render: footer
@@ -49,8 +49,8 @@ BootstrapModalWebView >> contentWrapping: aBodyView [
 { #category : #private }
 BootstrapModalWebView >> documentWrapping: content applying: aDocumentCommand [
 
-	^ GenericContainerWebView
-		wrapping: content
+	^ self componentSupplier
+		divisionContainerWrapping: content
 		applying: [ :container :constants | 
 			container addClass bootstrapCommon modalDialog + ( container setARIARoleTo: #document )
 				+ aDocumentCommand
@@ -62,8 +62,8 @@ BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aB
 
 	header := aBootstrapModalHeader.
 	footer := aBootstrapModalFooter.
-	dialog := GenericContainerWebView
-		wrapping: ( self documentWrapping: ( self contentWrapping: aBodyView ) applying: aModalDocumentCommand )
+	dialog := self componentSupplier
+		divisionContainerWrapping: ( self documentWrapping: ( self contentWrapping: aBodyView ) applying: aModalDocumentCommand )
 		applying: [ :container :constants | 
 			container addClass bootstrapCommon modal + container disableTabCycle
 				+ ( container setARIARoleTo: #dialog ) + aDialogCommand

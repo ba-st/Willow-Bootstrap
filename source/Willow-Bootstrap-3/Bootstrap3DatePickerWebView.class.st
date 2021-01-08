@@ -27,8 +27,8 @@ Bootstrap3DatePickerWebView class >> wrapping: aTextFieldWebView applying: aComp
 Bootstrap3DatePickerWebView >> initializeWrapping: aTextField applying: aComponentCommand [
 
 	textField := aTextField.
-	container := GenericContainerWebView
-		wrapping: [ :canvas | 
+	container := self componentSupplier
+		divisionContainerWrapping: [ :canvas | 
 			canvas render: self textField.
 			canvas div
 				with: [ canvas small: ( Bootstrap3IconWebView representing: Glyphicons triangleBottom ) ]

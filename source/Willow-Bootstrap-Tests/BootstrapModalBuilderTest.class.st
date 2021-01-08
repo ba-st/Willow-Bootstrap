@@ -1,13 +1,31 @@
 Class {
 	#name : #BootstrapModalBuilderTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-Tests-WebViews'
 }
 
 { #category : #testing }
 BootstrapModalBuilderTest class >> isAbstract [
 
 	^ self name = #BootstrapModalBuilderTest
+]
+
+{ #category : #accessing }
+BootstrapModalBuilderTest >> componentSupplier [
+
+	^ self supplier
+]
+
+{ #category : #accessing }
+BootstrapModalBuilderTest >> createHandlers [
+
+	^ Array with: self
+]
+
+{ #category : #accessing }
+BootstrapModalBuilderTest >> isSession [
+
+	^ true
 ]
 
 { #category : #private }

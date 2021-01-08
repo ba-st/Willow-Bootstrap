@@ -85,7 +85,7 @@ BootstrapModalFooterWebView >> renderContentOn: aCanvas [
 		with: [ aCanvas render: closeButton.
 			buttons
 				do: [ :button | 
-					button identifyIn: aCanvas.
+					button identifierOn: aCanvas.
 					aCanvas render: button
 					]
 			]

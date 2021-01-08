@@ -67,7 +67,7 @@ BootstrapRadioWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCa
 
 	| radioButton radioButtonId |
 
-	radioButtonId := ( IdentifierAssigner prefixedBy: 'radio-button' ) identifyIn: aCanvas.
+	radioButtonId := ( IdentifierAssigner prefixedBy: 'radio-button' ) identifierOn: aCanvas.
 
 	radioButton := aRadioGroup radioButton.
 	radioButton

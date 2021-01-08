@@ -64,15 +64,9 @@ BootstrapCheckboxWebView >> commandToInput [
 ]
 
 { #category : #accessing }
-BootstrapCheckboxWebView >> identifier [
+BootstrapCheckboxWebView >> identifierOn: aCanvas [
 
-	^ identifierAssigner assignedIdentifier
-]
-
-{ #category : #configuring }
-BootstrapCheckboxWebView >> identifyIn: aCanvas [
-
-	^ identifierAssigner identifyIn: aCanvas
+	^ identifierAssigner identifierOn: aCanvas
 ]
 
 { #category : #initialization }
@@ -107,11 +101,11 @@ BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 
 	checkbox := aCanvas checkbox.
 	checkbox
+		beIdentifiableUsing: identifierAssigner;
 		apply: self commandToInput;
 		value: isChecked;
-		callback: [ :value | [ self toggleCurrentSelection ] unless: value = isChecked ].
-	identifierAssigner withAssignedIdentifierDo: [ :id | checkbox id: id ].
-	checkbox interactUsing: interactionInterpreter
+		callback: [ :value | [ self toggleCurrentSelection ] unless: value = isChecked ];
+		interactUsing: interactionInterpreter
 ]
 
 { #category : #'Binary Choice-API' }

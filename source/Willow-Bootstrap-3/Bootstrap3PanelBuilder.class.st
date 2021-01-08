@@ -16,13 +16,14 @@ Class {
 { #category : #Building }
 Bootstrap3PanelBuilder >> buildApplying: aCommandToPanel [
 
-	^ GenericContainerWebView
+	^ ContainerWebView
 		wrapping: [ :canvas | 
 			self renderHeadingOn: canvas.
 			self renderBodyOn: canvas.
 			self renderTableOrListGroupOn: canvas.
 			self renderFooterOn: canvas
 			]
+		intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 		applying: [ :panel | panel addClass bootstrap3 panel + aCommandToPanel ]
 ]
 

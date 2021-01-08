@@ -18,14 +18,14 @@ Bootstrap3CheckboxWebViewTest >> testIdentifyIn [
 	checkbox := self newBinaryChoiceView.
 	html := self
 		renderUsing: [ :canvas | 
-			checkbox identifyIn: canvas.
-			canvas render: checkbox ].
+			self assert: ( checkbox identifierOn: canvas ) equals: 'checkbox-id1'.
+			canvas render: checkbox
+			].
 
 	self
 		assert: html
-			equals:
-			'<div class="checkbox"><label><input checked name="2" id="checkbox-id1" type="checkbox"/><input name="3" type="hidden"/></label></div>';
-		assert: checkbox identifier equals: 'checkbox-id1'
+		equals:
+			'<div class="checkbox"><label><input id="checkbox-id1" checked name="2" type="checkbox"/><input name="3" type="hidden"/></label></div>'
 ]
 
 { #category : #'tests-configuring' }

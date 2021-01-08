@@ -18,15 +18,14 @@ Bootstrap4CheckboxWebViewTest >> testIdentifyIn [
 	checkbox := self newBinaryChoiceView.
 	html := self
 		renderUsing: [ :canvas | 
-			checkbox identifyIn: canvas.
+			self assert: ( checkbox identifierOn: canvas ) equals: 'checkbox-id1'.
 			canvas render: checkbox
 			].
 
 	self
 		assert: html
-			equals:
-			'<div class="form-check"><input class="form-check-input position-static" checked name="2" id="checkbox-id1" type="checkbox"/><input name="3" type="hidden"/></div>';
-		assert: checkbox identifier equals: 'checkbox-id1'
+		equals:
+			'<div class="form-check"><input id="checkbox-id1" class="form-check-input position-static" checked name="2" type="checkbox"/><input name="3" type="hidden"/></div>'
 ]
 
 { #category : #'tests-configuring' }
@@ -85,7 +84,7 @@ Bootstrap4CheckboxWebViewTest >> testRenderingWithLabel [
 	self
 		assert: html
 		equals:
-			'<div class="form-check willow"><input class="willow form-check-input" checked name="2" id="checkbox-id1" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id1" class="form-check-label">Enable network</label></div>'
+			'<div class="form-check willow"><input id="checkbox-id1" class="willow form-check-input" checked name="2" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id1" class="form-check-label">Enable network</label></div>'
 ]
 
 { #category : #'tests-rendering' }
@@ -106,7 +105,7 @@ Bootstrap4CheckboxWebViewTest >> testRenderingWithLabelAndCustomStyle [
 	self
 		assert: html
 		equals:
-			'<div class="custom-control custom-checkbox willow"><input class="willow custom-control-input" checked name="2" id="checkbox-id1" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id1" class="custom-control-label">Enable network</label></div>'
+			'<div class="custom-control custom-checkbox willow"><input id="checkbox-id1" class="willow custom-control-input" checked name="2" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id1" class="custom-control-label">Enable network</label></div>'
 ]
 
 { #category : #'tests-rendering' }
@@ -127,7 +126,7 @@ Bootstrap4CheckboxWebViewTest >> testRenderingWithLabelAsSwitch [
 	self
 		assert: html
 		equals:
-			'<div class="custom-control custom-switch willow"><input class="willow custom-control-input" checked name="2" id="checkbox-id1" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id1" class="custom-control-label">Enable network</label></div>'
+			'<div class="custom-control custom-switch willow"><input id="checkbox-id1" class="willow custom-control-input" checked name="2" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id1" class="custom-control-label">Enable network</label></div>'
 ]
 
 { #category : #'tests-rendering' }

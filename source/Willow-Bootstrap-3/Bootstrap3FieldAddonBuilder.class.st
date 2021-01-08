@@ -22,8 +22,9 @@ Bootstrap3FieldAddonBuilder >> appendText: aRenderable [
 
 	appendedTextOptional := Optional
 		containing:
-			( GenericContainerWebView
+			( ContainerWebView
 				wrapping: aRenderable
+				intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 				applying: [ :div | div addClass bootstrap3 inputGroupAddon ] )
 ]
 
@@ -43,13 +44,14 @@ Bootstrap3FieldAddonBuilder >> assertIsCorrectlyConfigured [
 Bootstrap3FieldAddonBuilder >> buildApplying: aCommand [
 
 	self assertIsCorrectlyConfigured.
-	^ GenericContainerWebView
+	^ ContainerWebView
 		wrapping: [ :canvas | 
 			self
 				renderPrependedComponentsOn: canvas;
 				renderFieldOn: canvas;
 				renderAppendedComponentsOn: canvas
 			]
+		intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 		applying: [ :div | div addClass bootstrapCommon inputGroup + groupCommand + aCommand ]
 ]
 
@@ -87,8 +89,9 @@ Bootstrap3FieldAddonBuilder >> prependText: aRenderable [
 
 	prependedTextOptional := Optional
 		containing:
-			( GenericContainerWebView
+			( ContainerWebView
 				wrapping: aRenderable
+				intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 				applying: [ :div | div addClass bootstrap3 inputGroupAddon ] )
 ]
 

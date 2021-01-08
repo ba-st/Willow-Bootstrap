@@ -10,6 +10,24 @@ Class {
 	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
+{ #category : #accessing }
+Bootstrap3LabeledWebViewTest >> componentSupplier [
+
+	^ supplier
+]
+
+{ #category : #accessing }
+Bootstrap3LabeledWebViewTest >> createHandlers [
+
+	^ Array with: self
+]
+
+{ #category : #accessing }
+Bootstrap3LabeledWebViewTest >> isSession [
+
+	^ true
+]
+
 { #category : #'tests-rendering' }
 Bootstrap3LabeledWebViewTest >> setUp [
 

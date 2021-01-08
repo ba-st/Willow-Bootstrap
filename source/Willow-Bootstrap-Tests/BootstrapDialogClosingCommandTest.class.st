@@ -28,7 +28,7 @@ BootstrapDialogClosingCommandTest >> createHandlers [
 { #category : #accessing }
 BootstrapDialogClosingCommandTest >> isSession [
 
-^true
+	^ true
 ]
 
 { #category : #tests }
