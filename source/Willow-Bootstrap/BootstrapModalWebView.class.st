@@ -37,7 +37,7 @@ BootstrapModalWebView class >> withHeader: aBootstrapModalHeader content: aBodyV
 { #category : #private }
 BootstrapModalWebView >> contentWrapping: aBodyView [
 
-	^ self componentSupplier
+	^ self
 		divisionContainerWrapping: [ :canvas | 
 			canvas render: header.
 			canvas div with: aBodyView applying: [ :div | div addClass bootstrapCommon modalBody ].
@@ -47,9 +47,20 @@ BootstrapModalWebView >> contentWrapping: aBodyView [
 ]
 
 { #category : #private }
+BootstrapModalWebView >> divisionContainerWrapping: aContentView applying: aCommandToComponent [
+
+	"We can't reference the component supplier since this view could be used from a library where there is no session defined."
+
+	^ ContainerWebView
+		wrapping: aContentView
+		intoElementBuiltUsing: [ :canvas | canvas div ]
+		applying: aCommandToComponent
+]
+
+{ #category : #private }
 BootstrapModalWebView >> documentWrapping: content applying: aDocumentCommand [
 
-	^ self componentSupplier
+	^ self
 		divisionContainerWrapping: content
 		applying: [ :container :constants | 
 			container addClass bootstrapCommon modalDialog + ( container setARIARoleTo: #document )
@@ -62,7 +73,8 @@ BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aB
 
 	header := aBootstrapModalHeader.
 	footer := aBootstrapModalFooter.
-	dialog := self componentSupplier
+
+	dialog := self
 		divisionContainerWrapping: ( self documentWrapping: ( self contentWrapping: aBodyView ) applying: aModalDocumentCommand )
 		applying: [ :container :constants | 
 			container addClass bootstrapCommon modal + container disableTabCycle

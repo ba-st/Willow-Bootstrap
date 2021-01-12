@@ -60,9 +60,9 @@ BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationConte
 	"The first tab content needs to be styled as active in order to function properly"
 	isFirstTab := contents isEmpty.
 
-	^ IdentifiedWebView
-		forDivNamed: self dataToggleValue
-		containing: aNavigationContent
+	^ ContainerWebView
+		wrapping: aNavigationContent
+		intoElementBuiltUsing: [ :canvas | canvas div ]
 		applying: [ :div :constants | 
 			( div setARIARoleTo: #tabPanel ) + div addClass bootstrapCommon tabPane
 				+ ( div when: [ isFirstTab ] apply: div addClass bootstrapCommon active )
