@@ -40,7 +40,7 @@ Bootstrap4ToggableTabsBuilderTest >> testRenderContentOn [
 	self
 		assert: html
 		equals:
-			'<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" aria-control="tab-id1" href="#tab-id1">Home</a></li><li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" aria-control="tab-id2" href="#tab-id2">Profile</a></li></ul><div class="tab-content"><div id="tab-id1" role="tabpanel" class="tab-pane active">The home page</div><div id="tab-id2" role="tabpanel" class="tab-pane"><strong>This is my profile.</strong></div></div>'
+			'<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" aria-control="container-id1" href="#container-id1">Home</a></li><li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" aria-control="container-id2" href="#container-id2">Profile</a></li></ul><div class="tab-content"><div id="container-id1" role="tabpanel" class="tab-pane active">The home page</div><div id="container-id2" role="tabpanel" class="tab-pane"><strong>This is my profile.</strong></div></div>'
 ]
 
 { #category : #tests }
@@ -58,5 +58,5 @@ Bootstrap4ToggableTabsBuilderTest >> testRenderContentOnWithCommands [
 	self
 		assert: html
 		equals:
-			'<ul class="nav nav-tabs justify-content-end" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" aria-control="tab-id1" href="#tab-id1">Home</a></li><li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" aria-control="tab-id2" href="#tab-id2">Profile</a></li></ul><div class="tab-content"><div id="tab-id1" role="tabpanel" class="tab-pane active">The home page</div><div id="tab-id2" role="tabpanel" class="tab-pane"><strong>This is my profile.</strong></div></div>'
+			'<ul class="nav nav-tabs justify-content-end" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" aria-control="container-id1" href="#container-id1">Home</a></li><li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" aria-control="container-id2" href="#container-id2">Profile</a></li></ul><div class="tab-content"><div id="container-id1" role="tabpanel" class="tab-pane active">The home page</div><div id="container-id2" role="tabpanel" class="tab-pane"><strong>This is my profile.</strong></div></div>'
 ]

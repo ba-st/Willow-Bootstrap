@@ -16,9 +16,7 @@ BootstrapTypeaheadCommand class >> actionToRefresh: anIdentifiedWebView [
 
 	^ [ :ajax :canvas | 
 	ajax
-		onComplete:
-			( ( canvas jQuery id: ( anIdentifiedWebView identifierOn: canvas ) ) load
-				html: anIdentifiedWebView renderableContent )
+		onComplete: ( ( canvas locate: anIdentifiedWebView ) load html: anIdentifiedWebView renderableContent )
 	]
 ]
 

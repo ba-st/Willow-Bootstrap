@@ -18,14 +18,14 @@ Class {
 { #category : #private }
 BootstrapToggableNavigationBuilder >> addNavigationHeadedBy: aRenderable containing: aNavigationContent [
 
-	| identifiedContent |
+	| container |
 
-	identifiedContent := self identifiedViewContaining: aNavigationContent.
+	container := self containerWrapping: aNavigationContent.
 
 	headers
-		ifEmpty: [ headers add: ( self firstTabTitleWith: aRenderable linkedTo: identifiedContent ) ]
-		ifNotEmpty: [ headers add: ( self tabTitleWith: aRenderable linkedTo: identifiedContent ) ].
-	contents add: identifiedContent
+		ifEmpty: [ headers add: ( self firstTabTitleWith: aRenderable linkedTo: container ) ]
+		ifNotEmpty: [ headers add: ( self tabTitleWith: aRenderable linkedTo: container ) ].
+	contents add: container
 ]
 
 { #category : #Building }
@@ -41,19 +41,7 @@ BootstrapToggableNavigationBuilder >> buildApplying: aCommandToComponent [
 ]
 
 { #category : #private }
-BootstrapToggableNavigationBuilder >> dataToggleValue [
-
-	^ self subclassResponsibility
-]
-
-{ #category : #private }
-BootstrapToggableNavigationBuilder >> firstTabTitleWith: aRenderable linkedTo: identifiedContent [
-
-	^ self tabTitleWith: aRenderable linkedTo: identifiedContent applying: firstTitleCommand
-]
-
-{ #category : #private }
-BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationContent [
+BootstrapToggableNavigationBuilder >> containerWrapping: aNavigationContent [
 
 	| isFirstTab |
 
@@ -67,6 +55,18 @@ BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationConte
 			( div setARIARoleTo: #tabPanel ) + div addClass bootstrapCommon tabPane
 				+ ( div when: [ isFirstTab ] apply: div addClass bootstrapCommon active )
 			]
+]
+
+{ #category : #private }
+BootstrapToggableNavigationBuilder >> dataToggleValue [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #private }
+BootstrapToggableNavigationBuilder >> firstTabTitleWith: aRenderable linkedTo: identifiedContent [
+
+	^ self tabTitleWith: aRenderable linkedTo: identifiedContent applying: firstTitleCommand
 ]
 
 { #category : #initialization }
