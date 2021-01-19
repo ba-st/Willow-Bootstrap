@@ -53,15 +53,6 @@ BootstrapModalHeaderWebView >> onClose [
 		ifUnused: [ WebInteractionInterpreter workingWith: WebComponentInteraction neverTriggered ]
 ]
 
-{ #category : #configuring }
-BootstrapModalHeaderWebView >> onCloseTrigger [
-
-	self
-		deprecated: 'Use #onClose instead.'
-		transformWith: '`@receiver onCloseTrigger' -> '`@receiver onClose'.
-	^ self onClose
-]
-
 { #category : #rendering }
 BootstrapModalHeaderWebView >> renderContentOn: aCanvas [
 

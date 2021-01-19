@@ -30,15 +30,6 @@ BootstrapSplitButtonWebView >> on [
 	^ mainButton on
 ]
 
-{ #category : #configuring }
-BootstrapSplitButtonWebView >> onTrigger [
-
-	self
-		deprecated: 'Use #on instead.'
-		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
-	^ self on trigger
-]
-
 { #category : #rendering }
 BootstrapSplitButtonWebView >> renderContentOn: aCanvas [
 

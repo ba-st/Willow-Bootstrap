@@ -38,15 +38,6 @@ BootstrapDismissButton >> on [
 	^ dismissButton on
 ]
 
-{ #category : #configuring }
-BootstrapDismissButton >> onTrigger [
-
-	self
-		deprecated: 'Use #on instead.'
-		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
-	^ self on trigger
-]
-
 { #category : #rendering }
 BootstrapDismissButton >> renderContentOn: aCanvas [
 

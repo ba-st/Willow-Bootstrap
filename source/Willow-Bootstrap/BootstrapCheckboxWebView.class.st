@@ -85,15 +85,6 @@ BootstrapCheckboxWebView >> on [
 	^ interactionInterpreter
 ]
 
-{ #category : #configuring }
-BootstrapCheckboxWebView >> onTrigger [
-
-	self
-		deprecated: 'Use #on instead.'
-		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
-	^ self on trigger
-]
-
 { #category : #'private - rendering' }
 BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 

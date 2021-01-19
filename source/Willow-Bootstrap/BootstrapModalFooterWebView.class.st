@@ -60,24 +60,6 @@ BootstrapModalFooterWebView >> onClose [
 	^ closeButton on trigger
 ]
 
-{ #category : #Configuring }
-BootstrapModalFooterWebView >> onCloseTrigger [
-
-	self
-		deprecated: 'Use #onClose instead.'
-		transformWith: '`@receiver onCloseTrigger' -> '`@receiver onClose'.
-	^ self onClose
-]
-
-{ #category : #Configuring }
-BootstrapModalFooterWebView >> onTrigger [
-
-	self
-		deprecated: 'Use #on instead.'
-		transformWith: '`@receiver onTrigger' -> '`@receiver on trigger'.
-	^ self on trigger
-]
-
 { #category : #rendering }
 BootstrapModalFooterWebView >> renderContentOn: aCanvas [
 
