@@ -18,14 +18,14 @@ Class {
 { #category : #private }
 BootstrapToggableNavigationBuilder >> addNavigationHeadedBy: aRenderable containing: aNavigationContent [
 
-	| identifiedContent |
+	| container |
 
-	identifiedContent := self identifiedViewContaining: aNavigationContent.
+	container := self containerWrapping: aNavigationContent.
 
 	headers
-		ifEmpty: [ headers add: ( self firstTabTitleWith: aRenderable linkedTo: identifiedContent ) ]
-		ifNotEmpty: [ headers add: ( self tabTitleWith: aRenderable linkedTo: identifiedContent ) ].
-	contents add: identifiedContent
+		ifEmpty: [ headers add: ( self firstTabTitleWith: aRenderable linkedTo: container ) ]
+		ifNotEmpty: [ headers add: ( self tabTitleWith: aRenderable linkedTo: container ) ].
+	contents add: container
 ]
 
 { #category : #Building }
@@ -41,6 +41,23 @@ BootstrapToggableNavigationBuilder >> buildApplying: aCommandToComponent [
 ]
 
 { #category : #private }
+BootstrapToggableNavigationBuilder >> containerWrapping: aNavigationContent [
+
+	| isFirstTab |
+
+	"The first tab content needs to be styled as active in order to function properly"
+	isFirstTab := contents isEmpty.
+
+	^ ContainerWebView
+		wrapping: aNavigationContent
+		intoElementBuiltUsing: [ :canvas | canvas div ]
+		applying: [ :div :constants | 
+			( div setARIARoleTo: #tabPanel ) + div addClass bootstrapCommon tabPane
+				+ ( div when: [ isFirstTab ] apply: div addClass bootstrapCommon active )
+			]
+]
+
+{ #category : #private }
 BootstrapToggableNavigationBuilder >> dataToggleValue [
 
 	^ self subclassResponsibility
@@ -50,23 +67,6 @@ BootstrapToggableNavigationBuilder >> dataToggleValue [
 BootstrapToggableNavigationBuilder >> firstTabTitleWith: aRenderable linkedTo: identifiedContent [
 
 	^ self tabTitleWith: aRenderable linkedTo: identifiedContent applying: firstTitleCommand
-]
-
-{ #category : #private }
-BootstrapToggableNavigationBuilder >> identifiedViewContaining: aNavigationContent [
-
-	| isFirstTab |
-
-	"The first tab content needs to be styled as active in order to function properly"
-	isFirstTab := contents isEmpty.
-
-	^ IdentifiedWebView
-		forDivNamed: self dataToggleValue
-		containing: aNavigationContent
-		applying: [ :div :constants | 
-			( div setARIARoleTo: #tabPanel ) + div addClass bootstrapCommon tabPane
-				+ ( div when: [ isFirstTab ] apply: div addClass bootstrapCommon active )
-			]
 ]
 
 { #category : #initialization }
@@ -147,14 +147,13 @@ BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identi
 	| titleLink |
 
 	titleLink := canvas anchor.
-	identifiedContent identifyIn: canvas.
 	titleLink
-		url: ( '#<1s>' expandMacrosWith: identifiedContent identifier );
+		url: ( '#<1s>' expandMacrosWith: ( identifiedContent identifierOn: canvas ) );
 		with: aRenderable
 			applying: [ :link :constants | 
 			tabTitleCommand + aCommand + ( link setARIARoleTo: #tab )
 				+ ( link setData: constants >> #bootstrap >> #toggle to: self dataToggleValue )
-				+ ( link setARIAAttribute: 'control' to: identifiedContent identifier )
+				+ ( link setARIAAttribute: 'control' to: ( identifiedContent identifierOn: canvas ) )
 			]
 	]
 ]

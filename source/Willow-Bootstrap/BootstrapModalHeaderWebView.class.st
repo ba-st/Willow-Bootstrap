@@ -45,10 +45,12 @@ BootstrapModalHeaderWebView >> initializeTitled: aRenderable dismissedUsing: aBu
 	dismissButtonOptional := aButtonOptional
 ]
 
-{ #category : #Configuring }
-BootstrapModalHeaderWebView >> onCloseTrigger [
+{ #category : #configuring }
+BootstrapModalHeaderWebView >> onClose [
 
-	^ dismissButtonOptional withContentDo: [ :dismissButton | dismissButton onTrigger ] ifUnused: [ WebInteractionInterpreter workingWith: WebComponentInteraction neverTriggered ]
+	^ dismissButtonOptional
+		withContentDo: [ :dismissButton | dismissButton on trigger ]
+		ifUnused: [ WebInteractionInterpreter workingWith: WebComponentInteraction neverTriggered ]
 ]
 
 { #category : #rendering }

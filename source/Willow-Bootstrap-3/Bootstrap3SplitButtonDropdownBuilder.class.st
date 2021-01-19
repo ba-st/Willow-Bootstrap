@@ -15,8 +15,9 @@ Bootstrap3SplitButtonDropdownBuilder >> buildApplying: aComponentCommand [
 
 	^ BootstrapSplitButtonWebView
 		with:
-			( GenericContainerWebView
+			( ContainerWebView
 				wrapping: self content
+				intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 				applying: [ :div | aComponentCommand asWebComponentCommand + div addClass bootstrap3 buttonGroup ] )
 		and: mainButtonBinding content
 ]

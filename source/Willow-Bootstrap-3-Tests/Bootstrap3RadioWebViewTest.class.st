@@ -14,13 +14,13 @@ Bootstrap3RadioWebViewTest >> newSingleSelectionView [
 ]
 
 { #category : #'tests-rendering' }
-Bootstrap3RadioWebViewTest >> testOnTrigger [
+Bootstrap3RadioWebViewTest >> testOn [
 
 	| radioGroup html |
 
 	radioGroup := self newSingleSelectionView.
 	radioGroup allowAnyOf: #('Buenos Aires' 'CABA').
-	radioGroup onTrigger disable.
+	radioGroup on trigger disable.
 	html := self render: radioGroup.
 
 	self

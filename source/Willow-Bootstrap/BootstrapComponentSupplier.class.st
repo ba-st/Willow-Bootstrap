@@ -13,12 +13,6 @@ BootstrapComponentSupplier class >> isAbstract [
 	^ self name = #BootstrapComponentSupplier
 ]
 
-{ #category : #Interaction }
-BootstrapComponentSupplier >> addStatementsTo: aJSScript toCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas [
-
-	aJSScript << (dialogSupplier value: (jQueryMatchingDialogContainer children: 'div')) bootstrapModal hide
-]
-
 { #category : #Supplying }
 BootstrapComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aComponentCommand [
 
@@ -118,7 +112,7 @@ BootstrapComponentSupplier >> labeledFieldApplying: aCommandToContainer displayi
 BootstrapComponentSupplier >> multiLineTextFieldApplying: aComponentCommand [
 
 	^ TextFieldWebView
-		multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
+		multiLineApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
@@ -174,7 +168,7 @@ BootstrapComponentSupplier >> singleButtonDropdownBuilder [
 BootstrapComponentSupplier >> singleLineTextFieldApplying: aComponentCommand [
 
 	^ TextFieldWebView
-		singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
+		singleLineApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
 { #category : #Supplying }
@@ -189,6 +183,12 @@ BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfE
 BootstrapComponentSupplier >> splitButtonDropdownBuilder [
 
 	^ self subclassResponsibility
+]
+
+{ #category : #Interaction }
+BootstrapComponentSupplier >> statementToCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas [
+
+	^ ( dialogSupplier value: ( jQueryMatchingDialogContainer children: 'div' ) ) bootstrapModal hide
 ]
 
 { #category : #Supplying }

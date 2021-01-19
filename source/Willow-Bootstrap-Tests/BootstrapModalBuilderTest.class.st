@@ -1,7 +1,7 @@
 Class {
 	#name : #BootstrapModalBuilderTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-Tests-WebViews'
 }
 
 { #category : #testing }

@@ -48,9 +48,8 @@ Bootstrap3NavigationBar >> initializeStyledAs: aContainerCommand brandedWith: aB
 
 	containerCommand := aContainerCommand.
 	componentCommand := aCommandToComponent.
-	navbarContent := IdentifiedWebView
-		forDivNamed: 'navbar-content'
-		containing: aWebView
+	navbarContent := self componentSupplier
+		divisionContainerWrapping: aWebView
 		applying: [ :div | div addClass bootstrap3 collapse + div addClass bootstrap3 navbarCollapse ].
 	brandView := aBrandWebView
 ]
@@ -72,9 +71,8 @@ Bootstrap3NavigationBar >> renderContentOn: aCanvas [
 Bootstrap3NavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 
 	aCanvas div
-		with: [ navbarContent identifyIn: aCanvas.
-			aCanvas
-				render: ( Bootstrap3HamburgerButton targeting: navbarContent identifier );
+		with: [ aCanvas
+				render: ( Bootstrap3HamburgerButton targeting: ( navbarContent identifierOn: aCanvas ) );
 				render:
 					( self componentSupplier
 						asynchronicLinkLabeled: brandView

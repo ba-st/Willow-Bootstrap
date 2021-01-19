@@ -72,7 +72,7 @@ Bootstrap4CheckboxWebView >> initializeLabeledAccordingTo: anOptionalLabel apply
 Bootstrap4CheckboxWebView >> renderContentOn: aCanvas [
 
 	aCanvas div
-		with: [ labelOptional withContentDo: [ self identifyIn: aCanvas ].
+		with: [ labelOptional withContentDo: [ self identifierOn: aCanvas ].
 			self
 				renderCheckboxOn: aCanvas;
 				renderLabelOn: aCanvas
@@ -86,7 +86,7 @@ Bootstrap4CheckboxWebView >> renderLabelOn: aCanvas [
 	labelOptional
 		withContentDo: [ :labelContent | 
 			aCanvas label
-				for: self identifier;
+				for: ( self identifierOn: aCanvas );
 				with: labelContent applying: commandToLabel
 			]
 ]

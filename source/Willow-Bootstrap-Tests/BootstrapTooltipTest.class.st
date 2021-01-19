@@ -4,7 +4,7 @@ A BootstrapTooltipTest is a test class for testing the behavior of BootstrapTool
 Class {
 	#name : #BootstrapTooltipTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Plugins'
+	#category : #'Willow-Bootstrap-Tests-Plugins'
 }
 
 { #category : #rendering }
@@ -99,8 +99,9 @@ BootstrapTooltipTest >> testHtmlTitle [
 		renderTooltipContentApplying: [ :tooltip | 
 			tooltip
 				htmlTitle:
-					( GenericContainerWebView
+					( ContainerWebView
 						wrapping: 'A complex tooltip'
+						intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 						applying: [ :container | container addClass bootstrapCommon container ] )
 			].
 

@@ -42,15 +42,15 @@ BootstrapLabeledFieldWebView >> initializeApplying: aCommandToContainer displayi
 
 	| fieldToRender |
 
-	fieldToRender := [ GenericContainerWebView wrapping: aFieldWebView applying: aCommandToField ]
-		unless: aCommandToField isNullCommand
-		inWhichCase: [ aFieldWebView ].
+	fieldToRender := [ self componentSupplier
+		divisionContainerWrapping: aFieldWebView
+		applying: aCommandToField ] unless: aCommandToField isNullCommand inWhichCase: [ aFieldWebView ].
 
-	formGroupContainer := GenericContainerWebView
-		wrapping: [ :canvas | 
+	formGroupContainer := self componentSupplier
+		divisionContainerWrapping: [ :canvas | 
 			| fieldIdentifier |
 
-			fieldIdentifier := aFieldWebView identifyIn: canvas.
+			fieldIdentifier := aFieldWebView identifierOn: canvas.
 			self
 				renderLabelFor: fieldIdentifier
 				displaying: thePhrasingContent

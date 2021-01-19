@@ -37,8 +37,8 @@ BootstrapModalWebView class >> withHeader: aBootstrapModalHeader content: aBodyV
 { #category : #private }
 BootstrapModalWebView >> contentWrapping: aBodyView [
 
-	^ GenericContainerWebView
-		wrapping: [ :canvas | 
+	^ self
+		divisionContainerWrapping: [ :canvas | 
 			canvas render: header.
 			canvas div with: aBodyView applying: [ :div | div addClass bootstrapCommon modalBody ].
 			canvas render: footer
@@ -47,10 +47,21 @@ BootstrapModalWebView >> contentWrapping: aBodyView [
 ]
 
 { #category : #private }
+BootstrapModalWebView >> divisionContainerWrapping: aContentView applying: aCommandToComponent [
+
+	"We can't reference the component supplier since this view could be used from a library where there is no session defined."
+
+	^ ContainerWebView
+		wrapping: aContentView
+		intoElementBuiltUsing: [ :canvas | canvas div ]
+		applying: aCommandToComponent
+]
+
+{ #category : #private }
 BootstrapModalWebView >> documentWrapping: content applying: aDocumentCommand [
 
-	^ GenericContainerWebView
-		wrapping: content
+	^ self
+		divisionContainerWrapping: content
 		applying: [ :container :constants | 
 			container addClass bootstrapCommon modalDialog + ( container setARIARoleTo: #document )
 				+ aDocumentCommand
@@ -62,8 +73,9 @@ BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aB
 
 	header := aBootstrapModalHeader.
 	footer := aBootstrapModalFooter.
-	dialog := GenericContainerWebView
-		wrapping: ( self documentWrapping: ( self contentWrapping: aBodyView ) applying: aModalDocumentCommand )
+
+	dialog := self
+		divisionContainerWrapping: ( self documentWrapping: ( self contentWrapping: aBodyView ) applying: aModalDocumentCommand )
 		applying: [ :container :constants | 
 			container addClass bootstrapCommon modal + container disableTabCycle
 				+ ( container setARIARoleTo: #dialog ) + aDialogCommand
@@ -71,20 +83,20 @@ BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aB
 ]
 
 { #category : #Configuring }
-BootstrapModalWebView >> onCloseTrigger [
-
-	^ CombinedWebInteractionInterpreter
-		combining:
-			{header onCloseTrigger.
-			footer onCloseTrigger}
-]
-
-{ #category : #Configuring }
-BootstrapModalWebView >> onTrigger [
+BootstrapModalWebView >> on [
 
 	"The footer contains the buttons that can trigger some action (except the close button, but the modal have specific events for this action)"
 
-	^ footer onTrigger
+	^ footer on
+]
+
+{ #category : #Configuring }
+BootstrapModalWebView >> onClose [
+
+	^ CombinedWebInteractionInterpreter
+		combining:
+			{header onClose.
+			footer onClose}
 ]
 
 { #category : #rendering }

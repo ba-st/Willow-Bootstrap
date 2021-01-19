@@ -22,7 +22,7 @@ Bootstrap4SingleButtonDropdownBuilderTest >> testRenderContentOn [
 	button := supplier singleButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap4 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		build.
 
 	html := self render: button.
@@ -41,7 +41,7 @@ Bootstrap4SingleButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 	button := supplier singleButtonDropdownBuilder
 		labeled: 'Dropdown'
 			applying: [ :dropdownButton | dropdownButton addClass bootstrap4 buttonDanger ];
-		addActionLabeled: 'Action' executing: [ :action | action onTrigger disable ];
+		addActionLabeled: 'Action' executing: [ :action | action on trigger disable ];
 		beRightAligned;
 		build.
 

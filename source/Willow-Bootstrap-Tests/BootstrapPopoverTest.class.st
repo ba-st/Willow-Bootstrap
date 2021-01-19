@@ -4,7 +4,7 @@ A BootstrapPopoverTest is a test class for testing the behavior of BootstrapPopo
 Class {
 	#name : #BootstrapPopoverTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Plugins'
+	#category : #'Willow-Bootstrap-Tests-Plugins'
 }
 
 { #category : #rendering }
@@ -99,8 +99,9 @@ BootstrapPopoverTest >> testHtmlContent [
 		renderPopoverContentApplying: [ :popover | 
 			popover
 				htmlContent:
-					( GenericContainerWebView
+					( ContainerWebView
 						wrapping: 'A more complex rendering'
+						intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 						applying: [ :container | container addClass bootstrapCommon container ] )
 			].
 
@@ -119,8 +120,9 @@ BootstrapPopoverTest >> testHtmlTitle [
 		renderPopoverContentApplying: [ :popover | 
 			popover
 				htmlTitle:
-					( GenericContainerWebView
+					( ContainerWebView
 						wrapping: 'A complex title'
+						intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 						applying: [ :container | container addClass bootstrapCommon container ] )
 			].
 

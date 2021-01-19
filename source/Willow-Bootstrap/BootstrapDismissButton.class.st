@@ -21,8 +21,9 @@ BootstrapDismissButton >> initializeDismissing: aContainerType [
 
 	dismissButton := AsynchronicButtonWebView
 		labeled:
-			( PhrasingContainerWebView
+			( ContainerWebView
 				wrapping: '×'
+				intoElementBuiltUsing: [ :canvas | canvas span ]
 				applying: [ :span | span setARIAAttribute: 'hidden' to: 'true' ] )
 		applying: [ :button :constants | 
 			button addClass bootstrapCommon close
@@ -32,9 +33,9 @@ BootstrapDismissButton >> initializeDismissing: aContainerType [
 ]
 
 { #category : #configuring }
-BootstrapDismissButton >> onTrigger [
+BootstrapDismissButton >> on [
 
-	^ dismissButton onTrigger
+	^ dismissButton on
 ]
 
 { #category : #rendering }

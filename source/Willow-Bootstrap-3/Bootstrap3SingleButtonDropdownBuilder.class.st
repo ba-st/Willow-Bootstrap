@@ -10,8 +10,9 @@ Class {
 { #category : #building }
 Bootstrap3SingleButtonDropdownBuilder >> buildApplying: aComponentCommand [
 
-	^ GenericContainerWebView
+	^ ContainerWebView
 		wrapping: self content
+		intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 		applying: [ :div | aComponentCommand asWebComponentCommand + div addClass bootstrap3 buttonGroup ]
 ]
 

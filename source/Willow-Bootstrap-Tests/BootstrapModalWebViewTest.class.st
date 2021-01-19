@@ -4,7 +4,7 @@ A BootstrapModalWebViewTest is a test class for testing the behavior of Bootstra
 Class {
 	#name : #BootstrapModalWebViewTest,
 	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#category : #'Willow-Bootstrap-Tests-WebViews'
 }
 
 { #category : #private }
@@ -38,7 +38,7 @@ BootstrapModalWebViewTest >> testOnCloseTrigger [
 		content: 'Some very large legal stuff. ;)'
 		footer: footer.
 
-	dialog onCloseTrigger disable.
+	dialog onClose disable.
 
 	html := self render: dialog.
 
@@ -62,7 +62,7 @@ BootstrapModalWebViewTest >> testOnTriggerDoesNothingWithoutAdditionalActionButt
 		content: 'Some very large legal stuff. ;)'
 		footer: footer.
 
-	dialog onTrigger disable.
+	dialog on trigger disable.
 
 	html := self render: dialog.	"The only button is the close one, so no need to generate javascript."
 	self
@@ -85,7 +85,7 @@ BootstrapModalWebViewTest >> testOnTriggerWithButtons [
 		addFooterButton: self takeMySoulButton;
 		build.
 
-	dialog onTrigger disable.
+	dialog on trigger disable.
 
 	html := self render: dialog.
 
