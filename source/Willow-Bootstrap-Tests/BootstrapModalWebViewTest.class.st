@@ -7,12 +7,6 @@ Class {
 	#category : #'Willow-Bootstrap-Tests-WebViews'
 }
 
-{ #category : #testing }
-BootstrapModalWebViewTest class >> isAbstract [
-
-	^ self name = #BootstrapModalWebViewTest
-]
-
 { #category : #private }
 BootstrapModalWebViewTest >> agreeButton [
 
@@ -20,24 +14,6 @@ BootstrapModalWebViewTest >> agreeButton [
 		labeled: 'Agree'
 		applying:
 			[ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonSuccess ]
-]
-
-{ #category : #accessing }
-BootstrapModalWebViewTest >> componentSupplier [
-
-	^ self subclassResponsibility
-]
-
-{ #category : #accessing }
-BootstrapModalWebViewTest >> createHandlers [
-
-	^ Array with: self
-]
-
-{ #category : #accessing }
-BootstrapModalWebViewTest >> isSession [
-
-	^ true
 ]
 
 { #category : #private }
