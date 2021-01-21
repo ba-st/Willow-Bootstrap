@@ -11,7 +11,7 @@ Bootstrap3CheckboxWebViewTest >> newBinaryChoiceView [
 ]
 
 { #category : #'tests-rendering' }
-Bootstrap3CheckboxWebViewTest >> testIdentifyIn [
+Bootstrap3CheckboxWebViewTest >> testIdentifierOn [
 
 	| html checkbox |
 
