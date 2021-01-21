@@ -112,8 +112,8 @@ Bootstrap4CardBuilder >> bottomImageCapLocatedAt: aLocation applying: anImageCom
 Bootstrap4CardBuilder >> buildApplying: aCommandToCard [
 
 	self resetCurrentBody.
-	^ GenericContainerWebView
-		wrapping: [ :canvas | 
+	^ supplier
+		divisionContainerWrapping: [ :canvas | 
 			self renderTopImageOn: canvas.
 			self renderHeadingOn: canvas.
 			self renderBodyElementsOn: canvas.

@@ -26,8 +26,9 @@ Bootstrap4FieldAddonBuilder >> appendText: aRenderable [
 
 	self
 		append:
-			( PhrasingContainerWebView
+			( ContainerWebView
 				wrapping: aRenderable
+				intoElementBuiltUsing: [ :canvas | canvas span ]
 				applying: [ :span | span addClass bootstrap4 inputGroupText ] )
 ]
 
@@ -53,13 +54,14 @@ Bootstrap4FieldAddonBuilder >> assertIsCorrectlyConfigured [
 Bootstrap4FieldAddonBuilder >> buildApplying: aCommand [
 
 	self assertIsCorrectlyConfigured.
-	^ GenericContainerWebView
+	^ ContainerWebView
 		wrapping: [ :canvas | 
 			self
 				renderPrependedComponentsOn: canvas;
 				renderFieldsOn: canvas;
 				renderAppendedComponentsOn: canvas
 			]
+		intoElementBuiltUsing: [ :canvas | canvas div ]
 		applying: [ :div | div addClass bootstrapCommon inputGroup + groupCommand + aCommand ]
 ]
 
@@ -89,8 +91,9 @@ Bootstrap4FieldAddonBuilder >> prependText: aRenderable [
 
 	self
 		prepend:
-			( PhrasingContainerWebView
+			( ContainerWebView
 				wrapping: aRenderable
+				intoElementBuiltUsing: [ :canvas | canvas span ]
 				applying: [ :span | span addClass bootstrap4 inputGroupText ] )
 ]
 

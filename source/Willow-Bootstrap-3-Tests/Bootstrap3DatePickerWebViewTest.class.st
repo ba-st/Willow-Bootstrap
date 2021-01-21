@@ -7,12 +7,30 @@ Class {
 	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
-{ #category : #'tests-initialization' }
+{ #category : #accessing }
+Bootstrap3DatePickerWebViewTest >> componentSupplier [
+
+	^ Bootstrap3ComponentSupplier online
+]
+
+{ #category : #accessing }
+Bootstrap3DatePickerWebViewTest >> createHandlers [
+
+	^ Array with: self
+]
+
+{ #category : #accessing }
+Bootstrap3DatePickerWebViewTest >> isSession [
+
+	^ true
+]
+
+{ #category : #'tests-rendering' }
 Bootstrap3DatePickerWebViewTest >> testRenderContentOn [
 
 	| html |
 
-	html := self render: (Bootstrap3DatePickerWebView wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])).
+	html := self render: (Bootstrap3DatePickerWebView wrapping: (TextFieldWebView singleLineApplying: [ :field |  ])).
 
 	self
 		assert: html
@@ -20,7 +38,7 @@ Bootstrap3DatePickerWebViewTest >> testRenderContentOn [
 			'<div class="input-group date" data-provide="datepicker"><input value="" name="1" type="text"/><div class="input-group-addon"><small><span class="glyphicon glyphicon-triangle-bottom"></span></small></div></div>'
 ]
 
-{ #category : #'tests-initialization' }
+{ #category : #'tests-rendering' }
 Bootstrap3DatePickerWebViewTest >> testRenderContentOnWithCommands [
 
 	| html |
@@ -28,7 +46,7 @@ Bootstrap3DatePickerWebViewTest >> testRenderContentOnWithCommands [
 	html := self
 		render:
 			(Bootstrap3DatePickerWebView
-				wrapping: (TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field |  ])
+				wrapping: (TextFieldWebView singleLineApplying: [ :field |  ])
 				applying:
 					(BootstrapDatepickerCommand
 						configuredBy: [ :datepicker | 

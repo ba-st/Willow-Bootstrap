@@ -49,15 +49,15 @@ BootstrapModalFooterWebView >> initializeContaining: aButtonCollection andCloseB
 ]
 
 { #category : #Configuring }
-BootstrapModalFooterWebView >> onCloseTrigger [
+BootstrapModalFooterWebView >> on [
 
-	^ closeButton onTrigger
+	^ CombinedEventInterpreterDispatcher combiningInterpretersOfAll: buttons
 ]
 
 { #category : #Configuring }
-BootstrapModalFooterWebView >> onTrigger [
+BootstrapModalFooterWebView >> onClose [
 
-	^ CombinedWebInteractionInterpreter combiningInterpretersOf: buttons
+	^ closeButton on trigger
 ]
 
 { #category : #rendering }
@@ -67,7 +67,7 @@ BootstrapModalFooterWebView >> renderContentOn: aCanvas [
 		with: [ aCanvas render: closeButton.
 			buttons
 				do: [ :button | 
-					button identifyIn: aCanvas.
+					button identifierOn: aCanvas.
 					aCanvas render: button
 					]
 			]

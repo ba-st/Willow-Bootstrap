@@ -28,7 +28,7 @@ BootstrapRadioWebView >> initializeRenderingWith: aRenderingBlock applyingToLabe
 	renderingBlock := aRenderingBlock.
 	labelCommand := aLabelCommand.
 	inputCommand := anInputCommand.
-	interactionInterpreter := WebInteractionInterpreter forChangeInComponentValue
+	interactionInterpreter := EventInterpreterDispatcher defaultingToChange
 ]
 
 { #category : #'private - accessing' }
@@ -38,7 +38,7 @@ BootstrapRadioWebView >> inputCommand [
 ]
 
 { #category : #configuring }
-BootstrapRadioWebView >> onTrigger [
+BootstrapRadioWebView >> on [
 
 	^ interactionInterpreter
 ]
@@ -58,7 +58,7 @@ BootstrapRadioWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCa
 
 	| radioButton radioButtonId |
 
-	radioButtonId := ( IdentifierAssigner prefixedBy: 'radio-button' ) identifyIn: aCanvas.
+	radioButtonId := ( IdentifierAssigner prefixedBy: 'radio-button' ) identifierOn: aCanvas.
 
 	radioButton := aRadioGroup radioButton.
 	radioButton

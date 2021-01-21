@@ -15,7 +15,10 @@ Class {
 { #category : #Building }
 BootstrapNotificationBuilder >> buildApplying: aComponentCommand [
 
-	^ GenericContainerWebView wrapping: content applying: alertCommand + dismissCommand + aComponentCommand
+	^ ContainerWebView
+		wrapping: content
+		intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
+		applying: alertCommand + dismissCommand + aComponentCommand
 ]
 
 { #category : #Configuring }

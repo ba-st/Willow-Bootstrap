@@ -25,9 +25,9 @@ BootstrapSplitButtonWebView >> initializeWith: aGenericContainerWebView and: anA
 ]
 
 { #category : #configuring }
-BootstrapSplitButtonWebView >> onTrigger [
+BootstrapSplitButtonWebView >> on [
 
-	^ mainButton onTrigger
+	^ mainButton on
 ]
 
 { #category : #rendering }

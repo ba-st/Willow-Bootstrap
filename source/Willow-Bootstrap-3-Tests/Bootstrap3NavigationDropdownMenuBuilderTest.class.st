@@ -40,10 +40,10 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOn [
 		navigationBarWith:
 			( supplier navigationDropdownMenuBuilder
 				labeled: 'Dropdown';
-				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
+				addActionLabeled: 'Action' executing: [ :button | button on trigger disable ];
 				addDivider;
 				addActionLabeled: 'Another action'
-					executing: [ :button | button onTrigger disable ]
+					executing: [ :button | button on trigger disable ]
 					applying: [ :button | button addClass willow ];
 				yourself ).
 
@@ -64,7 +64,7 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnRightAligned [
 		navigationBarWith:
 			( supplier navigationDropdownMenuBuilder
 				labeled: 'Dropdown';
-				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
+				addActionLabeled: 'Action' executing: [ :button | button on trigger disable ];
 				beRightAligned;
 				yourself ).
 
@@ -85,9 +85,9 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnWithButton [
 		navigationBarWith:
 			( supplier navigationDropdownMenuBuilder
 				labeled: 'Dropdown' applying: [ :button | button addClass bootstrap3 buttonDefault ];
-				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
+				addActionLabeled: 'Action' executing: [ :button | button on trigger disable ];
 				addDivider;
-				addActionLabeled: 'Another action' executing: [ :button | button onTrigger disable ];
+				addActionLabeled: 'Another action' executing: [ :button | button on trigger disable ];
 				yourself ).
 
 	html := self render: navigation.
@@ -108,7 +108,7 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnWithHeaders [
 			( supplier navigationDropdownMenuBuilder
 				labeled: 'Dropdown';
 				addHeaderLabeled: 'Dropdown header';
-				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
+				addActionLabeled: 'Action' executing: [ :button | button on trigger disable ];
 				yourself ).
 
 	html := self render: navigation.
@@ -128,7 +128,7 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderNavigationMenuContent [
 		navigationBarWith:
 			( supplier navigationDropdownMenuBuilder
 				labeled: 'Dropdown';
-				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];
+				addActionLabeled: 'Action' executing: [ :button | button on trigger disable ];
 				yourself ).
 	html := self render: navigationBar.
 

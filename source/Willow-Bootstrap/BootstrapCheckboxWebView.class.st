@@ -57,22 +57,16 @@ BootstrapCheckboxWebView class >> onModel: anObjectToUseWhenOn offModel: anObjec
 		applying: aCommandToComponent
 ]
 
-{ #category : #'rendering - private' }
+{ #category : #'private - rendering' }
 BootstrapCheckboxWebView >> commandToInput [
 
 	^ commandToComponent
 ]
 
 { #category : #accessing }
-BootstrapCheckboxWebView >> identifier [
+BootstrapCheckboxWebView >> identifierOn: aCanvas [
 
-	^ identifierAssigner assignedIdentifier
-]
-
-{ #category : #configuring }
-BootstrapCheckboxWebView >> identifyIn: aCanvas [
-
-	^ identifierAssigner identifyIn: aCanvas
+	^ identifierAssigner identifierOn: aCanvas
 ]
 
 { #category : #initialization }
@@ -80,29 +74,29 @@ BootstrapCheckboxWebView >> initializeLabeledAccordingTo: anOptionalLabel applyi
 
 	labelOptional := anOptionalLabel.
 	commandToComponent := aCommandToComponent.
-	interactionInterpreter := WebInteractionInterpreter forClickOnHiddenInputDependentComponent.
+	interactionInterpreter := EventInterpreterDispatcher defaultingToClickHidden.
 	identifierAssigner := IdentifierAssigner prefixedBy: 'checkbox'.
 	isChecked := true
 ]
 
 { #category : #configuring }
-BootstrapCheckboxWebView >> onTrigger [
+BootstrapCheckboxWebView >> on [
 
 	^ interactionInterpreter
 ]
 
-{ #category : #'rendering - private' }
+{ #category : #'private - rendering' }
 BootstrapCheckboxWebView >> renderCheckboxOn: aCanvas [
 
 	| checkbox |
 
 	checkbox := aCanvas checkbox.
 	checkbox
+		beIdentifiableUsing: identifierAssigner;
 		apply: self commandToInput;
 		value: isChecked;
-		callback: [ :value | [ self toggleCurrentSelection ] unless: value = isChecked ].
-	identifierAssigner withAssignedIdentifierDo: [ :id | checkbox id: id ].
-	checkbox interactUsing: interactionInterpreter
+		callback: [ :value | [ self toggleCurrentSelection ] unless: value = isChecked ];
+		interactUsing: interactionInterpreter
 ]
 
 { #category : #'Binary Choice-API' }

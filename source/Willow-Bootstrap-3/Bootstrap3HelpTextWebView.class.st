@@ -18,9 +18,9 @@ Bootstrap3HelpTextWebView class >> boundTo: aFieldWebView describedBy: aHelpText
 ]
 
 { #category : #configuring }
-Bootstrap3HelpTextWebView >> identifyIn: aCanvas [
+Bootstrap3HelpTextWebView >> identifierOn: aCanvas [
 
-	^ fieldWebView identifyIn: aCanvas
+	^ fieldWebView identifierOn: aCanvas
 ]
 
 { #category : #initialization }

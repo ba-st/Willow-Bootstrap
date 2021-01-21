@@ -15,8 +15,9 @@ Bootstrap3GridBuilder >> buildApplying: aRowCommand [
 
 	^ ( 1 to: self numberOfRows )
 		collect: [ :rowIndex | 
-			GenericContainerWebView
+			ContainerWebView
 				wrapping: [ :canvas | self renderColumnsAt: rowIndex on: canvas ]
+				intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 				applying: rowCommand + aRowCommand
 			]
 ]

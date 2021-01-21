@@ -7,8 +7,9 @@ Class {
 { #category : #building }
 Bootstrap4SingleButtonDropdownBuilder >> buildApplying: aComponentCommand [
 
-	^ GenericContainerWebView
+	^ ContainerWebView
 		wrapping: self content
+		intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
 		applying: [ :div | aComponentCommand asWebComponentCommand + div addClass bootstrap4 dropdown ]
 ]
 
