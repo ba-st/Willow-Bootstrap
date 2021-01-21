@@ -217,9 +217,11 @@ BootstrapComponentSupplier >> tabsBuilder [
 { #category : #Supplying }
 BootstrapComponentSupplier >> timeFieldApplying: aComponentCommand [
 
-	^ self
-		singleLineTextFieldApplying:
-			[ :field | field addClass bootstrapCommon textCenter + ( field setMaximumLengthTo: 8 ) + aComponentCommand ]
+	^ TimeFieldWebView
+		applying: [ :field | 
+			field addClass bootstrapCommon formControl + field addClass bootstrapCommon textCenter
+				+ ( field setMaximumLengthTo: 8 ) + aComponentCommand + field beTextInput
+			]
 ]
 
 { #category : #Supplying }
