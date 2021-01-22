@@ -66,10 +66,13 @@ BootstrapComponentSupplier >> dialogBuilder [
 ]
 
 { #category : #Supplying }
-BootstrapComponentSupplier >> dropdownListApplying: aComponentCommand [
+BootstrapComponentSupplier >> dropdownListApplying: aComponentCommand applyingToOptions: anOptionCommand [
 
-	^ DropDownListWebView
-		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand + BootstrapSelectCommand new ]
+	^ SingleSelectionWebView
+		dropDownListApplying: [ :field | 
+			field addClass bootstrapCommon formControl + aComponentCommand
+				+ BootstrapSelectCommand new ]
+		applyingToOptions: anOptionCommand
 ]
 
 { #category : #'Supplying - Non Portable' }
@@ -172,11 +175,13 @@ BootstrapComponentSupplier >> singleLineTextFieldApplying: aComponentCommand [
 ]
 
 { #category : #Supplying }
-BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
+BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand applyingToOptions: anOptionCommand [
 
-	^ SingleSelectionListBoxWebView
-		displayingAtOnce: aNumberOfElements
-		applying: [ :listBox | listBox addClass bootstrapCommon formControl + aComponentCommand ]
+	^ SingleSelectionWebView
+		listBoxDisplayingAtOnce: aNumberOfElements
+		applying:
+			[ :listBox | listBox addClass bootstrapCommon formControl + aComponentCommand ]
+		applyingToOptions: anOptionCommand
 ]
 
 { #category : #'Supplying - Non Portable' }
