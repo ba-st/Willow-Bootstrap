@@ -131,7 +131,7 @@ Bootstrap4PanelBuilderTest >> testRenderPanelWithListGroupsAndTables [
 	self
 		assert: html
 		equals:
-			'<div class="card"><div class="card-header">Panel heading</div><div class="card-body">Panel content.</div><ul class="list-group list-group-flush"><li class="list-group-item">1</li><li class="list-group-item">2</li></ul><table id="table-id1" class="table"><thead><th>First Name</th></thead><tbody></tbody></table></div>'
+			'<div class="card"><div class="card-header">Panel heading</div><div class="card-body">Panel content.</div><ul class="list-group list-group-flush"><li class="list-group-item">1</li><li class="list-group-item">2</li></ul><table class="table"><thead><th>First Name</th></thead><tbody></tbody></table></div>'
 ]
 
 { #category : #tests }
@@ -160,7 +160,7 @@ Bootstrap4PanelBuilderTest >> testRenderPanelWithTables [
 	self
 		assert: html
 		equals:
-			'<div class="card"><div class="card-header">Panel heading</div><div class="card-body">Panel content.</div><table id="table-id1" class="table"><thead><th>First Name</th></thead><tbody><tr><td>1</td></tr><tr><td>2</td></tr></tbody></table></div>'.
+			'<div class="card"><div class="card-header">Panel heading</div><div class="card-body">Panel content.</div><table class="table"><thead><th>First Name</th></thead><tbody><tr><td>1</td></tr><tr><td>2</td></tr></tbody></table></div>'.
 
 	panel := supplier panelBuilder
 		headingDisplaying: 'Panel heading';
@@ -171,7 +171,7 @@ Bootstrap4PanelBuilderTest >> testRenderPanelWithTables [
 	self
 		assert: html
 		equals:
-			'<div class="card"><div class="card-header">Panel heading</div><table id="table-id1" class="table"><thead><th>First Name</th></thead><tbody><tr><td>1</td></tr><tr><td>2</td></tr></tbody></table></div>'
+			'<div class="card"><div class="card-header">Panel heading</div><table class="table"><thead><th>First Name</th></thead><tbody><tr><td>1</td></tr><tr><td>2</td></tr></tbody></table></div>'
 ]
 
 { #category : #tests }
