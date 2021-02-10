@@ -12,7 +12,7 @@ Bootstrap3CheckboxWebView >> renderContentOn: aCanvas [
 		applying: [ :div | div addClass bootstrap3 checkbox + commandToComponent ]
 ]
 
-{ #category : #'rendering - private' }
+{ #category : #'private - rendering' }
 Bootstrap3CheckboxWebView >> renderLabelOn: aCanvas [
 
 	aCanvas

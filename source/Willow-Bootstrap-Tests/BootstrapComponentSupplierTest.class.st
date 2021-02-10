@@ -168,7 +168,7 @@ BootstrapComponentSupplierTest >> testTableBuilder [
 				yourself
 			]
 		equals:
-			'<table id="table-id1" class="table"><thead><th>Number</th></thead><tbody><tr><td>1</td></tr><tr><td>2</td></tr><tr><td>3</td></tr></tbody></table>'
+			'<table class="table"><thead><th>Number</th></thead><tbody><tr><td>1</td></tr><tr><td>2</td></tr><tr><td>3</td></tr></tbody></table>'
 ]
 
 { #category : #'tests-Supplying' }

@@ -57,6 +57,12 @@ BootstrapCheckboxWebView class >> onModel: anObjectToUseWhenOn offModel: anObjec
 		applying: aCommandToComponent
 ]
 
+{ #category : #configuring }
+BootstrapCheckboxWebView >> beIdentifiable [
+
+	^ identifierAssigner beRequired
+]
+
 { #category : #'private - rendering' }
 BootstrapCheckboxWebView >> commandToInput [
 
