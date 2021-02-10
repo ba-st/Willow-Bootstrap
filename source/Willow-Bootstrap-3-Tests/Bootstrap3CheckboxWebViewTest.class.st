@@ -10,6 +10,21 @@ Bootstrap3CheckboxWebViewTest >> newBinaryChoiceView [
 	^ Bootstrap3CheckboxWebView onModel: true offModel: false
 ]
 
+{ #category : #'tests-configuring' }
+Bootstrap3CheckboxWebViewTest >> testBeIdentifiable [
+
+	| html binaryChoiceView |
+
+	binaryChoiceView := self newBinaryChoiceView.
+	binaryChoiceView beIdentifiable.
+	html := self render: binaryChoiceView.
+
+	self
+		assert: html
+		equals:
+			'<div class="checkbox"><label><input id="checkbox-id1" checked name="2" type="checkbox"/><input name="3" type="hidden"/></label></div>'
+]
+
 { #category : #'tests-rendering' }
 Bootstrap3CheckboxWebViewTest >> testIdentifierOn [
 

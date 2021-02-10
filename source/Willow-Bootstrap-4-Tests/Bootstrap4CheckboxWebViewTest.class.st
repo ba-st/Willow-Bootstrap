@@ -10,6 +10,21 @@ Bootstrap4CheckboxWebViewTest >> newBinaryChoiceView [
 	^ Bootstrap4CheckboxWebView onModel: true offModel: false
 ]
 
+{ #category : #'tests-configuring' }
+Bootstrap4CheckboxWebViewTest >> testBeIdentifiable [
+
+	| html checkbox |
+
+	checkbox := self newBinaryChoiceView.
+	checkbox beIdentifiable.
+	html := self render: checkbox.
+
+	self
+		assert: html
+		equals:
+			'<div class="form-check"><input id="checkbox-id1" class="form-check-input position-static" checked name="2" type="checkbox"/><input name="3" type="hidden"/></div>'
+]
+
 { #category : #'tests-rendering' }
 Bootstrap4CheckboxWebViewTest >> testIdentifierOn [
 
