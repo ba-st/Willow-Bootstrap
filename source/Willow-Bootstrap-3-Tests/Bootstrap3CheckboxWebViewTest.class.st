@@ -40,7 +40,7 @@ Bootstrap3CheckboxWebViewTest >> testIdentifierOn [
 	self
 		assert: html
 		equals:
-			'<div class="checkbox"><label><input id="checkbox-id1" checked name="2" type="checkbox"/><input name="3" type="hidden"/></label></div>'
+			'<div class="checkbox"><label><input id="checkbox-id1" checked name="3" type="checkbox"/><input name="4" type="hidden"/></label></div>'
 ]
 
 { #category : #'tests-configuring' }

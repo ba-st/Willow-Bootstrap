@@ -25,7 +25,7 @@ Bootstrap4ComponentSupplierTest >> testCheckboxLabeledOnModelOffModelApplying [
 				applying: [ :checkbox | checkbox addClass willow ]
 			]
 		equals:
-			'<div class="form-check willow"><input id="checkbox-id1" class="willow form-check-input" checked name="2" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id1" class="form-check-label">Labelization</label></div>'
+			'<div class="form-check willow"><input id="checkbox-id1" class="willow form-check-input" checked name="3" type="checkbox"/><input name="4" type="hidden"/><label for="checkbox-id1" class="form-check-label">Labelization</label></div>'
 ]
 
 { #category : #tests }
