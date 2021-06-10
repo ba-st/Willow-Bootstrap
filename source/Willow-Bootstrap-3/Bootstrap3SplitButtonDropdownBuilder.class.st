@@ -22,7 +22,7 @@ Bootstrap3SplitButtonDropdownBuilder >> buildApplying: aComponentCommand [
 		and: mainButtonBinding content
 ]
 
-{ #category : #Configuring }
+{ #category : #initialization }
 Bootstrap3SplitButtonDropdownBuilder >> initialize [
 
 	super initialize.
