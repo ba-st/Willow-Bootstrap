@@ -28,7 +28,7 @@ Bootstrap3LabeledWebViewTest >> isSession [
 	^ true
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : #running }
 Bootstrap3LabeledWebViewTest >> setUp [
 
 	super setUp.
