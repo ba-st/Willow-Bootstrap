@@ -3,7 +3,7 @@ I'm a radio button group specifically designed to use the html structure require
 "
 Class {
 	#name : #BootstrapRadioWebView,
-	#superclass : #SingleSelectionWebViewBehavior,
+	#superclass : #AbstractSingleSelectionWebView,
 	#instVars : [
 		'interactionInterpreter',
 		'renderingBlock',
@@ -12,6 +12,12 @@ Class {
 	],
 	#category : #'Willow-Bootstrap-WebViews'
 }
+
+{ #category : #testing }
+BootstrapRadioWebView class >> isAbstract [
+
+	^ self = BootstrapRadioWebView
+]
 
 { #category : #'instance creation' }
 BootstrapRadioWebView class >> renderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
@@ -28,7 +34,7 @@ BootstrapRadioWebView >> initializeRenderingWith: aRenderingBlock applyingToLabe
 	renderingBlock := aRenderingBlock.
 	labelCommand := aLabelCommand.
 	inputCommand := anInputCommand.
-	interactionInterpreter := EventInterpreterDispatcher defaultingToChange
+	interactionInterpreter := SingleEventInterpreterDispatcher defaultingToChange
 ]
 
 { #category : #'private - accessing' }
