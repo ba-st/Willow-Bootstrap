@@ -879,8 +879,8 @@ WillowBootstrap class >> initializeFormsClasses [
 				bind: #formText to: 'form-text';
 				bind: #invalidFeedback to: 'invalid-feedback';
 				bind: #invalidTooltip to: 'invalid-tooltip';
-				bind: #isInvalid to: 'is-invalid ';
-				bind: #isValid to: 'is-valid ';
+				bind: #isInvalid to: 'is-invalid';
+				bind: #isValid to: 'is-valid';
 				bind: #validFeedback to: 'valid-feedback';
 				bind: #validTooltip to: 'valid-tooltip'
 			]
