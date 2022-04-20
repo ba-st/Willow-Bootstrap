@@ -2,12 +2,15 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'WillowBootstrap',
-      #directory : 'source',
-      #load : [ 'Tools' ],
+      #directory : '../source',
+      #load : [ 'Development' ],
       #platforms : [  #pharo ]
     }
   ],
   #testing : {
-    #failOnZeroTests : false
+    #coverage : {
+      #packages : [ 'Willow-Bootstrap*' ],
+      #format: #lcov
+    }
   }
 }
