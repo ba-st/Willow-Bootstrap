@@ -1,10 +1,6 @@
 # Willow Bootstrap Documentation
 
-What is this thing? “the motto”, the goals, the vision.
-
 To learn about the project, [install it](how-to/how-to-load-in-pharo.md).
-
-Links to additional documentation.
 
 ---
 

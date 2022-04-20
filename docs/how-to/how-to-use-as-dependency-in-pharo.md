@@ -3,8 +3,9 @@
 In order to include **Willow Bootstrap** as part of your project, you should reference
 the package in your product baseline:
 
-1. Define the Willow Bootstrap repository and version to be used, and the [baseline groups](../reference/Baseline-groups.md)
-    you want to depend on (usually it will be `Deployment`).
+1. Define the Willow Bootstrap repository and version to be used, and the
+  [baseline groups](../reference/Baseline-groups.md) you want to depend on
+  (usually it will be `Deployment`).
 
     If you're unsure on what to depend use the *Dependency Analyzer*
     tool to choose an appropriate group including the packages you need.
@@ -16,13 +17,13 @@ the package in your product baseline:
 
       spec
         baseline: 'WillowBootstrap'
-        with: [ spec repository: 'github://github://ba-st/Willow-Bootstrap:v{XX}' ];
+        with: [ spec repository: 'github://github://ba-st/Willow-Bootstrap:v{XX}'];
         project: 'Willow-Bootstrap-Deployment'
         copyFrom: 'WillowBootstrap' with: [ spec loads: 'Deployment' ]
     ```
 
-    This will create `Willow-Bootstrap-Deployment` as a valid target that can be used
-    as requirement in your own packages.
+    This will create `Willow-Bootstrap-Deployment` as a valid target that can be
+    used as requirement in your own packages.
 
     > Replace `{XX}` with the version you want to depend on
 
