@@ -1,6 +1,6 @@
 {
   "name": "willow-bootstrap",
-  "version": "13.0.0",
+  "version": "13.2.0",
   "author": "Buenos Aires Smalltalk contributors",
   "license": "MIT",
   "dependencies": {
