@@ -206,6 +206,12 @@ BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aCo
 ]
 
 { #category : #Supplying }
+BootstrapComponentSupplier >> synchronicLinkLabeled: aRenderable applying: aComponentCommand [
+
+	^ LinkWebView synchronicLabeled: aRenderable applying: aComponentCommand
+]
+
+{ #category : #Supplying }
 BootstrapComponentSupplier >> tableBuilder [
 
 	^ TableWebViewBuilder new

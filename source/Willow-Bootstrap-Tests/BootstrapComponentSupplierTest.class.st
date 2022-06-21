@@ -149,6 +149,16 @@ BootstrapComponentSupplierTest >> testSynchronicButtonLabeledApplyingEvaluating 
 ]
 
 { #category : #'tests-Supplying' }
+BootstrapComponentSupplierTest >> testSynchronicLinkLabeledApplying [
+
+	self
+		assertRenderingOf:
+			[ :supplier | supplier synchronicLinkLabeled: 'Buy' applying: [ :link | link addClass bootstrapCommon buttonPrimary ] ]
+		equals:
+			'<a class="btn-primary">Buy</a>'
+]
+
+{ #category : #'tests-Supplying' }
 BootstrapComponentSupplierTest >> testTableBuilder [
 
 	self
