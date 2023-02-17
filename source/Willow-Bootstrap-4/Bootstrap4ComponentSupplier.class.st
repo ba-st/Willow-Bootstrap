@@ -113,6 +113,19 @@ Bootstrap4ComponentSupplier >> pillsBuilder [
 		yourself
 ]
 
+{ #category : #'as yet unclassified' }
+Bootstrap4ComponentSupplier >> radioButtonRenderingWith: anItemRenderer
+	applyingToContainer: aContainerCommand
+	applyingToLabel: aLabelCommand
+	applyingToInput: anInputCommand [
+
+	^Bootstrap4RadioButtonWebView
+		renderingWith: anItemRenderer
+		applyingToContainer: aContainerCommand
+		applyingToLabel: aLabelCommand
+		applyingToInput: anInputCommand
+]
+
 { #category : #Supplying }
 Bootstrap4ComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
 

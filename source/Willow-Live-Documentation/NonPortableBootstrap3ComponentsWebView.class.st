@@ -29,6 +29,21 @@ NonPortableBootstrap3ComponentsWebView >> initializeExamples [
 						addContent: 'col-md-1';
 						build
 					] );
+		add:
+			( CodeSnippetExampleWebView
+				titled: 'Radio Button Group'
+				describedBy: 'https://getbootstrap.com/docs/3.4/javascript/#buttons-checkbox-radio'
+				showing: [ | radio |
+
+					radio := self componentSupplier
+						radioButtonRenderingWith: [ :element | element ]
+						applyingToContainer: [ :div | div addClass bootstrap3 buttonGroupSmall ]
+						applyingToLabel: [ :label | label addClass bootstrap3 buttonPrimary ]
+						applyingToInput: [  ].
+					radio allowAnyOf: #(Left Middle Right).
+					radio choose: #Middle.
+					radio
+					] );
 		yourself
 ]
 

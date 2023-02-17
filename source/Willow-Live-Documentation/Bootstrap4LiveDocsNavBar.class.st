@@ -94,7 +94,7 @@ Bootstrap4LiveDocsNavBar >> renderNavigationButtonsOn: aCanvas [
 Bootstrap4LiveDocsNavBar >> renderSupplierDetailsOn: aCanvas [
 
 	aCanvas span
-		with: [ aCanvas render: 'Based on '.
+		with: [ aCanvas render: 'Powered By '.
 			aCanvas
 				render:
 					( self componentSupplier

@@ -86,7 +86,7 @@ Bootstrap3LiveDocsNavBar >> renderNavigationButtonsOn: aCanvas [
 Bootstrap3LiveDocsNavBar >> renderSupplierDetailsOn: aCanvas [
 
 	aCanvas paragraph
-		with: [ aCanvas render: 'Based on '.
+		with: [ aCanvas render: 'Powered By '.
 			aCanvas
 				render:
 					( self componentSupplier

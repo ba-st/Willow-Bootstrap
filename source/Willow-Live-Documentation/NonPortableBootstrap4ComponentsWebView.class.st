@@ -41,6 +41,21 @@ NonPortableBootstrap4ComponentsWebView >> initializeExamples [
 						buildApplying:
 								[ :card | card addClass bootstrapCommon textCenter + ( card setStyleTo: [ :style | style width: 128 px ] ) ]
 					] );
+		add:
+			( CodeSnippetExampleWebView
+				titled: 'Radio Button Group'
+				describedBy: 'https://getbootstrap.com/docs/4.1/components/buttons/#checkbox-and-radio-buttons'
+				showing: [ | radio |
+
+					radio := self componentSupplier
+						radioButtonRenderingWith: [ :element | element ]
+						applyingToContainer: [ :div | div addClass bootstrap4 buttonGroupSmall ]
+						applyingToLabel: [  ]
+						applyingToInput: [  ].
+					radio allowAnyOf: #(Left Middle Right).
+					radio choose: #Middle.
+					radio
+					] );
 		yourself
 ]
 
