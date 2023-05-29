@@ -14,6 +14,7 @@ and [Bootstrap 3/4](http://getbootstrap.com/).
 [![Pharo 8.0](https://img.shields.io/badge/Pharo-8.0-informational)](https://pharo.org)
 [![Pharo 9.0](https://img.shields.io/badge/Pharo-9.0-informational)](https://pharo.org)
 [![Pharo 10](https://img.shields.io/badge/Pharo-10-informational)](https://pharo.org)
+[![Pharo 11](https://img.shields.io/badge/Pharo-11-informational)](https://pharo.org)
 
 The project goal is to complement Willow with a component supplier that allows
 the creation of Bootstrap applications.

@@ -42,15 +42,15 @@ BootstrapDatepickerOnlineLibrary >> updateRoot: aRoot [
 
 	aRoot stylesheet
 		url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/<1s>/css/bootstrap-datepicker3.min.css' expandMacrosWith: self version);
-		anonymousSubResourceIntegrity: 'sha256-FAOaXTpl90/K8cXmSdsskbQN3nKYulhCpPbcFzGTWKI='. 
+		anonymousSubResourceIntegrity: 'sha512-aQb0/doxDGrw/OC7drNaJQkIKFu6eSWnVMAwPN64p6sZKeJ4QCDYL42Rumw2ZtL8DB9f66q4CnLIUnAw28dEbg=='. 
 	aRoot javascript
 		url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/<1s>/js/bootstrap-datepicker.min.js' expandMacrosWith: self version);
-		anonymousSubResourceIntegrity: 'sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8='.
+		anonymousSubResourceIntegrity: 'sha512-LsnSViqQyaXpD4mBBdRYeP6sRwJiJveh2ZIbW41EBrNmKxgr/LFZIiWT6yr+nycvhvauz8c2nYMhrP80YhG7Cw=='.
 	self updateLocaleIn: aRoot
 ]
 
 { #category : #Updating }
 BootstrapDatepickerOnlineLibrary >> version [
 
-	^ '1.9.0'
+	^ '1.10.0'
 ]

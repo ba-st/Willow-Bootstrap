@@ -43,7 +43,7 @@ BootstrapSelectLibrary class >> using: aWALocale [
 { #category : #Accessing }
 BootstrapSelectLibrary class >> version [
 
-	^'1.13.16'
+	^'1.13.18'
 ]
 
 { #category : #initialization }

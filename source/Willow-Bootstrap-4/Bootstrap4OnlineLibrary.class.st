@@ -12,21 +12,18 @@ Bootstrap4OnlineLibrary >> updateRoot: aRoot [
 
 	aRoot stylesheet
 		url:
-			( 'https://stackpath.bootstrapcdn.com/bootstrap/<1s>/css/bootstrap.min.css'
+			( 'https://cdn.jsdelivr.net/npm/bootstrap@<1s>/dist/css/bootstrap.min.css'
 				expandMacrosWith: self version );
-		anonymousSubResourceIntegrity: 'sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh'.
-	aRoot javascript
-		url: 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js';
-		anonymousSubResourceIntegrity: 'sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo'.
+		anonymousSubResourceIntegrity: 'sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N'.
 	aRoot javascript
 		url:
-			( 'https://stackpath.bootstrapcdn.com/bootstrap/<1s>/js/bootstrap.min.js'
-				expandMacrosWith: self version );
-		anonymousSubResourceIntegrity: 'sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6'
+      ( 'https://cdn.jsdelivr.net/npm/bootstrap@<1s>/dist/js/bootstrap.bundle.min.js'
+        expandMacrosWith: self version );
+		anonymousSubResourceIntegrity: 'sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct'
 ]
 
 { #category : #versions }
 Bootstrap4OnlineLibrary >> version [
 
-	^'4.4.1'
+	^'4.6.2'
 ]

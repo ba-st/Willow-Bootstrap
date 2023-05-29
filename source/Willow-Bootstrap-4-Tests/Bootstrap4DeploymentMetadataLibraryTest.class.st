@@ -12,18 +12,14 @@ Bootstrap4DeploymentMetadataLibraryTest >> testDeployFiles [
 
 	self
 		assertFileDeploymentOf: Bootstrap4DeploymentMetadataLibrary default
-		createsAsFolders: #('bootstrap-4.4.1' 'bootstrap-4.4.1/css' 'bootstrap-4.4.1/js')
+		createsAsFolders: #('bootstrap-4.6.2')
 		andFileContentsMatching:
-			{'bootstrap-4.4.1/css/bootstrap-grid.min.css' -> 'eacf31cb19b8e62c9b20b01fc4498c6136163420'.
-			 'bootstrap-4.4.1/css/bootstrap-grid.min.css.map' -> 'dfbaa09a175501d6cecc4338564d6b12e6e0f776'.
-			 'bootstrap-4.4.1/css/bootstrap-reboot.min.css' -> 'b4e1e15083eb03574716269a531940d25c977ba3'.
-			 'bootstrap-4.4.1/css/bootstrap-reboot.min.css.map' -> '27d6d4c39d7953e154ba18965221a3ab75dc1174'.
-			 'bootstrap-4.4.1/css/bootstrap.min.css' -> '48390d0ce99139c112004bca8ef09c89eaf696d7'.
-			 'bootstrap-4.4.1/css/bootstrap.min.css.map' -> '3e7c35f7ce1ae18c85e6a03471cb951a5e0045e7'.
-			 'bootstrap-4.4.1/js/bootstrap.bundle.min.js' -> '93e9c92e828b4ea36bc0a6aa20f7a7f40f69cdef'.
-			 'bootstrap-4.4.1/js/bootstrap.bundle.min.js.map' -> 'd31b75b0bf229fae51edf868a5a84571f6201af1'.
-			 'bootstrap-4.4.1/js/bootstrap.min.js' -> '15ca38a670e35dab559617d02b3574c993d4e5ca'.
-			 'bootstrap-4.4.1/js/bootstrap.min.js.map' -> '643cac1519b440e760222cfdb27a9f3cca59b2b6' }
+			{'bootstrap-4.6.2/bootstrap.bundle.min.js' -> '0b885c125fa47fe20da624e049c6e81678292d68'.
+			 'bootstrap-4.6.2/bootstrap.bundle.min.js.map' -> 'ce24715e4ebe5f8c1335c5ebacff174e81b512fb'.
+			 'bootstrap-4.6.2/bootstrap.min.css' -> '08ef5f8f7f94b93b3ed817569ef212eebe97e49e'.
+			 'bootstrap-4.6.2/bootstrap.min.css.map' -> 'ef6cc55ed3ebcfddf25d99401e1b6f766dd8f1ed'.
+			 'bootstrap-4.6.2/bootstrap.min.js' -> 'a9b48dac757528de63ff9b1720d74c4a7237f4a9'.
+			 'bootstrap-4.6.2/bootstrap.min.js.map' -> 'a1914fe0f2a15bcbe3061499ab8a43ed45d93981' }
 ]
 
 { #category : #tests }
@@ -47,7 +43,7 @@ Bootstrap4DeploymentMetadataLibraryTest >> testUpdateRoot [
 	self
 		assert: html
 		equals:
-			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-4.4.1/css/bootstrap.min.css"/><script type="text/javascript" src="/files/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-4.6.2/bootstrap.min.css"/><script type="text/javascript" src="/files/bootstrap-4.6.2/bootstrap.bundle.min.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
 { #category : #tests }
@@ -63,5 +59,5 @@ Bootstrap4DeploymentMetadataLibraryTest >> testUpdateRootWithoutBundledDependenc
 	self
 		assert: html
 		equals:
-			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-4.4.1/css/bootstrap.min.css"/><script type="text/javascript" src="/files/bootstrap-4.4.1/js/bootstrap.min.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
+			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-4.6.2/bootstrap.min.css"/><script type="text/javascript" src="/files/bootstrap-4.6.2/bootstrap.min.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
