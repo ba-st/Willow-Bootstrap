@@ -7,7 +7,7 @@ loading targets:
 - `Deployment-Bootstrap-3` will load all the packages needed in a deployed
   Bootstrap 3 application
 - `Deployment-Bootstrap-4` will load all the packages needed in a deployed
-  Bootstrap 4 application 
+  Bootstrap 4 application
 - `Tests` will load the test cases
 - `Tools` will load tooling extensions
 - `Dependent-SUnit-Extensions` will load extensions to SUnit
