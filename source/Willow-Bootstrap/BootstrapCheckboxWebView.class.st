@@ -3,7 +3,7 @@ I'm a checkbox specifically designed to use the html structure required by Boots
 "
 Class {
 	#name : #BootstrapCheckboxWebView,
-	#superclass : #BinaryChoiceWebViewBehavior,
+	#superclass : #BinaryChoiceWebView,
 	#instVars : [
 		'commandToComponent',
 		'interactionInterpreter',
@@ -80,7 +80,7 @@ BootstrapCheckboxWebView >> initializeLabeledAccordingTo: anOptionalLabel applyi
 
 	labelOptional := anOptionalLabel.
 	commandToComponent := aCommandToComponent.
-	interactionInterpreter := EventInterpreterDispatcher defaultingToClickHidden.
+	interactionInterpreter := SingleEventInterpreterDispatcher defaultingToClickHidden.
 	identifierAssigner := IdentifierAssigner prefixedBy: 'checkbox'.
 	isChecked := true
 ]

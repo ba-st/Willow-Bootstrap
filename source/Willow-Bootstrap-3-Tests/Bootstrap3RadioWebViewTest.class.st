@@ -1,6 +1,6 @@
 Class {
 	#name : #Bootstrap3RadioWebViewTest,
-	#superclass : #SingleSelectionWebViewBehaviorTest,
+	#superclass : #SingleSelectionWebViewTest,
 	#category : #'Willow-Bootstrap-3-Tests-WebViews'
 }
 
