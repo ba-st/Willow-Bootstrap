@@ -2,12 +2,14 @@
 A GlyphiconsTest is a test class for testing the behavior of Glyphicons
 "
 Class {
-	#name : #GlyphiconsTest,
-	#superclass : #TestCase,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#name : 'GlyphiconsTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-Tests-WebViews',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 GlyphiconsTest >> testIcons [
 
 	self
@@ -86,7 +88,7 @@ GlyphiconsTest >> testIcons [
 		assert: Glyphicons check equals: 'glyphicon-check'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 GlyphiconsTest >> testIcons2 [
 
 	self
@@ -167,7 +169,7 @@ GlyphiconsTest >> testIcons2 [
 		assert: Glyphicons phone equals: 'glyphicon-phone'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 GlyphiconsTest >> testIcons3 [
 
 	self
@@ -248,7 +250,7 @@ GlyphiconsTest >> testIcons3 [
 		assert: Glyphicons duplicate equals: 'glyphicon-duplicate'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 GlyphiconsTest >> testIcons4 [
 
 	self

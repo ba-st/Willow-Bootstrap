@@ -1,57 +1,59 @@
 Class {
-	#name : #BootstrapDropdownBuilder,
-	#superclass : #WillowComponentBuilder,
+	#name : 'BootstrapDropdownBuilder',
+	#superclass : 'WillowComponentBuilder',
 	#instVars : [
 		'supplier',
 		'menuItems',
 		'buttonBinding'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 BootstrapDropdownBuilder class >> isAbstract [
 
 	^ self name = #BootstrapDropdownBuilder
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 BootstrapDropdownBuilder class >> using: aComponentSupplier [
 
 	^ self new initializeUsing: aComponentSupplier
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapDropdownBuilder >> addActionLabeled: aRenderable executing: anActionBlock [
 
 	self addActionLabeled: aRenderable executing: anActionBlock applying: [  ]
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapDropdownBuilder >> addActionLabeled: aRenderable executing: anActionBlock applying: aCommand [
 
 	self subclassResponsibility
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapDropdownBuilder >> addDivider [
 
 	self subclassResponsibility
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapDropdownBuilder >> addHeaderLabeled: aRenderable [
 
 	self subclassResponsibility
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapDropdownBuilder >> beRightAligned [
 
 	self subclassResponsibility
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapDropdownBuilder >> dropdownCommandFor: button using: constants [
 
 	^ button addClass bootstrapCommon dropdownToggle
@@ -60,7 +62,7 @@ BootstrapDropdownBuilder >> dropdownCommandFor: button using: constants [
 		+ ( button setARIAAttribute: 'expanded' to: 'false' )
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapDropdownBuilder >> initializeUsing: aSupplier [
 
 	supplier := aSupplier.
@@ -68,7 +70,7 @@ BootstrapDropdownBuilder >> initializeUsing: aSupplier [
 	menuItems := OrderedCollection new
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
 
 	self subclassResponsibility

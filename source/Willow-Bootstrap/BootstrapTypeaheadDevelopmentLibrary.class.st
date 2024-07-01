@@ -2,12 +2,14 @@
 I'm a WALibary serving the files in source form, suitable for development
 "
 Class {
-	#name : #BootstrapTypeaheadDevelopmentLibrary,
-	#superclass : #BootstrapTypeaheadLibrary,
-	#category : #'Willow-Bootstrap-Typeahead'
+	#name : 'BootstrapTypeaheadDevelopmentLibrary',
+	#superclass : 'BootstrapTypeaheadLibrary',
+	#category : 'Willow-Bootstrap-Typeahead',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Typeahead'
 }
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapTypeaheadDevelopmentLibrary >> bootstrap3typeaheadJs [
 
 	^ WAFileLibraryResource
@@ -17,7 +19,7 @@ BootstrapTypeaheadDevelopmentLibrary >> bootstrap3typeaheadJs [
 		contents: ( GRDelayedSend receiver: self selector: #bootstrap3typeaheadJsContent )
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapTypeaheadDevelopmentLibrary >> bootstrap3typeaheadJsContent [
 	^ '/* =============================================================
  * bootstrap3-typeahead.js v4.0.2
@@ -606,7 +608,7 @@ BootstrapTypeaheadDevelopmentLibrary >> bootstrap3typeaheadJsContent [
 '
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BootstrapTypeaheadDevelopmentLibrary >> selectorsToInclude [
 
 	^ #(bootstrap3typeaheadJs)

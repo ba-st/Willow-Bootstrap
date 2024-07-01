@@ -2,12 +2,14 @@
 A BootstrapSelectDeploymentLibraryTest is a test class for testing the behavior of BootstrapSelectDeploymentLibrary
 "
 Class {
-	#name : #BootstrapSelectDeploymentLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-Select'
+	#name : 'BootstrapSelectDeploymentLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Select',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Select'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDeploymentLibraryTest >> testDeployFiles [
 
 	self
@@ -60,19 +62,19 @@ BootstrapSelectDeploymentLibraryTest >> testDeployFiles [
 			('bootstrap-select-1.13.18/js/i18n/defaults-zh_TW.min.js' -> 'cd6d2b17f0924b9019a44e535f35002cabfbf63f')}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDeploymentLibraryTest >> testForDeployment [
 
 	self assert: BootstrapSelectLibrary forDeployment equals: BootstrapSelectDeploymentLibrary
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDeploymentLibraryTest >> testIsForDeployment [
 
 	self assert: BootstrapSelectLibrary forDeployment isForDeployment 
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDeploymentLibraryTest >> testUpdateRoot [
 
 	| html |
@@ -88,7 +90,7 @@ BootstrapSelectDeploymentLibraryTest >> testUpdateRoot [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.13.18/css/bootstrap-select.min.css"/><script type="text/javascript" src="/files/bootstrap-select-1.13.18/js/bootstrap-select.min.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.13.18/js/i18n/defaults-en_US.min.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDeploymentLibraryTest >> testUpdateRootWithLocale [
 
 	| html |
@@ -106,7 +108,7 @@ BootstrapSelectDeploymentLibraryTest >> testUpdateRootWithLocale [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.13.18/css/bootstrap-select.min.css"/><script type="text/javascript" src="/files/bootstrap-select-1.13.18/js/bootstrap-select.min.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.13.18/js/i18n/defaults-es_ES.min.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDeploymentLibraryTest >> testUpdateRootWithUnsupportedLocale [
 
 	| html |

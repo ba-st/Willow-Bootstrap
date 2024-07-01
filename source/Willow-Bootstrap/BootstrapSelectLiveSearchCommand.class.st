@@ -2,35 +2,37 @@
 I'm a component command enabling the live search options on Bootstrap Select using the Data-API
 "
 Class {
-	#name : #BootstrapSelectLiveSearchCommand,
-	#superclass : #WebComponentCommand,
+	#name : 'BootstrapSelectLiveSearchCommand',
+	#superclass : 'WebComponentCommand',
 	#instVars : [
 		'normalize',
 		'placeholderOptional',
 		'searchStyle'
 	],
-	#category : #'Willow-Bootstrap-Frontend'
+	#category : 'Willow-Bootstrap-Frontend',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Frontend'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapSelectLiveSearchCommand class >> default [
 
 	^ self normalize: false placeholderOptional: Optional unused style: Constants >> #bootstrap >> #contains
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapSelectLiveSearchCommand class >> normalize: aBoolean placeholderOptional: anOptional style: theSearchStyle [
 
 	^ self new initializeNormalize: aBoolean placeholderOptional: anOptional style: theSearchStyle
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapSelectLiveSearchCommand class >> normalize: aBoolean placeholderText: aString style: aSearchStyle [
 
 	^ self normalize: aBoolean placeholderOptional: (Optional containing: aString) style: aSearchStyle
 ]
 
-{ #category : #processing }
+{ #category : 'processing' }
 BootstrapSelectLiveSearchCommand >> applyTo: aComponent on: aCanvas [
 
 	self
@@ -56,13 +58,13 @@ BootstrapSelectLiveSearchCommand >> applyTo: aComponent on: aCanvas [
 		on: aCanvas
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapSelectLiveSearchCommand >> declare: aMetadataKey with: aMetadataValue applyingTo: aComponent on: aCanvas [
 
 	(ComponentMetadataCommand toDeclare: aMetadataKey with: aMetadataValue) applyTo: aComponent on: aCanvas
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapSelectLiveSearchCommand >> initializeNormalize: aBoolean placeholderOptional: anOptional style: theSearchStyle [
 
 	normalize := aBoolean greaseString.

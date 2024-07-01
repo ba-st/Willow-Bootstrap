@@ -2,12 +2,14 @@
 A BootstrapViewportConfigurationTest is a test class for testing the behavior of BootstrapViewportConfiguration
 "
 Class {
-	#name : #Bootstrap3ViewportConfigurationTest,
-	#superclass : #TestCase,
-	#category : #'Willow-Bootstrap-3-Tests-Plugins'
+	#name : 'Bootstrap3ViewportConfigurationTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-3-Tests-Plugins',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'Plugins'
 }
 
-{ #category : #'tests-printing' }
+{ #category : 'tests-printing' }
 Bootstrap3ViewportConfigurationTest >> testJavascriptContentOn [
 
 	self

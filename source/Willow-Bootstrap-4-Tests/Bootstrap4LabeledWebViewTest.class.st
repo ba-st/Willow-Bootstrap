@@ -1,38 +1,40 @@
 Class {
-	#name : #Bootstrap4LabeledWebViewTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap4LabeledWebViewTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap4LabeledWebViewTest >> componentSupplier [
 
 	^ supplier
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap4LabeledWebViewTest >> createHandlers [
 
 	^ Array with: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap4LabeledWebViewTest >> isSession [
 
 	^ true
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap4LabeledWebViewTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap4ComponentSupplier online
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4LabeledWebViewTest >> testRenderContentOn [
 
 	| labeledView html |
@@ -52,7 +54,7 @@ Bootstrap4LabeledWebViewTest >> testRenderContentOn [
 			'<div class="form-group"><label for="text-id1">E-Mail</label><input value="" name="2" id="text-id1" class="form-control" type="text"/></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4LabeledWebViewTest >> testRenderContentOnWithContainerCommand [
 
 	| labeledView html |
@@ -72,7 +74,7 @@ Bootstrap4LabeledWebViewTest >> testRenderContentOnWithContainerCommand [
 			'<div class="form-group text-muted"><label for="text-id1">E-Mail</label><input value="" name="2" id="text-id1" class="form-control" type="text"/></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4LabeledWebViewTest >> testRenderContentOnWithFieldCommand [
 
 	| labeledView html |
@@ -92,7 +94,7 @@ Bootstrap4LabeledWebViewTest >> testRenderContentOnWithFieldCommand [
 			'<div class="form-group row"><label for="text-id1" class="col-md-2">E-Mail</label><div class="col-md-10"><input value="" name="2" id="text-id1" class="form-control" type="email"/></div></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4LabeledWebViewTest >> testRenderContentWithHelpText [
 
 	| labeledView html |

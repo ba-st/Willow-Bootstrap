@@ -6,21 +6,23 @@ Custom formatting options
 
 "
 Class {
-	#name : #BootstrapDatepickerFormat,
-	#superclass : #JSObject,
+	#name : 'BootstrapDatepickerFormat',
+	#superclass : 'JSObject',
 	#instVars : [
 		'options'
 	],
-	#category : #'Willow-Bootstrap-Datepicker'
+	#category : 'Willow-Bootstrap-Datepicker',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Datepicker'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapDatepickerFormat class >> formattingWith: aJSFormattingFunction parsingWith: aJSParsingFunction [
 
 	^ self new initializeFormattingWith: aJSFormattingFunction parsingWith: aJSParsingFunction
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapDatepickerFormat >> initializeFormattingWith: aJSFormattingFunction parsingWith: aJSParsingFunction [
 
 	options := GRSmallDictionary new.
@@ -29,7 +31,7 @@ BootstrapDatepickerFormat >> initializeFormattingWith: aJSFormattingFunction par
 		at: 'toValue' put: aJSParsingFunction
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 BootstrapDatepickerFormat >> javascriptContentOn: aStream [
 
 	aStream javascript: options

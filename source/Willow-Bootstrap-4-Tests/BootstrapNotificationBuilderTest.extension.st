@@ -1,6 +1,6 @@
-Extension { #name : #BootstrapNotificationBuilderTest }
+Extension { #name : 'BootstrapNotificationBuilderTest' }
 
-{ #category : #'*Willow-Bootstrap-4-Tests' }
+{ #category : '*Willow-Bootstrap-4-Tests' }
 BootstrapNotificationBuilderTest >> testDark [
 
 	| notification html |
@@ -14,7 +14,7 @@ BootstrapNotificationBuilderTest >> testDark [
 	self assert: html equals: '<div class="alert alert-dark" role="alert"></div>'
 ]
 
-{ #category : #'*Willow-Bootstrap-4-Tests' }
+{ #category : '*Willow-Bootstrap-4-Tests' }
 BootstrapNotificationBuilderTest >> testLight [
 
 	| notification html |
@@ -28,7 +28,7 @@ BootstrapNotificationBuilderTest >> testLight [
 	self assert: html equals: '<div class="alert alert-light" role="alert"></div>'
 ]
 
-{ #category : #'*Willow-Bootstrap-4-Tests' }
+{ #category : '*Willow-Bootstrap-4-Tests' }
 BootstrapNotificationBuilderTest >> testPrimary [
 
 	| notification html |
@@ -42,7 +42,7 @@ BootstrapNotificationBuilderTest >> testPrimary [
 	self assert: html equals: '<div class="alert alert-primary" role="alert"></div>'
 ]
 
-{ #category : #'*Willow-Bootstrap-4-Tests' }
+{ #category : '*Willow-Bootstrap-4-Tests' }
 BootstrapNotificationBuilderTest >> testSecondary [
 
 	| notification html |

@@ -1,20 +1,22 @@
 Class {
-	#name : #Bootstrap4ToggablePillsBuilderTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap4ToggablePillsBuilderTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap4ToggablePillsBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap4ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4ToggablePillsBuilderTest >> testCantBuildWithLessThanTwoPanes [
 
 	self
@@ -25,7 +27,7 @@ Bootstrap4ToggablePillsBuilderTest >> testCantBuildWithLessThanTwoPanes [
 			raise: AssertionFailed
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4ToggablePillsBuilderTest >> testRenderContentOn [
 
 	| tabs html |
@@ -43,7 +45,7 @@ Bootstrap4ToggablePillsBuilderTest >> testRenderContentOn [
 			 '<ul class="nav nav-pills" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="pill" aria-control="container-id1" href="#container-id1">Home</a></li><li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="pill" aria-control="container-id3" href="#container-id3">Profile</a></li></ul><div class="tab-content"><div id="container-id1" role="tabpanel" class="tab-pane active">The home page</div><div id="container-id3" role="tabpanel" class="tab-pane"><strong>This is my profile.</strong></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4ToggablePillsBuilderTest >> testRenderContentOnWithCommands [
 
 	| tabs html |

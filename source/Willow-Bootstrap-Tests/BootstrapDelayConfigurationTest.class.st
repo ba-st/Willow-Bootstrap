@@ -2,12 +2,14 @@
 A BootstrapDelayConfigurationTest is a test class for testing the behavior of BootstrapDelayConfiguration
 "
 Class {
-	#name : #BootstrapDelayConfigurationTest,
-	#superclass : #TestCase,
-	#category : 'Willow-Bootstrap-Tests-Plugins'
+	#name : 'BootstrapDelayConfigurationTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-Tests-Plugins',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Plugins'
 }
 
-{ #category : #'tests-printing' }
+{ #category : 'tests-printing' }
 BootstrapDelayConfigurationTest >> testJavascriptContentOn [
 
 	self

@@ -1,16 +1,18 @@
 Class {
-	#name : #Bootstrap4CheckboxWebViewTest,
-	#superclass : #BinaryChoiceWebViewTest,
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#name : 'Bootstrap4CheckboxWebViewTest',
+	#superclass : 'BinaryChoiceWebViewTest',
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 Bootstrap4CheckboxWebViewTest >> newBinaryChoiceView [
 
 	^ Bootstrap4CheckboxWebView onModel: true offModel: false
 ]
 
-{ #category : #'tests-configuring' }
+{ #category : 'tests-configuring' }
 Bootstrap4CheckboxWebViewTest >> testBeIdentifiable [
 
 	| html checkbox |
@@ -25,7 +27,7 @@ Bootstrap4CheckboxWebViewTest >> testBeIdentifiable [
 			'<div class="form-check"><input id="checkbox-id1" class="form-check-input position-static" checked name="2" type="checkbox"/><input name="3" type="hidden"/></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4CheckboxWebViewTest >> testIdentifierOn [
 
 	| html checkbox |
@@ -43,7 +45,7 @@ Bootstrap4CheckboxWebViewTest >> testIdentifierOn [
 			'<div class="form-check"><input id="checkbox-id1" class="form-check-input position-static" checked name="3" type="checkbox"/><input name="4" type="hidden"/></div>'
 ]
 
-{ #category : #'tests-configuring' }
+{ #category : 'tests-configuring' }
 Bootstrap4CheckboxWebViewTest >> testOn [
 
 	| html binaryChoiceView |
@@ -58,7 +60,7 @@ Bootstrap4CheckboxWebViewTest >> testOn [
 			'<div class="form-check"><input class="form-check-input position-static" checked name="1" id="input-id2" type="checkbox"/><input name="3" type="hidden"/></div><script type="text/javascript">$("#input-id2").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4CheckboxWebViewTest >> testRenderingAfterUpdatingModel [
 
 	| html checkbox |
@@ -83,7 +85,7 @@ Bootstrap4CheckboxWebViewTest >> testRenderingAfterUpdatingModel [
 			'<div class="form-check willow"><input class="willow form-check-input position-static" checked name="1" type="checkbox"/><input name="2" type="hidden"/></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4CheckboxWebViewTest >> testRenderingWithLabel [
 
 	| html checkbox |
@@ -102,7 +104,7 @@ Bootstrap4CheckboxWebViewTest >> testRenderingWithLabel [
 			'<div class="form-check willow"><input id="checkbox-id1" class="willow form-check-input" checked name="3" type="checkbox"/><input name="4" type="hidden"/><label for="checkbox-id1" class="form-check-label">Enable network</label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4CheckboxWebViewTest >> testRenderingWithLabelAndCustomStyle [
 
 	| html checkbox |
@@ -123,7 +125,7 @@ Bootstrap4CheckboxWebViewTest >> testRenderingWithLabelAndCustomStyle [
 			'<div class="custom-control custom-checkbox willow"><input id="checkbox-id1" class="willow custom-control-input" checked name="3" type="checkbox"/><input name="4" type="hidden"/><label for="checkbox-id1" class="custom-control-label">Enable network</label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4CheckboxWebViewTest >> testRenderingWithLabelAsSwitch [
 
 	| html checkbox |
@@ -144,7 +146,7 @@ Bootstrap4CheckboxWebViewTest >> testRenderingWithLabelAsSwitch [
 			'<div class="custom-control custom-switch willow"><input id="checkbox-id1" class="willow custom-control-input" checked name="3" type="checkbox"/><input name="4" type="hidden"/><label for="checkbox-id1" class="custom-control-label">Enable network</label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4CheckboxWebViewTest >> testWithNonBooleanModels [
 
 	| html checkbox |

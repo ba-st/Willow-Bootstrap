@@ -1,6 +1,6 @@
-Extension { #name : #WebComponentCommand }
+Extension { #name : 'WebComponentCommand' }
 
-{ #category : #'*Willow-Bootstrap' }
+{ #category : '*Willow-Bootstrap' }
 WebComponentCommand >> isNullCommand [
 
 	^false

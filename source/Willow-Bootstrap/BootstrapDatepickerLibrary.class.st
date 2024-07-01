@@ -2,51 +2,53 @@
 I'm an abstract library for Bootstrap Datepicker
 "
 Class {
-	#name : #BootstrapDatepickerLibrary,
-	#superclass : #WADeploymentAwareFileMetadataLibrary,
+	#name : 'BootstrapDatepickerLibrary',
+	#superclass : 'WADeploymentAwareFileMetadataLibrary',
 	#instVars : [
 		'locale'
 	],
-	#category : #'Willow-Bootstrap-Datepicker'
+	#category : 'Willow-Bootstrap-Datepicker',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Datepicker'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 BootstrapDatepickerLibrary class >> default [
 
 	^ super default initializeUsing: (WALocale fromString: 'en')
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapDatepickerLibrary class >> forDeployment [
 
 	^ BootstrapDatepickerDeploymentLibrary 
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapDatepickerLibrary class >> forDevelopment [
 
 	^ BootstrapDatepickerDevelopmentLibrary
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapDatepickerLibrary class >> libraryName [
 
 	^ 'bootstrap-datepicker'
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 BootstrapDatepickerLibrary class >> using: aWALocale [
 
 	^ self new initializeUsing: aWALocale
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapDatepickerLibrary class >> version [
 
 	^ '1.10.0'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapDatepickerLibrary >> initializeUsing: aWALocale [
 
 	locale := aWALocale

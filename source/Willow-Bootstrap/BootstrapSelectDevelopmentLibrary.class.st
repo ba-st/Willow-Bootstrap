@@ -2,12 +2,14 @@
 I'm a WALibary serving the files in source form, suitable for development
 "
 Class {
-	#name : #BootstrapSelectDevelopmentLibrary,
-	#superclass : #BootstrapSelectLibrary,
-	#category : #'Willow-Bootstrap-Select'
+	#name : 'BootstrapSelectDevelopmentLibrary',
+	#superclass : 'BootstrapSelectLibrary',
+	#category : 'Willow-Bootstrap-Select',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Select'
 }
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> cssbootstrapselectCss [
 
 	^ WAFileLibraryResource
@@ -17,7 +19,7 @@ BootstrapSelectDevelopmentLibrary >> cssbootstrapselectCss [
 		contents: (GRDelayedSend receiver: self selector: #cssbootstrapselectCssContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> cssbootstrapselectCssContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -481,7 +483,7 @@ select.selectpicker {
 /*# sourceMappingURL=bootstrap-select.css.map */'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJs [
 
 	^ WAFileLibraryResource
@@ -491,7 +493,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJs [
 		contents: (GRDelayedSend receiver: self selector: #jsbootstrapselectJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -3743,7 +3745,7 @@ BootstrapSelectDevelopmentLibrary >> jsbootstrapselectJsContent [
 //# sourceMappingURL=bootstrap-select.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJs [
 
 	^ WAFileLibraryResource
@@ -3753,7 +3755,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsamETJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -3803,7 +3805,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsamETJsContent [
 //# sourceMappingURL=defaults-am_ET.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJs [
 
 	^ WAFileLibraryResource
@@ -3813,7 +3815,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsarARJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -3868,7 +3870,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsarARJsContent [
 //# sourceMappingURL=defaults-ar_AR.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsbgBGJs [
 
 	^ WAFileLibraryResource
@@ -3878,7 +3880,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsbgBGJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsbgBGJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsbgBGJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -3928,7 +3930,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsbgBGJsContent [
 //# sourceMappingURL=defaults-bg_BG.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJs [
 
 	^ WAFileLibraryResource
@@ -3938,7 +3940,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultscsCZJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -3981,7 +3983,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultscsCZJsContent [
 //# sourceMappingURL=defaults-cs_CZ.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJs [
 
 	^ WAFileLibraryResource
@@ -3991,7 +3993,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsdaDKJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4041,7 +4043,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdaDKJsContent [
 //# sourceMappingURL=defaults-da_DK.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJs [
 
 	^ WAFileLibraryResource
@@ -4051,7 +4053,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsdeDEJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4101,7 +4103,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsdeDEJsContent [
 //# sourceMappingURL=defaults-de_DE.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJs [
 
 	^ WAFileLibraryResource
@@ -4111,7 +4113,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsenUSJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4161,7 +4163,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsenUSJsContent [
 //# sourceMappingURL=defaults-en_US.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJs [
 
 	^ WAFileLibraryResource
@@ -4171,7 +4173,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsesCLJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4214,7 +4216,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesCLJsContent [
 //# sourceMappingURL=defaults-es_CL.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJs [
 
 	^ WAFileLibraryResource
@@ -4224,7 +4226,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsesESJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4267,7 +4269,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsesESJsContent [
 //# sourceMappingURL=defaults-es_ES.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJs [
 
 	^ WAFileLibraryResource
@@ -4277,7 +4279,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsetEEJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4327,7 +4329,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsetEEJsContent [
 //# sourceMappingURL=defaults-et_EE.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJs [
 
 	^ WAFileLibraryResource
@@ -4337,7 +4339,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultseuJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4380,7 +4382,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultseuJsContent [
 //# sourceMappingURL=defaults-eu.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJs [
 
 	^ WAFileLibraryResource
@@ -4390,7 +4392,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfaIRJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4433,7 +4435,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfaIRJsContent [
 //# sourceMappingURL=defaults-fa_IR.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJs [
 
 	^ WAFileLibraryResource
@@ -4443,7 +4445,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfiFIJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4493,7 +4495,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfiFIJsContent [
 //# sourceMappingURL=defaults-fi_FI.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJs [
 
 	^ WAFileLibraryResource
@@ -4503,7 +4505,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsfrFRJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4553,7 +4555,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsfrFRJsContent [
 //# sourceMappingURL=defaults-fr_FR.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJs [
 
 	^ WAFileLibraryResource
@@ -4563,7 +4565,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultshrHRJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4613,7 +4615,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshrHRJsContent [
 //# sourceMappingURL=defaults-hr_HR.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJs [
 
 	^ WAFileLibraryResource
@@ -4623,7 +4625,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultshuHUJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4673,7 +4675,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultshuHUJsContent [
 //# sourceMappingURL=defaults-hu_HU.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJs [
 
 	^ WAFileLibraryResource
@@ -4683,7 +4685,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsidIDJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4726,7 +4728,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsidIDJsContent [
 //# sourceMappingURL=defaults-id_ID.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJs [
 
 	^ WAFileLibraryResource
@@ -4736,7 +4738,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsitITJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4781,7 +4783,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsitITJsContent [
 //# sourceMappingURL=defaults-it_IT.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJs [
 
 	^ WAFileLibraryResource
@@ -4791,7 +4793,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsjaJPJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4834,7 +4836,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsjaJPJsContent [
 //# sourceMappingURL=defaults-ja_JP.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJs [
 
 	^ WAFileLibraryResource
@@ -4844,7 +4846,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultskhKMJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4894,7 +4896,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskhKMJsContent [
 //# sourceMappingURL=defaults-kh_KM.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJs [
 
 	^ WAFileLibraryResource
@@ -4904,7 +4906,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultskoKRJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -4954,7 +4956,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultskoKRJsContent [
 //# sourceMappingURL=defaults-ko_KR.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJs [
 
 	^ WAFileLibraryResource
@@ -4964,7 +4966,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsltLTJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5014,7 +5016,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsltLTJsContent [
 //# sourceMappingURL=defaults-lt_LT.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJs [
 
 	^ WAFileLibraryResource
@@ -5024,7 +5026,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultslvLVJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5074,7 +5076,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultslvLVJsContent [
 //# sourceMappingURL=defaults-lv_LV.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJs [
 
 	^ WAFileLibraryResource
@@ -5084,7 +5086,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsnbNOJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5134,7 +5136,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnbNOJsContent [
 //# sourceMappingURL=defaults-nb_NO.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJs [
 
 	^ WAFileLibraryResource
@@ -5144,7 +5146,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsnlNLJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5187,7 +5189,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsnlNLJsContent [
 //# sourceMappingURL=defaults-nl_NL.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJs [
 
 	^ WAFileLibraryResource
@@ -5197,7 +5199,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsplPLJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5240,7 +5242,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsplPLJsContent [
 //# sourceMappingURL=defaults-pl_PL.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJs [
 
 	^ WAFileLibraryResource
@@ -5250,7 +5252,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsptBRJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5293,7 +5295,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptBRJsContent [
 //# sourceMappingURL=defaults-pt_BR.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJs [
 
 	^ WAFileLibraryResource
@@ -5303,7 +5305,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsptPTJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5346,7 +5348,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsptPTJsContent [
 //# sourceMappingURL=defaults-pt_PT.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJs [
 
 	^ WAFileLibraryResource
@@ -5356,7 +5358,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsroROJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5400,7 +5402,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsroROJsContent [
 //# sourceMappingURL=defaults-ro_RO.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJs [
 
 	^ WAFileLibraryResource
@@ -5410,7 +5412,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsruRUJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5454,7 +5456,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsruRUJsContent [
 //# sourceMappingURL=defaults-ru_RU.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJs [
 
 	^ WAFileLibraryResource
@@ -5464,7 +5466,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsskSKJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5507,7 +5509,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsskSKJsContent [
 //# sourceMappingURL=defaults-sk_SK.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJs [
 
 	^ WAFileLibraryResource
@@ -5517,7 +5519,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsslSIJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5565,7 +5567,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsslSIJsContent [
 //# sourceMappingURL=defaults-sl_SI.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssrSPJs [
 
 	^ WAFileLibraryResource
@@ -5575,7 +5577,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssrSPJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultssrSPJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssrSPJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5625,7 +5627,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssrSPJsContent [
 //# sourceMappingURL=defaults-sr_SP.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJs [
 
 	^ WAFileLibraryResource
@@ -5635,7 +5637,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultssvSEJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5685,7 +5687,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultssvSEJsContent [
 //# sourceMappingURL=defaults-sv_SE.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsthTHJs [
 
 	^ WAFileLibraryResource
@@ -5695,7 +5697,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsthTHJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsthTHJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsthTHJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5738,7 +5740,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsthTHJsContent [
 //# sourceMappingURL=defaults-th_TH.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJs [
 
 	^ WAFileLibraryResource
@@ -5748,7 +5750,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultstrTRJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5798,7 +5800,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultstrTRJsContent [
 //# sourceMappingURL=defaults-tr_TR.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJs [
 
 	^ WAFileLibraryResource
@@ -5808,7 +5810,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsuaUAJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5851,7 +5853,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsuaUAJsContent [
 //# sourceMappingURL=defaults-ua_UA.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJs [
 
 	^ WAFileLibraryResource
@@ -5861,7 +5863,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultsviVNJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5911,7 +5913,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultsviVNJsContent [
 //# sourceMappingURL=defaults-vi_VN.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJs [
 
 	^ WAFileLibraryResource
@@ -5921,7 +5923,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultszhCNJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -5964,7 +5966,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhCNJsContent [
 //# sourceMappingURL=defaults-zh_CN.js.map'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhTWJs [
 
 	^ WAFileLibraryResource
@@ -5974,7 +5976,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhTWJs [
 		contents: (GRDelayedSend receiver: self selector: #jsi18ndefaultszhTWJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhTWJsContent [
 	^ '/*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
@@ -6017,7 +6019,7 @@ BootstrapSelectDevelopmentLibrary >> jsi18ndefaultszhTWJsContent [
 //# sourceMappingURL=defaults-zh_TW.js.map'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BootstrapSelectDevelopmentLibrary >> selectorsToInclude [
 
 	^ OrderedCollection new

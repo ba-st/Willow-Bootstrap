@@ -2,18 +2,20 @@
 I'm a radio button group specifically designed to use the html structure required by Bootstrap.
 "
 Class {
-	#name : #BootstrapRadioWebView,
-	#superclass : #SingleSelectionWebViewBehavior,
+	#name : 'BootstrapRadioWebView',
+	#superclass : 'SingleSelectionWebViewBehavior',
 	#instVars : [
 		'interactionInterpreter',
 		'renderingBlock',
 		'labelCommand',
 		'inputCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 BootstrapRadioWebView class >> renderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
 
 	^self new
@@ -22,7 +24,7 @@ BootstrapRadioWebView class >> renderingWith: aRenderingBlock applyingToLabel: a
 		applyingToInput: anInputCommand asWebComponentCommand
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapRadioWebView >> initializeRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
 
 	renderingBlock := aRenderingBlock.
@@ -31,19 +33,19 @@ BootstrapRadioWebView >> initializeRenderingWith: aRenderingBlock applyingToLabe
 	interactionInterpreter := EventInterpreterDispatcher defaultingToChange
 ]
 
-{ #category : #'private - accessing' }
+{ #category : 'private - accessing' }
 BootstrapRadioWebView >> inputCommand [
 
 	^ inputCommand
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapRadioWebView >> on [
 
 	^ interactionInterpreter
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapRadioWebView >> renderContentOn: aCanvas [
 
 	aCanvas radioGroup
@@ -53,7 +55,7 @@ BootstrapRadioWebView >> renderContentOn: aCanvas [
 			availableElements do: [ :element | self renderRadioButtonFor: element asPartOf: radioGroup on: aCanvas ] ]
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 BootstrapRadioWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas [
 
 	| radioButton radioButtonId |
@@ -69,13 +71,13 @@ BootstrapRadioWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCa
 	^ radioButton
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 BootstrapRadioWebView >> renderLabelContentFor: anElement on: aCanvas [
 
 	aCanvas render: (renderingBlock value: anElement)
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 BootstrapRadioWebView >> renderRadioButtonFor: anElement asPartOf: aRadioGroup on: aCanvas [
 
 	self subclassResponsibility

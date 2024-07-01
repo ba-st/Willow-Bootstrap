@@ -2,24 +2,26 @@
 A Bootstrap3MetadataLibraryTest is a test class for testing the behavior of Bootstrap3MetadataLibrary
 "
 Class {
-	#name : #Bootstrap3MetadataLibraryTest,
-	#superclass : #TestCase,
-	#category : #'Willow-Bootstrap-3-Tests-Libraries'
+	#name : 'Bootstrap3MetadataLibraryTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-3-Tests-Libraries',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3MetadataLibraryTest >> testForDeployment [
 
 	self assert: Bootstrap3MetadataLibrary forDeployment equals: Bootstrap3DeploymentMetadataLibrary
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3MetadataLibraryTest >> testForDevelopment [
 
 	self assert: Bootstrap3MetadataLibrary forDevelopment equals: Bootstrap3DevelopmentMetadataLibrary
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3MetadataLibraryTest >> testVersionCompatibility [
 
 	self

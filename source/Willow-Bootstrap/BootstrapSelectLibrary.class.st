@@ -2,51 +2,53 @@
 I'm an abstract library for Bootstrap Select
 "
 Class {
-	#name : #BootstrapSelectLibrary,
-	#superclass : #WADeploymentAwareFileMetadataLibrary,
+	#name : 'BootstrapSelectLibrary',
+	#superclass : 'WADeploymentAwareFileMetadataLibrary',
 	#instVars : [
 		'locale'
 	],
-	#category : #'Willow-Bootstrap-Select'
+	#category : 'Willow-Bootstrap-Select',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Select'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 BootstrapSelectLibrary class >> default [
 
 	^ super default initializeUsing: (WALocale fromString: 'en-US')
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapSelectLibrary class >> forDeployment [
 
 	^ BootstrapSelectDeploymentLibrary
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapSelectLibrary class >> forDevelopment [
 
 	^ BootstrapSelectDevelopmentLibrary
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapSelectLibrary class >> libraryName [
 
 	^ 'bootstrap-select'
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 BootstrapSelectLibrary class >> using: aWALocale [
 
 	^ self new initializeUsing: aWALocale
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapSelectLibrary class >> version [
 
 	^'1.13.18'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapSelectLibrary >> initializeUsing: aWALocale [
 
 	locale := aWALocale

@@ -2,30 +2,32 @@
 A BootstrapDatePickerWebViewTest is a test class for testing the behavior of BootstrapDatePickerWebView
 "
 Class {
-	#name : #Bootstrap3DatePickerWebViewTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#name : 'Bootstrap3DatePickerWebViewTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3DatePickerWebViewTest >> componentSupplier [
 
 	^ Bootstrap3ComponentSupplier online
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3DatePickerWebViewTest >> createHandlers [
 
 	^ Array with: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3DatePickerWebViewTest >> isSession [
 
 	^ true
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3DatePickerWebViewTest >> testRenderContentOn [
 
 	| html |
@@ -38,7 +40,7 @@ Bootstrap3DatePickerWebViewTest >> testRenderContentOn [
 			'<div class="input-group date" data-provide="datepicker"><input value="" name="1" type="text"/><div class="input-group-addon"><small><span class="glyphicon glyphicon-triangle-bottom"></span></small></div></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3DatePickerWebViewTest >> testRenderContentOnWithCommands [
 
 	| html |

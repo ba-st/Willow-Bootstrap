@@ -2,45 +2,47 @@
 I'm a WALibary serving the files from the official CDN.
 "
 Class {
-	#name : #BootstrapSelectOnlineLibrary,
-	#superclass : #WAOnlineLibrary,
+	#name : 'BootstrapSelectOnlineLibrary',
+	#superclass : 'WAOnlineLibrary',
 	#instVars : [
 		'locale'
 	],
-	#category : #'Willow-Bootstrap-Select'
+	#category : 'Willow-Bootstrap-Select',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Select'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BootstrapSelectOnlineLibrary class >> default [
 
 	^self inUSEnglish 
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapSelectOnlineLibrary class >> inSpanish [
 
 	^ self using: (WALocale fromString: 'es-ES')
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapSelectOnlineLibrary class >> inUSEnglish [
 
 	^ self using: (WALocale fromString: 'en-US')
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapSelectOnlineLibrary class >> using: aWALocale [
 
 	^ self new initializeUsing: aWALocale
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapSelectOnlineLibrary >> initializeUsing: aWALocale [
 
 	locale := aWALocale
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapSelectOnlineLibrary >> updateLocaleIn: aRoot [
 
 	| fileName |
@@ -49,7 +51,7 @@ BootstrapSelectOnlineLibrary >> updateLocaleIn: aRoot [
 	aRoot javascript url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/js/i18n/<2s>.min.js' expandMacrosWith: self version with: fileName)
 ]
 
-{ #category : #Updating }
+{ #category : 'Updating' }
 BootstrapSelectOnlineLibrary >> updateRoot: aRoot [
 
 	aRoot stylesheet
@@ -61,7 +63,7 @@ BootstrapSelectOnlineLibrary >> updateRoot: aRoot [
 	self updateLocaleIn: aRoot 
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapSelectOnlineLibrary >> version [
 
 	^'1.13.18'

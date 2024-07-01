@@ -2,12 +2,14 @@
 A BootstrapDropdownTest is a test class for testing the behavior of BootstrapDropdown
 "
 Class {
-	#name : #BootstrapDropdownTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Plugins'
+	#name : 'BootstrapDropdownTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Plugins',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Plugins'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 
 	^ self
@@ -35,7 +37,7 @@ BootstrapDropdownTest >> renderDropdownContentApplying: aBlock [
 			]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDropdownTest >> testCallViaJavascript [
 
 	| html |
@@ -47,7 +49,7 @@ BootstrapDropdownTest >> testCallViaJavascript [
 			'<div class="dropdown"><a id="id1" data-target="dropdown" role="button">Menu</a><ul class="dropdown-menu"><li>Menu option</li><li>Other option</li></ul></div><script type="text/javascript">$("#id1").dropdown();</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDropdownTest >> testOnHidden [
 
 	| html |
@@ -56,7 +58,7 @@ BootstrapDropdownTest >> testOnHidden [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("hidden.bs.dropdown",function(){});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDropdownTest >> testOnHide [
 
 	| html |
@@ -65,7 +67,7 @@ BootstrapDropdownTest >> testOnHide [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("hide.bs.dropdown",function(){});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDropdownTest >> testOnShow [
 
 	| html |
@@ -74,7 +76,7 @@ BootstrapDropdownTest >> testOnShow [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("show.bs.dropdown",function(){});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDropdownTest >> testOnShown [
 
 	| html |
@@ -83,7 +85,7 @@ BootstrapDropdownTest >> testOnShown [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("shown.bs.dropdown",function(){});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDropdownTest >> testToggle [
 
 	| html |

@@ -2,12 +2,14 @@
 A BootstrapGridBuilderTest is a test class for testing the behavior of BootstrapGridBuilder
 "
 Class {
-	#name : #Bootstrap3GridBuilderTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#name : 'Bootstrap3GridBuilderTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3GridBuilderTest >> testApplyingCellCommand [
 
 	| grid html |
@@ -28,7 +30,7 @@ Bootstrap3GridBuilderTest >> testApplyingCellCommand [
 			'<div class="row"><div class="col-md-6 small">1</div><div class="col-md-6 small">2</div></div><div class="row"><div class="col-md-6 small">3</div><div class="col-md-6 small">4</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3GridBuilderTest >> testApplyingRowCommand [
 
 	| grid html |
@@ -49,7 +51,7 @@ Bootstrap3GridBuilderTest >> testApplyingRowCommand [
 			'<div class="row small"><div class="col-md-4">1</div><div class="col-md-4">2</div><div class="col-md-4">3</div></div><div class="row small"><div class="col-md-4">4</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3GridBuilderTest >> testEvenlyDistributed [
 
 	| grid html |
@@ -67,7 +69,7 @@ Bootstrap3GridBuilderTest >> testEvenlyDistributed [
 	self assert: html equals: '<div class="row"><div class="col-md-4">1</div><div class="col-md-4">2</div><div class="col-md-4">3</div></div><div class="row"><div class="col-md-4">4</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3GridBuilderTest >> testForExtraSmallDevices [
 
 	| grid html |
@@ -82,7 +84,7 @@ Bootstrap3GridBuilderTest >> testForExtraSmallDevices [
 	self assert: html equals: '<div class="row"><div class="col-xs-6">1</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3GridBuilderTest >> testForLargeDevices [
 
 	| grid html |
@@ -97,7 +99,7 @@ Bootstrap3GridBuilderTest >> testForLargeDevices [
 	self assert: html equals: '<div class="row"><div class="col-lg-6">1</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3GridBuilderTest >> testForSmallDevices [
 
 	| grid html |
@@ -112,7 +114,7 @@ Bootstrap3GridBuilderTest >> testForSmallDevices [
 	self assert: html equals: '<div class="row"><div class="col-sm-6">1</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3GridBuilderTest >> testWithCustomColumnWidths [
 
 	| grid html |

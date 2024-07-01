@@ -2,12 +2,14 @@
 A WillowBootstrapFileMetadataLibraryTest is a test class for testing the behavior of WillowBootstrapFileMetadataLibrary
 "
 Class {
-	#name : #WillowBootstrapFileMetadataLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Libraries'
+	#name : 'WillowBootstrapFileMetadataLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Libraries',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrapFileMetadataLibraryTest >> testCssContent [
 
 	self
@@ -18,7 +20,7 @@ WillowBootstrapFileMetadataLibraryTest >> testCssContent [
 
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrapFileMetadataLibraryTest >> testDeployFiles [
 
 	self
@@ -29,7 +31,7 @@ WillowBootstrapFileMetadataLibraryTest >> testDeployFiles [
 			('willow-bootstrap-8.0.0/js/willow-bootstrap.js' -> '92bbb3f8ff706f6742b28e2791151e2184ebcd4e')}
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrapFileMetadataLibraryTest >> testForDevelopment [
 
 	self
@@ -37,7 +39,7 @@ WillowBootstrapFileMetadataLibraryTest >> testForDevelopment [
 		assert: WillowBootstrapFileMetadataLibrary forDevelopment equals: WillowBootstrapFileMetadataLibrary
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrapFileMetadataLibraryTest >> testIsForDevelopment [
 
 	self
@@ -45,7 +47,7 @@ WillowBootstrapFileMetadataLibraryTest >> testIsForDevelopment [
 		assert: WillowBootstrapFileMetadataLibrary isForDeployment
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrapFileMetadataLibraryTest >> testJavascriptContent [
 
 	self
@@ -56,7 +58,7 @@ WillowBootstrapFileMetadataLibraryTest >> testJavascriptContent [
 
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrapFileMetadataLibraryTest >> testVersion [
 
 	self assert: WillowBootstrapFileMetadataLibrary version equals: WillowBootstrapFileMetadataLibrary default version

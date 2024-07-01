@@ -2,8 +2,8 @@
 I'm a builder easing the creation of bootstrap modals.
 "
 Class {
-	#name : #BootstrapModalBuilder,
-	#superclass : #WillowComponentBuilder,
+	#name : 'BootstrapModalBuilder',
+	#superclass : 'WillowComponentBuilder',
 	#instVars : [
 		'headerBinding',
 		'content',
@@ -11,28 +11,30 @@ Class {
 		'additionalFooterButtons',
 		'dialogCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalBuilder >> addFooterButton: aButton [
 
 	additionalFooterButtons add: aButton
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalBuilder >> applyingToDialog: aDialogCommand [
 
 	dialogCommand := dialogCommand + aDialogCommand
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalBuilder >> beSelfCleaning [
 
 	self applyingToDialog: BootstrapSelfCleaningModalCommand new
 ]
 
-{ #category : #building }
+{ #category : 'building' }
 BootstrapModalBuilder >> buildApplying: aDocumentCommand [
 
 	^ BootstrapModalWebView
@@ -43,25 +45,25 @@ BootstrapModalBuilder >> buildApplying: aDocumentCommand [
 		andModalDocument: aDocumentCommand
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalBuilder >> closeButtonLabeled: aRenderable applying: aCommand [
 
 	footerCloseButton := BootstrapModalFooterWebView closeButtonLabeled: aRenderable applying: aCommand
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalBuilder >> dismissableHeaderTitled: aRenderable [
 
 	headerBinding := Binding to: (BootstrapModalHeaderWebView dismissableTitled: aRenderable)
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalBuilder >> headerTitled: aRenderable [
 
 	headerBinding := Binding to: (BootstrapModalHeaderWebView titled: aRenderable)
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapModalBuilder >> initialize [
 
 	super initialize.
@@ -74,7 +76,7 @@ BootstrapModalBuilder >> initialize [
 	dialogCommand := [  ] asWebComponentCommand
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalBuilder >> wrapping: theContent [
 
 	content := theContent 

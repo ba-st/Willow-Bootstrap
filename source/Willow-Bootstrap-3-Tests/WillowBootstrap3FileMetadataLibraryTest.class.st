@@ -1,10 +1,12 @@
 Class {
-	#name : #WillowBootstrap3FileMetadataLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-Libraries'
+	#name : 'WillowBootstrap3FileMetadataLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-Libraries',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrap3FileMetadataLibraryTest >> testCssContent [
 
 	self
@@ -15,7 +17,7 @@ WillowBootstrap3FileMetadataLibraryTest >> testCssContent [
 
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrap3FileMetadataLibraryTest >> testDeployFiles [
 
 	self
@@ -26,7 +28,7 @@ WillowBootstrap3FileMetadataLibraryTest >> testDeployFiles [
 			('willow-bootstrap-8.0.0/js/willow-bootstrap.js' -> 'f6a952e7149bb03d6f767b9523aed49b20372222')}
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrap3FileMetadataLibraryTest >> testForDevelopment [
 
 	self
@@ -34,7 +36,7 @@ WillowBootstrap3FileMetadataLibraryTest >> testForDevelopment [
 		assert: WillowBootstrap3FileMetadataLibrary forDevelopment equals: WillowBootstrap3FileMetadataLibrary
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrap3FileMetadataLibraryTest >> testIsForDevelopment [
 
 	self
@@ -42,7 +44,7 @@ WillowBootstrap3FileMetadataLibraryTest >> testIsForDevelopment [
 		assert: WillowBootstrap3FileMetadataLibrary isForDeployment
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrap3FileMetadataLibraryTest >> testJavascriptContent [
 
 	self
@@ -64,7 +66,7 @@ WillowBootstrap3FileMetadataLibraryTest >> testJavascriptContent [
 
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 WillowBootstrap3FileMetadataLibraryTest >> testVersion [
 
 	self assert: WillowBootstrap3FileMetadataLibrary version equals: WillowBootstrapFileMetadataLibrary default version

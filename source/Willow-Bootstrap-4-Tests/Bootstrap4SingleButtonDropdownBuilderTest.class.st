@@ -1,20 +1,22 @@
 Class {
-	#name : #Bootstrap4SingleButtonDropdownBuilderTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap4SingleButtonDropdownBuilderTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap4SingleButtonDropdownBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap4ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4SingleButtonDropdownBuilderTest >> testRenderContentOn [
 
 	| button html |
@@ -33,7 +35,7 @@ Bootstrap4SingleButtonDropdownBuilderTest >> testRenderContentOn [
 			'<div class="dropdown"><button class="btn dropdown-toggle btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">Dropdown</button><div class="dropdown-menu"><a id="a-id1" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4SingleButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 
 	| button html |

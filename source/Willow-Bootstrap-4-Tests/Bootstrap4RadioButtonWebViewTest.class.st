@@ -1,10 +1,12 @@
 Class {
-	#name : #Bootstrap4RadioButtonWebViewTest,
-	#superclass : #SingleSelectionWebViewBehaviorTest,
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#name : 'Bootstrap4RadioButtonWebViewTest',
+	#superclass : 'SingleSelectionWebViewBehaviorTest',
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #support }
+{ #category : 'support' }
 Bootstrap4RadioButtonWebViewTest >> newSingleSelectionView [
 
 	^ self supplier
@@ -14,13 +16,13 @@ Bootstrap4RadioButtonWebViewTest >> newSingleSelectionView [
 		applyingToInput: [  ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap4RadioButtonWebViewTest >> supplier [
 
 	^ Bootstrap4ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4RadioButtonWebViewTest >> testBeIdentifiable [
 
 	| radiobuttonGroup html |
@@ -41,7 +43,7 @@ Bootstrap4RadioButtonWebViewTest >> testBeIdentifiable [
 			'<div id="radio-button-id1" class="btn-group btn-group-toggle bg-primary" data-toggle="buttons" role="group"><label class="btn willow-disabled-component"><input name="2" id="radio-button-id1" value="1" type="radio"/>A</label><label class="btn willow-disabled-component"><input name="2" id="radio-button-id1" value="2" type="radio"/>B</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4RadioButtonWebViewTest >> testOnTrigger [
 
 	| radioButtonGroup html |
@@ -57,7 +59,7 @@ Bootstrap4RadioButtonWebViewTest >> testOnTrigger [
 			'<div class="btn-group btn-group-toggle" data-toggle="buttons" role="group"><label class="btn"><input name="1" id="input-id2" value="1" type="radio"/>Buenos Aires</label><label class="btn"><input name="1" id="input-id3" value="2" type="radio"/>CABA</label></div><script type="text/javascript">$("#input-id2").change(function(event){$(this).prop("disabled",true)});$("#input-id3").change(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4RadioButtonWebViewTest >> testRenderContentOnWithElements [
 
 	| radiobuttonGroup html |
@@ -71,7 +73,7 @@ Bootstrap4RadioButtonWebViewTest >> testRenderContentOnWithElements [
 			'<div class="btn-group btn-group-toggle" data-toggle="buttons" role="group"><label class="btn"><input name="1" value="1" type="radio"/>Buenos Aires</label><label class="btn"><input name="1" value="2" type="radio"/>CABA</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4RadioButtonWebViewTest >> testRenderContentOnWithElementsAndSomethingSelected [
 
 	| radiobuttonGroup html |
@@ -97,7 +99,7 @@ Bootstrap4RadioButtonWebViewTest >> testRenderContentOnWithElementsAndSomethingS
 			'<div class="btn-group btn-group-toggle" data-toggle="buttons" role="group"><label class="btn"><input name="1" value="1" type="radio"/>Buenos Aires</label><label class="btn active"><input name="1" checked value="2" type="radio"/>CABA</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4RadioButtonWebViewTest >> testRenderingWhenEmptyDoesNotProduceOnlyMainDivHTMLContent [
 
 	| radiobuttonGroup html |
@@ -110,7 +112,7 @@ Bootstrap4RadioButtonWebViewTest >> testRenderingWhenEmptyDoesNotProduceOnlyMain
 		equals: '<div class="btn-group btn-group-toggle" data-toggle="buttons" role="group"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4RadioButtonWebViewTest >> testRenderingWithApplying [
 
 	| radiobuttonGroup html |
@@ -130,7 +132,7 @@ Bootstrap4RadioButtonWebViewTest >> testRenderingWithApplying [
 			'<div class="btn-group btn-group-toggle" data-toggle="buttons" role="group"><label class="btn willow-disabled-component"><input name="1" value="1" type="radio"/>A</label><label class="btn willow-disabled-component"><input name="1" value="2" type="radio"/>B</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4RadioButtonWebViewTest >> testRenderingWithApplyingCommandToContainer [
 
 	| radiobuttonGroup html |

@@ -5,15 +5,17 @@ I'm not intended to be used directly, but with the mediation of the component su
 the markup depends on the bootstrap version.
 "
 Class {
-	#name : #BootstrapLabeledFieldWebView,
-	#superclass : #WAPainter,
+	#name : 'BootstrapLabeledFieldWebView',
+	#superclass : 'WAPainter',
 	#instVars : [
 		'formGroupContainer'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapLabeledFieldWebView class >> applying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	^ self new
@@ -26,7 +28,7 @@ BootstrapLabeledFieldWebView class >> applying: aCommandToContainer displaying: 
 		applying: aCommandToField asWebComponentCommand
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapLabeledFieldWebView class >> displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	^ self
@@ -37,7 +39,7 @@ BootstrapLabeledFieldWebView class >> displaying: thePhrasingContent applying: a
 		applying: aCommandToField
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapLabeledFieldWebView >> initializeApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	| fieldToRender |
@@ -62,13 +64,13 @@ BootstrapLabeledFieldWebView >> initializeApplying: aCommandToContainer displayi
 		applying: aCommandToContainer
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapLabeledFieldWebView >> renderContentOn: aCanvas [
 
 	aCanvas render: formGroupContainer
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 BootstrapLabeledFieldWebView >> renderLabelFor: fieldIdentifier displaying: thePhrasingContent on: canvas applying: aCommandToLabel [
 
 	canvas label

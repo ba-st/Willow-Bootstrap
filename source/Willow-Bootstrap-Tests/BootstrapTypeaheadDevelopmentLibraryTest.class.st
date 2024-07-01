@@ -2,12 +2,14 @@
 PA BootstrapTypeaheadDevelopmentLibraryTest is a test class for testing the behavior of BootstrapTypeaheadDevelopmentLibrary
 "
 Class {
-	#name : #BootstrapTypeaheadDevelopmentLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Typeahead'
+	#name : 'BootstrapTypeaheadDevelopmentLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Typeahead',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Typeahead'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadDevelopmentLibraryTest >> testDeployFiles [
 
 	self
@@ -17,19 +19,19 @@ BootstrapTypeaheadDevelopmentLibraryTest >> testDeployFiles [
 				assert: GRPlatform current createdFiles equals: #('bootstrap-typeahead-4.0.2/bootstrap3-typeahead.js') ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadDevelopmentLibraryTest >> testForDevelopment [
 
 	self assert: BootstrapTypeaheadLibrary forDevelopment equals: BootstrapTypeaheadDevelopmentLibrary
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadDevelopmentLibraryTest >> testIsForDevelopment [
 
 	self assert: BootstrapTypeaheadLibrary forDevelopment isForDevelopment
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadDevelopmentLibraryTest >> testUpdateRoot [
 
 	| html |

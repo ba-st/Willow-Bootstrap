@@ -2,12 +2,14 @@
 I'm a JQueryPlugin implementing  the bootstrap-select programmatic API
 "
 Class {
-	#name : #BootstrapSelect,
-	#superclass : #BootstrapPlugin,
-	#category : #'Willow-Bootstrap-Select'
+	#name : 'BootstrapSelect',
+	#superclass : 'BootstrapPlugin',
+	#category : 'Willow-Bootstrap-Select',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Select'
 }
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> actionsBox: aBoolean [
 
 	"When set to true, adds two buttons to the top of the dropdown menu (Select All & Deselect All)"
@@ -15,7 +17,7 @@ BootstrapSelect >> actionsBox: aBoolean [
 	self optionAt: 'actionsBox' put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> container: aStringOrFalse [
 
 	"When set to a string, appends the select to a specific element or selector, e.g., container: 'body' | '.main-body'"
@@ -23,7 +25,7 @@ BootstrapSelect >> container: aStringOrFalse [
 	self optionAt: #container put: aStringOrFalse
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> countSelectedText: aStringOrFunction [
 
 	"Sets the format for the text displayed when selectedTextFormat is count or count > #. 
@@ -33,13 +35,13 @@ BootstrapSelect >> countSelectedText: aStringOrFunction [
 	self optionAt: 'countSelectedText' put: aStringOrFunction
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> deselectAll [
 
 	functionName := 'deselectAll'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> deselectAllText: aString [
 
 	"The text on the button that deselects all options when actionsBox is enabled."
@@ -47,13 +49,13 @@ BootstrapSelect >> deselectAllText: aString [
 	self optionAt: 'deselectAllText' put: aString
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> destroy [
 
 	functionName := 'destroy'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> dropdownAlignRight: aBooleanOrAutoString [
 
 	"Align the menu to the right instead of the left. If set to 'auto', the menu will automatically align right if there isn't room for the menu's full width when aligned to the left."
@@ -61,7 +63,7 @@ BootstrapSelect >> dropdownAlignRight: aBooleanOrAutoString [
 	self optionAt: 'dropdownAlignRight' put: (self lookupCssValue: aBooleanOrAutoString)
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> dropupAuto: aBoolean [
 
 	"Checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, 
@@ -70,7 +72,7 @@ BootstrapSelect >> dropupAuto: aBoolean [
 	self optionAt: 'dropupAuto' put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> header: aString [
 
 	"Adds a header to the top of the menu; includes a close button by default"
@@ -78,13 +80,13 @@ BootstrapSelect >> header: aString [
 	self optionAt: #header put: aString
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> hide [
 
 	functionName := 'hide'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> hideDisabled: aBoolean [
 
 	"Removes disabled options and optgroups from the menu data-hide-disabled: true"
@@ -92,7 +94,7 @@ BootstrapSelect >> hideDisabled: aBoolean [
 	self optionAt: 'hideDisabled' put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> iconBase: aString [
 
 	"Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different naming scheme.
@@ -101,7 +103,7 @@ BootstrapSelect >> iconBase: aString [
 	self optionAt: 'iconBase' put: aString
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> liveSearch: boolean [
 
 	"When set to true, adds a search box to the top of the selectpicker dropdown."
@@ -109,7 +111,7 @@ BootstrapSelect >> liveSearch: boolean [
 	self optionAt: 'liveSearch' put: boolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> liveSearchNormalize: boolean [
 
 	"Setting liveSearchNormalize to true allows for accent-insensitive searching."
@@ -117,7 +119,7 @@ BootstrapSelect >> liveSearchNormalize: boolean [
 	self optionAt: 'liveSearchNormalize' put: boolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> liveSearchPlaceholder: string [
 
 	"When set to a string, a placeholder attribute equal to the string will be added to the liveSearch input."
@@ -125,7 +127,7 @@ BootstrapSelect >> liveSearchPlaceholder: string [
 	self optionAt: 'liveSearchPlaceholder' put: string
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> liveSearchStyle: string [
 
 	"When set to 'contains', searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. 
@@ -134,7 +136,7 @@ BootstrapSelect >> liveSearchStyle: string [
 	self optionAt: 'liveSearchStyle' put: string
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> maxOptions: integerOrFalse [
 
 	"When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.
@@ -143,7 +145,7 @@ BootstrapSelect >> maxOptions: integerOrFalse [
 	self optionAt: 'maxOptions' put: integerOrFalse
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> maxOptionsText: stringOrArrayOrFunction [
 
 	"The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected.
@@ -157,19 +159,19 @@ BootstrapSelect >> maxOptionsText: stringOrArrayOrFunction [
 	self optionAt: 'maxOptionsText' put: stringOrArrayOrFunction
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapSelect >> method [
 
 	^ 'selectpicker'
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> mobile [
 
 	functionName := 'mobile'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> mobile: boolean [
 
 	"When set to true, enables the device's native menu for select menus."
@@ -177,7 +179,7 @@ BootstrapSelect >> mobile: boolean [
 	self optionAt: #mobile put: boolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> multipleSeparator: string [
 
 	"Set the character displayed in the button that separates selected options.
@@ -186,7 +188,7 @@ BootstrapSelect >> multipleSeparator: string [
 	self optionAt: 'multipleSeparator' put: string
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> noneSelectedText: string [
 
 	"The text that is displayed when a multiple select has no selected options."
@@ -194,73 +196,73 @@ BootstrapSelect >> noneSelectedText: string [
 	self optionAt: 'noneSelectedText' put: string
 ]
 
-{ #category : #Events }
+{ #category : 'Events' }
 BootstrapSelect >> onChanged: aFunction [
 
 	self call: 'on' with: (self lookupValue: #changedSelect) with: aFunction
 ]
 
-{ #category : #Events }
+{ #category : 'Events' }
 BootstrapSelect >> onHidden: aFunction [
 
 	self call: 'on' with: (self lookupValue: #hiddenSelect) with: aFunction
 ]
 
-{ #category : #Events }
+{ #category : 'Events' }
 BootstrapSelect >> onHide: aFunction [
 
 	self call: 'on' with: (self lookupValue: #hideSelect) with: aFunction
 ]
 
-{ #category : #Events }
+{ #category : 'Events' }
 BootstrapSelect >> onLoaded: aFunction [
 
 	self call: 'on' with: (self lookupValue: #loadedSelect) with: aFunction
 ]
 
-{ #category : #Events }
+{ #category : 'Events' }
 BootstrapSelect >> onRefreshed: aFunction [
 
 	self call: 'on' with: (self lookupValue: #refreshedSelect) with: aFunction
 ]
 
-{ #category : #Events }
+{ #category : 'Events' }
 BootstrapSelect >> onRendered: aFunction [
 
 	self call: 'on' with: (self lookupValue: #renderedSelect) with: aFunction
 ]
 
-{ #category : #Events }
+{ #category : 'Events' }
 BootstrapSelect >> onShow: aFunction [
 
 	self call: 'on' with: (self lookupValue: #showSelect) with: aFunction
 ]
 
-{ #category : #Events }
+{ #category : 'Events' }
 BootstrapSelect >> onShown: aFunction [
 
 	self call: 'on' with: (self lookupValue: #shownSelect) with: aFunction
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> refresh [
 
 	functionName := 'refresh'
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> render [
 
 	functionName := 'render'
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> selectAll [
 
 	functionName := 'selectAll'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> selectAllText: string [
 
 	"The text on the button that selects all options when actionsBox is enabled."
@@ -268,7 +270,7 @@ BootstrapSelect >> selectAllText: string [
 	self optionAt: 'selectAllText' put: string
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> selectOnTab: boolean [
 
 	"When set to true, treats the tab character like the enter or space characters within the selectpicker dropdown."
@@ -276,7 +278,7 @@ BootstrapSelect >> selectOnTab: boolean [
 	self optionAt: 'selectOnTab' put: boolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> selectedTextFormat: string [
 
 	"Specifies how the selection is displayed with a multiple select.
@@ -289,7 +291,7 @@ BootstrapSelect >> selectedTextFormat: string [
 	self optionAt: 'selectedTextFormat' put: string
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> selectedTextFormatCountAfter: aNumber [
 
 	"'count > x' behaves like 'values' until the number of selected options is greater than x; after that, it behaves like 'count'. "
@@ -297,19 +299,19 @@ BootstrapSelect >> selectedTextFormatCountAfter: aNumber [
 	self selectedTextFormat: ('count > <1p>' expandMacrosWith: aNumber)
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> setStyle [
 
 	functionName := 'setStyle'
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> show [
 
 	functionName := 'show'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> showContent: boolean [
 
 	"When set to true, display custom HTML associated with selected option(s) in the button. When set to false, the option value will be displayed instead."
@@ -317,7 +319,7 @@ BootstrapSelect >> showContent: boolean [
 	self optionAt: 'showContent' put: boolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> showIcon: boolean [
 
 	"When set to true, display icon(s) associated with selected option(s) in the button."
@@ -325,7 +327,7 @@ BootstrapSelect >> showIcon: boolean [
 	self optionAt: 'showIcon' put: boolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> showSubtext: boolean [
 
 	"When set to true, display subtext associated with a selected option in the button."
@@ -333,7 +335,7 @@ BootstrapSelect >> showSubtext: boolean [
 	self optionAt: 'showSubtext' put: boolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> showTick: boolean [
 
 	"Show checkmark on selected option (for items without multiple attribute)."
@@ -341,7 +343,7 @@ BootstrapSelect >> showTick: boolean [
 	self optionAt: 'showTick' put: boolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> size: autoOrIntegerOrFalse [
 
 	"When set to 'auto', the menu always opens up to show as many items as the window will allow without being cut off.
@@ -351,7 +353,7 @@ BootstrapSelect >> size: autoOrIntegerOrFalse [
 	self optionAt: 'size' put: autoOrIntegerOrFalse
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> style: string [
 
 	"When set to a string, add the value to the button's style."
@@ -359,7 +361,7 @@ BootstrapSelect >> style: string [
 	self optionAt: #style put: string
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> tickIcon: string [
 
 	"Set which icon to use to display as the tick next to selected options.
@@ -368,7 +370,7 @@ BootstrapSelect >> tickIcon: string [
 	self optionAt: 'tickIcon' put: string
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> title: string [
 
 	"The default title for the selectpicker."
@@ -376,13 +378,13 @@ BootstrapSelect >> title: string [
 	self optionAt: #title put: string
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapSelect >> toggle [
 
 	functionName := 'toggle'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> width: autoOrFitOrCssLengthOrFalse [
 
 	"When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option.
@@ -397,7 +399,7 @@ BootstrapSelect >> width: autoOrFitOrCssLengthOrFalse [
 	self optionAt: #width put: optionValue
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapSelect >> windowPadding: integerOrArray [
 
 	"This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. 

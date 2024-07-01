@@ -2,12 +2,14 @@
 A BootstrapModalTest is a test class for testing the behavior of BootstrapModal
 "
 Class {
-	#name : #BootstrapModalTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Plugins'
+	#name : 'BootstrapModalTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Plugins',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Plugins'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapModalTest >> renderModalContentApplying: aBlock [
 
 	^ self
@@ -22,7 +24,7 @@ BootstrapModalTest >> renderModalContentApplying: aBlock [
 			]
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapModalTest >> testBackdrop [
 
 	| html |
@@ -32,7 +34,7 @@ BootstrapModalTest >> testBackdrop [
 	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal({"backdrop":"static"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapModalTest >> testBackdropBoolean [
 
 	| html |
@@ -44,7 +46,7 @@ BootstrapModalTest >> testBackdropBoolean [
 		equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal({"backdrop":true});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapModalTest >> testHandleUpdate [
 
 	| html |
@@ -54,7 +56,7 @@ BootstrapModalTest >> testHandleUpdate [
 	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal("handleUpdate");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapModalTest >> testHide [
 
 	| html |
@@ -64,7 +66,7 @@ BootstrapModalTest >> testHide [
 	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal("hide");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapModalTest >> testOnHidden [
 
 	| html |
@@ -74,7 +76,7 @@ BootstrapModalTest >> testOnHidden [
 	self assert: html equals:  '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal().on("hidden.bs.modal",function(){});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapModalTest >> testOnHide [
 
 	| html |
@@ -84,7 +86,7 @@ BootstrapModalTest >> testOnHide [
 	self assert: html equals:  '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal().on("hide.bs.modal",function(){});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapModalTest >> testOnShow [
 
 	| html |
@@ -94,7 +96,7 @@ BootstrapModalTest >> testOnShow [
 	self assert: html equals:  '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal().on("show.bs.modal",function(){});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapModalTest >> testOnShown [
 
 	| html |
@@ -104,7 +106,7 @@ BootstrapModalTest >> testOnShown [
 	self assert: html equals:  '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal().on("shown.bs.modal",function(){});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapModalTest >> testOptions [
 
 	| html |
@@ -122,7 +124,7 @@ BootstrapModalTest >> testOptions [
 			'<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal({"backdrop":false,"keyboard":false,"show":true});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapModalTest >> testShow [
 
 	| html |
@@ -132,7 +134,7 @@ BootstrapModalTest >> testShow [
 	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal("show");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapModalTest >> testToggle [
 
 	| html |

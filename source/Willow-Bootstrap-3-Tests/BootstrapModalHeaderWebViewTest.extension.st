@@ -1,6 +1,6 @@
-Extension { #name : #BootstrapModalHeaderWebViewTest }
+Extension { #name : 'BootstrapModalHeaderWebViewTest' }
 
-{ #category : #'*Willow-Bootstrap-3-Tests' }
+{ #category : '*Willow-Bootstrap-3-Tests' }
 BootstrapModalHeaderWebViewTest >> testRenderContentOnWithComplexTitle [
 
 	| header html |

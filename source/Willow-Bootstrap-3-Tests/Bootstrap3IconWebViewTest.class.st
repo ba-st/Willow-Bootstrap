@@ -2,12 +2,14 @@
 A BootstrapIconTest is a test class for testing the behavior of BootstrapIconWebView
 "
 Class {
-	#name : #Bootstrap3IconWebViewTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#name : 'Bootstrap3IconWebViewTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3IconWebViewTest >> testRenderContentOn [
 
 	| icon html |
@@ -19,7 +21,7 @@ Bootstrap3IconWebViewTest >> testRenderContentOn [
 	self assert: html equals: '<span class="glyphicon glyphicon-menu-up"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3IconWebViewTest >> testRepresentingApplying [
 
 	| icon html |

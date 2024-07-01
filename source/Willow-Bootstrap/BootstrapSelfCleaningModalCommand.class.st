@@ -2,21 +2,23 @@
 I'm a bootstrap command configuring a modal with an static backdrop and attaching a script to self clean the dialogs section on close. Useful for dynamically created modals.
 "
 Class {
-	#name : #BootstrapSelfCleaningModalCommand,
-	#superclass : #WebComponentCommand,
+	#name : 'BootstrapSelfCleaningModalCommand',
+	#superclass : 'WebComponentCommand',
 	#instVars : [
 		'scriptCommand'
 	],
-	#category : #'Willow-Bootstrap-Frontend'
+	#category : 'Willow-Bootstrap-Frontend',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Frontend'
 }
 
-{ #category : #processing }
+{ #category : 'processing' }
 BootstrapSelfCleaningModalCommand >> applyTo: aDialog on: aCanvas [
 
 	^ scriptCommand applyTo: aDialog on: aCanvas
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapSelfCleaningModalCommand >> initialize [
 
 	super initialize.

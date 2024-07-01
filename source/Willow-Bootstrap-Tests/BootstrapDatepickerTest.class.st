@@ -2,18 +2,20 @@
 A BootstrapDatepickerTest is a test class for testing the behavior of BootstrapDatepicker
 "
 Class {
-	#name : #BootstrapDatepickerTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Datepicker'
+	#name : 'BootstrapDatepickerTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Datepicker',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Datepicker'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapDatepickerTest >> januaryFirst2017 [
 
 	^ Date newDay: 1 month: 1 year: 2017
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapDatepickerTest >> renderTextFieldApplying: aBlock [
 
 	^ self
@@ -26,7 +28,7 @@ BootstrapDatepickerTest >> renderTextFieldApplying: aBlock [
 			select script: datepicker ]
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testAssumeNearbyYear [
 
 	| html |
@@ -44,7 +46,7 @@ BootstrapDatepickerTest >> testAssumeNearbyYear [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"assumeNearbyYear":20});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testAutoclose [
 
 	| html |
@@ -54,7 +56,7 @@ BootstrapDatepickerTest >> testAutoclose [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"autoclose":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testBeforeShowCentury [
 
 	| html |
@@ -65,7 +67,7 @@ BootstrapDatepickerTest >> testBeforeShowCentury [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"beforeShowCentury":function(date){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testBeforeShowDay [
 
 	| html |
@@ -76,7 +78,7 @@ BootstrapDatepickerTest >> testBeforeShowDay [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"beforeShowDay":function(date){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testBeforeShowDecade [
 
 	| html |
@@ -87,7 +89,7 @@ BootstrapDatepickerTest >> testBeforeShowDecade [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"beforeShowDecade":function(date){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testBeforeShowMonth [
 
 	| html |
@@ -98,7 +100,7 @@ BootstrapDatepickerTest >> testBeforeShowMonth [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"beforeShowMonth":function(date){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testBeforeShowYear [
 
 	| html |
@@ -109,7 +111,7 @@ BootstrapDatepickerTest >> testBeforeShowYear [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"beforeShowYear":function(date){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testCalendarWeeks [
 
 	| html |
@@ -119,7 +121,7 @@ BootstrapDatepickerTest >> testCalendarWeeks [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"calendarWeeks":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testClearButton [
 
 	| html |
@@ -129,7 +131,7 @@ BootstrapDatepickerTest >> testClearButton [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"clearBtn":true});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testClearDates [
 
 	| html |
@@ -139,7 +141,7 @@ BootstrapDatepickerTest >> testClearDates [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("clearDates");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testContainer [
 
 	| html |
@@ -151,7 +153,7 @@ BootstrapDatepickerTest >> testContainer [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"container":"#picker-id"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testCustomFormatting [
 
 	| html format |
@@ -168,7 +170,7 @@ BootstrapDatepickerTest >> testCustomFormatting [
 			'<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"format":{"toDisplay":function(date,format,language){return new Date(date).toISOString();},"toValue":function(date,format,language){return new Date(d)}}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testDatesDisabled [
 
 	| html |
@@ -186,7 +188,7 @@ BootstrapDatepickerTest >> testDatesDisabled [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"datesDisabled":["2017-12-11","2017-12-10"]});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testDaysOfWeekDisabled [
 
 	| html |
@@ -200,7 +202,7 @@ BootstrapDatepickerTest >> testDaysOfWeekDisabled [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekDisabled":[6,0]});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testDaysOfWeekHighlighted [
 
 	| html |
@@ -214,7 +216,7 @@ BootstrapDatepickerTest >> testDaysOfWeekHighlighted [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"daysOfWeekHighlighted":[6,0]});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testDestroy [
 
 	| html |
@@ -224,7 +226,7 @@ BootstrapDatepickerTest >> testDestroy [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("destroy");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testDisableTouchKeyboard [
 
 	| html |
@@ -236,7 +238,7 @@ BootstrapDatepickerTest >> testDisableTouchKeyboard [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"disableTouchKeyboard":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testEnableOnReadonly [
 
 	| html |
@@ -248,7 +250,7 @@ BootstrapDatepickerTest >> testEnableOnReadonly [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"enableOnReadonly":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testEndDate [
 
 	| html |
@@ -260,7 +262,7 @@ BootstrapDatepickerTest >> testEndDate [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"endDate":new Date(2017,0,1)});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testForceParse [
 
 	| html |
@@ -272,7 +274,7 @@ BootstrapDatepickerTest >> testForceParse [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"forceParse":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testFormat [
 
 	| html |
@@ -282,7 +284,7 @@ BootstrapDatepickerTest >> testFormat [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"format":"d/m/yy"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testGetDate [
 
 	| html |
@@ -292,7 +294,7 @@ BootstrapDatepickerTest >> testGetDate [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("getDate");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testGetDates [
 
 	| html |
@@ -302,7 +304,7 @@ BootstrapDatepickerTest >> testGetDates [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("getDates");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testGetEndDate [
 
 	| html |
@@ -312,7 +314,7 @@ BootstrapDatepickerTest >> testGetEndDate [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("getEndDate");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testGetStartDate [
 
 	| html |
@@ -322,7 +324,7 @@ BootstrapDatepickerTest >> testGetStartDate [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("getStartDate");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testGetUTCDate [
 
 	| html |
@@ -332,7 +334,7 @@ BootstrapDatepickerTest >> testGetUTCDate [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("getUTCDate");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testGetUTCDates [
 
 	| html |
@@ -342,7 +344,7 @@ BootstrapDatepickerTest >> testGetUTCDates [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("getUTCDates");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testHide [
 
 	| html |
@@ -352,7 +354,7 @@ BootstrapDatepickerTest >> testHide [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("hide");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testImmediateUpdates [
 
 	| html |
@@ -364,7 +366,7 @@ BootstrapDatepickerTest >> testImmediateUpdates [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"immediateUpdates":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testInputs [
 
 	| html |
@@ -383,7 +385,7 @@ BootstrapDatepickerTest >> testInputs [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"inputs":$(".actual_range")});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testKeepEmptyValues [
 
 	| html |
@@ -393,7 +395,7 @@ BootstrapDatepickerTest >> testKeepEmptyValues [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"keepEmptyValues":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testKeyboardNavigation [
 
 	| html |
@@ -405,7 +407,7 @@ BootstrapDatepickerTest >> testKeyboardNavigation [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"keyboardNavigation":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testLanguage [
 
 	| html |
@@ -417,7 +419,7 @@ BootstrapDatepickerTest >> testLanguage [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"language":"de-DE"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testMaxViewMode [
 
 	| html |
@@ -429,7 +431,7 @@ BootstrapDatepickerTest >> testMaxViewMode [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"maxViewMode":"years"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testMinViewMode [
 
 	| html |
@@ -439,7 +441,7 @@ BootstrapDatepickerTest >> testMinViewMode [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"minViewMode":"months"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testMultidate [
 
 	| html |
@@ -451,7 +453,7 @@ BootstrapDatepickerTest >> testMultidate [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"multidate":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testMultidateSeparator [
 
 	| html |
@@ -463,7 +465,7 @@ BootstrapDatepickerTest >> testMultidateSeparator [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"multidateSeparator":";"});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnCenturyChanged [
 
 	| html |
@@ -473,7 +475,7 @@ BootstrapDatepickerTest >> testOnCenturyChanged [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("changeCentury",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnDateChanged [
 
 	| html |
@@ -485,7 +487,7 @@ BootstrapDatepickerTest >> testOnDateChanged [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("changeDate",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnDateCleared [
 
 	| html |
@@ -497,7 +499,7 @@ BootstrapDatepickerTest >> testOnDateCleared [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("clearDate",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnDecadeChanged [
 
 	| html |
@@ -507,7 +509,7 @@ BootstrapDatepickerTest >> testOnDecadeChanged [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("changeDecade",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnHide [
 
 	| html |
@@ -519,7 +521,7 @@ BootstrapDatepickerTest >> testOnHide [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("hide",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnMonthChanged [
 
 	| html |
@@ -531,7 +533,7 @@ BootstrapDatepickerTest >> testOnMonthChanged [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("changeMonth",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnShow [
 
 	| html |
@@ -543,7 +545,7 @@ BootstrapDatepickerTest >> testOnShow [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("show",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnViewModeChanged [
 
 	| html |
@@ -553,7 +555,7 @@ BootstrapDatepickerTest >> testOnViewModeChanged [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("changeViewMode",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapDatepickerTest >> testOnYearChanged [
 
 	| html |
@@ -565,7 +567,7 @@ BootstrapDatepickerTest >> testOnYearChanged [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker().on("changeYear",function(){});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testOrientation [
 
 	| html |
@@ -575,7 +577,7 @@ BootstrapDatepickerTest >> testOrientation [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"orientation":"bottom"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetDate [
 
 	| html |
@@ -588,7 +590,7 @@ BootstrapDatepickerTest >> testSetDate [
 
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetDates [
 
 	| html |
@@ -600,7 +602,7 @@ BootstrapDatepickerTest >> testSetDates [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("setDates",[new Date(2017,0,1)]);</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetDatesDisabled [
 
 	| html |
@@ -613,7 +615,7 @@ BootstrapDatepickerTest >> testSetDatesDisabled [
 
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetDaysOfWeekDisabled [
 
 	| html |
@@ -626,7 +628,7 @@ BootstrapDatepickerTest >> testSetDaysOfWeekDisabled [
 
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetDaysOfWeekHighlighted [
 
 	| html |
@@ -638,7 +640,7 @@ BootstrapDatepickerTest >> testSetDaysOfWeekHighlighted [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("setDaysOfWeekHighlighted",[]);</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetEndDate [
 
 	| html |
@@ -651,7 +653,7 @@ BootstrapDatepickerTest >> testSetEndDate [
 
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetStartDate [
 
 	| html |
@@ -664,7 +666,7 @@ BootstrapDatepickerTest >> testSetStartDate [
 
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetUTCDate [
 
 	| html |
@@ -676,7 +678,7 @@ BootstrapDatepickerTest >> testSetUTCDate [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("setUTCDate",new Date(2017,0,1));</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testSetUTCDates [
 
 	| html |
@@ -688,7 +690,7 @@ BootstrapDatepickerTest >> testSetUTCDates [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("setUTCDates",[new Date(2017,0,1)]);</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testShow [
 
 	| html |
@@ -698,7 +700,7 @@ BootstrapDatepickerTest >> testShow [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("show");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testShowOnFocus [
 
 	| html |
@@ -710,7 +712,7 @@ BootstrapDatepickerTest >> testShowOnFocus [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"showOnFocus":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testShowWeekDays [
 
 	| html |
@@ -720,7 +722,7 @@ BootstrapDatepickerTest >> testShowWeekDays [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"showWeekDays":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testStartDate [
 
 	| html |
@@ -732,7 +734,7 @@ BootstrapDatepickerTest >> testStartDate [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"startDate":new Date(2017,0,1)});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testStartView [
 
 	| html |
@@ -745,7 +747,7 @@ BootstrapDatepickerTest >> testStartView [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"startView":"millennium"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testTemplates [
 
 	| html |
@@ -767,7 +769,7 @@ BootstrapDatepickerTest >> testTemplates [
 			'<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"templates":{"leftArrow":"&lt;&lt;-","rightArrow":"-&gt;&gt;"}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testTitle [
 
 	| html |
@@ -779,7 +781,7 @@ BootstrapDatepickerTest >> testTitle [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"title":"Pick a date!"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testTodayButton [
 
 	| html |
@@ -791,7 +793,7 @@ BootstrapDatepickerTest >> testTodayButton [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"todayBtn":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testTodayHighlight [
 
 	| html |
@@ -803,7 +805,7 @@ BootstrapDatepickerTest >> testTodayHighlight [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"todayHighlight":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testToggleActive [
 
 	| html |
@@ -815,7 +817,7 @@ BootstrapDatepickerTest >> testToggleActive [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"toggleActive":true});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testUpdate [
 
 	| html |
@@ -825,7 +827,7 @@ BootstrapDatepickerTest >> testUpdate [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("update");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testUpdateViewDate [
 
 	| html |
@@ -835,7 +837,7 @@ BootstrapDatepickerTest >> testUpdateViewDate [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"updateViewDate":true});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapDatepickerTest >> testUpdateWithArguments [
 
 	| html |
@@ -857,7 +859,7 @@ BootstrapDatepickerTest >> testUpdateWithArguments [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker("update","");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testWeekStart [
 
 	| html |
@@ -867,7 +869,7 @@ BootstrapDatepickerTest >> testWeekStart [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").datepicker({"weekStart":3});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapDatepickerTest >> testZIndexOffset [
 
 	| html |

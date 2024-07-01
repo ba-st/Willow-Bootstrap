@@ -2,12 +2,14 @@
 The tooltip plugin let's  you show or  hide tooltips, via data attributes or JavaScript
 "
 Class {
-	#name : #BootstrapTooltip,
-	#superclass : #BootstrapPlugin,
-	#category : #'Willow-Bootstrap-Plugins'
+	#name : 'BootstrapTooltip',
+	#superclass : 'BootstrapPlugin',
+	#category : 'Willow-Bootstrap-Plugins',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Plugins'
 }
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> animation: aBoolean [
 
 	"Apply a CSS fade transition to the tooltip"
@@ -15,7 +17,7 @@ BootstrapTooltip >> animation: aBoolean [
 	self optionAt: #animation put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> container: aStringOrFalse [
 
 	"Appends the tooltip to a specific element. 
@@ -26,7 +28,7 @@ BootstrapTooltip >> container: aStringOrFalse [
 	self optionAt: #container put: aStringOrFalse
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> delay: aNumberOrObject [
 
 	"Delay showing and hiding the tooltip (ms) - does not apply to manual trigger type
@@ -36,7 +38,7 @@ BootstrapTooltip >> delay: aNumberOrObject [
 	self optionAt: #delay put: aNumberOrObject
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapTooltip >> hide [
 
 	"Hides an element's tooltip. Returns to the caller before the tooltip has actually been hidden (i.e. before the hidden.bs.tooltip event occurs). 
@@ -45,7 +47,7 @@ BootstrapTooltip >> hide [
 	functionName := self lookupValue: #hide
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> html: aBoolean [
 
 	"Insert HTML into the tooltip. If false, jQuery's text method will be used to insert content into the DOM. Use text if you're worried about XSS attacks."
@@ -53,7 +55,7 @@ BootstrapTooltip >> html: aBoolean [
 	self optionAt: #html put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> htmlTitle: aRenderable [
 
 	self
@@ -61,13 +63,13 @@ BootstrapTooltip >> htmlTitle: aRenderable [
 		title: (self render: aRenderable)
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTooltip >> method [
 
 	^ 'tooltip'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> placement: aStringOrFunction [
 
 	"How to position the tooltip - top | bottom | left | right | auto.
@@ -80,7 +82,7 @@ BootstrapTooltip >> placement: aStringOrFunction [
 	self optionAt: #placement put: (self lookupCssValue: aStringOrFunction)
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> sanitize: aBoolean [
 
 	"Enable or disable the sanitization. If activated 'template', 'content' and 'title' options will be sanitized."
@@ -88,7 +90,7 @@ BootstrapTooltip >> sanitize: aBoolean [
 	self optionAt: #sanitize put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> sanitizeFunction: aJSFunction [
 
 	"Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization."
@@ -96,7 +98,7 @@ BootstrapTooltip >> sanitizeFunction: aJSFunction [
 	self optionAt: #sanitizeFn put: aJSFunction
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> selector: aString [
 
 	"If a selector is provided, tooltip objects will be delegated to the specified targets. 
@@ -105,7 +107,7 @@ BootstrapTooltip >> selector: aString [
 	self optionAt: #selector put: aString
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapTooltip >> show [
 
 	"Reveals an element's tooltip. Returns to the caller before the tooltip has actually been shown (i.e. before the shown.bs.tooltip event occurs). 
@@ -114,7 +116,7 @@ BootstrapTooltip >> show [
 	functionName := self lookupValue: #show
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> template: aRenderable [
 
 	"Base HTML to use when creating the tooltip.
@@ -126,7 +128,7 @@ BootstrapTooltip >> template: aRenderable [
 	self optionAt: #template put: (self render: aRenderable)
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> title: aStringOrFunction [
 
 	"Default title value if title attribute isn't present.
@@ -135,7 +137,7 @@ BootstrapTooltip >> title: aStringOrFunction [
 	self optionAt: #title put: aStringOrFunction
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapTooltip >> toggle [
 
 	"Toggles an element's tooltip. Returns to the caller before the tooltip has actually been shown or hidden. 
@@ -144,7 +146,7 @@ BootstrapTooltip >> toggle [
 	functionName := self lookupValue: #toggle
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> trigger: aString [
 
 	"How tooltip is triggered - click | hover | focus | manual. 
@@ -153,7 +155,7 @@ BootstrapTooltip >> trigger: aString [
 	self optionAt: #trigger put: aString
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTooltip >> whiteList: anAssociationArray [
 
 	"Object which contains allowed attributes and tags"

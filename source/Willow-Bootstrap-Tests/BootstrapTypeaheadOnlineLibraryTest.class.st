@@ -2,12 +2,14 @@
 A BootstrapTypeaheadOnlineLibraryTest is a test class for testing the behavior of BootstrapTypeaheadOnlineLibrary
 "
 Class {
-	#name : #BootstrapTypeaheadOnlineLibraryTest,
-	#superclass : #TestCase,
-	#category : 'Willow-Bootstrap-Tests-Typeahead'
+	#name : 'BootstrapTypeaheadOnlineLibraryTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-Tests-Typeahead',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Typeahead'
 }
 
-{ #category : #'tests-Updating' }
+{ #category : 'tests-Updating' }
 BootstrapTypeaheadOnlineLibraryTest >> testUpdateRoot [
 
 	| html |

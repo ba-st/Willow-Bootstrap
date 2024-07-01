@@ -2,22 +2,24 @@
 A BootstrapToggableTabsBuilderTest is a test class for testing the behavior of BootstrapToggableTabsBuilder
 "
 Class {
-	#name : #Bootstrap3ToggableTabsBuilderTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap3ToggableTabsBuilderTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3ToggableTabsBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap3ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3ToggableTabsBuilderTest >> testCantBuildWithLessThanTwoPanes [
 
 	self
@@ -28,7 +30,7 @@ Bootstrap3ToggableTabsBuilderTest >> testCantBuildWithLessThanTwoPanes [
 			raise: AssertionFailed
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3ToggableTabsBuilderTest >> testRenderContentOn [
 
 	| tabs html |
@@ -46,7 +48,7 @@ Bootstrap3ToggableTabsBuilderTest >> testRenderContentOn [
 			'<ul class="nav nav-tabs" role="tablist"><li class="active" role="presentation"><a role="tab" data-toggle="tab" aria-control="container-id1" href="#container-id1">Home</a></li><li role="presentation"><a role="tab" data-toggle="tab" aria-control="container-id3" href="#container-id3">Profile</a></li></ul><div class="tab-content"><div id="container-id1" role="tabpanel" class="tab-pane active">The home page</div><div id="container-id3" role="tabpanel" class="tab-pane"><strong>This is my profile.</strong></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3ToggableTabsBuilderTest >> testRenderContentOnWithCommands [
 
 	| tabs html |

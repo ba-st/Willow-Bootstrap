@@ -2,15 +2,17 @@
 I'm a test for extensions to Willow for Bootstrap 3
 "
 Class {
-	#name : #WillowBootstrap3ExtensionsTest,
-	#superclass : #BWRenderingTest,
+	#name : 'WillowBootstrap3ExtensionsTest',
+	#superclass : 'BWRenderingTest',
 	#pools : [
 		'Willow'
 	],
-	#category : #'Willow-Bootstrap-3-Tests-Frontend'
+	#category : 'Willow-Bootstrap-3-Tests-Frontend',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'Frontend'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrap3ExtensionsTest >> assertColumnRenderingOf: columnSize at: index [
 
 	#('' 'Offset' 'Pull' 'Push')
@@ -34,13 +36,13 @@ WillowBootstrap3ExtensionsTest >> assertColumnRenderingOf: columnSize at: index 
 			]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrap3ExtensionsTest >> assertRenderingOfDivApplying: aCommand equals: anExpectedHTML [
 
 	self assert: (self render: [ :html | html div apply: aCommand ]) equals: anExpectedHTML
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WillowBootstrap3ExtensionsTest >> testBootstrapClassification [
 
 	self
@@ -48,7 +50,7 @@ WillowBootstrap3ExtensionsTest >> testBootstrapClassification [
 		equals: 'text-center'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WillowBootstrap3ExtensionsTest >> testBootstrapClassificationCommandBuilder [
 
 	( Classification >> #bootstrap3 ) names

@@ -2,12 +2,14 @@
 A BootstrapSelectDevelopmentLibraryTest is a test class for testing the behavior of BootstrapSelectDevelopmentLibrary
 "
 Class {
-	#name : #BootstrapSelectDevelopmentLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-Select'
+	#name : 'BootstrapSelectDevelopmentLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Select',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Select'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDevelopmentLibraryTest >> testDeployFiles [
 
 	self
@@ -58,19 +60,19 @@ BootstrapSelectDevelopmentLibraryTest >> testDeployFiles [
 			('bootstrap-select-1.13.18/js/i18n/defaults-zh_TW.js' -> 'cf0c27955d2192218b819cf698f9557fed54350e')}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDevelopmentLibraryTest >> testForDevelopment [
 
 	self assert: BootstrapSelectLibrary forDevelopment equals: BootstrapSelectDevelopmentLibrary
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDevelopmentLibraryTest >> testIsForDevelopment [
 
 	self assert: BootstrapSelectLibrary forDevelopment isForDevelopment 
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDevelopmentLibraryTest >> testUpdateRoot [
 
 	| html |
@@ -86,7 +88,7 @@ BootstrapSelectDevelopmentLibraryTest >> testUpdateRoot [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.13.18/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.13.18/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.13.18/js/i18n/defaults-en_US.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDevelopmentLibraryTest >> testUpdateRootWithLocale [
 
 	| html |
@@ -104,7 +106,7 @@ BootstrapSelectDevelopmentLibraryTest >> testUpdateRootWithLocale [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-select-1.13.18/css/bootstrap-select.css"/><script type="text/javascript" src="/files/bootstrap-select-1.13.18/js/bootstrap-select.js"></script><script type="text/javascript" src="/files/bootstrap-select-1.13.18/js/i18n/defaults-es_ES.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelectDevelopmentLibraryTest >> testUpdateRootWithUnsupportedLocale [
 
 	| html |

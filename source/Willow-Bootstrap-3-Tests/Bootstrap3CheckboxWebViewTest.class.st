@@ -1,16 +1,18 @@
 Class {
-	#name : #Bootstrap3CheckboxWebViewTest,
-	#superclass : #BinaryChoiceWebViewTest,
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#name : 'Bootstrap3CheckboxWebViewTest',
+	#superclass : 'BinaryChoiceWebViewTest',
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 Bootstrap3CheckboxWebViewTest >> newBinaryChoiceView [
 
 	^ Bootstrap3CheckboxWebView onModel: true offModel: false
 ]
 
-{ #category : #'tests-configuring' }
+{ #category : 'tests-configuring' }
 Bootstrap3CheckboxWebViewTest >> testBeIdentifiable [
 
 	| html binaryChoiceView |
@@ -25,7 +27,7 @@ Bootstrap3CheckboxWebViewTest >> testBeIdentifiable [
 			'<div class="checkbox"><label><input id="checkbox-id1" checked name="2" type="checkbox"/><input name="3" type="hidden"/></label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3CheckboxWebViewTest >> testIdentifierOn [
 
 	| html checkbox |
@@ -43,7 +45,7 @@ Bootstrap3CheckboxWebViewTest >> testIdentifierOn [
 			'<div class="checkbox"><label><input id="checkbox-id1" checked name="3" type="checkbox"/><input name="4" type="hidden"/></label></div>'
 ]
 
-{ #category : #'tests-configuring' }
+{ #category : 'tests-configuring' }
 Bootstrap3CheckboxWebViewTest >> testOn [
 
 	| html binaryChoiceView |
@@ -58,7 +60,7 @@ Bootstrap3CheckboxWebViewTest >> testOn [
 			'<div class="checkbox"><label><input checked name="1" id="input-id2" type="checkbox"/><input name="3" type="hidden"/></label></div><script type="text/javascript">$("#input-id2").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3CheckboxWebViewTest >> testRenderingAfterUpdatingModel [
 
 	| html checkbox |
@@ -78,7 +80,7 @@ Bootstrap3CheckboxWebViewTest >> testRenderingAfterUpdatingModel [
 		equals: '<div class="checkbox willow"><label><input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/></label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3CheckboxWebViewTest >> testRenderingWithLabel [
 
 	| html checkbox |
@@ -97,7 +99,7 @@ Bootstrap3CheckboxWebViewTest >> testRenderingWithLabel [
 			'<div class="checkbox willow"><label><input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/>Enable network</label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3CheckboxWebViewTest >> testWithNonBooleanModels [
 
 	| html checkbox |

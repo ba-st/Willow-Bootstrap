@@ -2,12 +2,14 @@
 A Bootstrap3DeploymentMetadataLibraryTest is a test class for testing the behavior of Bootstrap3DeploymentMetadataLibrary
 "
 Class {
-	#name : #Bootstrap3DeploymentMetadataLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-Libraries'
+	#name : 'Bootstrap3DeploymentMetadataLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-Libraries',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DeploymentMetadataLibraryTest >> testDeployFiles [
 
 	self
@@ -26,7 +28,7 @@ Bootstrap3DeploymentMetadataLibraryTest >> testDeployFiles [
 			('bootstrap-3.4.1/js/bootstrap.min.js' -> 'c958648ed73daa1323aaf9876d2fe34e6c154b7e')}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DeploymentMetadataLibraryTest >> testIsForDevelopment [
 
 	self
@@ -34,7 +36,7 @@ Bootstrap3DeploymentMetadataLibraryTest >> testIsForDevelopment [
 		deny: Bootstrap3DeploymentMetadataLibrary isForDevelopment
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DeploymentMetadataLibraryTest >> testUpdateRoot [
 
 	| html |
@@ -50,7 +52,7 @@ Bootstrap3DeploymentMetadataLibraryTest >> testUpdateRoot [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-3.4.1/css/bootstrap.min.css"/><link rel="stylesheet" type="text/css" href="/files/bootstrap-3.4.1/css/bootstrap-theme.min.css"/><script type="text/javascript" src="/files/bootstrap-3.4.1/js/bootstrap.min.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DeploymentMetadataLibraryTest >> testUpdateRootWithoutOptionalTheme [
 
 	| html |

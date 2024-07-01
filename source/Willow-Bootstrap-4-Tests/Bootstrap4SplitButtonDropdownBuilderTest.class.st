@@ -1,16 +1,18 @@
 Class {
-	#name : #Bootstrap4SplitButtonDropdownBuilderTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#name : 'Bootstrap4SplitButtonDropdownBuilderTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap4SplitButtonDropdownBuilderTest >> supplier [
 
 	^ Bootstrap4ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4SplitButtonDropdownBuilderTest >> testOn [
 
 	"This is a Split Button, so onTrigger must act on the main button not the dropdown one."
@@ -33,7 +35,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testOn [
 			'<div class="btn-group"><button id="button-id1" class="btn btn-danger" type="button">Dropdown</button><button class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><span class="sr-only">Toggle dropdown</span></button><div class="dropdown-menu"><a id="a-id2" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOn [
 
 	| button html |
@@ -52,7 +54,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOn [
 			'<div class="btn-group"><button class="btn btn-danger" type="button">Dropdown</button><button class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><span class="sr-only">Toggle dropdown</span></button><div class="dropdown-menu"><a id="a-id1" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 
 	| button html |
@@ -72,7 +74,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOnRightAligned [
 			'<div class="btn-group"><button class="btn btn-danger" type="button">Dropdown</button><button class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><span class="sr-only">Toggle dropdown</span></button><div class="dropdown-menu dropdown-menu-right"><a id="a-id1" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOnWithNonDropdownButtonCommands [
 
 	| splitButton html |
@@ -92,7 +94,7 @@ Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOnWithNonDropdownBu
 			'<div class="btn-group"><button class="btn btn-danger" disabled type="button">Dropdown</button><button class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><span class="sr-only">Toggle dropdown</span></button><div class="dropdown-menu"><a id="a-id1" role="button" href="#" class="dropdown-item">Action</a></div></div><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4SplitButtonDropdownBuilderTest >> testRenderContentOnWithSeveralActions [
 
 	| button html |

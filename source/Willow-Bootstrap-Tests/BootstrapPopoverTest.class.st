@@ -2,12 +2,14 @@
 A BootstrapPopoverTest is a test class for testing the behavior of BootstrapPopover
 "
 Class {
-	#name : #BootstrapPopoverTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-Plugins'
+	#name : 'BootstrapPopoverTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Plugins',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Plugins'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapPopoverTest >> renderPopoverContentApplying: aBlock [
 
 	^ self
@@ -20,7 +22,7 @@ BootstrapPopoverTest >> renderPopoverContentApplying: aBlock [
 			div script: popover ]
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testAnimation [
 
 	| html |
@@ -32,7 +34,7 @@ BootstrapPopoverTest >> testAnimation [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"animation":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testContainer [
 
 	| html |
@@ -44,7 +46,7 @@ BootstrapPopoverTest >> testContainer [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"container":"body"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testContent [
 
 	| html |
@@ -54,7 +56,7 @@ BootstrapPopoverTest >> testContent [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"content":"Message"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testDelay [
 
 	| html |
@@ -70,7 +72,7 @@ BootstrapPopoverTest >> testDelay [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"delay":{"show":200,"hide":100}});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapPopoverTest >> testHide [
 
 	| html |
@@ -80,7 +82,7 @@ BootstrapPopoverTest >> testHide [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover("hide");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testHtml [
 
 	| html |
@@ -90,49 +92,43 @@ BootstrapPopoverTest >> testHtml [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testHtmlContent [
 
 	| html |
 
-	html := self
-		renderPopoverContentApplying: [ :popover | 
-			popover
-				htmlContent:
-					( ContainerWebView
-						wrapping: 'A more complex rendering'
-						intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
-						applying: [ :container | container addClass bootstrapCommon container ] )
-			].
+	html := self renderPopoverContentApplying: [ :popover |
+			        popover htmlContent: ( ContainerWebView
+					          wrapping: 'A more complex rendering'
+					          intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
+					          applying: [ :container | container addClass bootstrapCommon container ] )
+		        ].
 
 	self
 		assert: html
 		equals:
-			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"content":"<div class=\"container\">A more complex rendering</div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"content":"<div class=\"container\">A more complex rendering<\/div>"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testHtmlTitle [
 
 	| html |
 
-	html := self
-		renderPopoverContentApplying: [ :popover | 
-			popover
-				htmlTitle:
-					( ContainerWebView
-						wrapping: 'A complex title'
-						intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
-						applying: [ :container | container addClass bootstrapCommon container ] )
-			].
+	html := self renderPopoverContentApplying: [ :popover |
+			        popover htmlTitle: ( ContainerWebView
+					          wrapping: 'A complex title'
+					          intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
+					          applying: [ :container | container addClass bootstrapCommon container ] )
+		        ].
 
 	self
 		assert: html
 		equals:
-			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"title":"<div class=\"container\">A complex title</div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"title":"<div class=\"container\">A complex title<\/div>"});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapPopoverTest >> testOnHidden [
 
 	| html |
@@ -141,7 +137,7 @@ BootstrapPopoverTest >> testOnHidden [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("hidden.bs.popover",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapPopoverTest >> testOnHide [
 
 	| html |
@@ -150,7 +146,7 @@ BootstrapPopoverTest >> testOnHide [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("hide.bs.popover",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapPopoverTest >> testOnInserted [
 
 	| html |
@@ -161,7 +157,7 @@ BootstrapPopoverTest >> testOnInserted [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("inserted.bs.popover",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapPopoverTest >> testOnShow [
 
 	| html |
@@ -170,7 +166,7 @@ BootstrapPopoverTest >> testOnShow [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("show.bs.popover",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapPopoverTest >> testOnShown [
 
 	| html |
@@ -179,7 +175,7 @@ BootstrapPopoverTest >> testOnShown [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("shown.bs.popover",function(){});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testPlacement [
 
 	| html |
@@ -189,7 +185,7 @@ BootstrapPopoverTest >> testPlacement [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"placement":"left"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testPlacementWithFunction [
 
 	| html |
@@ -199,7 +195,7 @@ BootstrapPopoverTest >> testPlacementWithFunction [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"placement":function(){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testSanitize [
 
 	| html |
@@ -211,7 +207,7 @@ BootstrapPopoverTest >> testSanitize [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"sanitize":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testSanitizeFunction [
 
 	| html |
@@ -224,7 +220,7 @@ BootstrapPopoverTest >> testSanitizeFunction [
 			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"sanitizeFn":function(){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testSelector [
 
 	| html |
@@ -234,7 +230,7 @@ BootstrapPopoverTest >> testSelector [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"selector":".has-popover"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapPopoverTest >> testShow [
 
 	| html |
@@ -244,7 +240,7 @@ BootstrapPopoverTest >> testShow [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover("show");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testTitle [
 
 	| html |
@@ -254,7 +250,7 @@ BootstrapPopoverTest >> testTitle [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"title":"Popover"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapPopoverTest >> testToggle [
 
 	| html |
@@ -264,7 +260,7 @@ BootstrapPopoverTest >> testToggle [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover("toggle");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testTrigger [
 
 	| html |
@@ -274,7 +270,7 @@ BootstrapPopoverTest >> testTrigger [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"trigger":"manual"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapPopoverTest >> testWhiteList [
 
 	| html |

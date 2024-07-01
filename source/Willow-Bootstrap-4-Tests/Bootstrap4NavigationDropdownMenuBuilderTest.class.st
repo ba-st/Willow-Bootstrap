@@ -1,13 +1,15 @@
 Class {
-	#name : #Bootstrap4NavigationDropdownMenuBuilderTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap4NavigationDropdownMenuBuilderTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap4NavigationDropdownMenuBuilderTest >> navigationBarWith: menuBuilder [
 
 	^ [ :canvas | 
@@ -22,14 +24,14 @@ Bootstrap4NavigationDropdownMenuBuilderTest >> navigationBarWith: menuBuilder [
 	]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap4NavigationDropdownMenuBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap4ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4NavigationDropdownMenuBuilderTest >> testRenderContentOn [
 
 	| navigation html |
@@ -53,7 +55,7 @@ Bootstrap4NavigationDropdownMenuBuilderTest >> testRenderContentOn [
 			'<nav class="navbar"><ul class="navbar-nav"><li class="dropdown nav-item"><a id="a-id1" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dropdown</a><div class="dropdown-menu"><a id="a-id2" role="button" href="#" class="dropdown-item">Action</a><div class="dropdown-divider" role="separator"></div><a id="a-id3" role="button" href="#" class="dropdown-item willow">Another action</a></div></li></ul></nav><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});$("#a-id3").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4NavigationDropdownMenuBuilderTest >> testRenderContentOnRightAligned [
 
 	| navigation html |
@@ -74,7 +76,7 @@ Bootstrap4NavigationDropdownMenuBuilderTest >> testRenderContentOnRightAligned [
 			'<nav class="navbar"><ul class="navbar-nav"><li class="dropdown nav-item"><a id="a-id1" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dropdown</a><div class="dropdown-menu dropdown-menu-right"><a id="a-id2" role="button" href="#" class="dropdown-item">Action</a></div></li></ul></nav><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4NavigationDropdownMenuBuilderTest >> testRenderContentOnWithHeaders [
 
 	| navigation html |
@@ -95,7 +97,7 @@ Bootstrap4NavigationDropdownMenuBuilderTest >> testRenderContentOnWithHeaders [
 			'<nav class="navbar"><ul class="navbar-nav"><li class="dropdown nav-item"><a id="a-id1" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dropdown</a><div class="dropdown-menu"><h6 class="dropdown-header">Dropdown header</h6><a id="a-id2" role="button" href="#" class="dropdown-item">Action</a></div></li></ul></nav><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4NavigationDropdownMenuBuilderTest >> testRenderNavigationMenuContent [
 
 	| navigationBar html |

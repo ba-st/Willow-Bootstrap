@@ -2,18 +2,20 @@
 A Bootstrap4ComponentSupplierTest is a test class for testing the behavior of Bootstrap4ComponentSupplier
 "
 Class {
-	#name : #Bootstrap4ComponentSupplierTest,
-	#superclass : #BootstrapComponentSupplierTest,
-	#category : #'Willow-Bootstrap-4-Tests-Frontend'
+	#name : 'Bootstrap4ComponentSupplierTest',
+	#superclass : 'BootstrapComponentSupplierTest',
+	#category : 'Willow-Bootstrap-4-Tests-Frontend',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'Frontend'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap4ComponentSupplierTest >> supplierClass [
 
 	^ Bootstrap4ComponentSupplier
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4ComponentSupplierTest >> testCheckboxLabeledOnModelOffModelApplying [
 
 	self
@@ -28,7 +30,7 @@ Bootstrap4ComponentSupplierTest >> testCheckboxLabeledOnModelOffModelApplying [
 			'<div class="form-check willow"><input id="checkbox-id1" class="willow form-check-input" checked name="3" type="checkbox"/><input name="4" type="hidden"/><label for="checkbox-id1" class="form-check-label">Labelization</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4ComponentSupplierTest >> testCheckboxUnlabeledOnModelOffModelApplying [
 
 	self
@@ -36,7 +38,7 @@ Bootstrap4ComponentSupplierTest >> testCheckboxUnlabeledOnModelOffModelApplying 
 		equals: '<div class="form-check willow"><input class="willow form-check-input position-static" checked name="1" type="checkbox"/><input name="2" type="hidden"/></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4ComponentSupplierTest >> testNotificationBuilderWithHeading [
 
 	self
@@ -58,7 +60,7 @@ Bootstrap4ComponentSupplierTest >> testNotificationBuilderWithHeading [
 			'<div class="alert alert-dark" role="alert"><h4 class="alert-heading">Well done!</h4><p>Ouch!</p></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4ComponentSupplierTest >> testRadioRenderingWithApplyingToLabelApplyingToInput [
 
 	| supplier radio html |
@@ -80,7 +82,7 @@ Bootstrap4ComponentSupplierTest >> testRadioRenderingWithApplyingToLabelApplying
 			'<div class="form-check"><input name="1" id="radio-button-id2" class="willow form-check-input" value="1" type="radio"/><label for="radio-button-id2" class="willow form-check-label">F</label></div><div class="form-check"><input name="1" id="radio-button-id3" class="willow form-check-input" value="2" type="radio"/><label for="radio-button-id3" class="willow form-check-label">H</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4ComponentSupplierTest >> testUpdateRoot [
 
 	| html |

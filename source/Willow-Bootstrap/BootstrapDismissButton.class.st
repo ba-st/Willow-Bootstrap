@@ -2,21 +2,23 @@
 I'm a dismiss button able to dismiss modals or alerts.
 "
 Class {
-	#name : #BootstrapDismissButton,
-	#superclass : #WAPainter,
+	#name : 'BootstrapDismissButton',
+	#superclass : 'WAPainter',
 	#instVars : [
 		'dismissButton'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapDismissButton class >> dismissing: aContainerType [
 
 	^ self new initializeDismissing: aContainerType
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapDismissButton >> initializeDismissing: aContainerType [
 
 	dismissButton := AsynchronicButtonWebView
@@ -32,13 +34,13 @@ BootstrapDismissButton >> initializeDismissing: aContainerType [
 			]
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapDismissButton >> on [
 
 	^ dismissButton on
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapDismissButton >> renderContentOn: aCanvas [
 
 	aCanvas render: dismissButton

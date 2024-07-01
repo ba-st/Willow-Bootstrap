@@ -2,12 +2,14 @@
 A Bootstrap4MetadataLibraryTest is a test class for testing the behavior of Bootstrap4MetadataLibrary
 "
 Class {
-	#name : #Bootstrap4MetadataLibraryTest,
-	#superclass : #TestCase,
-	#category : #'Willow-Bootstrap-4-Tests-Libraries'
+	#name : 'Bootstrap4MetadataLibraryTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-4-Tests-Libraries',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4MetadataLibraryTest >> testVersionCompatibility [
 
 	self

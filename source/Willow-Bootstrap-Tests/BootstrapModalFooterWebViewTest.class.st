@@ -2,12 +2,14 @@
 A BootstrapModalFooterTest is a test class for testing the behavior of BootstrapModalFooterWebView
 "
 Class {
-	#name : #BootstrapModalFooterWebViewTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-WebViews'
+	#name : 'BootstrapModalFooterWebViewTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-WebViews',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapModalFooterWebViewTest >> acceptButton [
 
 	^ AsynchronicButtonWebView
@@ -15,7 +17,7 @@ BootstrapModalFooterWebViewTest >> acceptButton [
 		applying: [ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonPrimary ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalFooterWebViewTest >> testOn [
 
 	| footer html |
@@ -35,7 +37,7 @@ BootstrapModalFooterWebViewTest >> testOn [
 			'<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button><button id="button-id1" class="btn btn-primary" type="button">Accept</button></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #'tests-Configuring' }
+{ #category : 'tests-Configuring' }
 BootstrapModalFooterWebViewTest >> testOnCloseTrigger [
 
 	| footer html |
@@ -55,7 +57,7 @@ BootstrapModalFooterWebViewTest >> testOnCloseTrigger [
 			'<div class="modal-footer"><button id="button-id1" class="btn btn-link" data-dismiss="modal" type="button">Close</button><button id="button-id2" class="btn btn-primary" type="button">Accept</button></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalFooterWebViewTest >> testRenderContentOn [
 
 	| footer html |
@@ -72,7 +74,7 @@ BootstrapModalFooterWebViewTest >> testRenderContentOn [
 			'<div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Close</button></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalFooterWebViewTest >> testRenderContentOnWithAdditionalButtons [
 
 	| footer html |

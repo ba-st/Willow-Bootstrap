@@ -2,12 +2,14 @@
 A Bootstrap4DevelopmentMetadataLibraryTest is a test class for testing the behavior of Bootstrap4DevelopmentMetadataLibrary
 "
 Class {
-	#name : #Bootstrap4DevelopmentMetadataLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-4-Tests-Libraries'
+	#name : 'Bootstrap4DevelopmentMetadataLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-4-Tests-Libraries',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DevelopmentMetadataLibraryTest >> testDeployFiles [
 
 	self
@@ -19,7 +21,7 @@ Bootstrap4DevelopmentMetadataLibraryTest >> testDeployFiles [
 			 'bootstrap-4.6.2/bootstrap.js' -> 'db9db16897424a8014c626f52970aa5b3c45fae7'}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DevelopmentMetadataLibraryTest >> testHandlesFolder [
 
 	self
@@ -29,7 +31,7 @@ Bootstrap4DevelopmentMetadataLibraryTest >> testHandlesFolder [
 		deny: ( Bootstrap4DevelopmentMetadataLibrary handlesFolder: #files )
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DevelopmentMetadataLibraryTest >> testIsForDevelopment [
 
 	self
@@ -37,7 +39,7 @@ Bootstrap4DevelopmentMetadataLibraryTest >> testIsForDevelopment [
 		deny: Bootstrap4DevelopmentMetadataLibrary isForDeployment
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DevelopmentMetadataLibraryTest >> testUpdateRoot [
 
 	| html |
@@ -53,7 +55,7 @@ Bootstrap4DevelopmentMetadataLibraryTest >> testUpdateRoot [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-4.6.2/bootstrap.css"/><script type="text/javascript" src="/files/bootstrap-4.6.2/bootstrap.bundle.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DevelopmentMetadataLibraryTest >> testUpdateRootWithoutBundledDependencies [
 
 	| html |

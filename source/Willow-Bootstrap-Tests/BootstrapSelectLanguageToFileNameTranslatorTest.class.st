@@ -2,18 +2,20 @@
 A BootstrapSelectLanguageToFileNameTranslatorTest is a test class for testing the behavior of BootstrapSelectLanguageToFileNameTranslator
 "
 Class {
-	#name : #BootstrapSelectLanguageToFileNameTranslatorTest,
-	#superclass : #TestCase,
-	#category : 'Willow-Bootstrap-Tests-Select'
+	#name : 'BootstrapSelectLanguageToFileNameTranslatorTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-Tests-Select',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Select'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapSelectLanguageToFileNameTranslatorTest >> fileNameFrom: aLocaleString [
 
 	^ BootstrapSelectLanguageToFileNameTranslator new fileNameFrom: (WALocale fromString: aLocaleString)
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 BootstrapSelectLanguageToFileNameTranslatorTest >> testFileNameFrom [
 
 	self

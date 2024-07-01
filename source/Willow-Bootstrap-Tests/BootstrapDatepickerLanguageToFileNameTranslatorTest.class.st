@@ -2,18 +2,20 @@
 A BootstrapDatepickerLanguageToFileNameTranslatorTest is a test class for testing the behavior of BootstrapDatepickerLanguageToFileNameTranslator
 "
 Class {
-	#name : #BootstrapDatepickerLanguageToFileNameTranslatorTest,
-	#superclass : #TestCase,
-	#category : 'Willow-Bootstrap-Tests-Datepicker'
+	#name : 'BootstrapDatepickerLanguageToFileNameTranslatorTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-Tests-Datepicker',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Datepicker'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapDatepickerLanguageToFileNameTranslatorTest >> fileNameFrom: aLocaleString [
 
 	^ BootstrapDatepickerLanguageToFileNameTranslator new fileNameFrom: (WALocale fromString: aLocaleString) ifNone: [ self fail ]
 ]
 
-{ #category : #'tests-Accessing' }
+{ #category : 'tests-Accessing' }
 BootstrapDatepickerLanguageToFileNameTranslatorTest >> testFileNameFromIfNone [
 
 	self

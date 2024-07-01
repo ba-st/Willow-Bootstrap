@@ -2,12 +2,14 @@
 A BootstrapDatepickerDevelopmentLibraryTest is a test class for testing the behavior of BootstrapDatepickerDevelopmentLibrary
 "
 Class {
-	#name : #BootstrapDatepickerDevelopmentLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-Datepicker'
+	#name : 'BootstrapDatepickerDevelopmentLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Datepicker',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Datepicker'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDatepickerDevelopmentLibraryTest >> testDeployFiles [
 
 	self
@@ -103,13 +105,13 @@ BootstrapDatepickerDevelopmentLibraryTest >> testDeployFiles [
 			('bootstrap-datepicker-1.10.0/locales/bootstrap-datepicker.zh-TW.js' -> '9fae51bab1940f08fd0141a53bc791d6ff8ca7af')}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDatepickerDevelopmentLibraryTest >> testForDevelopment [
 
 	self assert: BootstrapDatepickerLibrary forDevelopment equals: BootstrapDatepickerDevelopmentLibrary
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDatepickerDevelopmentLibraryTest >> testIsForDevelopment [
 
 	self
@@ -117,7 +119,7 @@ BootstrapDatepickerDevelopmentLibraryTest >> testIsForDevelopment [
 		deny: BootstrapDatepickerDevelopmentLibrary isForDeployment
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDatepickerDevelopmentLibraryTest >> testUpdateRoot [
 
 	| html |
@@ -133,7 +135,7 @@ BootstrapDatepickerDevelopmentLibraryTest >> testUpdateRoot [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-datepicker-1.10.0/css/bootstrap-datepicker3.css"/><script type="text/javascript" src="/files/bootstrap-datepicker-1.10.0/js/bootstrap-datepicker.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDatepickerDevelopmentLibraryTest >> testUpdateRootWithLocale [
 
 	| html |
@@ -149,7 +151,7 @@ BootstrapDatepickerDevelopmentLibraryTest >> testUpdateRootWithLocale [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-datepicker-1.10.0/css/bootstrap-datepicker3.css"/><script type="text/javascript" src="/files/bootstrap-datepicker-1.10.0/js/bootstrap-datepicker.js"></script><script type="text/javascript" src="/files/bootstrap-datepicker-1.10.0/locales/bootstrap-datepicker.en-NZ.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDatepickerDevelopmentLibraryTest >> testUpdateRootWithUnsupportedLocale [
 
 	| html |
