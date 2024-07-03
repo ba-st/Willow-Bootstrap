@@ -2,21 +2,23 @@
 A BootstrapConstantsTest is a test class for testing the behavior of BootstrapConstants
 "
 Class {
-	#name : #Bootstrap3ConstantsTest,
-	#superclass : #TestCase,
+	#name : 'Bootstrap3ConstantsTest',
+	#superclass : 'TestCase',
 	#pools : [
 		'Willow'
 	],
-	#category : #'Willow-Bootstrap-3-Tests-Frontend'
+	#category : 'Willow-Bootstrap-3-Tests-Frontend',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'Frontend'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3ConstantsTest >> assertConstantAt: aSymbol equals: anExpectedValue [
 
 	self assert: Constants >> #bootstrap >> aSymbol equals: anExpectedValue
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3ConstantsTest >> testDataAPI [
 
 	self
@@ -33,7 +35,7 @@ Bootstrap3ConstantsTest >> testDataAPI [
 		assertConstantAt: #buttons equals: 'buttons'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3ConstantsTest >> testDatepickerDataAPI [
 
 	self
@@ -46,7 +48,7 @@ Bootstrap3ConstantsTest >> testDatepickerDataAPI [
 		assertConstantAt: #todayHighlight equals: 'date-today-highlight'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3ConstantsTest >> testDatepickerStartWeekDays [
 
 	self
@@ -59,7 +61,7 @@ Bootstrap3ConstantsTest >> testDatepickerStartWeekDays [
 		assertConstantAt: #sunday equals: 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3ConstantsTest >> testDatepickerViewModes [
 
 	self
@@ -79,7 +81,7 @@ Bootstrap3ConstantsTest >> testDatepickerViewModes [
 	self assertConstantAt: #linked equals: 'linked'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3ConstantsTest >> testSelectDataAPI [
 
 	self

@@ -2,21 +2,23 @@
 A BootstrapCssStylesTest is a test class for testing the behavior of BootstrapCssStyles
 "
 Class {
-	#name : #BootstrapCssStylesTest,
-	#superclass : #TestCase,
+	#name : 'BootstrapCssStylesTest',
+	#superclass : 'TestCase',
 	#pools : [
 		'Willow'
 	],
-	#category : #'Willow-Bootstrap-Tests-WebViews'
+	#category : 'Willow-Bootstrap-Tests-WebViews',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #'private - asserting' }
+{ #category : 'private - asserting' }
 BootstrapCssStylesTest >> assertClassificationAt: aSymbol equals: anExpectedString [
 
 	self assert: Classification >> #bootstrap3 >> aSymbol equals: anExpectedString
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testAlerts [
 
 	self
@@ -29,7 +31,7 @@ BootstrapCssStylesTest >> testAlerts [
 		assertClassificationAt: #alertWarning equals: 'alert-warning'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testButtons [
 
 	self
@@ -58,13 +60,13 @@ BootstrapCssStylesTest >> testButtons [
 		assertClassificationAt: #buttonToolbar equals: 'btn-toolbar'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testCode [
 
 	self assertClassificationAt: #preScrollable equals: 'pre-scrollable'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testCollapse [
 
 	self
@@ -74,7 +76,7 @@ BootstrapCssStylesTest >> testCollapse [
 		assertClassificationAt: #collapsed equals: 'collapsed'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testContainers [
 
 	self
@@ -85,7 +87,7 @@ BootstrapCssStylesTest >> testContainers [
 		assertClassificationAt: #thumbnail equals: 'thumbnail'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testDropdowns [
 
 	self
@@ -101,7 +103,7 @@ BootstrapCssStylesTest >> testDropdowns [
 		assertClassificationAt: #open equals: 'open'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testForms [
 
 	self
@@ -128,7 +130,7 @@ BootstrapCssStylesTest >> testForms [
 		assertClassificationAt: #hasSuccess equals: 'has-success'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testGridSystem [
 
 	self
@@ -157,7 +159,7 @@ BootstrapCssStylesTest >> testGridSystem [
 		assertClassificationAt: #columnLargePush2 equals: 'col-lg-push-2'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testHelperClasses [
 
 	self
@@ -192,7 +194,7 @@ BootstrapCssStylesTest >> testHelperClasses [
 		assertClassificationAt: #textWarning equals: 'text-warning'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testImages [
 
 	self
@@ -203,7 +205,7 @@ BootstrapCssStylesTest >> testImages [
 		assertClassificationAt: #imageThumbnail equals: 'img-thumbnail'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testInputGroups [
 
 	self
@@ -214,7 +216,7 @@ BootstrapCssStylesTest >> testInputGroups [
 		assertClassificationAt: #inputGroupSmall equals: 'input-group-sm'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testLabels [
 
 	self
@@ -228,7 +230,7 @@ BootstrapCssStylesTest >> testLabels [
 		assertClassificationAt: #labelWarning equals: 'label-warning'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testListGroups [
 
 	self
@@ -242,7 +244,7 @@ BootstrapCssStylesTest >> testListGroups [
 		assertClassificationAt: #listGroupItemWarning equals: 'list-group-item-warning'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testMediaObjects [
 
 	self
@@ -256,7 +258,7 @@ BootstrapCssStylesTest >> testMediaObjects [
 		assertClassificationAt: #mediaObject equals: 'media-object'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testModal [
 
 	self
@@ -273,7 +275,7 @@ BootstrapCssStylesTest >> testModal [
 		assertClassificationAt: #modalTitle equals: 'modal-title'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testNavigation [
 
 	self
@@ -302,7 +304,7 @@ BootstrapCssStylesTest >> testNavigation [
 		assertClassificationAt: #navbarToggle equals: 'navbar-toggle'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testPagination [
 
 	self
@@ -314,7 +316,7 @@ BootstrapCssStylesTest >> testPagination [
 		assertClassificationAt: #paginationSmall equals: 'pagination-sm'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testPanels [
 
 	self
@@ -333,7 +335,7 @@ BootstrapCssStylesTest >> testPanels [
 		assertClassificationAt: #panelWarning equals: 'panel-warning'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testProgressBars [
 
 	self
@@ -346,7 +348,7 @@ BootstrapCssStylesTest >> testProgressBars [
 		assertClassificationAt: #progressBarWarning equals: 'progress-bar-warning'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testResponsiveUtilities [
 
 	self
@@ -378,7 +380,7 @@ BootstrapCssStylesTest >> testResponsiveUtilities [
 		assertClassificationAt: #visiblePrintInlineBlock equals: 'visible-print-inline-block'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testSelectClasses [
 
 	self
@@ -386,7 +388,7 @@ BootstrapCssStylesTest >> testSelectClasses [
 		assertClassificationAt: #bootstrapSelect equals: 'bootstrap-select'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testTables [
 
 	self
@@ -405,7 +407,7 @@ BootstrapCssStylesTest >> testTables [
 		assertClassificationAt: #tableWarning equals: 'warning'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testTypography [
 
 	self
@@ -428,7 +430,7 @@ BootstrapCssStylesTest >> testTypography [
 		assertClassificationAt: #textUppercase equals: 'text-uppercase'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapCssStylesTest >> testWells [
 
 	self

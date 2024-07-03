@@ -1,6 +1,6 @@
-Extension { #name : #WillowJavascriptNamespace }
+Extension { #name : 'WillowJavascriptNamespace' }
 
-{ #category : #'*Willow-Bootstrap' }
+{ #category : '*Willow-Bootstrap' }
 WillowJavascriptNamespace >> bootstrap [
 
 	^self access: 'Bootstrap'

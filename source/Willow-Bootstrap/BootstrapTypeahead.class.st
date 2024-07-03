@@ -2,12 +2,14 @@
 I'm a JQueryPlugin implementing  the bootstrap-typeahead programmatic API
 "
 Class {
-	#name : #BootstrapTypeahead,
-	#superclass : #BootstrapPlugin,
-	#category : #'Willow-Bootstrap-Typeahead'
+	#name : 'BootstrapTypeahead',
+	#superclass : 'BootstrapPlugin',
+	#category : 'Willow-Bootstrap-Typeahead',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Typeahead'
 }
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> addItem: aJSONObject [
 
 	"Adds an item to the end of the list, for example New Entry. This could be used, for example, to pop a dialog when an item is not found in the list of data."
@@ -15,7 +17,7 @@ BootstrapTypeahead >> addItem: aJSONObject [
 	self optionAt: 'addItem' put: aJSONObject 
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> afterSelect: aJSFunction [
 
 	"Call back function to execute after selected an item. It gets the current active item in parameter if any."
@@ -23,7 +25,7 @@ BootstrapTypeahead >> afterSelect: aJSFunction [
 	self optionAt: 'afterSelect' put: aJSFunction
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> appendTo: jQueryElement [
 
 	"By defaut, the menu is added right after the input element. Use this option to add the menu to another div. It should not be used if you want to use bootstrap dropup or dropdown-menu-right classes."
@@ -31,7 +33,7 @@ BootstrapTypeahead >> appendTo: jQueryElement [
 	self optionAt: 'appendTo' put: jQueryElement
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> autoSelect: aBoolean [
 
 	"Allows you to dictate whether or not the first suggestion is selected automatically. Turning autoselect off also means that the input won't clear if nothing is selected and enter or tab is hit."
@@ -39,7 +41,7 @@ BootstrapTypeahead >> autoSelect: aBoolean [
 	self optionAt: 'autoSelect' put: aBoolean 
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> delay: integer [
 
 	"Adds a delay between lookups."
@@ -47,13 +49,13 @@ BootstrapTypeahead >> delay: integer [
 	self optionAt: 'delay' put: integer
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapTypeahead >> destroy [
 
 	functionName := 'destroy'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> displayText: aJSFunction [
 
 	"Method used to get textual representation of an item of the sources. Accepts a single argument item and has the scope of the typeahead instance. Should return a String."
@@ -61,7 +63,7 @@ BootstrapTypeahead >> displayText: aJSFunction [
 	self optionAt: 'displayText' put: aJSFunction
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> fitToElement: aBoolean [
 
 	"Set to true if you want the menu to be the same size than the input it is attached to."
@@ -69,7 +71,7 @@ BootstrapTypeahead >> fitToElement: aBoolean [
 	self optionAt: 'fitToElement' put: aBoolean 
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapTypeahead >> getActive [
 
 	"To get the currently active item, you will get a String or a JSON object depending on how you initialized typeahead. Works only for the first match."
@@ -77,7 +79,7 @@ BootstrapTypeahead >> getActive [
 	functionName := 'getActive'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> highlighter: aJSFunction [
 
 	"Method used to highlight autocomplete results. Accepts a single argument item and has the scope of the typeahead instance. Should return html."
@@ -85,7 +87,7 @@ BootstrapTypeahead >> highlighter: aJSFunction [
 	self optionAt: 'highlighter' put: aJSFunction
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> items: aNumberOrAll [
 
 	"The max number of items to display in the dropdown. Can also be set to 'all'"
@@ -93,7 +95,7 @@ BootstrapTypeahead >> items: aNumberOrAll [
 	self optionAt: 'items' put: aNumberOrAll 
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapTypeahead >> lookup [
 
 	"To trigger the lookup function externally"
@@ -101,7 +103,7 @@ BootstrapTypeahead >> lookup [
 	functionName := 'lookup'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> matcher: aJSFunction [
 
 	"The method used to determine if a query matches an item. Accepts a single argument, the item against which to test the query. Access the current query with this.query. Return a boolean true if query is a match."
@@ -109,13 +111,13 @@ BootstrapTypeahead >> matcher: aJSFunction [
 	self optionAt: 'matcher' put: aJSFunction
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeahead >> method [
 
 	^ 'typeahead'
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> minLength: aNumber [
 
 	"The minimum character length needed before triggering autocomplete suggestions. You can set it to 0 so suggestion are shown even when there is no text when lookup function is called."
@@ -123,7 +125,7 @@ BootstrapTypeahead >> minLength: aNumber [
 	self optionAt: 'minLength' put: aNumber
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> scrollHeight: numberOrFunction [
 
 	"Number of pixels the scrollable parent container scrolled down (scrolled out the viewport)."
@@ -131,7 +133,7 @@ BootstrapTypeahead >> scrollHeight: numberOrFunction [
 	self optionAt: 'scrollHeight' put: numberOrFunction
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> showHintOnFocus: aBooleanOrAll [
 
 	"If hints should be shown as soon as the input gets focus. If set to true, all match will be shown. If set to all, it will display all hints, not filtering them by the current text. 
@@ -140,7 +142,7 @@ BootstrapTypeahead >> showHintOnFocus: aBooleanOrAll [
 	self optionAt: 'showHintOnFocus' put: aBooleanOrAll
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> sorter: aJSFunction [
 
 	"Method used to sort autocomplete results. Accepts a single argument items and has the scope of the typeahead instance. Reference the current query with this.query."
@@ -148,7 +150,7 @@ BootstrapTypeahead >> sorter: aJSFunction [
 	self optionAt: 'sorter' put: aJSFunction
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> source: arrayOrFunction [
 
 	"The data source to query against. May be an array of strings, an array of JSON object with a name property or a function. 
@@ -158,7 +160,7 @@ BootstrapTypeahead >> source: arrayOrFunction [
 	self optionAt: 'source' put: arrayOrFunction 
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapTypeahead >> updater: aJSFunction [
 
 	"The method used to return selected item. Accepts a single argument, the item and has the scope of the typeahead instance."

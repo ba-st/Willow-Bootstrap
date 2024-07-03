@@ -2,12 +2,14 @@
 A BootstrapTypeaheadDeploymentLibraryTest is a test class for testing the behavior of BootstrapTypeaheadDeploymentLibrary
 "
 Class {
-	#name : #BootstrapTypeaheadDeploymentLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Typeahead'
+	#name : 'BootstrapTypeaheadDeploymentLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Typeahead',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Typeahead'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadDeploymentLibraryTest >> testDeployFiles [
 
 	self
@@ -16,19 +18,19 @@ BootstrapTypeaheadDeploymentLibraryTest >> testDeployFiles [
 		andFileContentsMatching: {('bootstrap-typeahead-4.0.2/bootstrap3-typeahead.min.js' -> '8174cc20521054baee069553cbbca7a662d6d025')}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadDeploymentLibraryTest >> testForDeployment [
 
 	self assert: BootstrapTypeaheadLibrary forDeployment equals: BootstrapTypeaheadDeploymentLibrary
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadDeploymentLibraryTest >> testIsForDeployment [
 
 	self assert: BootstrapTypeaheadLibrary forDeployment isForDeployment
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadDeploymentLibraryTest >> testUpdateRoot [
 
 	| html |

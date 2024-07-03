@@ -1,10 +1,12 @@
 Class {
-	#name : #Bootstrap4RadioWebViewTest,
-	#superclass : #SingleSelectionWebViewBehaviorTest,
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#name : 'Bootstrap4RadioWebViewTest',
+	#superclass : 'SingleSelectionWebViewBehaviorTest',
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #support }
+{ #category : 'support' }
 Bootstrap4RadioWebViewTest >> newSingleSelectionView [
 
 	^Bootstrap4RadioWebView 
@@ -13,7 +15,7 @@ Bootstrap4RadioWebViewTest >> newSingleSelectionView [
 		applyingToInput: []
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4RadioWebViewTest >> testOn [
 
 	| radioGroup html |
@@ -29,7 +31,7 @@ Bootstrap4RadioWebViewTest >> testOn [
 			'<div class="form-check"><input name="1" id="radio-button-id2" class="form-check-input" value="1" type="radio"/><label for="radio-button-id2" class="form-check-label">Buenos Aires</label></div><div class="form-check"><input name="1" id="radio-button-id3" class="form-check-input" value="2" type="radio"/><label for="radio-button-id3" class="form-check-label">CABA</label></div><script type="text/javascript">$("#radio-button-id2").change(function(event){$(this).prop("disabled",true)});$("#radio-button-id3").change(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4RadioWebViewTest >> testRenderContentOnWithElements [
 
 	| radioGroup html |
@@ -44,7 +46,7 @@ Bootstrap4RadioWebViewTest >> testRenderContentOnWithElements [
 			'<div class="form-check"><input name="1" id="radio-button-id2" class="form-check-input" value="1" type="radio"/><label for="radio-button-id2" class="form-check-label">Buenos Aires</label></div><div class="form-check"><input name="1" id="radio-button-id3" class="form-check-input" value="2" type="radio"/><label for="radio-button-id3" class="form-check-label">CABA</label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4RadioWebViewTest >> testRenderContentOnWithElementsAndSomethingSelected [
 
 	| radioGroup html |
@@ -70,7 +72,7 @@ Bootstrap4RadioWebViewTest >> testRenderContentOnWithElementsAndSomethingSelecte
 			'<div class="form-check"><input name="1" id="radio-button-id2" class="form-check-input" value="1" type="radio"/><label for="radio-button-id2" class="form-check-label">Buenos Aires</label></div><div class="form-check"><input name="1" id="radio-button-id3" class="form-check-input" checked value="2" type="radio"/><label for="radio-button-id3" class="form-check-label">CABA</label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4RadioWebViewTest >> testRenderingWhenEmptyDoesNotProduceHTMLContent [
 
 	| radioGroup html |
@@ -81,7 +83,7 @@ Bootstrap4RadioWebViewTest >> testRenderingWhenEmptyDoesNotProduceHTMLContent [
 	self assert: html isEmpty
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4RadioWebViewTest >> testRenderingWithApplying [
 
 	| radioGroup html |
@@ -100,7 +102,7 @@ Bootstrap4RadioWebViewTest >> testRenderingWithApplying [
 			'<div class="form-check"><input name="1" id="radio-button-id2" class="willow-disabled-component form-check-input" value="1" type="radio"/><label for="radio-button-id2" class="willow-disabled-component form-check-label">A</label></div><div class="form-check"><input name="1" id="radio-button-id3" class="willow-disabled-component form-check-input" value="2" type="radio"/><label for="radio-button-id3" class="willow-disabled-component form-check-label">B</label></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap4RadioWebViewTest >> testRenderingWithCustomStyle [
 
 	| radioGroup html |

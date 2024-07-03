@@ -2,12 +2,14 @@
 A BootstrapNotificationBuilderTest is a test class for testing the behavior of BootstrapNotificationBuilder
 "
 Class {
-	#name : #BootstrapNotificationBuilderTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-WebViews'
+	#name : 'BootstrapNotificationBuilderTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-WebViews',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #'tests-Building' }
+{ #category : 'tests-Building' }
 BootstrapNotificationBuilderTest >> testBuildApplying [
 
 	| notification html |
@@ -19,7 +21,7 @@ BootstrapNotificationBuilderTest >> testBuildApplying [
 	self assert: html equals: '<div class="alert alert-info" role="alert"></div>'
 ]
 
-{ #category : #'tests-Building' }
+{ #category : 'tests-Building' }
 BootstrapNotificationBuilderTest >> testDanger [
 
 	| notification html |
@@ -33,7 +35,7 @@ BootstrapNotificationBuilderTest >> testDanger [
 	self assert: html equals: '<div class="alert alert-danger" role="alert"></div>'
 ]
 
-{ #category : #'tests-Building' }
+{ #category : 'tests-Building' }
 BootstrapNotificationBuilderTest >> testDismissible [
 
 	| notification html |
@@ -50,7 +52,7 @@ BootstrapNotificationBuilderTest >> testDismissible [
 			'<div class="alert alert-info alert-dismissible" role="alert"><button class="close" data-dismiss="alert" aria-label="Close" type="button"><span aria-hidden="true">×</span></button></div>'
 ]
 
-{ #category : #'tests-Building' }
+{ #category : 'tests-Building' }
 BootstrapNotificationBuilderTest >> testInformational [
 
 	| notification html |
@@ -64,7 +66,7 @@ BootstrapNotificationBuilderTest >> testInformational [
 	self assert: html equals: '<div class="alert alert-info" role="alert"></div>'
 ]
 
-{ #category : #'tests-Building' }
+{ #category : 'tests-Building' }
 BootstrapNotificationBuilderTest >> testSuccess [
 
 	| notification html |
@@ -78,7 +80,7 @@ BootstrapNotificationBuilderTest >> testSuccess [
 	self assert: html equals: '<div class="alert alert-success" role="alert"></div>'
 ]
 
-{ #category : #'tests-Building' }
+{ #category : 'tests-Building' }
 BootstrapNotificationBuilderTest >> testWarning [
 
 	| notification html |
@@ -92,7 +94,7 @@ BootstrapNotificationBuilderTest >> testWarning [
 	self assert: html equals: '<div class="alert alert-warning" role="alert"></div>'
 ]
 
-{ #category : #'tests-Building' }
+{ #category : 'tests-Building' }
 BootstrapNotificationBuilderTest >> testWrapping [
 
 	| notification html |

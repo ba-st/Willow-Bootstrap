@@ -2,15 +2,17 @@
 A BootstrapDropdownMenuBuilderTest is a test class for testing the behavior of BootstrapDropdownMenuBuilder
 "
 Class {
-	#name : #Bootstrap3NavigationDropdownMenuBuilderTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap3NavigationDropdownMenuBuilderTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3NavigationDropdownMenuBuilderTest >> navigationBarWith: menuBuilder [
 
 	^ [ :canvas | 
@@ -24,14 +26,14 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> navigationBarWith: menuBuilder [
 	]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3NavigationDropdownMenuBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap3ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOn [
 
 	| navigation html |
@@ -55,7 +57,7 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOn [
 			'<ul class="nav navbar-nav"><li class="dropdown"><a id="a-id1" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown&nbsp;<span class="caret"></span></a><ul class="dropdown-menu"><li><a id="a-id2" role="button">Action</a></li><li class="divider" role="separator"></li><li><a id="a-id3" role="button" class="willow">Another action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});$("#a-id3").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnRightAligned [
 
 	| navigation html |
@@ -76,7 +78,7 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnRightAligned [
 			'<ul class="nav navbar-nav"><li class="dropdown"><a id="a-id1" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown&nbsp;<span class="caret"></span></a><ul class="dropdown-menu dropdown-menu-right"><li><a id="a-id2" role="button">Action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnWithButton [
 
 	| navigation html |
@@ -98,7 +100,7 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnWithButton [
 			'<ul class="nav navbar-nav"><li class="dropdown"><button class="btn dropdown-toggle btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">Dropdown&nbsp;<span class="caret"></span></button><ul class="dropdown-menu"><li><a id="a-id1" role="button">Action</a></li><li class="divider" role="separator"></li><li><a id="a-id2" role="button">Another action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnWithHeaders [
 
 	| navigation html |
@@ -119,7 +121,7 @@ Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderContentOnWithHeaders [
 			'<ul class="nav navbar-nav"><li class="dropdown"><a id="a-id1" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown&nbsp;<span class="caret"></span></a><ul class="dropdown-menu"><li class="dropdown-header">Dropdown header</li><li><a id="a-id2" role="button">Action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3NavigationDropdownMenuBuilderTest >> testRenderNavigationMenuContent [
 
 	| navigationBar html |

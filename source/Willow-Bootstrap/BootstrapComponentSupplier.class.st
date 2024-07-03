@@ -2,18 +2,20 @@
 I'm the abstract superclass of the Bootstrap components suppliers. 
 "
 Class {
-	#name : #BootstrapComponentSupplier,
-	#superclass : #FrontendComponentSupplier,
-	#category : #'Willow-Bootstrap-Frontend'
+	#name : 'BootstrapComponentSupplier',
+	#superclass : 'FrontendComponentSupplier',
+	#category : 'Willow-Bootstrap-Frontend',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Frontend'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 BootstrapComponentSupplier class >> isAbstract [
 
 	^ self name = #BootstrapComponentSupplier
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aComponentCommand [
 
 	^ AsynchronicButtonWebView
@@ -21,7 +23,7 @@ BootstrapComponentSupplier >> asynchronicButtonLabeled: aRenderable applying: aC
 		applying: [ :button | button addClass bootstrapCommon button + aComponentCommand ]
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> asynchronicLinkActingAsButtonLabeled: aRenderable applying: aComponentCommand [
 
 	^ self
@@ -32,13 +34,13 @@ BootstrapComponentSupplier >> asynchronicLinkActingAsButtonLabeled: aRenderable 
 			]
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> asynchronicLinkLabeled: aRenderable applying: aComponentCommand [
 
 	^ LinkWebView asynchronicLabeled: aRenderable applying: aComponentCommand
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> dateFieldApplying: aComponentCommand [
 
 	^ DateFieldWebView
@@ -48,7 +50,7 @@ BootstrapComponentSupplier >> dateFieldApplying: aComponentCommand [
 			]
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
 
 	^ NumberFieldWebView
@@ -59,13 +61,13 @@ BootstrapComponentSupplier >> decimalNumberFieldApplying: aComponentCommand [
 		transformingWith: FloatCodec new
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> dialogBuilder [
 
 	^ BootstrapModalBuilder new
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> dropdownListApplying: aComponentCommand applyingToOptions: anOptionCommand [
 
 	^ SingleSelectionWebView
@@ -75,7 +77,7 @@ BootstrapComponentSupplier >> dropdownListApplying: aComponentCommand applyingTo
 		applyingToOptions: anOptionCommand
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> fieldAddonBuilder [
 
 	"A Field addon builder allows to extend fields by adding text, buttons or button groups on either side of the field"
@@ -83,7 +85,7 @@ BootstrapComponentSupplier >> fieldAddonBuilder [
 	^ self subclassResponsibility
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> fieldSetContaining: aWebView applying: fieldSetCommand withLegend: aTitle applying: legendCommand [
 
 	^ FieldSetWebView
@@ -93,32 +95,32 @@ BootstrapComponentSupplier >> fieldSetContaining: aWebView applying: fieldSetCom
 		applying: legendCommand
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> gridBuilder [
 
 	self subclassResponsibility
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> labeledFieldApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> multiLineTextFieldApplying: aComponentCommand [
 
 	^ TextFieldWebView
 		multiLineApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> multipleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand [
 
 	^ MultipleSelectionListBoxWebView
@@ -126,7 +128,7 @@ BootstrapComponentSupplier >> multipleSelectionListBoxDisplayingAtOnce: aNumberO
 		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> naturalNumberFieldApplying: aComponentCommand [
 
 	^ NumberFieldWebView
@@ -137,44 +139,44 @@ BootstrapComponentSupplier >> naturalNumberFieldApplying: aComponentCommand [
 		transformingWith: NaturalNumberCodec new
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> navigationDropdownMenuBuilder [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> notificationBuilder [ 
 
 	^BootstrapNotificationBuilder new
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> panelBuilder [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> pillsBuilder [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> singleButtonDropdownBuilder [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> singleLineTextFieldApplying: aComponentCommand [
 
 	^ TextFieldWebView
 		singleLineApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand applyingToOptions: anOptionCommand [
 
 	^ SingleSelectionWebView
@@ -184,19 +186,19 @@ BootstrapComponentSupplier >> singleSelectionListBoxDisplayingAtOnce: aNumberOfE
 		applyingToOptions: anOptionCommand
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> splitButtonDropdownBuilder [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #Interaction }
+{ #category : 'Interaction' }
 BootstrapComponentSupplier >> statementToCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas [
 
 	^ ( dialogSupplier value: ( jQueryMatchingDialogContainer children: 'div' ) ) bootstrapModal hide
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aComponentCommand evaluating: anActionBlock [
 
 	^ SynchronicSubmitButtonWebView
@@ -205,13 +207,13 @@ BootstrapComponentSupplier >> synchronicButtonLabeled: aRenderable applying: aCo
 		evaluating: anActionBlock
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> synchronicLinkLabeled: aRenderable applying: aComponentCommand [
 
 	^ LinkWebView synchronicLabeled: aRenderable applying: aComponentCommand
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> tableBuilder [
 
 	^ TableWebViewBuilder new
@@ -219,13 +221,13 @@ BootstrapComponentSupplier >> tableBuilder [
 		yourself
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 BootstrapComponentSupplier >> tabsBuilder [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> timeFieldApplying: aComponentCommand [
 
 	^ TimeFieldWebView
@@ -235,7 +237,7 @@ BootstrapComponentSupplier >> timeFieldApplying: aComponentCommand [
 			]
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 BootstrapComponentSupplier >> unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem [
 
 	^ UnorderedListWebView
@@ -244,7 +246,7 @@ BootstrapComponentSupplier >> unorderedListApplying: aCommandToList listing: aCo
 		applyingToEach: [ :listItem | listItem addClass bootstrapCommon listGroupItem + aCommandToItem ]
 ]
 
-{ #category : #Processing }
+{ #category : 'Processing' }
 BootstrapComponentSupplier >> updateRoot: aRoot [
 
 	aRoot beHtml5

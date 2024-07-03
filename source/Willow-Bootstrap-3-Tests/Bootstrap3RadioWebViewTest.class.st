@@ -1,10 +1,12 @@
 Class {
-	#name : #Bootstrap3RadioWebViewTest,
-	#superclass : #SingleSelectionWebViewBehaviorTest,
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#name : 'Bootstrap3RadioWebViewTest',
+	#superclass : 'SingleSelectionWebViewBehaviorTest',
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #support }
+{ #category : 'support' }
 Bootstrap3RadioWebViewTest >> newSingleSelectionView [
 
 	^Bootstrap3RadioWebView 
@@ -13,7 +15,7 @@ Bootstrap3RadioWebViewTest >> newSingleSelectionView [
 		applyingToInput: []
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3RadioWebViewTest >> testOn [
 
 	| radioGroup html |
@@ -29,7 +31,7 @@ Bootstrap3RadioWebViewTest >> testOn [
 			'<label><input name="1" id="radio-button-id2" value="1" type="radio"/>Buenos Aires</label><label><input name="1" id="radio-button-id3" value="2" type="radio"/>CABA</label><script type="text/javascript">$("#radio-button-id2").change(function(event){$(this).prop("disabled",true)});$("#radio-button-id3").change(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3RadioWebViewTest >> testRenderContentOnWithElements [
 
 	| radioGroup html |
@@ -44,7 +46,7 @@ Bootstrap3RadioWebViewTest >> testRenderContentOnWithElements [
 			'<label><input name="1" id="radio-button-id2" value="1" type="radio"/>Buenos Aires</label><label><input name="1" id="radio-button-id3" value="2" type="radio"/>CABA</label>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3RadioWebViewTest >> testRenderContentOnWithElementsAndSomethingSelected [
 
 	| radioGroup html |
@@ -70,7 +72,7 @@ Bootstrap3RadioWebViewTest >> testRenderContentOnWithElementsAndSomethingSelecte
 			'<label><input name="1" id="radio-button-id2" value="1" type="radio"/>Buenos Aires</label><label><input name="1" id="radio-button-id3" checked value="2" type="radio"/>CABA</label>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3RadioWebViewTest >> testRenderingWhenEmptyDoesNotProduceHTMLContent [
 
 	| radioGroup html |
@@ -81,7 +83,7 @@ Bootstrap3RadioWebViewTest >> testRenderingWhenEmptyDoesNotProduceHTMLContent [
 	self assert: html isEmpty
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3RadioWebViewTest >> testRenderingWithApplying [
 
 	| radioGroup html |

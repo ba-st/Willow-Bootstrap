@@ -1,1585 +1,1587 @@
 "
-I provide easy access to the glyhicons names
+glyphicon-comment
 "
 Class {
-	#name : #Glyphicons,
-	#superclass : #Object,
-	#category : #'Willow-Bootstrap-WebViews'
+	#name : 'Glyphicons',
+	#superclass : 'Object',
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> adjust [
 
 	^'glyphicon-adjust'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> alert [
 
 	^'glyphicon-alert'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> alignCenter [
 
 	^'glyphicon-align-center'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> alignJustify [
 
 	^'glyphicon-align-justify'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> alignLeft [
 
 	^'glyphicon-align-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> alignRight [
 
 	^'glyphicon-align-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> apple [
 
 	^'glyphicon-apple'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> arrowDown [
 
 	^'glyphicon-arrow-down'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> arrowLeft [
 
 	^'glyphicon-arrow-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> arrowRight [
 
 	^'glyphicon-arrow-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> arrowUp [
 
 	^'glyphicon-arrow-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> asterisk [
 
 	^'glyphicon-asterisk'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> babyFormula [
 
 	^'glyphicon-baby-formula'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> backward [
 
 	^'glyphicon-backward'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> banCircle [
 
 	^'glyphicon-ban-circle'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> barcode [
 
 	^'glyphicon-barcode'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> bed [
 
 	^'glyphicon-bed'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> bell [
 
 	^'glyphicon-bell'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> bishop [
 
 	^'glyphicon-bishop'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> bitcoin [
 
 	^'glyphicon-bitcoin'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> blackboard [
 
 	^'glyphicon-blackboard'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> bold [
 
 	^'glyphicon-bold'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> book [
 
 	^'glyphicon-book'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> bookmark [
 
 	^'glyphicon-bookmark'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> briefcase [
 
 	^'glyphicon-briefcase'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> btc [
 
 	^'glyphicon-btc'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> bullhorn [
 
 	^'glyphicon-bullhorn'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> calendar [
 
 	^'glyphicon-calendar'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> camera [
 
 	^'glyphicon-camera'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> cd [
 
 	^'glyphicon-cd'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> certificate [
 
 	^'glyphicon-certificate'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> check [
 
 	^'glyphicon-check'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> chevronDown [
 
 	^'glyphicon-chevron-down'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> chevronLeft [
 
 	^'glyphicon-chevron-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> chevronRight [
 
 	^'glyphicon-chevron-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> chevronUp [
 
 	^'glyphicon-chevron-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> circleArrowDown [
 
 	^'glyphicon-circle-arrow-down'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> circleArrowLeft [
 
 	^'glyphicon-circle-arrow-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> circleArrowRight [
 
 	^'glyphicon-circle-arrow-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> circleArrowUp [
 
 	^'glyphicon-circle-arrow-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> cloud [
 
 	^'glyphicon-cloud'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> cloudDownload [
 
 	^'glyphicon-cloud-download'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> cloudUpload [
 
 	^'glyphicon-cloud-upload'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> cog [
 
 	^'glyphicon-cog'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> collapseDown [
 
 	^'glyphicon-collapse-down'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> collapseUp [
 
 	^'glyphicon-collapse-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> comment [
 
 	^'glyphicon-comment'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> compressed [
 
 	^'glyphicon-compressed'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> console [
 
 	^'glyphicon-console'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> copy [
 
 	^'glyphicon-copy'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> copyrightMark [
 
 	^'glyphicon-copyright-mark'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> creditCard [
 
 	^'glyphicon-credit-card'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> cutlery [
 
 	^'glyphicon-cutlery'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> dashboard [
 
 	^'glyphicon-dashboard'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> download [
 
 	^'glyphicon-download'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> downloadAlt [
 
 	^'glyphicon-download-alt'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> duplicate [
 
 	^'glyphicon-duplicate'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> earphone [
 
 	^'glyphicon-earphone'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> edit [
 
 	^'glyphicon-edit'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> education [
 
 	^'glyphicon-education'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> eject [
 
 	^'glyphicon-eject'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> envelope [
 
 	^'glyphicon-envelope'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> equalizer [
 
 	^'glyphicon-equalizer'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> erase [
 
 	^'glyphicon-erase'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> eur [
 
 	^'glyphicon-eur'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> euro [
 
 	^'glyphicon-euro'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> exclamationSign [
 
 	^'glyphicon-exclamation-sign'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> expand [
 
 	^'glyphicon-expand'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> export [
 
 	^'glyphicon-export'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> eyeClose [
 
 	^'glyphicon-eye-close'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> eyeOpen [
 
 	^'glyphicon-eye-open'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> facetimeVideo [
 
 	^'glyphicon-facetime-video'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> fastBackward [
 
 	^'glyphicon-fast-backward'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> fastForward [
 
 	^'glyphicon-fast-forward'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> file [
 
 	^'glyphicon-file'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> film [
 
 	^'glyphicon-film'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> filter [
 
 	^'glyphicon-filter'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> fire [
 
 	^'glyphicon-fire'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> flag [
 
 	^'glyphicon-flag'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> flash [
 
 	^'glyphicon-flash'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> floppyDisk [
 
 	^'glyphicon-floppy-disk'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> floppyOpen [
 
 	^'glyphicon-floppy-open'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> floppyRemove [
 
 	^'glyphicon-floppy-remove'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> floppySave [
 
 	^'glyphicon-floppy-save'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> floppySaved [
 
 	^'glyphicon-floppy-saved'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> folderClose [
 
 	^'glyphicon-folder-close'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> folderOpen [
 
 	^'glyphicon-folder-open'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> font [
 
 	^'glyphicon-font'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> forward [
 
 	^'glyphicon-forward'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> fullscreen [
 
 	^'glyphicon-fullscreen'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> gbp [
 
 	^'glyphicon-gbp'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> gift [
 
 	^'glyphicon-gift'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> glass [
 
 	^'glyphicon-glass'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> globe [
 
 	^'glyphicon-globe'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> grain [
 
 	^'glyphicon-grain'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> handDown [
 
 	^'glyphicon-hand-down'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> handLeft [
 
 	^'glyphicon-hand-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> handRight [
 
 	^'glyphicon-hand-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> handUp [
 
 	^'glyphicon-hand-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> hdVideo [
 
 	^'glyphicon-hd-video'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> hdd [
 
 	^'glyphicon-hdd'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> header [
 
 	^'glyphicon-header'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> headphones [
 
 	^'glyphicon-headphones'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> heart [
 
 	^'glyphicon-heart'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> heartEmpty [
 
 	^'glyphicon-heart-empty'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> home [
 
 	^'glyphicon-home'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> hourglass [
 
 	^'glyphicon-hourglass'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> iceLolly [
 
 	^'glyphicon-ice-lolly'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> iceLollyTasted [
 
 	^'glyphicon-ice-lolly-tasted'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> import [
 
 	^'glyphicon-import'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> inbox [
 
 	^'glyphicon-inbox'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> indentLeft [
 
 	^'glyphicon-indent-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> indentRight [
 
 	^'glyphicon-indent-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> infoSign [
 
 	^'glyphicon-info-sign'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> italic [
 
 	^'glyphicon-italic'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> jpy [
 
 	^'glyphicon-jpy'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> king [
 
 	^'glyphicon-king'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> knight [
 
 	^'glyphicon-knight'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> lamp [
 
 	^'glyphicon-lamp'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> leaf [
 
 	^'glyphicon-leaf'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> levelUp [
 
 	^'glyphicon-level-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> link [
 
 	^'glyphicon-link'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> list [
 
 	^'glyphicon-list'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> listAlt [
 
 	^'glyphicon-list-alt'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> lock [
 
 	^'glyphicon-lock'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> logIn [
 
 	^'glyphicon-log-in'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> logOut [
 
 	^'glyphicon-log-out'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> magnet [
 
 	^'glyphicon-magnet'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> mapMarker [
 
 	^'glyphicon-map-marker'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> menuDown [
 
 	^'glyphicon-menu-down'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> menuHamburger [
 
 	^'glyphicon-menu-hamburger'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> menuLeft [
 
 	^'glyphicon-menu-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> menuRight [
 
 	^'glyphicon-menu-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> menuUp [
 
 	^'glyphicon-menu-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> minus [
 
 	^'glyphicon-minus'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> minusSign [
 
 	^'glyphicon-minus-sign'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> modalWindow [
 
 	^'glyphicon-modal-window'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> move [
 
 	^'glyphicon-move'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> music [
 
 	^'glyphicon-music'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> newWindow [
 
 	^'glyphicon-new-window'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> objectAlignBottom [
 
 	^'glyphicon-object-align-bottom'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> objectAlignHorizontal [
 
 	^'glyphicon-object-align-horizontal'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> objectAlignLeft [
 
 	^'glyphicon-object-align-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> objectAlignRight [
 
 	^'glyphicon-object-align-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> objectAlignTop [
 
 	^'glyphicon-object-align-top'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> objectAlignVertical [
 
 	^'glyphicon-object-align-vertical'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> off [
 
 	^'glyphicon-off'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> oil [
 
 	^'glyphicon-oil'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> ok [
 
 	^'glyphicon-ok'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> okCircle [
 
 	^'glyphicon-ok-circle'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> okSign [
 
 	^'glyphicon-ok-sign'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> open [
 
 	^'glyphicon-open'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> openFile [
 
 	^'glyphicon-open-file'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> optionHorizontal [
 
 	^'glyphicon-option-horizontal'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> optionVertical [
 
 	^'glyphicon-option-vertical'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> paperclip [
 
 	^'glyphicon-paperclip'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> paste [
 
 	^'glyphicon-paste'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> pause [
 
 	^'glyphicon-pause'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> pawn [
 
 	^'glyphicon-pawn'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> pencil [
 
 	^'glyphicon-pencil'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> phone [
 
 	^'glyphicon-phone'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> phoneAlt [
 
 	^'glyphicon-phone-alt'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> picture [
 
 	^'glyphicon-picture'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> piggyBank [
 
 	^'glyphicon-piggy-bank'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> plane [
 
 	^'glyphicon-plane'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> play [
 
 	^'glyphicon-play'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> playCircle [
 
 	^'glyphicon-play-circle'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> plus [
 
 	^'glyphicon-plus'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> plusSign [
 
 	^'glyphicon-plus-sign'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> print [
 
 	^'glyphicon-print'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> pushpin [
 
 	^'glyphicon-pushpin'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> qrcode [
 
 	^'glyphicon-qrcode'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> queen [
 
 	^'glyphicon-queen'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> questionSign [
 
 	^'glyphicon-question-sign'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> random [
 
 	^'glyphicon-random'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> record [
 
 	^'glyphicon-record'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> refresh [
 
 	^'glyphicon-refresh'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> registrationMark [
 
 	^'glyphicon-registration-mark'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> remove [
 
 	^'glyphicon-remove'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> removeCircle [
 
 	^'glyphicon-remove-circle'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> removeSign [
 
 	^'glyphicon-remove-sign'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> repeat [
 
 	^'glyphicon-repeat'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> resizeFull [
 
 	^'glyphicon-resize-full'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> resizeHorizontal [
 
 	^'glyphicon-resize-horizontal'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> resizeSmall [
 
 	^'glyphicon-resize-small'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> resizeVertical [
 
 	^'glyphicon-resize-vertical'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> retweet [
 
 	^'glyphicon-retweet'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> road [
 
 	^'glyphicon-road'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> rub [
 
 	^'glyphicon-rub'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> ruble [
 
 	^'glyphicon-ruble'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> save [
 
 	^'glyphicon-save'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> saveFile [
 
 	^'glyphicon-save-file'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> saved [
 
 	^'glyphicon-saved'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> scale [
 
 	^'glyphicon-scale'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> scissors [
 
 	^'glyphicon-scissors'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> screenshot [
 
 	^'glyphicon-screenshot'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sdVideo [
 
 	^'glyphicon-sd-video'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> search [
 
 	^'glyphicon-search'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> send [
 
 	^'glyphicon-send'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> share [
 
 	^'glyphicon-share'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> shareAlt [
 
 	^'glyphicon-share-alt'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> shoppingCart [
 
 	^'glyphicon-shopping-cart'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> signal [
 
 	^'glyphicon-signal'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sort [
 
 	^'glyphicon-sort'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sortByAlphabet [
 
 	^'glyphicon-sort-by-alphabet'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sortByAlphabetAlt [
 
 	^'glyphicon-sort-by-alphabet-alt'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sortByAttributes [
 
 	^'glyphicon-sort-by-attributes'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sortByAttributesAlt [
 
 	^'glyphicon-sort-by-attributes-alt'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sortByOrder [
 
 	^'glyphicon-sort-by-order'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sortByOrderAlt [
 
 	^'glyphicon-sort-by-order-alt'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sound51 [
 
 	^'glyphicon-sound-5-1'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sound61 [
 
 	^'glyphicon-sound-6-1'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sound71 [
 
 	^'glyphicon-sound-7-1'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> soundDolby [
 
 	^'glyphicon-sound-dolby'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> soundStereo [
 
 	^'glyphicon-sound-stereo'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> star [
 
 	^'glyphicon-star'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> starEmpty [
 
 	^'glyphicon-star-empty'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> stats [
 
 	^'glyphicon-stats'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> stepBackward [
 
 	^'glyphicon-step-backward'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> stepForward [
 
 	^'glyphicon-step-forward'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> stop [
 
 	^'glyphicon-stop'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> subscript [
 
 	^'glyphicon-subscript'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> subtitles [
 
 	^'glyphicon-subtitles'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> sunglasses [
 
 	^'glyphicon-sunglasses'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> superscript [
 
 	^'glyphicon-superscript'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> tag [
 
 	^'glyphicon-tag'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> tags [
 
 	^'glyphicon-tags'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> tasks [
 
 	^'glyphicon-tasks'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> tent [
 
 	^'glyphicon-tent'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> textBackground [
 
 	^'glyphicon-text-background'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> textColor [
 
 	^'glyphicon-text-color'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> textHeight [
 
 	^'glyphicon-text-height'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> textSize [
 
 	^'glyphicon-text-size'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> textWidth [
 
 	^'glyphicon-text-width'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> th [
 
 	^'glyphicon-th'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> thLarge [
 
 	^'glyphicon-th-large'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> thList [
 
 	^'glyphicon-th-list'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> thumbsDown [
 
 	^'glyphicon-thumbs-down'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> thumbsUp [
 
 	^'glyphicon-thumbs-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> time [
 
 	^'glyphicon-time'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> tint [
 
 	^'glyphicon-tint'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> tower [
 
 	^'glyphicon-tower'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> transfer [
 
 	^'glyphicon-transfer'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> trash [
 
 	^'glyphicon-trash'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> treeConifer [
 
 	^'glyphicon-tree-conifer'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> treeDeciduous [
 
 	^'glyphicon-tree-deciduous'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> triangleBottom [
 
 	^'glyphicon-triangle-bottom'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> triangleLeft [
 
 	^'glyphicon-triangle-left'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> triangleRight [
 
 	^'glyphicon-triangle-right'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> triangleTop [
 
 	^'glyphicon-triangle-top'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> unchecked [
 
 	^'glyphicon-unchecked'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> upload [
 
 	^'glyphicon-upload'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> usd [
 
 	^'glyphicon-usd'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> user [
 
 	^'glyphicon-user'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> volumeDown [
 
 	^'glyphicon-volume-down'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> volumeOff [
 
 	^'glyphicon-volume-off'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> volumeUp [
 
 	^'glyphicon-volume-up'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> warningSign [
 
 	^'glyphicon-warning-sign'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> wrench [
 
 	^'glyphicon-wrench'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> xbt [
 
 	^'glyphicon-xbt'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> yen [
 
 	^'glyphicon-yen'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> zoomIn [
 
 	^'glyphicon-zoom-in'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Glyphicons class >> zoomOut [
 
 	^'glyphicon-zoom-out'

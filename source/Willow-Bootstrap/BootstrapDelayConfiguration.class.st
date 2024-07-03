@@ -2,16 +2,18 @@
 I'm a Delay configuration
 "
 Class {
-	#name : #BootstrapDelayConfiguration,
-	#superclass : #JSObject,
+	#name : 'BootstrapDelayConfiguration',
+	#superclass : 'JSObject',
 	#instVars : [
 		'millisecondCountToShow',
 		'millisecondCountToHide'
 	],
-	#category : #'Willow-Bootstrap-Plugins'
+	#category : 'Willow-Bootstrap-Plugins',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Plugins'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapDelayConfiguration >> initialize [
 
 	super initialize.
@@ -19,7 +21,7 @@ BootstrapDelayConfiguration >> initialize [
 	millisecondCountToShow := 0
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 BootstrapDelayConfiguration >> javascriptContentOn: aStream [
 
 	aStream nextPut: ${.
@@ -29,7 +31,7 @@ BootstrapDelayConfiguration >> javascriptContentOn: aStream [
 	aStream nextPut: $}
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapDelayConfiguration >> show: theMillisecondCountToShow hide: theMillisecondCountToHide [
 
 	millisecondCountToShow := theMillisecondCountToShow.

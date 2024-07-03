@@ -2,15 +2,17 @@
 I'm here to startup some basic stuff
 "
 Class {
-	#name : #WillowBootstrap,
-	#superclass : #Object,
+	#name : 'WillowBootstrap',
+	#superclass : 'Object',
 	#pools : [
 		'Willow'
 	],
-	#category : #'Willow-Bootstrap-Frontend'
+	#category : 'Willow-Bootstrap-Frontend',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Frontend'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrap class >> forBootstrap3And4Do: aBlock [
 
 	<ignoreForCoverage>
@@ -20,21 +22,21 @@ WillowBootstrap class >> forBootstrap3And4Do: aBlock [
 	aBlock value: Classification >> #bootstrapCommon
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrap class >> forBootstrap3Do: aBlock [
 
 	<ignoreForCoverage>
 	aBlock value: Classification >> #bootstrap3
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrap class >> forBootstrap4Do: aBlock [
 
 	<ignoreForCoverage>
 	aBlock value: Classification >> #bootstrap4
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 WillowBootstrap class >> initialize [
 
 	<ignoreForCoverage>
@@ -48,7 +50,7 @@ WillowBootstrap class >> initialize [
 		initializeSelectConstantsAndClasses
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeAccessingClasses [
 
 	<ignoreForCoverage>
@@ -57,7 +59,7 @@ WillowBootstrap class >> initializeAccessingClasses [
 		forBootstrap3Do: [ :namespace | namespace bind: #date to: 'date' ]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeAlertsClasses [
 
 	<ignoreForCoverage>
@@ -84,7 +86,7 @@ WillowBootstrap class >> initializeAlertsClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeBaseConstantsAndClasses [
 
 	<ignoreForCoverage>
@@ -141,7 +143,7 @@ WillowBootstrap class >> initializeBaseConstantsAndClasses [
 		initializeWillowFunctionsConstants
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeBootstrap3GridClasses [
 
 	<ignoreForCoverage>
@@ -165,7 +167,7 @@ WillowBootstrap class >> initializeBootstrap3GridClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeBootstrap4GridClasses [
 
 	<ignoreForCoverage>
@@ -197,7 +199,7 @@ WillowBootstrap class >> initializeBootstrap4GridClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeBorderUtitiliesClasses [
 
 	<ignoreForCoverage>
@@ -242,7 +244,7 @@ WillowBootstrap class >> initializeBorderUtitiliesClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeButtonsClasses [
 
 	<ignoreForCoverage>
@@ -292,7 +294,7 @@ WillowBootstrap class >> initializeButtonsClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeCardClasses [
 
 	<ignoreForCoverage>
@@ -318,7 +320,7 @@ WillowBootstrap class >> initializeCardClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeCodeClasses [
 
 	<ignoreForCoverage>
@@ -327,7 +329,7 @@ WillowBootstrap class >> initializeCodeClasses [
 	self forBootstrap3And4Do: [ :namespace | namespace bind: #preScrollable to: 'pre-scrollable' ]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeCollapseClasses [
 
 	<ignoreForCoverage>
@@ -346,7 +348,7 @@ WillowBootstrap class >> initializeCollapseClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeContainersClasses [
 
 	<ignoreForCoverage>
@@ -367,7 +369,7 @@ WillowBootstrap class >> initializeContainersClasses [
 			]
 ]
 
-{ #category : #'private - constants' }
+{ #category : 'private - constants' }
 WillowBootstrap class >> initializeDataAPIConstants [
 
 	<ignoreForCoverage>
@@ -413,7 +415,7 @@ WillowBootstrap class >> initializeDataAPIConstants [
 		bind: #window to: 'window'
 ]
 
-{ #category : #'private - datepicker' }
+{ #category : 'private - datepicker' }
 WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
 
 	<ignoreForCoverage>
@@ -425,7 +427,7 @@ WillowBootstrap class >> initializeDatepickerConstantsAndClasses [
 		initializeDatepickerWeekStartConstants
 ]
 
-{ #category : #'private - datepicker' }
+{ #category : 'private - datepicker' }
 WillowBootstrap class >> initializeDatepickerDataAPIConstants [
 
 	<ignoreForCoverage>
@@ -439,7 +441,7 @@ WillowBootstrap class >> initializeDatepickerDataAPIConstants [
 		bind: #forceParse to: 'date-force-parse'
 ]
 
-{ #category : #'private - datepicker' }
+{ #category : 'private - datepicker' }
 WillowBootstrap class >> initializeDatepickerEventsConstants [
 
 	<ignoreForCoverage>
@@ -454,7 +456,7 @@ WillowBootstrap class >> initializeDatepickerEventsConstants [
 		bind: #changeViewMode to: 'changeViewMode'
 ]
 
-{ #category : #'private - datepicker' }
+{ #category : 'private - datepicker' }
 WillowBootstrap class >> initializeDatepickerViewModesConstants [
 
 	<ignoreForCoverage>
@@ -472,7 +474,7 @@ WillowBootstrap class >> initializeDatepickerViewModesConstants [
 		bind: #decades to: 'decades'
 ]
 
-{ #category : #'private - datepicker' }
+{ #category : 'private - datepicker' }
 WillowBootstrap class >> initializeDatepickerWeekStartConstants [
 
 	<ignoreForCoverage>
@@ -486,7 +488,7 @@ WillowBootstrap class >> initializeDatepickerWeekStartConstants [
 		bind: #saturday to: 6
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeDisplayUtilitiesClasses [
 
 	<ignoreForCoverage>
@@ -511,7 +513,7 @@ WillowBootstrap class >> initializeDisplayUtilitiesClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeDropdownsClasses [
 
 	<ignoreForCoverage>
@@ -545,7 +547,7 @@ WillowBootstrap class >> initializeDropdownsClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeEmbedClasses [
 
 	<ignoreForCoverage>
@@ -562,7 +564,7 @@ WillowBootstrap class >> initializeEmbedClasses [
 			]
 ]
 
-{ #category : #'private - constants' }
+{ #category : 'private - constants' }
 WillowBootstrap class >> initializeEventsConstants [
 
 	<ignoreForCoverage>
@@ -591,7 +593,7 @@ WillowBootstrap class >> initializeEventsConstants [
 		bind: #shownCollapse to: 'shown.bs.collapse'
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeFigureClasses [
 
 	<ignoreForCoverage>
@@ -605,7 +607,7 @@ WillowBootstrap class >> initializeFigureClasses [
 			]
 ]
 
-{ #category : #'private - flex' }
+{ #category : 'private - flex' }
 WillowBootstrap class >> initializeFlexAlignContentClasses [
 
 	<ignoreForCoverage>
@@ -634,7 +636,7 @@ WillowBootstrap class >> initializeFlexAlignContentClasses [
 			]
 ]
 
-{ #category : #'private - flex' }
+{ #category : 'private - flex' }
 WillowBootstrap class >> initializeFlexAlignItemsClasses [
 
 	<ignoreForCoverage>
@@ -663,7 +665,7 @@ WillowBootstrap class >> initializeFlexAlignItemsClasses [
 			]
 ]
 
-{ #category : #'private - flex' }
+{ #category : 'private - flex' }
 WillowBootstrap class >> initializeFlexAlignSelfClasses [
 
 	<ignoreForCoverage>
@@ -692,7 +694,7 @@ WillowBootstrap class >> initializeFlexAlignSelfClasses [
 			]
 ]
 
-{ #category : #'private - flex' }
+{ #category : 'private - flex' }
 WillowBootstrap class >> initializeFlexColumnClasses [
 
 	<ignoreForCoverage>
@@ -718,7 +720,7 @@ WillowBootstrap class >> initializeFlexColumnClasses [
 			]
 ]
 
-{ #category : #'private - flex' }
+{ #category : 'private - flex' }
 WillowBootstrap class >> initializeFlexJustifyContentClasses [
 
 	<ignoreForCoverage>
@@ -747,7 +749,7 @@ WillowBootstrap class >> initializeFlexJustifyContentClasses [
 			]
 ]
 
-{ #category : #'private - flex' }
+{ #category : 'private - flex' }
 WillowBootstrap class >> initializeFlexOrderClasses [
 
 	<ignoreForCoverage>
@@ -767,7 +769,7 @@ WillowBootstrap class >> initializeFlexOrderClasses [
 			]
 ]
 
-{ #category : #'private - flex' }
+{ #category : 'private - flex' }
 WillowBootstrap class >> initializeFlexWrapClasses [
 
 	<ignoreForCoverage>
@@ -790,7 +792,7 @@ WillowBootstrap class >> initializeFlexWrapClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeFloatClasses [
 
 	<ignoreForCoverage>
@@ -814,7 +816,7 @@ WillowBootstrap class >> initializeFloatClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeFormsClasses [
 
 	<ignoreForCoverage>
@@ -886,7 +888,7 @@ WillowBootstrap class >> initializeFormsClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeGridSystemClasses [
 
 	<ignoreForCoverage>
@@ -897,7 +899,7 @@ WillowBootstrap class >> initializeGridSystemClasses [
 	self initializeBootstrap4GridClasses
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeHelperClassesClasses [
 
 	<ignoreForCoverage>
@@ -960,7 +962,7 @@ WillowBootstrap class >> initializeHelperClassesClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeImagesClasses [
 
 	<ignoreForCoverage>
@@ -976,7 +978,7 @@ WillowBootstrap class >> initializeImagesClasses [
 		forBootstrap4Do: [ :namespace | namespace bind: #imageFluid to: 'img-fluid' ]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeInputGroupsClasses [
 
 	<ignoreForCoverage>
@@ -1000,7 +1002,7 @@ WillowBootstrap class >> initializeInputGroupsClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeLabelsClasses [
 
 	<ignoreForCoverage>
@@ -1030,7 +1032,7 @@ WillowBootstrap class >> initializeLabelsClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeListGroupsClasses [
 
 	<ignoreForCoverage>
@@ -1065,7 +1067,7 @@ WillowBootstrap class >> initializeListGroupsClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeMediaObjectClasses [
 
 	<ignoreForCoverage>
@@ -1086,7 +1088,7 @@ WillowBootstrap class >> initializeMediaObjectClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeModalClasses [
 
 	<ignoreForCoverage>
@@ -1113,7 +1115,7 @@ WillowBootstrap class >> initializeModalClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeNavigationClasses [
 
 	<ignoreForCoverage>
@@ -1168,7 +1170,7 @@ WillowBootstrap class >> initializeNavigationClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializePaginationClasses [
 
 	<ignoreForCoverage>
@@ -1192,7 +1194,7 @@ WillowBootstrap class >> initializePaginationClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializePanelsClasses [
 
 	<ignoreForCoverage>
@@ -1215,7 +1217,7 @@ WillowBootstrap class >> initializePanelsClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializePopoverClasses [
 
 	<ignoreForCoverage>
@@ -1237,7 +1239,7 @@ WillowBootstrap class >> initializePopoverClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializePositionClasses [
 
 	<ignoreForCoverage>
@@ -1256,7 +1258,7 @@ WillowBootstrap class >> initializePositionClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeProgressBarsClasses [
 
 	<ignoreForCoverage>
@@ -1277,7 +1279,7 @@ WillowBootstrap class >> initializeProgressBarsClasses [
 		forBootstrap4Do: [ :namespace | namespace bind: #progressBarAnimated to: 'progress-bar-animated' ]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeResponsiveUtilitiesClasses [
 
 	<ignoreForCoverage>
@@ -1307,7 +1309,7 @@ WillowBootstrap class >> initializeResponsiveUtilitiesClasses [
 			]
 ]
 
-{ #category : #'private - select' }
+{ #category : 'private - select' }
 WillowBootstrap class >> initializeSelectConstants [
 
 	<ignoreForCoverage>
@@ -1321,7 +1323,7 @@ WillowBootstrap class >> initializeSelectConstants [
 		bind: #count to: 'count'
 ]
 
-{ #category : #'private - select' }
+{ #category : 'private - select' }
 WillowBootstrap class >> initializeSelectConstantsAndClasses [
 
 	<ignoreForCoverage>
@@ -1337,7 +1339,7 @@ WillowBootstrap class >> initializeSelectConstantsAndClasses [
 		initializeSelectEventsConstants
 ]
 
-{ #category : #'private - select' }
+{ #category : 'private - select' }
 WillowBootstrap class >> initializeSelectDataAPIConstants [
 
 	<ignoreForCoverage>
@@ -1371,7 +1373,7 @@ WillowBootstrap class >> initializeSelectDataAPIConstants [
 		bind: #windowPadding to: 'window-padding'
 ]
 
-{ #category : #'private - select' }
+{ #category : 'private - select' }
 WillowBootstrap class >> initializeSelectEventsConstants [
 
 	<ignoreForCoverage>
@@ -1386,7 +1388,7 @@ WillowBootstrap class >> initializeSelectEventsConstants [
 		bind: #renderedSelect to: 'rendered.bs.select'
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeSizingClasses [
 
 	<ignoreForCoverage>
@@ -1407,7 +1409,7 @@ WillowBootstrap class >> initializeSizingClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeSpacingClasses [
 
 	<ignoreForCoverage>
@@ -1433,7 +1435,7 @@ WillowBootstrap class >> initializeSpacingClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeSpinnerClasses [
 
 	<ignoreForCoverage>
@@ -1447,7 +1449,7 @@ WillowBootstrap class >> initializeSpinnerClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeTablesClasses [
 
 	<ignoreForCoverage>
@@ -1483,7 +1485,7 @@ WillowBootstrap class >> initializeTablesClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeToastClasses [
 
 	<ignoreForCoverage>
@@ -1496,7 +1498,7 @@ WillowBootstrap class >> initializeToastClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeTooltipsClasses [
 
 	<ignoreForCoverage>
@@ -1509,7 +1511,7 @@ WillowBootstrap class >> initializeTooltipsClasses [
 		forBootstrap3Do: [ :namespace | namespace bind: #tooltipArrow to: 'tooltip-arrow' ]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeTypographyClasses [
 
 	<ignoreForCoverage>
@@ -1565,7 +1567,7 @@ WillowBootstrap class >> initializeTypographyClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeVerticalAlignmnetClasses [
 
 	<ignoreForCoverage>
@@ -1581,7 +1583,7 @@ WillowBootstrap class >> initializeVerticalAlignmnetClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeVisibilityClasses [
 
 	<ignoreForCoverage>
@@ -1593,7 +1595,7 @@ WillowBootstrap class >> initializeVisibilityClasses [
 			]
 ]
 
-{ #category : #'private - initialization - classes' }
+{ #category : 'private - initialization - classes' }
 WillowBootstrap class >> initializeWellsClasses [
 
 	<ignoreForCoverage>
@@ -1606,14 +1608,14 @@ WillowBootstrap class >> initializeWellsClasses [
 			]
 ]
 
-{ #category : #'private - constants' }
+{ #category : 'private - constants' }
 WillowBootstrap class >> initializeWillowFunctionsConstants [
 
 	<ignoreForCoverage>
 	Constants >> #bootstrap bind: #cleanModalFunctionName to: 'cleanModal'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrap class >> withBootstrap4BreakpointsDo: aDyadicBlock [
 
 	<ignoreForCoverage>

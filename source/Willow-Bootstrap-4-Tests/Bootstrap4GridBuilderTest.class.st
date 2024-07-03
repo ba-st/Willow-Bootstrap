@@ -1,10 +1,12 @@
 Class {
-	#name : #Bootstrap4GridBuilderTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#name : 'Bootstrap4GridBuilderTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testApplyingCellCommand [
 
 	| grid html |
@@ -25,7 +27,7 @@ Bootstrap4GridBuilderTest >> testApplyingCellCommand [
 			'<div class="row"><div class="col text-muted">1</div><div class="col text-muted">2</div><div class="w-100"></div><div class="col text-muted">3</div><div class="col text-muted">4</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testApplyingRowCommand [
 
 	| grid html |
@@ -46,7 +48,7 @@ Bootstrap4GridBuilderTest >> testApplyingRowCommand [
 			'<div class="row text-muted"><div class="col">1</div><div class="col">2</div><div class="col">3</div><div class="w-100"></div><div class="col">4</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testEvenlyDistributed [
 
 	| grid html |
@@ -67,7 +69,7 @@ Bootstrap4GridBuilderTest >> testEvenlyDistributed [
 			'<div class="row"><div class="col">1</div><div class="col">2</div><div class="col">3</div><div class="w-100"></div><div class="col">4</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testForExtraSmallDevices [
 
 	| grid html |
@@ -82,7 +84,7 @@ Bootstrap4GridBuilderTest >> testForExtraSmallDevices [
 	self assert: html equals: '<div class="row"><div class="col">1</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testForLargeDevices [
 
 	| grid html |
@@ -97,7 +99,7 @@ Bootstrap4GridBuilderTest >> testForLargeDevices [
 	self assert: html equals: '<div class="row"><div class="col-lg">1</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testForMediumDevices [
 
 	| grid html |
@@ -112,7 +114,7 @@ Bootstrap4GridBuilderTest >> testForMediumDevices [
 	self assert: html equals: '<div class="row"><div class="col-md">1</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testForSmallDevices [
 
 	| grid html |
@@ -127,7 +129,7 @@ Bootstrap4GridBuilderTest >> testForSmallDevices [
 	self assert: html equals: '<div class="row"><div class="col-sm">1</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testWithCustomColumnWidths [
 
 	| grid html |
@@ -148,7 +150,7 @@ Bootstrap4GridBuilderTest >> testWithCustomColumnWidths [
 			'<div class="row"><div class="col-1">1</div><div class="col-4">2</div><div class="col-7">3</div><div class="w-100"></div><div class="col-1">4</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4GridBuilderTest >> testWithCustomColumnWidthsForMediumDevices [
 
 	| grid html |

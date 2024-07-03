@@ -2,17 +2,19 @@
 I represent a Bootstrap Modal.
 "
 Class {
-	#name : #BootstrapModalWebView,
-	#superclass : #WAPainter,
+	#name : 'BootstrapModalWebView',
+	#superclass : 'WAPainter',
 	#instVars : [
 		'footer',
 		'dialog',
 		'header'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapModalWebView class >> withHeader: aBootstrapModalHeader content: aBodyView footer: aBootstrapModalFooter [
 
 	^ self
@@ -23,7 +25,7 @@ BootstrapModalWebView class >> withHeader: aBootstrapModalHeader content: aBodyV
 		andModalDocument: [ :document |  ]
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapModalWebView class >> withHeader: aBootstrapModalHeader content: aBodyView footer: aBootstrapModalFooter applyingToDialog: aDialogCommand andModalDocument: aModalDocumentCommand [
 
 	^ self new
@@ -34,7 +36,7 @@ BootstrapModalWebView class >> withHeader: aBootstrapModalHeader content: aBodyV
 		andToDocument: aModalDocumentCommand
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapModalWebView >> contentWrapping: aBodyView [
 
 	^ self
@@ -46,7 +48,7 @@ BootstrapModalWebView >> contentWrapping: aBodyView [
 		applying: [ :container | container addClass bootstrapCommon modalContent ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapModalWebView >> divisionContainerWrapping: aContentView applying: aCommandToComponent [
 
 	"We can't reference the component supplier since this view could be used from a library where there is no session defined."
@@ -57,7 +59,7 @@ BootstrapModalWebView >> divisionContainerWrapping: aContentView applying: aComm
 		applying: aCommandToComponent
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapModalWebView >> documentWrapping: content applying: aDocumentCommand [
 
 	^ self
@@ -68,7 +70,7 @@ BootstrapModalWebView >> documentWrapping: content applying: aDocumentCommand [
 			]
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aBodyView footer: aBootstrapModalFooter applyingToDialog: aDialogCommand andToDocument: aModalDocumentCommand [
 
 	header := aBootstrapModalHeader.
@@ -82,7 +84,7 @@ BootstrapModalWebView >> initializeWithHeader: aBootstrapModalHeader content: aB
 			]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalWebView >> on [
 
 	"The footer contains the buttons that can trigger some action (except the close button, but the modal have specific events for this action)"
@@ -90,7 +92,7 @@ BootstrapModalWebView >> on [
 	^ footer on
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalWebView >> onClose [
 
 	^ CombinedWebInteractionInterpreter
@@ -99,7 +101,7 @@ BootstrapModalWebView >> onClose [
 			footer onClose}
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapModalWebView >> renderContentOn: aCanvas [
 
 	aCanvas render: dialog

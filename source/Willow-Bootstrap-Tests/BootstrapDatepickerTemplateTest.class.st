@@ -2,15 +2,19 @@
 A BootstrapDatepickerTemplateTest is a test class for testing the behavior of BootstrapDatepickerTemplate
 "
 Class {
-	#name : #BootstrapDatepickerTemplateTest,
-	#superclass : #JSObjectTest,
-	#category : 'Willow-Bootstrap-Tests-Datepicker'
+	#name : 'BootstrapDatepickerTemplateTest',
+	#superclass : 'JSObjectTest',
+	#category : 'Willow-Bootstrap-Tests-Datepicker',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Datepicker'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDatepickerTemplateTest >> testAsJavascript [
 
 	self
-		assert: ((BootstrapDatepickerTemplate context: self renderContext) leftArrow: [ :canvas | canvas span: '<' ] rightArrow: '>')
-		equals: '{"leftArrow":"<span>&lt;</span>","rightArrow":"&gt;"}'
+		assert: ( ( BootstrapDatepickerTemplate context: self renderContext )
+				  leftArrow: [ :canvas | canvas span: '<' ]
+				  rightArrow: '>' )
+		equals: '{"leftArrow":"<span>&lt;<\/span>","rightArrow":"&gt;"}'
 ]

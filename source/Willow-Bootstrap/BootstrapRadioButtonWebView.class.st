@@ -1,6 +1,6 @@
 Class {
-	#name : #BootstrapRadioButtonWebView,
-	#superclass : #SingleSelectionWebViewBehavior,
+	#name : 'BootstrapRadioButtonWebView',
+	#superclass : 'SingleSelectionWebViewBehavior',
 	#instVars : [
 		'interactionInterpreter',
 		'identifierAssigner',
@@ -9,28 +9,30 @@ Class {
 		'containerCommand',
 		'itemRenderer'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #'private - rendering' }
+{ #category : 'private - rendering' }
 BootstrapRadioButtonWebView >> activeLabelCommandFor: anElement [ 
 
 	self subclassResponsibility 
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapRadioButtonWebView >> beIdentifiable [
 
 	^ identifierAssigner beRequired
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapRadioButtonWebView >> groupContainerCommand [
 
 	self subclassResponsibility 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapRadioButtonWebView >> initializeRenderingWith: aRenderingBlock
 	applyingToContainer: aContainerCommand
 	applyingToLabel: aLabelCommand
@@ -44,13 +46,13 @@ BootstrapRadioButtonWebView >> initializeRenderingWith: aRenderingBlock
 	identifierAssigner := IdentifierAssigner prefixedBy: 'radio-button'
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapRadioButtonWebView >> on [
 
 	^interactionInterpreter
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapRadioButtonWebView >> renderContentOn: aCanvas [
 
 	| container |
@@ -62,7 +64,7 @@ BootstrapRadioButtonWebView >> renderContentOn: aCanvas [
 		with: [ :div | self renderRadioGroupOn: div ]
 ]
 
-{ #category : #'private - rendering' }
+{ #category : 'private - rendering' }
 BootstrapRadioButtonWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas [
 
 	| radioButton |
@@ -75,19 +77,19 @@ BootstrapRadioButtonWebView >> renderInputFor: anElement asPartOf: aRadioGroup o
 	self renderLabelContentFor: anElement on: aCanvas
 ]
 
-{ #category : #'private - rendering' }
+{ #category : 'private - rendering' }
 BootstrapRadioButtonWebView >> renderLabelContentFor: anElement on: aCanvas [
 
 	aCanvas render: (itemRenderer value: anElement)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapRadioButtonWebView >> renderRadioButtonFor: anElement asPartOf: aRadioGroup on: aCanvas [
 
 	self subclassResponsibility 
 ]
 
-{ #category : #'private - rendering' }
+{ #category : 'private - rendering' }
 BootstrapRadioButtonWebView >> renderRadioGroupOn: div [
 
 	div radioGroup

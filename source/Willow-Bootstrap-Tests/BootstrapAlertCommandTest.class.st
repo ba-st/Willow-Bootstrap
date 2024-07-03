@@ -2,12 +2,14 @@
 A BootstrapAlertCommandTest is a test class for testing the behavior of BootstrapAlertCommand
 "
 Class {
-	#name : #BootstrapAlertCommandTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Frontend'
+	#name : 'BootstrapAlertCommandTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Frontend',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Frontend'
 }
 
-{ #category : #'tests-processing' }
+{ #category : 'tests-processing' }
 BootstrapAlertCommandTest >> testApplyToOn [
 
 	| html |

@@ -2,12 +2,14 @@
 A BootstrapTypeaheadTest is a test class for testing the behavior of BootstrapTypeahead
 "
 Class {
-	#name : #BootstrapTypeaheadTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Typeahead'
+	#name : 'BootstrapTypeaheadTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Typeahead',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Typeahead'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapTypeaheadTest >> renderTextInputApplying: aBlock [
 
 	^ self
@@ -20,7 +22,7 @@ BootstrapTypeaheadTest >> renderTextInputApplying: aBlock [
 			input script: bootstrapTypeAhead ]
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testAddItem [
 
 	| html |
@@ -30,7 +32,7 @@ BootstrapTypeaheadTest >> testAddItem [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"addItem":false});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testAfterSelect [
 
 	| html |
@@ -42,7 +44,7 @@ BootstrapTypeaheadTest >> testAfterSelect [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"afterSelect":function(){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testAppendTo [
 
 	| html |
@@ -52,7 +54,7 @@ BootstrapTypeaheadTest >> testAppendTo [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"appendTo":this});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testAutoSelect [
 
 	| html |
@@ -62,7 +64,7 @@ BootstrapTypeaheadTest >> testAutoSelect [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"autoSelect":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testDelay [
 
 	| html |
@@ -72,7 +74,7 @@ BootstrapTypeaheadTest >> testDelay [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"delay":1});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapTypeaheadTest >> testDestroy [
 
 	| html |
@@ -82,7 +84,7 @@ BootstrapTypeaheadTest >> testDestroy [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead("destroy");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testDisplayText [
 
 	| html |
@@ -103,7 +105,7 @@ BootstrapTypeaheadTest >> testDisplayText [
 			'<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"displayText":function(item){return item.name}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testFitToElement [
 
 	| html |
@@ -115,7 +117,7 @@ BootstrapTypeaheadTest >> testFitToElement [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"fitToElement":true});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapTypeaheadTest >> testGetActive [
 
 	| html |
@@ -125,7 +127,7 @@ BootstrapTypeaheadTest >> testGetActive [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead("getActive");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testHighlighter [
 
 	| html |
@@ -137,7 +139,7 @@ BootstrapTypeaheadTest >> testHighlighter [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"highlighter":function(item){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testItems [
 
 	| html |
@@ -147,7 +149,7 @@ BootstrapTypeaheadTest >> testItems [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"items":12});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapTypeaheadTest >> testLookup [
 
 	| html |
@@ -157,7 +159,7 @@ BootstrapTypeaheadTest >> testLookup [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead("lookup");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testMatcher [
 
 	| html |
@@ -177,7 +179,7 @@ BootstrapTypeaheadTest >> testMatcher [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"matcher":function(item){return true}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testMinLength [
 
 	| html |
@@ -187,7 +189,7 @@ BootstrapTypeaheadTest >> testMinLength [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"minLength":12});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testScrollHeight [
 
 	| html |
@@ -197,7 +199,7 @@ BootstrapTypeaheadTest >> testScrollHeight [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"scrollHeight":12});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testShowHintOnFocus [
 
 	| html |
@@ -209,7 +211,7 @@ BootstrapTypeaheadTest >> testShowHintOnFocus [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"showHintOnFocus":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testSorter [
 
 	| html |
@@ -221,7 +223,7 @@ BootstrapTypeaheadTest >> testSorter [
 		equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"sorter":function(item){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testSource [
 
 	| html |
@@ -231,7 +233,7 @@ BootstrapTypeaheadTest >> testSource [
 	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").typeahead({"source":["a","b"]});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTypeaheadTest >> testUpdater [
 
 	| html |

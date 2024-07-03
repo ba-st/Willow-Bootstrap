@@ -2,12 +2,14 @@
 A BootstrapTooltipTest is a test class for testing the behavior of BootstrapTooltip
 "
 Class {
-	#name : #BootstrapTooltipTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-Plugins'
+	#name : 'BootstrapTooltipTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Plugins',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Plugins'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapTooltipTest >> renderTooltipContentApplying: aBlock [
 
 	^ self
@@ -20,7 +22,7 @@ BootstrapTooltipTest >> renderTooltipContentApplying: aBlock [
 			div script: tooltip ]
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testAnimation [
 
 	| html |
@@ -32,7 +34,7 @@ BootstrapTooltipTest >> testAnimation [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"animation":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testContainer [
 
 	| html |
@@ -44,7 +46,7 @@ BootstrapTooltipTest >> testContainer [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"container":"body"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testDelay [
 
 	| html |
@@ -60,7 +62,7 @@ BootstrapTooltipTest >> testDelay [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"delay":{"show":200,"hide":100}});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapTooltipTest >> testDestroy [
 
 	| html |
@@ -70,7 +72,7 @@ BootstrapTooltipTest >> testDestroy [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip("destroy");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapTooltipTest >> testHide [
 
 	| html |
@@ -80,7 +82,7 @@ BootstrapTooltipTest >> testHide [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip("hide");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testHtml [
 
 	| html |
@@ -90,28 +92,25 @@ BootstrapTooltipTest >> testHtml [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testHtmlTitle [
 
 	| html |
 
-	html := self
-		renderTooltipContentApplying: [ :tooltip | 
-			tooltip
-				htmlTitle:
-					( ContainerWebView
-						wrapping: 'A complex tooltip'
-						intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
-						applying: [ :container | container addClass bootstrapCommon container ] )
-			].
+	html := self renderTooltipContentApplying: [ :tooltip |
+			        tooltip htmlTitle: ( ContainerWebView
+					          wrapping: 'A complex tooltip'
+					          intoElementBuiltUsing: [ :theCanvas | theCanvas div ]
+					          applying: [ :container | container addClass bootstrapCommon container ] )
+		        ].
 
 	self
 		assert: html
 		equals:
-			'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true,"title":"<div class=\"container\">A complex tooltip</div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true,"title":"<div class=\"container\">A complex tooltip<\/div>"});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapTooltipTest >> testOnHidden [
 
 	| html |
@@ -120,7 +119,7 @@ BootstrapTooltipTest >> testOnHidden [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("hidden.bs.tooltip",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapTooltipTest >> testOnHide [
 
 	| html |
@@ -129,7 +128,7 @@ BootstrapTooltipTest >> testOnHide [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("hide.bs.tooltip",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapTooltipTest >> testOnInserted [
 
 	| html |
@@ -140,7 +139,7 @@ BootstrapTooltipTest >> testOnInserted [
 		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("inserted.bs.tooltip",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapTooltipTest >> testOnShow [
 
 	| html |
@@ -149,7 +148,7 @@ BootstrapTooltipTest >> testOnShow [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("show.bs.tooltip",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapTooltipTest >> testOnShown [
 
 	| html |
@@ -158,7 +157,7 @@ BootstrapTooltipTest >> testOnShown [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("shown.bs.tooltip",function(){});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testPlacement [
 
 	| html |
@@ -168,7 +167,7 @@ BootstrapTooltipTest >> testPlacement [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"placement":"left"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testPlacementWithFunction [
 
 	| html |
@@ -178,7 +177,7 @@ BootstrapTooltipTest >> testPlacementWithFunction [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"placement":function(){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testSanitize [
 
 	| html |
@@ -188,7 +187,7 @@ BootstrapTooltipTest >> testSanitize [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"sanitize":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testSanitizeFunction [
 
 	| html |
@@ -198,7 +197,7 @@ BootstrapTooltipTest >> testSanitizeFunction [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"sanitizeFn":function(){}});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testSelector [
 
 	| html |
@@ -208,7 +207,7 @@ BootstrapTooltipTest >> testSelector [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"selector":".has-popover"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapTooltipTest >> testShow [
 
 	| html |
@@ -218,7 +217,7 @@ BootstrapTooltipTest >> testShow [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip("show");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testTitle [
 
 	| html |
@@ -228,7 +227,7 @@ BootstrapTooltipTest >> testTitle [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"title":"Tooltip"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapTooltipTest >> testToggle [
 
 	| html |
@@ -238,7 +237,7 @@ BootstrapTooltipTest >> testToggle [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip("toggle");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testTrigger [
 
 	| html |
@@ -248,7 +247,7 @@ BootstrapTooltipTest >> testTrigger [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"trigger":"manual"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapTooltipTest >> testWhiteList [
 
 	| html |

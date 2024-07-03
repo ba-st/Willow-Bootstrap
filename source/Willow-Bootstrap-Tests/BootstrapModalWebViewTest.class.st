@@ -2,12 +2,14 @@
 A BootstrapModalWebViewTest is a test class for testing the behavior of BootstrapModalWebView
 "
 Class {
-	#name : #BootstrapModalWebViewTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-WebViews'
+	#name : 'BootstrapModalWebViewTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-WebViews',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapModalWebViewTest >> agreeButton [
 
 	^ AsynchronicButtonWebView
@@ -16,7 +18,7 @@ BootstrapModalWebViewTest >> agreeButton [
 			[ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonSuccess ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapModalWebViewTest >> takeMySoulButton [
 
 	^ AsynchronicButtonWebView
@@ -24,7 +26,7 @@ BootstrapModalWebViewTest >> takeMySoulButton [
 		applying: [ :button | button addClass bootstrapCommon button + button addClass bootstrapCommon buttonPrimary ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalWebViewTest >> testOnCloseTrigger [
 
 	| html footer header dialog |
@@ -48,7 +50,7 @@ BootstrapModalWebViewTest >> testOnCloseTrigger [
 			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button id="button-id1" class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">×</span></button><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button id="button-id2" class="btn btn-link" data-dismiss="modal" type="button">Ok</button></div></div></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#button-id2").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalWebViewTest >> testOnTriggerDoesNothingWithoutAdditionalActionButtons [
 
 	| html footer header dialog |
@@ -71,7 +73,7 @@ BootstrapModalWebViewTest >> testOnTriggerDoesNothingWithoutAdditionalActionButt
 			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Ok</button></div></div></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalWebViewTest >> testOnTriggerWithButtons [
 
 	| html dialog |
@@ -95,7 +97,7 @@ BootstrapModalWebViewTest >> testOnTriggerWithButtons [
 			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Disagree</button><button id="button-id1" class="btn btn-success" type="button">Agree</button><button id="button-id3" class="btn btn-primary" type="button">Just take my soul</button></div></div></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#button-id3").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalWebViewTest >> testRenderContentOn [
 
 	| html footer header dialog |
@@ -118,7 +120,7 @@ BootstrapModalWebViewTest >> testRenderContentOn [
 			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Ok</button></div></div></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalWebViewTest >> testRenderContentOnWithCommands [
 
 	| html footer header legalDialog |

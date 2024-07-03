@@ -1,10 +1,12 @@
 Class {
-	#name : #Bootstrap3RadioButtonWebViewTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#name : 'Bootstrap3RadioButtonWebViewTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3RadioButtonWebViewTest >> newSingleSelectionView [
 
 	^ self supplier
@@ -14,13 +16,13 @@ Bootstrap3RadioButtonWebViewTest >> newSingleSelectionView [
 		applyingToInput: [  ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3RadioButtonWebViewTest >> supplier [
 
 	^ Bootstrap3ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3RadioButtonWebViewTest >> testBeIdentifiable [
 
 	| radiobuttonGroup html |
@@ -41,7 +43,7 @@ Bootstrap3RadioButtonWebViewTest >> testBeIdentifiable [
 			'<div id="radio-button-id1" class="btn-group btn-group-justified" data-toggle="buttons" role="group"><label class="btn btn-default willow-disabled-component"><input name="2" id="radio-button-id1" value="1" type="radio"/>A</label><label class="btn btn-default willow-disabled-component"><input name="2" id="radio-button-id1" value="2" type="radio"/>B</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3RadioButtonWebViewTest >> testOnTrigger [
 
 	| radioButtonGroup html |
@@ -57,7 +59,7 @@ Bootstrap3RadioButtonWebViewTest >> testOnTrigger [
 			'<div class="btn-group" data-toggle="buttons" role="group"><label class="btn btn-default"><input name="1" id="input-id2" value="1" type="radio"/>Buenos Aires</label><label class="btn btn-default"><input name="1" id="input-id3" value="2" type="radio"/>CABA</label></div><script type="text/javascript">$("#input-id2").change(function(event){$(this).prop("disabled",true)});$("#input-id3").change(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3RadioButtonWebViewTest >> testRenderContentOnWithElements [
 
 	| radiobuttonGroup html |
@@ -72,7 +74,7 @@ Bootstrap3RadioButtonWebViewTest >> testRenderContentOnWithElements [
 			'<div class="btn-group" data-toggle="buttons" role="group"><label class="btn btn-default"><input name="1" value="1" type="radio"/>Buenos Aires</label><label class="btn btn-default"><input name="1" value="2" type="radio"/>CABA</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3RadioButtonWebViewTest >> testRenderContentOnWithElementsAndSomethingSelected [
 
 	| radiobuttonGroup html |
@@ -98,7 +100,7 @@ Bootstrap3RadioButtonWebViewTest >> testRenderContentOnWithElementsAndSomethingS
 			'<div class="btn-group" data-toggle="buttons" role="group"><label class="btn btn-default"><input name="1" value="1" type="radio"/>Buenos Aires</label><label class="btn btn-default active"><input name="1" checked value="2" type="radio"/>CABA</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3RadioButtonWebViewTest >> testRenderingWhenEmptyDoesNotProduceOnlyMainDivHTMLContent [
 
 	| radiobuttonGroup html |
@@ -109,7 +111,7 @@ Bootstrap3RadioButtonWebViewTest >> testRenderingWhenEmptyDoesNotProduceOnlyMain
 	self assert: html equals: '<div class="btn-group" data-toggle="buttons" role="group"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3RadioButtonWebViewTest >> testRenderingWithApplying [
 
 	| radiobuttonGroup html |
@@ -129,7 +131,7 @@ Bootstrap3RadioButtonWebViewTest >> testRenderingWithApplying [
 			'<div class="btn-group" data-toggle="buttons" role="group"><label class="btn btn-default willow-disabled-component"><input name="1" value="1" type="radio"/>A</label><label class="btn btn-default willow-disabled-component"><input name="1" value="2" type="radio"/>B</label></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3RadioButtonWebViewTest >> testRenderingWithApplyingCommandToContainer [
 
 	| radiobuttonGroup html |

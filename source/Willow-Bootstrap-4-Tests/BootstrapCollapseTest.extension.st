@@ -1,6 +1,6 @@
-Extension { #name : #BootstrapCollapseTest }
+Extension { #name : 'BootstrapCollapseTest' }
 
-{ #category : #'*Willow-Bootstrap-4-Tests' }
+{ #category : '*Willow-Bootstrap-4-Tests' }
 BootstrapCollapseTest >> testDispose [
 
 	| html |

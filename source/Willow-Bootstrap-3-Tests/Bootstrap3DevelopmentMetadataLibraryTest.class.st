@@ -2,12 +2,14 @@
 A Bootstrap3DevelopmentMetadataLibraryTest is a test class for testing the behavior of Bootstrap3DevelopmentMetadataLibrary
 "
 Class {
-	#name : #Bootstrap3DevelopmentMetadataLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-Libraries'
+	#name : 'Bootstrap3DevelopmentMetadataLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-Libraries',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DevelopmentMetadataLibraryTest >> testDeployFiles [
 
 	self
@@ -26,7 +28,7 @@ Bootstrap3DevelopmentMetadataLibraryTest >> testDeployFiles [
 			('bootstrap-3.4.1/js/bootstrap.js' -> '6b58c6d4f074119651b9fb8198ff87c7388fb4ca')}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DevelopmentMetadataLibraryTest >> testHandlesFolder [
 
 	self
@@ -34,7 +36,7 @@ Bootstrap3DevelopmentMetadataLibraryTest >> testHandlesFolder [
 		deny: (Bootstrap3DevelopmentMetadataLibrary handlesFolder: #files)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DevelopmentMetadataLibraryTest >> testIsForDevelopment [
 
 	self
@@ -42,7 +44,7 @@ Bootstrap3DevelopmentMetadataLibraryTest >> testIsForDevelopment [
 		deny: Bootstrap3DevelopmentMetadataLibrary isForDeployment
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DevelopmentMetadataLibraryTest >> testUpdateRoot [
 
 	| html |
@@ -58,7 +60,7 @@ Bootstrap3DevelopmentMetadataLibraryTest >> testUpdateRoot [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-3.4.1/css/bootstrap.css"/><link rel="stylesheet" type="text/css" href="/files/bootstrap-3.4.1/css/bootstrap-theme.css"/><script type="text/javascript" src="/files/bootstrap-3.4.1/js/bootstrap.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3DevelopmentMetadataLibraryTest >> testUpdateRootWithoutOptionalTheme [
 
 	| html |

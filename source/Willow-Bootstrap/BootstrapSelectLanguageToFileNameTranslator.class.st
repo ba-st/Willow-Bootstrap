@@ -2,12 +2,14 @@
 I'm a translator capable of taking an instance of WALocale and return the file name to be used in the libraries
 "
 Class {
-	#name : #BootstrapSelectLanguageToFileNameTranslator,
-	#superclass : #GRObject,
-	#category : #'Willow-Bootstrap-Select'
+	#name : 'BootstrapSelectLanguageToFileNameTranslator',
+	#superclass : 'GRObject',
+	#category : 'Willow-Bootstrap-Select',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Select'
 }
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 BootstrapSelectLanguageToFileNameTranslator >> fileNameFrom: aWALocale [
 
 	^ #('en-US' 'de-DE' 'es-ES' 'es-CL' 'fr-FR' 'it-IT' 'pt-BR' 'pt-PT' 'ja-JP' 'et-EE' 'kh-KM' 'vi-VN')

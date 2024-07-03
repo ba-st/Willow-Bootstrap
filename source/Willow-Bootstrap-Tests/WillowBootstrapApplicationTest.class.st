@@ -1,46 +1,48 @@
 Class {
-	#name : #WillowBootstrapApplicationTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Applications'
+	#name : 'WillowBootstrapApplicationTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Applications',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Applications'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 WillowBootstrapApplicationTest class >> isAbstract [
 
 	^ self name = #WillowBootstrapApplicationTest
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WillowBootstrapApplicationTest >> componentSupplier [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WillowBootstrapApplicationTest >> createHandlers [
 
 	^ Array with: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WillowBootstrapApplicationTest >> expectedApplicationRendering [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WillowBootstrapApplicationTest >> isSession [
 
 	^ true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WillowBootstrapApplicationTest >> preferenceAt: aSymbol ifAbsent: aBlock [
 
 	^ aBlock value
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WillowBootstrapApplicationTest >> testRenderContentOnWithBootstrap [
 
 	| html application |

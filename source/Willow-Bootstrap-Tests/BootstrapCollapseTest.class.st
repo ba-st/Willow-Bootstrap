@@ -2,12 +2,14 @@
 A BootstrapCollapseTest is a test class for testing the behavior of BootstrapCollapse
 "
 Class {
-	#name : #BootstrapCollapseTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Plugins'
+	#name : 'BootstrapCollapseTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Plugins',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Plugins'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapCollapseTest >> renderCollapsibleContentApplying: aBlock [
 
 	^ self
@@ -20,7 +22,7 @@ BootstrapCollapseTest >> renderCollapsibleContentApplying: aBlock [
 			div script: collapse ]
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapCollapseTest >> testHide [
 
 	| html |
@@ -29,7 +31,7 @@ BootstrapCollapseTest >> testHide [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").collapse("hide");</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapCollapseTest >> testOnHidden [
 
 	| html |
@@ -38,7 +40,7 @@ BootstrapCollapseTest >> testOnHidden [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("hidden.bs.collapse",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapCollapseTest >> testOnHide [
 
 	| html |
@@ -47,7 +49,7 @@ BootstrapCollapseTest >> testOnHide [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("hide.bs.collapse",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapCollapseTest >> testOnShow [
 
 	| html |
@@ -56,7 +58,7 @@ BootstrapCollapseTest >> testOnShow [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("show.bs.collapse",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapCollapseTest >> testOnShown [
 
 	| html |
@@ -65,7 +67,7 @@ BootstrapCollapseTest >> testOnShown [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").on("shown.bs.collapse",function(){});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapCollapseTest >> testParent [
 
 	| html |
@@ -75,7 +77,7 @@ BootstrapCollapseTest >> testParent [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").collapse({"parent":false});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapCollapseTest >> testShow [
 
 	| html |
@@ -84,7 +86,7 @@ BootstrapCollapseTest >> testShow [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").collapse("show");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapCollapseTest >> testToggle [
 
 	| html |
@@ -94,7 +96,7 @@ BootstrapCollapseTest >> testToggle [
 	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").collapse({"toggle":true});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapCollapseTest >> testToggleMethod [
 
 	| html |

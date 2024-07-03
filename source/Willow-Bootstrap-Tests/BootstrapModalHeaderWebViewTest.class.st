@@ -2,12 +2,14 @@
 A BootstrapModalHeaderTest is a test class for testing the behavior of BootstrapModalHeaderWebView
 "
 Class {
-	#name : #BootstrapModalHeaderWebViewTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-WebViews'
+	#name : 'BootstrapModalHeaderWebViewTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-WebViews',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalHeaderWebViewTest >> testOnCloseTriggerDoesNothingIfNotDismissable [
 
 	| header html |
@@ -19,7 +21,7 @@ BootstrapModalHeaderWebViewTest >> testOnCloseTriggerDoesNothingIfNotDismissable
 	self assert: html equals: '<div class="modal-header"><h4 class="modal-title">Welcome!</h4></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalHeaderWebViewTest >> testOnCloseTriggerWhenDismissable [
 
 	| header html |
@@ -34,7 +36,7 @@ BootstrapModalHeaderWebViewTest >> testOnCloseTriggerWhenDismissable [
 			'<div class="modal-header"><button id="button-id1" class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">×</span></button><h4 class="modal-title">Welcome!</h4></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalHeaderWebViewTest >> testRenderContentOn [
 
 	| header html |
@@ -45,7 +47,7 @@ BootstrapModalHeaderWebViewTest >> testRenderContentOn [
 	self assert: html equals: '<div class="modal-header"><h4 class="modal-title">Welcome!</h4></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapModalHeaderWebViewTest >> testRenderContentOnWithDismissButton [
 
 	| header html |

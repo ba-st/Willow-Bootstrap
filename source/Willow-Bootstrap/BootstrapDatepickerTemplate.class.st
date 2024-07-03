@@ -2,21 +2,23 @@
 I'm a JSObject used to configure the arrow templates of bootstrap-datepicker
 "
 Class {
-	#name : #BootstrapDatepickerTemplate,
-	#superclass : #JSObject,
+	#name : 'BootstrapDatepickerTemplate',
+	#superclass : 'JSObject',
 	#instVars : [
 		'options'
 	],
-	#category : #'Willow-Bootstrap-Datepicker'
+	#category : 'Willow-Bootstrap-Datepicker',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Datepicker'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapDatepickerTemplate class >> context: aWARenderContext owner: anOwner [
 
 	^ self context: aWARenderContext
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapDatepickerTemplate >> initialize [
 
 	super initialize.
@@ -26,13 +28,13 @@ BootstrapDatepickerTemplate >> initialize [
 		at: 'rightArrow' put: ''
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 BootstrapDatepickerTemplate >> javascriptContentOn: aStream [
 
 	aStream javascript: options
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapDatepickerTemplate >> leftArrow: aLeftArrowRenderable rightArrow: aRightArrowRenderable [
 
 	options

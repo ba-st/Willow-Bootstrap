@@ -2,8 +2,8 @@
 Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus. Nested tabs are not supported.
 "
 Class {
-	#name : #BootstrapToggableNavigationBuilder,
-	#superclass : #WillowComponentBuilder,
+	#name : 'BootstrapToggableNavigationBuilder',
+	#superclass : 'WillowComponentBuilder',
 	#instVars : [
 		'headers',
 		'contents',
@@ -12,10 +12,12 @@ Class {
 		'firstTabHeaderCommand',
 		'firstTitleCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapToggableNavigationBuilder >> addNavigationHeadedBy: aRenderable containing: aNavigationContent [
 
 	| container |
@@ -28,7 +30,7 @@ BootstrapToggableNavigationBuilder >> addNavigationHeadedBy: aRenderable contain
 	contents add: container
 ]
 
-{ #category : #Building }
+{ #category : 'Building' }
 BootstrapToggableNavigationBuilder >> buildApplying: aCommandToComponent [
 
 	AssertionChecker
@@ -40,7 +42,7 @@ BootstrapToggableNavigationBuilder >> buildApplying: aCommandToComponent [
 	self renderTabContentOn: canvas ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapToggableNavigationBuilder >> containerWrapping: aNavigationContent [
 
 	| isFirstTab |
@@ -57,19 +59,19 @@ BootstrapToggableNavigationBuilder >> containerWrapping: aNavigationContent [
 			]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapToggableNavigationBuilder >> dataToggleValue [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapToggableNavigationBuilder >> firstTabTitleWith: aRenderable linkedTo: identifiedContent [
 
 	^ self tabTitleWith: aRenderable linkedTo: identifiedContent applying: firstTitleCommand
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapToggableNavigationBuilder >> initialize [
 
 	super initialize.
@@ -82,13 +84,13 @@ BootstrapToggableNavigationBuilder >> initialize [
 	tabTitleCommand := [  ] asWebComponentCommand
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapToggableNavigationBuilder >> navigationTypeCommand [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 
 	"The first header must be rendered specially because needs the active style"
@@ -99,7 +101,7 @@ BootstrapToggableNavigationBuilder >> renderFirstTabHeaderOn: canvas [
 			[ :listItem :constants | tabHeaderCommand + firstTabHeaderCommand + ( listItem setARIARoleTo: #presentation ) ]
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 
 	headers copyWithoutFirst
@@ -110,13 +112,13 @@ BootstrapToggableNavigationBuilder >> renderRemainingTabHeadersOn: aCanvas [
 			]
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderTabContentOn: aCanvas [
 
 	aCanvas div with: contents applying: [ :div | div addClass bootstrapCommon tabContent ]
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 BootstrapToggableNavigationBuilder >> renderTabListOn: aCanvas applying: aCommantToTabList [
 
 	(self tabListOn: aCanvas)
@@ -125,7 +127,7 @@ BootstrapToggableNavigationBuilder >> renderTabListOn: aCanvas applying: aComman
 		applying: aCommantToTabList
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 
 	^ canvas unorderedList
@@ -134,13 +136,13 @@ BootstrapToggableNavigationBuilder >> tabListOn: canvas [
 		yourself
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identifiedContent [
 
 	^ self tabTitleWith: aRenderable linkedTo: identifiedContent applying: [  ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapToggableNavigationBuilder >> tabTitleWith: aRenderable linkedTo: identifiedContent applying: aCommand [
 
 	^ [ :canvas | 

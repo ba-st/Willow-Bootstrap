@@ -2,8 +2,8 @@
 I represent the header in a Bootstrap modal. I can include the dismiss button or not.
 "
 Class {
-	#name : #BootstrapModalHeaderWebView,
-	#superclass : #WAPainter,
+	#name : 'BootstrapModalHeaderWebView',
+	#superclass : 'WAPainter',
 	#instVars : [
 		'title',
 		'dismissButtonOptional'
@@ -11,41 +11,43 @@ Class {
 	#pools : [
 		'Willow'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #'private - Instance Creation' }
+{ #category : 'private - Instance Creation' }
 BootstrapModalHeaderWebView class >> dismissButton [
 
 	^ BootstrapDismissButton dismissing: Constants >> #bootstrap >> #modal
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapModalHeaderWebView class >> dismissableTitled: aRenderable [
 
 	^ self titled: aRenderable dismissedUsing: (Optional containing: self dismissButton)
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapModalHeaderWebView class >> titled: aRenderable [
 
 	^ self titled: aRenderable dismissedUsing: Optional unused
 ]
 
-{ #category : #'private - Instance Creation' }
+{ #category : 'private - Instance Creation' }
 BootstrapModalHeaderWebView class >> titled: aRenderable dismissedUsing: aButtonOptional [
 
 	^ self new initializeTitled: aRenderable dismissedUsing: aButtonOptional
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 BootstrapModalHeaderWebView >> initializeTitled: aRenderable dismissedUsing: aButtonOptional [
 
 	title := aRenderable.
 	dismissButtonOptional := aButtonOptional
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapModalHeaderWebView >> onClose [
 
 	^ dismissButtonOptional
@@ -53,7 +55,7 @@ BootstrapModalHeaderWebView >> onClose [
 		ifUnused: [ WebInteractionInterpreter workingWith: WebComponentInteraction neverTriggered ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapModalHeaderWebView >> renderContentOn: aCanvas [
 
 	aCanvas div

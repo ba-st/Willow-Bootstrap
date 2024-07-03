@@ -2,12 +2,14 @@
 A BootstrapDatepickerFormatTest is a test class for testing the behavior of BootstrapDatepickerFormat
 "
 Class {
-	#name : #BootstrapDatepickerFormatTest,
-	#superclass : #TestCase,
-	#category : 'Willow-Bootstrap-Tests-Datepicker'
+	#name : 'BootstrapDatepickerFormatTest',
+	#superclass : 'TestCase',
+	#category : 'Willow-Bootstrap-Tests-Datepicker',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Datepicker'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDatepickerFormatTest >> testAsJavascript [
 
 	| toDisplayFunction toValueFunction |

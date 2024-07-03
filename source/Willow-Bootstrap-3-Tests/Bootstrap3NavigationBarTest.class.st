@@ -2,30 +2,32 @@
 A BootstrapNavigationBarTest is a test class for testing the behavior of BootstrapNavigationBar
 "
 Class {
-	#name : #Bootstrap3NavigationBarTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#name : 'Bootstrap3NavigationBarTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3NavigationBarTest >> componentSupplier [
 
 	^ Bootstrap3ComponentSupplier online
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3NavigationBarTest >> createHandlers [
 
 	^ Array with: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3NavigationBarTest >> isSession [
 
 ^ true
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3NavigationBarTest >> testRenderContentOn [
 
 	| navigationBar html |
@@ -40,7 +42,7 @@ Bootstrap3NavigationBarTest >> testRenderContentOn [
 			'<nav class="navbar"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#container-id1" aria-expanded="false" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a id="a-id2" role="button" class="navbar-brand">Willow</a></div><div id="container-id1" class="collapse navbar-collapse"></div></div></nav><script type="text/javascript">$("#a-id2").click(function(event){arguments[0].preventDefault()});</script>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3NavigationBarTest >> testRenderContentOnWithCommands [
 
 	| navigationBar html |
@@ -59,7 +61,7 @@ Bootstrap3NavigationBarTest >> testRenderContentOnWithCommands [
 			'<nav class="navbar navbar-default navbar-static-top"><div class="container"><div class="navbar-header"><button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#container-id1" aria-expanded="false" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a id="a-id2" role="button" class="navbar-brand">Willow</a></div><div id="container-id1" class="collapse navbar-collapse"></div></div></nav><script type="text/javascript">$("#a-id2").click(function(event){arguments[0].preventDefault()});</script>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3NavigationBarTest >> testRenderContentOnWithContent [
 
 	| navigationBar html |

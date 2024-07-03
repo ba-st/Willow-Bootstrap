@@ -1,61 +1,63 @@
 Class {
-	#name : #BootstrapFieldAddonBuilder,
-	#superclass : #WillowComponentBuilder,
+	#name : 'BootstrapFieldAddonBuilder',
+	#superclass : 'WillowComponentBuilder',
 	#instVars : [
 		'groupCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 BootstrapFieldAddonBuilder class >> isAbstract [
 
 	^ self name = #BootstrapFieldAddonBuilder
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapFieldAddonBuilder >> appendButton: aButtonLikeComponent [
 
 	self subclassResponsibility
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapFieldAddonBuilder >> appendText: aRenderable [
 
 	self subclassResponsibility
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapFieldAddonBuilder >> beLarge [
 
 	groupCommand := [ :div | div addClass bootstrapCommon inputGroupLarge ]
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapFieldAddonBuilder >> beSmall [
 
 	groupCommand := [ :div | div addClass bootstrapCommon inputGroupSmall ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapFieldAddonBuilder >> initialize [
 
 	groupCommand := CompositeComponentCommand empty
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapFieldAddonBuilder >> prependButton: aButtonLikeComponent [
 
 	self subclassResponsibility
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 BootstrapFieldAddonBuilder >> prependText: aRenderable [
 
 	self subclassResponsibility
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapFieldAddonBuilder >> wrapping: aField [
 
 	self subclassResponsibility

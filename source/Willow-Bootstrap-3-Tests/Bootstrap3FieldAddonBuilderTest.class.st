@@ -1,16 +1,18 @@
 Class {
-	#name : #Bootstrap3FieldAddonBuilderTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#name : 'Bootstrap3FieldAddonBuilderTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3FieldAddonBuilderTest >> supplier [
 
 	^ Bootstrap3ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3FieldAddonBuilderTest >> testCantCreateWithoutAddons [
 
 	self
@@ -22,7 +24,7 @@ Bootstrap3FieldAddonBuilderTest >> testCantCreateWithoutAddons [
 		withMessageText: 'At least some component must be appended or prepended.'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3FieldAddonBuilderTest >> testCantCreateWithoutFields [
 
 	self
@@ -34,7 +36,7 @@ Bootstrap3FieldAddonBuilderTest >> testCantCreateWithoutFields [
 		withMessageText: 'At least one field to wrap is required.'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3FieldAddonBuilderTest >> testRenderContentOn [
 
 	| field html |
@@ -53,7 +55,7 @@ Bootstrap3FieldAddonBuilderTest >> testRenderContentOn [
 			'<div class="input-group"><div class="input-group-addon">USD</div><input value="" name="1" type="number" class="form-control text-right" min="0"/><div class="input-group-addon">.00</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3FieldAddonBuilderTest >> testRenderContentOnWithButton [
 
 	| field html |
@@ -74,7 +76,7 @@ Bootstrap3FieldAddonBuilderTest >> testRenderContentOnWithButton [
 			'<div class="input-group"><input value="" name="1" class="form-control" type="text"/><div class="input-group-btn"><button class="btn btn-primary" type="button">Search!</button></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3FieldAddonBuilderTest >> testRenderLarge [
 
 	| field html |
@@ -93,7 +95,7 @@ Bootstrap3FieldAddonBuilderTest >> testRenderLarge [
 			'<div class="input-group input-group-lg"><div class="input-group-addon">@</div><input value="" name="1" class="form-control" type="text"/></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3FieldAddonBuilderTest >> testRenderMultipleButtons [
 
 	| field html |
@@ -118,7 +120,7 @@ Bootstrap3FieldAddonBuilderTest >> testRenderMultipleButtons [
 			'<div class="input-group"><input value="" name="1" class="form-control" type="text"/><div class="input-group-btn"><button class="btn btn-default" type="button">Go</button><button class="btn btn-default" type="button">Johnny Go!</button></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3FieldAddonBuilderTest >> testRenderSmall [
 
 	| field html |

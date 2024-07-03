@@ -2,33 +2,35 @@
 I'm a WALibary serving the files from the official CDN.
 "
 Class {
-	#name : #BootstrapDatepickerOnlineLibrary,
-	#superclass : #WAOnlineLibrary,
+	#name : 'BootstrapDatepickerOnlineLibrary',
+	#superclass : 'WAOnlineLibrary',
 	#instVars : [
 		'locale'
 	],
-	#category : #'Willow-Bootstrap-Datepicker'
+	#category : 'Willow-Bootstrap-Datepicker',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Datepicker'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 BootstrapDatepickerOnlineLibrary class >> default [
 
 	^ self using: (WALocale fromString: 'en')
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 BootstrapDatepickerOnlineLibrary class >> using: aWALocale [
 
 	^ self new initializeUsing: aWALocale
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapDatepickerOnlineLibrary >> initializeUsing: aWALocale [
 
 	locale := aWALocale
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapDatepickerOnlineLibrary >> updateLocaleIn: aRoot [
 
 	| fileName |
@@ -37,7 +39,7 @@ BootstrapDatepickerOnlineLibrary >> updateLocaleIn: aRoot [
 	aRoot javascript url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/<1s>/locales/<2s>.min.js' expandMacrosWith: self version with: fileName)
 ]
 
-{ #category : #Updating }
+{ #category : 'Updating' }
 BootstrapDatepickerOnlineLibrary >> updateRoot: aRoot [
 
 	aRoot stylesheet
@@ -49,7 +51,7 @@ BootstrapDatepickerOnlineLibrary >> updateRoot: aRoot [
 	self updateLocaleIn: aRoot
 ]
 
-{ #category : #Updating }
+{ #category : 'Updating' }
 BootstrapDatepickerOnlineLibrary >> version [
 
 	^ '1.10.0'

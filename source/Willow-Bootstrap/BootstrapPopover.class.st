@@ -4,12 +4,14 @@ Add small overlays of content, like those on the iPad, to any element for housin
 Popovers whose both title and content are zero-length are never displayed.
 "
 Class {
-	#name : #BootstrapPopover,
-	#superclass : #BootstrapPlugin,
-	#category : #'Willow-Bootstrap-Plugins'
+	#name : 'BootstrapPopover',
+	#superclass : 'BootstrapPlugin',
+	#category : 'Willow-Bootstrap-Plugins',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Plugins'
 }
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> animation: aBoolean [
 
 	"Apply a CSS fade transition to the popover"
@@ -17,7 +19,7 @@ BootstrapPopover >> animation: aBoolean [
 	self optionAt: #animation put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> container: aStringOrFalse [
 
 	"Appends the popover to a specific element. 
@@ -28,7 +30,7 @@ BootstrapPopover >> container: aStringOrFalse [
 	self optionAt: #container put: aStringOrFalse
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> content: aStringOrFunction [
 
 	"Default content value if data-content attribute isn't present.
@@ -37,7 +39,7 @@ BootstrapPopover >> content: aStringOrFunction [
 	self optionAt: #content put: aStringOrFunction
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> delay: aNumberOrObject [
 
 	"Delay showing and hiding the popover (ms) - does not apply to manual trigger type
@@ -47,7 +49,7 @@ BootstrapPopover >> delay: aNumberOrObject [
 	self optionAt: #delay put: aNumberOrObject
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapPopover >> hide [
 
 	"Hides an element's popover. Returns to the caller before the popover has actually been hidden (i.e. before the hidden.bs.popover event occurs). 
@@ -56,7 +58,7 @@ BootstrapPopover >> hide [
 	functionName := self lookupValue: #hide
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> html: aBoolean [
 
 	"Insert HTML into the popover. If false, jQuery's text method will be used to insert content into the DOM. Use text if you're worried about XSS attacks."
@@ -64,7 +66,7 @@ BootstrapPopover >> html: aBoolean [
 	self optionAt: #html put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> htmlContent: aRenderable [
 
 	self
@@ -72,7 +74,7 @@ BootstrapPopover >> htmlContent: aRenderable [
 		content: (self render: aRenderable)
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> htmlTitle: aRenderable [
 
 	self
@@ -80,13 +82,13 @@ BootstrapPopover >> htmlTitle: aRenderable [
 		title: (self render: aRenderable)
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapPopover >> method [
 
 	^ self lookupValue: #popover
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> placement: aStringOrFunction [
 
 	"How to position the popover - top | bottom | left | right | auto.
@@ -99,7 +101,7 @@ BootstrapPopover >> placement: aStringOrFunction [
 	self optionAt: #placement put: (self lookupCssValue: aStringOrFunction)
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> sanitize: aBoolean [
 
 	"Enable or disable the sanitization. If activated 'template', 'content' and 'title' options will be sanitized."
@@ -107,7 +109,7 @@ BootstrapPopover >> sanitize: aBoolean [
 	self optionAt: #sanitize put: aBoolean
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> sanitizeFunction: aJSFunction [
 
 	"Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization."
@@ -115,7 +117,7 @@ BootstrapPopover >> sanitizeFunction: aJSFunction [
 	self optionAt: #sanitizeFn put: aJSFunction
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> selector: aString [
 
 	"If a selector is provided, popover objects will be delegated to the specified targets. 
@@ -124,7 +126,7 @@ BootstrapPopover >> selector: aString [
 	self optionAt: #selector put: aString
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapPopover >> show [
 
 	"Reveals an element's popover. Returns to the caller before the popover has actually been shown (i.e. before the shown.bs.popover event occurs). 
@@ -133,7 +135,7 @@ BootstrapPopover >> show [
 	functionName := self lookupValue: #show
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> template: aRenderable [
 
 	"Base HTML to use when creating the popover.
@@ -146,7 +148,7 @@ BootstrapPopover >> template: aRenderable [
 	self optionAt: #template put: (self render: aRenderable)
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> title: aStringOrFunction [
 
 	"Default title value if title attribute isn't present.
@@ -155,7 +157,7 @@ BootstrapPopover >> title: aStringOrFunction [
 	self optionAt: #title put: aStringOrFunction
 ]
 
-{ #category : #Methods }
+{ #category : 'Methods' }
 BootstrapPopover >> toggle [
 
 	"Toggles an element's popover. Returns to the caller before the popover has actually been shown or hidden. 
@@ -164,7 +166,7 @@ BootstrapPopover >> toggle [
 	functionName := self lookupValue: #toggle
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> trigger: aString [
 
 	"How popover is triggered - click | hover | focus | manual. 
@@ -173,7 +175,7 @@ BootstrapPopover >> trigger: aString [
 	self optionAt: #trigger put: aString
 ]
 
-{ #category : #Options }
+{ #category : 'Options' }
 BootstrapPopover >> whiteList: anAssociationArray [
 
 	"Object which contains allowed attributes and tags"

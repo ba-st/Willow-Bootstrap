@@ -2,22 +2,24 @@
 A Bootstrap4CardLayoutBuilderTest is a test class for testing the behavior of Bootstrap4CardLayoutBuilder
 "
 Class {
-	#name : #Bootstrap4CardLayoutBuilderTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap4CardLayoutBuilderTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-4-Tests-WebViews'
+	#category : 'Willow-Bootstrap-4-Tests-WebViews',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #running }
+{ #category : 'running' }
 Bootstrap4CardLayoutBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap4ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4CardLayoutBuilderTest >> testRenderingColumns [
 
 	| cardGroup html |
@@ -37,7 +39,7 @@ Bootstrap4CardLayoutBuilderTest >> testRenderingColumns [
 			'<div class="card-columns"><div class="card bg-success"><div class="card-body"><p class="card-text">Hello success!</p></div></div><div class="card"><div class="card-body"><p class="card-text">Hello!</p></div></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4CardLayoutBuilderTest >> testRenderingDeck [
 
 	| cardGroup html |
@@ -57,7 +59,7 @@ Bootstrap4CardLayoutBuilderTest >> testRenderingDeck [
 			'<div class="card-deck"><div class="card bg-success"><div class="card-body"><p class="card-text">Hello success!</p></div></div><div class="card"><div class="card-body"><p class="card-text">Hello!</p></div></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4CardLayoutBuilderTest >> testRenderingGroup [
 
 	| cardGroup html |

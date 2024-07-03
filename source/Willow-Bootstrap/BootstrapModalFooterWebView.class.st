@@ -2,16 +2,18 @@
 I represent the footer in a Bootstrap modal.
 "
 Class {
-	#name : #BootstrapModalFooterWebView,
-	#superclass : #WAPainter,
+	#name : 'BootstrapModalFooterWebView',
+	#superclass : 'WAPainter',
 	#instVars : [
 		'closeButton',
 		'buttons'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #Building }
+{ #category : 'Building' }
 BootstrapModalFooterWebView class >> closeButtonLabeled: aRenderable applying: aComponentCommand [
 
 	^ AsynchronicButtonWebView
@@ -23,44 +25,44 @@ BootstrapModalFooterWebView class >> closeButtonLabeled: aRenderable applying: a
 			]
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapModalFooterWebView class >> containing: aButtonCollection andCloseButton: aCloseButton [
 
 	^ self new initializeContaining: aButtonCollection andCloseButton: aCloseButton
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapModalFooterWebView class >> with: aButtonWebView andCloseButtonLabeled: aRenderable applyingToIt: aCloseButtonCommand [
 
 	^ self containing: {aButtonWebView} andCloseButton: (self closeButtonLabeled: aRenderable applying: aCloseButtonCommand)
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapModalFooterWebView class >> withCloseButtonLabeled: aRenderable applying: aComponentCommand [
 
 	^ self containing: #() andCloseButton: (self closeButtonLabeled: aRenderable applying: aComponentCommand)
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 BootstrapModalFooterWebView >> initializeContaining: aButtonCollection andCloseButton: aCloseButton [
 
 	buttons := aButtonCollection.
 	closeButton := aCloseButton 
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalFooterWebView >> on [
 
 	^ CombinedEventInterpreterDispatcher combiningInterpretersOfAll: buttons
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapModalFooterWebView >> onClose [
 
 	^ closeButton on trigger
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 BootstrapModalFooterWebView >> renderContentOn: aCanvas [
 
 	aCanvas div

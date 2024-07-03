@@ -1,6 +1,6 @@
-Extension { #name : #BootstrapModalTest }
+Extension { #name : 'BootstrapModalTest' }
 
-{ #category : #'*Willow-Bootstrap-4-Tests' }
+{ #category : '*Willow-Bootstrap-4-Tests' }
 BootstrapModalTest >> testDispose [
 
 	| html |
@@ -13,7 +13,7 @@ BootstrapModalTest >> testDispose [
 			'<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal("dispose");</script>'
 ]
 
-{ #category : #'*Willow-Bootstrap-4-Tests' }
+{ #category : '*Willow-Bootstrap-4-Tests' }
 BootstrapModalTest >> testFocus [
 
 	| html |

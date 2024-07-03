@@ -2,40 +2,42 @@
 A BootstrapLabeledWebViewTest is a test class for testing the behavior of BootstrapLabeledWebView
 "
 Class {
-	#name : #Bootstrap3LabeledWebViewTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap3LabeledWebViewTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3LabeledWebViewTest >> componentSupplier [
 
 	^ supplier
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3LabeledWebViewTest >> createHandlers [
 
 	^ Array with: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Bootstrap3LabeledWebViewTest >> isSession [
 
 	^ true
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 Bootstrap3LabeledWebViewTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap3ComponentSupplier online
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3LabeledWebViewTest >> testRenderContentOn [
 
 	| labeledView html |
@@ -55,7 +57,7 @@ Bootstrap3LabeledWebViewTest >> testRenderContentOn [
 			'<div class="form-group"><label for="text-id1" class="control-label">E-Mail</label><input value="" name="2" id="text-id1" class="form-control" type="text"/></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3LabeledWebViewTest >> testRenderContentOnWithContainerCommand [
 
 	| labeledView html |
@@ -75,7 +77,7 @@ Bootstrap3LabeledWebViewTest >> testRenderContentOnWithContainerCommand [
 			'<div class="form-group form-group-lg"><label for="text-id1" class="control-label">E-Mail</label><input value="" name="2" id="text-id1" class="form-control" type="text"/></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3LabeledWebViewTest >> testRenderContentOnWithFieldCommand [
 
 	| labeledView html |
@@ -95,7 +97,7 @@ Bootstrap3LabeledWebViewTest >> testRenderContentOnWithFieldCommand [
 			'<div class="form-group"><label for="text-id1" class="control-label col-md-2">E-Mail</label><div class="col-md-10"><input value="" name="2" id="text-id1" class="form-control" type="text"/></div></div>'
 ]
 
-{ #category : #'tests-rendering' }
+{ #category : 'tests-rendering' }
 Bootstrap3LabeledWebViewTest >> testRenderContentWithHelpText [
 
 	| labeledView html |

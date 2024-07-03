@@ -2,22 +2,24 @@
 A BootstrapPanelBuilderTest is a test class for testing the behavior of BootstrapPanelBuilder
 "
 Class {
-	#name : #Bootstrap3PanelBuilderTest,
-	#superclass : #BWRenderingTest,
+	#name : 'Bootstrap3PanelBuilderTest',
+	#superclass : 'BWRenderingTest',
 	#instVars : [
 		'supplier'
 	],
-	#category : #'Willow-Bootstrap-3-Tests-WebViews'
+	#category : 'Willow-Bootstrap-3-Tests-WebViews',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'WebViews'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3PanelBuilderTest >> setUp [
 
 	super setUp.
 	supplier := Bootstrap3ComponentSupplier online
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3PanelBuilderTest >> testRenderContextualAlternatives [
 
 	| panel html |
@@ -34,7 +36,7 @@ Bootstrap3PanelBuilderTest >> testRenderContextualAlternatives [
 			'<div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title">Panel title</h3></div><div class="panel-body">Panel content</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3PanelBuilderTest >> testRenderPanelWithFooter [
 
 	| panel html |
@@ -51,7 +53,7 @@ Bootstrap3PanelBuilderTest >> testRenderPanelWithFooter [
 			'<div class="panel panel-default"><div class="panel-body">Panel content</div><div class="panel-footer">Panel footer</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3PanelBuilderTest >> testRenderPanelWithHeading [
 
 	| panel html |
@@ -80,7 +82,7 @@ Bootstrap3PanelBuilderTest >> testRenderPanelWithHeading [
 			'<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Panel title</h3></div><div class="panel-body">Panel content</div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3PanelBuilderTest >> testRenderPanelWithListGroups [
 
 	| panel html listGroup |
@@ -104,7 +106,7 @@ Bootstrap3PanelBuilderTest >> testRenderPanelWithListGroups [
 			'<div class="panel panel-default"><div class="panel-heading">Panel heading</div><div class="panel-body">Panel content.</div><ul class="list-group"><li class="list-group-item">1</li><li class="list-group-item">2</li></ul></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3PanelBuilderTest >> testRenderPanelWithListGroupsAndTables [
 
 	| panel html listGroup table |
@@ -137,7 +139,7 @@ Bootstrap3PanelBuilderTest >> testRenderPanelWithListGroupsAndTables [
 			'<div class="panel panel-default"><div class="panel-heading">Panel heading</div><div class="panel-body">Panel content.</div><ul class="list-group"><li class="list-group-item">1</li><li class="list-group-item">2</li></ul><table class="table"><thead><th>First Name</th></thead><tbody></tbody></table></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3PanelBuilderTest >> testRenderPanelWithTables [
 
 	| panel html table |
@@ -175,7 +177,7 @@ Bootstrap3PanelBuilderTest >> testRenderPanelWithTables [
 			'<div class="panel panel-default"><div class="panel-heading">Panel heading</div><table class="table"><thead><th>First Name</th></thead><tbody></tbody></table></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap3PanelBuilderTest >> testRenderingBasicExample [
 
 	| panel html |

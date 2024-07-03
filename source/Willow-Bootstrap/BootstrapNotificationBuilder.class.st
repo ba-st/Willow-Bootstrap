@@ -2,17 +2,19 @@
 I'm a builder of bootstrap alerts
 "
 Class {
-	#name : #BootstrapNotificationBuilder,
-	#superclass : #WillowComponentBuilder,
+	#name : 'BootstrapNotificationBuilder',
+	#superclass : 'WillowComponentBuilder',
 	#instVars : [
 		'alertCommand',
 		'content',
 		'dismissCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #Building }
+{ #category : 'Building' }
 BootstrapNotificationBuilder >> buildApplying: aComponentCommand [
 
 	^ ContainerWebView
@@ -21,13 +23,13 @@ BootstrapNotificationBuilder >> buildApplying: aComponentCommand [
 		applying: alertCommand + dismissCommand + aComponentCommand
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapNotificationBuilder >> danger [
 	
 	alertCommand := BootstrapAlertCommand danger
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapNotificationBuilder >> dismissibleWrapping: aRenderable [
 
 	| button |
@@ -41,13 +43,13 @@ BootstrapNotificationBuilder >> dismissibleWrapping: aRenderable [
 	dismissCommand := [ :container | container addClass bootstrapCommon alertDismissible ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapNotificationBuilder >> informational [
 
 	alertCommand := BootstrapAlertCommand informational
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapNotificationBuilder >> initialize [
 
 	super initialize.
@@ -56,19 +58,19 @@ BootstrapNotificationBuilder >> initialize [
 	content := ''
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapNotificationBuilder >> success [
 	
 	alertCommand := BootstrapAlertCommand success 
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapNotificationBuilder >> warning [
 	
 	alertCommand := BootstrapAlertCommand warning 
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapNotificationBuilder >> wrapping: aRenderable [
 
 	content := aRenderable

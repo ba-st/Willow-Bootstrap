@@ -2,36 +2,38 @@
 A BootstrapDialogClosingCommandTest is a test class for testing the behavior of DialogClosingCommand using the Bootstrap Component Supplier
 "
 Class {
-	#name : #BootstrapDialogClosingCommandTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-WebInteraction'
+	#name : 'BootstrapDialogClosingCommandTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-WebInteraction',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'WebInteraction'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 BootstrapDialogClosingCommandTest class >> isAbstract [ 
 
 	^self name = #BootstrapDialogClosingCommandTest
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BootstrapDialogClosingCommandTest >> componentSupplier [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BootstrapDialogClosingCommandTest >> createHandlers [
 
 	^ Array with: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BootstrapDialogClosingCommandTest >> isSession [
 
 	^ true
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDialogClosingCommandTest >> testModelLoadingActionsWhenOnlyRemovingLastDialog [
 
 	| html |
@@ -53,7 +55,7 @@ BootstrapDialogClosingCommandTest >> testModelLoadingActionsWhenOnlyRemovingLast
 			'<a id="a-id1"></a><script type="text/javascript">$("#a-id1").click(function(){$("#willow-dialog-section").children("div").last().modal("hide")});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapDialogClosingCommandTest >> testModelLoadingActionsWhenRemovingAllDialogs [
 
 	| html |

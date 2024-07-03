@@ -2,60 +2,62 @@
 I'm a builder easing the creation of Bootstrap grids
 "
 Class {
-	#name : #BootstrapGridBuilder,
-	#superclass : #WillowComponentBuilder,
+	#name : 'BootstrapGridBuilder',
+	#superclass : 'WillowComponentBuilder',
 	#instVars : [
 		'contents',
 		'columnBreakpointBlock',
 		'rowCommand',
 		'cellCommand'
 	],
-	#category : #'Willow-Bootstrap-WebViews'
+	#category : 'Willow-Bootstrap-WebViews',
+	#package : 'Willow-Bootstrap',
+	#tag : 'WebViews'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 BootstrapGridBuilder class >> isAbstract [
 
 	^ self name = #BootstrapGridBuilder
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapGridBuilder >> addContent: aRenderable [
 
 	contents add: aRenderable
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapGridBuilder >> applyingToCells: aCellCommand [
 
 	cellCommand := cellCommand + aCellCommand
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapGridBuilder >> forExtraSmallDevices [
 
 	self subclassResponsibility
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapGridBuilder >> forLargeDevices [
 
 	self subclassResponsibility
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapGridBuilder >> forMediumDevices [
 
 	self subclassResponsibility
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 BootstrapGridBuilder >> forSmallDevices [
 
 	self subclassResponsibility
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapGridBuilder >> initialize [
 
 	super initialize.

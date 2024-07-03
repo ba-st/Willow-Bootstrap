@@ -2,12 +2,14 @@
 I'm a development library for Bootstrap Datepicker
 "
 Class {
-	#name : #BootstrapDatepickerDevelopmentLibrary,
-	#superclass : #BootstrapDatepickerLibrary,
-	#category : #'Willow-Bootstrap-Datepicker'
+	#name : 'BootstrapDatepickerDevelopmentLibrary',
+	#superclass : 'BootstrapDatepickerLibrary',
+	#category : 'Willow-Bootstrap-Datepicker',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Datepicker'
 }
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> cssbootstrapdatepicker3Css [
 
 	^ WAFileLibraryResource
@@ -17,7 +19,7 @@ BootstrapDatepickerDevelopmentLibrary >> cssbootstrapdatepicker3Css [
 		contents: (GRDelayedSend receiver: self selector: #cssbootstrapdatepicker3CssContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> cssbootstrapdatepicker3CssContent [
 	^ '/*!
  * Datepicker for Bootstrap v1.10.0 (https://github.com/uxsolutions/bootstrap-datepicker)
@@ -704,7 +706,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 /*# sourceMappingURL=bootstrap-datepicker3.css.map */'
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJs [
 
 	^ WAFileLibraryResource
@@ -714,7 +716,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJs [
 		contents: (GRDelayedSend receiver: self selector: #jsbootstrapdatepickerJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 	^ '/*!
  * Datepicker for Bootstrap v1.10.0 (https://github.com/uxsolutions/bootstrap-datepicker)
@@ -2764,7 +2766,7 @@ BootstrapDatepickerDevelopmentLibrary >> jsbootstrapdatepickerJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarDZJs [
 
 	^ WAFileLibraryResource
@@ -2774,7 +2776,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarDZJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerarDZJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarDZJsContent [
 	^ '/**
  * Arabic-Algeria translation for bootstrap-datepicker
@@ -2798,7 +2800,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarDZJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJs [
 
 	^ WAFileLibraryResource
@@ -2808,7 +2810,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerarJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJsContent [
 	^ '/**
  * Arabic translation for bootstrap-datepicker
@@ -2828,7 +2830,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerarJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJs [
 
 	^ WAFileLibraryResource
@@ -2838,7 +2840,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerartnJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJsContent [
 	^ '/**
  * Arabic-Tunisia translation for bootstrap-datepicker
@@ -2858,7 +2860,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerartnJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJs [
 
 	^ WAFileLibraryResource
@@ -2868,7 +2870,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerazJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJsContent [
 	^ '// Azerbaijani
 ;(function($){
@@ -2887,7 +2889,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerazJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJs [
 
 	^ WAFileLibraryResource
@@ -2897,7 +2899,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbgJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJsContent [
 	^ '/**
  * Bulgarian translation for bootstrap-datepicker
@@ -2916,7 +2918,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbgJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbmJs [
 
 	^ WAFileLibraryResource
@@ -2926,7 +2928,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbmJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbmJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbmJsContent [
 	^ '/**
  * Bamanankan (bm) translation for bootstrap-datepicker
@@ -2949,7 +2951,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbmJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJs [
 
 	^ WAFileLibraryResource
@@ -2959,7 +2961,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbnJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJsContent [
 	^ '/**
  * Bengali (Bangla) translation for bootstrap-datepicker
@@ -2983,7 +2985,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbnJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJs [
 
 	^ WAFileLibraryResource
@@ -2993,7 +2995,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbrJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJsContent [
 	^ '/**
  * Breton translation for bootstrap-datepicker
@@ -3016,7 +3018,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbrJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJs [
 
 	^ WAFileLibraryResource
@@ -3026,7 +3028,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerbsJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJsContent [
 	^ '/**
  * Bosnian translation for bootstrap-datepicker
@@ -3046,7 +3048,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerbsJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJs [
 
 	^ WAFileLibraryResource
@@ -3056,7 +3058,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickercaJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJsContent [
 	^ '/**
  * Catalan translation for bootstrap-datepicker
@@ -3079,7 +3081,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercaJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJs [
 
 	^ WAFileLibraryResource
@@ -3089,7 +3091,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickercsJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJsContent [
 	^ '/**
  * Czech translation for bootstrap-datepicker
@@ -3113,7 +3115,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercsJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJs [
 
 	^ WAFileLibraryResource
@@ -3123,7 +3125,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickercyJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJsContent [
 	^ '/**
  * Welsh translation for bootstrap-datepicker
@@ -3142,7 +3144,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickercyJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJs [
 
 	^ WAFileLibraryResource
@@ -3152,7 +3154,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerdaJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJsContent [
 	^ '/**
  * Danish translation for bootstrap-datepicker
@@ -3176,7 +3178,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdaJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJs [
 
 	^ WAFileLibraryResource
@@ -3186,7 +3188,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerdeJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJsContent [
 	^ '/**
  * German translation for bootstrap-datepicker
@@ -3209,7 +3211,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerdeJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJs [
 
 	^ WAFileLibraryResource
@@ -3219,7 +3221,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerelJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJsContent [
 	^ '/**
  * Greek translation for bootstrap-datepicker
@@ -3240,7 +3242,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerelJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJs [
 
 	^ WAFileLibraryResource
@@ -3250,7 +3252,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenAUJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJsContent [
 	^ '/**
  * Australian English translation for bootstrap-datepicker
@@ -3273,7 +3275,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenAUJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJs [
 
 	^ WAFileLibraryResource
@@ -3283,7 +3285,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenCAJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJsContent [
 	^ '/**
  * Canadian English translation for bootstrap-datepicker
@@ -3306,7 +3308,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenCAJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJs [
 
 	^ WAFileLibraryResource
@@ -3316,7 +3318,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenGBJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJsContent [
 	^ '/**
  * British English translation for bootstrap-datepicker
@@ -3339,7 +3341,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenGBJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJs [
 
 	^ WAFileLibraryResource
@@ -3349,7 +3351,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenIEJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJsContent [
 	^ '/**
  * Irish English translation for bootstrap-datepicker
@@ -3371,7 +3373,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenIEJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJs [
 
 	^ WAFileLibraryResource
@@ -3381,7 +3383,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenNZJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJsContent [
 	^ '/**
  * New Zealand English translation for bootstrap-datepicker
@@ -3403,7 +3405,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenNZJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenUSJs [
 
 	^ WAFileLibraryResource
@@ -3413,7 +3415,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenUSJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenUSJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenUSJsContent [
 	^ '/**
  * American English translation for bootstrap-datepicker
@@ -3435,7 +3437,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenUSJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJs [
 
 	^ WAFileLibraryResource
@@ -3445,7 +3447,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerenZAJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJsContent [
 	^ '/**
  * South African English translation for bootstrap-datepicker
@@ -3467,7 +3469,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerenZAJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJs [
 
 	^ WAFileLibraryResource
@@ -3477,7 +3479,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickereoJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJsContent [
 	^ '/**
  * Esperanto translation for bootstrap-datepicker
@@ -3499,7 +3501,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereoJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJs [
 
 	^ WAFileLibraryResource
@@ -3509,7 +3511,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeresJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJsContent [
 	^ '/**
  * Spanish translation for bootstrap-datepicker
@@ -3532,7 +3534,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeresJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJs [
 
 	^ WAFileLibraryResource
@@ -3542,7 +3544,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeretJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJsContent [
 	^ '/**
  * Estonian translation for bootstrap-datepicker
@@ -3565,7 +3567,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeretJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJs [
 
 	^ WAFileLibraryResource
@@ -3575,7 +3577,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickereuJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJsContent [
 	^ '/**
  * Basque translation for bootstrap-datepicker
@@ -3599,7 +3601,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickereuJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJs [
 
 	^ WAFileLibraryResource
@@ -3609,7 +3611,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfaJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJsContent [
 	^ '/**
  * Persian translation for bootstrap-datepicker
@@ -3631,7 +3633,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfaJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJs [
 
 	^ WAFileLibraryResource
@@ -3641,7 +3643,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfiJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJsContent [
 	^ '/**
  * Finnish translation for bootstrap-datepicker
@@ -3663,7 +3665,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfiJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJs [
 
 	^ WAFileLibraryResource
@@ -3673,7 +3675,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfoJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJsContent [
 	^ '/**
  * Faroese translation for bootstrap-datepicker
@@ -3693,7 +3695,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfoJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJs [
 
 	^ WAFileLibraryResource
@@ -3703,7 +3705,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfrCHJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJsContent [
 	^ '/**
  * French (Switzerland) translation for bootstrap-datepicker
@@ -3729,7 +3731,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrCHJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJs [
 
 	^ WAFileLibraryResource
@@ -3739,7 +3741,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerfrJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJsContent [
 	^ '/**
  * French translation for bootstrap-datepicker
@@ -3762,7 +3764,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerfrJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJs [
 
 	^ WAFileLibraryResource
@@ -3772,7 +3774,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerglJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJsContent [
 	^ ';(function($){
 	$.fn.datepicker.dates[''gl''] = {
@@ -3790,7 +3792,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerglJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJs [
 
 	^ WAFileLibraryResource
@@ -3800,7 +3802,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerheJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJsContent [
 	^ '/**
  * Hebrew translation for bootstrap-datepicker
@@ -3820,7 +3822,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerheJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJs [
 
 	^ WAFileLibraryResource
@@ -3830,7 +3832,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhiJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJsContent [
 	^ '/**
  * Hindi translation for bootstrap-datepicker
@@ -3853,7 +3855,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhiJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJs [
 
 	^ WAFileLibraryResource
@@ -3863,7 +3865,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhrJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJsContent [
 	^ '/**
  * Croatian localisation
@@ -3881,7 +3883,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhrJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJs [
 
 	^ WAFileLibraryResource
@@ -3891,7 +3893,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhuJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJsContent [
 	^ '/**
  * Hungarian translation for bootstrap-datepicker
@@ -3914,7 +3916,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhuJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJs [
 
 	^ WAFileLibraryResource
@@ -3924,7 +3926,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerhyJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJsContent [
 	^ '/**
  * Armenian translation for bootstrap-datepicker
@@ -3947,7 +3949,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerhyJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJs [
 
 	^ WAFileLibraryResource
@@ -3957,7 +3959,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeridJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJsContent [
 	^ '/**
  * Bahasa translation for bootstrap-datepicker
@@ -3981,7 +3983,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeridJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJs [
 
 	^ WAFileLibraryResource
@@ -3991,7 +3993,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerisJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJsContent [
 	^ '/**
  * Icelandic translation for bootstrap-datepicker
@@ -4010,7 +4012,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerisJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJs [
 
 	^ WAFileLibraryResource
@@ -4020,7 +4022,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeritCHJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJsContent [
 	^ '/**
  * Italian (Switzerland) translation for bootstrap-datepicker
@@ -4045,7 +4047,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritCHJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJs [
 
 	^ WAFileLibraryResource
@@ -4055,7 +4057,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeritJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJsContent [
 	^ '/**
  * Italian translation for bootstrap-datepicker
@@ -4078,7 +4080,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeritJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJs [
 
 	^ WAFileLibraryResource
@@ -4088,7 +4090,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerjaJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJsContent [
 	^ '/**
  * Japanese translation for bootstrap-datepicker
@@ -4110,7 +4112,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerjaJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJs [
 
 	^ WAFileLibraryResource
@@ -4120,7 +4122,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkaJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJsContent [
 	^ '/**
  * Georgian translation for bootstrap-datepicker
@@ -4142,7 +4144,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkaJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJs [
 
 	^ WAFileLibraryResource
@@ -4152,7 +4154,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkhJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJsContent [
 	^ '/**
  * Cambodia (Khmer) translation for bootstrap-datepicker
@@ -4178,7 +4180,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkhJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJs [
 
 	^ WAFileLibraryResource
@@ -4188,7 +4190,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkkJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJsContent [
 	^ '/**
  * Kazakh translation for bootstrap-datepicker
@@ -4208,7 +4210,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkkJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJs [
 
 	^ WAFileLibraryResource
@@ -4218,7 +4220,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkmJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJsContent [
 	^ '/**
  * Khmer translation for bootstrap-datepicker
@@ -4238,7 +4240,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkmJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJs [
 
 	^ WAFileLibraryResource
@@ -4248,7 +4250,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkoJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJsContent [
 	^ '/**
  * Korean translation for bootstrap-datepicker
@@ -4271,7 +4273,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkoJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJs [
 
 	^ WAFileLibraryResource
@@ -4281,7 +4283,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerkrJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJsContent [
 	^ '/**
  * Korean translation for bootstrap-datepicker
@@ -4305,7 +4307,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerkrJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJs [
 
 	^ WAFileLibraryResource
@@ -4315,7 +4317,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerltJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJsContent [
 	^ '/**
  * Lithuanian translation for bootstrap-datepicker
@@ -4339,7 +4341,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerltJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJs [
 
 	^ WAFileLibraryResource
@@ -4349,7 +4351,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerlvJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJsContent [
 	^ '/**
  * Latvian translation for bootstrap-datepicker
@@ -4372,7 +4374,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerlvJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJs [
 
 	^ WAFileLibraryResource
@@ -4382,7 +4384,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermeJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJsContent [
 	^ '/**
  * Montenegrin translation for bootstrap-datepicker
@@ -4404,7 +4406,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermeJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJs [
 
 	^ WAFileLibraryResource
@@ -4414,7 +4416,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermkJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJsContent [
 	^ '/**
  * Macedonian translation for bootstrap-datepicker
@@ -4434,7 +4436,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermkJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJs [
 
 	^ WAFileLibraryResource
@@ -4444,7 +4446,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermnJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJsContent [
 	^ '/**
  * Mongolian translation for bootstrap-datepicker
@@ -4466,7 +4468,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermnJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermrJs [
 
 	^ WAFileLibraryResource
@@ -4476,7 +4478,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermrJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermrJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermrJsContent [
 	^ '/**
  * Marathi translation for bootstrap-datepicker
@@ -4499,7 +4501,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermrJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJs [
 
 	^ WAFileLibraryResource
@@ -4509,7 +4511,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickermsJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJsContent [
 	^ '/**
  * Malay translation for bootstrap-datepicker
@@ -4529,7 +4531,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickermsJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJs [
 
 	^ WAFileLibraryResource
@@ -4539,7 +4541,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickernlBEJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJsContent [
 	^ '/**
  * Belgium-Dutch translation for bootstrap-datepicker
@@ -4562,7 +4564,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlBEJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJs [
 
 	^ WAFileLibraryResource
@@ -4572,7 +4574,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickernlJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJsContent [
 	^ '/**
  * Dutch translation for bootstrap-datepicker
@@ -4595,7 +4597,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernlJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJs [
 
 	^ WAFileLibraryResource
@@ -4605,7 +4607,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickernoJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJsContent [
 	^ '/**
  * Norwegian translation for bootstrap-datepicker
@@ -4628,7 +4630,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickernoJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJs [
 
 	^ WAFileLibraryResource
@@ -4638,7 +4640,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerocJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJsContent [
 	^ '/**
  * Occitan translation for bootstrap-datepicker
@@ -4660,7 +4662,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerocJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJs [
 
 	^ WAFileLibraryResource
@@ -4670,7 +4672,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerplJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJsContent [
 	^ '/**
  * Polish translation for bootstrap-datepicker
@@ -4692,7 +4694,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerplJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJs [
 
 	^ WAFileLibraryResource
@@ -4702,7 +4704,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerptBRJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJsContent [
 	^ '/**
  * Brazilian translation for bootstrap-datepicker
@@ -4724,7 +4726,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptBRJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJs [
 
 	^ WAFileLibraryResource
@@ -4734,7 +4736,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerptJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJsContent [
 	^ '/**
  * Portuguese translation for bootstrap-datepicker
@@ -4757,7 +4759,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerptJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJs [
 
 	^ WAFileLibraryResource
@@ -4767,7 +4769,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerroJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJsContent [
 	^ '/**
  * Romanian translation for bootstrap-datepicker
@@ -4789,7 +4791,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerroJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJs [
 
 	^ WAFileLibraryResource
@@ -4799,7 +4801,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerrsJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJsContent [
 	^ '/**
  * Serbian cyrillic translation for bootstrap-datepicker
@@ -4824,7 +4826,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrsJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJs [
 
 	^ WAFileLibraryResource
@@ -4834,7 +4836,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerrslatinJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJsContent [
 	^ '/**
  * Serbian latin translation for bootstrap-datepicker
@@ -4859,7 +4861,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerrslatinJsCont
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJs [
 
 	^ WAFileLibraryResource
@@ -4869,7 +4871,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerruJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJsContent [
 	^ '/**
  * Russian translation for bootstrap-datepicker
@@ -4892,7 +4894,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerruJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJs [
 
 	^ WAFileLibraryResource
@@ -4902,7 +4904,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersiJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJsContent [
 	^ '/**
  * Sinhala translation for bootstrap-datepicker
@@ -4925,7 +4927,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersiJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJs [
 
 	^ WAFileLibraryResource
@@ -4935,7 +4937,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerskJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJsContent [
 	^ '/**
  * Slovak translation for bootstrap-datepicker
@@ -4958,7 +4960,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerskJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJs [
 
 	^ WAFileLibraryResource
@@ -4968,7 +4970,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerslJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJsContent [
 	^ '/**
  * Slovene translation for bootstrap-datepicker
@@ -4988,7 +4990,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerslJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJs [
 
 	^ WAFileLibraryResource
@@ -4998,7 +5000,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersqJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJsContent [
 	^ '/**
  * Albanian translation for bootstrap-datepicker
@@ -5021,7 +5023,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersqJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJs [
 
 	^ WAFileLibraryResource
@@ -5031,7 +5033,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersrJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJsContent [
 	^ '/**
  * Serbian cyrillic translation for bootstrap-datepicker
@@ -5052,7 +5054,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJs [
 
 	^ WAFileLibraryResource
@@ -5062,7 +5064,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersrlatinJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJsContent [
 	^ '/**
  * Serbian latin translation for bootstrap-datepicker
@@ -5083,7 +5085,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersrlatinJsCont
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJs [
 
 	^ WAFileLibraryResource
@@ -5093,7 +5095,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickersvJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJsContent [
 	^ '/**
  * Swedish translation for bootstrap-datepicker
@@ -5115,7 +5117,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickersvJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJs [
 
 	^ WAFileLibraryResource
@@ -5125,7 +5127,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerswJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJsContent [
 	^ '/**
  * Swahili translation for bootstrap-datepicker
@@ -5145,7 +5147,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerswJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJs [
 
 	^ WAFileLibraryResource
@@ -5155,7 +5157,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertaJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJsContent [
 	^ '/**
  * Tamil translation for bootstrap-datepicker
@@ -5178,7 +5180,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertaJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJs [
 
 	^ WAFileLibraryResource
@@ -5188,7 +5190,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertgJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJsContent [
 	^ '/**
  * Tajik (cyrillic) translation for bootstrap-datepicker
@@ -5212,7 +5214,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertgJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJs [
 
 	^ WAFileLibraryResource
@@ -5222,7 +5224,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerthJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJsContent [
 	^ '/**
  * Thai translation for bootstrap-datepicker
@@ -5241,7 +5243,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerthJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertkJs [
 
 	^ WAFileLibraryResource
@@ -5251,7 +5253,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertkJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertkJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertkJsContent [
 	^ '/**
  * Turkmen translation for bootstrap-datepicker
@@ -5274,7 +5276,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertkJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJs [
 
 	^ WAFileLibraryResource
@@ -5284,7 +5286,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickertrJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJsContent [
 	^ '/**
  * Turkish translation for bootstrap-datepicker
@@ -5307,7 +5309,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickertrJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJs [
 
 	^ WAFileLibraryResource
@@ -5317,7 +5319,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerukJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJsContent [
 	^ '/**
  * Ukrainian translation for bootstrap-datepicker
@@ -5339,7 +5341,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerukJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJs [
 
 	^ WAFileLibraryResource
@@ -5349,7 +5351,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeruzcyrlJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJsContent [
 	^ '/**
  * Uzbek latin translation for bootstrap-datepicker
@@ -5372,7 +5374,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzcyrlJsConte
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJs [
 
 	^ WAFileLibraryResource
@@ -5382,7 +5384,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickeruzlatnJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJsContent [
 	^ '/**
  * Uzbek latin translation for bootstrap-datepicker
@@ -5405,7 +5407,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickeruzlatnJsConte
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJs [
 
 	^ WAFileLibraryResource
@@ -5415,7 +5417,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerviJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJsContent [
 	^ '/**
  * Vietnamese translation for bootstrap-datepicker
@@ -5436,7 +5438,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerviJsContent [
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJs [
 
 	^ WAFileLibraryResource
@@ -5446,7 +5448,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerzhCNJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJsContent [
 	^ '/**
  * Simplified Chinese translation for bootstrap-datepicker
@@ -5470,7 +5472,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhCNJsContent
 '
 ]
 
-{ #category : #'uploaded metadata' }
+{ #category : 'uploaded metadata' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhTWJs [
 
 	^ WAFileLibraryResource
@@ -5480,7 +5482,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhTWJs [
 		contents: (GRDelayedSend receiver: self selector: #localesbootstrapdatepickerzhTWJsContent)
 ]
 
-{ #category : #uploaded }
+{ #category : 'uploaded' }
 BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhTWJsContent [
 	^ '/**
  * Traditional Chinese translation for bootstrap-datepicker
@@ -5505,7 +5507,7 @@ BootstrapDatepickerDevelopmentLibrary >> localesbootstrapdatepickerzhTWJsContent
 '
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BootstrapDatepickerDevelopmentLibrary >> selectorsToInclude [
 
 	| fileName |

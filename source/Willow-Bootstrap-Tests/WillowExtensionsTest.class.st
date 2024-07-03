@@ -2,15 +2,17 @@
 I'm a test case for extensions of basic Willow objects
 "
 Class {
-	#name : #WillowExtensionsTest,
-	#superclass : #BWRenderingTest,
+	#name : 'WillowExtensionsTest',
+	#superclass : 'BWRenderingTest',
 	#pools : [
 		'Willow'
 	],
-	#category : #'Willow-Bootstrap-Tests-Frontend'
+	#category : 'Willow-Bootstrap-Tests-Frontend',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Frontend'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WillowExtensionsTest >> testIsNullCommand [
 
 	self

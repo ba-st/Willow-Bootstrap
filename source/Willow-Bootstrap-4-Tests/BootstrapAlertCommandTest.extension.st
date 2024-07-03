@@ -1,6 +1,6 @@
-Extension { #name : #BootstrapAlertCommandTest }
+Extension { #name : 'BootstrapAlertCommandTest' }
 
-{ #category : #'*Willow-Bootstrap-4-Tests' }
+{ #category : '*Willow-Bootstrap-4-Tests' }
 BootstrapAlertCommandTest >> testApplyBootstrap4 [
 
 	| html |

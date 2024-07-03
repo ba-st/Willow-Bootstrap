@@ -2,16 +2,18 @@
 I'm a component command enabling Bootstrap Typeahead using the programmatic-API
 "
 Class {
-	#name : #BootstrapTypeaheadCommand,
-	#superclass : #WebComponentCommand,
+	#name : 'BootstrapTypeaheadCommand',
+	#superclass : 'WebComponentCommand',
 	#instVars : [
 		'scriptCommand',
 		'searchResults'
 	],
-	#category : #'Willow-Bootstrap-Frontend'
+	#category : 'Willow-Bootstrap-Frontend',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Frontend'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand class >> actionToRefresh: anIdentifiedWebView [
 
 	^ [ :ajax :canvas | 
@@ -20,19 +22,19 @@ BootstrapTypeaheadCommand class >> actionToRefresh: anIdentifiedWebView [
 	]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand class >> defaultConfigurationBlock [
 
 	^ [ :typeahead |  ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand class >> defaultLabelBlock [
 
 	^ [ :object | object greaseString ]
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabelsBlock withSelectionDo: aSelectionCallback [
 
 	^ self
@@ -42,7 +44,7 @@ BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabe
 		configuredBy: self defaultConfigurationBlock
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabelsBlock withSelectionDo: aSelectionCallback configuredBy: aConfigurationBlock [
 
 	^ self
@@ -53,7 +55,7 @@ BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabe
 		configuredBy: aConfigurationBlock
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabelsBlock withSelectionDo: aSelectionCallback thenDo: aPostProcessingCallback configuredBy: aConfigurationBlock [
 
 	^ self new
@@ -64,13 +66,13 @@ BootstrapTypeaheadCommand class >> searchingWith: aSearchAction labeledBy: aLabe
 		configuredBy: aConfigurationBlock
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapTypeaheadCommand class >> searchingWith: aSearchAction withSelectionDo: aSelectionCallback [
 
 	^ self searchingWith: aSearchAction labeledBy: self defaultLabelBlock withSelectionDo: aSelectionCallback
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapTypeaheadCommand class >> searchingWith: aSearchAction withSelectionDo: aSelectionCallback configuredBy: aConfigurationBlock [
 
 	^ self
@@ -80,7 +82,7 @@ BootstrapTypeaheadCommand class >> searchingWith: aSearchAction withSelectionDo:
 		configuredBy: aConfigurationBlock
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 BootstrapTypeaheadCommand class >> searchingWith: aSearchAction withSelectionDo: aSelectionCallback thenRefresh: anIdentifiedWebView configuredBy: aConfigurationBlock [
 
 	^ self
@@ -91,7 +93,7 @@ BootstrapTypeaheadCommand class >> searchingWith: aSearchAction withSelectionDo:
 		configuredBy: aConfigurationBlock
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand >> afterSelectFunctionEvaluate: aSelectionCallback thenDo: aPostProcessingCallback on: aCanvas [
 
 	| selectedIndexHolder ajax |
@@ -108,13 +110,13 @@ BootstrapTypeaheadCommand >> afterSelectFunctionEvaluate: aSelectionCallback the
 	^ ajax asFunction: #('activeItem')
 ]
 
-{ #category : #processing }
+{ #category : 'processing' }
 BootstrapTypeaheadCommand >> applyTo: aComponent on: aCanvas [
 
 	^ scriptCommand applyTo: aComponent on: aCanvas
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand >> evaluate: aSearchAction with: searchTerm using: aLabelsBlock [
 
 	| searchResultAsJSON |
@@ -133,13 +135,13 @@ BootstrapTypeaheadCommand >> evaluate: aSearchAction with: searchTerm using: aLa
 	^ searchResultAsJSON asArray
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand >> indexProperty [
 
 	^ 'index'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BootstrapTypeaheadCommand >> initializeSearchingWith: aSearchAction labeledBy: aLabelsBlock withSelectionDo: aSelectionCallback thenDo: aPostProcessingCallback configuredBy: aConfigurationBlock [
 
 	searchResults := #().
@@ -157,19 +159,19 @@ BootstrapTypeaheadCommand >> initializeSearchingWith: aSearchAction labeledBy: a
 			]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand >> responseFunctionName [
 
 	^ 'response'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand >> searchTermVariable [
 
 	^ 'searchTerm'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand >> searchWith: aSearchAction labels: aLabelsBlock on: aCanvas [
 
 	| searchTermHolder |
@@ -184,7 +186,7 @@ BootstrapTypeaheadCommand >> searchWith: aSearchAction labels: aLabelsBlock on: 
 		asFunction: {self searchTermVariable. self responseFunctionName}
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapTypeaheadCommand >> updaterFunction [
 
 	^ JSFunction new

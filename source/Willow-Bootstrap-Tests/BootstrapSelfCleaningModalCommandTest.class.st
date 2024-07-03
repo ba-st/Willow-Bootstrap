@@ -2,12 +2,14 @@
 A BootstrapSelfCleaningModalCommandTest is a test class for testing the behavior of BootstrapSelfCleaningModalCommand
 "
 Class {
-	#name : #BootstrapSelfCleaningModalCommandTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Frontend'
+	#name : 'BootstrapSelfCleaningModalCommandTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Frontend',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Frontend'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapSelfCleaningModalCommandTest >> testApplyToOn [
 
 	| html |

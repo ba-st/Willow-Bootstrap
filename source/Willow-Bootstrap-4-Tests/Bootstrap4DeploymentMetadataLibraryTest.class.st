@@ -2,12 +2,14 @@
 A Bootstrap4DeploymentMetadataLibraryTest is a test class for testing the behavior of Bootstrap4DeploymentMetadataLibrary
 "
 Class {
-	#name : #Bootstrap4DeploymentMetadataLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-4-Tests-Libraries'
+	#name : 'Bootstrap4DeploymentMetadataLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-4-Tests-Libraries',
+	#package : 'Willow-Bootstrap-4-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DeploymentMetadataLibraryTest >> testDeployFiles [
 
 	self
@@ -22,7 +24,7 @@ Bootstrap4DeploymentMetadataLibraryTest >> testDeployFiles [
 			 'bootstrap-4.6.2/bootstrap.min.js.map' -> 'a1914fe0f2a15bcbe3061499ab8a43ed45d93981' }
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DeploymentMetadataLibraryTest >> testIsForDevelopment [
 
 	self
@@ -30,7 +32,7 @@ Bootstrap4DeploymentMetadataLibraryTest >> testIsForDevelopment [
 		deny: Bootstrap4DeploymentMetadataLibrary isForDevelopment
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DeploymentMetadataLibraryTest >> testUpdateRoot [
 
 	| html |
@@ -46,7 +48,7 @@ Bootstrap4DeploymentMetadataLibraryTest >> testUpdateRoot [
 			'<html><head><title></title><link rel="stylesheet" type="text/css" href="/files/bootstrap-4.6.2/bootstrap.min.css"/><script type="text/javascript" src="/files/bootstrap-4.6.2/bootstrap.bundle.min.js"></script></head><body onload="onLoad()"><script type="text/javascript">function onLoad(){};</script></body></html>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 Bootstrap4DeploymentMetadataLibraryTest >> testUpdateRootWithoutBundledDependencies [
 
 	| html |

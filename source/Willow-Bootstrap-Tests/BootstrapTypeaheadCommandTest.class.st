@@ -2,12 +2,14 @@
 A BootstrapTypeaheadCommandTest is a test class for testing the behavior of BootstrapTypeaheadCommand
 "
 Class {
-	#name : #BootstrapTypeaheadCommandTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-Tests-Frontend'
+	#name : 'BootstrapTypeaheadCommandTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Frontend',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Frontend'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadCommandTest >> testApplyToOn [
 
 	| html |
@@ -22,7 +24,7 @@ BootstrapTypeaheadCommandTest >> testApplyToOn [
 			'<input id="id5" type="text"/><script type="text/javascript">$("#id5").typeahead({"source":function(searchTerm,response){$.getJSON("/",["1","2="+encodeURIComponent(searchTerm)].join("&"),function(data,status){response(data)})},"updater":function(item){return item},"afterSelect":function(activeItem){$.ajax({"url":"/","data":["3","4="+encodeURIComponent(activeItem.index)].join("&"),"dataType":"script"})}});</script>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadCommandTest >> testApplyToOnWithConfiguration [
 
 	| html |
@@ -37,7 +39,7 @@ BootstrapTypeaheadCommandTest >> testApplyToOnWithConfiguration [
 			'<input id="id5" type="text"/><script type="text/javascript">$("#id5").typeahead({"source":function(searchTerm,response){$.getJSON("/",["1","2="+encodeURIComponent(searchTerm)].join("&"),function(data,status){response(data)})},"updater":function(item){return item},"afterSelect":function(activeItem){$.ajax({"url":"/","data":["3","4="+encodeURIComponent(activeItem.index)].join("&"),"dataType":"script"})},"minLength":5});</script>'
 ]
 
-{ #category : #'tests-private' }
+{ #category : 'tests-private' }
 BootstrapTypeaheadCommandTest >> testEvaluateWithUsing [
 
 	| searchResult firstResult lastResult |
@@ -59,7 +61,7 @@ BootstrapTypeaheadCommandTest >> testEvaluateWithUsing [
 		assert: (lastResult at: 'index') equals: 2
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 BootstrapTypeaheadCommandTest >> testRefreshingAnotherView [
 
 	| html identifiedView |

@@ -2,12 +2,14 @@
 A Bootstrap3OnlineLibraryTest is a test class for testing the behavior of Bootstrap3OnlineLibrary
 "
 Class {
-	#name : #Bootstrap3OnlineLibraryTest,
-	#superclass : #BWRenderingTest,
-	#category : #'Willow-Bootstrap-3-Tests-Libraries'
+	#name : 'Bootstrap3OnlineLibraryTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-3-Tests-Libraries',
+	#package : 'Willow-Bootstrap-3-Tests',
+	#tag : 'Libraries'
 }
 
-{ #category : #'tests-Updating' }
+{ #category : 'tests-Updating' }
 Bootstrap3OnlineLibraryTest >> testUpdateRoot [
 
 	| html |
@@ -23,7 +25,7 @@ Bootstrap3OnlineLibraryTest >> testUpdateRoot [
 
 ]
 
-{ #category : #'tests-Updating' }
+{ #category : 'tests-Updating' }
 Bootstrap3OnlineLibraryTest >> testUpdateRootWithoutOptionalTheme [
 
 	| html |

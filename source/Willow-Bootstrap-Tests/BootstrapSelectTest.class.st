@@ -2,12 +2,14 @@
 A BootstrapSelectTest is a test class for testing the behavior of BootstrapSelect
 "
 Class {
-	#name : #BootstrapSelectTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Select'
+	#name : 'BootstrapSelectTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Select',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Select'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapSelectTest >> renderMultiSelectApplying: aBlock [
 
 	^ self
@@ -21,7 +23,7 @@ BootstrapSelectTest >> renderMultiSelectApplying: aBlock [
 			select script: bootstrapSelect ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 BootstrapSelectTest >> renderSelectApplying: aBlock [
 
 	^ self
@@ -35,7 +37,7 @@ BootstrapSelectTest >> renderSelectApplying: aBlock [
 			select script: bootstrapSelect ]
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testActionsBox [
 
 	| html |
@@ -47,7 +49,7 @@ BootstrapSelectTest >> testActionsBox [
 		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"actionsBox":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testContainer [
 
 	| html |
@@ -57,7 +59,7 @@ BootstrapSelectTest >> testContainer [
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"container":"body"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testCountSelectedText [
 
 	| html |
@@ -70,7 +72,7 @@ BootstrapSelectTest >> testCountSelectedText [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"countSelectedText":"Selected {0} of {1}"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testCountSelectedTextWithFunction [
 
 	| html |
@@ -91,7 +93,7 @@ BootstrapSelectTest >> testCountSelectedTextWithFunction [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"countSelectedText":function(selectedCount,totalCount){return "Something selected"}});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testDeselectAll [
 
 	| html |
@@ -104,7 +106,7 @@ BootstrapSelectTest >> testDeselectAll [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("deselectAll");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testDeselectAllText [
 
 	| html |
@@ -117,7 +119,7 @@ BootstrapSelectTest >> testDeselectAllText [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"deselectAllText":"Remove Selection"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testDestroy [
 
 	| html |
@@ -130,7 +132,7 @@ BootstrapSelectTest >> testDestroy [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("destroy");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testDropdownAlignRight [
 
 	| html |
@@ -148,7 +150,7 @@ BootstrapSelectTest >> testDropdownAlignRight [
 		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropdownAlignRight":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testDropupAuto [
 
 	| html |
@@ -161,7 +163,7 @@ BootstrapSelectTest >> testDropupAuto [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"dropupAuto":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testHeader [
 
 	| html |
@@ -174,7 +176,7 @@ BootstrapSelectTest >> testHeader [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"header":"Header"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testHide [
 
 	| html |
@@ -187,7 +189,7 @@ BootstrapSelectTest >> testHide [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("hide");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testHideDisabled [
 
 	| html |
@@ -197,7 +199,7 @@ BootstrapSelectTest >> testHideDisabled [
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"hideDisabled":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testIconBase [
 
 	| html |
@@ -207,7 +209,7 @@ BootstrapSelectTest >> testIconBase [
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"iconBase":"fa"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testLiveSearchOptions [
 
 	| html |
@@ -226,7 +228,7 @@ BootstrapSelectTest >> testLiveSearchOptions [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"liveSearch":true,"liveSearchNormalize":true,"liveSearchPlaceholder":"Search...","liveSearchStyle":"startsWith"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testLiveSearchStyle [
 
 	| html |
@@ -236,7 +238,7 @@ BootstrapSelectTest >> testLiveSearchStyle [
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"liveSearchStyle":"contains"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testMaxOptions [
 
 	| html |
@@ -253,7 +255,7 @@ BootstrapSelectTest >> testMaxOptions [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"maxOptions":5,"maxOptionsText":"Select no more than five items"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testMaxOptionsWithArray [
 
 	| html |
@@ -270,7 +272,7 @@ BootstrapSelectTest >> testMaxOptionsWithArray [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"maxOptions":5,"maxOptionsText":["Total max","Group max"]});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testMobile [
 
 	| html |
@@ -280,7 +282,7 @@ BootstrapSelectTest >> testMobile [
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"mobile":true});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testMobileMethod [
 
 	| html |
@@ -293,7 +295,7 @@ BootstrapSelectTest >> testMobileMethod [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("mobile");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testMultipleSeparator [
 
 	| html |
@@ -305,7 +307,7 @@ BootstrapSelectTest >> testMultipleSeparator [
 		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"multipleSeparator":"/ "});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testNoneSelectedText [
 
 	| html |
@@ -317,7 +319,7 @@ BootstrapSelectTest >> testNoneSelectedText [
 		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"noneSelectedText":"Nothing"});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapSelectTest >> testOnChanged [
 
 	| html |
@@ -330,7 +332,7 @@ BootstrapSelectTest >> testOnChanged [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker().on("changed.bs.select",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapSelectTest >> testOnHidden [
 
 	| html |
@@ -342,7 +344,7 @@ BootstrapSelectTest >> testOnHidden [
 		equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker().on("hidden.bs.select",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapSelectTest >> testOnHide [
 
 	| html |
@@ -354,7 +356,7 @@ BootstrapSelectTest >> testOnHide [
 		equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker().on("hide.bs.select",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapSelectTest >> testOnLoaded [
 
 	| html |
@@ -366,7 +368,7 @@ BootstrapSelectTest >> testOnLoaded [
 		equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker().on("loaded.bs.select",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapSelectTest >> testOnRefreshed [
 
 	| html |
@@ -378,7 +380,7 @@ BootstrapSelectTest >> testOnRefreshed [
 		equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker().on("refreshed.bs.select",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapSelectTest >> testOnRendered [
 
 	| html |
@@ -390,7 +392,7 @@ BootstrapSelectTest >> testOnRendered [
 		equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker().on("rendered.bs.select",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapSelectTest >> testOnShow [
 
 	| html |
@@ -402,7 +404,7 @@ BootstrapSelectTest >> testOnShow [
 		equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker().on("show.bs.select",function(){});</script>'
 ]
 
-{ #category : #'tests-Events' }
+{ #category : 'tests-Events' }
 BootstrapSelectTest >> testOnShown [
 
 	| html |
@@ -414,7 +416,7 @@ BootstrapSelectTest >> testOnShown [
 		equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker().on("shown.bs.select",function(){});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testRefresh [
 
 	| html |
@@ -427,7 +429,7 @@ BootstrapSelectTest >> testRefresh [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("refresh");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testRender [
 
 	| html |
@@ -440,7 +442,7 @@ BootstrapSelectTest >> testRender [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("render");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testSelectAll [
 
 	| html |
@@ -453,7 +455,7 @@ BootstrapSelectTest >> testSelectAll [
 			'<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("selectAll");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testSelectAllText [
 
 	| html |
@@ -465,7 +467,7 @@ BootstrapSelectTest >> testSelectAllText [
 		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectAllText":"Select All"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testSelectOnTab [
 
 	| html |
@@ -478,7 +480,7 @@ BootstrapSelectTest >> testSelectOnTab [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectOnTab":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testSelectedTextFormat [
 
 	| html |
@@ -508,7 +510,7 @@ BootstrapSelectTest >> testSelectedTextFormat [
 		equals: '<select id="id1" multiple><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"selectedTextFormat":"count > 3"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testSetStyle [
 
 	| html |
@@ -521,7 +523,7 @@ BootstrapSelectTest >> testSetStyle [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("setStyle");</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testShow [
 
 	| html |
@@ -534,7 +536,7 @@ BootstrapSelectTest >> testShow [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("show");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testShowContent [
 
 	| html |
@@ -547,7 +549,7 @@ BootstrapSelectTest >> testShowContent [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"showContent":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testShowIcon [
 
 	| html |
@@ -560,7 +562,7 @@ BootstrapSelectTest >> testShowIcon [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"showIcon":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testShowSubtext [
 
 	| html |
@@ -573,7 +575,7 @@ BootstrapSelectTest >> testShowSubtext [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"showSubtext":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testShowTick [
 
 	| html |
@@ -586,7 +588,7 @@ BootstrapSelectTest >> testShowTick [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"showTick":true});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testSize [
 
 	| html |
@@ -599,7 +601,7 @@ BootstrapSelectTest >> testSize [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"size":15});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testStyle [
 
 	| html |
@@ -612,7 +614,7 @@ BootstrapSelectTest >> testStyle [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"style":null});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testTickIcon [
 
 	| html |
@@ -625,7 +627,7 @@ BootstrapSelectTest >> testTickIcon [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"tickIcon":"ok"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testTitle [
 
 	| html |
@@ -638,7 +640,7 @@ BootstrapSelectTest >> testTitle [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"title":"Please select:"});</script>'
 ]
 
-{ #category : #'tests-Methods' }
+{ #category : 'tests-Methods' }
 BootstrapSelectTest >> testToggle [
 
 	| html |
@@ -651,7 +653,7 @@ BootstrapSelectTest >> testToggle [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker("toggle");</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testWidth [
 
 	| html |
@@ -661,7 +663,7 @@ BootstrapSelectTest >> testWidth [
 	self assert: html equals: '<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"width":"fit"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testWidthInCssUnits [
 
 	| html |
@@ -674,7 +676,7 @@ BootstrapSelectTest >> testWidthInCssUnits [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"width":"10px"});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testWindowPadding [
 
 	| html |
@@ -687,7 +689,7 @@ BootstrapSelectTest >> testWindowPadding [
 			'<select id="id1"><option>1</option><option>2</option><option>3</option></select><script type="text/javascript">$("#id1").selectpicker({"windowPadding":2});</script>'
 ]
 
-{ #category : #'tests-Options' }
+{ #category : 'tests-Options' }
 BootstrapSelectTest >> testWindowPaddingWithArray [
 
 	| html |

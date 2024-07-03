@@ -2,43 +2,45 @@
 I'm a library providing some CSS required for the integration to work correctly.
 "
 Class {
-	#name : #WillowBootstrapFileMetadataLibrary,
-	#superclass : #WADeploymentAwareFileMetadataLibrary,
-	#category : #'Willow-Bootstrap-Libraries'
+	#name : 'WillowBootstrapFileMetadataLibrary',
+	#superclass : 'WADeploymentAwareFileMetadataLibrary',
+	#category : 'Willow-Bootstrap-Libraries',
+	#package : 'Willow-Bootstrap',
+	#tag : 'Libraries'
 }
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary class >> forDeployment [
 
 	^ self 
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary class >> forDevelopment [
 
 	^ self 
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary class >> libraryName [
 
 	^ 'willow-bootstrap'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary class >> version [
 
 	^ '8.0.0'
 
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrapFileMetadataLibrary >> classification [
 
 	^ Willow classification
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrapFileMetadataLibrary >> cleanModalFunctionUsing: script [
 
 	| function |
@@ -52,13 +54,13 @@ WillowBootstrapFileMetadataLibrary >> cleanModalFunctionUsing: script [
 	^ function
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrapFileMetadataLibrary >> constants [
 
 	^ Willow constants
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary >> csswillowbootstrapCss [
 
 	^ WAFileLibraryResource
@@ -68,7 +70,7 @@ WillowBootstrapFileMetadataLibrary >> csswillowbootstrapCss [
 		contents: self csswillowbootstrapCssContent
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary >> csswillowbootstrapCssContent [
 
 	^'/*<n>* willow-bootstrap.css v<1s><n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n><2p>'
@@ -76,7 +78,7 @@ WillowBootstrapFileMetadataLibrary >> csswillowbootstrapCssContent [
 		with: WillowBootstrapCascadingStyleSheetBuilder new build
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJs [
 
 	^ WAFileLibraryResource
@@ -86,7 +88,7 @@ WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJs [
 		contents: self jswillowbootstrapJsContent
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJsContent [
 
 	^ '/*<n>* willow-bootstrap.js v<1s><n>* Copyright 2018 - Buenos Aires Smalltalk<n>* Licensed under the MIT license<n>*/<n><2s>'
@@ -108,19 +110,19 @@ WillowBootstrapFileMetadataLibrary >> jswillowbootstrapJsContent [
 					] )
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary >> putVersionSpecificHacksOn: script [
 
 	
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary >> selectorsToInclude [
 
 	^ #(csswillowbootstrapCss jswillowbootstrapJs)
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrapFileMetadataLibrary >> version [
 
 	^self class version

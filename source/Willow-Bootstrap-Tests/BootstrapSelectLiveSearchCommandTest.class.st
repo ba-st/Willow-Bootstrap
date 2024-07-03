@@ -2,12 +2,14 @@
 A BootstrapSelectLiveSearchCommandTest is a test class for testing the behavior of BootstrapSelectLiveSearchCommand
 "
 Class {
-	#name : #BootstrapSelectLiveSearchCommandTest,
-	#superclass : #BWRenderingTest,
-	#category : 'Willow-Bootstrap-Tests-Frontend'
+	#name : 'BootstrapSelectLiveSearchCommandTest',
+	#superclass : 'BWRenderingTest',
+	#category : 'Willow-Bootstrap-Tests-Frontend',
+	#package : 'Willow-Bootstrap-Tests',
+	#tag : 'Frontend'
 }
 
-{ #category : #'tests-processing' }
+{ #category : 'tests-processing' }
 BootstrapSelectLiveSearchCommandTest >> testApplyToOn [
 
 	| html |
@@ -20,7 +22,7 @@ BootstrapSelectLiveSearchCommandTest >> testApplyToOn [
 			'<select data-live-search="true" data-live-search-normalize="false" data-live-search-style="contains" class="selectpicker" id="id1"></select><script type="text/javascript">$("#id1").selectpicker("render");</script>'
 ]
 
-{ #category : #'tests-processing' }
+{ #category : 'tests-processing' }
 BootstrapSelectLiveSearchCommandTest >> testNonDefaultApplyToOn [
 
 	| html |
