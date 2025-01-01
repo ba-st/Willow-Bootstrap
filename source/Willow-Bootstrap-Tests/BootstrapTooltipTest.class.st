@@ -107,7 +107,7 @@ BootstrapTooltipTest >> testHtmlTitle [
 	self
 		assert: html
 		equals:
-		'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true,"title":"<div class=\"container\">A complex tooltip<\/div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"html":true,"title":"<div class=\"container\">A complex tooltip</div>"});</script>'
 ]
 
 { #category : 'tests-Events' }

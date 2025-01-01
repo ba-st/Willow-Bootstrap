@@ -109,7 +109,7 @@ BootstrapPopoverTest >> testTemplateForBootstrap4 [
 	self
 		assert: html
 		equals:
-		'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"template":"<div class=\"popover\" role=\"tooltip\"><div class=\"arrow\"><\/div><h3 class=\"popover-header\"><\/h3><div class=\"popover-body\">Body<\/div><\/div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"template":"<div class=\"popover\" role=\"tooltip\"><div class=\"arrow\"></div><h3 class=\"popover-header\"></h3><div class=\"popover-body\">Body</div></div>"});</script>'
 ]
 
 { #category : '*Willow-Bootstrap-4-Tests' }

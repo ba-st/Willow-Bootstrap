@@ -27,7 +27,7 @@ BootstrapTooltipTest >> testTemplateForBootstrap3 [
 	self
 		assert: html
 		equals:
-		'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"template":"<div class=\"tooltip\" role=\"tooltip\"><div class=\"tooltip-arrow\"><\/div><div class=\"tooltip-inner\"><span class=\"glyphicon glyphicon-menu-up\"><\/span><\/div><\/div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"template":"<div class=\"tooltip\" role=\"tooltip\"><div class=\"tooltip-arrow\"></div><div class=\"tooltip-inner\"><span class=\"glyphicon glyphicon-menu-up\"></span></div></div>"});</script>'
 ]
 
 { #category : '*Willow-Bootstrap-3-Tests' }

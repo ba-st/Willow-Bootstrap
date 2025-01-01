@@ -114,7 +114,7 @@ BootstrapTooltipTest >> testTemplateForBootstrap4 [
 	self
 		assert: html
 		equals:
-		'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"template":"<div class=\"tooltip\" role=\"tooltip\"><div class=\"arrow\"><\/div><div class=\"tooltip-inner\">Help!<\/div><\/div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"template":"<div class=\"tooltip\" role=\"tooltip\"><div class=\"arrow\"></div><div class=\"tooltip-inner\">Help!</div></div>"});</script>'
 ]
 
 { #category : '*Willow-Bootstrap-4-Tests' }
