@@ -107,7 +107,7 @@ BootstrapPopoverTest >> testHtmlContent [
 	self
 		assert: html
 		equals:
-		'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"content":"<div class=\"container\">A more complex rendering<\/div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"content":"<div class=\"container\">A more complex rendering</div>"});</script>'
 ]
 
 { #category : 'tests-Options' }
@@ -125,7 +125,7 @@ BootstrapPopoverTest >> testHtmlTitle [
 	self
 		assert: html
 		equals:
-		'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"title":"<div class=\"container\">A complex title<\/div>"});</script>'
+		'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"html":true,"title":"<div class=\"container\">A complex title</div>"});</script>'
 ]
 
 { #category : 'tests-Events' }

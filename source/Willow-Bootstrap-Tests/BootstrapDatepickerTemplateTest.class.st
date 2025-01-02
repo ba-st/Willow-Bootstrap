@@ -16,5 +16,5 @@ BootstrapDatepickerTemplateTest >> testAsJavascript [
 		assert: ( ( BootstrapDatepickerTemplate context: self renderContext )
 				  leftArrow: [ :canvas | canvas span: '<' ]
 				  rightArrow: '>' )
-		equals: '{"leftArrow":"<span>&lt;<\/span>","rightArrow":"&gt;"}'
+		equals: '{"leftArrow":"<span>&lt;</span>","rightArrow":"&gt;"}'
 ]
