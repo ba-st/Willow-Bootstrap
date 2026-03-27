@@ -1,6 +1,6 @@
-Extension { #name : #BootstrapPopover }
+Extension { #name : 'BootstrapPopover' }
 
-{ #category : #'*Willow-Bootstrap-3' }
+{ #category : '*Willow-Bootstrap-3' }
 BootstrapPopover >> destroy [
 
 	"Hides and destroys an element's popover. 
@@ -9,7 +9,7 @@ BootstrapPopover >> destroy [
 	functionName := 'destroy'
 ]
 
-{ #category : #'*Willow-Bootstrap-3' }
+{ #category : '*Willow-Bootstrap-3' }
 BootstrapPopover >> viewport: aStringViewportConfigurationOrFunction [
 
 	"Keeps the popover within the bounds of this element. 

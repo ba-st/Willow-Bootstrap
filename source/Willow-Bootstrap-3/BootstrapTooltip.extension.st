@@ -1,6 +1,6 @@
-Extension { #name : #BootstrapTooltip }
+Extension { #name : 'BootstrapTooltip' }
 
-{ #category : #'*Willow-Bootstrap-3' }
+{ #category : '*Willow-Bootstrap-3' }
 BootstrapTooltip >> destroy [
 
 	"Hides and destroys an element's tooltip. 
@@ -9,7 +9,7 @@ BootstrapTooltip >> destroy [
 	functionName := 'destroy'
 ]
 
-{ #category : #'*Willow-Bootstrap-3' }
+{ #category : '*Willow-Bootstrap-3' }
 BootstrapTooltip >> viewport: aStringViewportConfigurationOrFunction [
 
 	"Keeps the tooltip within the bounds of this element. 

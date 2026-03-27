@@ -32,7 +32,7 @@ BootstrapDatepickerFormat >> initializeFormattingWith: aJSFormattingFunction par
 ]
 
 { #category : 'printing' }
-BootstrapDatepickerFormat >> javascriptContentOn: aStream [
+BootstrapDatepickerFormat >> javascriptContentOn: jsCanvas [
 
-	aStream javascript: options
+  jsCanvas render: options
 ]

@@ -2,12 +2,14 @@
 I'm a builder for turning a button into a dropdown toggle with some basic markup changes.
 "
 Class {
-	#name : #Bootstrap3SingleButtonDropdownBuilder,
-	#superclass : #Bootstrap3DropdownBuilder,
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#name : 'Bootstrap3SingleButtonDropdownBuilder',
+	#superclass : 'Bootstrap3DropdownBuilder',
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #building }
+{ #category : 'building' }
 Bootstrap3SingleButtonDropdownBuilder >> buildApplying: aComponentCommand [
 
 	^ ContainerWebView
@@ -16,7 +18,7 @@ Bootstrap3SingleButtonDropdownBuilder >> buildApplying: aComponentCommand [
 		applying: [ :div | aComponentCommand asWebComponentCommand + div addClass bootstrap3 buttonGroup ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3SingleButtonDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
 
 	buttonBinding := Binding to:

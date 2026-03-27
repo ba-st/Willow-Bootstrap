@@ -2,15 +2,17 @@
 I'm a builder easing the creation of Bootstrap grids
 "
 Class {
-	#name : #Bootstrap3GridBuilder,
-	#superclass : #BootstrapGridBuilder,
+	#name : 'Bootstrap3GridBuilder',
+	#superclass : 'BootstrapGridBuilder',
 	#instVars : [
 		'columnSpec'
 	],
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #building }
+{ #category : 'building' }
 Bootstrap3GridBuilder >> buildApplying: aRowCommand [
 
 	^ ( 1 to: self numberOfRows )
@@ -22,13 +24,13 @@ Bootstrap3GridBuilder >> buildApplying: aRowCommand [
 			]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3GridBuilder >> columnCountPerRow [
 
 	^ columnSpec size
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3GridBuilder >> columnsPerRow: anInteger [
 
 	| spec |
@@ -38,44 +40,44 @@ Bootstrap3GridBuilder >> columnsPerRow: anInteger [
 	columnSpec := spec asArray
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3GridBuilder >> columnsWidths: aCollection [
 
 	AssertionChecker enforce: [ aCollection sum = 12 ] because: 'The specified column count must match the grid total count.'.
 	columnSpec := aCollection
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3GridBuilder >> contentIndexAt: rowIndex and: columnIndex [
 
 	^ (rowIndex - 1) * self columnCountPerRow + columnIndex
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3GridBuilder >> forExtraSmallDevices [ 
 
 	columnBreakpointBlock := [ :column :count | column addClass bootstrap3 columnExtraSmall: count ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3GridBuilder >> forLargeDevices [
 
 	columnBreakpointBlock := [ :column :count | column addClass bootstrap3 columnLarge: count ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3GridBuilder >> forMediumDevices [
 
 	columnBreakpointBlock := [ :column :count | column addClass bootstrap3 columnMedium: count ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3GridBuilder >> forSmallDevices [
 
 	columnBreakpointBlock := [ :column :count | column addClass bootstrap3 columnSmall: count ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3GridBuilder >> initialize [
 
 	super initialize.
@@ -84,20 +86,20 @@ Bootstrap3GridBuilder >> initialize [
 	self forMediumDevices
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3GridBuilder >> numberOfRows [
 
 	^ (contents size / self columnCountPerRow) ceiling
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3GridBuilder >> renderColumnsAt: rowIndex on: aCanvas [
 
 	1 to: self columnCountPerRow do:
 		[ :columnIndex | self renderContentAt: (self contentIndexAt: rowIndex and: columnIndex) spanning: (columnSpec at: columnIndex) on: aCanvas ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3GridBuilder >> renderContentAt: aContentIndex spanning: aColumnCount on: aCanvas [
 
 	[ aCanvas div

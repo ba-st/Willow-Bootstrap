@@ -2,15 +2,17 @@
 I have the responsibility to provide Bootstrap components. 
 "
 Class {
-	#name : #Bootstrap3ComponentSupplier,
-	#superclass : #BootstrapComponentSupplier,
+	#name : 'Bootstrap3ComponentSupplier',
+	#superclass : 'BootstrapComponentSupplier',
 	#instVars : [
 		'bootstrapLibraries'
 	],
-	#category : #'Willow-Bootstrap-3-Frontend'
+	#category : 'Willow-Bootstrap-3-Frontend',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'Frontend'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 Bootstrap3ComponentSupplier class >> online [
 
 	^ self
@@ -21,13 +23,13 @@ Bootstrap3ComponentSupplier class >> online [
 			BootstrapTypeaheadOnlineLibrary default}
 ]
 
-{ #category : #'private - Instance Creation' }
+{ #category : 'private - Instance Creation' }
 Bootstrap3ComponentSupplier class >> usingLibraries: aLibraryCollection [
 
 	^ self new initializeUsing: aLibraryCollection
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 Bootstrap3ComponentSupplier class >> withBootstrapLibrary: aBootstrapLibrary selectLibrary: aBootstrapSelectLibrary datepickerLibrary: aDatePickerLibrary typeaheadLibrary: aTypeaheadLibrary [
 
 	^ self
@@ -38,7 +40,7 @@ Bootstrap3ComponentSupplier class >> withBootstrapLibrary: aBootstrapLibrary sel
 			aTypeaheadLibrary}
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 Bootstrap3ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 
 	^ Bootstrap3CheckboxWebView
@@ -48,7 +50,7 @@ Bootstrap3ComponentSupplier >> checkboxLabeled: aRenderable onModel: anObjectToU
 		applying: aCommandToComponent
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 Bootstrap3ComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent [
 
 	^ Bootstrap3CheckboxWebView
@@ -57,31 +59,31 @@ Bootstrap3ComponentSupplier >> checkboxUnlabeledOnModel: anObjectToUseWhenOn off
 		applying: aCommandToComponent
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> fieldAddonBuilder [
 
 	^ Bootstrap3FieldAddonBuilder new 
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> gridBuilder [
 
 	^ Bootstrap3GridBuilder new
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> helpTextBoundTo: aFieldWebView describedBy: aHelpText [
 
 	^ Bootstrap3HelpTextWebView boundTo: aFieldWebView describedBy: aHelpText
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3ComponentSupplier >> initializeUsing: aLibraryCollection [
 
 	bootstrapLibraries := aLibraryCollection
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> labeledFieldApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField [
 
 	^ BootstrapLabeledFieldWebView
@@ -92,25 +94,25 @@ Bootstrap3ComponentSupplier >> labeledFieldApplying: aCommandToContainer display
 		applying: aCommandToField
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> navigationDropdownMenuBuilder [
 
 	^ Bootstrap3NavigationDropdownMenuBuilder using: self
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> panelBuilder [
 
 	^ Bootstrap3PanelBuilder new
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> pillsBuilder [
 	
 	^BootstrapToggablePillsBuilder new
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 Bootstrap3ComponentSupplier >> radioButtonRenderingWith: anItemRenderer applyingToContainer: aContainerCommand applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
 
 	^ Bootstrap3RadioButtonWebView
@@ -120,7 +122,7 @@ Bootstrap3ComponentSupplier >> radioButtonRenderingWith: anItemRenderer applying
 		applyingToInput: anInputCommand
 ]
 
-{ #category : #Supplying }
+{ #category : 'Supplying' }
 Bootstrap3ComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand [
 
 	^Bootstrap3RadioWebView 
@@ -130,25 +132,25 @@ Bootstrap3ComponentSupplier >> radioRenderingWith: aRenderingBlock applyingToLab
 
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> singleButtonDropdownBuilder [
 
 	^ Bootstrap3SingleButtonDropdownBuilder using: self
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> splitButtonDropdownBuilder [
 
 	^ Bootstrap3SplitButtonDropdownBuilder using: self
 ]
 
-{ #category : #'Supplying - Non Portable' }
+{ #category : 'Supplying - Non Portable' }
 Bootstrap3ComponentSupplier >> tabsBuilder [
 
 	^ BootstrapToggableTabsBuilder new
 ]
 
-{ #category : #Processing }
+{ #category : 'Processing' }
 Bootstrap3ComponentSupplier >> updateRoot: aRoot [
 
 	super updateRoot: aRoot.

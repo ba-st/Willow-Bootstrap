@@ -29,9 +29,9 @@ BootstrapDatepickerTemplate >> initialize [
 ]
 
 { #category : 'printing' }
-BootstrapDatepickerTemplate >> javascriptContentOn: aStream [
+BootstrapDatepickerTemplate >> javascriptContentOn: jsCanvas [
 
-	aStream javascript: options
+	jsCanvas render: options
 ]
 
 { #category : 'Configuring' }

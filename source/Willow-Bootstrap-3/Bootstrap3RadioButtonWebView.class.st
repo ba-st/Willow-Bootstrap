@@ -1,10 +1,12 @@
 Class {
-	#name : #Bootstrap3RadioButtonWebView,
-	#superclass : #BootstrapRadioButtonWebView,
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#name : 'Bootstrap3RadioButtonWebView',
+	#superclass : 'BootstrapRadioButtonWebView',
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 Bootstrap3RadioButtonWebView class >> renderingWith: aItemRenderer
 	applyingToContainer: aContainerCommand
 	applyingToLabel: aLabelCommand
@@ -17,7 +19,7 @@ Bootstrap3RadioButtonWebView class >> renderingWith: aItemRenderer
 		applyingToInput: anInputCommand asWebComponentCommand
 ]
 
-{ #category : #'private - rendering' }
+{ #category : 'private - rendering' }
 Bootstrap3RadioButtonWebView >> activeLabelCommandFor: anElement [
 
 	chosenElementOptional withContentDo: [:chosenElement |
@@ -26,7 +28,7 @@ Bootstrap3RadioButtonWebView >> activeLabelCommandFor: anElement [
 	^[]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 Bootstrap3RadioButtonWebView >> groupContainerCommand [
 
 	^ [ :div | 
@@ -36,7 +38,7 @@ Bootstrap3RadioButtonWebView >> groupContainerCommand [
 	]
 ]
 
-{ #category : #'private - rendering' }
+{ #category : 'private - rendering' }
 Bootstrap3RadioButtonWebView >> renderRadioButtonFor: anElement asPartOf: aRadioGroup on: aCanvas [
 
 	aCanvas label

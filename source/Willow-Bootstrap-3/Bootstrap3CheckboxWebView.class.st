@@ -1,10 +1,12 @@
 Class {
-	#name : #Bootstrap3CheckboxWebView,
-	#superclass : #BootstrapCheckboxWebView,
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#name : 'Bootstrap3CheckboxWebView',
+	#superclass : 'BootstrapCheckboxWebView',
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 Bootstrap3CheckboxWebView >> renderContentOn: aCanvas [
 
 	aCanvas div
@@ -12,7 +14,7 @@ Bootstrap3CheckboxWebView >> renderContentOn: aCanvas [
 		applying: [ :div | div addClass bootstrap3 checkbox + commandToComponent ]
 ]
 
-{ #category : #'private - rendering' }
+{ #category : 'private - rendering' }
 Bootstrap3CheckboxWebView >> renderLabelOn: aCanvas [
 
 	aCanvas

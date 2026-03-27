@@ -13,9 +13,9 @@ Class {
 }
 
 { #category : 'private' }
-BootstrapPlugin >> arguments [
+BootstrapPlugin >> argumentsDo: aBlock [
 
-	^ functionName ifNil: [ super arguments ] ifNotNil: [ :argument | Array with: argument ]
+  functionName ifNil: [ super argumentsDo: aBlock ] ifNotNil: aBlock
 ]
 
 { #category : 'private' }

@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfWillowBootstrap }
+Package { #name : 'BaselineOfWillowBootstrap' }

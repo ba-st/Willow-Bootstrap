@@ -2,16 +2,18 @@
 I'm a builder of bootstrap dropdown menus
 "
 Class {
-	#name : #Bootstrap3NavigationDropdownMenuBuilder,
-	#superclass : #Bootstrap3DropdownBuilder,
+	#name : 'Bootstrap3NavigationDropdownMenuBuilder',
+	#superclass : 'Bootstrap3DropdownBuilder',
 	#instVars : [
 		'containerBuildingCommand',
 		'navigationBarBinding'
 	],
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #building }
+{ #category : 'building' }
 Bootstrap3NavigationDropdownMenuBuilder >> buildApplying: aComponentCommand [
 
 	^ ListItemWebView
@@ -20,20 +22,20 @@ Bootstrap3NavigationDropdownMenuBuilder >> buildApplying: aComponentCommand [
 		applying: [ :listItem | aComponentCommand asWebComponentCommand + listItem addClass bootstrap3 dropdown ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3NavigationDropdownMenuBuilder >> containedIn: aNavigationBar [
 
 	navigationBarBinding := Binding to: aNavigationBar
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3NavigationDropdownMenuBuilder >> initializeUsing: aSupplier [
 
 	super initializeUsing: aSupplier.
 	navigationBarBinding := Binding undefinedExplainedBy: 'Missing navigation bar container'
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3NavigationDropdownMenuBuilder >> labeled: aRenderable [
 
 	buttonBinding := Binding to:
@@ -44,7 +46,7 @@ Bootstrap3NavigationDropdownMenuBuilder >> labeled: aRenderable [
 			applying: [ :button :constants | (button setARIARoleTo: #button) + (self dropdownCommandFor: button using: constants) ])
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3NavigationDropdownMenuBuilder >> labeled: aRenderable applying: aComponentCommand [
 
 	buttonBinding := Binding to:
@@ -55,7 +57,7 @@ Bootstrap3NavigationDropdownMenuBuilder >> labeled: aRenderable applying: aCompo
 			applying: [ :button :constants | (self dropdownCommandFor: button using: constants) + aComponentCommand ])
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3NavigationDropdownMenuBuilder >> navigationBar [
 
 	^ navigationBarBinding content

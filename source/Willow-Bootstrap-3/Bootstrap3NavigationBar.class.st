@@ -2,18 +2,20 @@
 Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.
 "
 Class {
-	#name : #Bootstrap3NavigationBar,
-	#superclass : #WAPainter,
+	#name : 'Bootstrap3NavigationBar',
+	#superclass : 'WAPainter',
 	#instVars : [
 		'componentCommand',
 		'brandView',
 		'navbarContent',
 		'containerCommand'
 	],
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 Bootstrap3NavigationBar class >> brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
@@ -23,7 +25,7 @@ Bootstrap3NavigationBar class >> brandedWith: aBrandWebView containing: aWebView
 		applying: aCommandToComponent
 ]
 
-{ #category : #'Instance Creation' }
+{ #category : 'Instance Creation' }
 Bootstrap3NavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self
@@ -33,7 +35,7 @@ Bootstrap3NavigationBar class >> fluidBrandedWith: aBrandWebView containing: aWe
 		applying: aCommandToComponent
 ]
 
-{ #category : #'private-instance creation' }
+{ #category : 'private-instance creation' }
 Bootstrap3NavigationBar class >> styledAs: aContainerStylingCommand brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	^ self new
@@ -43,7 +45,7 @@ Bootstrap3NavigationBar class >> styledAs: aContainerStylingCommand brandedWith:
 		applying: aCommandToComponent asWebComponentCommand 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3NavigationBar >> initializeStyledAs: aContainerCommand brandedWith: aBrandWebView containing: aWebView applying: aCommandToComponent [
 
 	containerCommand := aContainerCommand.
@@ -54,7 +56,7 @@ Bootstrap3NavigationBar >> initializeStyledAs: aContainerCommand brandedWith: aB
 	brandView := aBrandWebView
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 Bootstrap3NavigationBar >> renderContentOn: aCanvas [
 
 	aCanvas navigation
@@ -67,7 +69,7 @@ Bootstrap3NavigationBar >> renderContentOn: aCanvas [
 		applying: [ :nav | nav addClass bootstrap3 navbar + componentCommand ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3NavigationBar >> renderNavigationBarHeaderOn: aCanvas [
 
 	aCanvas div

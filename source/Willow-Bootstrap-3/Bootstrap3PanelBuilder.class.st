@@ -2,18 +2,20 @@
 I'm a builder of bootstrap panels
 "
 Class {
-	#name : #Bootstrap3PanelBuilder,
-	#superclass : #BootstrapPanelBuilder,
+	#name : 'Bootstrap3PanelBuilder',
+	#superclass : 'BootstrapPanelBuilder',
 	#instVars : [
 		'headingOptional',
 		'bodyOptional',
 		'footerOptional',
 		'tablesAndListGroups'
 	],
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #Building }
+{ #category : 'Building' }
 Bootstrap3PanelBuilder >> buildApplying: aCommandToPanel [
 
 	^ ContainerWebView
@@ -27,25 +29,25 @@ Bootstrap3PanelBuilder >> buildApplying: aCommandToPanel [
 		applying: [ :panel | panel addClass bootstrap3 panel + aCommandToPanel ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3PanelBuilder >> footer: aRenderable [
 
 	footerOptional := Optional containing: aRenderable
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3PanelBuilder >> headingDisplaying: aRenderable [
 
 	headingOptional := Optional containing: aRenderable
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3PanelBuilder >> headingDisplaying: aRenderable withLevel: aHeadingLevel [
 
 	self headingDisplaying: aRenderable withLevel: aHeadingLevel applying: [ :heading |  ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3PanelBuilder >> headingDisplaying: aRenderable withLevel: aHeadingLevel applying: aComponentCommand [
 
 	headingOptional := Optional
@@ -56,7 +58,7 @@ Bootstrap3PanelBuilder >> headingDisplaying: aRenderable withLevel: aHeadingLeve
 				applying: [ :heading | heading addClass bootstrap3 panelTitle + aComponentCommand ] )
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3PanelBuilder >> initialize [
 
 	super initialize.
@@ -66,7 +68,7 @@ Bootstrap3PanelBuilder >> initialize [
 	footerOptional := Optional unused
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 Bootstrap3PanelBuilder >> renderBodyOn: canvas [
 
 	bodyOptional
@@ -74,39 +76,39 @@ Bootstrap3PanelBuilder >> renderBodyOn: canvas [
 			[ :renderableInsideBody | canvas div with: renderableInsideBody applying: [ :div | div addClass bootstrap3 panelBody ] ]
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 Bootstrap3PanelBuilder >> renderFooterOn: canvas [
 
 	footerOptional
 		withContentDo: [ :footer | canvas div with: footer applying: [ :div | div addClass bootstrap3 panelFooter ] ]
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 Bootstrap3PanelBuilder >> renderHeadingOn: canvas [
 
 	headingOptional
 		withContentDo: [ :heading | canvas div with: heading applying: [ :div | div addClass bootstrap3 panelHeading ] ]
 ]
 
-{ #category : #'private - Rendering' }
+{ #category : 'private - Rendering' }
 Bootstrap3PanelBuilder >> renderTableOrListGroupOn: canvas [
 
 	canvas render: tablesAndListGroups
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3PanelBuilder >> withListGroup: aListWebView [
 
 	self withTable: aListWebView
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3PanelBuilder >> withTable: aTableWebView [
 
 	tablesAndListGroups add: aTableWebView
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3PanelBuilder >> wrapping: theBodyContent [
 
 	bodyOptional := Optional containing: theBodyContent

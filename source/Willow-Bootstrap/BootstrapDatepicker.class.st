@@ -13,9 +13,11 @@ Class {
 }
 
 { #category : 'private' }
-BootstrapDatepicker >> arguments [
+BootstrapDatepicker >> argumentsDo: aBlock [
 
-	^ arguments ifNil: [ super arguments ] ifNotNil: [ :additionalArguments | super arguments , additionalArguments ]
+  super argumentsDo: aBlock.
+
+  arguments ifNotNil: [ :additionalArguments | additionalArguments do: aBlock ]
 ]
 
 { #category : 'Options' }
