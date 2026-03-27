@@ -22,13 +22,13 @@ BootstrapDelayConfiguration >> initialize [
 ]
 
 { #category : 'printing' }
-BootstrapDelayConfiguration >> javascriptContentOn: aStream [
+BootstrapDelayConfiguration >> javascriptContentOn: jsCanvas [
 
-	aStream nextPut: ${.
-	JSStream encodeKey: 'show' value: millisecondCountToShow on: aStream.
-	aStream nextPut: $,.
-	JSStream encodeKey: 'hide' value: millisecondCountToHide on: aStream.
-	aStream nextPut: $}
+  jsCanvas object: [
+      jsCanvas
+        key: 'show' value: millisecondCountToShow;
+        key: 'hide' value: millisecondCountToHide
+    ]
 ]
 
 { #category : 'Configuring' }

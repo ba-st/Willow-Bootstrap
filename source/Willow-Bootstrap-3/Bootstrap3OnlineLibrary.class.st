@@ -2,33 +2,35 @@
 I'm a WALibary serving the files from the official CDN.
 "
 Class {
-	#name : #Bootstrap3OnlineLibrary,
-	#superclass : #WAOnlineLibrary,
+	#name : 'Bootstrap3OnlineLibrary',
+	#superclass : 'WAOnlineLibrary',
 	#instVars : [
 		'includeOptionalTheme'
 	],
-	#category : #'Willow-Bootstrap-3-Libraries'
+	#category : 'Willow-Bootstrap-3-Libraries',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'Libraries'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 Bootstrap3OnlineLibrary class >> default [
 
 	^ self new initializeWithOptionalTheme: true
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 Bootstrap3OnlineLibrary class >> withoutOptionalTheme [
 
 	^ self new initializeWithOptionalTheme: false
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3OnlineLibrary >> initializeWithOptionalTheme: aBoolean [
 
 	includeOptionalTheme := aBoolean
 ]
 
-{ #category : #Updating }
+{ #category : 'Updating' }
 Bootstrap3OnlineLibrary >> updateRoot: aRoot [
 
 	aRoot stylesheet
@@ -43,7 +45,7 @@ Bootstrap3OnlineLibrary >> updateRoot: aRoot [
 		anonymousSubResourceIntegrity: 'sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd'
 ]
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 Bootstrap3OnlineLibrary >> version [
 
 	^'3.4.1'

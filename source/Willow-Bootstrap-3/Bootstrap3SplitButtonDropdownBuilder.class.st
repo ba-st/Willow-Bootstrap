@@ -2,15 +2,17 @@
 I create split button dropdowns with the same markup changes, only with a separate button.
 "
 Class {
-	#name : #Bootstrap3SplitButtonDropdownBuilder,
-	#superclass : #Bootstrap3DropdownBuilder,
+	#name : 'Bootstrap3SplitButtonDropdownBuilder',
+	#superclass : 'Bootstrap3DropdownBuilder',
 	#instVars : [
 		'mainButtonBinding'
 	],
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #building }
+{ #category : 'building' }
 Bootstrap3SplitButtonDropdownBuilder >> buildApplying: aComponentCommand [
 
 	^ BootstrapSplitButtonWebView
@@ -22,20 +24,20 @@ Bootstrap3SplitButtonDropdownBuilder >> buildApplying: aComponentCommand [
 		and: mainButtonBinding content
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3SplitButtonDropdownBuilder >> initialize [
 
 	super initialize.
 	mainButtonBinding := Binding undefinedExplainedBy: 'Missing main button definition'
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3SplitButtonDropdownBuilder >> labeled: aRenderable applying: aComponentCommand [
 
 	self labeled: aRenderable applyingToMainButton: [  ] andToBoth: aComponentCommand
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3SplitButtonDropdownBuilder >> labeled: aRenderable applyingToMainButton: theMainButtonCommand andToBoth: theSplitButtonCommand [
 
 	| mainButton |

@@ -2,15 +2,17 @@
 I'm an abstract for building dropdown related components.
 "
 Class {
-	#name : #Bootstrap3DropdownBuilder,
-	#superclass : #BootstrapDropdownBuilder,
+	#name : 'Bootstrap3DropdownBuilder',
+	#superclass : 'BootstrapDropdownBuilder',
 	#instVars : [
 		'listClassificationCommand'
 	],
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3DropdownBuilder >> addActionLabeled: aRenderable executing: anActionBlock applying: aCommand [
 
 	| anchor |
@@ -20,7 +22,7 @@ Bootstrap3DropdownBuilder >> addActionLabeled: aRenderable executing: anActionBl
 	menuItems add: [ :canvas | canvas listItem: anchor ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3DropdownBuilder >> addDivider [
 
 	| dividerCommand |
@@ -31,7 +33,7 @@ Bootstrap3DropdownBuilder >> addDivider [
 	menuItems add: [ :canvas | dividerCommand applyTo: canvas listItem on: canvas ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3DropdownBuilder >> addHeaderLabeled: aRenderable [
 
 	menuItems
@@ -42,14 +44,14 @@ Bootstrap3DropdownBuilder >> addHeaderLabeled: aRenderable [
 			]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3DropdownBuilder >> beRightAligned [
 
 	listClassificationCommand := listClassificationCommand
 		+ [ :list | list addClass bootstrap3 dropdownMenuRight ] asWebComponentCommand
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3DropdownBuilder >> content [
 
 	^ [ :canvas | 
@@ -58,7 +60,7 @@ Bootstrap3DropdownBuilder >> content [
 	]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3DropdownBuilder >> initializeUsing: aSupplier [
 
 	super initializeUsing: aSupplier.
@@ -66,7 +68,7 @@ Bootstrap3DropdownBuilder >> initializeUsing: aSupplier [
 		asWebComponentCommand
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Bootstrap3DropdownBuilder >> renderCaretOn: canvas [
 
 	canvas space.

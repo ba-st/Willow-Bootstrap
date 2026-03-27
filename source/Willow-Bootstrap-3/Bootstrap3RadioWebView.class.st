@@ -1,17 +1,19 @@
 Class {
-	#name : #Bootstrap3RadioWebView,
-	#superclass : #BootstrapRadioWebView,
-	#category : #'Willow-Bootstrap-3-WebViews'
+	#name : 'Bootstrap3RadioWebView',
+	#superclass : 'BootstrapRadioWebView',
+	#category : 'Willow-Bootstrap-3-WebViews',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'WebViews'
 }
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 Bootstrap3RadioWebView >> renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas [
 
 	super renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas.
 	self renderLabelContentFor: anElement on: aCanvas
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 Bootstrap3RadioWebView >> renderRadioButtonFor: anElement asPartOf: aRadioGroup on: aCanvas [
 
 	aCanvas label

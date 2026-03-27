@@ -1,16 +1,18 @@
 Class {
-	#name : #WillowBootstrap3FileMetadataLibrary,
-	#superclass : #WillowBootstrapFileMetadataLibrary,
-	#category : #'Willow-Bootstrap-3-Libraries'
+	#name : 'WillowBootstrap3FileMetadataLibrary',
+	#superclass : 'WillowBootstrapFileMetadataLibrary',
+	#category : 'Willow-Bootstrap-3-Libraries',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'Libraries'
 }
 
-{ #category : #Accessing }
+{ #category : 'Accessing' }
 WillowBootstrap3FileMetadataLibrary >> putVersionSpecificHacksOn: script [
 
 	self replaceTooltipDestroyFunctionIn: script
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WillowBootstrap3FileMetadataLibrary >> replaceTooltipDestroyFunctionIn: script [
 
 	"This fixes a problem in Bootstrap v3.3.7 when calling destroy in a tooltip twice. Checkout https://github.com/twbs/bootstrap/issues/21830 "

@@ -2,16 +2,18 @@
 I'm a JSObject representing a viewport configuration for Bootstrap.
 "
 Class {
-	#name : #Bootstrap3ViewportConfiguration,
-	#superclass : #JSObject,
+	#name : 'Bootstrap3ViewportConfiguration',
+	#superclass : 'JSObject',
 	#instVars : [
 		'selector',
 		'padding'
 	],
-	#category : #'Willow-Bootstrap-3-Plugins'
+	#category : 'Willow-Bootstrap-3-Plugins',
+	#package : 'Willow-Bootstrap-3',
+	#tag : 'Plugins'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Bootstrap3ViewportConfiguration >> initialize [
 
 	super initialize.
@@ -19,17 +21,17 @@ Bootstrap3ViewportConfiguration >> initialize [
 	padding := 0
 ]
 
-{ #category : #printing }
-Bootstrap3ViewportConfiguration >> javascriptContentOn: aStream [
+{ #category : 'printing' }
+Bootstrap3ViewportConfiguration >> javascriptContentOn: jsCanvas [
 
-	aStream nextPut: ${.
-	JSStream encodeKey: 'selector' value: selector on: aStream.
-	aStream nextPut: $,.
-	JSStream encodeKey: 'padding' value: padding on: aStream.
-	aStream nextPut: $}
+  jsCanvas object: [
+      jsCanvas
+        key: 'selector' value: selector;
+        key: 'padding' value: padding
+    ]
 ]
 
-{ #category : #Configuring }
+{ #category : 'Configuring' }
 Bootstrap3ViewportConfiguration >> selector: aString padding: aNumber [
 
 	selector := aString.
